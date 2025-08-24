@@ -176,7 +176,36 @@ Detailed description of agent's primary function and role
 4. Validate formatting matches existing entries
 5. Preserve surrounding documentation structure
 
-#### Step 10: Testing and Validation
+#### Step 10: Agent Logging Registration
+
+**CRITICAL**: Add new agent to logging system for activity tracking:
+
+1. **Update agent-spawn-logging.md**: Add agent-name to agents array
+   - File: `.claude/agents/shared-tools/agent-spawn-logging.md`
+   - Find line: `agents: [developer, devops, agent-admin]`
+   - Add new agent: `agents: [developer, devops, agent-admin, new-agent-name]`
+   - Maintain alphabetical order in the array
+
+2. **Verification Steps**:
+   - Confirm agent appears in agents array
+   - Validate YAML syntax remains correct
+   - Ensure no duplicate entries
+
+**Example Update:**
+```yaml
+# Before
+agents: [developer, devops, agent-admin]
+
+# After (adding "tester" agent)
+agents: [agent-admin, developer, devops, tester]
+```
+
+**Why This Matters:**
+- Without logging registration, new agents cannot log their activities
+- Logging is essential for debugging, monitoring, and optimization
+- All agents must have equal access to logging infrastructure
+
+#### Step 11: Testing and Validation
 
 **Validation Checklist:**
 - ✅ YAML frontmatter parses correctly

@@ -81,7 +81,7 @@ Clear description of agent's primary function
 2. **Template Selection**: Choose appropriate base template
 3. **Structure Configuration**: Set up YAML frontmatter and metadata
 4. **Context Design**: Define keyword patterns and context loading logic
-5. **Infrastructure Integration**: Add logging, shared tools, documentation
+5. **Infrastructure Integration**: Add to agent-spawn-logging.md, configure shared tools, documentation
 6. **Validation**: Test agent structure and functionality
 7. **Documentation**: Update CLAUDE.md with agent information
 
@@ -90,7 +90,7 @@ Clear description of agent's primary function
 2. **Infrastructure Mapping**: Adapt to current patterns and standards
 3. **Context Migration**: Update shared tools and context references
 4. **Keyword Modernization**: Align with current keyword strategies
-5. **Integration Updates**: Add logging and documentation systems
+5. **Integration Updates**: Add to agent-spawn-logging.md, logging, and documentation systems
 6. **Testing**: Validate imported agent functionality
 7. **Documentation**: Record adaptations and changes made
 
@@ -107,9 +107,10 @@ Clear description of agent's primary function
 1. **Impact Analysis**: Identify dependencies and usage patterns
 2. **Backup Creation**: Archive agent configuration before deletion
 3. **Context Cleanup**: Remove agent-specific context files
-4. **Documentation Updates**: Remove from CLAUDE.md and references
-5. **Reference Cleanup**: Update any cross-references to deleted agent
-6. **Validation**: Confirm clean removal without broken dependencies
+4. **Logging Cleanup**: Remove agent from agent-spawn-logging.md agents array
+5. **Documentation Updates**: Remove from CLAUDE.md and references
+6. **Reference Cleanup**: Update any cross-references to deleted agent
+7. **Validation**: Confirm clean removal without broken dependencies
 
 ## Quality Standards
 
