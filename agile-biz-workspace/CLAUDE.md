@@ -14,6 +14,16 @@
 - **Implementation Target**: agile-biz/ (rebuild destination for business logic)
 - **Claude Integration**: .claude/ (commands, agents, hooks, settings)
 
+## CRITICAL: Workspace Path Enforcement
+**ABSOLUTE WORKSPACE PATH**: `/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace/`
+
+### Path Rules - NEVER VIOLATE:
+- ✅ **CORRECT**: All work in `/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace/`
+- ❌ **FORBIDDEN**: Never create or use `/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-bz-workspace/`
+- ❌ **FORBIDDEN**: Never create or use any variation of "agile-bz-workspace"
+- ✅ **REQUIRED**: Always use full absolute paths when creating files
+- ✅ **REQUIRED**: Always double-check paths contain "agile-biz-workspace" (not "agile-bz-workspace")
+
 ## Workspace Rules
 1. NEVER modify files in agile-ai-agents-v7.0.0/
 2. Only read/analyze agile-ai-agents-v7.0.0/ for reference
@@ -55,6 +65,30 @@ The workspace has specialized Claude Code agents for specific tasks:
   - Monitoring and observability setup
   - Security and compliance automation
 - **Model**: Claude 3.5 Opus (complex reasoning for infrastructure tasks)
+
+#### **Agent Admin** (`agent-admin`)
+- **Purpose**: Claude Code agent infrastructure management and lifecycle operations
+- **Triggers**: "agent-admin", "create agent", "new agent", "edit agent", "delete agent", "import agent", "agent management"
+- **Capabilities**:
+  - Create new agents from scratch using templates
+  - Import and adapt agents from reference files
+  - Edit existing agent configurations and contexts
+  - Delete obsolete agents and clean up infrastructure
+  - Validate agent YAML frontmatter and structure
+  - Optimize context loading and token usage
+  - Automatically update CLAUDE.md documentation
+- **Model**: Claude 3.5 Opus (complex reasoning for infrastructure management)
+
+#### **Testing Agent** (`testing`)
+- **Purpose**: QA workflows, automated testing, and test coverage analysis
+- **Triggers**: "testing agent", "run tests", "qa", "test coverage", "automated testing", "unit tests"
+- **Capabilities**:
+  - Generate unit tests, integration tests, and end-to-end test suites
+  - Set up and configure automated testing frameworks and CI/CD integration
+  - Implement QA processes, code coverage analysis, and quality gates
+  - Create and execute load tests, stress tests, and performance benchmarks
+  - Update existing tests, debug test failures, and optimize test performance
+- **Model**: Claude 3.5 Sonnet (balanced reasoning for testing workflows)
 
 ### Agent Usage Examples
 
