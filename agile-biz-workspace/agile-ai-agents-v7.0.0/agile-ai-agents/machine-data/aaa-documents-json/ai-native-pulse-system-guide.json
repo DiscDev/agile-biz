@@ -1,0 +1,372 @@
+{
+  "meta": {
+    "document": "ai-native-pulse-system-guide",
+    "title": "AI-Native Sprint Pulse System Guide",
+    "timestamp": "2025-08-11T22:02:16.855Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md",
+    "document_type": "guide",
+    "file_hash": "3670a7706142c412691371069e7d64d9",
+    "estimated_tokens": 1064,
+    "full_md_tokens": 1621
+  },
+  "summary": "The AI-Native Sprint Pulse System replaces traditional time-based daily standups with event-driven updates that reflect the continuous, high-speed nature of AI agent operations. This guide documents the system design, implementation, and best practices.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#overview",
+      "content_preview": "The AI-Native Sprint Pulse System replaces traditional time-based daily standups with event-driven updates that reflect the continuous, high-speed nat..."
+    },
+    {
+      "title": "Key Principles",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#key-principles",
+      "content_preview": ""
+    },
+    {
+      "title": "System Architecture",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#system-architecture",
+      "content_preview": ""
+    },
+    {
+      "title": "File Naming Convention",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#file-naming-convention",
+      "content_preview": ""
+    },
+    {
+      "title": "Pulse Content Template",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#pulse-content-template",
+      "content_preview": "```markdown"
+    },
+    {
+      "title": "Current State",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#current-state",
+      "content_preview": "- **Active WIP**: \n  - [Story/Task] ([points]) - [percentage]% complete\n- **Completed Since Last Pulse**: \n  - ✅ [Completed items]\n- **Velocity**: [cu..."
+    },
+    {
+      "title": "Key Events",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#key-events",
+      "content_preview": "- [Detailed description of triggering event]\n- [Other significant happenings]"
+    },
+    {
+      "title": "[Event-Specific Section]",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#event-specific-section",
+      "content_preview": "[Varies by event type - see examples below]"
+    },
+    {
+      "title": "Blockers/Risks",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#blockersrisks",
+      "content_preview": "- **Active Blockers**: [count and details]\n- **Risks**: [identified risks]"
+    },
+    {
+      "title": "Next Actions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#next-actions",
+      "content_preview": "- [Planned immediate actions]\n- [Upcoming milestones or triggers]\n```"
+    },
+    {
+      "title": "Event-Specific Sections",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#event-specific-sections",
+      "content_preview": ""
+    },
+    {
+      "title": "Blocker Details",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#blocker-details",
+      "content_preview": "**Blocker ID**: BLK-[number]\n**Affected Story**: [story name and points]\n**Impact**: [quantified impact]\n**Description**: [detailed explanation]\n**Ass..."
+    },
+    {
+      "title": "Story Details",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#story-details",
+      "content_preview": "**Completed Story**: [name]\n- **Points**: [story points]\n- **Duration**: [time taken]\n- **Agent**: [completing agent]\n- **Outcome**: [what was deliver..."
+    },
+    {
+      "title": "Milestone Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#milestone-summary",
+      "content_preview": "**Progress**: [X] of [Y] story points ([Z]%)\n**Time Elapsed**: [duration]\n**Projected Completion**: [estimate]\n**Status**: [On track/At risk/Behind]\n`..."
+    },
+    {
+      "title": "Implementation by Agents",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#implementation-by-agents",
+      "content_preview": ""
+    },
+    {
+      "title": "Migration from Daily Standups",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#migration-from-daily-standups",
+      "content_preview": ""
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Benefits",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#benefits",
+      "content_preview": ""
+    },
+    {
+      "title": "Future Enhancements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#future-enhancements",
+      "content_preview": ""
+    },
+    {
+      "title": "Conclusion",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#conclusion",
+      "content_preview": "The AI-Native Sprint Pulse System represents a fundamental shift from time-based to event-based sprint tracking. By aligning with how AI agents actual..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#overview",
+      "tokens": 64,
+      "content_preview": "The AI-Native Sprint Pulse System replaces traditional time-based daily standups with event-driven updates that reflect the continuous, high-speed nat..."
+    },
+    "Key Principles": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#key-principles",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Event-Driven, Not Time-Based": {
+          "content_preview": "- No \"morning\", \"afternoon\", or \"evening\" pulses\n- Updates triggered by significant events and milestones\n- Reflects AI agents' continuous operation m...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#1-event-driven-not-time-based-1"
+        },
+        "2. Meaningful Updates Only": {
+          "content_preview": "- Avoid noise from trivial status changes\n- Batch minor events to prevent spam\n- Focus on actionable information",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#2-meaningful-updates-only-1"
+        },
+        "3. Complete Audit Trail": {
+          "content_preview": "- Every significant sprint event captured\n- Searchable by event type\n- Permanent record for learning and analysis",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#3-complete-audit-trail-1"
+        }
+      }
+    },
+    "System Architecture": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#system-architecture",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Pulse Triggers": {
+          "content_preview": "```yaml\nbatch_events:\n  window: 60_seconds\n  events:\n    - subtask_completed    # Small work items\n    - status_update        # Progress reports\n    -...",
+          "tokens": 49,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#pulse-triggers-3"
+        },
+        "Rate Limiting": {
+          "content_preview": "```yaml\nrate_limits:\n  min_gap_seconds: 10           # Prevent pulse spam\n  batch_window_seconds: 60      # Collect minor events\n  priority_override: ...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#rate-limiting-1"
+        }
+      }
+    },
+    "File Naming Convention": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#file-naming-convention",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Format": {
+          "content_preview": "```\npulse-YYYY-MM-DD-HHMMSS-[event-type].md\n```",
+          "tokens": 10,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#format-1"
+        },
+        "Examples": {
+          "content_preview": "```\npulse-2025-01-18-142530-sprint-start.md\npulse-2025-01-18-143215-story-done.md\npulse-2025-01-18-144102-blocker-new.md\npulse-2025-01-18-145000-miles...",
+          "tokens": 51,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#examples-1"
+        },
+        "Event Type Catalog": {
+          "content_preview": "- `sprint-start` - Sprint initiated\n- `sprint-complete` - Sprint finished\n- `story-done` - Story completed\n- `blocker-new` - Impediment detected\n- `bl...",
+          "tokens": 99,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#event-type-catalog-1"
+        }
+      }
+    },
+    "Pulse Content Template": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#pulse-content-template",
+      "tokens": 2,
+      "content_preview": "```markdown"
+    },
+    "Current State": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#current-state",
+      "tokens": 39,
+      "content_preview": "- **Active WIP**: \n  - [Story/Task] ([points]) - [percentage]% complete\n- **Completed Since Last Pulse**: \n  - ✅ [Completed items]\n- **Velocity**: [cu..."
+    },
+    "Key Events": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#key-events",
+      "tokens": 19,
+      "content_preview": "- [Detailed description of triggering event]\n- [Other significant happenings]"
+    },
+    "[Event-Specific Section]": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#event-specific-section",
+      "tokens": 11,
+      "content_preview": "[Varies by event type - see examples below]"
+    },
+    "Blockers/Risks": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#blockersrisks",
+      "tokens": 16,
+      "content_preview": "- **Active Blockers**: [count and details]\n- **Risks**: [identified risks]"
+    },
+    "Next Actions": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#next-actions",
+      "tokens": 16,
+      "content_preview": "- [Planned immediate actions]\n- [Upcoming milestones or triggers]\n```"
+    },
+    "Event-Specific Sections": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#event-specific-sections",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "For Blocker Events": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#for-blocker-events-1"
+        }
+      }
+    },
+    "Blocker Details": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#blocker-details",
+      "tokens": 38,
+      "content_preview": "**Blocker ID**: BLK-[number]\n**Affected Story**: [story name and points]\n**Impact**: [quantified impact]\n**Description**: [detailed explanation]\n**Ass...",
+      "subsections": {
+        "For Story Completion": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#for-story-completion-1"
+        }
+      }
+    },
+    "Story Details": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#story-details",
+      "tokens": 31,
+      "content_preview": "**Completed Story**: [name]\n- **Points**: [story points]\n- **Duration**: [time taken]\n- **Agent**: [completing agent]\n- **Outcome**: [what was deliver...",
+      "subsections": {
+        "For Milestone Events": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#for-milestone-events-1"
+        }
+      }
+    },
+    "Milestone Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#milestone-summary",
+      "tokens": 30,
+      "content_preview": "**Progress**: [X] of [Y] story points ([Z]%)\n**Time Elapsed**: [duration]\n**Projected Completion**: [estimate]\n**Status**: [On track/At risk/Behind]\n`..."
+    },
+    "Implementation by Agents": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#implementation-by-agents",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Scrum Master Agent Responsibilities": {
+          "content_preview": "1. Monitor all sprint events continuously\n2. Evaluate events against trigger criteria\n3. Generate pulse updates with appropriate content\n4. Manage rat...",
+          "tokens": 57,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#scrum-master-agent-responsibilities-1"
+        },
+        "Integration Points": {
+          "content_preview": "```javascript\n// Example pulse generation logic\nconst sprintPulseManager = {\n  evaluateEvent(event) {\n    if (this.isAlwaysPulseTrigger(event)) {\n    ...",
+          "tokens": 126,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#integration-points-1"
+        }
+      }
+    },
+    "Migration from Daily Standups": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#migration-from-daily-standups",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "What Changes": {
+          "content_preview": "- Remove `daily-updates/` folders\n- Rename `sprint-pulse-updates/` to `pulse-updates/`\n- Archive any daily standup templates\n- Update agent workflows ...",
+          "tokens": 42,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#what-changes-1"
+        },
+        "What Stays the Same": {
+          "content_preview": "- Sprint structure and organization\n- Velocity tracking and metrics\n- Blocker management\n- Sprint ceremonies (planning, review, retrospective)",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#what-stays-the-same-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "DO": {
+          "content_preview": "- ✅ Generate pulses for significant events\n- ✅ Include quantifiable metrics in each pulse\n- ✅ Use consistent event types for searchability\n- ✅ Batch m...",
+          "tokens": 53,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#do-1"
+        },
+        "DON'T": {
+          "content_preview": "- ❌ Create time-based pulses (morning/evening)\n- ❌ Generate pulses for every small change\n- ❌ Skip pulses for critical events\n- ❌ Use inconsistent nam...",
+          "tokens": 53,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#dont-1"
+        }
+      }
+    },
+    "Benefits": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#benefits",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "For AI Agents": {
+          "content_preview": "- Natural fit with continuous operation\n- No artificial time constraints\n- Event-driven aligns with trigger-based processing",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#for-ai-agents-1"
+        },
+        "For Stakeholders": {
+          "content_preview": "- Real-time visibility into sprint progress\n- Significant events highlighted immediately\n- Complete audit trail of sprint activities\n- Easy to search ...",
+          "tokens": 44,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#for-stakeholders-1"
+        },
+        "For Analysis": {
+          "content_preview": "- Rich data for velocity and pattern analysis\n- Blocker resolution time tracking\n- Milestone achievement patterns\n- Sprint health indicators",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#for-analysis-1"
+        }
+      }
+    },
+    "Future Enhancements": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#future-enhancements",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Potential Additions": {
+          "content_preview": "1. **Pulse Analytics**: Analyze patterns in pulse generation\n2. **Auto-Summaries**: Daily digest of pulses for humans\n3. **Pulse Alerts**: Notificatio...",
+          "tokens": 67,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#potential-additions-1"
+        }
+      }
+    },
+    "Conclusion": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-native-pulse-system-guide.md#conclusion",
+      "tokens": 84,
+      "content_preview": "The AI-Native Sprint Pulse System represents a fundamental shift from time-based to event-based sprint tracking. By aligning with how AI agents actual..."
+    }
+  }
+}

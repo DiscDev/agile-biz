@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "document": "stakeholder-context-integration-pattern",
+    "title": "Stakeholder Context Integration Pattern",
+    "timestamp": "2025-08-11T22:02:16.922Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md",
+    "document_type": "general_documentation",
+    "file_hash": "56d808e3a915205aa488f823b50d6d24",
+    "estimated_tokens": 391,
+    "full_md_tokens": 1283
+  },
+  "summary": "This document demonstrates how AgileAiAgents agents consume and utilize stakeholder interview data to ensure all work aligns with stakeholder vision and objectives.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md#overview",
+      "content_preview": "This document demonstrates how AgileAiAgents agents consume and utilize stakeholder interview data to ensure all work aligns with stakeholder vision a..."
+    },
+    {
+      "title": "Implementation Pattern",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md#implementation-pattern",
+      "content_preview": ""
+    },
+    {
+      "title": "Key Agent Examples",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md#key-agent-examples",
+      "content_preview": ""
+    },
+    {
+      "title": "Stakeholder Interview Data Structure",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md#stakeholder-interview-data-structure",
+      "content_preview": "The Project Analyzer Agent provides stakeholder data in this structure:\n\n```json\n{\n  \"stakeholder_interview\": {\n    \"project_context\": {\n      \"busine..."
+    },
+    {
+      "title": "Benefits of This Pattern",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md#benefits-of-this-pattern",
+      "content_preview": "1. **Alignment**: All agents work toward stakeholder goals\n2. **Efficiency**: Focus on what matters to stakeholder\n3. **Validation**: Continuous check..."
+    },
+    {
+      "title": "Implementation Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md#implementation-checklist",
+      "content_preview": "For each agent:\n- [ ] Add stakeholder interview to JSON data requirements (HIGHEST PRIORITY)\n- [ ] Create stakeholder context integration section\n- [ ..."
+    },
+    {
+      "title": "Next Steps",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md#next-steps",
+      "content_preview": "Other agents should follow this same pattern:\n- Analysis Agent\n- UI/UX Agent  \n- Coder Agent\n- Testing Agent\n- DevOps Agent\n- Project Manager Agent\n- ..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md#overview",
+      "tokens": 41,
+      "content_preview": "This document demonstrates how AgileAiAgents agents consume and utilize stakeholder interview data to ensure all work aligns with stakeholder vision a..."
+    },
+    "Implementation Pattern": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md#implementation-pattern",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "JSON Data Requirements Section": {
+          "content_preview": "**Critical Data** (Always Load):\n- `[relevant_stakeholder_data_1]` - Description\n- `[relevant_stakeholder_data_2]` - Description\n- `[relevant_stakehol...",
+          "tokens": 66,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md#json-data-requirements-section-2"
+        },
+        "Stakeholder Context Integration Section": {
+          "content_preview": "Add a dedicated section explaining how the agent uses stakeholder data:\n\n```markdown",
+          "tokens": 21,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md#stakeholder-context-integration-section-1"
+        },
+        "Stakeholder Context Integration ⭐ NEW": {
+          "content_preview": "The [Agent Name] [primary action verb] stakeholder [objectives/vision/constraints]:\n\n1. **[Integration Area 1]**\n   - Specific action based on stakeho...",
+          "tokens": 138,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md#stakeholder-context-integration-new-1"
+        },
+        "JSON Output Enhancement": {
+          "content_preview": "Update the agent's JSON output to include stakeholder alignment tracking:\n\n```json\n{\n  \"meta\": {\n    \"agent\": \"agent_name\",\n    \"timestamp\": \"ISO-8601...",
+          "tokens": 112,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md#json-output-enhancement-1"
+        }
+      }
+    },
+    "Key Agent Examples": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md#key-agent-examples",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Research Agent": {
+          "content_preview": "- **Consumes**: Business objectives, target users, success metrics, competitive landscape, market vision\n- **Influences**: Focuses research on stakeho...",
+          "tokens": 66,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md#research-agent-1"
+        },
+        "Marketing Agent": {
+          "content_preview": "- **Consumes**: Target users, business objectives, success metrics, market vision, brand preferences\n- **Influences**: Aligns positioning with vision,...",
+          "tokens": 69,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md#marketing-agent-1"
+        },
+        "Finance Agent": {
+          "content_preview": "- **Consumes**: Budget constraints, ROI expectations, success metrics, timeline constraints, risk tolerance\n- **Influences**: Creates plans within bud...",
+          "tokens": 66,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md#finance-agent-1"
+        },
+        "PRD Agent": {
+          "content_preview": "- **Consumes**: Business objectives, target users, success metrics, feature priorities, constraints\n- **Influences**: Prioritizes features by stakehol...",
+          "tokens": 68,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md#prd-agent-1"
+        }
+      }
+    },
+    "Stakeholder Interview Data Structure": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md#stakeholder-interview-data-structure",
+      "tokens": 260,
+      "content_preview": "The Project Analyzer Agent provides stakeholder data in this structure:\n\n```json\n{\n  \"stakeholder_interview\": {\n    \"project_context\": {\n      \"busine..."
+    },
+    "Benefits of This Pattern": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md#benefits-of-this-pattern",
+      "tokens": 64,
+      "content_preview": "1. **Alignment**: All agents work toward stakeholder goals\n2. **Efficiency**: Focus on what matters to stakeholder\n3. **Validation**: Continuous check..."
+    },
+    "Implementation Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md#implementation-checklist",
+      "tokens": 86,
+      "content_preview": "For each agent:\n- [ ] Add stakeholder interview to JSON data requirements (HIGHEST PRIORITY)\n- [ ] Create stakeholder context integration section\n- [ ..."
+    },
+    "Next Steps": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-context-integration-pattern.md#next-steps",
+      "tokens": 82,
+      "content_preview": "Other agents should follow this same pattern:\n- Analysis Agent\n- UI/UX Agent  \n- Coder Agent\n- Testing Agent\n- DevOps Agent\n- Project Manager Agent\n- ..."
+    }
+  }
+}

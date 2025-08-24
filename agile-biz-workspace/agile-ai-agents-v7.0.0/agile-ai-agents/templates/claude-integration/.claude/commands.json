@@ -1,0 +1,685 @@
+{
+  "version": "3.0.0",
+  "description": "AgileAiAgents custom slash commands for Claude Code - Complete Edition",
+  "totalCommands": 88,
+  "commands": [
+    {
+      "name": "new-project-workflow",
+      "description": "Start structured new project discovery and implementation",
+      "file": "new-project-workflow.md",
+      "category": "workflow",
+      "priority": 1
+    },
+    {
+      "name": "existing-project-workflow",
+      "description": "Analyze existing codebase and plan enhancements",
+      "file": "existing-project-workflow.md",
+      "category": "workflow",
+      "priority": 2
+    },
+    {
+      "name": "select-phases",
+      "description": "Select operational or enhancement phases after core workflow",
+      "file": "select-phases.md",
+      "category": "workflow",
+      "priority": 3
+    },
+    {
+      "name": "workflow-recovery",
+      "description": "Recover from workflow errors or interruptions",
+      "file": "workflow-recovery.md",
+      "category": "workflow",
+      "priority": 4
+    },
+    {
+      "name": "quickstart",
+      "description": "Interactive menu for all AgileAiAgents options",
+      "file": "quickstart.md",
+      "category": "help",
+      "priority": 5
+    },
+    {
+      "name": "aaa-help",
+      "description": "Show all available AgileAiAgents commands",
+      "file": "aaa-help.md",
+      "category": "help",
+      "priority": 6
+    },
+    {
+      "name": "aaa-config",
+      "description": "Display and manage AgileAI Agents configuration settings",
+      "file": "aaa-config.md",
+      "category": "configuration",
+      "priority": 7
+    },
+    {
+      "name": "reset-project-state",
+      "description": "Reset project state with various options",
+      "file": "reset-project-state.md",
+      "category": "state",
+      "priority": 8
+    },
+    {
+      "name": "aaa-status",
+      "description": "Get comprehensive project status and context",
+      "file": "aaa-status.md",
+      "category": "state",
+      "priority": 9
+    },
+    {
+      "name": "continue",
+      "description": "Resume from last saved state",
+      "file": "continue.md",
+      "category": "state",
+      "priority": 8
+    },
+    {
+      "name": "checkpoint",
+      "description": "Create manual checkpoint of current progress",
+      "file": "checkpoint.md",
+      "category": "state",
+      "priority": 9
+    },
+    {
+      "name": "save-decision",
+      "description": "Document important project decision",
+      "file": "save-decision.md",
+      "category": "state",
+      "priority": 10
+    },
+    {
+      "name": "update-state",
+      "description": "Manually update project state",
+      "file": "update-state.md",
+      "category": "state",
+      "priority": 11
+    },
+    {
+      "name": "show-last-session",
+      "description": "Show last session details",
+      "file": "show-last-session.md",
+      "category": "state",
+      "priority": 12
+    },
+    {
+      "name": "show-decisions",
+      "description": "Display all project decisions",
+      "file": "show-decisions.md",
+      "category": "state",
+      "priority": 13
+    },
+    {
+      "name": "start-sprint",
+      "description": "Begin a new agile sprint",
+      "file": "start-sprint.md",
+      "category": "sprint",
+      "priority": 14
+    },
+    {
+      "name": "sprint-status",
+      "description": "Show current sprint progress",
+      "file": "sprint-status.md",
+      "category": "sprint",
+      "priority": 15
+    },
+    {
+      "name": "sprint-progress",
+      "description": "View current sprint progress",
+      "file": "sprint-progress.md",
+      "category": "sprint",
+      "priority": 16
+    },
+    {
+      "name": "sprint-review",
+      "description": "Conduct sprint review with stakeholder",
+      "file": "sprint-review.md",
+      "category": "sprint",
+      "priority": 17
+    },
+    {
+      "name": "sprint-retrospective",
+      "description": "Run sprint retrospective with AI agents",
+      "file": "sprint-retrospective.md",
+      "category": "sprint",
+      "priority": 18
+    },
+    {
+      "name": "sprint-planning",
+      "description": "Sprint planning session",
+      "file": "sprint-planning.md",
+      "category": "sprint",
+      "priority": 19
+    },
+    {
+      "name": "milestone",
+      "description": "Record major project achievement",
+      "file": "milestone.md",
+      "category": "sprint",
+      "priority": 20
+    },
+    {
+      "name": "update-burndown",
+      "description": "Update sprint burndown metrics",
+      "file": "update-burndown.md",
+      "category": "sprint",
+      "priority": 21
+    },
+    {
+      "name": "start-development",
+      "description": "Begin development for a sprint",
+      "file": "start-development.md",
+      "category": "development",
+      "priority": 22
+    },
+    {
+      "name": "implement",
+      "description": "Get help implementing specific task",
+      "file": "implement.md",
+      "category": "development",
+      "priority": 23
+    },
+    {
+      "name": "generate-code",
+      "description": "Generate code for specific need",
+      "file": "generate-code.md",
+      "category": "development",
+      "priority": 24
+    },
+    {
+      "name": "review-code",
+      "description": "Get code review from AI agents",
+      "file": "review-code.md",
+      "category": "development",
+      "priority": 25
+    },
+    {
+      "name": "debug",
+      "description": "Get debugging assistance",
+      "file": "debug.md",
+      "category": "development",
+      "priority": 26
+    },
+    {
+      "name": "test",
+      "description": "Generate and run tests",
+      "file": "test.md",
+      "category": "development",
+      "priority": 27
+    },
+    {
+      "name": "refactor",
+      "description": "Get refactoring suggestions",
+      "file": "refactor.md",
+      "category": "development",
+      "priority": 28
+    },
+    {
+      "name": "update-feature",
+      "description": "Get help updating existing feature",
+      "file": "update-feature.md",
+      "category": "development",
+      "priority": 29
+    },
+    {
+      "name": "migrate",
+      "description": "Database/code migration assistance",
+      "file": "migrate.md",
+      "category": "development",
+      "priority": 30
+    },
+    {
+      "name": "research-only",
+      "description": "Market research without implementation",
+      "file": "research-only.md",
+      "category": "research",
+      "priority": 31
+    },
+    {
+      "name": "analyze-market",
+      "description": "Focused market analysis",
+      "file": "analyze-market.md",
+      "category": "research",
+      "priority": 32
+    },
+    {
+      "name": "analyze-competition",
+      "description": "Competitive landscape analysis",
+      "file": "analyze-competition.md",
+      "category": "research",
+      "priority": 33
+    },
+    {
+      "name": "analyze-code",
+      "description": "Deep code analysis for existing projects",
+      "file": "analyze-code.md",
+      "category": "research",
+      "priority": 34
+    },
+    {
+      "name": "configure-models",
+      "description": "Configure multi-LLM support for cost savings",
+      "file": "configure-models.md",
+      "category": "research",
+      "priority": 35
+    },
+    {
+      "name": "model-status",
+      "description": "View current LLM configuration and usage",
+      "file": "model-status.md",
+      "category": "research",
+      "priority": 36
+    },
+    {
+      "name": "research-boost",
+      "description": "Enable 3-5x faster parallel research",
+      "file": "research-boost.md",
+      "category": "research",
+      "priority": 37
+    },
+    {
+      "name": "generate-prd",
+      "description": "Create Product Requirements Document",
+      "file": "generate-prd.md",
+      "category": "documentation",
+      "priority": 38
+    },
+    {
+      "name": "generate-pitch-deck",
+      "description": "Create investor presentation",
+      "file": "generate-pitch-deck.md",
+      "category": "documentation",
+      "priority": 39
+    },
+    {
+      "name": "generate-documentation",
+      "description": "Generate technical documentation",
+      "file": "generate-documentation.md",
+      "category": "documentation",
+      "priority": 40
+    },
+    {
+      "name": "list-documents",
+      "description": "Show all project documents",
+      "file": "list-documents.md",
+      "category": "documentation",
+      "priority": 41
+    },
+    {
+      "name": "import-documents",
+      "description": "Import existing documents after upgrade",
+      "file": "import-documents.md",
+      "category": "documentation",
+      "priority": 42
+    },
+    {
+      "name": "validate-documents",
+      "description": "Check document health and freshness",
+      "file": "validate-documents.md",
+      "category": "documentation",
+      "priority": 43
+    },
+    {
+      "name": "consolidate-folders",
+      "description": "Review folder consolidation suggestions",
+      "file": "consolidate-folders.md",
+      "category": "documentation",
+      "priority": 44
+    },
+    {
+      "name": "document-map",
+      "description": "View document organization and routing stats",
+      "file": "document-map.md",
+      "category": "documentation",
+      "priority": 45
+    },
+    {
+      "name": "capture-learnings",
+      "description": "Capture project learnings for community",
+      "file": "capture-learnings.md",
+      "category": "community",
+      "priority": 46
+    },
+    {
+      "name": "contribution-status",
+      "description": "View contribution readiness",
+      "file": "contribution-status.md",
+      "category": "community",
+      "priority": 47
+    },
+    {
+      "name": "show-contribution-status",
+      "description": "Show contribution status",
+      "file": "show-contribution-status.md",
+      "category": "community",
+      "priority": 48
+    },
+    {
+      "name": "skip-contribution",
+      "description": "Skip current contribution prompt",
+      "file": "skip-contribution.md",
+      "category": "community",
+      "priority": 49
+    },
+    {
+      "name": "contribute-now",
+      "description": "Start contribution immediately",
+      "file": "contribute-now.md",
+      "category": "community",
+      "priority": 50
+    },
+    {
+      "name": "show-learnings",
+      "description": "Display project learnings",
+      "file": "show-learnings.md",
+      "category": "community",
+      "priority": 51
+    },
+    {
+      "name": "learn-from-contributions-workflow",
+      "description": "Run 7-phase learning analysis",
+      "file": "learn-from-contributions-workflow.md",
+      "category": "community",
+      "priority": 52
+    },
+    {
+      "name": "review-learnings",
+      "description": "Review captured learnings",
+      "file": "review-learnings.md",
+      "category": "community",
+      "priority": 53
+    },
+    {
+      "name": "task-complete",
+      "description": "Mark task as done and update progress",
+      "file": "task-complete.md",
+      "category": "advanced",
+      "priority": 54
+    },
+    {
+      "name": "blocker",
+      "description": "Report and get help with blocker",
+      "file": "blocker.md",
+      "category": "advanced",
+      "priority": 55
+    },
+    {
+      "name": "context",
+      "description": "Get context about specific area",
+      "file": "context.md",
+      "category": "advanced",
+      "priority": 56
+    },
+    {
+      "name": "explain",
+      "description": "Get explanation of code or concept",
+      "file": "explain.md",
+      "category": "advanced",
+      "priority": 57
+    },
+    {
+      "name": "best-practice",
+      "description": "Get best practice recommendations",
+      "file": "best-practice.md",
+      "category": "advanced",
+      "priority": 58
+    },
+    {
+      "name": "analyze-bug",
+      "description": "Analyze bug and suggest fixes",
+      "file": "analyze-bug.md",
+      "category": "maintenance",
+      "priority": 59
+    },
+    {
+      "name": "fix-bug",
+      "description": "Generate bug fix code",
+      "file": "fix-bug.md",
+      "category": "maintenance",
+      "priority": 60
+    },
+    {
+      "name": "regression-test",
+      "description": "Create regression tests",
+      "file": "regression-test.md",
+      "category": "maintenance",
+      "priority": 61
+    },
+    {
+      "name": "impact-analysis",
+      "description": "Analyze impact of proposed change",
+      "file": "impact-analysis.md",
+      "category": "maintenance",
+      "priority": 62
+    },
+    {
+      "name": "profile",
+      "description": "Profile performance",
+      "file": "profile.md",
+      "category": "optimization",
+      "priority": 63
+    },
+    {
+      "name": "optimize",
+      "description": "Get optimization suggestions",
+      "file": "optimize.md",
+      "category": "optimization",
+      "priority": 64
+    },
+    {
+      "name": "refactor-legacy",
+      "description": "Modernize legacy code",
+      "file": "refactor-legacy.md",
+      "category": "optimization",
+      "priority": 65
+    },
+    {
+      "name": "health-check",
+      "description": "System health analysis",
+      "file": "health-check.md",
+      "category": "optimization",
+      "priority": 66
+    },
+    {
+      "name": "security-scan",
+      "description": "Security vulnerability check",
+      "file": "security-scan.md",
+      "category": "optimization",
+      "priority": 67
+    },
+    {
+      "name": "performance-report",
+      "description": "Performance metrics analysis",
+      "file": "performance-report.md",
+      "category": "optimization",
+      "priority": 68
+    },
+    {
+      "name": "convert-md-to-json-aaa-documents",
+      "description": "Convert aaa-documents to JSON",
+      "file": "convert-md-to-json-aaa-documents.md",
+      "category": "conversion",
+      "priority": 69
+    },
+    {
+      "name": "convert-md-to-json-ai-agents",
+      "description": "Convert agents to JSON",
+      "file": "convert-md-to-json-ai-agents.md",
+      "category": "conversion",
+      "priority": 70
+    },
+    {
+      "name": "convert-md-to-json-project-documents",
+      "description": "Convert project docs to JSON",
+      "file": "convert-md-to-json-project-documents.md",
+      "category": "conversion",
+      "priority": 71
+    },
+    {
+      "name": "convert-all-md-to-json",
+      "description": "Run all conversions",
+      "file": "convert-all-md-to-json.md",
+      "category": "conversion",
+      "priority": 72
+    },
+    {
+      "name": "setup-dev-environment",
+      "description": "Setup development environment",
+      "file": "setup-dev-environment.md",
+      "category": "system",
+      "priority": 73
+    },
+    {
+      "name": "project-state-reset",
+      "description": "Clean project state",
+      "file": "project-state-reset.md",
+      "category": "system",
+      "priority": 74
+    },
+    {
+      "name": "project-documents-reset",
+      "description": "Empty document folders",
+      "file": "project-documents-reset.md",
+      "category": "system",
+      "priority": 75
+    },
+    {
+      "name": "community-learnings-reset",
+      "description": "Clear contributions",
+      "file": "community-learnings-reset.md",
+      "category": "system",
+      "priority": 76
+    },
+    {
+      "name": "clear-logs",
+      "description": "Remove all logs",
+      "file": "clear-logs.md",
+      "category": "system",
+      "priority": 77
+    },
+    {
+      "name": "backup-before-reset",
+      "description": "Manual backup before reset",
+      "file": "backup-before-reset.md",
+      "category": "system",
+      "priority": 78
+    },
+    {
+      "name": "restore-from-backup",
+      "description": "Restore from backup",
+      "file": "restore-from-backup.md",
+      "category": "system",
+      "priority": 79
+    },
+    {
+      "name": "reset",
+      "description": "Reset project with confirmation",
+      "file": "reset.md",
+      "category": "system",
+      "priority": 80
+    },
+    {
+      "name": "init",
+      "description": "Initialize Claude context in project",
+      "file": "init.md",
+      "category": "context",
+      "priority": 81
+    },
+    {
+      "name": "add-agile-context",
+      "description": "Add AgileAI context to existing project",
+      "file": "add-agile-context.md",
+      "category": "context",
+      "priority": 82
+    },
+    {
+      "name": "verify-context",
+      "description": "Verify project context",
+      "file": "verify-context.md",
+      "category": "context",
+      "priority": 83
+    },
+    {
+      "name": "select-velocity-profile",
+      "description": "Select velocity profile for project",
+      "file": "select-velocity-profile.md",
+      "category": "context",
+      "priority": 84
+    },
+    {
+      "name": "deployment-success",
+      "description": "Mark deployment success",
+      "file": "deployment-success.md",
+      "category": "deployment",
+      "priority": 85
+    },
+    {
+      "name": "project-complete",
+      "description": "Complete project lifecycle",
+      "file": "project-complete.md",
+      "category": "deployment",
+      "priority": 86
+    }
+  ],
+  "categories": {
+    "workflow": {
+      "description": "Main workflow commands",
+      "color": "blue"
+    },
+    "help": {
+      "description": "Help and documentation commands",
+      "color": "yellow"
+    },
+    "state": {
+      "description": "State management commands",
+      "color": "purple"
+    },
+    "sprint": {
+      "description": "Sprint management commands",
+      "color": "orange"
+    },
+    "development": {
+      "description": "Development assistance commands",
+      "color": "green"
+    },
+    "research": {
+      "description": "Research and analysis commands",
+      "color": "cyan"
+    },
+    "documentation": {
+      "description": "Documentation generation commands",
+      "color": "magenta"
+    },
+    "community": {
+      "description": "Community contribution commands",
+      "color": "white"
+    },
+    "advanced": {
+      "description": "Advanced development commands",
+      "color": "brightBlue"
+    },
+    "maintenance": {
+      "description": "Bug fixes and maintenance commands",
+      "color": "red"
+    },
+    "optimization": {
+      "description": "Performance and optimization commands",
+      "color": "brightGreen"
+    },
+    "conversion": {
+      "description": "MD to JSON conversion commands",
+      "color": "brightYellow"
+    },
+    "system": {
+      "description": "System management commands",
+      "color": "gray"
+    },
+    "context": {
+      "description": "Project context commands",
+      "color": "brightCyan"
+    },
+    "deployment": {
+      "description": "Deployment and completion commands",
+      "color": "brightMagenta"
+    }
+  }
+}

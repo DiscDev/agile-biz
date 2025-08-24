@@ -1,0 +1,752 @@
+{
+  "version": "1.0.0",
+  "description": "Document creation mapping for different research levels",
+  "last_updated": "2025-07-31",
+  
+  "research_levels": {
+    "minimal": {
+      "description": "Essential market validation and feasibility (1-2 hours)",
+      "document_count": 15,
+      "documents": {
+        "research": [
+          "market-analysis.md",
+          "competitive-analysis.md",
+          "customer-research.md",
+          "viability-analysis.md",
+          "financial-analysis.md",
+          "risk-assessment.md",
+          "executive-summary.md"
+        ],
+        "marketing": [
+          "marketing-strategy.md",
+          "brand-positioning-messaging.md",
+          "digital-marketing-strategy.md"
+        ],
+        "finance": [
+          "ai-development-cost-analysis.md",
+          "ai-vs-human-cost-comparison.md",
+          "ai-development-roi-analysis.md"
+        ],
+        "analysis": [
+          "executive-intelligence-summary.md",
+          "go-no-go-recommendation.md"
+        ]
+      }
+    },
+    
+    "medium": {
+      "description": "Comprehensive research and analysis (3-5 hours)",
+      "document_count": 48,
+      "documents": {
+        "research": [
+          "competitive-analysis.md",
+          "market-analysis.md",
+          "industry-trends.md",
+          "customer-research.md",
+          "brand-research-report.md",
+          "viability-analysis.md",
+          "financial-analysis.md",
+          "technology-landscape.md",
+          "risk-assessment.md",
+          "demand-analysis.md",
+          "business-model-analysis.md",
+          "roi-projection.md",
+          "pricing-strategy.md",
+          "go-to-market-strategy.md",
+          "strategic-recommendations.md",
+          "executive-summary.md",
+          "market-size-analysis.md",
+          "target-market-segmentation.md",
+          "customer-persona-profiles.md",
+          "competitor-feature-matrix.md",
+          "market-gap-analysis.md",
+          "customer-pain-points.md",
+          "solution-alternatives.md",
+          "market-entry-barriers.md"
+        ],
+        "marketing": [
+          "marketing-strategy.md",
+          "brand-positioning-messaging.md",
+          "digital-marketing-strategy.md",
+          "content-marketing-strategy.md",
+          "social-media-strategy.md",
+          "ppc-campaign-strategy.md",
+          "seo-content-strategy.md",
+          "email-marketing-strategy.md"
+        ],
+        "finance": [
+          "ai-development-cost-analysis.md",
+          "ai-vs-human-cost-comparison.md",
+          "llm-token-budget-projections.md",
+          "ai-development-roi-analysis.md",
+          "ai-financial-risk-assessment.md"
+        ],
+        "market-validation": [
+          "market-validation-strategy.md",
+          "customer-discovery-report.md",
+          "competitive-landscape-analysis.md",
+          "market-demand-quantification.md",
+          "product-market-fit-framework.md",
+          "pmf-measurement-system.md"
+        ],
+        "analysis": [
+          "executive-intelligence-summary.md",
+          "strategic-recommendations.md",
+          "risk-opportunity-matrix.md",
+          "go-no-go-recommendation.md"
+        ]
+      }
+    },
+    
+    "thorough": {
+      "description": "Enterprise-level deep dive with all research areas (6-10 hours)",
+      "document_count": 194,
+      "documents": {
+        "research": [
+          "competitive-analysis.md",
+          "market-analysis.md",
+          "industry-trends.md",
+          "customer-research.md",
+          "brand-research-report.md",
+          "viability-analysis.md",
+          "financial-analysis.md",
+          "technology-landscape.md",
+          "risk-assessment.md",
+          "demand-analysis.md",
+          "business-model-analysis.md",
+          "roi-projection.md",
+          "pricing-strategy.md",
+          "go-to-market-strategy.md",
+          "strategic-recommendations.md",
+          "executive-summary.md",
+          "market-size-analysis.md",
+          "target-market-segmentation.md",
+          "customer-persona-profiles.md",
+          "competitor-feature-matrix.md",
+          "competitor-pricing-analysis.md",
+          "market-gap-analysis.md",
+          "industry-regulations-compliance.md",
+          "technology-adoption-trends.md",
+          "customer-pain-points.md",
+          "solution-alternatives.md",
+          "market-entry-barriers.md",
+          "partnership-opportunities.md",
+          "supply-chain-analysis.md",
+          "intellectual-property-landscape.md",
+          "market-growth-projections.md",
+          "customer-acquisition-cost-analysis.md",
+          "lifetime-value-analysis.md",
+          "competitive-positioning.md",
+          "swot-analysis.md",
+          "pestle-analysis.md",
+          "value-proposition-canvas.md",
+          "business-model-canvas.md",
+          "market-timing-analysis.md",
+          "technology-readiness-assessment.md",
+          "regulatory-risk-assessment.md",
+          "market-saturation-analysis.md",
+          "customer-journey-mapping.md",
+          "pricing-elasticity-study.md",
+          "distribution-channel-analysis.md",
+          "brand-perception-study.md",
+          "market-trends-forecast.md",
+          "competitive-response-planning.md"
+        ],
+        "marketing": [
+          "marketing-strategy.md",
+          "brand-positioning-messaging.md",
+          "digital-marketing-strategy.md",
+          "content-marketing-strategy.md",
+          "social-media-strategy.md",
+          "ppc-campaign-strategy.md",
+          "seo-content-strategy.md",
+          "email-marketing-strategy.md",
+          "influencer-marketing-strategy.md",
+          "affiliate-marketing-strategy.md",
+          "video-marketing-strategy.md",
+          "podcast-marketing-strategy.md",
+          "webinar-marketing-strategy.md",
+          "event-marketing-strategy.md",
+          "pr-media-strategy.md",
+          "community-building-strategy.md",
+          "referral-program-strategy.md",
+          "partnership-marketing-strategy.md",
+          "product-launch-campaign.md",
+          "brand-voice-guidelines.md",
+          "visual-identity-guidelines.md",
+          "content-calendar-template.md",
+          "buyer-journey-content-map.md",
+          "lead-nurturing-sequences.md",
+          "conversion-optimization-plan.md",
+          "landing-page-strategy.md",
+          "a-b-testing-framework.md",
+          "marketing-automation-setup.md",
+          "customer-testimonial-strategy.md",
+          "case-study-development-plan.md",
+          "thought-leadership-strategy.md",
+          "crisis-communication-plan.md",
+          "brand-ambassador-program.md",
+          "user-generated-content-strategy.md",
+          "retention-marketing-strategy.md",
+          "cross-selling-upselling-strategy.md",
+          "seasonal-campaign-planning.md",
+          "marketing-budget-allocation.md",
+          "marketing-metrics-dashboard.md",
+          "competitor-marketing-analysis.md",
+          "marketing-technology-stack.md"
+        ],
+        "finance": [
+          "ai-development-cost-analysis.md",
+          "ai-vs-human-cost-comparison.md",
+          "llm-token-budget-projections.md",
+          "ai-development-roi-analysis.md",
+          "ai-financial-risk-assessment.md"
+        ],
+        "market-validation": [
+          "market-validation-strategy.md",
+          "customer-discovery-report.md",
+          "competitive-landscape-analysis.md",
+          "market-demand-quantification.md",
+          "product-market-fit-framework.md",
+          "pmf-measurement-system.md",
+          "pmf-optimization-strategy.md",
+          "pmf-monitoring-dashboard.md",
+          "validated-customer-personas.md",
+          "customer-journey-validation.md",
+          "mvp-validation-strategy.md",
+          "pricing-validation-strategy.md",
+          "feature-prioritization-validation.md",
+          "user-testing-protocols.md",
+          "beta-program-strategy.md",
+          "early-adopter-feedback-system.md",
+          "market-fit-indicators.md",
+          "pivoting-strategy-framework.md",
+          "validation-metrics-dashboard.md"
+        ],
+        "customer-success": [
+          "onboarding-optimization.md",
+          "customer-activation-strategy.md",
+          "customer-education-program.md",
+          "time-to-value-optimization.md",
+          "churn-prediction-system.md",
+          "customer-health-scoring.md",
+          "retention-intervention-workflows.md",
+          "win-back-campaign-strategy.md",
+          "customer-success-management.md",
+          "feature-adoption-campaigns.md",
+          "customer-community-strategy.md",
+          "expansion-revenue-automation.md",
+          "customer-feedback-loops.md",
+          "success-metrics-framework.md",
+          "customer-segmentation-strategy.md",
+          "loyalty-program-design.md",
+          "nps-improvement-strategy.md",
+          "customer-advocacy-program.md",
+          "support-escalation-optimization.md",
+          "proactive-support-strategy.md",
+          "customer-lifecycle-automation.md",
+          "retention-dashboard-design.md",
+          "customer-success-playbooks.md",
+          "value-realization-framework.md"
+        ],
+        "monetization": [
+          "subscription-model.md",
+          "pricing-optimization.md",
+          "revenue-forecasting.md",
+          "customer-lifetime-value-strategy.md",
+          "revenue-stream-diversification.md",
+          "passive-income-strategies.md",
+          "partnership-revenue-models.md",
+          "expansion-revenue-strategy.md",
+          "pricing-psychology-strategy.md",
+          "revenue-analytics-dashboard.md",
+          "freemium-conversion-optimization.md",
+          "tiered-pricing-strategy.md",
+          "usage-based-pricing-model.md",
+          "enterprise-pricing-strategy.md",
+          "discount-strategy-framework.md",
+          "billing-optimization-strategy.md",
+          "revenue-recognition-policies.md",
+          "churn-revenue-impact-analysis.md",
+          "pricing-a-b-testing-framework.md",
+          "competitor-pricing-monitoring.md",
+          "value-metric-identification.md",
+          "pricing-localization-strategy.md",
+          "revenue-operations-playbook.md",
+          "monetization-experimentation-framework.md"
+        ],
+        "investment": [
+          "investor-teaser.md",
+          "executive-summary.md",
+          "pitch-deck.md",
+          "business-plan.md",
+          "financial-projections.md",
+          "market-opportunity-analysis.md",
+          "competitive-positioning-investors.md",
+          "valuation-analysis.md",
+          "use-of-funds.md",
+          "investor-targeting-strategy.md",
+          "exit-strategy-scenarios.md",
+          "traction-metrics.md",
+          "cap-table-overview.md",
+          "term-sheet-negotiation-guide.md",
+          "due-diligence-preparation.md",
+          "investor-update-template.md",
+          "fundraising-timeline.md",
+          "investor-faq-document.md",
+          "strategic-partnerships-overview.md"
+        ],
+        "security": [
+          "security-architecture-strategy.md",
+          "threat-modeling-analysis.md",
+          "compliance-framework-strategy.md",
+          "application-security-design.md",
+          "infrastructure-security.md",
+          "data-security-encryption.md",
+          "security-operations-monitoring.md",
+          "incident-response-plan.md",
+          "penetration-testing-strategy.md",
+          "security-training-awareness.md",
+          "vulnerability-management-process.md",
+          "access-control-strategy.md",
+          "security-audit-checklist.md"
+        ],
+        "analytics": [
+          "business-intelligence-strategy.md",
+          "revenue-analytics-dashboard.md",
+          "customer-analytics-framework.md",
+          "growth-metrics-framework.md",
+          "growth-experimentation-platform.md",
+          "conversion-funnel-analytics.md",
+          "product-analytics-optimization.md",
+          "predictive-analytics-models.md",
+          "real-time-analytics-monitoring.md",
+          "analytics-infrastructure-architecture.md",
+          "data-governance-framework.md",
+          "kpi-definition-framework.md",
+          "attribution-modeling-strategy.md",
+          "cohort-analysis-framework.md",
+          "user-behavior-analytics.md",
+          "revenue-attribution-model.md",
+          "marketing-mix-modeling.md",
+          "customer-segmentation-analytics.md",
+          "analytics-tool-selection.md",
+          "data-visualization-standards.md",
+          "analytics-automation-strategy.md",
+          "reporting-cadence-framework.md",
+          "analytics-training-program.md"
+        ],
+        "analysis": [
+          "executive-intelligence-summary.md",
+          "strategic-recommendations.md",
+          "risk-opportunity-matrix.md",
+          "go-no-go-recommendation.md"
+        ]
+      }
+    },
+    
+    "existing_project_minimal": {
+      "description": "Essential validation for existing products (2-3 hours)",
+      "document_count": 20,
+      "documents": {
+        "validation": [
+          "feature-validation-report.md",
+          "feature-market-alignment.md",
+          "unused-features-analysis.md",
+          "actual-vs-intended-usage.md"
+        ],
+        "research": [
+          "market-validation-existing.md",
+          "competitive-comparison-actual.md",
+          "customer-feedback-analysis.md",
+          "gap-analysis-built-vs-market.md",
+          "pivot-opportunities-quick.md"
+        ],
+        "technical": [
+          "technical-feasibility-assessment.md",
+          "architecture-market-fit.md",
+          "technical-debt-roi-matrix.md",
+          "scalability-vs-demand.md"
+        ],
+        "finance": [
+          "actual-cost-analysis.md",
+          "margin-reality-check.md",
+          "pricing-optimization.md"
+        ],
+        "analysis": [
+          "validation-decision-matrix.md",
+          "go-forward-recommendations.md",
+          "quick-wins-identification.md"
+        ]
+      }
+    },
+    
+    "existing_project_standard": {
+      "description": "Comprehensive validation with enhancement planning (4-6 hours)",
+      "document_count": 52,
+      "documents": {
+        "validation": [
+          "feature-validation-report.md",
+          "feature-market-alignment.md",
+          "unused-features-analysis.md",
+          "actual-vs-intended-usage.md",
+          "user-journey-vs-implementation.md",
+          "feature-by-feature-validation.md",
+          "core-value-prop-validation.md",
+          "differentiation-analysis.md"
+        ],
+        "research": [
+          "market-validation-existing.md",
+          "competitive-comparison-actual.md",
+          "customer-feedback-analysis.md",
+          "gap-analysis-built-vs-market.md",
+          "pivot-opportunities-detailed.md",
+          "adjacent-market-analysis.md",
+          "market-timing-reassessment.md",
+          "customer-segment-validation.md",
+          "pricing-model-validation.md",
+          "growth-channel-effectiveness.md"
+        ],
+        "technical": [
+          "technical-feasibility-assessment.md",
+          "architecture-market-fit.md",
+          "technical-debt-roi-matrix.md",
+          "scalability-vs-demand.md",
+          "performance-vs-expectations.md",
+          "security-vs-requirements.md",
+          "integration-capability-gaps.md",
+          "mobile-readiness-assessment.md",
+          "api-completeness-analysis.md"
+        ],
+        "monetization": [
+          "actual-cost-analysis.md",
+          "margin-reality-check.md",
+          "pricing-optimization.md",
+          "revenue-model-validation.md",
+          "unit-economics-analysis.md",
+          "ltv-cac-reality.md",
+          "monetization-experiments.md"
+        ],
+        "pivot": [
+          "pivot-feasibility-analysis.md",
+          "asset-reuse-assessment.md",
+          "migration-effort-estimate.md",
+          "market-repositioning-options.md"
+        ],
+        "analytics": [
+          "usage-analytics-insights.md",
+          "user-behavior-patterns.md",
+          "feature-adoption-metrics.md",
+          "churn-analysis.md",
+          "engagement-metrics.md"
+        ],
+        "analysis": [
+          "validation-decision-matrix.md",
+          "go-forward-recommendations.md",
+          "investment-priority-guide.md",
+          "technical-roadmap-alignment.md",
+          "risk-mitigation-plan.md",
+          "success-metrics-framework.md"
+        ]
+      }
+    },
+    
+    "existing_project_thorough": {
+      "description": "Enterprise-level validation with complete strategic analysis (8-12 hours)",
+      "document_count": 198,
+      "documents": {
+        "validation": [
+          "feature-validation-report.md",
+          "feature-market-alignment.md",
+          "unused-features-analysis.md",
+          "actual-vs-intended-usage.md",
+          "user-journey-vs-implementation.md",
+          "feature-by-feature-validation.md",
+          "core-value-prop-validation.md",
+          "differentiation-analysis.md",
+          "feature-depth-analysis.md",
+          "feature-dependency-mapping.md",
+          "feature-sunset-candidates.md",
+          "feature-enhancement-priorities.md"
+        ],
+        "research": [
+          "market-validation-existing.md",
+          "competitive-comparison-actual.md",
+          "customer-feedback-analysis.md",
+          "gap-analysis-built-vs-market.md",
+          "pivot-opportunities-detailed.md",
+          "adjacent-market-analysis.md",
+          "market-timing-reassessment.md",
+          "customer-segment-validation.md",
+          "pricing-model-validation.md",
+          "growth-channel-effectiveness.md",
+          "market-penetration-analysis.md",
+          "competitive-differentiation-gaps.md",
+          "market-share-potential.md",
+          "customer-acquisition-barriers.md",
+          "retention-improvement-opportunities.md",
+          "expansion-revenue-potential.md",
+          "viral-growth-assessment.md",
+          "network-effects-analysis.md",
+          "platform-potential-evaluation.md",
+          "ecosystem-development-opportunities.md"
+        ],
+        "technical": [
+          "technical-feasibility-assessment.md",
+          "architecture-market-fit.md",
+          "technical-debt-roi-matrix.md",
+          "scalability-vs-demand.md",
+          "performance-vs-expectations.md",
+          "security-vs-requirements.md",
+          "integration-capability-gaps.md",
+          "mobile-readiness-assessment.md",
+          "api-completeness-analysis.md",
+          "infrastructure-cost-optimization.md",
+          "database-optimization-opportunities.md",
+          "caching-strategy-improvements.md",
+          "microservices-migration-feasibility.md",
+          "serverless-transformation-assessment.md",
+          "container-orchestration-readiness.md",
+          "ci-cd-maturity-assessment.md",
+          "monitoring-observability-gaps.md",
+          "disaster-recovery-readiness.md",
+          "compliance-technical-requirements.md",
+          "accessibility-compliance-gaps.md"
+        ],
+        "monetization": [
+          "actual-cost-analysis.md",
+          "margin-reality-check.md",
+          "pricing-optimization.md",
+          "revenue-model-validation.md",
+          "unit-economics-analysis.md",
+          "ltv-cac-reality.md",
+          "monetization-experiments.md",
+          "subscription-model-feasibility.md",
+          "freemium-conversion-analysis.md",
+          "enterprise-pricing-strategy.md",
+          "usage-based-pricing-assessment.md",
+          "bundling-opportunities.md",
+          "upsell-cross-sell-potential.md",
+          "pricing-elasticity-testing.md",
+          "discount-strategy-optimization.md",
+          "payment-methods-expansion.md",
+          "revenue-recognition-compliance.md"
+        ],
+        "pivot": [
+          "pivot-feasibility-analysis.md",
+          "asset-reuse-assessment.md",
+          "migration-effort-estimate.md",
+          "market-repositioning-options.md",
+          "vertical-pivot-opportunities.md",
+          "horizontal-pivot-assessment.md",
+          "platform-pivot-feasibility.md",
+          "b2b-b2c-transition-analysis.md",
+          "geographic-expansion-options.md",
+          "white-label-opportunities.md",
+          "acquisition-target-assessment.md",
+          "merger-opportunities.md",
+          "strategic-partnership-pivots.md",
+          "technology-licensing-potential.md"
+        ],
+        "analytics": [
+          "usage-analytics-insights.md",
+          "user-behavior-patterns.md",
+          "feature-adoption-metrics.md",
+          "churn-analysis.md",
+          "engagement-metrics.md",
+          "cohort-performance-analysis.md",
+          "funnel-optimization-opportunities.md",
+          "user-segmentation-insights.md",
+          "power-user-analysis.md",
+          "dormant-user-reactivation.md",
+          "referral-program-effectiveness.md",
+          "content-performance-metrics.md",
+          "search-query-analysis.md",
+          "error-rate-patterns.md",
+          "performance-bottleneck-identification.md"
+        ],
+        "customer": [
+          "customer-satisfaction-analysis.md",
+          "nps-score-drivers.md",
+          "support-ticket-patterns.md",
+          "feature-request-prioritization.md",
+          "customer-success-metrics.md",
+          "onboarding-optimization.md",
+          "customer-journey-gaps.md",
+          "persona-validation.md",
+          "icp-refinement.md",
+          "customer-lifetime-value-segments.md",
+          "win-loss-analysis.md",
+          "competitive-switching-analysis.md"
+        ],
+        "market": [
+          "tam-sam-som-validation.md",
+          "market-growth-projections.md",
+          "regulatory-impact-assessment.md",
+          "industry-consolidation-trends.md",
+          "technology-adoption-curves.md",
+          "market-maturity-assessment.md",
+          "substitute-product-threats.md",
+          "supplier-power-analysis.md",
+          "buyer-power-assessment.md",
+          "barrier-to-entry-evaluation.md"
+        ],
+        "competitive": [
+          "competitive-feature-matrix.md",
+          "competitive-pricing-analysis.md",
+          "competitive-positioning-map.md",
+          "competitive-strategy-assessment.md",
+          "competitive-weakness-exploitation.md",
+          "competitive-moat-analysis.md",
+          "new-entrant-threat-assessment.md",
+          "competitive-technology-stack.md",
+          "competitive-partnership-analysis.md",
+          "competitive-funding-intelligence.md"
+        ],
+        "strategic": [
+          "swot-analysis-current-state.md",
+          "porter-five-forces-analysis.md",
+          "bcg-matrix-positioning.md",
+          "ansoff-matrix-opportunities.md",
+          "blue-ocean-strategy-assessment.md",
+          "core-competency-analysis.md",
+          "value-chain-optimization.md",
+          "strategic-options-evaluation.md",
+          "scenario-planning-models.md",
+          "risk-mitigation-strategies.md"
+        ],
+        "financial": [
+          "burn-rate-analysis.md",
+          "runway-extension-options.md",
+          "funding-requirements-assessment.md",
+          "valuation-improvement-strategies.md",
+          "exit-strategy-preparation.md",
+          "acquisition-readiness-assessment.md",
+          "ipo-readiness-evaluation.md",
+          "financial-model-validation.md",
+          "budget-reallocation-opportunities.md",
+          "cost-center-optimization.md"
+        ],
+        "organizational": [
+          "team-capability-gaps.md",
+          "hiring-priority-matrix.md",
+          "organizational-structure-optimization.md",
+          "culture-market-fit.md",
+          "knowledge-management-gaps.md",
+          "process-improvement-opportunities.md",
+          "vendor-optimization-assessment.md",
+          "outsourcing-opportunities.md",
+          "automation-potential-analysis.md",
+          "productivity-improvement-areas.md"
+        ],
+        "innovation": [
+          "innovation-pipeline-assessment.md",
+          "r-and-d-investment-priorities.md",
+          "patent-portfolio-opportunities.md",
+          "technology-trend-alignment.md",
+          "disruptive-threat-assessment.md",
+          "innovation-partnership-opportunities.md",
+          "hackathon-idea-evaluation.md",
+          "customer-co-creation-potential.md",
+          "open-innovation-assessment.md",
+          "technology-scouting-priorities.md"
+        ],
+        "risk": [
+          "technical-risk-assessment.md",
+          "market-risk-evaluation.md",
+          "competitive-risk-analysis.md",
+          "regulatory-risk-assessment.md",
+          "financial-risk-evaluation.md",
+          "operational-risk-analysis.md",
+          "reputational-risk-assessment.md",
+          "cybersecurity-risk-evaluation.md",
+          "supply-chain-risk-analysis.md",
+          "key-person-dependency-risk.md"
+        ],
+        "analysis": [
+          "validation-decision-matrix.md",
+          "go-forward-recommendations.md",
+          "investment-priority-guide.md",
+          "technical-roadmap-alignment.md",
+          "risk-mitigation-plan.md",
+          "success-metrics-framework.md",
+          "okr-recommendation-framework.md",
+          "kpi-dashboard-design.md",
+          "milestone-achievement-plan.md",
+          "transformation-roadmap.md",
+          "change-management-strategy.md",
+          "communication-plan.md",
+          "stakeholder-engagement-strategy.md",
+          "governance-framework.md",
+          "executive-decision-brief.md"
+        ]
+      }
+    }
+  },
+  
+  "document_priority_mapping": {
+    "minimal": {
+      "critical": [
+        "market-analysis.md",
+        "competitive-analysis.md",
+        "viability-analysis.md",
+        "financial-analysis.md",
+        "go-no-go-recommendation.md"
+      ],
+      "important": [
+        "customer-research.md",
+        "risk-assessment.md",
+        "marketing-strategy.md",
+        "ai-development-cost-analysis.md",
+        "executive-summary.md"
+      ],
+      "helpful": [
+        "brand-positioning-messaging.md",
+        "digital-marketing-strategy.md",
+        "ai-vs-human-cost-comparison.md",
+        "ai-development-roi-analysis.md",
+        "executive-intelligence-summary.md"
+      ]
+    },
+    
+    "medium": {
+      "critical": [
+        "market-analysis.md",
+        "competitive-analysis.md",
+        "viability-analysis.md",
+        "financial-analysis.md",
+        "go-no-go-recommendation.md",
+        "market-validation-strategy.md",
+        "product-market-fit-framework.md"
+      ],
+      "important": [
+        "customer-research.md",
+        "industry-trends.md",
+        "risk-assessment.md",
+        "demand-analysis.md",
+        "business-model-analysis.md",
+        "roi-projection.md",
+        "pricing-strategy.md",
+        "marketing-strategy.md",
+        "customer-discovery-report.md",
+        "competitive-landscape-analysis.md"
+      ],
+      "helpful": "remaining documents"
+    },
+    
+    "thorough": {
+      "critical": "all core business strategy documents",
+      "important": "all implementation and growth documents",
+      "helpful": "all optimization and enhancement documents"
+    }
+  },
+  
+  "implementation_notes": {
+    "trigger_mechanism": "Research level selection triggers document set",
+    "parallel_execution": "Documents within same category can be created in parallel",
+    "dependency_management": "Critical documents must complete before dependent documents",
+    "progress_tracking": "Track completion percentage based on document count",
+    "token_optimization": "Use JSON versions for agent context management",
+    "quality_assurance": "All documents follow GitHub markdown standards"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "agent": "mcp_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 273,
+    "full_md_tokens": 15171,
+    "md_file": "agile-ai-agents/ai-agents/mcp_agent.md",
+    "file_hash": "1615d80dbe7236e5dd67020192961434"
+  },
+  "summary": "## Overview\nThe MCP Agent specializes in discovering, analyzing, and integrating MCP (Model Context Protocol) servers that enhance AI agent capabilities. This agent identifies the most valuable MCP servers for each project type, maps them to specific AI agents, and provides complete installation and configuration guidance.",
+  "core_responsibilities": {
+    "summary": [
+      "**🎯 Multi-Model Cost Optimization via Zen-MCP-Server** (PRIMARY FOCUS)",
+      "Dual-Purpose MCP Research (SECONDARY FOCUS)",
+      "MCP Server Discovery & Research",
+      "Project-Specific MCP Matching",
+      "Installation & Configuration"
+    ],
+    "details_tokens": 787,
+    "md_reference": "agile-ai-agents/ai-agents/mcp_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "Zen-MCP-Server Setup & Cost Optimization Workflow (PRIMARY WORKFLOW) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/mcp_agent.md#zen-mcp-server-setup-cost-optimization-workflow-primary-workflow-workflow"
+      },
+      {
+        "name": "Dual-Purpose MCP Server Research Workflow (SECONDARY WORKFLOW) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/mcp_agent.md#dual-purpose-mcp-server-research-workflow-secondary-workflow-workflow"
+      },
+      {
+        "name": "Comprehensive MCP Server Research Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/mcp_agent.md#comprehensive-mcp-server-research-workflow"
+      },
+      {
+        "name": "Cross-Platform MCP Installation Guide Creation Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/mcp_agent.md#cross-platform-mcp-installation-guide-creation-workflow"
+      },
+      {
+        "name": "Application LLM Integration Analysis Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/mcp_agent.md#application-llm-integration-analysis-workflow"
+      },
+      {
+        "name": "Installation Script Templates Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/mcp_agent.md#installation-script-templates-workflow"
+      },
+      {
+        "name": "Agent Enhancement Analysis Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/mcp_agent.md#agent-enhancement-analysis-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/mcp_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/mcp_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

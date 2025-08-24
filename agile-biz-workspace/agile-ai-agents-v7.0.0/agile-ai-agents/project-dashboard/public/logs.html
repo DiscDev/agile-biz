@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgileAiAgents Log Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace;
+            background: #0a0a0a;
+            color: #ffffff;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        select, input, button {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        select:focus, input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        button {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: #667eea;
+            border-color: #667eea;
+        }
+
+        .log-container {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            height: 600px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+
+        .log-entry {
+            padding: 5px 0;
+            border-bottom: 1px solid #222;
+            word-wrap: break-word;
+        }
+
+        .log-entry:hover {
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .log-timestamp {
+            color: #666;
+            margin-right: 10px;
+        }
+
+        .log-level {
+            font-weight: bold;
+            margin-right: 10px;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 11px;
+        }
+
+        .level-error {
+            background: #eb3349;
+            color: white;
+        }
+
+        .level-warn {
+            background: #f2c94c;
+            color: #000;
+        }
+
+        .level-info {
+            background: #667eea;
+            color: white;
+        }
+
+        .level-debug {
+            background: #444;
+            color: white;
+        }
+
+        .level-http {
+            background: #38ef7d;
+            color: #000;
+        }
+
+        .log-message {
+            color: #ddd;
+        }
+
+        .log-metadata {
+            color: #888;
+            margin-left: 20px;
+            font-size: 12px;
+            margin-top: 2px;
+        }
+
+        .file-list {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .file-item {
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .file-item:hover {
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 5px;
+        }
+
+        .file-item.selected {
+            background: #667eea;
+            border-radius: 5px;
+        }
+
+        .file-size {
+            color: #666;
+            font-size: 12px;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            color: #888;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: #666;
+        }
+
+        .no-logs {
+            text-align: center;
+            padding: 50px;
+            color: #666;
+        }
+
+        .highlight {
+            background: rgba(242, 201, 76, 0.3);
+            color: #f2c94c;
+            padding: 0 2px;
+        }
+
+        .auto-scroll-toggle {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .auto-scroll-toggle input {
+            width: auto;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .tab:hover {
+            color: #667eea;
+        }
+
+        .tab.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📋 Log Viewer</h1>
+
+        <div class="tabs">
+            <div class="tab active" data-tab="viewer">Log Viewer</div>
+            <div class="tab" data-tab="search">Search Logs</div>
+            <div class="tab" data-tab="stats">Statistics</div>
+        </div>
+
+        <!-- Log Viewer Tab -->
+        <div id="viewer-tab" class="tab-content active">
+            <div class="controls">
+                <div class="control-group">
+                    <label>Log Type:</label>
+                    <select id="log-type">
+                        <option value="app">Application</option>
+                        <option value="error">Errors</option>
+                        <option value="access">Access</option>
+                        <option value="agent">Agent Activity</option>
+                        <option value="security">Security</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label>Level Filter:</label>
+                    <select id="level-filter">
+                        <option value="">All Levels</option>
+                        <option value="error">Error</option>
+                        <option value="warn">Warning</option>
+                        <option value="info">Info</option>
+                        <option value="debug">Debug</option>
+                        <option value="http">HTTP</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>Lines:</label>
+                    <select id="tail-lines">
+                        <option value="50">Last 50</option>
+                        <option value="100" selected>Last 100</option>
+                        <option value="200">Last 200</option>
+                        <option value="500">Last 500</option>
+                        <option value="1000">Last 1000</option>
+                    </select>
+                </div>
+
+                <button id="refresh-btn">🔄 Refresh</button>
+                
+                <div class="auto-scroll-toggle">
+                    <input type="checkbox" id="auto-scroll" checked>
+                    <label for="auto-scroll">Auto-scroll</label>
+                </div>
+            </div>
+
+            <div class="file-list" id="file-list">
+                <div class="loading">Loading log files...</div>
+            </div>
+
+            <div class="log-container" id="log-container">
+                <div class="loading">Select a log file to view</div>
+            </div>
+        </div>
+
+        <!-- Search Tab -->
+        <div id="search-tab" class="tab-content">
+            <div class="controls">
+                <input type="text" id="search-query" class="search-box" placeholder="Search all logs...">
+                
+                <div class="control-group">
+                    <label>Type:</label>
+                    <select id="search-type">
+                        <option value="">All Types</option>
+                        <option value="app">Application</option>
+                        <option value="error">Errors</option>
+                        <option value="access">Access</option>
+                        <option value="agent">Agent</option>
+                        <option value="security">Security</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>Date:</label>
+                    <input type="date" id="search-start-date">
+                    <span>to</span>
+                    <input type="date" id="search-end-date">
+                </div>
+
+                <button id="search-btn">🔍 Search</button>
+            </div>
+
+            <div class="log-container" id="search-results">
+                <div class="no-logs">Enter a search query above</div>
+            </div>
+        </div>
+
+        <!-- Statistics Tab -->
+        <div id="stats-tab" class="tab-content">
+            <div class="controls">
+                <div class="control-group">
+                    <label>Log Type:</label>
+                    <select id="stats-type">
+                        <option value="app">Application</option>
+                        <option value="error">Errors</option>
+                        <option value="access">Access</option>
+                        <option value="agent">Agent Activity</option>
+                        <option value="security">Security</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>Period:</label>
+                    <select id="stats-period">
+                        <option value="1h">Last Hour</option>
+                        <option value="24h" selected>Last 24 Hours</option>
+                        <option value="7d">Last 7 Days</option>
+                        <option value="30d">Last 30 Days</option>
+                    </select>
+                </div>
+
+                <button id="stats-refresh">📊 Refresh Stats</button>
+            </div>
+
+            <div class="stats-container" id="stats-container">
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-total">0</div>
+                    <div class="stat-label">Total Entries</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-errors">0</div>
+                    <div class="stat-label">Errors</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-warnings">0</div>
+                    <div class="stat-label">Warnings</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="stat-info">0</div>
+                    <div class="stat-label">Info</div>
+                </div>
+            </div>
+
+            <div class="log-container" id="top-errors">
+                <h3 style="margin-bottom: 10px;">Top Errors</h3>
+                <div class="no-logs">No error data available</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentFile = null;
+        let autoScroll = true;
+        let searchQuery = '';
+
+        // Tab handling
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                tab.classList.add('active');
+                document.getElementById(`${tab.dataset.tab}-tab`).classList.add('active');
+            });
+        });
+
+        // Auto-scroll toggle
+        document.getElementById('auto-scroll').addEventListener('change', (e) => {
+            autoScroll = e.target.checked;
+        });
+
+        // Load log files
+        async function loadLogFiles() {
+            try {
+                const response = await fetch('/api/logs/files');
+                const files = await response.json();
+                
+                const logType = document.getElementById('log-type').value;
+                const fileList = document.getElementById('file-list');
+                
+                if (!files[logType] || files[logType].length === 0) {
+                    fileList.innerHTML = '<div class="no-logs">No log files found</div>';
+                    return;
+                }
+                
+                fileList.innerHTML = files[logType].map(file => `
+                    <div class="file-item" data-filename="${file.name}">
+                        <span>${file.name}</span>
+                        <span class="file-size">${formatFileSize(file.size)}</span>
+                    </div>
+                `).join('');
+                
+                // Add click handlers
+                fileList.querySelectorAll('.file-item').forEach(item => {
+                    item.addEventListener('click', () => {
+                        document.querySelectorAll('.file-item').forEach(i => i.classList.remove('selected'));
+                        item.classList.add('selected');
+                        currentFile = item.dataset.filename;
+                        loadLogContent();
+                    });
+                });
+                
+                // Auto-select first file
+                if (files[logType].length > 0 && !currentFile) {
+                    fileList.querySelector('.file-item').click();
+                }
+            } catch (error) {
+                console.error('Failed to load log files:', error);
+            }
+        }
+
+        // Load log content
+        async function loadLogContent() {
+            if (!currentFile) return;
+            
+            const logType = document.getElementById('log-type').value;
+            const levelFilter = document.getElementById('level-filter').value;
+            const tailLines = document.getElementById('tail-lines').value;
+            
+            try {
+                const params = new URLSearchParams({
+                    tail: tailLines,
+                    ...(levelFilter && { level: levelFilter })
+                });
+                
+                const response = await fetch(`/api/logs/read/${logType}/${currentFile}?${params}`);
+                const logs = await response.json();
+                
+                displayLogs(logs, 'log-container');
+            } catch (error) {
+                console.error('Failed to load log content:', error);
+                document.getElementById('log-container').innerHTML = '<div class="no-logs">Failed to load logs</div>';
+            }
+        }
+
+        // Display logs
+        function displayLogs(logs, containerId) {
+            const container = document.getElementById(containerId);
+            
+            if (!logs || logs.length === 0) {
+                container.innerHTML = '<div class="no-logs">No log entries found</div>';
+                return;
+            }
+            
+            container.innerHTML = logs.map(log => {
+                if (log.raw) {
+                    return `<div class="log-entry">${escapeHtml(log.raw)}</div>`;
+                }
+                
+                let html = '<div class="log-entry">';
+                
+                if (log.timestamp) {
+                    html += `<span class="log-timestamp">${log.timestamp}</span>`;
+                }
+                
+                if (log.level) {
+                    html += `<span class="log-level level-${log.level}">${log.level.toUpperCase()}</span>`;
+                }
+                
+                if (log.message) {
+                    let message = escapeHtml(log.message);
+                    if (searchQuery) {
+                        const regex = new RegExp(`(${escapeRegex(searchQuery)})`, 'gi');
+                        message = message.replace(regex, '<span class="highlight">$1</span>');
+                    }
+                    html += `<span class="log-message">${message}</span>`;
+                }
+                
+                if (log.metadata && Object.keys(log.metadata).length > 0) {
+                    const metaStr = JSON.stringify(log.metadata, null, 2);
+                    html += `<div class="log-metadata">${escapeHtml(metaStr)}</div>`;
+                }
+                
+                html += '</div>';
+                return html;
+            }).join('');
+            
+            if (autoScroll) {
+                container.scrollTop = container.scrollHeight;
+            }
+        }
+
+        // Search logs
+        async function searchLogs() {
+            searchQuery = document.getElementById('search-query').value;
+            const searchType = document.getElementById('search-type').value;
+            const startDate = document.getElementById('search-start-date').value;
+            const endDate = document.getElementById('search-end-date').value;
+            
+            if (!searchQuery) {
+                document.getElementById('search-results').innerHTML = '<div class="no-logs">Enter a search query</div>';
+                return;
+            }
+            
+            try {
+                const params = new URLSearchParams({
+                    q: searchQuery,
+                    limit: 200,
+                    ...(searchType && { type: searchType }),
+                    ...(startDate && { startDate }),
+                    ...(endDate && { endDate })
+                });
+                
+                const response = await fetch(`/api/logs/search?${params}`);
+                const results = await response.json();
+                
+                displayLogs(results, 'search-results');
+            } catch (error) {
+                console.error('Search failed:', error);
+                document.getElementById('search-results').innerHTML = '<div class="no-logs">Search failed</div>';
+            }
+        }
+
+        // Load statistics
+        async function loadStats() {
+            const statsType = document.getElementById('stats-type').value;
+            const period = document.getElementById('stats-period').value;
+            
+            try {
+                const response = await fetch(`/api/logs/stats/${statsType}?period=${period}`);
+                const stats = await response.json();
+                
+                document.getElementById('stat-total').textContent = stats.total || 0;
+                document.getElementById('stat-errors').textContent = stats.byLevel?.error || 0;
+                document.getElementById('stat-warnings').textContent = stats.byLevel?.warn || 0;
+                document.getElementById('stat-info').textContent = stats.byLevel?.info || 0;
+                
+                // Display top errors
+                if (stats.topErrors && stats.topErrors.length > 0) {
+                    const topErrorsHtml = stats.topErrors.map(item => `
+                        <div class="log-entry">
+                            <span class="log-level level-error">ERROR</span>
+                            <span class="log-message">${escapeHtml(item.error)}</span>
+                            <span style="color: #666; margin-left: 10px;">(${item.count} occurrences)</span>
+                        </div>
+                    `).join('');
+                    
+                    document.getElementById('top-errors').innerHTML = 
+                        '<h3 style="margin-bottom: 10px;">Top Errors</h3>' + topErrorsHtml;
+                }
+            } catch (error) {
+                console.error('Failed to load statistics:', error);
+            }
+        }
+
+        // Utility functions
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 B';
+            const k = 1024;
+            const sizes = ['B', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+        function escapeHtml(unsafe) {
+            return unsafe
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+        function escapeRegex(string) {
+            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+
+        // Event listeners
+        document.getElementById('log-type').addEventListener('change', () => {
+            currentFile = null;
+            loadLogFiles();
+        });
+
+        document.getElementById('level-filter').addEventListener('change', loadLogContent);
+        document.getElementById('tail-lines').addEventListener('change', loadLogContent);
+        document.getElementById('refresh-btn').addEventListener('click', loadLogContent);
+        
+        document.getElementById('search-btn').addEventListener('click', searchLogs);
+        document.getElementById('search-query').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') searchLogs();
+        });
+        
+        document.getElementById('stats-type').addEventListener('change', loadStats);
+        document.getElementById('stats-period').addEventListener('change', loadStats);
+        document.getElementById('stats-refresh').addEventListener('click', loadStats);
+
+        // Initial load
+        loadLogFiles();
+        loadStats();
+
+        // Auto-refresh logs every 5 seconds
+        setInterval(() => {
+            if (document.querySelector('.tab.active').dataset.tab === 'viewer' && currentFile) {
+                loadLogContent();
+            }
+        }, 5000);
+    </script>
+</body>
+</html>

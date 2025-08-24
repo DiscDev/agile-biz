@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "document": "dashboard-status",
+    "title": "Project Dashboard Status",
+    "timestamp": "2025-07-22T01:41:03.731Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/dashboard-status.md",
+    "document_type": "general_documentation",
+    "file_hash": "fc5b0ed53efa359727aeffd942d95c07",
+    "estimated_tokens": 156,
+    "full_md_tokens": 140
+  },
+  "summary": "## Dashboard Information",
+  "sections": [
+    {
+      "title": "Dashboard Information",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/dashboard-status.md#dashboard-information",
+      "content_preview": "- **URL**: http://localhost:3001\n- **Status**: Active and monitoring\n- **Started**: 2025-07-11T16:32:04.098Z"
+    },
+    {
+      "title": "Features Active",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/dashboard-status.md#features-active",
+      "content_preview": "- ✅ Real-time document monitoring\n- ✅ Agent activity tracking\n- ✅ Sprint progress visualization\n- ✅ Stakeholder decision alerts\n- ✅ Live document upda..."
+    },
+    {
+      "title": "Monitoring",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/dashboard-status.md#monitoring",
+      "content_preview": "- **Project Documents**: /Users/phillipbrown/No iCloud Folder/AgileAiAgents/agile-ai-agents/project-documents\n- **WebSocket**: Connected\n- **File Watc..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Dashboard Information": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/dashboard-status.md#dashboard-information",
+      "tokens": 24,
+      "content_preview": "- **URL**: http://localhost:3001\n- **Status**: Active and monitoring\n- **Started**: 2025-07-11T16:32:04.098Z"
+    },
+    "Features Active": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/dashboard-status.md#features-active",
+      "tokens": 39,
+      "content_preview": "- ✅ Real-time document monitoring\n- ✅ Agent activity tracking\n- ✅ Sprint progress visualization\n- ✅ Stakeholder decision alerts\n- ✅ Live document upda..."
+    },
+    "Monitoring": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/dashboard-status.md#monitoring",
+      "tokens": 56,
+      "content_preview": "- **Project Documents**: /Users/phillipbrown/No iCloud Folder/AgileAiAgents/agile-ai-agents/project-documents\n- **WebSocket**: Connected\n- **File Watc..."
+    }
+  }
+}

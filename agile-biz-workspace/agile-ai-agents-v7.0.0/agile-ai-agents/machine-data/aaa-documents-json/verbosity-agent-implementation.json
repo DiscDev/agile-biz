@@ -1,0 +1,277 @@
+{
+  "meta": {
+    "document": "verbosity-agent-implementation",
+    "title": "Verbosity Agent Implementation Guide",
+    "timestamp": "2025-08-11T22:02:16.933Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md",
+    "document_type": "general_documentation",
+    "file_hash": "55ecbd56fecf169e8a530c9c64810039",
+    "estimated_tokens": 554,
+    "full_md_tokens": 2041
+  },
+  "summary": "## Quick Reference",
+  "sections": [
+    {
+      "title": "Quick Reference",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#quick-reference",
+      "content_preview": "**Configuration Location**: `CLAUDE.md` → `verbosity` section\n**User Documentation**: `verbosity-guide.md`\n**Current Setting Check**: Look for `verbos..."
+    },
+    {
+      "title": "Implementation Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#implementation-checklist",
+      "content_preview": "- [ ] Add verbosity configuration section to your agent\n- [ ] Identify multi-phase or long-running operations\n- [ ] Implement appropriate display temp..."
+    },
+    {
+      "title": "Core Implementation Rules",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#core-implementation-rules",
+      "content_preview": ""
+    },
+    {
+      "title": "Standard Display Templates",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#standard-display-templates",
+      "content_preview": ""
+    },
+    {
+      "title": "Implementation Examples",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#implementation-examples",
+      "content_preview": ""
+    },
+    {
+      "title": "Special Formatting Elements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#special-formatting-elements",
+      "content_preview": ""
+    },
+    {
+      "title": "Testing Your Implementation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#testing-your-implementation",
+      "content_preview": ""
+    },
+    {
+      "title": "Integration with Other Systems",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#integration-with-other-systems",
+      "content_preview": ""
+    },
+    {
+      "title": "Quick Implementation Guide",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#quick-implementation-guide",
+      "content_preview": "1. **Add Configuration Section**\n```markdown"
+    },
+    {
+      "title": "Examples from Other Agents",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#examples-from-other-agents",
+      "content_preview": ""
+    },
+    {
+      "title": "Reference",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#reference",
+      "content_preview": "- **User Guide**: `verbosity-guide.md` - For users configuring verbosity\n- **Configuration**: `CLAUDE.md` - Current verbosity settings\n- **Examples**:..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "deployment"
+  ],
+  "section_details": {
+    "Quick Reference": {
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#quick-reference",
+      "tokens": 39,
+      "content_preview": "**Configuration Location**: `CLAUDE.md` → `verbosity` section\n**User Documentation**: `verbosity-guide.md`\n**Current Setting Check**: Look for `verbos..."
+    },
+    "Implementation Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#implementation-checklist",
+      "tokens": 61,
+      "content_preview": "- [ ] Add verbosity configuration section to your agent\n- [ ] Identify multi-phase or long-running operations\n- [ ] Implement appropriate display temp..."
+    },
+    "Core Implementation Rules": {
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#core-implementation-rules",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Verbosity Level Behaviors": {
+          "content_preview": "**quiet**:\n- Show ONLY: Critical errors, final results\n- Hide: All progress, timing, status updates\n\n**normal**:\n- Show: Key milestones, phase transit...",
+          "tokens": 118,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#1-verbosity-level-behaviors-1"
+        },
+        "2. Required Agent Section": {
+          "content_preview": "Add this section to your agent document:\n\n```markdown",
+          "tokens": 13,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#2-required-agent-section-1"
+        },
+        "Verbosity Configuration": {
+          "content_preview": "This agent respects the verbosity settings in CLAUDE.md:\n- Shows detailed progress for [list key operations] in verbose mode\n- Displays phase-by-phase...",
+          "tokens": 95,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#verbosity-configuration-1"
+        }
+      }
+    },
+    "Standard Display Templates": {
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#standard-display-templates",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Agent Initialization Template": {
+          "content_preview": "**When to use**: Agent starts a major workflow\n\n**Verbose/Debug mode**:\n```\n[AGENT_NAME] AGENT INITIALIZING\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━...",
+          "tokens": 101,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#agent-initialization-template-1"
+        },
+        "Multi-Phase Progress Template": {
+          "content_preview": "**When to use**: Operations with multiple sequential phases\n\n**Verbose/Debug mode**:\n```\n[PHASE_NAME] - PHASE [X] OF [Y] [[TIME] [TIMEZONE]] | Elapsed...",
+          "tokens": 134,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#multi-phase-progress-template-1"
+        },
+        "Parallel Operations Template": {
+          "content_preview": "**When to use**: Multiple concurrent operations\n\n**Verbose/Debug mode**:\n```\nPARALLEL OPERATIONS - [OPERATION_NAME] [[TIME] [TIMEZONE]]\n━━━━━━━━━━━━━━...",
+          "tokens": 116,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#parallel-operations-template-1"
+        },
+        "Error Display Template": {
+          "content_preview": "**When to use**: ANY error (shown at ALL verbosity levels)\n\n```\n❌ ERROR in [Agent Name] [[TIME] [TIMEZONE]]\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━...",
+          "tokens": 88,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#error-display-template-1"
+        },
+        "Warning Display Template": {
+          "content_preview": "**When to use**: Non-critical issues (show in normal, verbose, debug)\n\n```\n⚠️  WARNING in [Agent Name] [[TIME] [TIMEZONE]]\n[WARNING_MESSAGE]\n[If verbo...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#warning-display-template-1"
+        },
+        "Completion Summary Template": {
+          "content_preview": "**When to use**: Major workflow completes\n\n**Verbose/Debug mode**:\n```\n✅ [WORKFLOW_NAME] COMPLETED [[TIME] [TIMEZONE]]\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━...",
+          "tokens": 119,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#completion-summary-template-1"
+        }
+      }
+    },
+    "Implementation Examples": {
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#implementation-examples",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Example 1: Simple Operation": {
+          "content_preview": "```markdown\nWhen analyzing code (in verbose mode):\n\\```\nCODE ANALYSIS - PHASE 1 OF 3 [10:30:15 AM PST] | Elapsed: 00:00:00\n━━━━━━━━━━━━━━━━━━━━━━━━━━━...",
+          "tokens": 102,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#example-1-simple-operation-1"
+        },
+        "Example 2: Error Handling": {
+          "content_preview": "```markdown\nIf an error occurs (shown at all verbosity levels):\n\\```\n❌ ERROR in Security Agent [11:45:32 AM PST]\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━...",
+          "tokens": 112,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#example-2-error-handling-1"
+        }
+      }
+    },
+    "Special Formatting Elements": {
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#special-formatting-elements",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Progress Bars": {
+          "content_preview": "- Use 8 blocks: `▓▓▓▓░░░░`\n- Always show percentage after bar\n- Include elapsed time",
+          "tokens": 21,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#progress-bars-1"
+        },
+        "Status Symbols": {
+          "content_preview": "- `✓` - Completed successfully\n- `✗` - Failed\n- `⟳` - In progress\n- `○` - Pending\n- `⚠️` - Warning\n- `❌` - Error\n- `⚡` - Parallel operation\n- `🔍` - A...",
+          "tokens": 64,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#status-symbols-1"
+        },
+        "Time Formatting": {
+          "content_preview": "- Use configured timezone from CLAUDE.md\n- 12h format: `10:30:15 AM PST`\n- 24h format: `22:30:15 PST`\n- Always show timezone if `show_timezone: true`",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#time-formatting-1"
+        }
+      }
+    },
+    "Testing Your Implementation": {
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#testing-your-implementation",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Test Checklist": {
+          "content_preview": "1. **Quiet Mode Test**:\n   - Start operation → Should see nothing\n   - Complete operation → Should see minimal result\n   - Trigger error → Should see ...",
+          "tokens": 160,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#test-checklist-1"
+        },
+        "Common Implementation Mistakes": {
+          "content_preview": "1. **Don't hardcode verbosity** - Always check CLAUDE.md settings\n2. **Don't skip error displays** - Errors show at ALL levels\n3. **Don't forget timez...",
+          "tokens": 57,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#common-implementation-mistakes-1"
+        }
+      }
+    },
+    "Integration with Other Systems": {
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#integration-with-other-systems",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "State Management": {
+          "content_preview": "- Verbosity doesn't affect state saving\n- Progress displays are separate from state updates\n- Include verbosity level in state for consistency",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#state-management-1"
+        },
+        "Error Handling": {
+          "content_preview": "- Errors ALWAYS display regardless of verbosity\n- Use error template for consistency\n- Include actionable fixes when possible",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#error-handling-1"
+        },
+        "Performance": {
+          "content_preview": "- Minimize string operations in quiet mode\n- Cache verbosity level at start of operation\n- Don't calculate progress if not displaying",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#performance-1"
+        }
+      }
+    },
+    "Quick Implementation Guide": {
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#quick-implementation-guide",
+      "tokens": 10,
+      "content_preview": "1. **Add Configuration Section**\n```markdown",
+      "subsections": {
+        "Verbosity Configuration": {
+          "content_preview": "[Copy from template above]\n```\n\n2. **Identify Long Operations**\n- Anything over 30 seconds\n- Multi-phase workflows  \n- Operations users wait for\n\n3. *...",
+          "tokens": 109,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#verbosity-configuration-3"
+        }
+      }
+    },
+    "Examples from Other Agents": {
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#examples-from-other-agents",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Testing Agent (Comprehensive)": {
+          "content_preview": "- Shows all test phases with progress\n- Detailed error reporting with fixes\n- Summary with metrics",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#testing-agent-comprehensive-1"
+        },
+        "Coder Agent": {
+          "content_preview": "- Implementation phases with file counts\n- Real-time file modification tracking\n- Completion summary with changes",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#coder-agent-1"
+        },
+        "PRD Agent": {
+          "content_preview": "- Requirements gathering progress\n- Document generation status\n- Section-by-section completion",
+          "tokens": 24,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#prd-agent-1"
+        }
+      }
+    },
+    "Reference": {
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-agent-implementation.md#reference",
+      "tokens": 46,
+      "content_preview": "- **User Guide**: `verbosity-guide.md` - For users configuring verbosity\n- **Configuration**: `CLAUDE.md` - Current verbosity settings\n- **Examples**:..."
+    }
+  }
+}

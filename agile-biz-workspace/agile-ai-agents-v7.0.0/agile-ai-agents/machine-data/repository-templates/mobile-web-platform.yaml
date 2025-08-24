@@ -1,0 +1,215 @@
+template:
+  id: "mobile-web-platform"
+  name: "Mobile + Web Platform"
+  description: "Structure for applications with both mobile and web clients"
+  
+  repositories:
+    mobile:
+      purpose: "Native mobile application"
+      initial_week: 1
+      
+      structure:
+        "src/":
+          subdirs:
+            - "screens/"      # App screens
+            - "components/"   # Reusable components
+            - "navigation/"   # Navigation setup
+            - "services/"     # API integration
+            - "store/"        # State management
+            - "utils/"        # Helpers
+        
+        "ios/":
+          purpose: "iOS native code"
+          when: "React Native or Flutter"
+        
+        "android/":
+          purpose: "Android native code"
+          when: "React Native or Flutter"
+        
+        "assets/":
+          subdirs:
+            - "images/"
+            - "fonts/"
+            - "animations/"
+      
+      technology_options:
+        cross_platform:
+          - "React Native (recommended)"
+          - "Flutter"
+          - "Ionic"
+        
+        native:
+          - "Swift (iOS)"
+          - "Kotlin (Android)"
+      
+      deployment:
+        - "App Store (iOS)"
+        - "Google Play (Android)"
+        - "CodePush for updates"
+    
+    web:
+      purpose: "Web application"
+      initial_week: 1
+      
+      structure:
+        "src/":
+          subdirs:
+            - "pages/"        # Route pages
+            - "components/"   # UI components
+            - "hooks/"        # Custom hooks
+            - "services/"     # API integration
+            - "styles/"       # Global styles
+        
+        "public/":
+          purpose: "Static assets"
+      
+      technology_suggestions:
+        spa:
+          - "React + Vite"
+          - "Vue 3"
+          - "Angular"
+        
+        ssr:
+          - "Next.js"
+          - "Nuxt.js"
+          - "SvelteKit"
+      
+      deployment: "Vercel/Netlify/AWS"
+    
+    api:
+      purpose: "Shared backend API"
+      initial_week: 1
+      
+      structure:
+        "src/":
+          subdirs:
+            - "modules/"      # Feature modules
+            - "middleware/"   # Auth, validation
+            - "database/"     # Models, migrations
+            - "websockets/"   # Real-time features
+        
+        "docs/":
+          purpose: "API documentation"
+          auto_generate: "From code comments"
+      
+      considerations:
+        - "Mobile-optimized endpoints"
+        - "Offline sync support"
+        - "Push notification handling"
+        - "Different auth flows"
+      
+      technology: "Node.js, Python, or Go"
+      deployment: "Container with auto-scaling"
+    
+    shared:
+      purpose: "Shared code between mobile and web"
+      initial_week: 4
+      optional: true
+      
+      structure:
+        "types/":
+          purpose: "TypeScript types"
+          sharing: "NPM package"
+        
+        "utils/":
+          purpose: "Business logic"
+          examples:
+            - "Validation rules"
+            - "Date formatting"
+            - "Calculations"
+        
+        "constants/":
+          purpose: "Shared constants"
+      
+      distribution:
+        - "NPM private package"
+        - "Git submodule"
+        - "Monorepo (if using)"
+  
+  platform_differences:
+    authentication:
+      mobile:
+        - "Biometric auth"
+        - "Secure token storage"
+        - "Deep linking"
+      web:
+        - "Cookie-based"
+        - "OAuth flows"
+        - "Password managers"
+    
+    offline_support:
+      mobile:
+        - "SQLite local DB"
+        - "Queue sync actions"
+        - "Conflict resolution"
+      web:
+        - "Service workers"
+        - "IndexedDB"
+        - "Limited offline"
+    
+    push_notifications:
+      mobile:
+        - "Native push (FCM/APNS)"
+        - "Local notifications"
+        - "Rich notifications"
+      web:
+        - "Web push API"
+        - "In-app only"
+        - "Email fallback"
+  
+  api_design:
+    versioning:
+      strategy: "Header versioning"
+      example: "X-API-Version: 2"
+      reason: "Mobile apps can't force update"
+    
+    backwards_compatibility:
+      rule: "Never break mobile APIs"
+      deprecation: "1 year minimum"
+    
+    optimization:
+      - "Minimize payload size"
+      - "Batch requests"
+      - "GraphQL for flexibility"
+      - "Different endpoints per platform"
+  
+  evolution_timeline:
+    day_1:
+      repos: ["mobile", "web", "api"]
+      reason: "Different platforms from start"
+    
+    week_4:
+      repos: ["mobile", "web", "api", "shared"]
+      reason: "Code duplication emerging"
+    
+    week_12:
+      consideration: "Platform-specific APIs"
+      decision: "Split API by platform needs"
+  
+  coordination:
+    releases:
+      mobile: "App store review cycle"
+      web: "Continuous deployment"
+      api: "Coordinate with mobile"
+    
+    feature_flags:
+      purpose: "Control features per platform"
+      tool: "LaunchDarkly or similar"
+    
+    testing:
+      - "Shared API tests"
+      - "Platform-specific E2E"
+      - "Cross-platform scenarios"
+  
+  common_challenges:
+    - "API versioning complexity"
+    - "Platform feature parity"
+    - "Shared code maintenance"
+    - "Different release cycles"
+    - "User experience consistency"
+  
+  success_metrics:
+    code_sharing: "> 30%"
+    platform_parity: "> 90%"
+    api_reuse: "> 80%"
+    release_coordination: "Smooth"

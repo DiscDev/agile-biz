@@ -1,0 +1,273 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AgileAiAgent JSON Schema",
+  "description": "Schema for agent JSON files with reference-based progressive loading",
+  "type": "object",
+  "required": ["meta", "summary", "core_responsibilities", "workflows", "coordination"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["agent", "version", "last_updated", "estimated_tokens", "full_md_tokens", "md_file"],
+      "properties": {
+        "agent": {
+          "type": "string",
+          "description": "Agent identifier (e.g., coder_agent)"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Semantic version of the agent"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date",
+          "description": "Last update date in YYYY-MM-DD format"
+        },
+        "estimated_tokens": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Estimated tokens for this JSON file"
+        },
+        "full_md_tokens": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total tokens in the full markdown file"
+        },
+        "md_file": {
+          "type": "string",
+          "pattern": "^agile-ai-agents/",
+          "description": "Path to the source markdown file"
+        }
+      }
+    },
+    "summary": {
+      "type": "string",
+      "maxLength": 500,
+      "description": "Brief overview of the agent's purpose"
+    },
+    "core_responsibilities": {
+      "type": "object",
+      "required": ["summary", "details_tokens", "md_reference"],
+      "properties": {
+        "summary": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of key responsibilities"
+        },
+        "details_tokens": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Tokens required for detailed responsibilities"
+        },
+        "md_reference": {
+          "type": "string",
+          "pattern": "^agile-ai-agents/.*#.*$",
+          "description": "Reference to detailed section in markdown"
+        }
+      }
+    },
+    "workflows": {
+      "type": "object",
+      "required": ["available", "total_tokens", "md_reference"],
+      "properties": {
+        "available": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "tokens", "md_reference"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Workflow name"
+              },
+              "tokens": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Tokens for this workflow"
+              },
+              "md_reference": {
+                "type": "string",
+                "pattern": "^agile-ai-agents/.*#.*$",
+                "description": "Reference to workflow details"
+              },
+              "description": {
+                "type": "string",
+                "maxLength": 200,
+                "description": "Brief workflow description"
+              }
+            }
+          }
+        },
+        "total_tokens": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total tokens for all workflows"
+        },
+        "md_reference": {
+          "type": "string",
+          "pattern": "^agile-ai-agents/.*#.*$",
+          "description": "Reference to workflows section"
+        }
+      }
+    },
+    "reference_documentation": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["path", "tokens"],
+        "properties": {
+          "path": {
+            "type": "string",
+            "pattern": "^agile-ai-agents/",
+            "description": "Path to reference document"
+          },
+          "tokens": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Estimated tokens in reference"
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 200,
+            "description": "What this reference provides"
+          }
+        }
+      }
+    },
+    "coordination": {
+      "type": "object",
+      "required": ["inputs", "outputs", "md_reference"],
+      "properties": {
+        "inputs": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "description": "What this agent receives from others"
+        },
+        "outputs": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "description": "What this agent provides to others"
+        },
+        "patterns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Coordination patterns used"
+        },
+        "md_reference": {
+          "type": "string",
+          "pattern": "^agile-ai-agents/.*#.*$",
+          "description": "Reference to coordination details"
+        }
+      }
+    },
+    "input_output_contracts": {
+      "type": "object",
+      "properties": {
+        "summary": {
+          "type": "string",
+          "description": "Brief description of I/O contracts"
+        },
+        "tokens": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Tokens for contract details"
+        },
+        "md_reference": {
+          "type": "string",
+          "pattern": "^agile-ai-agents/.*#.*$",
+          "description": "Reference to contract details"
+        }
+      }
+    },
+    "success_metrics": {
+      "type": "object",
+      "properties": {
+        "key_metrics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of key success metrics"
+        },
+        "tokens": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Tokens for detailed metrics"
+        },
+        "md_reference": {
+          "type": "string",
+          "pattern": "^agile-ai-agents/.*#.*$",
+          "description": "Reference to metrics details"
+        }
+      }
+    },
+    "context_recommendations": {
+      "type": "object",
+      "required": ["minimal", "standard", "detailed"],
+      "properties": {
+        "minimal": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Sections for minimal context"
+        },
+        "standard": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Sections for standard context"
+        },
+        "detailed": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Sections for detailed context"
+        }
+      }
+    },
+    "boundaries": {
+      "type": "object",
+      "properties": {
+        "not_responsible_for": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["task", "responsible_agent"],
+            "properties": {
+              "task": {
+                "type": "string",
+                "description": "What this agent doesn't do"
+              },
+              "responsible_agent": {
+                "type": "string",
+                "description": "Which agent handles this"
+              }
+            }
+          }
+        },
+        "md_reference": {
+          "type": "string",
+          "pattern": "^agile-ai-agents/.*#.*$",
+          "description": "Reference to boundaries section"
+        }
+      }
+    }
+  }
+}

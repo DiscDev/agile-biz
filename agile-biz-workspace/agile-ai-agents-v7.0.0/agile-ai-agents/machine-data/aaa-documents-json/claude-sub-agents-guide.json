@@ -1,0 +1,282 @@
+{
+  "meta": {
+    "document": "claude-sub-agents-guide",
+    "title": "Claude Code Native Sub-Agents Guide",
+    "timestamp": "2025-08-11T22:02:16.870Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md",
+    "document_type": "guide",
+    "file_hash": "43d048c913fa1aacb477a403b7aadc20",
+    "estimated_tokens": 645,
+    "full_md_tokens": 1311
+  },
+  "summary": "Starting with v4.1.0, AgileAiAgents provides native integration with Claude Code's sub-agent system. This guide explains how the integration works and how to use it effectively.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#overview",
+      "content_preview": "Starting with v4.1.0, AgileAiAgents provides native integration with Claude Code's sub-agent system. This guide explains how the integration works and..."
+    },
+    {
+      "title": "What Are Claude Sub-Agents?",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#what-are-claude-sub-agents",
+      "content_preview": "Claude sub-agents are specialized agents that can be invoked directly within Claude Code for focused tasks. They provide:\n- Parallel execution capabil..."
+    },
+    {
+      "title": "Three-Tier Document System",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#three-tier-document-system",
+      "content_preview": "AgileAiAgents uses a sophisticated three-tier system to balance different needs:"
+    },
+    {
+      "title": "How Sub-Agents Work",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#how-sub-agents-work",
+      "content_preview": ""
+    },
+    {
+      "title": "Using Claude Sub-Agents",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#using-claude-sub-agents",
+      "content_preview": ""
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Migration Guide",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#migration-guide",
+      "content_preview": ""
+    },
+    {
+      "title": "Performance Benefits",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#performance-benefits",
+      "content_preview": ""
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "Technical Details",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#technical-details",
+      "content_preview": ""
+    },
+    {
+      "title": "Future Enhancements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#future-enhancements",
+      "content_preview": "- Custom tool mappings per project\n- Agent composition capabilities\n- Performance analytics\n- Enhanced parallel coordination"
+    },
+    {
+      "title": "Related Documentation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#related-documentation",
+      "content_preview": "- `README.md` - Claude Code Native Integration section\n- `CLAUDE.md` - Universal Agent Guidelines\n- `machine-data/scripts/md-to-claude-agent-converter..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#overview",
+      "tokens": 45,
+      "content_preview": "Starting with v4.1.0, AgileAiAgents provides native integration with Claude Code's sub-agent system. This guide explains how the integration works and..."
+    },
+    "What Are Claude Sub-Agents?": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#what-are-claude-sub-agents",
+      "tokens": 71,
+      "content_preview": "Claude sub-agents are specialized agents that can be invoked directly within Claude Code for focused tasks. They provide:\n- Parallel execution capabil..."
+    },
+    "Three-Tier Document System": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#three-tier-document-system",
+      "tokens": 20,
+      "content_preview": "AgileAiAgents uses a sophisticated three-tier system to balance different needs:",
+      "subsections": {
+        "1. Source Documents (`ai-agents/*.md`)": {
+          "content_preview": "- **Purpose**: Single source of truth for all agent definitions\n- **Content**: Full, verbose agent specifications\n- **Maintenance**: Human-edited and ...",
+          "tokens": 49,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#1-source-documents-ai-agentsmd-1"
+        },
+        "2. Token-Optimized JSON (`machine-data/ai-agents-json/*.json`)": {
+          "content_preview": "- **Purpose**: Efficient API operations and agent loading\n- **Content**: Condensed summaries with references to full content\n- **Maintenance**: Auto-g...",
+          "tokens": 52,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#2-token-optimized-json-machine-dataai-agents-jsonjson-1"
+        },
+        "3. Claude Native Agents (`.claude/agents/*.md`)": {
+          "content_preview": "- **Purpose**: Direct integration with Claude Code's sub-agent system\n- **Content**: Full MD content with YAML frontmatter\n- **Maintenance**: Auto-gen...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#3-claude-native-agents-claudeagentsmd-1"
+        }
+      }
+    },
+    "How Sub-Agents Work": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#how-sub-agents-work",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Automatic Generation": {
+          "content_preview": "When you modify any agent in `ai-agents/*.md`:\n1. File system hooks detect the change\n2. JSON converter creates token-optimized version\n3. Claude agen...",
+          "tokens": 56,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#automatic-generation-1"
+        },
+        "YAML Frontmatter": {
+          "content_preview": "Each Claude sub-agent includes:\n```yaml\n---\nname: agent_name\ndescription: Brief description of agent capabilities\ntools: List, Of, Tools, The, Agent, ...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#yaml-frontmatter-1"
+        },
+        "Tool Mappings": {
+          "content_preview": "Tools are automatically assigned based on agent type:\n- **Development agents**: Read, Write, Edit, MultiEdit, Bash, Grep, Glob, LS\n- **Research agents...",
+          "tokens": 72,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#tool-mappings-1"
+        }
+      }
+    },
+    "Using Claude Sub-Agents": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#using-claude-sub-agents",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Direct Invocation": {
+          "content_preview": "In Claude Code, you can invoke agents directly:\n```\nUse the coder_agent to implement the authentication feature\n```",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#direct-invocation-1"
+        },
+        "Parallel Execution": {
+          "content_preview": "Multiple sub-agents can work simultaneously:\n```\nUse research_agent for market analysis while finance_agent creates projections\n```",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#parallel-execution-1"
+        },
+        "Benefits Over Manual Invocation": {
+          "content_preview": "1. **Performance**: Native integration is faster\n2. **Context**: Each sub-agent has isolated context\n3. **Reliability**: No need to manually load agen...",
+          "tokens": 51,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#benefits-over-manual-invocation-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Let the System Handle Updates": {
+          "content_preview": "- Always edit source files in `ai-agents/*.md`\n- Never manually edit `.claude/agents/` or JSON files\n- Trust the hook system for synchronization",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#1-let-the-system-handle-updates-1"
+        },
+        "2. Use Appropriate Agents": {
+          "content_preview": "- Research phase: Use research-focused sub-agents\n- Implementation: Use development sub-agents\n- Documentation: Use documentation sub-agents",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#2-use-appropriate-agents-1"
+        },
+        "3. Leverage Parallel Capabilities": {
+          "content_preview": "- Identify independent tasks\n- Assign to different sub-agents\n- Monitor progress via dashboard",
+          "tokens": 24,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#3-leverage-parallel-capabilities-1"
+        }
+      }
+    },
+    "Migration Guide": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#migration-guide",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "For Existing Users": {
+          "content_preview": "1. Pull latest v4.1.0 release\n2. Run `npm run convert-agents-to-claude` to generate initial Claude agents\n3. Hooks will maintain synchronization going...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#for-existing-users-1"
+        },
+        "For New Users": {
+          "content_preview": "- Claude agents are pre-generated in releases\n- Start using immediately - no setup required",
+          "tokens": 23,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#for-new-users-1"
+        }
+      }
+    },
+    "Performance Benefits": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#performance-benefits",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Token Efficiency": {
+          "content_preview": "- Main context: Uses JSON (200-500 tokens)\n- Sub-agent context: Full definition available\n- Result: 30-40% overall token reduction",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#token-efficiency-1"
+        },
+        "Time Savings": {
+          "content_preview": "- Research: 75% faster (parallel domains)\n- Sprints: 60% faster (parallel stories)\n- Analysis: 70% faster (parallel categories)",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#time-savings-1"
+        }
+      }
+    },
+    "Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Claude Agents Not Updating": {
+          "content_preview": "1. Check hook system is enabled\n2. Verify `.claude/agents/` directory exists\n3. Run `npm run convert-agents-to-claude` manually\n4. Check logs in `hook...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#claude-agents-not-updating-1"
+        },
+        "Performance Issues": {
+          "content_preview": "1. Monitor hook execution time\n2. Adjust hook profile if needed\n3. Check dashboard for bottlenecks",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#performance-issues-1"
+        },
+        "Synchronization Problems": {
+          "content_preview": "1. Verify MD file was saved\n2. Check JSON generation succeeded\n3. Look for errors in conversion logs\n4. Manually trigger conversion if needed",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#synchronization-problems-1"
+        }
+      }
+    },
+    "Technical Details": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#technical-details",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Hook Integration": {
+          "content_preview": "The MD→JSON sync hook (`hooks/handlers/md-json/md-to-json-sync.js`) automatically triggers Claude agent conversion when AI agent files change.",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#hook-integration-1"
+        },
+        "Converter Script": {
+          "content_preview": "Location: `machine-data/scripts/md-to-claude-agent-converter.js`\n- Parses MD files\n- Extracts agent metadata\n- Adds YAML frontmatter\n- Preserves full ...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#converter-script-1"
+        },
+        "Learning System Integration": {
+          "content_preview": "When the learning system updates agents:\n1. MD files are updated\n2. Hooks detect changes\n3. All formats regenerate\n4. Changes propagate to Claude agen...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#learning-system-integration-1"
+        }
+      }
+    },
+    "Future Enhancements": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#future-enhancements",
+      "tokens": 31,
+      "content_preview": "- Custom tool mappings per project\n- Agent composition capabilities\n- Performance analytics\n- Enhanced parallel coordination"
+    },
+    "Related Documentation": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-sub-agents-guide.md#related-documentation",
+      "tokens": 60,
+      "content_preview": "- `README.md` - Claude Code Native Integration section\n- `CLAUDE.md` - Universal Agent Guidelines\n- `machine-data/scripts/md-to-claude-agent-converter..."
+    }
+  }
+}

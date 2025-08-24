@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "document": "velocity-profile-selection-workflow",
+    "title": "Velocity Profile Selection Workflow",
+    "timestamp": "2025-08-11T22:02:16.945Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md",
+    "document_type": "workflow",
+    "file_hash": "947fdaf4070648c02eaa0a279a8c721b",
+    "estimated_tokens": 491,
+    "full_md_tokens": 1473
+  },
+  "summary": "This workflow enables users to select community-learned velocity profiles during project initialization, providing realistic sprint planning estimates from day one.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#overview",
+      "content_preview": "This workflow enables users to select community-learned velocity profiles during project initialization, providing realistic sprint planning estimates..."
+    },
+    {
+      "title": "When This Workflow Runs",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#when-this-workflow-runs",
+      "content_preview": "- During `/start-new-project-workflow` Phase 7 (Backlog Creation)\n- During `/start-existing-project-workflow` Phase 7 (Enhancement Planning)\n- Manuall..."
+    },
+    {
+      "title": "Workflow Steps",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#workflow-steps",
+      "content_preview": ""
+    },
+    {
+      "title": "Command Integration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#command-integration",
+      "content_preview": ""
+    },
+    {
+      "title": "Integration Points",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#integration-points",
+      "content_preview": ""
+    },
+    {
+      "title": "Profile Adjustment Logic",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#profile-adjustment-logic",
+      "content_preview": ""
+    },
+    {
+      "title": "Error Handling",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#error-handling",
+      "content_preview": ""
+    },
+    {
+      "title": "Benefits Communication",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#benefits-communication",
+      "content_preview": "When using community defaults, remind users:\n```\n📊 You're benefiting from insights from 127 similar projects!\nThis helps with:\n- Realistic sprint pla..."
+    },
+    {
+      "title": "Privacy Note",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#privacy-note",
+      "content_preview": "Always include when showing profiles:\n```\n🔒 Privacy: All community data is fully anonymized. No project names, \ncode, or business logic is shared - o..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#overview",
+      "tokens": 41,
+      "content_preview": "This workflow enables users to select community-learned velocity profiles during project initialization, providing realistic sprint planning estimates..."
+    },
+    "When This Workflow Runs": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#when-this-workflow-runs",
+      "tokens": 58,
+      "content_preview": "- During `/start-new-project-workflow` Phase 7 (Backlog Creation)\n- During `/start-existing-project-workflow` Phase 7 (Enhancement Planning)\n- Manuall..."
+    },
+    "Workflow Steps": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#workflow-steps",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Step 1: Profile Selection Prompt": {
+          "content_preview": "**Agent**: Scrum Master Agent\n**Action**: Present velocity profile options\n\n```\n🎯 Select a velocity profile for your project:\n\n1. Standard Web Applic...",
+          "tokens": 331,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#step-1-profile-selection-prompt-1"
+        },
+        "Step 2: Profile Confirmation": {
+          "content_preview": "**Agent**: Scrum Master Agent\n**Action**: Confirm selection and show implications\n\n```\n✅ Selected: Standard Web Application\n\nThis profile will:\n- Set ...",
+          "tokens": 110,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#step-2-profile-confirmation-1"
+        },
+        "Step 3: Apply Profile": {
+          "content_preview": "**Agent**: Scrum Master Agent\n**Action**: Update velocity-metrics.json with selected profile\n\n```json\n{\n  \"meta\": {\n    \"velocity_profile\": \"standard_...",
+          "tokens": 95,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#step-3-apply-profile-1"
+        },
+        "Step 4: Dashboard Update": {
+          "content_preview": "**Agent**: Project Dashboard Agent\n**Action**: Display community indicator\n\nThe dashboard will show:\n- Velocity: 45 📊 (hover shows \"Using community d...",
+          "tokens": 56,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#step-4-dashboard-update-1"
+        },
+        "Step 5: Sprint Planning Impact": {
+          "content_preview": "**Agent**: Project Manager Agent\n**Action**: Use profile velocity for sprint planning\n\nWhen planning first sprint:\n```\nBased on your Standard Web Appl...",
+          "tokens": 98,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#step-5-sprint-planning-impact-1"
+        }
+      }
+    },
+    "Command Integration": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#command-integration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "`/select-velocity-profile`": {
+          "content_preview": "Manually trigger profile selection or change current profile:\n```\n/select-velocity-profile [profile-id]\n```\n\nExamples:\n- `/select-velocity-profile` - ...",
+          "tokens": 72,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#select-velocity-profile-1"
+        },
+        "`/show-velocity-profile`": {
+          "content_preview": "Display current profile and performance comparison:\n```\nCurrent Profile: Standard Web Application\nCommunity Average: 45 points/sprint\nYour Average: 52...",
+          "tokens": 63,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#show-velocity-profile-1"
+        }
+      }
+    },
+    "Integration Points": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#integration-points",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. New Project Workflow": {
+          "content_preview": "In Phase 7, after PRD transformation:\n```\nActing as Scrum Master Agent, before we plan our first sprint, \nlet's select a velocity profile that matches...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#1-new-project-workflow-1"
+        },
+        "2. Existing Project Workflow": {
+          "content_preview": "In Phase 7, when setting up enhancement sprints:\n```\nActing as Scrum Master Agent, I notice you don't have velocity history.\nLet's select a profile ba...",
+          "tokens": 44,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#2-existing-project-workflow-1"
+        },
+        "3. Sprint Planning": {
+          "content_preview": "When velocity is 0 or using defaults:\n```\nActing as Scrum Master Agent, you're using the Standard Web App profile \nwith 45 points capacity. This is ba...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#3-sprint-planning-1"
+        }
+      }
+    },
+    "Profile Adjustment Logic": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#profile-adjustment-logic",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "After Each Sprint": {
+          "content_preview": "1. Calculate actual velocity\n2. Update velocity metrics\n3. Reduce reliance on community defaults\n4. After 3 sprints: Use actual data primarily",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#after-each-sprint-1"
+        },
+        "Confidence Progression": {
+          "content_preview": "- Sprint 1: 100% community defaults\n- Sprint 2: 70% community, 30% actual\n- Sprint 3: 40% community, 60% actual\n- Sprint 4+: 100% actual data",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#confidence-progression-1"
+        }
+      }
+    },
+    "Error Handling": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#error-handling",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "No Profiles Available": {
+          "content_preview": "If velocity-profiles.json is missing:\n```\n⚠️ Community velocity profiles not available.\nStarting with default velocity of 0.\nVelocity will be establis...",
+          "tokens": 46,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#no-profiles-available-1"
+        },
+        "Invalid Selection": {
+          "content_preview": "If user selects invalid option:\n```\n❌ Invalid selection. Please choose 1-7 or type 'skip' to start with 0 velocity.\n```",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#invalid-selection-1"
+        }
+      }
+    },
+    "Benefits Communication": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#benefits-communication",
+      "tokens": 71,
+      "content_preview": "When using community defaults, remind users:\n```\n📊 You're benefiting from insights from 127 similar projects!\nThis helps with:\n- Realistic sprint pla..."
+    },
+    "Privacy Note": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/velocity-profile-selection-workflow.md#privacy-note",
+      "tokens": 45,
+      "content_preview": "Always include when showing profiles:\n```\n🔒 Privacy: All community data is fully anonymized. No project names, \ncode, or business logic is shared - o..."
+    }
+  }
+}

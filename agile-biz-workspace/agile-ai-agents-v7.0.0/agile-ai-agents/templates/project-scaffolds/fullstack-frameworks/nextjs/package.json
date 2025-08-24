@@ -1,0 +1,43 @@
+{
+  "name": "nextjs-fullstack-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write .",
+    "db:push": "prisma db push",
+    "db:migrate": "prisma migrate dev",
+    "db:studio": "prisma studio",
+    "db:seed": "tsx prisma/seed.ts",
+    "postinstall": "prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.x",
+    "@radix-ui/themes": "^3.x",
+    "@tanstack/react-query": "^5.x",
+    "axios": "^1.x",
+    "next": "14.x",
+    "react": "^18.x",
+    "react-dom": "^18.x",
+    "react-hook-form": "^7.x",
+    "zod": "^3.x"
+  },
+  "devDependencies": {
+    "@types/node": "^20.x",
+    "@types/react": "^18.x",
+    "@types/react-dom": "^18.x",
+    "autoprefixer": "^10.x",
+    "eslint": "^8.x",
+    "eslint-config-next": "14.x",
+    "postcss": "^8.x",
+    "prettier": "^3.x",
+    "prisma": "^5.x",
+    "tailwindcss": "^3.x",
+    "tsx": "^4.x",
+    "typescript": "^5.x"
+  }
+}

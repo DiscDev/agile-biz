@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "document": "hooks-exit-code-127-error",
+    "title": "Claude Code Hook Exit Code 127 Error",
+    "timestamp": "2025-08-11T22:02:16.881Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md",
+    "document_type": "general_documentation",
+    "file_hash": "855eb80d9514001b58c14fd94aa80d74",
+    "estimated_tokens": 546,
+    "full_md_tokens": 1413
+  },
+  "summary": "This document provides a comprehensive guide for resolving the \"exit code 127: No such file or directory\" errors that occur when Claude Code attempts to execute AgileAiAgents hooks.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#overview",
+      "content_preview": "This document provides a comprehensive guide for resolving the \"exit code 127: No such file or directory\" errors that occur when Claude Code attempts ..."
+    },
+    {
+      "title": "Error Description",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#error-description",
+      "content_preview": ""
+    },
+    {
+      "title": "Solution",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#solution",
+      "content_preview": ""
+    },
+    {
+      "title": "Why This Works",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#why-this-works",
+      "content_preview": ""
+    },
+    {
+      "title": "Verification",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#verification",
+      "content_preview": ""
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "Technical Details",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#technical-details",
+      "content_preview": ""
+    },
+    {
+      "title": "Prevention",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#prevention",
+      "content_preview": ""
+    },
+    {
+      "title": "Related Issues",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#related-issues",
+      "content_preview": ""
+    },
+    {
+      "title": "Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#summary",
+      "content_preview": "The exit code 127 error is a path resolution issue between Claude Code's hook execution method and AgileAiAgents' hook system. The solution uses Claud..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#overview",
+      "tokens": 46,
+      "content_preview": "This document provides a comprehensive guide for resolving the \"exit code 127: No such file or directory\" errors that occur when Claude Code attempts ..."
+    },
+    "Error Description": {
+      "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#error-description",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Symptoms": {
+          "content_preview": "Users see error messages like:\n```\nSessionStart:compact [.claude/hooks/session-start.sh] failed with non-blocking status code 127: /bin/sh: .claude/ho...",
+          "tokens": 49,
+          "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#symptoms-1"
+        },
+        "Root Cause": {
+          "content_preview": "Claude Code attempts to execute hooks using relative paths from an incorrect working directory. While the hooks work correctly when executed through t...",
+          "tokens": 63,
+          "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#root-cause-1"
+        }
+      }
+    },
+    "Solution": {
+      "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#solution",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Quick Fix": {
+          "content_preview": "Run the automated fix script:\n```bash\n./fix-claude-hooks.sh\n```\n\nThis script performs all necessary steps to resolve the issue.",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#quick-fix-1"
+        },
+        "Manual Fix Steps": {
+          "content_preview": "1. **Create Claude Code Configuration**\n   Create `.claude/config.json` with absolute path references using `${workspaceRoot}`:\n   ```json\n   {\n     \"...",
+          "tokens": 212,
+          "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#manual-fix-steps-1"
+        }
+      }
+    },
+    "Why This Works": {
+      "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#why-this-works",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Path Resolution": {
+          "content_preview": "- **Problem**: Claude Code uses relative paths from its own working directory\n- **Solution**: `${workspaceRoot}` variables provide absolute paths that...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#path-resolution-1"
+        },
+        "Environment Variables": {
+          "content_preview": "- **Problem**: Hooks may not have access to project directory information\n- **Solution**: `CLAUDE_PROJECT_DIR` provides explicit project root referenc...",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#environment-variables-1"
+        },
+        "Configuration Priority": {
+          "content_preview": "- **Problem**: Default hook execution uses relative paths\n- **Solution**: `.claude/config.json` overrides default behavior with proper paths",
+          "tokens": 33,
+          "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#configuration-priority-1"
+        }
+      }
+    },
+    "Verification": {
+      "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#verification",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Test Hook Execution": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#test-hook-execution-1"
+        }
+      }
+    },
+    "Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Hooks Still Failing": {
+          "content_preview": "1. **Debug Mode**: Run `bash -x fix-claude-hooks.sh` to see detailed execution\n2. **Path Verification**: Ensure `${workspaceRoot}` resolves to the cor...",
+          "tokens": 73,
+          "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#hooks-still-failing-1"
+        },
+        "Environment Variable Not Set": {
+          "content_preview": "1. **Check Shell**: Verify you're using the correct shell profile file\n2. **Source Profile**: Run `source ~/.zshrc` (or equivalent) after adding the e...",
+          "tokens": 51,
+          "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#environment-variable-not-set-1"
+        },
+        "Configuration Not Applied": {
+          "content_preview": "1. **Restart Required**: Claude Code must be restarted after configuration changes\n2. **File Location**: Ensure `.claude/config.json` is in the projec...",
+          "tokens": 50,
+          "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#configuration-not-applied-1"
+        }
+      }
+    },
+    "Technical Details": {
+      "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#technical-details",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Claude Code Hook Execution Flow": {
+          "content_preview": "1. Claude Code detects hook trigger (e.g., SessionStart)\n2. Looks for hook configuration in `.claude/config.json`\n3. If found, uses configured paths; ...",
+          "tokens": 71,
+          "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#claude-code-hook-execution-flow-1"
+        },
+        "Hook Manager System": {
+          "content_preview": "1. Shell scripts in `.claude/hooks/` serve as entry points\n2. Scripts detect execution context and find AgileAiAgents root\n3. Node.js hook manager han...",
+          "tokens": 60,
+          "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#hook-manager-system-1"
+        },
+        "Key Differences": {
+          "content_preview": "- **Claude Code**: Executes from its own working directory with relative paths\n- **Hook Manager**: Scripts resolve paths internally before executing N...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#key-differences-1"
+        }
+      }
+    },
+    "Prevention": {
+      "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#prevention",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "For New Installations": {
+          "content_preview": "1. Run `fix-claude-hooks.sh` immediately after setting up AgileAiAgents\n2. Include `.claude/config.json` in version control (with workspace-agnostic p...",
+          "tokens": 55,
+          "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#for-new-installations-1"
+        },
+        "For Updates": {
+          "content_preview": "1. Test hook execution after any AgileAiAgents updates\n2. Re-run fix script if hook structure changes\n3. Monitor logs for any new hook-related errors",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#for-updates-1"
+        }
+      }
+    },
+    "Related Issues": {
+      "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#related-issues",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Similar Problems": {
+          "content_preview": "- Hook timeout errors (different issue, check timeout configuration)\n- Permission denied errors (check file permissions, not path issues)\n- Hook regis...",
+          "tokens": 49,
+          "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#similar-problems-1"
+        },
+        "NOT Related": {
+          "content_preview": "- Hook logic errors (hooks execute but fail internally)\n- Dashboard connection issues (separate from hook execution)\n- Agent coordination problems (ha...",
+          "tokens": 46,
+          "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#not-related-1"
+        }
+      }
+    },
+    "Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/debugging/hooks-exit-code-127-error.md#summary",
+      "tokens": 128,
+      "content_preview": "The exit code 127 error is a path resolution issue between Claude Code's hook execution method and AgileAiAgents' hook system. The solution uses Claud..."
+    }
+  }
+}

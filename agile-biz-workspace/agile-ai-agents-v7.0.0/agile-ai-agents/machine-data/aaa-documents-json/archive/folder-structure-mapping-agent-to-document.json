@@ -1,0 +1,170 @@
+{
+  "meta": {
+    "document": "folder-structure-mapping-agent-to-document",
+    "title": "Project Documents Folder Structure Mapping (Agent-to-Document)",
+    "timestamp": "2025-07-22T01:40:48.560Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md",
+    "document_type": "general_documentation",
+    "file_hash": "d633daf2a1cdbcd1d67f1b68b3403008",
+    "estimated_tokens": 160,
+    "full_md_tokens": 3317
+  },
+  "summary": "## Proposed Category-Based Organization",
+  "sections": [
+    {
+      "title": "Proposed Category-Based Organization",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#proposed-category-based-organization",
+      "content_preview": ""
+    },
+    {
+      "title": "**DOCUMENT CREATION WORKFLOW ORDER**",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#document-creation-workflow-order",
+      "content_preview": ""
+    },
+    {
+      "title": "**WORKFLOW SUMMARY**",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#workflow-summary",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Proposed Category-Based Organization": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#proposed-category-based-organization",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Structure: `project-documents` → `category` → `folders` → `documents` ← `responsible agent`": {
+          "content_preview": "---",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#structure-project-documents-category-folders-documents-responsible-agent-1"
+        }
+      }
+    },
+    "**DOCUMENT CREATION WORKFLOW ORDER**": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#document-creation-workflow-order",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "**Phase 1: Foundation Analysis** (Sequential - Required Base)": {
+          "content_preview": "**Dependencies**: None\n**Estimated Time**: 2-4 hours\n**Parallelization**: None (foundational data needed for all subsequent phases)\n\n1. **orchestratio...",
+          "tokens": 112,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#phase-1-foundation-analysis-sequential-required-base-1"
+        },
+        "**Phase 2: Core Project Analysis** (Parallel Opportunities)": {
+          "content_preview": "**Dependencies**: Phase 1 complete\n**Estimated Time**: 3-5 hours\n**Parallelization**: High - Multiple agents can work simultaneously\n\n**Parallel Group...",
+          "tokens": 186,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#phase-2-core-project-analysis-parallel-opportunities-1"
+        },
+        "**Phase 3: Market & Business Research** (Parallel Opportunities)": {
+          "content_preview": "**Dependencies**: Phase 1 complete (project-brief.md)\n**Estimated Time**: 4-6 hours\n**Parallelization**: High - Independent research streams\n\n**Parall...",
+          "tokens": 201,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#phase-3-market-business-research-parallel-opportunities-1"
+        },
+        "**Phase 4: Strategic Planning** (Sequential Dependencies)": {
+          "content_preview": "**Dependencies**: Phase 3 complete\n**Estimated Time**: 3-4 hours\n**Parallelization**: Medium - Some dependencies within phase\n\n**Sequential Sub-Phase ...",
+          "tokens": 138,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#phase-4-strategic-planning-sequential-dependencies-1"
+        },
+        "**Phase 5: Market Validation** (Parallel Opportunities)": {
+          "content_preview": "**Dependencies**: Phase 3 & 4A complete\n**Estimated Time**: 4-5 hours\n**Parallelization**: High - Independent validation streams\n\n**Parallel Group 5A:...",
+          "tokens": 271,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#phase-5-market-validation-parallel-opportunities-1"
+        },
+        "**Phase 6: Business Strategy Development** (Parallel Opportunities)": {
+          "content_preview": "**Dependencies**: Phase 4 & 5 complete\n**Estimated Time**: 5-7 hours\n**Parallelization**: High - Multiple business domains\n\n**Parallel Group 6A: Marke...",
+          "tokens": 295,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#phase-6-business-strategy-development-parallel-opportunities-1"
+        },
+        "**Phase 7: Investment Planning** (Sequential Dependencies)": {
+          "content_preview": "**Dependencies**: Phase 6 complete\n**Estimated Time**: 3-4 hours\n**Parallelization**: Low - Sequential nature of investment documents\n\n**Sequential In...",
+          "tokens": 109,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#phase-7-investment-planning-sequential-dependencies-1"
+        },
+        "**Phase 8: Technical Requirements** (Parallel Opportunities)": {
+          "content_preview": "**Dependencies**: Phase 4 complete (strategic direction set)\n**Estimated Time**: 4-6 hours\n**Parallelization**: High - Independent technical domains\n\n...",
+          "tokens": 199,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#phase-8-technical-requirements-parallel-opportunities-1"
+        },
+        "**Phase 9: Project Planning** (Sequential Dependencies)": {
+          "content_preview": "**Dependencies**: Phase 8 complete\n**Estimated Time**: 2-3 hours\n**Parallelization**: Low - Planning requires sequential coordination\n\n**Sequential Pl...",
+          "tokens": 106,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#phase-9-project-planning-sequential-dependencies-1"
+        },
+        "**Phase 10: Implementation Preparation** (Parallel Opportunities)": {
+          "content_preview": "**Dependencies**: Phase 9 complete\n**Estimated Time**: 3-4 hours\n**Parallelization**: High - Independent preparation streams\n\n**Parallel Group 10A: En...",
+          "tokens": 140,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#phase-10-implementation-preparation-parallel-opportunities-1"
+        },
+        "**Phase 11: Development Implementation** (Parallel Opportunities)": {
+          "content_preview": "**Dependencies**: Phase 10 complete\n**Estimated Time**: Variable (depends on project scope)\n**Parallelization**: High - Multiple development streams\n\n...",
+          "tokens": 114,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#phase-11-development-implementation-parallel-opportunities-1"
+        },
+        "**Phase 12: Deployment Preparation** (Sequential Dependencies)": {
+          "content_preview": "**Dependencies**: Phase 11 complete\n**Estimated Time**: 2-3 hours\n**Parallelization**: Low - Deployment requires coordination\n\n**Sequential Deployment...",
+          "tokens": 74,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#phase-12-deployment-preparation-sequential-dependencies-1"
+        },
+        "**Phase 13: Launch Coordination** (Parallel Opportunities)": {
+          "content_preview": "**Dependencies**: Phase 12 complete\n**Estimated Time**: 3-4 hours\n**Parallelization**: Medium - Some dependencies between launch activities\n\n**Paralle...",
+          "tokens": 93,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#phase-13-launch-coordination-parallel-opportunities-1"
+        },
+        "**Phase 14: Operations Setup** (Parallel Opportunities)": {
+          "content_preview": "**Dependencies**: Phase 13 complete\n**Estimated Time**: 4-5 hours\n**Parallelization**: High - Independent operational domains\n\n**Parallel Group 14A: M...",
+          "tokens": 189,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#phase-14-operations-setup-parallel-opportunities-1"
+        },
+        "**Phase 15: Growth Optimization** (Parallel Opportunities)": {
+          "content_preview": "**Dependencies**: Phase 14 complete + 2-4 weeks operational data\n**Estimated Time**: 5-7 hours\n**Parallelization**: High - Independent optimization st...",
+          "tokens": 234,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#phase-15-growth-optimization-parallel-opportunities-1"
+        },
+        "**Phase 16: Advanced Growth** (Parallel Opportunities)": {
+          "content_preview": "**Dependencies**: Phase 15 complete + significant operational data\n**Estimated Time**: 6-8 hours\n**Parallelization**: High - Advanced optimization str...",
+          "tokens": 253,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#phase-16-advanced-growth-parallel-opportunities-1"
+        }
+      }
+    },
+    "**WORKFLOW SUMMARY**": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#workflow-summary",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "**Total Estimated Timeline**": {
+          "content_preview": "- **Sequential Execution**: 65-95 hours\n- **Parallel Execution**: 36-52 hours\n- **Time Savings**: 40-45% reduction with parallel execution",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#total-estimated-timeline-1"
+        },
+        "**Critical Path Dependencies**": {
+          "content_preview": "1. **Foundation** (Phase 1) → **Everything**\n2. **Strategic Planning** (Phase 4) → **All Technical & Business Development**\n3. **Requirements** (Phase...",
+          "tokens": 48,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#critical-path-dependencies-1"
+        },
+        "**Maximum Parallelization Requirements**": {
+          "content_preview": "- **5-7 agents** working simultaneously during peak phases\n- **Clear handoff protocols** between phases\n- **Shared context management** for cross-agen...",
+          "tokens": 48,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#maximum-parallelization-requirements-1"
+        },
+        "**Optimization Opportunities**": {
+          "content_preview": "1. **Cross-Phase Overlap**: Some Phase N+1 activities can begin before Phase N is 100% complete\n2. **Agent Specialization**: Agents can prepare next-p...",
+          "tokens": 159,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping-agent-to-document.md#optimization-opportunities-1"
+        }
+      }
+    }
+  }
+}

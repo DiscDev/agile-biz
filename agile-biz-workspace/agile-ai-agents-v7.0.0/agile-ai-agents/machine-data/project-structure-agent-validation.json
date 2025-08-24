@@ -1,0 +1,167 @@
+{
+  "timestamp": "2025-06-28T22:39:24.007Z",
+  "summary": {
+    "total": 39,
+    "passed": 38,
+    "failed": 1,
+    "success_rate": "97.4"
+  },
+  "results": [
+    {
+      "test": "Agent file exists",
+      "success": true
+    },
+    {
+      "test": "Has repository recommendations",
+      "success": true
+    },
+    {
+      "test": "Has multi-repo coordination",
+      "success": true
+    },
+    {
+      "test": "Has evolution monitoring",
+      "success": true
+    },
+    {
+      "test": "Has pattern learning",
+      "success": true
+    },
+    {
+      "test": "Pattern recognizer exists",
+      "success": true
+    },
+    {
+      "test": "Recommendation engine exists",
+      "success": true
+    },
+    {
+      "test": "Learning data structure exists",
+      "success": true
+    },
+    {
+      "test": "Templates directory exists",
+      "success": true
+    },
+    {
+      "test": "Template single-repository.yaml",
+      "success": true
+    },
+    {
+      "test": "Template saas-platform.yaml",
+      "success": true
+    },
+    {
+      "test": "Template e-commerce.yaml",
+      "success": true
+    },
+    {
+      "test": "Template microservices.yaml",
+      "success": true
+    },
+    {
+      "test": "Template mobile-web.yaml",
+      "success": true
+    },
+    {
+      "test": "Template healthcare-platform.yaml",
+      "success": true
+    },
+    {
+      "test": "Template fintech-platform.yaml",
+      "success": true
+    },
+    {
+      "test": "Template education-platform.yaml",
+      "success": true
+    },
+    {
+      "test": "Multi-repo coordinator exists",
+      "success": true
+    },
+    {
+      "test": "Cross-repo PR helper exists",
+      "success": true
+    },
+    {
+      "test": "Repository-aware context loader exists",
+      "success": true
+    },
+    {
+      "test": "Has repository filtering",
+      "success": true
+    },
+    {
+      "test": "Has token optimization",
+      "success": false
+    },
+    {
+      "test": "Integration config exists",
+      "success": true
+    },
+    {
+      "test": "Integration with project_manager_agent",
+      "success": true
+    },
+    {
+      "test": "Integration with coder_agent",
+      "success": true
+    },
+    {
+      "test": "Integration with devops_agent",
+      "success": true
+    },
+    {
+      "test": "Integration with project_state_manager",
+      "success": true
+    },
+    {
+      "test": "Integration with prd_agent",
+      "success": true
+    },
+    {
+      "test": "Integration with learning_analysis_agent",
+      "success": true
+    },
+    {
+      "test": "Evolution tracker exists",
+      "success": true
+    },
+    {
+      "test": "Metrics collector exists",
+      "success": true
+    },
+    {
+      "test": "Evolution guide exists",
+      "success": true
+    },
+    {
+      "test": "Community learning integration exists",
+      "success": true
+    },
+    {
+      "test": "Has pattern extraction",
+      "success": true
+    },
+    {
+      "test": "Has learning broadcast",
+      "success": true
+    },
+    {
+      "test": "Has privacy protection",
+      "success": true
+    },
+    {
+      "test": "Demo: Single to Multi-repo Evolution",
+      "success": true
+    },
+    {
+      "test": "Demo: Cross-repo Feature Implementation",
+      "success": true
+    },
+    {
+      "test": "Demo: Repository Structure Refactoring",
+      "success": true
+    }
+  ]
+}

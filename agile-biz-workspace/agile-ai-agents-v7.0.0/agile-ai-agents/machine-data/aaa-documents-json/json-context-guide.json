@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "document": "json-context-guide",
+    "title": "JSON Context Optimization Guide",
+    "timestamp": "2025-08-11T22:02:16.894Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/json-context-guide.md",
+    "document_type": "guide",
+    "file_hash": "d0bd3ee4b59cf851d6789cc1c47259dc",
+    "estimated_tokens": 488,
+    "full_md_tokens": 1756
+  },
+  "summary": "The JSON Context Optimization system reduces AI agent context usage by 80-90% through structured data formats, smart querying, and efficient caching.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#overview",
+      "content_preview": "The JSON Context Optimization system enables AI agents to work efficiently with minimal context usage while maintaining access to all necessary inform..."
+    },
+    {
+      "title": "Implementation Guide",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#implementation-guide",
+      "content_preview": ""
+    },
+    {
+      "title": "Executive Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#executive-summary",
+      "content_preview": "```json\n{\n  \"summary\": \"Analyzed 47 competitors in task management space\",\n  \"key_findings\": {\n    \"top_competitors\": [\"Asana\", \"Trello\", \"Monday.com\"..."
+    },
+    {
+      "title": "Agent Usage Guide",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#agent-usage-guide",
+      "content_preview": ""
+    },
+    {
+      "title": "Agent Integration Examples",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#agent-integration-examples",
+      "content_preview": ""
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Monitoring & Metrics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#monitoring-metrics",
+      "content_preview": "The Document Manager Agent tracks:\n- **Generation Speed**: Files converted per minute\n- **Context Savings**: Bytes saved per agent interaction\n- **Cac..."
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#overview-1",
+      "content_preview": "The JSON Context Optimization system enables AI agents to work efficiently with minimal context usage while maintaining access to all necessary inform..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#overview-1",
+      "tokens": 80,
+      "content_preview": "The JSON Context Optimization system enables AI agents to work efficiently with minimal context usage while maintaining access to all necessary inform..."
+    },
+    "Implementation Guide": {
+      "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#implementation-guide",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Automatic JSON Generation": {
+          "content_preview": "The Document Manager Agent automatically:\n- Monitors all .md files in `ai-agents/`, `aaa-documents/`, and `project-documents/`\n- Generates optimized J...",
+          "tokens": 73,
+          "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#automatic-json-generation-1"
+        },
+        "Folder Structure": {
+          "content_preview": "```\nagile-ai-agents/\n├── machine-data/                    # All JSON data\n│   ├── ai-agents-json/             # Agent specifications\n│   ├── aaa-docum...",
+          "tokens": 73,
+          "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#folder-structure-1"
+        },
+        "Context Optimization Benefits": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#context-optimization-benefits-2"
+        }
+      }
+    },
+    "Executive Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#executive-summary",
+      "tokens": 74,
+      "content_preview": "```json\n{\n  \"summary\": \"Analyzed 47 competitors in task management space\",\n  \"key_findings\": {\n    \"top_competitors\": [\"Asana\", \"Trello\", \"Monday.com\"..."
+    },
+    "Agent Usage Guide": {
+      "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#agent-usage-guide",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Reading JSON Data": {
+          "content_preview": "If JSON doesn't exist yet, the system automatically falls back to reading the .md file:\n```javascript\n// This will read JSON if available, otherwise f...",
+          "tokens": 63,
+          "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#reading-json-data-3"
+        },
+        "Querying Arrays": {
+          "content_preview": "```javascript\n// Find competitors with price under $10\nconst cheapCompetitors = await queryJson(\n  \"machine-data/project-documents-json/business-strat...",
+          "tokens": 116,
+          "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#querying-arrays-2"
+        },
+        "Context-Aware Loading": {
+          "content_preview": "```javascript\n// PRD Agent loading research data\nconst researchData = await loadOptimizedContext(\"research_agent\", \"prd_agent\");\n\n// Returns only:\n// ...",
+          "tokens": 71,
+          "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#context-aware-loading-2"
+        },
+        "Streaming Events": {
+          "content_preview": "```javascript\n// Read latest test failures\nconst streamFile = \"machine-data/project-documents-json/22-testing/streams/latest.jsonl\";\nconst lines = (aw...",
+          "tokens": 80,
+          "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#streaming-events-2"
+        }
+      }
+    },
+    "Agent Integration Examples": {
+      "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#agent-integration-examples",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Example 1: PRD Agent Reading Research": {
+          "content_preview": "```javascript\n// Instead of reading 40+ research files...\nconst research = await loadOptimizedContext(\"research_agent\", \"prd_agent\");\n\n// Gets structu...",
+          "tokens": 103,
+          "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#example-1-prd-agent-reading-research-1"
+        },
+        "Example 2: Coder Agent Getting Requirements": {
+          "content_preview": "```javascript\n// Instead of reading entire PRD...\nconst requirements = await readJsonPath(\n  \"machine-data/project-documents-json/05-requirements/prd....",
+          "tokens": 80,
+          "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#example-2-coder-agent-getting-requirements-1"
+        },
+        "Example 3: Testing Agent Streaming Failures": {
+          "content_preview": "```javascript\n// Stream test failures to Coder Agent\nfunction streamTestFailure(failure) {\n  const event = {\n    event: \"test_failed\",\n    timestamp: ...",
+          "tokens": 120,
+          "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#example-3-testing-agent-streaming-failures-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Define Context Priorities": {
+          "content_preview": "Each agent should declare what it needs from other agents:\n```json\n{\n  \"context_priorities\": {\n    \"research_agent\": {\n      \"critical\": [\"market_gap\"...",
+          "tokens": 55,
+          "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#define-context-priorities-1"
+        },
+        "Use Structured Keys": {
+          "content_preview": "Keep JSON keys consistent and queryable:\n- ✅ `market_gap`, `target_audience`, `tech_stack`\n- ❌ `marketGap`, `target-audience`, `technology_stack_used`",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#use-structured-keys-1"
+        },
+        "Progressive Loading": {
+          "content_preview": "Start with summaries, load details only when needed:\n```javascript\n// Step 1: Check summary\nconst summary = await readJsonPath(\"path/to/doc.json#/summ...",
+          "tokens": 81,
+          "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#progressive-loading-1"
+        },
+        "Cache Frequently Used Data": {
+          "content_preview": "```javascript\n// Use cached reads for frequently accessed data\nconst agentSpec = await readJsonCached(\"machine-data/ai-agents-json/prd_agent.json\");\n`...",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#cache-frequently-used-data-1"
+        }
+      }
+    },
+    "Monitoring & Metrics": {
+      "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#monitoring-metrics",
+      "tokens": 79,
+      "content_preview": "The Document Manager Agent tracks:\n- **Generation Speed**: Files converted per minute\n- **Context Savings**: Bytes saved per agent interaction\n- **Cac..."
+    },
+    "Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "JSON Not Found": {
+          "content_preview": "- Check if Document Manager Agent is running\n- Verify .md file exists and is readable\n- Check logs for generation errors\n- System automatically falls ...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#json-not-found-1"
+        },
+        "Invalid JSON Structure": {
+          "content_preview": "- Check against schema in `machine-data/schemas/`\n- Verify source .md file is properly formatted\n- Document Manager logs validation errors",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#invalid-json-structure-1"
+        },
+        "Performance Issues": {
+          "content_preview": "- Check cache hit rate in metrics\n- Verify not reading same files repeatedly\n- Use streaming for large datasets\n- Enable query result caching if neede...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/json-context-guide.md#performance-issues-1"
+        }
+      }
+    }
+  }
+}

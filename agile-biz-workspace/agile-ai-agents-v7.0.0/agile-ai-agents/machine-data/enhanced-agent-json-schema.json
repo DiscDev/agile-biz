@@ -1,0 +1,404 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Enhanced Agent JSON Schema",
+  "description": "Schema for AgileAiAgents enhanced JSON files with progressive loading, GitHub formatting, and bidirectional references",
+  "type": "object",
+  "required": [
+    "meta",
+    "summary",
+    "core_responsibilities",
+    "context_recommendations"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": [
+        "agent",
+        "version",
+        "last_updated",
+        "estimated_tokens",
+        "full_md_tokens",
+        "md_file"
+      ],
+      "properties": {
+        "agent": {
+          "type": "string",
+          "description": "Agent identifier (e.g., 'coder_agent')"
+        },
+        "version": {
+          "type": "string",
+          "description": "Version number (e.g., '2.1.0')"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of last update (YYYY-MM-DD)"
+        },
+        "estimated_tokens": {
+          "type": "integer",
+          "description": "Estimated tokens for this JSON file"
+        },
+        "full_md_tokens": {
+          "type": "integer",
+          "description": "Total tokens in the companion MD file"
+        },
+        "token_reduction": {
+          "type": "string",
+          "description": "Percentage reduction from MD to JSON (e.g., '95%')"
+        },
+        "md_file": {
+          "type": "string",
+          "description": "Path to companion markdown file"
+        },
+        "companion_md": {
+          "type": "string",
+          "description": "Relative path to companion markdown file"
+        },
+        "usage_guide": {
+          "type": "string",
+          "description": "Brief guide on how to use this JSON file effectively"
+        }
+      }
+    },
+    "summary": {
+      "type": "string",
+      "description": "Brief overview from the ## Overview section of the MD file"
+    },
+    "github_formatting": {
+      "type": "object",
+      "description": "GitHub markdown formatting standards and capabilities",
+      "properties": {
+        "agent_category": {
+          "type": "string",
+          "enum": ["development", "business", "growth", "technical", "support"],
+          "description": "Agent category for formatting requirements"
+        },
+        "formatting_level": {
+          "type": "string",
+          "enum": ["basic", "basic+intermediate", "basic+advanced", "all"],
+          "description": "Level of GitHub markdown formatting supported"
+        },
+        "standards_included": {
+          "type": "boolean",
+          "description": "Whether GitHub formatting standards are included"
+        },
+        "examples_count": {
+          "type": "integer",
+          "description": "Number of formatting examples provided"
+        },
+        "quality_checklist": {
+          "type": "boolean",
+          "description": "Whether quality validation checklist is included"
+        },
+        "tokens": {
+          "type": "integer",
+          "description": "Token count for the GitHub formatting section"
+        },
+        "md_reference": {
+          "type": "string",
+          "description": "Reference to the GitHub formatting section in MD file"
+        }
+      }
+    },
+    "core_responsibilities": {
+      "type": "object",
+      "required": ["summary", "md_reference"],
+      "properties": {
+        "summary": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Array of primary responsibility areas"
+        },
+        "count": {
+          "type": "integer",
+          "description": "Number of core responsibilities"
+        },
+        "details_tokens": {
+          "type": "integer",
+          "description": "Token count for the detailed responsibilities section"
+        },
+        "md_reference": {
+          "type": "string",
+          "description": "Reference to the core responsibilities section in MD file"
+        }
+      }
+    },
+    "context_optimization": {
+      "type": "object",
+      "description": "Inter-agent context optimization and data flow requirements",
+      "properties": {
+        "required_from_agents": {
+          "type": "object",
+          "description": "Critical data required from other agents",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "optional_from_agents": {
+          "type": "object",
+          "description": "Optional data that can be loaded from other agents",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "provides_to_agents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Agents that receive data from this agent"
+        },
+        "tokens": {
+          "type": "integer",
+          "description": "Token count for the context optimization section"
+        },
+        "md_reference": {
+          "type": "string",
+          "description": "Reference to the context optimization section in MD file"
+        }
+      }
+    },
+    "workflows": {
+      "type": "object",
+      "properties": {
+        "available": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "md_reference"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Name of the workflow"
+              },
+              "type": {
+                "type": "string",
+                "enum": ["primary", "secondary", "conditional"],
+                "description": "Type of workflow"
+              },
+              "tokens": {
+                "type": "integer",
+                "description": "Token count for this workflow"
+              },
+              "md_reference": {
+                "type": "string",
+                "description": "Reference to the workflow section in MD file"
+              }
+            }
+          }
+        },
+        "total_workflows": {
+          "type": "integer",
+          "description": "Total number of workflows available"
+        },
+        "total_tokens": {
+          "type": "integer",
+          "description": "Total token count for all workflows"
+        },
+        "md_reference": {
+          "type": "string",
+          "description": "Reference to the workflows section in MD file"
+        }
+      }
+    },
+    "coordination": {
+      "type": "object",
+      "description": "Agent coordination patterns and relationships",
+      "properties": {
+        "input_agents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Agents that provide input to this agent"
+        },
+        "output_agents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Agents that receive output from this agent"
+        },
+        "critical_relationships": {
+          "type": "integer",
+          "description": "Number of critical coordination relationships"
+        },
+        "inputs": {
+          "type": "object",
+          "description": "Input coordination details"
+        },
+        "outputs": {
+          "type": "object",
+          "description": "Output coordination details"
+        },
+        "tokens": {
+          "type": "integer",
+          "description": "Token count for the coordination section"
+        },
+        "md_reference": {
+          "type": "string",
+          "description": "Reference to the coordination section in MD file"
+        }
+      }
+    },
+    "boundaries": {
+      "type": "object",
+      "description": "Clear boundaries - what this agent does NOT do",
+      "properties": {
+        "what_not_to_do": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Array of boundaries or things this agent doesn't handle"
+        },
+        "refers_to_agents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Agents that handle excluded responsibilities"
+        },
+        "tokens": {
+          "type": "integer",
+          "description": "Token count for the boundaries section"
+        },
+        "md_reference": {
+          "type": "string",
+          "description": "Reference to the boundaries section in MD file"
+        }
+      }
+    },
+    "success_metrics": {
+      "type": "object",
+      "description": "Success metrics and KPIs for the agent",
+      "properties": {
+        "primary_kpis": {
+          "type": "integer",
+          "description": "Number of primary KPIs"
+        },
+        "categories": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Categories of success metrics"
+        },
+        "tokens": {
+          "type": "integer",
+          "description": "Token count for the success metrics section"
+        },
+        "md_reference": {
+          "type": "string",
+          "description": "Reference to the success metrics section in MD file"
+        }
+      }
+    },
+    "tools_integrations": {
+      "type": "object",
+      "description": "Tools and integrations used by the agent",
+      "properties": {
+        "categories": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Categories of tools and integrations"
+        },
+        "tool_count": {
+          "type": "integer",
+          "description": "Total number of tools mentioned"
+        },
+        "tokens": {
+          "type": "integer",
+          "description": "Token count for the tools section"
+        },
+        "md_reference": {
+          "type": "string",
+          "description": "Reference to the tools section in MD file"
+        }
+      }
+    },
+    "reference_documentation": {
+      "type": "object",
+      "description": "Reference documentation and external resources",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "tokens": {
+            "type": "integer"
+          },
+          "md_reference": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "context_recommendations": {
+      "type": "object",
+      "required": ["minimal", "standard", "detailed"],
+      "description": "Progressive loading recommendations for context optimization",
+      "properties": {
+        "minimal": {
+          "type": "object",
+          "properties": {
+            "sections": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "tokens": {
+              "type": "integer"
+            },
+            "description": {
+              "type": "string"
+            }
+          }
+        },
+        "standard": {
+          "type": "object",
+          "properties": {
+            "sections": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "tokens": {
+              "type": "integer"
+            },
+            "description": {
+              "type": "string"
+            }
+          }
+        },
+        "detailed": {
+          "type": "object",
+          "properties": {
+            "sections": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "tokens": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

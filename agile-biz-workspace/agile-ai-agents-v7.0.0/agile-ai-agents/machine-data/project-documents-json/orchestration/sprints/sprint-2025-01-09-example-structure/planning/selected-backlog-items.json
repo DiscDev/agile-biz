@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "document": "selected-backlog-items",
+    "title": "Selected Backlog Items - Sprint 2025-01-09",
+    "timestamp": "2025-07-22T01:41:03.743Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/selected-backlog-items.md",
+    "document_type": "general_documentation",
+    "file_hash": "22a18149f5a65ec988eac14b7c075f3b",
+    "estimated_tokens": 203,
+    "full_md_tokens": 172
+  },
+  "summary": "## Sprint Goal",
+  "sections": [
+    {
+      "title": "Sprint Goal",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/selected-backlog-items.md#sprint-goal",
+      "content_preview": "Establish core authentication system with user registration and login capabilities."
+    },
+    {
+      "title": "Selected Items",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/selected-backlog-items.md#selected-items",
+      "content_preview": ""
+    },
+    {
+      "title": "Total Sprint Capacity",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/selected-backlog-items.md#total-sprint-capacity",
+      "content_preview": "* **Planned Points**: 26\n* **Team Capacity**: 30 points\n* **Buffer**: 4 points (13%)"
+    },
+    {
+      "title": "Dependencies",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/selected-backlog-items.md#dependencies",
+      "content_preview": "- Database schema must be ready (completed in previous sprint)\n- Security requirements documented (AUTH-SEC-001)"
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Sprint Goal": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/selected-backlog-items.md#sprint-goal",
+      "tokens": 21,
+      "content_preview": "Establish core authentication system with user registration and login capabilities."
+    },
+    "Selected Items": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/selected-backlog-items.md#selected-items",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "AUTH-001: User Registration System": {
+          "content_preview": "* **Points**: 13\n* **Priority**: High\n* **Assignee**: Coder Agent\n* **Status**: In Progress",
+          "tokens": 18,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/selected-backlog-items.md#auth-001-user-registration-system-1"
+        },
+        "AUTH-002: Login Flow Implementation": {
+          "content_preview": "* **Points**: 8\n* **Priority**: High\n* **Assignee**: Coder Agent\n* **Status**: To Do",
+          "tokens": 16,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/selected-backlog-items.md#auth-002-login-flow-implementation-1"
+        },
+        "AUTH-003: Session Management": {
+          "content_preview": "* **Points**: 5\n* **Priority**: High\n* **Assignee**: Security Agent\n* **Status**: To Do",
+          "tokens": 17,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/selected-backlog-items.md#auth-003-session-management-1"
+        }
+      }
+    },
+    "Total Sprint Capacity": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/selected-backlog-items.md#total-sprint-capacity",
+      "tokens": 17,
+      "content_preview": "* **Planned Points**: 26\n* **Team Capacity**: 30 points\n* **Buffer**: 4 points (13%)"
+    },
+    "Dependencies": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/selected-backlog-items.md#dependencies",
+      "tokens": 27,
+      "content_preview": "- Database schema must be ready (completed in previous sprint)\n- Security requirements documented (AUTH-SEC-001)"
+    }
+  }
+}

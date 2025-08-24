@@ -1,0 +1,7 @@
+{
+  "logging_enabled": true,
+  "log_level": "standard",
+  "log_file": ".claude/agents/logs/agents.json",
+  "max_file_size_mb": 50,
+  "auto_rotate": false
+}

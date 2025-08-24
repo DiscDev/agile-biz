@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "agent": "ui_ux_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 177,
+    "full_md_tokens": 4199,
+    "md_file": "agile-ai-agents/ai-agents/ui_ux_agent.md",
+    "file_hash": "9ca98db03efd40ad4acba6ad9b61b42b"
+  },
+  "summary": "## Overview\nThe UI/UX Agent specializes in user interface design, user experience optimization, and design system management. This agent focuses on creating intuitive, accessible, and engaging user experiences while maintaining design consistency.",
+  "core_responsibilities": {
+    "summary": [
+      "User Experience Design",
+      "Visual Interface Design",
+      "Design Validation & Testing"
+    ],
+    "details_tokens": 408,
+    "md_reference": "agile-ai-agents/ai-agents/ui_ux_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "Competitive Design Analysis Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/ui_ux_agent.md#competitive-design-analysis-workflow"
+      },
+      {
+        "name": "Design Competitive Analysis Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/ui_ux_agent.md#design-competitive-analysis-workflow"
+      },
+      {
+        "name": "Figma MCP Design Creation Workflow (WHEN CONFIGURED) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/ui_ux_agent.md#figma-mcp-design-creation-workflow-when-configured-workflow"
+      },
+      {
+        "name": "Design System Evolution Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/ui_ux_agent.md#design-system-evolution-workflow"
+      },
+      {
+        "name": "User Experience Optimization Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/ui_ux_agent.md#user-experience-optimization-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/ui_ux_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/ui_ux_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

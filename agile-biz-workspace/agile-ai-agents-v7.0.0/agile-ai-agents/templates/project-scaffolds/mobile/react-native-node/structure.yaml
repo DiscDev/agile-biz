@@ -1,0 +1,160 @@
+name: "React Native + Node.js"
+category: "mobile"
+description: "Mobile application with React Native frontend and Node.js backend API"
+tech_stack:
+  mobile: "React Native + TypeScript"
+  backend: "Node.js + Express + TypeScript"
+  database: "PostgreSQL with Prisma ORM"
+  deployment: "App Store/Play Store + Cloud API"
+
+structure:
+  - path: "mobile/"
+    type: "directory"
+    description: "React Native mobile application"
+    init_command: "npx react-native@latest init MobileApp --template react-native-template-typescript"
+    subdirs:
+      - "src/"
+      - "src/components/"
+      - "src/screens/"
+      - "src/navigation/"
+      - "src/services/"
+      - "src/store/"
+      - "src/utils/"
+      - "src/types/"
+      - "assets/"
+      - "assets/images/"
+      - "assets/fonts/"
+    
+  - path: "backend/"
+    type: "directory"
+    description: "Node.js API server"
+    init_command: "npm init -y && npm install express typescript @types/node @types/express"
+    subdirs:
+      - "src/"
+      - "src/controllers/"
+      - "src/models/"
+      - "src/routes/"
+      - "src/services/"
+      - "src/middleware/"
+      - "src/utils/"
+      - "src/config/"
+      - "prisma/"
+      - "tests/"
+    
+  - path: "shared/"
+    type: "directory"
+    description: "Shared TypeScript types and constants"
+    subdirs:
+      - "types/"
+      - "constants/"
+      - "validation/"
+    
+  - path: "docs/"
+    type: "directory"
+    description: "Documentation"
+    subdirs:
+      - "api/"
+      - "mobile/"
+      - "deployment/"
+    
+  - path: "scripts/"
+    type: "directory"
+    description: "Build and deployment scripts"
+    files:
+      - "build-ios.sh"
+      - "build-android.sh"
+      - "deploy-api.sh"
+    
+  - path: "docker-compose.yml"
+    type: "file"
+    template: "docker-compose.yml"
+    description: "Local development environment"
+    
+  - path: ".env.example"
+    type: "file"
+    template: "env-example"
+    description: "Environment variables template"
+    
+  - path: "README.md"
+    type: "file"
+    template: "readme.md"
+    description: "Project documentation"
+
+mobile_configuration:
+  - path: "mobile/.env.example"
+    type: "file"
+    content: |
+      API_URL=http://localhost:3000
+      API_VERSION=v1
+  
+  - path: "mobile/src/config/api.ts"
+    type: "file"
+    content: |
+      export const API_CONFIG = {
+        baseURL: process.env.API_URL || 'http://localhost:3000',
+        timeout: 10000,
+      };
+
+post_init_commands:
+  mobile:
+    - description: "Install core dependencies"
+      command: "cd mobile && npm install axios react-native-async-storage @react-navigation/native @react-navigation/stack"
+    - description: "Install UI libraries"
+      command: "cd mobile && npm install react-native-elements react-native-vector-icons"
+    - description: "Install state management"
+      command: "cd mobile && npm install @reduxjs/toolkit react-redux"
+    - description: "Install development tools"
+      command: "cd mobile && npm install -D @types/react-native reactotron-react-native"
+    - description: "iOS specific setup"
+      command: "cd mobile/ios && pod install"
+      
+  backend:
+    - description: "Install core dependencies"
+      command: "cd backend && npm install cors helmet compression morgan dotenv"
+    - description: "Install Prisma"
+      command: "cd backend && npm install @prisma/client && npm install -D prisma"
+    - description: "Install authentication"
+      command: "cd backend && npm install jsonwebtoken bcryptjs && npm install -D @types/jsonwebtoken @types/bcryptjs"
+    - description: "Install validation"
+      command: "cd backend && npm install joi"
+    - description: "Install development tools"
+      command: "cd backend && npm install -D nodemon ts-node jest supertest @types/jest @types/supertest"
+    - description: "Initialize Prisma"
+      command: "cd backend && npx prisma init"
+
+development_ports:
+  backend: 3000
+  database: 5432
+  mobile_metro: 8081
+  mobile_debugger: 8097
+
+mobile_features:
+  - "Push notifications setup"
+  - "Deep linking configuration"
+  - "Offline mode with data sync"
+  - "Biometric authentication"
+  - "Social login integration"
+  - "Analytics tracking"
+  - "Crash reporting"
+  - "Code push for OTA updates"
+
+deployment_targets:
+  mobile:
+    - "iOS App Store"
+    - "Google Play Store"
+    - "TestFlight (beta)"
+    - "Play Console (beta)"
+  backend:
+    - "AWS EC2 / ECS"
+    - "Google Cloud Run"
+    - "Azure App Service"
+    - "Heroku"
+
+benefits:
+  - "Single codebase for iOS and Android"
+  - "Hot reload for rapid development"
+  - "Native performance with React syntax"
+  - "Shared TypeScript types between mobile and backend"
+  - "Scalable Node.js backend"
+  - "Type safety throughout the stack"
+  - "Rich ecosystem of React Native libraries"

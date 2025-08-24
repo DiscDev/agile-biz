@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "agent": "project_state_manager_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-08-11",
+    "estimated_tokens": 105,
+    "full_md_tokens": 8612,
+    "md_file": "agile-ai-agents/ai-agents/project_state_manager_agent.md",
+    "file_hash": "eaa43a722cdb46d14f402e29c8f27c7e"
+  },
+  "summary": "## Overview",
+  "core_responsibilities": {
+    "summary": [
+      "State Persistence",
+      "Context Management",
+      "Session Coordination",
+      "Decision Tracking"
+    ],
+    "details_tokens": 226,
+    "md_reference": "agile-ai-agents/ai-agents/project_state_manager_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "Continuous State Saving Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/project_state_manager_agent.md#continuous-state-saving-workflow"
+      },
+      {
+        "name": "Context Loading Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/project_state_manager_agent.md#context-loading-workflow"
+      },
+      {
+        "name": "Session Summary Generation Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/project_state_manager_agent.md#session-summary-generation-workflow"
+      },
+      {
+        "name": "Checkpoint Management Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/project_state_manager_agent.md#checkpoint-management-workflow"
+      },
+      {
+        "name": "Context Restoration Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/project_state_manager_agent.md#context-restoration-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/project_state_manager_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/project_state_manager_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  },
+  "success_metrics": {
+    "tokens": 87,
+    "md_reference": "agile-ai-agents/ai-agents/project_state_manager_agent.md#success-metrics"
+  }
+}

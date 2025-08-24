@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "document": "TEMPLATE-README",
+    "title": "Sprint Template Instructions",
+    "timestamp": "2025-07-22T01:41:03.739Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-template/TEMPLATE-README.md",
+    "document_type": "general_documentation",
+    "file_hash": "29ab91dcb6b1c3e3483c18bbb502c98e",
+    "estimated_tokens": 57,
+    "full_md_tokens": 670
+  },
+  "summary": "## How to Use This Template",
+  "sections": [
+    {
+      "title": "How to Use This Template",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-template/TEMPLATE-README.md#how-to-use-this-template",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "sprint_management"
+  ],
+  "section_details": {
+    "How to Use This Template": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-template/TEMPLATE-README.md#how-to-use-this-template",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Create New Sprint Folder": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-template/TEMPLATE-README.md#1-create-new-sprint-folder-1"
+        }
+      }
+    }
+  }
+}

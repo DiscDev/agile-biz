@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "document": "performance-checklist",
+    "title": "Performance Checklist",
+    "timestamp": "2025-08-11T22:02:16.909Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/performance-checklist.md",
+    "document_type": "general_documentation",
+    "file_hash": "595cbe99c897920a33f75455d79a9a76",
+    "estimated_tokens": 61,
+    "full_md_tokens": 38
+  },
+  "summary": "Create performance optimization checklist",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/performance-checklist.md#overview",
+      "content_preview": "Create performance optimization checklist"
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "general_reference"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/performance-checklist.md#overview",
+      "tokens": 11,
+      "content_preview": "Create performance optimization checklist"
+    }
+  }
+}

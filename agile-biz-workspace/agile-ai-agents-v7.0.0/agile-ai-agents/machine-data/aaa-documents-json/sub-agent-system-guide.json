@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "document": "sub-agent-system-guide",
+    "title": "Sub-Agent System Guide (v4.0.0)",
+    "timestamp": "2025-08-11T22:02:16.930Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md",
+    "document_type": "guide",
+    "file_hash": "fa3a8849be1319e910da0369076e6f9f",
+    "estimated_tokens": 825,
+    "full_md_tokens": 1790
+  },
+  "summary": "The Sub-Agent System enables parallel execution of tasks in AgileAiAgents, dramatically reducing project completion time while maintaining quality. This guide explains how the system works and how to use it effectively.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#overview",
+      "content_preview": "The Sub-Agent System enables parallel execution of tasks in AgileAiAgents, dramatically reducing project completion time while maintaining quality. Th..."
+    },
+    {
+      "title": "Key Benefits",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#key-benefits",
+      "content_preview": "- **60-75% Time Reduction**: Parallel execution for research, development, and analysis\n- **Token Efficiency**: 30-40% reduction through isolated cont..."
+    },
+    {
+      "title": "Architecture",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#architecture",
+      "content_preview": ""
+    },
+    {
+      "title": "Use Cases",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#use-cases",
+      "content_preview": ""
+    },
+    {
+      "title": "Token Management",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#token-management",
+      "content_preview": ""
+    },
+    {
+      "title": "Code Coordination",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#code-coordination",
+      "content_preview": ""
+    },
+    {
+      "title": "File Ownership Map",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#file-ownership-map",
+      "content_preview": "| File/Module | Owner | Stories | Status | Updated |\n|-------------|-------|---------|--------|---------|\n| /api/auth/* | coder_sub_1 | AUTH-001 | 🟡 ..."
+    },
+    {
+      "title": "Error Handling",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#error-handling",
+      "content_preview": ""
+    },
+    {
+      "title": "Registry Management",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#registry-management",
+      "content_preview": ""
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Monitoring and Metrics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#monitoring-and-metrics",
+      "content_preview": ""
+    },
+    {
+      "title": "Migration Guide",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#migration-guide",
+      "content_preview": ""
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "Future Enhancements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#future-enhancements",
+      "content_preview": "- Real-time sub-agent communication\n- Dynamic token reallocation\n- Advanced conflict resolution\n- Cross-project sub-agent pooling\n- Machine learning f..."
+    }
+  ],
+  "key_points": [
+    "**60-75% Time Reduction**: Parallel execution for research, development, and analysis",
+    "**Token Efficiency**: 30-40% reduction through isolated contexts",
+    "**Realistic Team Simulation**: Multiple \"developers\" working simultaneously",
+    "**Quality Maintained**: Validation gates ensure consistency"
+  ],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#overview",
+      "tokens": 55,
+      "content_preview": "The Sub-Agent System enables parallel execution of tasks in AgileAiAgents, dramatically reducing project completion time while maintaining quality. Th..."
+    },
+    "Key Benefits": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#key-benefits",
+      "tokens": 70,
+      "content_preview": "- **60-75% Time Reduction**: Parallel execution for research, development, and analysis\n- **Token Efficiency**: 30-40% reduction through isolated cont..."
+    },
+    "Architecture": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#architecture",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Core Components": {
+          "content_preview": "1. **Sub-Agent Orchestrator** (`machine-data/sub-agent-orchestrator.js`)\n   - Manages parallel sub-agent execution\n   - Handles session management and...",
+          "tokens": 148,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#core-components-1"
+        }
+      }
+    },
+    "Use Cases": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#use-cases",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Research Phase (75% Time Reduction)": {
+          "content_preview": "**Traditional Approach**: 4-6 hours sequential\n**Sub-Agent Approach**: 1-2 hours parallel\n\n```yaml\nresearch_groups:\n  market_intelligence:\n    - compe...",
+          "tokens": 117,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#1-research-phase-75-time-reduction-1"
+        },
+        "2. Sprint Execution (60% Time Reduction)": {
+          "content_preview": "**Traditional Approach**: Sequential story implementation\n**Sub-Agent Approach**: Parallel story development\n\n```yaml\nsprint_coordination:\n  coder_sub...",
+          "tokens": 101,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#2-sprint-execution-60-time-reduction-1"
+        },
+        "3. Project Analysis (70% Time Reduction)": {
+          "content_preview": "**Traditional Approach**: 2-4 hours sequential\n**Sub-Agent Approach**: 30-60 minutes parallel\n\n```yaml\nanalysis_categories:\n  architecture: [code-stru...",
+          "tokens": 84,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#3-project-analysis-70-time-reduction-1"
+        }
+      }
+    },
+    "Token Management": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#token-management",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Budget Calculation": {
+          "content_preview": "```javascript\nBase Allocation: 10,000 tokens\n\nMultipliers:\n- Research Level: minimal (0.5x), medium (1.0x), thorough (2.0x)\n- Complexity: simple (0.8x...",
+          "tokens": 67,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#budget-calculation-1"
+        },
+        "Example Allocations": {
+          "content_preview": "- **Minimal Research**: 15,000 tokens total (5,000 per group)\n- **Medium Research**: 30,000 tokens total (10,000 per group)\n- **Thorough Research**: 1...",
+          "tokens": 57,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#example-allocations-1"
+        }
+      }
+    },
+    "Code Coordination": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#code-coordination",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "File Ownership Model": {
+          "content_preview": "To prevent conflicts, the system uses file-level ownership:\n\n1. **Ownership Assignment**: Each sub-agent owns specific files/modules\n2. **Read-Only Ac...",
+          "tokens": 77,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#file-ownership-model-1"
+        },
+        "Coordination Document": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#coordination-document-1"
+        }
+      }
+    },
+    "File Ownership Map": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#file-ownership-map",
+      "tokens": 77,
+      "content_preview": "| File/Module | Owner | Stories | Status | Updated |\n|-------------|-------|---------|--------|---------|\n| /api/auth/* | coder_sub_1 | AUTH-001 | 🟡 ..."
+    },
+    "Error Handling": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#error-handling",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Failure Modes": {
+          "content_preview": "1. **Timeout**: Retry once with reduced scope\n2. **Token Exhaustion**: Save partial progress, queue continuation\n3. **Invalid Output**: Attempt correc...",
+          "tokens": 51,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#failure-modes-1"
+        },
+        "Graceful Degradation": {
+          "content_preview": "- Sub-agent failures don't block overall progress\n- Partial results are preserved and used\n- Main agent can take over failed tasks\n- User is notified ...",
+          "tokens": 42,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#graceful-degradation-1"
+        }
+      }
+    },
+    "Registry Management": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#registry-management",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Hybrid Approach": {
+          "content_preview": "```\norchestration/\n├── master-document-registry.md        # Consolidated view\n├── sub-agent-registries/             # Session-based registries\n│   ├──...",
+          "tokens": 92,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#hybrid-approach-1"
+        },
+        "Consolidation Process": {
+          "content_preview": "1. Sub-agents write to their own registries\n2. Every 5 minutes, registries are consolidated\n3. Master registry updated with all documents\n4. Sessions ...",
+          "tokens": 44,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#consolidation-process-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "When to Use Sub-Agents": {
+          "content_preview": "✅ **Good Candidates**:\n- Research across multiple domains\n- Independent story implementation\n- Multi-aspect analysis\n- Parallel document generation\n\n❌...",
+          "tokens": 68,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#when-to-use-sub-agents-1"
+        },
+        "Configuration Tips": {
+          "content_preview": "1. **Token Budgets**: Start conservative, increase based on usage\n2. **Concurrency**: Limit to 3-5 sub-agents to avoid overload\n3. **Timeouts**: 5 min...",
+          "tokens": 58,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#configuration-tips-1"
+        }
+      }
+    },
+    "Monitoring and Metrics": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#monitoring-and-metrics",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Session Status": {
+          "content_preview": "```javascript\nconst status = await orchestrator.getSessionStatus();\n// Returns active sub-agents, duration, progress\n```",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#session-status-1"
+        },
+        "Usage Report": {
+          "content_preview": "```javascript\nconst report = tokenManager.generateUsageReport();\n// Shows allocation, usage, efficiency per sub-agent\n```",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#usage-report-1"
+        },
+        "Registry Statistics": {
+          "content_preview": "```javascript\nconst stats = await registryManager.getStatistics();\n// Document counts, active sessions, consolidation status\n```",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#registry-statistics-1"
+        }
+      }
+    },
+    "Migration Guide": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#migration-guide",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Enabling Sub-Agents": {
+          "content_preview": "1. Update CLAUDE.md with sub-agent configuration\n2. Set `sub_agents.enabled: true`\n3. Configure token limits and concurrency\n4. Test with small tasks ...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#enabling-sub-agents-1"
+        },
+        "Gradual Rollout": {
+          "content_preview": "1. **Phase 1**: Enable for research only\n2. **Phase 2**: Add sprint execution\n3. **Phase 3**: Include project analysis\n4. **Phase 4**: Full parallel e...",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#gradual-rollout-1"
+        }
+      }
+    },
+    "Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Common Issues": {
+          "content_preview": "1. **Token Budget Exceeded**\n   - Reduce allocation multipliers\n   - Limit document scope\n   - Check for infinite loops\n\n2. **Conflicts in Code**\n   -...",
+          "tokens": 87,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#common-issues-1"
+        },
+        "Debug Mode": {
+          "content_preview": "Enable debug logging in CLAUDE.md:\n```yaml\nsub_agents:\n  orchestration:\n    debug: true\n    log_level: \"verbose\"\n```",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#debug-mode-1"
+        }
+      }
+    },
+    "Future Enhancements": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-system-guide.md#future-enhancements",
+      "tokens": 110,
+      "content_preview": "- Real-time sub-agent communication\n- Dynamic token reallocation\n- Advanced conflict resolution\n- Cross-project sub-agent pooling\n- Machine learning f..."
+    }
+  }
+}

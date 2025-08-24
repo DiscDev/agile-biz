@@ -1,0 +1,55 @@
+{
+  "name": "agile-ai-agents",
+  "version": "7.0.0",
+  "description": "AI Agent Coordination System with Stakeholder Interview Agent and Two-Stage Workflow",
+  "scripts": {
+    "dashboard": "cd project-dashboard && node start-dashboard.js",
+    "generate-contribution": "./scripts/bash/generate-contribution.sh",
+    "review-contribution": "./scripts/bash/review-contribution.sh",
+    "submit-contribution": "./scripts/bash/submit-contribution.sh",
+    "contribute-learnings": "npm run generate-contribution && npm run review-contribution && npm run submit-contribution",
+    "analyze-learnings": "node machine-data/learning-analysis-workflow.js analyze",
+    "learning-report": "node machine-data/implementation-tracker.js report",
+    "capture-summary": "node machine-data/learning-capture-manager.js summary",
+    "broadcast-report": "node machine-data/learning-broadcast-system.js report",
+    "version-report": "node machine-data/version-manager.js report",
+    "privacy-scan": "node machine-data/privacy-scanner.js scan",
+    "privacy-report": "node machine-data/privacy-scanner.js report",
+    "setup": "./scripts/bash/setup.sh",
+    "test": "jest --config jest.config.js",
+    "test:unit": "jest --config jest.config.js tests/unit",
+    "test:integration": "jest --config jest.config.js tests/integration",
+    "test:security": "jest --config jest.config.js tests/security",
+    "test:e2e": "npm run dashboard & cypress run",
+    "test:e2e:open": "npm run dashboard & cypress open",
+    "test:all": "npm run test:unit && npm run test:integration && npm run test:security && npm run test:e2e",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "echo \"No linting configured yet\"",
+    "typecheck": "echo \"No type checking configured yet\"",
+    "validate-folders": "node scripts/bash/validate-folder-references.js",
+    "validate-categories": "node scripts/bash/validate-folder-references-categories.js",
+    "pretest": "npm run validate-categories",
+    "convert-agents-to-claude": "node machine-data/scripts/md-to-claude-agent-converter.js",
+    "agent-backup": "node machine-data/scripts/agent-update-rollback.js backup",
+    "agent-rollback": "node machine-data/scripts/agent-update-rollback.js rollback",
+    "agent-backup-list": "node machine-data/scripts/agent-update-rollback.js list",
+    "agent-backup-clean": "node machine-data/scripts/agent-update-rollback.js clean"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "automation",
+    "development",
+    "agile"
+  ],
+  "author": "AgileAiAgents Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "fs-extra": "^11.3.0",
+    "uuid": "^9.0.1"
+  }
+}

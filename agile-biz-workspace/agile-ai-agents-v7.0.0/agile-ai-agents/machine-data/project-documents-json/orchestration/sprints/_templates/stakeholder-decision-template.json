@@ -1,0 +1,224 @@
+{
+  "meta": {
+    "document": "stakeholder-decision-template",
+    "title": "Stakeholder Decision: [Decision Title]",
+    "timestamp": "2025-07-22T01:41:03.740Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md",
+    "document_type": "template",
+    "file_hash": "6957c0e1e6c6127b92dddbae9327f866",
+    "estimated_tokens": 726,
+    "full_md_tokens": 708
+  },
+  "summary": "This folder contains all stakeholder decisions made during the sprint-YYYY-MM-DD-feature-name sprint.",
+  "sections": [
+    {
+      "title": "Context",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#context",
+      "content_preview": "[Detailed background information about why this decision is needed]"
+    },
+    {
+      "title": "Current Situation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#current-situation",
+      "content_preview": "[Description of the current state and why a decision is required]"
+    },
+    {
+      "title": "Options Presented",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#options-presented",
+      "content_preview": ""
+    },
+    {
+      "title": "Recommendation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#recommendation",
+      "content_preview": "[Agent's recommended option and reasoning]"
+    },
+    {
+      "title": "Decision Made",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#decision-made",
+      "content_preview": "**Selected Option**: [Option number and title]  \n**Rationale**: [Stakeholder's reasoning for the decision]  \n**Additional Conditions**: [Any condition..."
+    },
+    {
+      "title": "Impact Analysis",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#impact-analysis",
+      "content_preview": ""
+    },
+    {
+      "title": "Implementation Plan",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#implementation-plan",
+      "content_preview": ""
+    },
+    {
+      "title": "Reference Documentation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#reference-documentation",
+      "content_preview": "- [Link to related documents]\n- [Previous related decisions]"
+    },
+    {
+      "title": "Approval Trail",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#approval-trail",
+      "content_preview": "| Role | Name | Date | Signature/Approval |\n|------|------|------|-------------------|\n| Stakeholder | [Name] | YYYY-MM-DD | Approved |\n| Project Mana..."
+    },
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#overview",
+      "content_preview": "This folder contains all stakeholder decisions made during the sprint-YYYY-MM-DD-feature-name sprint."
+    },
+    {
+      "title": "File Naming Convention",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#file-naming-convention",
+      "content_preview": "`decision-YYYY-MM-DD-HH-MM.md`\n\nExample: `decision-2025-01-09-14-30.md`"
+    },
+    {
+      "title": "Process",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#process",
+      "content_preview": "1. Agent identifies need for stakeholder decision\n2. Agent prepares decision document using template\n3. Project Manager Agent facilitates decision mee..."
+    },
+    {
+      "title": "Quick Links",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#quick-links",
+      "content_preview": "- [Project-Level Decisions](../../stakeholder-decisions.md)\n- [Decision Template](../../_templates/stakeholder-decision-template.md)"
+    },
+    {
+      "title": "Decisions in This Sprint",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#decisions-in-this-sprint",
+      "content_preview": "| Date | Title | Requested By | Status |\n|------|-------|--------------|--------|\n| | | | |\n\n*Table updated as decisions are added*\n```"
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Context": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#context",
+      "tokens": 17,
+      "content_preview": "[Detailed background information about why this decision is needed]"
+    },
+    "Current Situation": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#current-situation",
+      "tokens": 16,
+      "content_preview": "[Description of the current state and why a decision is required]"
+    },
+    "Options Presented": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#options-presented",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Option 1: [Title]": {
+          "content_preview": "**Description**: [Detailed description]  \n**Pros**:\n- Pro 1\n- Pro 2\n\n**Cons**:\n- Con 1\n- Con 2\n\n**Cost/Effort**: [Estimate]",
+          "tokens": 26,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#option-1-title-1"
+        },
+        "Option 2: [Title]": {
+          "content_preview": "**Description**: [Detailed description]  \n**Pros**:\n- Pro 1\n- Pro 2\n\n**Cons**:\n- Con 1\n- Con 2\n\n**Cost/Effort**: [Estimate]",
+          "tokens": 26,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#option-2-title-1"
+        },
+        "Option 3: [Title] (if applicable)": {
+          "content_preview": "**Description**: [Detailed description]  \n**Pros**:\n- Pro 1\n\n**Cons**:\n- Con 1\n\n**Cost/Effort**: [Estimate]",
+          "tokens": 22,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#option-3-title-if-applicable-1"
+        }
+      }
+    },
+    "Recommendation": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#recommendation",
+      "tokens": 10,
+      "content_preview": "[Agent's recommended option and reasoning]"
+    },
+    "Decision Made": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#decision-made",
+      "tokens": 43,
+      "content_preview": "**Selected Option**: [Option number and title]  \n**Rationale**: [Stakeholder's reasoning for the decision]  \n**Additional Conditions**: [Any condition..."
+    },
+    "Impact Analysis": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#impact-analysis",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Immediate Impact": {
+          "content_preview": "- [Impact 1]\n- [Impact 2]",
+          "tokens": 6,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#immediate-impact-1"
+        },
+        "Long-term Impact": {
+          "content_preview": "- [Impact 1]\n- [Impact 2]",
+          "tokens": 6,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#long-term-impact-1"
+        },
+        "Dependencies": {
+          "content_preview": "- [Other decisions this affects]\n- [Systems/features impacted]",
+          "tokens": 15,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#dependencies-1"
+        }
+      }
+    },
+    "Implementation Plan": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#implementation-plan",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Follow-up Actions": {
+          "content_preview": "- [ ] Action 1 (Owner: agent_name, Due: YYYY-MM-DD)\n- [ ] Action 2 (Owner: agent_name, Due: YYYY-MM-DD)\n- [ ] Action 3 (Owner: agent_name, Due: YYYY-M...",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#follow-up-actions-1"
+        },
+        "Success Criteria": {
+          "content_preview": "- [How we'll know this decision was successfully implemented]\n- [Metrics to track]",
+          "tokens": 20,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#success-criteria-1"
+        }
+      }
+    },
+    "Reference Documentation": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#reference-documentation",
+      "tokens": 14,
+      "content_preview": "- [Link to related documents]\n- [Previous related decisions]"
+    },
+    "Approval Trail": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#approval-trail",
+      "tokens": 63,
+      "content_preview": "| Role | Name | Date | Signature/Approval |\n|------|------|------|-------------------|\n| Stakeholder | [Name] | YYYY-MM-DD | Approved |\n| Project Mana..."
+    },
+    "Overview": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#overview",
+      "tokens": 26,
+      "content_preview": "This folder contains all stakeholder decisions made during the sprint-YYYY-MM-DD-feature-name sprint."
+    },
+    "File Naming Convention": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#file-naming-convention",
+      "tokens": 17,
+      "content_preview": "`decision-YYYY-MM-DD-HH-MM.md`\n\nExample: `decision-2025-01-09-14-30.md`"
+    },
+    "Process": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#process",
+      "tokens": 63,
+      "content_preview": "1. Agent identifies need for stakeholder decision\n2. Agent prepares decision document using template\n3. Project Manager Agent facilitates decision mee..."
+    },
+    "Quick Links": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#quick-links",
+      "tokens": 31,
+      "content_preview": "- [Project-Level Decisions](../../stakeholder-decisions.md)\n- [Decision Template](../../_templates/stakeholder-decision-template.md)"
+    },
+    "Decisions in This Sprint": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md#decisions-in-this-sprint",
+      "tokens": 33,
+      "content_preview": "| Date | Title | Requested By | Status |\n|------|-------|--------------|--------|\n| | | | |\n\n*Table updated as decisions are added*\n```"
+    }
+  }
+}

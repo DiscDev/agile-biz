@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "document": "json-reference-resolution-guide",
+    "title": "JSON Reference Resolution Guide",
+    "timestamp": "2025-08-11T22:02:16.895Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md",
+    "document_type": "guide",
+    "file_hash": "989b0857e8c0589f0fd0d0bd3bfddc2d",
+    "estimated_tokens": 499,
+    "full_md_tokens": 2448
+  },
+  "summary": "This guide explains how to use the enhanced JSON reference system that enables progressive context loading with 70-85% token reduction while maintaining access to detailed information when needed.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#overview",
+      "content_preview": "This guide explains how to use the enhanced JSON reference system that enables progressive context loading with 70-85% token reduction while maintaini..."
+    },
+    {
+      "title": "Reference Format",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#reference-format",
+      "content_preview": "References follow a consistent format:\n```\nagile-ai-agents/path/to/file.md#section-anchor\n```\n\nComponents:\n- **Base Path**: Always starts with `agile-..."
+    },
+    {
+      "title": "Using References in Agent Code",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#using-references-in-agent-code",
+      "content_preview": ""
+    },
+    {
+      "title": "Token Optimization Strategies",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#token-optimization-strategies",
+      "content_preview": ""
+    },
+    {
+      "title": "Reference Resolution Patterns",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#reference-resolution-patterns",
+      "content_preview": ""
+    },
+    {
+      "title": "Performance Metrics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#performance-metrics",
+      "content_preview": "Track your token usage and loading performance:\n\n```javascript\nconst startTokens = contextLoader.getTokensUsed();\nconst startTime = Date.now();\n\n// Lo..."
+    },
+    {
+      "title": "Error Handling",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#error-handling",
+      "content_preview": "Always handle reference resolution errors:\n\n```javascript\ntry {\n  const section = await contextLoader.loadSectionByReference(reference);\n  if (!sectio..."
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#best-practices",
+      "content_preview": "1. **Start with JSON**: Always load the agent JSON first to understand available references\n2. **Use Progressive Loading**: Start minimal, expand base..."
+    },
+    {
+      "title": "Example: Complete Agent Initialization",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#example-complete-agent-initialization",
+      "content_preview": "```javascript\nasync function initializeAgentWithReferences(agentName) {\n  const contextLoader = createContextLoader(agentName);\n  \n  // 1. Load agent ..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#overview",
+      "tokens": 49,
+      "content_preview": "This guide explains how to use the enhanced JSON reference system that enables progressive context loading with 70-85% token reduction while maintaini..."
+    },
+    "Reference Format": {
+      "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#reference-format",
+      "tokens": 60,
+      "content_preview": "References follow a consistent format:\n```\nagile-ai-agents/path/to/file.md#section-anchor\n```\n\nComponents:\n- **Base Path**: Always starts with `agile-..."
+    },
+    "Using References in Agent Code": {
+      "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#using-references-in-agent-code",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Loading Agent JSON with References": {
+          "content_preview": "```javascript\nconst { createContextLoader } = require('./machine-data/agent-context-loader');\n\n// Create loader for your agent\nconst contextLoader = c...",
+          "tokens": 162,
+          "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#loading-agent-json-with-references-1"
+        },
+        "Progressive Context Loading": {
+          "content_preview": "Load context based on your needs:\n\n```javascript\n// Minimal context (fastest, ~500-1000 tokens)\nconst minimalContext = await contextLoader.loadProgres...",
+          "tokens": 165,
+          "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#progressive-context-loading-1"
+        },
+        "Loading Specific Sections via Reference": {
+          "content_preview": "When you need detailed information about a specific workflow or section:\n\n```javascript\n// Load a specific workflow\nconst workflowDetails = await cont...",
+          "tokens": 103,
+          "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#loading-specific-sections-via-reference-1"
+        },
+        "Batch Loading Multiple References": {
+          "content_preview": "Load multiple sections efficiently:\n\n```javascript\n// Get all workflow references for an agent\nconst workflowRefs = agentJson.data.workflows.available...",
+          "tokens": 102,
+          "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#batch-loading-multiple-references-1"
+        }
+      }
+    },
+    "Token Optimization Strategies": {
+      "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#token-optimization-strategies",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Start Small, Expand as Needed": {
+          "content_preview": "```javascript\n// Initial load - minimal context\nlet context = await contextLoader.loadProgressiveContext(agentJson.data, 'minimal');\nlet tokensUsed = ...",
+          "tokens": 114,
+          "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#start-small-expand-as-needed-1"
+        },
+        "Cache Frequently Used Sections": {
+          "content_preview": "The context loader automatically caches sections for 5 minutes:\n\n```javascript\n// First call - loads from file\nconst workflow1 = await contextLoader.l...",
+          "tokens": 76,
+          "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#cache-frequently-used-sections-1"
+        },
+        "Use Token Estimates for Planning": {
+          "content_preview": "Before loading sections, check token requirements:\n\n```javascript\n// Check available token budget\nconst tokenBudget = 10000;\nlet tokensUsed = agentJso...",
+          "tokens": 109,
+          "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#use-token-estimates-for-planning-1"
+        }
+      }
+    },
+    "Reference Resolution Patterns": {
+      "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#reference-resolution-patterns",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Pattern 1: Lazy Loading": {
+          "content_preview": "Load details only when needed:\n\n```javascript\nclass AgentWorkflowHandler {\n  constructor(agentJson) {\n    this.agentJson = agentJson;\n    this.loadedW...",
+          "tokens": 145,
+          "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#pattern-1-lazy-loading-1"
+        },
+        "Pattern 2: Preload Critical Sections": {
+          "content_preview": "Load important sections upfront:\n\n```javascript\nasync function initializeAgent(agentName) {\n  const contextLoader = createContextLoader(agentName);\n  ...",
+          "tokens": 129,
+          "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#pattern-2-preload-critical-sections-1"
+        },
+        "Pattern 3: Context-Aware Loading": {
+          "content_preview": "Load based on the current task:\n\n```javascript\nasync function loadContextForTask(taskType, agentJson, contextLoader) {\n  switch (taskType) {\n    case ...",
+          "tokens": 177,
+          "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#pattern-3-context-aware-loading-1"
+        }
+      }
+    },
+    "Performance Metrics": {
+      "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#performance-metrics",
+      "tokens": 125,
+      "content_preview": "Track your token usage and loading performance:\n\n```javascript\nconst startTokens = contextLoader.getTokensUsed();\nconst startTime = Date.now();\n\n// Lo..."
+    },
+    "Error Handling": {
+      "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#error-handling",
+      "tokens": 100,
+      "content_preview": "Always handle reference resolution errors:\n\n```javascript\ntry {\n  const section = await contextLoader.loadSectionByReference(reference);\n  if (!sectio..."
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#best-practices",
+      "tokens": 117,
+      "content_preview": "1. **Start with JSON**: Always load the agent JSON first to understand available references\n2. **Use Progressive Loading**: Start minimal, expand base..."
+    },
+    "Example: Complete Agent Initialization": {
+      "md_reference": "agile-ai-agents/aaa-documents/json-reference-resolution-guide.md#example-complete-agent-initialization",
+      "tokens": 562,
+      "content_preview": "```javascript\nasync function initializeAgentWithReferences(agentName) {\n  const contextLoader = createContextLoader(agentName);\n  \n  // 1. Load agent ..."
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "document": "AUTH-001-user-registration",
+    "title": "User Registration",
+    "timestamp": "2025-07-22T01:41:03.732Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-001-user-registration.md",
+    "document_type": "general_documentation",
+    "file_hash": "f0896ba23e019361fa82bbe98f50c631",
+    "estimated_tokens": 303,
+    "full_md_tokens": 442
+  },
+  "summary": "**ID**: AUTH-001",
+  "sections": [
+    {
+      "title": "User Story",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-001-user-registration.md#user-story",
+      "content_preview": "As a new user,\nI want to register for an account,\nSo that I can access the platform's features and save my preferences."
+    },
+    {
+      "title": "Acceptance Criteria",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-001-user-registration.md#acceptance-criteria",
+      "content_preview": "- [ ] User can access registration form from homepage\n- [ ] Form validates email format in real-time\n- [ ] Form checks password strength requirements\n..."
+    },
+    {
+      "title": "Technical Requirements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-001-user-registration.md#technical-requirements",
+      "content_preview": "- Create user model with required fields\n- Implement email validation service\n- Set up password hashing (bcrypt, min 10 rounds)\n- Create registration ..."
+    },
+    {
+      "title": "Dependencies",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-001-user-registration.md#dependencies",
+      "content_preview": "- Database schema must be finalized\n- Email service provider must be selected\n- Security policies must be defined (SEC-001)"
+    },
+    {
+      "title": "Definition of Done",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-001-user-registration.md#definition-of-done",
+      "content_preview": "- [ ] Code implemented and reviewed\n- [ ] Unit tests written (>90% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] Doc..."
+    },
+    {
+      "title": "Notes",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-001-user-registration.md#notes",
+      "content_preview": "- Consider social login options for v2\n- May need to support enterprise SSO later\n- GDPR compliance required for EU users\n\n---\n\n**Created**: 2025-01-1..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "User Story": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-001-user-registration.md#user-story",
+      "tokens": 30,
+      "content_preview": "As a new user,\nI want to register for an account,\nSo that I can access the platform's features and save my preferences."
+    },
+    "Acceptance Criteria": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-001-user-registration.md#acceptance-criteria",
+      "tokens": 122,
+      "content_preview": "- [ ] User can access registration form from homepage\n- [ ] Form validates email format in real-time\n- [ ] Form checks password strength requirements\n..."
+    },
+    "Technical Requirements": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-001-user-registration.md#technical-requirements",
+      "tokens": 85,
+      "content_preview": "- Create user model with required fields\n- Implement email validation service\n- Set up password hashing (bcrypt, min 10 rounds)\n- Create registration ..."
+    },
+    "Dependencies": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-001-user-registration.md#dependencies",
+      "tokens": 31,
+      "content_preview": "- Database schema must be finalized\n- Email service provider must be selected\n- Security policies must be defined (SEC-001)"
+    },
+    "Definition of Done": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-001-user-registration.md#definition-of-done",
+      "tokens": 65,
+      "content_preview": "- [ ] Code implemented and reviewed\n- [ ] Unit tests written (>90% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] Doc..."
+    },
+    "Notes": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-001-user-registration.md#notes",
+      "tokens": 52,
+      "content_preview": "- Consider social login options for v2\n- May need to support enterprise SSO later\n- GDPR compliance required for EU users\n\n---\n\n**Created**: 2025-01-1..."
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "agent": "marketing_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 149,
+    "full_md_tokens": 8397,
+    "md_file": "agile-ai-agents/ai-agents/marketing_agent.md",
+    "file_hash": "00060c2f0b24ca4020ec0394ac759e88"
+  },
+  "summary": "## Overview\nThe Marketing Agent specializes in marketing strategy development, content creation, and campaign execution. This agent focuses on customer acquisition, engagement, and brand building to drive business growth and market presence.",
+  "core_responsibilities": {
+    "summary": [
+      "Comprehensive Marketing Report Generation",
+      "Content Creation & Management",
+      "Campaign Execution & Optimization",
+      "Analytics & Performance Tracking"
+    ],
+    "details_tokens": 2128,
+    "md_reference": "agile-ai-agents/ai-agents/marketing_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "Product Launch Campaign Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/marketing_agent.md#product-launch-campaign-workflow"
+      },
+      {
+        "name": "Lead Generation Campaign Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/marketing_agent.md#lead-generation-campaign-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/marketing_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/marketing_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

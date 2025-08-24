@@ -1,0 +1,222 @@
+{
+  "meta": {
+    "document": "claude-code-hooks-guide",
+    "title": "Claude Code Hooks and Automation Guide for AgileAiAgents",
+    "timestamp": "2025-08-11T22:02:16.867Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md",
+    "document_type": "guide",
+    "file_hash": "7623b00da3ee4d2647bf72bf407520ce",
+    "estimated_tokens": 563,
+    "full_md_tokens": 3312
+  },
+  "summary": "Claude Code's hooks system allows you to automate workflows, enforce policies, and integrate AgileAiAgents operations with your development environment. This guide provides practical hook configurations specifically designed for AgileAiAgents projects.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#overview",
+      "content_preview": "Claude Code's hooks system allows you to automate workflows, enforce policies, and integrate AgileAiAgents operations with your development environmen..."
+    },
+    {
+      "title": "Understanding Hooks",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#understanding-hooks",
+      "content_preview": ""
+    },
+    {
+      "title": "Hook Configuration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#hook-configuration",
+      "content_preview": ""
+    },
+    {
+      "title": "AgileAiAgents-Specific Hooks",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#agileaiagents-specific-hooks",
+      "content_preview": ""
+    },
+    {
+      "title": "Advanced Hook Patterns",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#advanced-hook-patterns",
+      "content_preview": ""
+    },
+    {
+      "title": "Hook Development Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#hook-development-best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Testing Hooks",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#testing-hooks",
+      "content_preview": ""
+    },
+    {
+      "title": "Common Hook Recipes",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#common-hook-recipes",
+      "content_preview": ""
+    },
+    {
+      "title": "Troubleshooting Hooks",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#troubleshooting-hooks",
+      "content_preview": ""
+    },
+    {
+      "title": "Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#summary",
+      "content_preview": "Claude Code hooks provide powerful automation capabilities for AgileAiAgents projects:\n\n1. **Sprint Management** - Enforce agile practices automatical..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#overview",
+      "tokens": 63,
+      "content_preview": "Claude Code's hooks system allows you to automate workflows, enforce policies, and integrate AgileAiAgents operations with your development environmen..."
+    },
+    "Understanding Hooks": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#understanding-hooks",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "What are Hooks?": {
+          "content_preview": "Hooks are automated scripts that execute at specific points during Claude Code operations:\n- **Before** tools are used (validation, preparation)\n- **A...",
+          "tokens": 72,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#what-are-hooks-1"
+        },
+        "Hook Events": {
+          "content_preview": "| Event | Trigger | Common Use Cases |\n|-------|---------|------------------|\n| `PreToolUse` | Before any tool executes | Validation, security checks ...",
+          "tokens": 120,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#hook-events-1"
+        }
+      }
+    },
+    "Hook Configuration": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#hook-configuration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Configuration Files": {
+          "content_preview": "Hooks are configured in JSON settings files:\n\n```\n~/.claude/settings.json          # User-level hooks (all projects)\n.claude/settings.json            ...",
+          "tokens": 58,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#configuration-files-1"
+        },
+        "Basic Hook Structure": {
+          "content_preview": "```json\n{\n  \"hooks\": {\n    \"EventName\": [\n      {\n        \"matcher\": \"ToolPattern\",\n        \"filter\": \"file-pattern\",\n        \"hooks\": [\n          {\n ...",
+          "tokens": 80,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#basic-hook-structure-1"
+        }
+      }
+    },
+    "AgileAiAgents-Specific Hooks": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#agileaiagents-specific-hooks",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Sprint Management Hooks": {
+          "content_preview": "```json\n{\n  \"hooks\": {\n    \"PreToolUse\": [\n      {\n        \"matcher\": \"Edit|Write|MultiEdit\",\n        \"filter\": \"**/*.{js,ts,py,java}\",\n        \"hooks...",
+          "tokens": 115,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#1-sprint-management-hooks-2"
+        }
+      }
+    },
+    "Advanced Hook Patterns": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#advanced-hook-patterns",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Multi-Stage Hooks": {
+          "content_preview": "Chain hooks for complex workflows:\n\n```json\n{\n  \"hooks\": {\n    \"PostToolUse\": [\n      {\n        \"matcher\": \"Write\",\n        \"filter\": \"**/*.md\",\n     ...",
+          "tokens": 131,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#1-multi-stage-hooks-1"
+        },
+        "2. Conditional Hooks": {
+          "content_preview": "Execute based on conditions:\n\n```bash\n#!/bin/bash",
+          "tokens": 12,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#2-conditional-hooks-1"
+        }
+      }
+    },
+    "Hook Development Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#hook-development-best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Performance Considerations": {
+          "content_preview": "```bash\n#!/bin/bash",
+          "tokens": 4,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#1-performance-considerations-1"
+        }
+      }
+    },
+    "Testing Hooks": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#testing-hooks",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Test Individual Hooks": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#1-test-individual-hooks-1"
+        }
+      }
+    },
+    "Common Hook Recipes": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#common-hook-recipes",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Recipe 1: Enforce Coding Standards": {
+          "content_preview": "```json\n{\n  \"hooks\": {\n    \"PreToolUse\": [\n      {\n        \"matcher\": \"Write|Edit\",\n        \"filter\": \"**/*.{js,ts}\",\n        \"hooks\": [\n          {\n ...",
+          "tokens": 71,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#recipe-1-enforce-coding-standards-1"
+        },
+        "Recipe 2: Git Auto-Commit": {
+          "content_preview": "```bash\n#!/bin/bash",
+          "tokens": 4,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#recipe-2-git-auto-commit-1"
+        }
+      }
+    },
+    "Troubleshooting Hooks": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#troubleshooting-hooks",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Hook Not Firing": {
+          "content_preview": "1. Check hook configuration syntax\n2. Verify file permissions (`chmod +x hook.sh`)\n3. Check matcher patterns\n4. Enable debug mode\n5. Check Claude Code...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#hook-not-firing-1"
+        },
+        "Hook Blocking Operations": {
+          "content_preview": "1. Ensure non-critical hooks use `blocking: false`\n2. Add timeouts to prevent hanging\n3. Use `exit 0` for non-blocking failures\n4. Check for infinite ...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#hook-blocking-operations-1"
+        },
+        "Performance Issues": {
+          "content_preview": "1. Profile hook execution time\n2. Move expensive operations to background\n3. Use caching where possible\n4. Limit hook frequency with debouncing",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#performance-issues-1"
+        }
+      }
+    },
+    "Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-hooks-guide.md#summary",
+      "tokens": 158,
+      "content_preview": "Claude Code hooks provide powerful automation capabilities for AgileAiAgents projects:\n\n1. **Sprint Management** - Enforce agile practices automatical..."
+    }
+  }
+}

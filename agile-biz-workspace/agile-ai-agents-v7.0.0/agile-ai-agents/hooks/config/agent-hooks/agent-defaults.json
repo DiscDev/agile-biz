@@ -1,0 +1,443 @@
+{
+  "version": "1.0.0",
+  "description": "Default configuration for agent-specific hooks based on value and performance impact",
+  "profiles": {
+    "minimal": {
+      "description": "Only critical hooks for minimal performance impact",
+      "performanceBudget": 300,
+      "enabledByDefault": [
+        "vulnerability-scanner",
+        "secret-rotation-reminder",
+        "coverage-gatekeeper",
+        "defensive-patterns"
+      ]
+    },
+    "standard": {
+      "description": "Critical and valuable hooks for balanced approach",
+      "performanceBudget": 500,
+      "enabledByDefault": [
+        "vulnerability-scanner",
+        "secret-rotation-reminder",
+        "coverage-gatekeeper",
+        "defensive-patterns",
+        "deployment-window-enforcer",
+        "requirement-completeness",
+        "dependency-checker",
+        "import-validator",
+        "test-categorizer",
+        "blocker-escalator",
+        "velocity-anomaly-detector"
+      ]
+    },
+    "advanced": {
+      "description": "Most hooks enabled for maximum quality",
+      "performanceBudget": 1000,
+      "enabledByDefault": [
+        "vulnerability-scanner",
+        "secret-rotation-reminder",
+        "coverage-gatekeeper",
+        "defensive-patterns",
+        "deployment-window-enforcer",
+        "requirement-completeness",
+        "encryption-enforcer",
+        "rollback-readiness",
+        "dependency-checker",
+        "import-validator",
+        "test-categorizer",
+        "fixture-validator",
+        "blocker-escalator",
+        "velocity-anomaly-detector",
+        "doc-code-sync-validator",
+        "permission-scope-validator",
+        "api-contract-validator",
+        "sprint-scope-guardian",
+        "accessibility-checker",
+        "environment-parity-checker",
+        "naming-conventions",
+        "code-complexity",
+        "changelog-generator",
+        "code-formatter",
+        "commit-message-validator",
+        "pr-template-checker",
+        "complexity-analyzer"
+      ]
+    },
+    "custom": {
+      "description": "User-defined configuration",
+      "performanceBudget": 1000,
+      "enabledByDefault": []
+    }
+  },
+  "hooks": {
+    "critical": {
+      "vulnerability-scanner": {
+        "category": "critical",
+        "impact": "low",
+        "defaultEnabled": true,
+        "config": {
+          "thresholds": {
+            "critical": 0,
+            "high": 0,
+            "moderate": 5,
+            "low": 10
+          },
+          "autoFix": false
+        }
+      },
+      "secret-rotation-reminder": {
+        "category": "critical",
+        "impact": "low",
+        "defaultEnabled": true,
+        "config": {
+          "schedules": {
+            "api_key": 90,
+            "password": 60,
+            "oauth_token": 365,
+            "jwt_secret": 180,
+            "database_password": 90
+          },
+          "warningDays": {
+            "critical": 7,
+            "warning": 30,
+            "info": 60
+          }
+        }
+      },
+      "coverage-gatekeeper": {
+        "category": "critical",
+        "impact": "medium",
+        "defaultEnabled": true,
+        "config": {
+          "thresholds": {
+            "overall": 80,
+            "branches": 75,
+            "functions": 80,
+            "lines": 80,
+            "statements": 80
+          },
+          "criticalPaths": ["src/auth/", "src/payments/", "src/security/"],
+          "blockOnError": true
+        }
+      },
+      "defensive-patterns": {
+        "category": "critical",
+        "impact": "low",
+        "defaultEnabled": true,
+        "config": {
+          "blockingThreshold": 10,
+          "autoFix": false,
+          "strictMode": false
+        }
+      },
+      "deployment-window-enforcer": {
+        "category": "critical",
+        "impact": "low",
+        "defaultEnabled": false,
+        "config": {
+          "allowedWindows": [
+            {
+              "days": ["monday", "tuesday", "wednesday", "thursday"],
+              "startHour": 9,
+              "endHour": 16
+            },
+            {
+              "days": ["friday"],
+              "startHour": 9,
+              "endHour": 12
+            }
+          ],
+          "emergencyOverride": {
+            "enabled": true,
+            "requiresApproval": true
+          }
+        }
+      },
+      "requirement-completeness": {
+        "category": "critical",
+        "impact": "low",
+        "defaultEnabled": false,
+        "config": {
+          "minAcceptanceCriteria": 3,
+          "minTestCoverage": 80,
+          "requireDocumentation": true,
+          "minReviewers": 1
+        }
+      }
+    },
+    "valuable": {
+      "dependency-checker": {
+        "category": "valuable",
+        "impact": "medium",
+        "defaultEnabled": false,
+        "config": {
+          "checks": {
+            "outdated": true,
+            "deprecated": true,
+            "licenses": true,
+            "size": true,
+            "duplicates": true,
+            "phantom": true
+          },
+          "thresholds": {
+            "majorBehind": 2,
+            "totalOutdated": 20,
+            "bundleSizeMB": 50
+          }
+        }
+      },
+      "import-validator": {
+        "category": "valuable",
+        "impact": "medium",
+        "defaultEnabled": false,
+        "config": {
+          "requireExtensions": false,
+          "checkCircular": true
+        }
+      },
+      "test-categorizer": {
+        "category": "valuable",
+        "impact": "low",
+        "defaultEnabled": false,
+        "config": {
+          "balanceTargets": {
+            "unit": { "min": 60, "max": 80 },
+            "integration": { "min": 15, "max": 30 },
+            "e2e": { "min": 5, "max": 15 }
+          },
+          "enforceNaming": true
+        }
+      },
+      "fixture-validator": {
+        "category": "valuable",
+        "impact": "low",
+        "defaultEnabled": false
+      },
+      "blocker-escalator": {
+        "category": "valuable",
+        "impact": "low",
+        "defaultEnabled": false,
+        "config": {
+          "escalationThresholds": {
+            "hours": 24,
+            "sprintPercentage": 20
+          }
+        }
+      },
+      "velocity-anomaly-detector": {
+        "category": "valuable",
+        "impact": "low",
+        "defaultEnabled": false,
+        "config": {
+          "anomalyThreshold": 30,
+          "minSprints": 3
+        }
+      },
+      "doc-code-sync-validator": {
+        "category": "valuable",
+        "impact": "medium",
+        "defaultEnabled": false
+      },
+      "permission-scope-validator": {
+        "category": "valuable",
+        "impact": "low",
+        "defaultEnabled": false
+      }
+    },
+    "enhancement": {
+      "naming-conventions": {
+        "category": "enhancement",
+        "impact": "low",
+        "defaultEnabled": false,
+        "config": {
+          "enforceCase": "camelCase",
+          "componentCase": "PascalCase"
+        }
+      },
+      "code-complexity": {
+        "category": "enhancement",
+        "impact": "medium",
+        "defaultEnabled": false,
+        "config": {
+          "maxCyclomaticComplexity": 10,
+          "maxCognitiveComplexity": 15
+        }
+      },
+      "design-token-validator": {
+        "category": "enhancement",
+        "impact": "low",
+        "defaultEnabled": false
+      },
+      "interaction-pattern-library": {
+        "category": "enhancement",
+        "impact": "medium",
+        "defaultEnabled": false
+      },
+      "citation-formatter": {
+        "category": "enhancement",
+        "impact": "low",
+        "defaultEnabled": false
+      },
+      "fact-vs-opinion-tagger": {
+        "category": "enhancement",
+        "impact": "medium",
+        "defaultEnabled": false
+      },
+      "reading-level-analyzer": {
+        "category": "enhancement",
+        "impact": "low",
+        "defaultEnabled": false
+      },
+      "changelog-generator": {
+        "category": "enhancement",
+        "impact": "low",
+        "defaultEnabled": false
+      },
+      "test-naming-validator": {
+        "category": "enhancement",
+        "impact": "low",
+        "defaultEnabled": false
+      },
+      "flaky-test-detector": {
+        "category": "enhancement",
+        "impact": "high",
+        "defaultEnabled": false
+      },
+      "code-formatter": {
+        "category": "enhancement",
+        "impact": "medium",
+        "defaultEnabled": false,
+        "config": {
+          "formatters": ["prettier", "black", "gofmt", "rustfmt"],
+          "formatOnSave": true,
+          "formatOnCommit": true
+        }
+      },
+      "commit-message-validator": {
+        "category": "enhancement",
+        "impact": "low",
+        "defaultEnabled": false,
+        "config": {
+          "format": "conventional",
+          "maxHeaderLength": 100,
+          "requireScope": false,
+          "requireBody": false
+        }
+      },
+      "pr-template-checker": {
+        "category": "enhancement",
+        "impact": "low",
+        "defaultEnabled": false,
+        "config": {
+          "requiredSections": ["Description", "Type of Change", "Testing", "Checklist"],
+          "minimumCompleteness": 80,
+          "enforceChecklist": true
+        }
+      },
+      "dead-code-detector": {
+        "category": "enhancement",
+        "impact": "high",
+        "defaultEnabled": false,
+        "config": {
+          "warningThreshold": 20,
+          "errorThreshold": 40,
+          "checkExports": true,
+          "ignorePatterns": ["test", "spec", "mock"]
+        }
+      },
+      "complexity-analyzer": {
+        "category": "enhancement",
+        "impact": "medium",
+        "defaultEnabled": false,
+        "config": {
+          "thresholds": {
+            "low": 5,
+            "medium": 10,
+            "high": 15,
+            "critical": 20
+          },
+          "includeMethodComplexity": true
+        }
+      }
+    },
+    "specialized": {
+      "accessibility-tester": {
+        "category": "specialized",
+        "impact": "high",
+        "defaultEnabled": false
+      },
+      "performance-profiler": {
+        "category": "specialized",
+        "impact": "high",
+        "defaultEnabled": false
+      },
+      "memory-leak-detector": {
+        "category": "specialized",
+        "impact": "high",
+        "defaultEnabled": false
+      },
+      "database-query-analyzer": {
+        "category": "specialized",
+        "impact": "high",
+        "defaultEnabled": false
+      },
+      "api-response-validator": {
+        "category": "specialized",
+        "impact": "medium",
+        "defaultEnabled": false
+      },
+      "cross-browser-compatibility": {
+        "category": "specialized",
+        "impact": "high",
+        "defaultEnabled": false
+      },
+      "localization-validator": {
+        "category": "specialized",
+        "impact": "medium",
+        "defaultEnabled": false
+      },
+      "gdpr-compliance-checker": {
+        "category": "specialized",
+        "impact": "medium",
+        "defaultEnabled": false
+      },
+      "seo-analyzer": {
+        "category": "specialized",
+        "impact": "medium",
+        "defaultEnabled": false
+      },
+      "mobile-responsiveness": {
+        "category": "specialized",
+        "impact": "medium",
+        "defaultEnabled": false
+      }
+    }
+  },
+  "performanceConfig": {
+    "autoDisable": {
+      "enabled": true,
+      "thresholds": {
+        "executionTime": 2000,
+        "failureRate": 0.5,
+        "consecutiveFailures": 5
+      }
+    },
+    "caching": {
+      "enabled": true,
+      "defaultTTL": 300000
+    },
+    "batching": {
+      "enabled": true,
+      "maxBatchSize": 10,
+      "batchTimeout": 1000
+    }
+  },
+  "triggers": {
+    "file.created": ["defensive-patterns", "import-validator"],
+    "file.modified": ["defensive-patterns", "import-validator", "doc-code-sync-validator"],
+    "pre-commit": ["coverage-gatekeeper", "dependency-checker", "test-categorizer"],
+    "pre-deployment": ["deployment-window-enforcer", "vulnerability-scanner", "secret-rotation-reminder"],
+    "story-complete": ["requirement-completeness"],
+    "sprint-start": ["velocity-anomaly-detector", "sprint-scope-guardian"],
+    "blocker-created": ["blocker-escalator"]
+  }
+}

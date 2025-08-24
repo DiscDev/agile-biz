@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "document": "2025-01-09-standup",
+    "title": "Daily Standup - 2025-01-09",
+    "timestamp": "2025-07-22T01:41:03.742Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/documents/archive/2025-01-09-standup.md",
+    "document_type": "technical",
+    "file_hash": "58c946b033bbe179385eea09eca2f4b9",
+    "estimated_tokens": 209,
+    "full_md_tokens": 333
+  },
+  "summary": "## Sprint: Authentication Foundation",
+  "sections": [
+    {
+      "title": "Sprint: Authentication Foundation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/documents/archive/2025-01-09-standup.md#sprint-authentication-foundation",
+      "content_preview": "**Day**: 1 of 10"
+    },
+    {
+      "title": "Sprint Progress",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/documents/archive/2025-01-09-standup.md#sprint-progress",
+      "content_preview": "* **Completed Points**: 0 / 26\n* **Sprint Health**: 🟢 On Track\n* **Velocity Trend**: Too early to determine"
+    },
+    {
+      "title": "Key Decisions Made",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/documents/archive/2025-01-09-standup.md#key-decisions-made",
+      "content_preview": "- Will use JWT tokens for session management\n- Password hashing with bcrypt (12 rounds)\n- Email validation required for registration"
+    },
+    {
+      "title": "Upcoming Milestones",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/documents/archive/2025-01-09-standup.md#upcoming-milestones",
+      "content_preview": "- Day 3: Registration endpoint complete\n- Day 5: Login flow implemented\n- Day 7: All features code complete\n- Day 9: Testing and reviews complete"
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Sprint: Authentication Foundation": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/documents/archive/2025-01-09-standup.md#sprint-authentication-foundation",
+      "tokens": 3,
+      "content_preview": "**Day**: 1 of 10",
+      "subsections": {
+        "Coder Agent": {
+          "content_preview": "**Yesterday**: Sprint planning completed, environment setup\n**Today**: \n- Starting AUTH-001: User Registration System\n- Setting up project structure f...",
+          "tokens": 52,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/documents/archive/2025-01-09-standup.md#coder-agent-1"
+        },
+        "Testing Agent": {
+          "content_preview": "**Yesterday**: Reviewed test requirements from planning\n**Today**:\n- Setting up test framework for auth module\n- Creating test plan document\n- Writing...",
+          "tokens": 49,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/documents/archive/2025-01-09-standup.md#testing-agent-1"
+        },
+        "Security Agent": {
+          "content_preview": "**Yesterday**: Completed security requirements review\n**Today**:\n- Reviewing proposed auth architecture\n- Documenting security guidelines\n- Starting s...",
+          "tokens": 46,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/documents/archive/2025-01-09-standup.md#security-agent-1"
+        },
+        "API Agent": {
+          "content_preview": "**Yesterday**: API contract discussion in planning\n**Today**:\n- Defining auth API endpoints\n- Creating OpenAPI specification\n- Coordinating with Coder...",
+          "tokens": 44,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/documents/archive/2025-01-09-standup.md#api-agent-1"
+        }
+      }
+    },
+    "Sprint Progress": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/documents/archive/2025-01-09-standup.md#sprint-progress",
+      "tokens": 24,
+      "content_preview": "* **Completed Points**: 0 / 26\n* **Sprint Health**: 🟢 On Track\n* **Velocity Trend**: Too early to determine"
+    },
+    "Key Decisions Made": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/documents/archive/2025-01-09-standup.md#key-decisions-made",
+      "tokens": 33,
+      "content_preview": "- Will use JWT tokens for session management\n- Password hashing with bcrypt (12 rounds)\n- Email validation required for registration"
+    },
+    "Upcoming Milestones": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/documents/archive/2025-01-09-standup.md#upcoming-milestones",
+      "tokens": 37,
+      "content_preview": "- Day 3: Registration endpoint complete\n- Day 5: Login flow implemented\n- Day 7: All features code complete\n- Day 9: Testing and reviews complete"
+    }
+  }
+}

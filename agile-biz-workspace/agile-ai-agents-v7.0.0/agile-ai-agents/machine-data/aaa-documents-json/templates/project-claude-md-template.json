@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "document": "project-claude-md-template",
+    "title": "CLAUDE.md",
+    "timestamp": "2025-08-11T22:02:16.930Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/templates/project-claude-md-template.md",
+    "document_type": "template",
+    "file_hash": "418e1c2beb71c92836f077d7c9accea7",
+    "estimated_tokens": 325,
+    "full_md_tokens": 638
+  },
+  "summary": "This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.",
+  "sections": [
+    {
+      "title": "Project Context",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/templates/project-claude-md-template.md#project-context",
+      "content_preview": "This project is built using the **AgileAiAgents** system - an AI-powered development workflow that coordinates 38 specialized AI agents for planning, ..."
+    },
+    {
+      "title": "Project-Specific Information",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/templates/project-claude-md-template.md#project-specific-information",
+      "content_preview": "{{PROJECT_SPECIFIC_SECTION}}"
+    },
+    {
+      "title": "Commands",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/templates/project-claude-md-template.md#commands",
+      "content_preview": "{{PROJECT_COMMANDS_SECTION}}"
+    },
+    {
+      "title": "Architecture Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/templates/project-claude-md-template.md#architecture-overview",
+      "content_preview": "{{PROJECT_ARCHITECTURE_SECTION}}"
+    },
+    {
+      "title": "Important Notes",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/templates/project-claude-md-template.md#important-notes",
+      "content_preview": "- This project was scaffolded/developed using AgileAiAgents\n- All architectural decisions are documented in the AgileAiAgents project folder\n- For maj..."
+    },
+    {
+      "title": "Getting Help",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/templates/project-claude-md-template.md#getting-help",
+      "content_preview": "1. **Check AgileAiAgents documentation**: `{{AGILE_AI_AGENTS_PATH}}/README.md`\n2. **Review sprint documents**: Find context for existing features\n3. *..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Project Context": {
+      "md_reference": "agile-ai-agents/aaa-documents/templates/project-claude-md-template.md#project-context",
+      "tokens": 46,
+      "content_preview": "This project is built using the **AgileAiAgents** system - an AI-powered development workflow that coordinates 38 specialized AI agents for planning, ...",
+      "subsections": {
+        "AgileAiAgents Integration": {
+          "content_preview": "**Location**: The AgileAiAgents system is located at `{{AGILE_AI_AGENTS_PATH}}`\n\n**Key Commands for Development**:\n```bash",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/templates/project-claude-md-template.md#agileaiagents-integration-1"
+        }
+      }
+    },
+    "Project-Specific Information": {
+      "md_reference": "agile-ai-agents/aaa-documents/templates/project-claude-md-template.md#project-specific-information",
+      "tokens": 7,
+      "content_preview": "{{PROJECT_SPECIFIC_SECTION}}"
+    },
+    "Commands": {
+      "md_reference": "agile-ai-agents/aaa-documents/templates/project-claude-md-template.md#commands",
+      "tokens": 7,
+      "content_preview": "{{PROJECT_COMMANDS_SECTION}}"
+    },
+    "Architecture Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/templates/project-claude-md-template.md#architecture-overview",
+      "tokens": 8,
+      "content_preview": "{{PROJECT_ARCHITECTURE_SECTION}}"
+    },
+    "Important Notes": {
+      "md_reference": "agile-ai-agents/aaa-documents/templates/project-claude-md-template.md#important-notes",
+      "tokens": 67,
+      "content_preview": "- This project was scaffolded/developed using AgileAiAgents\n- All architectural decisions are documented in the AgileAiAgents project folder\n- For maj..."
+    },
+    "Getting Help": {
+      "md_reference": "agile-ai-agents/aaa-documents/templates/project-claude-md-template.md#getting-help",
+      "tokens": 65,
+      "content_preview": "1. **Check AgileAiAgents documentation**: `{{AGILE_AI_AGENTS_PATH}}/README.md`\n2. **Review sprint documents**: Find context for existing features\n3. *..."
+    }
+  }
+}

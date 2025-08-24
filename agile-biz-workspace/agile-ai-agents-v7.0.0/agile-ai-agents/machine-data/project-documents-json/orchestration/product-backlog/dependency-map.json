@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "document": "dependency-map",
+    "title": "Backlog Dependency Map",
+    "timestamp": "2025-07-22T01:41:03.735Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md",
+    "document_type": "general_documentation",
+    "file_hash": "30da0a2fcbc0a26abd8f03ff6276641e",
+    "estimated_tokens": 377,
+    "full_md_tokens": 992
+  },
+  "summary": "This document tracks dependencies between backlog items to help with sprint planning and risk management.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#overview",
+      "content_preview": "This document tracks dependencies between backlog items to help with sprint planning and risk management."
+    },
+    {
+      "title": "Dependency Visualization",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#dependency-visualization",
+      "content_preview": "```mermaid\ngraph TD\n    %% Core Authentication Epic\n    AUTH-001[User Registration] --> AUTH-002[Login Flow]\n    AUTH-002 --> AUTH-003[Session Managem..."
+    },
+    {
+      "title": "Dependency Types",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#dependency-types",
+      "content_preview": ""
+    },
+    {
+      "title": "Epic Dependencies",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#epic-dependencies",
+      "content_preview": ""
+    },
+    {
+      "title": "Risk Assessment",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#risk-assessment",
+      "content_preview": ""
+    },
+    {
+      "title": "Sprint Planning Implications",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#sprint-planning-implications",
+      "content_preview": ""
+    },
+    {
+      "title": "Dependency Management Process",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#dependency-management-process",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#overview",
+      "tokens": 27,
+      "content_preview": "This document tracks dependencies between backlog items to help with sprint planning and risk management."
+    },
+    "Dependency Visualization": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#dependency-visualization",
+      "tokens": 247,
+      "content_preview": "```mermaid\ngraph TD\n    %% Core Authentication Epic\n    AUTH-001[User Registration] --> AUTH-002[Login Flow]\n    AUTH-002 --> AUTH-003[Session Managem..."
+    },
+    "Dependency Types": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#dependency-types",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Hard Dependencies (Blocking)": {
+          "content_preview": "Dependencies that must be completed before the dependent item can start.\n\n| Item | Depends On | Type | Reason |\n|:-----|:-----------|:-----|:-------|\n...",
+          "tokens": 81,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#hard-dependencies-blocking-1"
+        },
+        "Soft Dependencies (Preferred)": {
+          "content_preview": "Dependencies that would be helpful but not blocking.\n\n| Item | Depends On | Type | Reason |\n|:-----|:-----------|:-----|:-------|\n| UX-001 | AUTH-002 ...",
+          "tokens": 61,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#soft-dependencies-preferred-1"
+        },
+        "Technical Dependencies": {
+          "content_preview": "Infrastructure or framework requirements.\n\n| Item | Depends On | Type | Reason |\n|:-----|:-----------|:-----|:-------|\n| All Features | TECH-001 | Tec...",
+          "tokens": 63,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#technical-dependencies-1"
+        }
+      }
+    },
+    "Epic Dependencies": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#epic-dependencies",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Authentication Epic": {
+          "content_preview": "- **Prerequisites**: Database schema, security policies\n- **Provides**: User management, session handling\n- **Blocks**: All user-specific features",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#authentication-epic-1"
+        },
+        "User Experience Epic": {
+          "content_preview": "- **Prerequisites**: Core features implemented\n- **Provides**: Improved usability\n- **Blocks**: None (enhancement)",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#user-experience-epic-1"
+        },
+        "Technical Debt Epic": {
+          "content_preview": "- **Prerequisites**: Initial implementation\n- **Provides**: Better maintainability\n- **Blocks**: None (can be parallel)",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#technical-debt-epic-1"
+        }
+      }
+    },
+    "Risk Assessment": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#risk-assessment",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "High Risk Dependencies": {
+          "content_preview": "Items with multiple dependencies or critical path items.\n\n1. **AUTH-003 (Session Management)**\n   - Blocks: 5+ features\n   - Risk: High\n   - Mitigatio...",
+          "tokens": 68,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#high-risk-dependencies-1"
+        },
+        "Circular Dependencies": {
+          "content_preview": "None identified. All dependencies form a directed acyclic graph (DAG).",
+          "tokens": 17,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#circular-dependencies-1"
+        }
+      }
+    },
+    "Sprint Planning Implications": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#sprint-planning-implications",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Sprint 1 Recommendations": {
+          "content_preview": "- Focus on AUTH-001, AUTH-002, TECH-001\n- These unlock the most future work",
+          "tokens": 19,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#sprint-1-recommendations-1"
+        },
+        "Sprint 2 Recommendations": {
+          "content_preview": "- Complete AUTH-003\n- Start PROF-001 if capacity allows\n- Begin SEC-001, SEC-002",
+          "tokens": 20,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#sprint-2-recommendations-1"
+        },
+        "Parallel Work Opportunities": {
+          "content_preview": "- UX items can progress with mockups\n- Security items can be researched early\n- Technical debt can be addressed anytime",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#parallel-work-opportunities-1"
+        }
+      }
+    },
+    "Dependency Management Process": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#dependency-management-process",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "When Creating New Items": {
+          "content_preview": "1. Identify what it needs (dependencies)\n2. Identify what needs it (dependents)\n3. Update this map\n4. Consider sprint placement",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#when-creating-new-items-1"
+        },
+        "During Sprint Planning": {
+          "content_preview": "1. Check dependencies are met\n2. Avoid selecting blocked items\n3. Prioritize items that unblock others",
+          "tokens": 26,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#during-sprint-planning-1"
+        },
+        "Handling Blocked Items": {
+          "content_preview": "1. Mark as \"Blocked\" in backlog\n2. Document blocking item\n3. Re-evaluate in next planning\n\n---\n\n**Note**: This is a living document. Update whenever:\n...",
+          "tokens": 80,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md#handling-blocked-items-1"
+        }
+      }
+    }
+  }
+}

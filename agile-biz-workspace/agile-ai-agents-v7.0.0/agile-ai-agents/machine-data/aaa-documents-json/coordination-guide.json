@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "document": "coordination-guide",
+    "title": "Coordination Guide",
+    "timestamp": "2025-08-11T22:02:16.880Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/coordination-guide.md",
+    "document_type": "guide",
+    "file_hash": "9190134c05a2eb6a3d658e1d96cb49b1",
+    "estimated_tokens": 62,
+    "full_md_tokens": 38
+  },
+  "summary": "Update relevant documentation for coordination",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/coordination-guide.md#overview",
+      "content_preview": "Update relevant documentation for coordination"
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/coordination-guide.md#overview",
+      "tokens": 12,
+      "content_preview": "Update relevant documentation for coordination"
+    }
+  }
+}

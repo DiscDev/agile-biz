@@ -1,0 +1,24 @@
+{
+  "name": "machine-data",
+  "version": "7.0.0",
+  "main": "agent-context-loader.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sync:report": "node sync-monitor.js report",
+    "sync:retrofit": "node sync-monitor.js retrofit",
+    "sync:watch": "node sync-monitor.js watch",
+    "context:load": "node smart-context-loader.js load",
+    "context:query": "node smart-context-loader.js query",
+    "context:stakeholder": "node smart-context-loader.js stakeholder",
+    "context:strategy": "node smart-context-loader.js strategy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chokidar": "^4.0.3",
+    "crypto": "^1.0.1",
+    "glob": "^11.0.3"
+  }
+}

@@ -1,0 +1,588 @@
+{
+  "meta": {
+    "document": "auto-project-orchestrator",
+    "title": "AgileAiAgents Auto Project Orchestrator v1.0.0 - Automated End-to-End Project Creation",
+    "timestamp": "2025-07-22T01:40:48.554Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md",
+    "document_type": "technical",
+    "file_hash": "472bfd1ec220e09512c55945d163ba69",
+    "estimated_tokens": 1072,
+    "full_md_tokens": 49604
+  },
+  "summary": "This file enables automatic project orchestration. When Claude Code detects this file in the agile-ai-agents folder, it will automatically coordinate all 27 AgileAiAgents to take a project idea from concept to completion using agile methodology without requiring manual agent activation.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#overview",
+      "content_preview": "This file enables automatic project orchestration. When Claude Code detects this file in the agile-ai-agents folder, it will automatically coordinate ..."
+    },
+    {
+      "title": "Command-Based Workflow Entry Points",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#command-based-workflow-entry-points",
+      "content_preview": ""
+    },
+    {
+      "title": "Implementation Guide",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#implementation-guide",
+      "content_preview": ""
+    },
+    {
+      "title": "🚀 Optimized 16-Phase Document Creation Workflow",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#optimized-16-phase-document-creation-workflow",
+      "content_preview": "The orchestrator uses an optimized workflow that achieves 40-45% time savings through parallel agent execution:"
+    },
+    {
+      "title": "🆕 Context Persistence with Project State Manager Agent",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#context-persistence-with-project-state-manager-agent",
+      "content_preview": "The Project State Manager Agent ensures seamless continuity across Claude Code sessions:"
+    },
+    {
+      "title": "Important: Single-Folder Structure",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#important-single-folder-structure",
+      "content_preview": "All AgileAiAgents components are now contained within the `agile-ai-agents/` folder. This keeps your project root clean and makes upgrades easier. The..."
+    },
+    {
+      "title": "Project Documents Structure",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#project-documents-structure",
+      "content_preview": "All agent deliverables are automatically saved to the `agile-ai-agents/project-documents/` folder for easy reference:\n\n```\nagile-ai-agents/project-doc..."
+    },
+    {
+      "title": "Existing Project Integration Workflow",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#existing-project-integration-workflow",
+      "content_preview": "**When adding this AI agent coordination system to an existing project, use this workflow instead:**"
+    },
+    {
+      "title": "Automated Project Workflow",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#automated-project-workflow",
+      "content_preview": "**For NEW projects starting from scratch, use this workflow:**"
+    },
+    {
+      "title": "Quality Gates & User Decision Points",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#quality-gates-user-decision-points",
+      "content_preview": ""
+    },
+    {
+      "title": "Qualifying Questions Framework",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#qualifying-questions-framework",
+      "content_preview": "When a user provides a project idea, Claude will automatically ask these categories of questions:"
+    },
+    {
+      "title": "Automatic Agent Coordination Rules",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#automatic-agent-coordination-rules",
+      "content_preview": ""
+    },
+    {
+      "title": "User Interaction Points",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#user-interaction-points",
+      "content_preview": ""
+    },
+    {
+      "title": "Expected User Experience",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#expected-user-experience",
+      "content_preview": ""
+    },
+    {
+      "title": "Configuration for Different Project Types",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#configuration-for-different-project-types",
+      "content_preview": ""
+    },
+    {
+      "title": "MCP Server Integration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#mcp-server-integration",
+      "content_preview": "When agents reference MCP servers, they can access additional capabilities:"
+    },
+    {
+      "title": "Activation Instructions for Claude",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#activation-instructions-for-claude",
+      "content_preview": "When Claude Code detects this file (`auto-project-orchestrator.md`) in a project directory and receives a project idea from the user:\n\n1. **Create pro..."
+    },
+    {
+      "title": "[DECISION TYPE] - [TIMESTAMP]",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#decision-type-timestamp",
+      "content_preview": "```markdown"
+    },
+    {
+      "title": "PROJECT IDENTITY CONFIRMATION - [TIMESTAMP]",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#project-identity-confirmation-timestamp",
+      "content_preview": "- **IMMEDIATE**: Log decision as soon as user provides input\n- **DETAILED**: Include complete context and reasoning\n- **ACTIONABLE**: Specify exactly ..."
+    },
+    {
+      "title": "Session Recovery Workflow (NEW)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#session-recovery-workflow-new",
+      "content_preview": "**When returning to a project after a break, the system automatically restores context:**"
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#overview",
+      "tokens": 72,
+      "content_preview": "This file enables automatic project orchestration. When Claude Code detects this file in the agile-ai-agents folder, it will automatically coordinate ..."
+    },
+    "Command-Based Workflow Entry Points": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#command-based-workflow-entry-points",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Primary Commands": {
+          "content_preview": "When users type commands starting with \"/\", route to appropriate workflow:\n- `/start-new-project-workflow` - Structured new project discovery and impl...",
+          "tokens": 102,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#primary-commands-1"
+        },
+        "Legacy Mode (Direct Description)": {
+          "content_preview": "If user provides project description without command:\n1. **User provides project idea** - Just describe what you want to build\n2. **AgileAiAgents asks...",
+          "tokens": 115,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#legacy-mode-direct-description-1"
+        }
+      }
+    },
+    "Implementation Guide": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#implementation-guide",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "For Command-Based Workflows": {
+          "content_preview": "1. **Detect command** - Check if input starts with \"/\"\n2. **Route to handler** - Use appropriate workflow template:\n   - New projects: `workflow-templ...",
+          "tokens": 108,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#for-command-based-workflows-1"
+        },
+        "For Direct Descriptions (Backward Compatible)": {
+          "content_preview": "Continue with existing auto-orchestration flow as documented below.",
+          "tokens": 17,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#for-direct-descriptions-backward-compatible-1"
+        }
+      }
+    },
+    "🚀 Optimized 16-Phase Document Creation Workflow": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#optimized-16-phase-document-creation-workflow",
+      "tokens": 28,
+      "content_preview": "The orchestrator uses an optimized workflow that achieves 40-45% time savings through parallel agent execution:",
+      "subsections": {
+        "Workflow Optimization Features": {
+          "content_preview": "- **16 Sequential Phases**: Clear dependencies and logical progression\n- **Parallel Execution**: Multiple agents work simultaneously when possible\n- *...",
+          "tokens": 71,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#workflow-optimization-features-1"
+        },
+        "Key Phases Overview": {
+          "content_preview": "1. **Foundation Analysis** (2-4h) - Sequential foundation setting\n2. **Core Project Analysis** (3-5h) - High parallelization opportunities\n3. **Market...",
+          "tokens": 235,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#key-phases-overview-1"
+        },
+        "Parallelization Benefits": {
+          "content_preview": "- **Timeline Reduction**: 65-95 hours → 36-52 hours with parallel execution\n- **Resource Efficiency**: 5-7 agents working simultaneously during peak p...",
+          "tokens": 92,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#parallelization-benefits-1"
+        }
+      }
+    },
+    "🆕 Context Persistence with Project State Manager Agent": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#context-persistence-with-project-state-manager-agent",
+      "tokens": 22,
+      "content_preview": "The Project State Manager Agent ensures seamless continuity across Claude Code sessions:",
+      "subsections": {
+        "Automatic State Preservation": {
+          "content_preview": "- **Continuous Saving**: Project state saved after every significant action\n- **Decision Context**: All user decisions preserved with full rationale\n-...",
+          "tokens": 70,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#automatic-state-preservation-1"
+        },
+        "Session Continuity Features": {
+          "content_preview": "- **Instant Context Restoration**: Resume exactly where you left off\n- **\"Where We Left Off\" Summaries**: Clear recap when reopening project\n- **Check...",
+          "tokens": 68,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#session-continuity-features-1"
+        },
+        "What Gets Preserved": {
+          "content_preview": "- All user decisions and approvals with context\n- Sprint progress and task assignments\n- Agent coordination state and handoffs\n- Strategic milestones ...",
+          "tokens": 63,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#what-gets-preserved-1"
+        },
+        "Quick Commands": {
+          "content_preview": "- `\"Where are we?\"` - Get current project state summary\n- `\"Continue working\"` - Resume from last saved state\n- `\"What did we do last session?\"` - Rev...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#quick-commands-1"
+        }
+      }
+    },
+    "Important: Single-Folder Structure": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#important-single-folder-structure",
+      "tokens": 61,
+      "content_preview": "All AgileAiAgents components are now contained within the `agile-ai-agents/` folder. This keeps your project root clean and makes upgrades easier. The..."
+    },
+    "Project Documents Structure": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#project-documents-structure",
+      "tokens": 7107,
+      "content_preview": "All agent deliverables are automatically saved to the `agile-ai-agents/project-documents/` folder for easy reference:\n\n```\nagile-ai-agents/project-doc..."
+    },
+    "Existing Project Integration Workflow": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#existing-project-integration-workflow",
+      "tokens": 24,
+      "content_preview": "**When adding this AI agent coordination system to an existing project, use this workflow instead:**",
+      "subsections": {
+        "Phase 0: Existing Project Analysis & Integration": {
+          "content_preview": "```\n🔄 ORCHESTRATOR: Detecting existing project codebase\n→ Creates: project-documents/orchestration/project-log.md\n→ Logs: \"AI Agent Coordination S...",
+          "tokens": 1635,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#phase-0-existing-project-analysis-integration-1"
+        }
+      }
+    },
+    "Automated Project Workflow": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#automated-project-workflow",
+      "tokens": 15,
+      "content_preview": "**For NEW projects starting from scratch, use this workflow:**",
+      "subsections": {
+        "Phase 1: Project Discovery & Validation": {
+          "content_preview": "```\n🔄 ORCHESTRATOR: Initializing project coordination system\n→ Creates: project-documents/orchestration/project-log.md\n→ Creates: project-document...",
+          "tokens": 17250,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#phase-1-project-discovery-validation-1"
+        },
+        "Phase 2: Requirements Development (If User Approves Strategic Analysis)": {
+          "content_preview": "```\n🔄 ORCHESTRATOR: User approved - proceeding to marketing strategy and requirements phase\n→ Updates: project-documents/orchestration/user-decisi...",
+          "tokens": 937,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#phase-2-requirements-development-if-user-approves-strategic-analysis-1"
+        },
+        "Phase 3: Implementation Strategy (Feature-Specific Analysis)": {
+          "content_preview": "```\n🔄 ORCHESTRATOR: PRD approved - activating implementation strategy agents (Parallel Processing)\n→ Updates: project-documents/orchestration/user...",
+          "tokens": 695,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#phase-3-implementation-strategy-feature-specific-analysis-1"
+        },
+        "Phase 4: Project Planning & Environment Setup": {
+          "content_preview": "```\n🔄 ORCHESTRATOR: Implementation strategies approved - creating comprehensive project plan\n→ Updates: project-documents/orchestration/user-decis...",
+          "tokens": 788,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#phase-4-project-planning-environment-setup-1"
+        },
+        "Phase 5: Development Sprint Execution (Iterative)": {
+          "content_preview": "```\n🔄 ORCHESTRATOR: Environment ready - beginning first development sprint\n→ Updates: project-documents/orchestration/agent-coordination.md\n→ Logs...",
+          "tokens": 686,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#phase-5-development-sprint-execution-iterative-1"
+        },
+        "Phase 6: Deployment & Operations (Parallel Processing)": {
+          "content_preview": "```\n🔄 ORCHESTRATOR: Development complete - activating deployment agents (Parallel)\n→ Updates: project-documents/orchestration/agent-coordination.m...",
+          "tokens": 315,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#phase-6-deployment-operations-parallel-processing-1"
+        },
+        "Phase 7: Sprint Management & Agile Iteration": {
+          "content_preview": "```\n📋 PROJECT MANAGER AGENT: Sprint ceremony facilitation\n\n🎯 SPRINT REVIEW (with Stakeholder)\n→ Claude presents: Sprint deliverables and accomplishm...",
+          "tokens": 5800,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#phase-7-sprint-management-agile-iteration-1"
+        },
+        "Phase 4: Design & Architecture (If approved)": {
+          "content_preview": "```\n🔄 ORCHESTRATOR: User approved requirements and financial framework - proceeding to design phase\n→ Updates: project-documents/orchestration/use...",
+          "tokens": 1546,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#phase-4-design-architecture-if-approved-1"
+        },
+        "Phase 5: Implementation": {
+          "content_preview": "```\n🗄️ DBA AGENT: Implements database infrastructure\n→ Logs: \"DBA Agent setting up database environment...\"\n→ Logs: \"Creating database tables, indexe...",
+          "tokens": 2171,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#phase-5-implementation-1"
+        },
+        "🎯 NEXT SPRINT PLANNING WITH HISTORICAL LEARNING (SELF-LEARNING INTEGRATION)": {
+          "content_preview": "```\n📊 PROJECT MANAGER AGENT: Pre-Sprint Learning Review (MANDATORY)\n→ Logs: \"Project Manager beginning next sprint planning with historical learning ...",
+          "tokens": 565,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#next-sprint-planning-with-historical-learning-self-learning-integration-1"
+        },
+        "🎯 SPRINT REVIEW & RETROSPECTIVE (AGILE MILESTONE)": {
+          "content_preview": "```\n📊 PROJECT MANAGER AGENT: Facilitates Sprint Review with Stakeholder\n→ Logs: \"Project Manager preparing Sprint Review presentation...\"\n→ Logs: \"Co...",
+          "tokens": 987,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#sprint-review-retrospective-agile-milestone-1"
+        },
+        "Phase 6: Deployment & Monitoring": {
+          "content_preview": "```\n🚀 DEVOPS AGENT: Deploys to production environment\n→ Logs: \"DevOps Agent preparing production deployment...\"\n→ Updates: project-documents/operations/deployment...",
+          "tokens": 301,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#phase-6-deployment-monitoring-1"
+        },
+        "Phase 7: Marketing Launch & Campaign Execution": {
+          "content_preview": "```\n📢 MARKETING AGENT: Executes launch campaigns and promotion\n→ Logs: \"Marketing Agent reviewing all project documents for launch preparation...\"\n→ ...",
+          "tokens": 975,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#phase-7-marketing-launch-campaign-execution-1"
+        }
+      }
+    },
+    "Quality Gates & User Decision Points": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#quality-gates-user-decision-points",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Project Viability Gate": {
+          "content_preview": "**Trigger:** After Research Agent completes market analysis\n**User Decision:** Continue with project or modify/cancel\n**Required:** Go/No-Go decision ...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#project-viability-gate-1"
+        },
+        "Requirements Approval Gate": {
+          "content_preview": "**Trigger:** After PRD Agent completes requirements documentation\n**User Decision:** Approve scope and requirements or request changes\n**Required:** S...",
+          "tokens": 44,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#requirements-approval-gate-1"
+        },
+        "Design Approval Gate": {
+          "content_preview": "**Trigger:** After UI/UX and technical design completion\n**User Decision:** Approve designs and technical approach\n**Required:** Design and architectu...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#design-approval-gate-1"
+        },
+        "Pre-Deployment Gate": {
+          "content_preview": "**Trigger:** After implementation and testing completion\n**User Decision:** Approve for production deployment\n**Required:** Final go-live approval",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#pre-deployment-gate-1"
+        }
+      }
+    },
+    "Qualifying Questions Framework": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#qualifying-questions-framework",
+      "tokens": 25,
+      "content_preview": "When a user provides a project idea, Claude will automatically ask these categories of questions:",
+      "subsections": {
+        "Project Scope & Vision": {
+          "content_preview": "- What is the main problem this project solves?\n- Who are the target users?\n- What are the core features that must be included?\n- What features are ni...",
+          "tokens": 57,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#project-scope-vision-1"
+        },
+        "Technical Constraints": {
+          "content_preview": "- Do you have any technology preferences (languages, frameworks)?\n- Are there any technologies you want to avoid?\n- What's your experience level with ...",
+          "tokens": 70,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#technical-constraints-1"
+        },
+        "Repository & Code Management": {
+          "content_preview": "- Will this project be added to a Git repository (GitHub, GitLab, Bitbucket, Azure DevOps)?\n- Do you have an existing repository or organization where...",
+          "tokens": 99,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#repository-code-management-1"
+        },
+        "Cloud Infrastructure & Deployment": {
+          "content_preview": "- Do you have a preferred cloud provider (AWS, Google Cloud, Azure, Linode, DigitalOcean, etc.)?\n- Do you have existing cloud accounts or credits with...",
+          "tokens": 95,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#cloud-infrastructure-deployment-1"
+        },
+        "Project Constraints": {
+          "content_preview": "- What's your target timeline for launch?\n- Do you have a budget for tools, hosting, or services?\n- Will this be a solo project or do you have a team?...",
+          "tokens": 55,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#project-constraints-1"
+        },
+        "Business Context": {
+          "content_preview": "- Is this a personal project, startup idea, or enterprise application?\n- Do you need user authentication and user management?\n- Will you need payment ...",
+          "tokens": 73,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#business-context-1"
+        }
+      }
+    },
+    "Automatic Agent Coordination Rules": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#automatic-agent-coordination-rules",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Agent Activation Triggers": {
+          "content_preview": "- **Research Agent**: Automatically activates after qualifying questions\n- **Analysis Agent**: Activates after Research Agent completes\n- **Marketing ...",
+          "tokens": 504,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#agent-activation-triggers-1"
+        },
+        "Agent Handoff Protocols": {
+          "content_preview": "Each agent automatically:\n1. **Receives context** from previous agents and references existing project documents\n2. **Reviews prior deliverables** in ...",
+          "tokens": 171,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#agent-handoff-protocols-1"
+        },
+        "Document Reference Protocol": {
+          "content_preview": "Before starting work, each agent should:\n1. **Check project-documents/** for relevant prior work\n2. **Reference specific documents** that inform their...",
+          "tokens": 85,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#document-reference-protocol-1"
+        },
+        "Critical Reporting Protocols": {
+          "content_preview": "- **Project Manager Agent** serves as central coordination hub for all agent activities\n- **Project Manager Agent** manages dependencies between agent...",
+          "tokens": 83,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#critical-reporting-protocols-4"
+        },
+        "Error Handling & Recovery": {
+          "content_preview": "- If any agent encounters issues, **report immediately to Project Manager Agent**\n- **Project Manager Agent** analyzes issues and creates resolution t...",
+          "tokens": 97,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#error-handling-recovery-1"
+        }
+      }
+    },
+    "User Interaction Points": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#user-interaction-points",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Agile Stakeholder Interaction Points (SPRINT-BASED)": {
+          "content_preview": "- **Project Manager Agent** presents completed work and demonstrations\n- **Stakeholder** provides feedback on quality, functionality, and priorities\n-...",
+          "tokens": 82,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#agile-stakeholder-interaction-points-sprint-based-3"
+        },
+        "Optional User Input": {
+          "content_preview": "- **Mid-course corrections** - Modify direction based on findings\n- **Priority adjustments** - Change feature priorities during development\n- **Techni...",
+          "tokens": 64,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#optional-user-input-1"
+        }
+      }
+    },
+    "Expected User Experience": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#expected-user-experience",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Initial Interaction": {
+          "content_preview": "```\nUser: \"I want to build a task management app for small teams\"\n\nClaude: \"I'll help you build this project using our AI agent coordination system. \n...",
+          "tokens": 248,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#initial-interaction-1"
+        },
+        "Throughout Process": {
+          "content_preview": "- **Progress updates** at each phase transition\n- **Clear approval requests** with all necessary context\n- **Milestone summaries** showing what was co...",
+          "tokens": 46,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#throughout-process-1"
+        }
+      }
+    },
+    "Configuration for Different Project Types": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#configuration-for-different-project-types",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Web Applications": {
+          "content_preview": "**Agents Used:** Research → Analysis → Marketing → Finance → VC Report → Business Documents → PRD → API → LLM → ML → MCP → Project Manager → UI/UX → S...",
+          "tokens": 61,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#web-applications-1"
+        },
+        "Mobile Applications": {
+          "content_preview": "**Agents Used:** Research → Analysis → Marketing → Finance → VC Report → Business Documents → PRD → API → LLM → ML → MCP → Project Manager → UI/UX → S...",
+          "tokens": 58,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#mobile-applications-1"
+        },
+        "API/Backend Services": {
+          "content_preview": "**Agents Used:** Research → Analysis → Marketing → Finance → VC Report → Business Documents → PRD → API → LLM → ML → MCP → Project Manager → DBA → Dat...",
+          "tokens": 57,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#apibackend-services-1"
+        },
+        "Data Analysis Projects": {
+          "content_preview": "**Agents Used:** Research → Analysis → Marketing → Finance → VC Report → Business Documents → PRD → API → LLM → ML → MCP → Project Manager → DBA → Dat...",
+          "tokens": 55,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#data-analysis-projects-1"
+        },
+        "Marketing Websites": {
+          "content_preview": "**Agents Used:** Research → Marketing → Finance → VC Report → Business Documents → PRD → API → LLM → MCP → Project Manager → UI/UX → SEO → Coder → Tes...",
+          "tokens": 49,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#marketing-websites-1"
+        },
+        "SaaS Products": {
+          "content_preview": "**Agents Used:** Research → Analysis → Marketing → Finance → VC Report → Business Documents → PRD → API → LLM → ML → MCP → Project Manager → UI/UX → S...",
+          "tokens": 61,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#saas-products-1"
+        }
+      }
+    },
+    "MCP Server Integration": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#mcp-server-integration",
+      "tokens": 19,
+      "content_preview": "When agents reference MCP servers, they can access additional capabilities:",
+      "subsections": {
+        "Available MCP Integrations": {
+          "content_preview": "- **GitHub MCP Server**: Repository management, code review, issue tracking\n- **AWS MCP Server**: Cloud infrastructure management and deployment\n- **F...",
+          "tokens": 92,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#available-mcp-integrations-1"
+        },
+        "Agent MCP Usage": {
+          "content_preview": "When an agent needs to use an MCP server:\n1. **Reference the specific MCP capability** in the agent's tool list\n2. **Use MCP-specific commands** when ...",
+          "tokens": 74,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#agent-mcp-usage-1"
+        }
+      }
+    },
+    "Activation Instructions for Claude": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#activation-instructions-for-claude",
+      "tokens": 294,
+      "content_preview": "When Claude Code detects this file (`auto-project-orchestrator.md`) in a project directory and receives a project idea from the user:\n\n1. **Create pro...",
+      "subsections": {
+        "Verbose Logging Requirements": {
+          "content_preview": "**Every agent must log:**\n- ✅ **What they're doing** - \"Research Agent analyzing competitive landscape...\"\n- ✅ **What they're reading** - \"Reviewing p...",
+          "tokens": 202,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#verbose-logging-requirements-1"
+        },
+        "**MANDATORY Project Log Updates**": {
+          "content_preview": "- **Phase Transitions**: When moving between project phases\n- **Agent Activations**: When any agent begins work\n- **Document Creation**: Every file cr...",
+          "tokens": 156,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#mandatory-project-log-updates-3"
+        },
+        "**MANDATORY User Decision Logging Requirements**": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#mandatory-user-decision-logging-requirements-2"
+        }
+      }
+    },
+    "[DECISION TYPE] - [TIMESTAMP]": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#decision-type-timestamp",
+      "tokens": 2,
+      "content_preview": "```markdown"
+    },
+    "PROJECT IDENTITY CONFIRMATION - [TIMESTAMP]": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#project-identity-confirmation-timestamp",
+      "tokens": 71,
+      "content_preview": "- **IMMEDIATE**: Log decision as soon as user provides input\n- **DETAILED**: Include complete context and reasoning\n- **ACTIONABLE**: Specify exactly ...",
+      "subsections": {
+        "**Agent-Specific Project Log Requirements**": {
+          "content_preview": "```\n[TIMESTAMP] - ORCHESTRATOR - PHASE_START - Starting Phase: [PHASE_NAME]\n[TIMESTAMP] - ORCHESTRATOR - HANDOFF - [FROM_AGENT] → [TO_AGENT]\n[TIMESTAM...",
+          "tokens": 92,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#agent-specific-project-log-requirements-7"
+        },
+        "Document Creation Instructions": {
+          "content_preview": "When coordinating agents, ensure each agent:\n1. **Creates the appropriate subfolder** if it doesn't exist\n2. **Saves all deliverables** as markdown fi...",
+          "tokens": 42,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#document-creation-instructions-1"
+        },
+        "**CRITICAL: Folder Structure Separation**": {
+          "content_preview": "**FIXED SYSTEM FOLDERS** (NEVER CHANGE):\n- `project-documents/` - AI coordination system files (agent reports, decisions, planning)\n- `project-dashboa...",
+          "tokens": 275,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#critical-folder-structure-separation-1"
+        },
+        "Example Agent Instructions": {
+          "content_preview": "```\n\"Acting as the Research Agent, first check if project-documents/research/ exists \nand create it if needed. Then conduct market analysis and sav...",
+          "tokens": 141,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#example-agent-instructions-1"
+        }
+      }
+    },
+    "Session Recovery Workflow (NEW)": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#session-recovery-workflow-new",
+      "tokens": 22,
+      "content_preview": "**When returning to a project after a break, the system automatically restores context:**",
+      "subsections": {
+        "Automatic Session Recovery": {
+          "content_preview": "```\n🔄 ORCHESTRATOR: Detecting previous project session\n→ Logs: \"Previous session detected - initiating context restoration\"\n\n💾 PROJECT STATE MANAGER...",
+          "tokens": 307,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#automatic-session-recovery-1"
+        },
+        "Manual Recovery Commands": {
+          "content_preview": "If automatic recovery doesn't trigger, use these commands:\n- `\"Continue working on [project name]\"` - Resumes specific project\n- `\"Where did we leave ...",
+          "tokens": 76,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#manual-recovery-commands-1"
+        },
+        "Recovery Best Practices": {
+          "content_preview": "1. **Always allow recovery to complete** before making changes\n2. **Review the summary** to ensure context is accurate\n3. **Confirm or update** any de...",
+          "tokens": 99,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/auto-project-orchestrator.md#recovery-best-practices-1"
+        }
+      }
+    }
+  }
+}

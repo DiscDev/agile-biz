@@ -1,0 +1,203 @@
+{
+  "categories": {
+    "critical_security": {
+      "name": "Critical Security",
+      "icon": "🔴",
+      "priority_weight": 10,
+      "description": "Security vulnerabilities requiring immediate attention",
+      "examples": [
+        "SQL injection vulnerabilities",
+        "Cross-site scripting (XSS)",
+        "Authentication bypasses",
+        "Exposed sensitive data",
+        "Missing encryption"
+      ],
+      "default_impact": "high",
+      "auto_select": false,
+      "risk_acknowledgment_required": true
+    },
+    "performance": {
+      "name": "Performance",
+      "icon": "⚡",
+      "priority_weight": 7,
+      "description": "Optimizations to improve speed and efficiency",
+      "examples": [
+        "Database query optimization",
+        "Caching implementation",
+        "API response time improvements",
+        "Memory leak fixes",
+        "Load time reduction"
+      ],
+      "default_impact": "high",
+      "auto_select": false,
+      "risk_acknowledgment_required": false
+    },
+    "technical_debt": {
+      "name": "Technical Debt",
+      "icon": "🏗️",
+      "priority_weight": 5,
+      "description": "Code quality and architecture improvements",
+      "examples": [
+        "Code refactoring",
+        "Architecture improvements",
+        "Dependency updates",
+        "Code duplication removal",
+        "Design pattern implementation"
+      ],
+      "default_impact": "medium",
+      "auto_select": false,
+      "risk_acknowledgment_required": false
+    },
+    "features": {
+      "name": "Features",
+      "icon": "✨",
+      "priority_weight": 4,
+      "description": "New functionality and enhancements",
+      "examples": [
+        "New user features",
+        "UI enhancements",
+        "API endpoints",
+        "Integration additions",
+        "Workflow improvements"
+      ],
+      "default_impact": "medium",
+      "auto_select": false,
+      "risk_acknowledgment_required": false
+    },
+    "modernization": {
+      "name": "Modernization",
+      "icon": "🚀",
+      "priority_weight": 3,
+      "description": "Technology stack updates and migrations",
+      "examples": [
+        "Framework upgrades",
+        "Library migrations",
+        "Build tool updates",
+        "Infrastructure modernization",
+        "Development tool updates"
+      ],
+      "default_impact": "low",
+      "auto_select": false,
+      "risk_acknowledgment_required": false
+    },
+    "testing": {
+      "name": "Testing",
+      "icon": "🧪",
+      "priority_weight": 6,
+      "description": "Test coverage and quality improvements",
+      "examples": [
+        "Unit test additions",
+        "Integration test coverage",
+        "E2E test implementation",
+        "Test framework updates",
+        "Test automation"
+      ],
+      "default_impact": "medium",
+      "auto_select": false,
+      "risk_acknowledgment_required": false
+    },
+    "documentation": {
+      "name": "Documentation",
+      "icon": "📚",
+      "priority_weight": 2,
+      "description": "Documentation updates and improvements",
+      "examples": [
+        "API documentation",
+        "Code comments",
+        "README updates",
+        "Architecture diagrams",
+        "User guides"
+      ],
+      "default_impact": "low",
+      "auto_select": false,
+      "risk_acknowledgment_required": false
+    },
+    "accessibility": {
+      "name": "Accessibility",
+      "icon": "♿",
+      "priority_weight": 8,
+      "description": "Accessibility and compliance improvements",
+      "examples": [
+        "WCAG compliance",
+        "Screen reader support",
+        "Keyboard navigation",
+        "Color contrast fixes",
+        "ARIA labels"
+      ],
+      "default_impact": "high",
+      "auto_select": false,
+      "risk_acknowledgment_required": false
+    },
+    "infrastructure": {
+      "name": "Infrastructure",
+      "icon": "🔧",
+      "priority_weight": 6,
+      "description": "Infrastructure and deployment improvements",
+      "examples": [
+        "CI/CD pipeline updates",
+        "Deployment automation",
+        "Monitoring additions",
+        "Backup improvements",
+        "Scaling optimizations"
+      ],
+      "default_impact": "medium",
+      "auto_select": false,
+      "risk_acknowledgment_required": false
+    }
+  },
+  "impact_levels": {
+    "high": {
+      "description": "Significant business or user impact",
+      "color": "red",
+      "score": 3
+    },
+    "medium": {
+      "description": "Moderate impact on operations or experience",
+      "color": "yellow",
+      "score": 2
+    },
+    "low": {
+      "description": "Minor improvements or nice-to-haves",
+      "color": "green",
+      "score": 1
+    }
+  },
+  "effort_levels": {
+    "high": {
+      "description": "Requires significant time and resources (>40 hours)",
+      "color": "red",
+      "score": 3,
+      "hours_range": [40, null]
+    },
+    "medium": {
+      "description": "Moderate effort required (8-40 hours)",
+      "color": "yellow",
+      "score": 2,
+      "hours_range": [8, 40]
+    },
+    "low": {
+      "description": "Quick wins (<8 hours)",
+      "color": "green",
+      "score": 1,
+      "hours_range": [0, 8]
+    }
+  },
+  "grouping_rules": {
+    "min_group_size": 2,
+    "max_group_size": 8,
+    "prefer_groups": true,
+    "group_by_priority": [
+      "dependencies",
+      "components",
+      "theme",
+      "category"
+    ]
+  },
+  "selection_defaults": {
+    "allow_partial_groups": true,
+    "warn_on_dependency_break": true,
+    "suggest_related": true,
+    "max_concurrent_improvements": 10,
+    "default_sprint_capacity_hours": 80
+  }
+}

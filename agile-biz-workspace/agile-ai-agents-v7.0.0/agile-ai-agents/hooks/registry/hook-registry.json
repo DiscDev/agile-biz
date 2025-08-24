@@ -1,0 +1,789 @@
+{
+  "version": "1.0.0",
+  "hooks": {
+    "md-json-sync": {
+      "name": "MD to JSON Auto-Sync",
+      "description": "Automatically converts MD files to JSON when created or modified",
+      "priority": "critical",
+      "category": "file-sync",
+      "triggers": [
+        "file-create",
+        "file-change"
+      ],
+      "handler": "handlers/md-json/md-to-json-sync.js",
+      "conditions": {
+        "if_file_matches": "\\.(md|markdown)$"
+      },
+      "config": {
+        "debounce": 1000,
+        "batch": true
+      }
+    },
+    "json-cleanup": {
+      "name": "Orphaned JSON Cleanup",
+      "description": "Removes JSON files when corresponding MD files are deleted",
+      "priority": "important",
+      "category": "file-sync",
+      "triggers": [
+        "file-delete"
+      ],
+      "handler": "handlers/md-json/json-cleanup.js",
+      "conditions": {
+        "if_file_matches": "\\.(md|markdown)$"
+      }
+    },
+    "structure-validation": {
+      "name": "Project Structure Validation",
+      "description": "Validates new files against approved project structure",
+      "priority": "critical",
+      "category": "validation",
+      "triggers": [
+        "file-create"
+      ],
+      "handler": "handlers/validation/structure-validation.js",
+      "conditions": {
+        "if_file_matches": "\\.(js|jsx|ts|tsx|py|php|rb|go)$"
+      },
+      "config": {
+        "enforcement_level": "strict"
+      }
+    },
+    "sprint-tracking": {
+      "name": "Sprint Document Tracking",
+      "description": "Tracks sprint document changes and updates metrics",
+      "priority": "important",
+      "category": "sprint-management",
+      "triggers": [
+        "file-create",
+        "file-change"
+      ],
+      "handler": "handlers/sprint/sprint-document-tracker.js",
+      "conditions": {
+        "if_file_matches": "/sprints/.*\\.(md|json)$"
+      }
+    },
+    "pre-sprint-verification": {
+      "name": "Pre-Sprint Context Verification",
+      "description": "Verifies sprint items align with project context before sprint starts",
+      "priority": "critical",
+      "category": "sprint-management",
+      "triggers": [
+        "sprint-planning-complete",
+        "sprint-about-to-start"
+      ],
+      "handler": "handlers/sprint/pre-sprint-verification.js",
+      "config": {
+        "blockOnViolations": true,
+        "requireReview": ["blocked", "review"],
+        "generateReport": true
+      }
+    },
+    "backlog-item-validator": {
+      "name": "Backlog Item Context Validator",
+      "description": "Validates new backlog items against project context to prevent drift",
+      "priority": "critical",
+      "category": "backlog-management",
+      "triggers": [
+        "backlog-item-created",
+        "backlog-item-updated"
+      ],
+      "handler": "handlers/backlog/backlog-item-validator.js",
+      "config": {
+        "autoBlock": true,
+        "warningThreshold": 60,
+        "reviewThreshold": 80,
+        "blockThreshold": 95,
+        "notifyOnViolation": true,
+        "batchValidation": true
+      }
+    },
+    "command-validation": {
+      "name": "Command Validation",
+      "description": "Validates AgileAiAgents commands before execution",
+      "priority": "critical",
+      "category": "command",
+      "triggers": [
+        "pre-submit"
+      ],
+      "handler": "handlers/command/command-validator.js",
+      "conditions": {
+        "if_prompt_matches": "^/"
+      }
+    },
+    "state-backup": {
+      "name": "Automatic State Backup",
+      "description": "Creates periodic backups of project state",
+      "priority": "important",
+      "category": "state-management",
+      "triggers": [
+        "file-change",
+        "time-interval"
+      ],
+      "handler": "handlers/state/state-backup.js",
+      "conditions": {
+        "if_file_matches": "/project-state/.*\\.json$"
+      },
+      "config": {
+        "interval_minutes": 30,
+        "max_backups": 20
+      }
+    },
+    "document-registry": {
+      "name": "Document Registry Update",
+      "description": "Updates document registry when files are added/removed",
+      "priority": "helpful",
+      "category": "documentation",
+      "triggers": [
+        "file-create",
+        "file-delete",
+        "file-change",
+        "file-rename"
+      ],
+      "handler": "handlers/registry/document-registry-tracker.js",
+      "conditions": {
+        "if_file_matches": "/project-documents/.*\\.(md|json)$"
+      },
+      "config": {
+        "track_conversions": true,
+        "track_dependencies": true,
+        "auto_summary": true
+      }
+    },
+    "security-scan": {
+      "name": "Input Security Scan",
+      "description": "Scans user input for potential security issues",
+      "priority": "critical",
+      "category": "security",
+      "triggers": [
+        "pre-submit"
+      ],
+      "handler": "handlers/security/input-security-scan.js",
+      "config": {
+        "scan_for": [
+          "secrets",
+          "tokens",
+          "passwords",
+          "keys"
+        ]
+      }
+    },
+    "agent-context": {
+      "name": "Agent Context Updater",
+      "description": "Updates active agent context based on conversation",
+      "priority": "helpful",
+      "category": "context",
+      "triggers": [
+        "pre-submit",
+        "post-response"
+      ],
+      "handler": "handlers/context/agent-context-updater.js"
+    },
+    "cost-monitor": {
+      "name": "Cost Monitoring Alert",
+      "description": "Alerts when token usage exceeds thresholds",
+      "priority": "important",
+      "category": "monitoring",
+      "triggers": [
+        "post-response"
+      ],
+      "handler": "handlers/monitoring/cost-monitor.js",
+      "config": {
+        "warning_threshold": 10000,
+        "critical_threshold": 50000
+      }
+    },
+    "drift-monitor": {
+      "name": "Context Drift Monitor",
+      "description": "Monitors project context drift over time",
+      "priority": "critical",
+      "category": "monitoring",
+      "triggers": [
+        "session-start",
+        "workflow-phase-complete",
+        "sprint-complete"
+      ],
+      "handler": "handlers/monitoring/drift-monitor.js",
+      "config": {
+        "autoStartMonitoring": true,
+        "checkIntervalMinutes": 60,
+        "alertOnMajorDrift": true,
+        "includeInDashboard": true
+      }
+    },
+    "vulnerability-scanner": {
+      "name": "Vulnerability Scanner",
+      "description": "Scans dependencies for known security vulnerabilities",
+      "priority": "critical",
+      "category": "agents/critical",
+      "triggers": [
+        "file-change",
+        "dependency-install"
+      ],
+      "handler": "handlers/agents/critical/vulnerability-scanner.js",
+      "conditions": {
+        "if_file_matches": "(package\\.json|package-lock\\.json|yarn\\.lock|requirements\\.txt|Gemfile|composer\\.json|pom\\.xml|build\\.gradle)$"
+      },
+      "config": {
+        "severity_threshold": "high",
+        "block_on_critical": true
+      }
+    },
+    "secret-rotation-reminder": {
+      "name": "Secret Rotation Reminder",
+      "description": "Reminds about secret rotation schedules",
+      "priority": "critical",
+      "category": "agents/critical",
+      "triggers": [
+        "time-interval",
+        "secret-access"
+      ],
+      "handler": "handlers/agents/critical/secret-rotation-reminder.js",
+      "config": {
+        "check_interval": 86400000,
+        "rotation_days": 90
+      }
+    },
+    "coverage-gatekeeper": {
+      "name": "Coverage Gatekeeper",
+      "description": "Enforces minimum code coverage thresholds",
+      "priority": "critical",
+      "category": "agents/critical",
+      "triggers": [
+        "pre-commit",
+        "test-run"
+      ],
+      "handler": "handlers/agents/critical/coverage-gatekeeper.js",
+      "config": {
+        "minimum_coverage": 80,
+        "block_on_decrease": true
+      }
+    },
+    "defensive-patterns": {
+      "name": "Defensive Patterns Checker",
+      "description": "Enforces defensive programming patterns",
+      "priority": "critical",
+      "category": "agents/critical",
+      "triggers": [
+        "file-save",
+        "pre-commit"
+      ],
+      "handler": "handlers/agents/critical/defensive-patterns.js",
+      "conditions": {
+        "if_file_matches": "\\.(js|jsx|ts|tsx|py|java|go)$"
+      },
+      "config": {
+        "enforcement_level": "strict"
+      }
+    },
+    "deployment-window-enforcer": {
+      "name": "Deployment Window Enforcer",
+      "description": "Ensures deployments happen within approved windows",
+      "priority": "critical",
+      "category": "agents/critical",
+      "triggers": [
+        "deployment-request"
+      ],
+      "handler": "handlers/agents/critical/deployment-window-enforcer.js",
+      "config": {
+        "allowed_days": [
+          "tuesday",
+          "wednesday",
+          "thursday"
+        ],
+        "allowed_hours": "09:00-17:00"
+      }
+    },
+    "requirement-completeness": {
+      "name": "Requirement Completeness Checker",
+      "description": "Ensures all requirements are implemented before marking stories done",
+      "priority": "critical",
+      "category": "agents/critical",
+      "triggers": [
+        "story-complete",
+        "mark-done"
+      ],
+      "handler": "handlers/agents/critical/requirement-completeness.js",
+      "config": {
+        "minAcceptanceCriteria": 3,
+        "minTestCoverage": 80,
+        "requireDocumentation": true
+      }
+    },
+    "dependency-checker": {
+      "name": "Dependency Checker",
+      "description": "Validates dependency versions and conflicts",
+      "priority": "valuable",
+      "category": "agents/valuable",
+      "triggers": [
+        "dependency-change"
+      ],
+      "handler": "handlers/agents/valuable/dependency-checker.js"
+    },
+    "import-validator": {
+      "name": "Import Validator",
+      "description": "Validates import statements and module resolution",
+      "priority": "valuable",
+      "category": "agents/valuable",
+      "triggers": [
+        "file-save",
+        "import-change"
+      ],
+      "handler": "handlers/agents/valuable/import-validator.js",
+      "conditions": {
+        "if_file_matches": "\\.(js|jsx|ts|tsx)$"
+      }
+    },
+    "test-categorizer": {
+      "name": "Test Categorizer",
+      "description": "Categorizes and validates test structure",
+      "priority": "valuable",
+      "category": "agents/valuable",
+      "triggers": [
+        "test-create",
+        "test-change"
+      ],
+      "handler": "handlers/agents/valuable/test-categorizer.js"
+    },
+    "performance-profiler": {
+      "name": "Performance Profiler",
+      "description": "Profiles code performance characteristics",
+      "priority": "valuable",
+      "category": "agents/valuable",
+      "triggers": [
+        "function-change",
+        "performance-test"
+      ],
+      "handler": "handlers/agents/valuable/performance-profiler.js"
+    },
+    "naming-conventions": {
+      "name": "Naming Conventions Checker",
+      "description": "Enforces naming conventions",
+      "priority": "enhancement",
+      "category": "agents/enhancement",
+      "triggers": [
+        "identifier-create"
+      ],
+      "handler": "handlers/agents/enhancement/naming-conventions.js"
+    },
+    "code-complexity": {
+      "name": "Code Complexity Monitor",
+      "description": "Monitors and reports code complexity",
+      "priority": "enhancement",
+      "category": "agents/enhancement",
+      "triggers": [
+        "function-change",
+        "class-change"
+      ],
+      "handler": "handlers/agents/enhancement/code-complexity.js"
+    },
+    "design-token-validator": {
+      "name": "Design Token Validator",
+      "description": "Validates design token usage",
+      "priority": "enhancement",
+      "category": "agents/enhancement",
+      "triggers": [
+        "style-change",
+        "theme-update"
+      ],
+      "handler": "handlers/agents/enhancement/design-token-validator.js"
+    },
+    "dead-code-detector": {
+      "name": "Dead Code Detector",
+      "description": "Detects unused code, imports, and exports",
+      "priority": "enhancement",
+      "category": "agents/enhancement",
+      "triggers": [
+        "file.modified",
+        "analysis.requested",
+        "pre-commit"
+      ],
+      "handler": "handlers/agents/enhancement/dead-code-detector.js"
+    },
+    "code-formatter": {
+      "name": "Code Formatter",
+      "description": "Automatically formats code before commits",
+      "priority": "enhancement",
+      "category": "agents/enhancement",
+      "triggers": [
+        "file.modified",
+        "pre-commit"
+      ],
+      "handler": "handlers/agents/enhancement/code-formatter.js"
+    },
+    "commit-message-validator": {
+      "name": "Commit Message Validator",
+      "description": "Validates commit messages against conventional standards",
+      "priority": "enhancement",
+      "category": "agents/enhancement",
+      "triggers": [
+        "pre-commit",
+        "commit-msg"
+      ],
+      "handler": "handlers/agents/enhancement/commit-message-validator.js"
+    },
+    "pr-template-checker": {
+      "name": "PR Template Checker",
+      "description": "Ensures PR descriptions follow the template",
+      "priority": "enhancement",
+      "category": "agents/enhancement",
+      "triggers": [
+        "pr.created",
+        "pr.updated",
+        "pre-pr"
+      ],
+      "handler": "handlers/agents/enhancement/pr-template-checker.js"
+    },
+    "complexity-analyzer": {
+      "name": "Complexity Analyzer",
+      "description": "Analyzes cyclomatic complexity and suggests refactoring",
+      "priority": "enhancement",
+      "category": "agents/enhancement",
+      "triggers": [
+        "file.modified",
+        "analysis.requested",
+        "pre-commit"
+      ],
+      "handler": "handlers/agents/enhancement/complexity-analyzer.js"
+    },
+    "interaction-pattern-library": {
+      "name": "Interaction Pattern Library",
+      "description": "Validates UI interaction patterns",
+      "priority": "enhancement",
+      "category": "agents/enhancement",
+      "triggers": [
+        "ui-pattern-add",
+        "component-create"
+      ],
+      "handler": "handlers/agents/enhancement/interaction-pattern-library.js"
+    },
+    "citation-formatter": {
+      "name": "Citation Formatter",
+      "description": "Formats citations and references",
+      "priority": "enhancement",
+      "category": "agents/enhancement",
+      "triggers": [
+        "doc-create",
+        "citation-add"
+      ],
+      "handler": "handlers/agents/enhancement/citation-formatter.js"
+    },
+    "fact-vs-opinion-tagger": {
+      "name": "Fact vs Opinion Tagger",
+      "description": "Tags statements as facts or opinions",
+      "priority": "enhancement",
+      "category": "agents/enhancement",
+      "triggers": [
+        "content-create",
+        "doc-review"
+      ],
+      "handler": "handlers/agents/enhancement/fact-vs-opinion-tagger.js"
+    },
+    "reading-level-analyzer": {
+      "name": "Reading Level Analyzer",
+      "description": "Analyzes text readability and complexity",
+      "priority": "enhancement",
+      "category": "agents/enhancement",
+      "triggers": [
+        "doc-create",
+        "content-update"
+      ],
+      "handler": "handlers/agents/enhancement/reading-level-analyzer.js"
+    },
+    "changelog-generator": {
+      "name": "Changelog Generator",
+      "description": "Automatically generates changelogs",
+      "priority": "enhancement",
+      "category": "agents/enhancement",
+      "triggers": [
+        "release-prep",
+        "version-bump"
+      ],
+      "handler": "handlers/agents/enhancement/changelog-generator.js"
+    },
+    "test-naming-validator": {
+      "name": "Test Naming Validator",
+      "description": "Validates test naming conventions",
+      "priority": "enhancement",
+      "category": "agents/enhancement",
+      "triggers": [
+        "test-create",
+        "test-rename"
+      ],
+      "handler": "handlers/agents/enhancement/test-naming-validator.js"
+    },
+    "flaky-test-detector": {
+      "name": "Flaky Test Detector",
+      "description": "Detects intermittently failing tests",
+      "priority": "enhancement",
+      "category": "agents/enhancement",
+      "triggers": [
+        "test-run",
+        "test-failure"
+      ],
+      "handler": "handlers/agents/enhancement/flaky-test-detector.js"
+    },
+    "fixture-validator": {
+      "name": "Fixture Validator",
+      "description": "Validates test fixtures and mock data",
+      "priority": "valuable",
+      "category": "agents/valuable",
+      "triggers": [
+        "test-create",
+        "fixture-update"
+      ],
+      "handler": "handlers/agents/valuable/fixture-validator.js"
+    },
+    "blocker-escalator": {
+      "name": "Blocker Escalator",
+      "description": "Escalates unresolved blockers",
+      "priority": "valuable",
+      "category": "agents/valuable",
+      "triggers": [
+        "blocker-created",
+        "sprint-check"
+      ],
+      "handler": "handlers/agents/valuable/blocker-escalator.js"
+    },
+    "velocity-anomaly-detector": {
+      "name": "Velocity Anomaly Detector",
+      "description": "Detects unusual velocity patterns",
+      "priority": "valuable",
+      "category": "agents/valuable",
+      "triggers": [
+        "sprint-complete",
+        "velocity-update"
+      ],
+      "handler": "handlers/agents/valuable/velocity-anomaly-detector.js"
+    },
+    "doc-code-sync-validator": {
+      "name": "Documentation Code Sync Validator",
+      "description": "Ensures docs match code implementation",
+      "priority": "valuable",
+      "category": "agents/valuable",
+      "triggers": [
+        "doc-update",
+        "code-change"
+      ],
+      "handler": "handlers/agents/valuable/doc-code-sync-validator.js"
+    },
+    "permission-scope-validator": {
+      "name": "Permission Scope Validator",
+      "description": "Validates permission scopes and access control",
+      "priority": "valuable",
+      "category": "agents/valuable",
+      "triggers": [
+        "permission-change",
+        "role-update"
+      ],
+      "handler": "handlers/agents/valuable/permission-scope-validator.js"
+    },
+    "gdpr-compliance-checker": {
+      "name": "GDPR Compliance Checker",
+      "description": "Validates GDPR compliance",
+      "priority": "specialized",
+      "category": "agents/specialized",
+      "triggers": [
+        "data-handling-change",
+        "privacy-update"
+      ],
+      "handler": "handlers/agents/specialized/gdpr-compliance-checker.js"
+    },
+    "accessibility-tester": {
+      "name": "Accessibility Tester",
+      "description": "Automated accessibility testing and validation",
+      "priority": "specialized",
+      "category": "agents/specialized",
+      "triggers": [
+        "ui-change",
+        "component-update",
+        "pre-deployment"
+      ],
+      "handler": "handlers/agents/specialized/accessibility-tester.js"
+    },
+    "memory-leak-detector": {
+      "name": "Memory Leak Detector",
+      "description": "Detects and reports memory leaks",
+      "priority": "specialized",
+      "category": "agents/specialized",
+      "triggers": [
+        "performance-test",
+        "memory-analysis",
+        "production-monitor"
+      ],
+      "handler": "handlers/agents/specialized/memory-leak-detector.js"
+    },
+    "database-query-analyzer": {
+      "name": "Database Query Analyzer",
+      "description": "Analyzes and optimizes database queries",
+      "priority": "specialized",
+      "category": "agents/specialized",
+      "triggers": [
+        "query-execution",
+        "slow-query",
+        "database-change"
+      ],
+      "handler": "handlers/agents/specialized/database-query-analyzer.js"
+    },
+    "api-response-validator": {
+      "name": "API Response Validator",
+      "description": "Validates API responses against schemas",
+      "priority": "specialized",
+      "category": "agents/specialized",
+      "triggers": [
+        "api-test",
+        "response-received",
+        "schema-change"
+      ],
+      "handler": "handlers/agents/specialized/api-response-validator.js"
+    },
+    "cross-browser-compatibility": {
+      "name": "Cross-Browser Compatibility Checker",
+      "description": "Tests cross-browser compatibility issues",
+      "priority": "specialized",
+      "category": "agents/specialized",
+      "triggers": [
+        "ui-build",
+        "browser-test",
+        "pre-deployment"
+      ],
+      "handler": "handlers/agents/specialized/cross-browser-compatibility.js"
+    },
+    "localization-validator": {
+      "name": "Localization Validator",
+      "description": "Validates translations and localization",
+      "priority": "specialized",
+      "category": "agents/specialized",
+      "triggers": [
+        "translation-update",
+        "locale-change",
+        "string-add"
+      ],
+      "handler": "handlers/agents/specialized/localization-validator.js"
+    },
+    "seo-analyzer": {
+      "name": "SEO Analyzer",
+      "description": "Analyzes and optimizes SEO performance",
+      "priority": "specialized",
+      "category": "agents/specialized",
+      "triggers": [
+        "page-update",
+        "content-change",
+        "sitemap-update"
+      ],
+      "handler": "handlers/agents/specialized/seo-analyzer.js"
+    },
+    "mobile-responsiveness": {
+      "name": "Mobile Responsiveness Checker",
+      "description": "Validates mobile responsiveness",
+      "priority": "specialized",
+      "category": "agents/specialized",
+      "triggers": [
+        "ui-change",
+        "responsive-test",
+        "viewport-check"
+      ],
+      "handler": "handlers/agents/specialized/mobile-responsiveness.js"
+    },
+    "project-state-monitor": {
+      "name": "Project State Monitor",
+      "description": "Monitors project state files for high-level trigger events",
+      "priority": "important",
+      "category": "state-management",
+      "triggers": [
+        "file-change"
+      ],
+      "handler": "project-state-monitor.js",
+      "conditions": {
+        "if_file_matches": "/project-state/.*\\.json$"
+      },
+      "config": {
+        "debounce": 1000,
+        "emit_events": true
+      }
+    },
+    "user-prompt-submit": {
+      "name": "User Prompt Submit Handler",
+      "description": "Processes user prompts and commands before execution",
+      "priority": "critical",
+      "category": "command",
+      "triggers": [
+        "user-prompt-submit"
+      ],
+      "handler": "handlers/command/user-prompt-handler.js",
+      "config": {
+        "validateCommands": true,
+        "logPrompts": true
+      }
+    }
+  },
+  "profiles": {
+    "minimal": {
+      "description": "Essential hooks only",
+      "enabled_hooks": [
+        "md-json-sync",
+        "json-cleanup",
+        "security-scan",
+        "vulnerability-scanner",
+        "secret-rotation-reminder",
+        "coverage-gatekeeper",
+        "defensive-patterns"
+      ]
+    },
+    "standard": {
+      "description": "Recommended hook configuration",
+      "enabled_hooks": [
+        "md-json-sync",
+        "json-cleanup",
+        "structure-validation",
+        "sprint-tracking",
+        "pre-sprint-verification",
+        "backlog-item-validator",
+        "command-validation",
+        "state-backup",
+        "security-scan",
+        "vulnerability-scanner",
+        "secret-rotation-reminder",
+        "coverage-gatekeeper",
+        "defensive-patterns",
+        "deployment-window-enforcer",
+        "requirement-completeness",
+        "dependency-checker",
+        "import-validator",
+        "test-categorizer"
+      ]
+    },
+    "advanced": {
+      "description": "All hooks enabled",
+      "enabled_hooks": [
+        "md-json-sync",
+        "json-cleanup",
+        "structure-validation",
+        "sprint-tracking",
+        "pre-sprint-verification",
+        "command-validation",
+        "state-backup",
+        "document-registry",
+        "security-scan",
+        "agent-context",
+        "cost-monitor",
+        "drift-monitor",
+        "vulnerability-scanner",
+        "secret-rotation-reminder",
+        "coverage-gatekeeper",
+        "defensive-patterns",
+        "deployment-window-enforcer",
+        "requirement-completeness",
+        "dependency-checker",
+        "import-validator",
+        "test-categorizer",
+        "code-documentation",
+        "error-boundary-enforcer",
+        "performance-profiler",
+        "accessibility-checker",
+        "api-contract-validator",
+        "naming-conventions",
+        "code-complexity"
+      ]
+    }
+  }
+}

@@ -1,0 +1,179 @@
+template:
+  id: "ecommerce-platform"
+  name: "E-commerce Platform Structure"
+  description: "Repository structure optimized for e-commerce applications"
+  
+  repositories:
+    storefront:
+      purpose: "Customer-facing shopping experience"
+      initial_week: 1
+      
+      structure:
+        "src/":
+          subdirs:
+            - "pages/"        # Product, category, checkout
+            - "components/"   # Product cards, cart
+            - "hooks/"        # Cart, wishlist hooks
+            - "services/"     # Payment, shipping APIs
+        
+        "public/":
+          purpose: "Optimized product images"
+          cdn: "Required for performance"
+      
+      technology_suggestions:
+        - "Next.js Commerce"
+        - "Shopify Hydrogen"
+        - "Vue Storefront"
+      
+      performance:
+        - "Image optimization critical"
+        - "CDN for all assets"
+        - "Edge caching for catalog"
+      
+      deployment: "Edge/CDN (Vercel, Cloudflare)"
+    
+    admin:
+      purpose: "Merchant administration panel"
+      initial_week: 2
+      
+      structure:
+        "src/":
+          subdirs:
+            - "modules/"      # Orders, products, customers
+            - "components/"   # Data tables, forms
+            - "services/"     # Admin API client
+            - "reports/"      # Analytics views
+      
+      features:
+        - "Order management"
+        - "Inventory control"
+        - "Customer management"
+        - "Analytics dashboard"
+      
+      deployment: "Secure internal hosting"
+    
+    api:
+      purpose: "Core commerce API"
+      initial_week: 4
+      
+      structure:
+        "src/":
+          subdirs:
+            - "modules/"
+              - "catalog/"    # Products, categories
+              - "orders/"     # Order processing
+              - "payments/"   # Payment processing
+              - "shipping/"   # Shipping calculation
+              - "customers/"  # User management
+            - "integrations/"
+              - "payment-providers/"
+              - "shipping-providers/"
+              - "tax-services/"
+      
+      technology_suggestions:
+        - "Node.js + NestJS"
+        - "Python + Django"
+        - ".NET Core"
+      
+      deployment: "Kubernetes with auto-scaling"
+    
+    inventory:
+      purpose: "Inventory management service"
+      initial_week: 6
+      
+      structure:
+        "src/":
+          subdirs:
+            - "sync/"         # Warehouse sync
+            - "allocation/"   # Stock allocation
+            - "reporting/"    # Inventory reports
+      
+      features:
+        - "Real-time stock tracking"
+        - "Multi-warehouse support"
+        - "Stock predictions"
+      
+      deployment: "Separate scaling from API"
+    
+    mobile:
+      purpose: "Native mobile apps"
+      initial_week: 8
+      optional: true
+      
+      structure:
+        "src/":
+          subdirs:
+            - "screens/"      # App screens
+            - "components/"   # Native components
+            - "services/"     # API integration
+        
+        "ios/":
+          purpose: "iOS specific code"
+        
+        "android/":
+          purpose: "Android specific code"
+      
+      technology: "React Native recommended"
+  
+  coordination:
+    api_contracts:
+      location: "api/openapi.yaml"
+      sharing: "Published to all repos"
+      versioning: "Semantic versioning"
+    
+    shared_types:
+      method: "Generated from OpenAPI"
+      distribution: "NPM packages"
+    
+    inventory_sync:
+      pattern: "Event-driven"
+      tool: "Message queue (RabbitMQ/Kafka)"
+  
+  evolution_timeline:
+    week_1:
+      repos: ["storefront"]
+      reason: "MVP - customers can browse"
+    
+    week_2:
+      repos: ["storefront", "admin"]
+      reason: "Merchants need to manage products"
+    
+    week_4:
+      repos: ["storefront", "admin", "api"]
+      reason: "Centralize business logic"
+    
+    week_6:
+      repos: ["storefront", "admin", "api", "inventory"]
+      reason: "Complex inventory requirements"
+    
+    week_8:
+      repos: ["all", "mobile"]
+      reason: "Mobile app demand"
+  
+  industry_specific:
+    compliance:
+      - "PCI DSS for payments"
+      - "GDPR for EU customers"
+      - "Tax calculation per region"
+    
+    integrations:
+      required:
+        - "Payment gateways"
+        - "Shipping providers"
+        - "Tax services"
+      optional:
+        - "ERP systems"
+        - "Warehouse management"
+        - "Marketing automation"
+  
+  scaling_considerations:
+    - "Storefront: Horizontal scaling for traffic"
+    - "API: Vertical scaling for complex queries"
+    - "Inventory: Real-time sync challenges"
+    - "Admin: Lower traffic, complex operations"
+  
+  success_metrics:
+    page_load_time: "< 2 seconds"
+    checkout_completion: "> 70%"
+    inventory_accuracy: "> 99%"
+    deployment_independence: "100%"

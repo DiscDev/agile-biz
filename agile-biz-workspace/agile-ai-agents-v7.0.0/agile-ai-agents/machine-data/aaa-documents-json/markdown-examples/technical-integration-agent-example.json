@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "document": "technical-integration-agent-example",
+    "title": "REST API Integration Guide",
+    "timestamp": "2025-08-11T22:02:16.901Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md",
+    "document_type": "technical",
+    "file_hash": "51fd9bc63e0aa4e4ebbbae7fff9fa8e0",
+    "estimated_tokens": 482,
+    "full_md_tokens": 3340
+  },
+  "summary": "This guide demonstrates how Technical Integration Agents should format API documentation using GitHub markdown best practices.",
+  "sections": [
+    {
+      "title": "Table of Contents",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#table-of-contents",
+      "content_preview": "* [Overview](#overview)\n* [Authentication](#authentication)\n* [API Endpoints](#api-endpoints)\n* [Data Models](#data-models)\n* [SDK Integration](#sdk-i..."
+    },
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#overview",
+      "content_preview": "This guide demonstrates how Technical Integration Agents should format API documentation using GitHub markdown best practices."
+    },
+    {
+      "title": "Authentication",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#authentication",
+      "content_preview": ""
+    },
+    {
+      "title": "API Endpoints",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#api-endpoints",
+      "content_preview": ""
+    },
+    {
+      "title": "Data Models",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#data-models",
+      "content_preview": ""
+    },
+    {
+      "title": "SDK Integration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#sdk-integration",
+      "content_preview": ""
+    },
+    {
+      "title": "Error Handling",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#error-handling",
+      "content_preview": ""
+    },
+    {
+      "title": "Rate Limiting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#rate-limiting",
+      "content_preview": ""
+    },
+    {
+      "title": "Webhooks",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#webhooks",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Table of Contents": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#table-of-contents",
+      "tokens": 52,
+      "content_preview": "* [Overview](#overview)\n* [Authentication](#authentication)\n* [API Endpoints](#api-endpoints)\n* [Data Models](#data-models)\n* [SDK Integration](#sdk-i..."
+    },
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#overview",
+      "tokens": 32,
+      "content_preview": "This guide demonstrates how Technical Integration Agents should format API documentation using GitHub markdown best practices.",
+      "subsections": {
+        "API Architecture": {
+          "content_preview": "```mermaid\ngraph TD\n    A[Client Application] --> B[API Gateway]\n    B --> C[Load Balancer]\n    C --> D[Auth Service]\n    C --> E[Core API]\n    E --> ...",
+          "tokens": 64,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#api-architecture-1"
+        },
+        "Base URL and Versioning": {
+          "content_preview": "```\nProduction: https://api.agileaiagents.com/v1\nStaging: https://staging-api.agileaiagents.com/v1\n```\n\n**API Version Strategy:**\n* Current version: `...",
+          "tokens": 59,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#base-url-and-versioning-1"
+        }
+      }
+    },
+    "Authentication": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#authentication",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "API Key Authentication": {
+          "content_preview": "```bash\ncurl -H \"Authorization: Bearer YOUR_API_KEY\" \\\n     https://api.agileaiagents.com/v1/projects\n```",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#api-key-authentication-1"
+        },
+        "OAuth 2.0 Flow": {
+          "content_preview": "```javascript\n// Step 1: Authorization URL\nconst authUrl = 'https://api.agileaiagents.com/oauth/authorize?' +\n  'client_id=YOUR_CLIENT_ID&' +\n  'redir...",
+          "tokens": 165,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#oauth-20-flow-1"
+        },
+        "Authentication Headers": {
+          "content_preview": "| Header | Required | Description |\n|:-------|:--------:|:------------|\n| Authorization | Yes | Bearer token or API key |\n| X-API-Version | No | API v...",
+          "tokens": 55,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#authentication-headers-1"
+        }
+      }
+    },
+    "API Endpoints": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#api-endpoints",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Projects Endpoint": {
+          "content_preview": "```http\nPOST /v1/projects\n```\n\n**Request Body:**\n\n```json\n{\n  \"name\": \"New Project\",\n  \"description\": \"Project description\",\n  \"team_id\": \"team_098765...",
+          "tokens": 254,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#projects-endpoint-3"
+        }
+      }
+    },
+    "Data Models": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#data-models",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Project Model": {
+          "content_preview": "```typescript\ninterface Project {\n  id: string;                    // Unique identifier\n  name: string;                  // Project name\n  description...",
+          "tokens": 156,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#project-model-1"
+        },
+        "Task Model": {
+          "content_preview": "```go\n// Go struct for Task model\ntype Task struct {\n    ID           string    `json:\"id\"`\n    Title        string    `json:\"title\"`\n    Description ...",
+          "tokens": 182,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#task-model-1"
+        }
+      }
+    },
+    "SDK Integration": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#sdk-integration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "JavaScript/TypeScript SDK": {
+          "content_preview": "```bash\nnpm install @agileaiagents/api-client\n```\n\n```typescript\nimport { AgileAIClient } from '@agileaiagents/api-client';\n\nconst client = new AgileA...",
+          "tokens": 164,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#javascripttypescript-sdk-1"
+        },
+        "Python SDK": {
+          "content_preview": "```bash\npip install agileaiagents-python\n```\n\n```python\nfrom agileaiagents import Client\nfrom agileaiagents.exceptions import APIError",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#python-sdk-1"
+        }
+      }
+    },
+    "Error Handling": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#error-handling",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Error Response Format": {
+          "content_preview": "```json\n{\n  \"error\": {\n    \"code\": \"VALIDATION_ERROR\",\n    \"message\": \"Invalid request parameters\",\n    \"details\": [\n      {\n        \"field\": \"due_dat...",
+          "tokens": 65,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#error-response-format-1"
+        },
+        "HTTP Status Codes": {
+          "content_preview": "| Status Code | Meaning | Common Causes |\n|:-----------:|:--------|:--------------|\n| 200 | OK | Successful GET, PUT, DELETE |\n| 201 | Created | Succe...",
+          "tokens": 147,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#http-status-codes-1"
+        },
+        "Error Handling Examples": {
+          "content_preview": "```javascript\n// JavaScript error handling\nasync function handleAPICall() {\n  try {\n    const response = await fetch('/api/projects', {\n      method: ...",
+          "tokens": 176,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#error-handling-examples-1"
+        }
+      }
+    },
+    "Rate Limiting": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#rate-limiting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Rate Limit Headers": {
+          "content_preview": "Every API response includes rate limiting information:\n\n```http\nX-RateLimit-Limit: 1000\nX-RateLimit-Remaining: 999\nX-RateLimit-Reset: 1640995200\nX-Rat...",
+          "tokens": 42,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#rate-limit-headers-1"
+        },
+        "Rate Limit Tiers": {
+          "content_preview": "| Tier | Requests/Hour | Burst Limit | Upgrade Path |\n|:-----|:-------------:|:-----------:|:-------------|\n| Free | 1,000 | 100/min | Contact sales |...",
+          "tokens": 61,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#rate-limit-tiers-1"
+        },
+        "Rate Limit Handling": {
+          "content_preview": "```python\nimport time\nfrom requests.adapters import HTTPAdapter\nfrom urllib3.util.retry import Retry\n\ndef create_session_with_retries():\n    \"\"\"Create...",
+          "tokens": 251,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#rate-limit-handling-1"
+        }
+      }
+    },
+    "Webhooks": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#webhooks",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Webhook Configuration": {
+          "content_preview": "```http\nPOST /v1/webhooks\n```\n\n```json\n{\n  \"url\": \"https://yourapp.com/webhooks/agileai\",\n  \"events\": [\n    \"task.created\",\n    \"task.updated\",\n    \"t...",
+          "tokens": 57,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#webhook-configuration-1"
+        },
+        "Webhook Payload": {
+          "content_preview": "```json\n{\n  \"id\": \"evt_1234567890\",\n  \"type\": \"task.completed\",\n  \"created_at\": \"2024-01-20T15:30:00Z\",\n  \"data\": {\n    \"object\": {\n      \"id\": \"task_...",
+          "tokens": 93,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#webhook-payload-1"
+        },
+        "Webhook Verification": {
+          "content_preview": "```javascript\nconst crypto = require('crypto');\n\nfunction verifyWebhook(payload, signature, secret) {\n  const computedSignature = crypto\n    .createHm...",
+          "tokens": 328,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/technical-integration-agent-example.md#webhook-verification-1"
+        }
+      }
+    }
+  }
+}

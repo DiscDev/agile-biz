@@ -1,0 +1,266 @@
+template:
+  id: "education-platform"
+  name: "Education Platform Structure"
+  description: "Repository structure for online learning and education platforms"
+  
+  compliance_note: "Considers FERPA, COPPA, and accessibility requirements"
+  
+  repositories:
+    student-portal:
+      purpose: "Student learning interface"
+      initial_week: 1
+      
+      structure:
+        "src/":
+          subdirs:
+            - "features/"
+              - "courses/"
+              - "assignments/"
+              - "grades/"
+              - "discussions/"
+              - "calendar/"
+            - "learning-tools/"
+              - "video-player/"
+              - "code-editor/"
+              - "whiteboard/"
+              - "quiz-engine/"
+      
+      accessibility:
+        - "WCAG 2.1 AA compliance"
+        - "Screen reader support"
+        - "Keyboard navigation"
+        - "Closed captions"
+      
+      technology: "React/Vue with accessibility focus"
+      deployment: "CDN with global distribution"
+    
+    instructor-portal:
+      purpose: "Course creation and management"
+      initial_week: 2
+      
+      structure:
+        "src/":
+          subdirs:
+            - "course-builder/"
+              - "curriculum/"
+              - "content-editor/"
+              - "assessment-builder/"
+            - "classroom-management/"
+              - "gradebook/"
+              - "attendance/"
+              - "analytics/"
+            - "communication/"
+              - "announcements/"
+              - "messaging/"
+      
+      features:
+        - "Drag-drop course builder"
+        - "Rich content editor"
+        - "Rubric creation"
+        - "Plagiarism detection integration"
+    
+    content-delivery:
+      purpose: "Learning content storage and delivery"
+      initial_week: 1
+      
+      structure:
+        "src/":
+          subdirs:
+            - "storage/"
+              - "videos/"
+              - "documents/"
+              - "interactive/"
+            - "streaming/"
+              - "adaptive-bitrate/"
+              - "live-streaming/"
+            - "processing/"
+              - "transcoding/"
+              - "thumbnail-generation/"
+      
+      infrastructure:
+        - "CDN for global delivery"
+        - "Adaptive streaming"
+        - "Offline download support"
+        - "DRM for premium content"
+    
+    assessment-engine:
+      purpose: "Quiz and exam management"
+      initial_week: 3
+      
+      structure:
+        "src/":
+          subdirs:
+            - "question-bank/"
+            - "exam-engine/"
+            - "proctoring/"
+            - "grading/"
+            - "analytics/"
+      
+      security:
+        - "Lockdown browser support"
+        - "Plagiarism detection"
+        - "Time limits"
+        - "IP restrictions"
+      
+      features:
+        - "Multiple question types"
+        - "Adaptive testing"
+        - "Instant feedback"
+        - "Detailed analytics"
+    
+    collaboration-service:
+      purpose: "Real-time collaboration tools"
+      initial_week: 4
+      
+      structure:
+        "src/":
+          subdirs:
+            - "video-conferencing/"
+            - "whiteboard/"
+            - "breakout-rooms/"
+            - "screen-sharing/"
+            - "chat/"
+      
+      technology:
+        - "WebRTC for video"
+        - "WebSockets for real-time"
+        - "Canvas API for whiteboard"
+    
+    analytics-platform:
+      purpose: "Learning analytics and insights"
+      initial_week: 6
+      
+      structure:
+        "src/":
+          subdirs:
+            - "student-analytics/"
+            - "course-analytics/"
+            - "engagement-tracking/"
+            - "predictive-models/"
+            - "reporting/"
+      
+      features:
+        - "Learning path analysis"
+        - "At-risk student identification"
+        - "Engagement metrics"
+        - "Course effectiveness"
+    
+    mobile-app:
+      purpose: "Mobile learning experience"
+      initial_week: 8
+      optional: true
+      
+      structure:
+        "src/":
+          subdirs:
+            - "offline-content/"
+            - "push-notifications/"
+            - "mobile-specific/"
+      
+      features:
+        - "Offline course access"
+        - "Download management"
+        - "Push notifications"
+        - "Mobile-optimized video"
+  
+  platform_features:
+    learning_management:
+      - "Course catalog"
+      - "Learning paths"
+      - "Certificates"
+      - "Progress tracking"
+      - "Competency mapping"
+    
+    social_learning:
+      - "Discussion forums"
+      - "Study groups"
+      - "Peer review"
+      - "Social profiles"
+      - "Gamification"
+    
+    integration_points:
+      - "LTI (Learning Tools Interoperability)"
+      - "SCORM compliance"
+      - "xAPI support"
+      - "Google Classroom"
+      - "Microsoft Teams"
+  
+  data_architecture:
+    student_data:
+      privacy: "FERPA compliance"
+      retention: "Configurable policies"
+      portability: "Export capabilities"
+    
+    content_storage:
+      structure: "Hierarchical"
+      versioning: "Full history"
+      cdn: "Global distribution"
+    
+    analytics_data:
+      aggregation: "Privacy-preserving"
+      real_time: "Stream processing"
+      historical: "Data warehouse"
+  
+  compliance_considerations:
+    ferpa:
+      - "Parent access controls"
+      - "Data privacy policies"
+      - "Audit trails"
+      - "Consent management"
+    
+    coppa:
+      - "Age verification"
+      - "Parental consent"
+      - "Limited data collection"
+      - "No behavioral advertising"
+    
+    accessibility:
+      - "WCAG 2.1 AA"
+      - "Section 508"
+      - "ADA compliance"
+      - "Multi-language support"
+  
+  evolution_timeline:
+    week_1:
+      repos: ["student-portal", "content-delivery"]
+      reason: "Core learning functionality"
+    
+    week_2:
+      repos: ["previous", "instructor-portal"]
+      reason: "Content creation capabilities"
+    
+    week_3:
+      repos: ["previous", "assessment-engine"]
+      reason: "Testing and grading"
+    
+    week_4:
+      repos: ["previous", "collaboration-service"]
+      reason: "Live classes and interaction"
+    
+    week_6:
+      repos: ["previous", "analytics-platform"]
+      reason: "Insights and improvements"
+    
+    week_8:
+      repos: ["previous", "mobile-app"]
+      reason: "Mobile learning demand"
+  
+  scaling_considerations:
+    - "Semester start traffic spikes"
+    - "Exam period load"
+    - "Video streaming bandwidth"
+    - "Global user distribution"
+    - "Large file uploads"
+  
+  success_metrics:
+    engagement:
+      - "Daily active learners"
+      - "Course completion rates"
+      - "Video watch time"
+      - "Assignment submissions"
+    
+    performance:
+      - "Page load < 2s"
+      - "Video start < 3s"
+      - "99.9% uptime"
+      - "Global availability"

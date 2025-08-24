@@ -1,0 +1,281 @@
+{
+  "version": "1.0.0",
+  "description": "Document routing rules for the 4-tier Document Router system",
+  "last_updated": "2025-08-13",
+  
+  "patterns": {
+    "business-strategy": [
+      "*-analysis.md",
+      "*-research.md",
+      "*-strategy.md",
+      "market-*.md",
+      "competitive-*.md",
+      "customer-*.md",
+      "financial-*.md",
+      "roi-*.md",
+      "pricing-*.md",
+      "business-*.md",
+      "revenue-*.md",
+      "investment-*.md",
+      "investor-*.md",
+      "pitch-*.md",
+      "brand-*.md",
+      "marketing-*.md"
+    ],
+    "implementation": [
+      "*-implementation.md",
+      "*-architecture.md",
+      "*-design.md",
+      "api-*.md",
+      "database-*.md",
+      "technical-*.md",
+      "code-*.md",
+      "development-*.md",
+      "requirement*.md",
+      "prd-*.md",
+      "user-stories*.md",
+      "feature-*.md",
+      "security-*.md",
+      "threat-*.md",
+      "test-*.md",
+      "quality-*.md",
+      "ui-*.md",
+      "ux-*.md"
+    ],
+    "operations": [
+      "*-dashboard.md",
+      "*-monitoring.md",
+      "*-deployment.md",
+      "ci-cd-*.md",
+      "deploy-*.md",
+      "release-*.md",
+      "launch-*.md",
+      "analytics-*.md",
+      "metrics-*.md",
+      "kpi-*.md",
+      "performance-*.md",
+      "optimization-*.md",
+      "seo-*.md",
+      "email-*.md",
+      "social-*.md",
+      "ppc-*.md",
+      "media-*.md"
+    ],
+    "orchestration": [
+      "sprint-*.md",
+      "*-coordination.md",
+      "*-planning.md",
+      "backlog-*.md",
+      "retrospective-*.md",
+      "standup-*.md",
+      "review-*.md",
+      "agent-*.md",
+      "project-log*.md",
+      "stakeholder-*.md",
+      "escalation-*.md"
+    ]
+  },
+  
+  "freshness_thresholds": {
+    "market-analysis": 30,
+    "competitive-analysis": 60,
+    "technical-documentation": 90,
+    "financial-projections": 30,
+    "user-research": 45,
+    "security-audit": 90,
+    "api-documentation": 120,
+    "deployment-guide": 60,
+    "pricing-strategy": 30,
+    "customer-feedback": 45,
+    "performance-metrics": 7,
+    "sprint-planning": 14,
+    "sprint-retrospective": 30,
+    "backlog": 7,
+    "test-results": 7,
+    "monitoring-dashboard": 1,
+    "analytics-report": 7,
+    "roi-analysis": 30,
+    "investor-update": 30,
+    "marketing-campaign": 30,
+    "seo-report": 30,
+    "default": 90
+  },
+  
+  "sprint_aware_paths": [
+    "orchestration/sprints/",
+    "implementation/features/",
+    "business-strategy/research/",
+    "implementation/testing/",
+    "operations/deployment/"
+  ],
+  
+  "category_subcategories": {
+    "business-strategy": [
+      "existing-project",
+      "research",
+      "marketing",
+      "finance",
+      "market-validation",
+      "customer-success",
+      "monetization",
+      "analysis",
+      "investment"
+    ],
+    "implementation": [
+      "requirements",
+      "security",
+      "llm-analysis",
+      "api-analysis",
+      "mcp-analysis",
+      "project-planning",
+      "environment",
+      "design",
+      "implementation",
+      "testing",
+      "documentation",
+      "architecture"
+    ],
+    "operations": [
+      "deployment",
+      "launch",
+      "analytics",
+      "monitoring",
+      "optimization",
+      "seo",
+      "crm-marketing",
+      "media-buying",
+      "social-media"
+    ],
+    "orchestration": [
+      "sprints",
+      "coordination",
+      "planning",
+      "backlog",
+      "escalations"
+    ]
+  },
+  
+  "agent_category_mapping": {
+    "research_agent": "business-strategy",
+    "marketing_agent": "business-strategy",
+    "finance_agent": "business-strategy",
+    "analysis_agent": "business-strategy",
+    "business_documents_agent": "business-strategy",
+    "customer_lifecycle_agent": "business-strategy",
+    "revenue_optimization_agent": "business-strategy",
+    "market_validation_agent": "business-strategy",
+    "vc_report_agent": "business-strategy",
+    
+    "coder_agent": "implementation",
+    "testing_agent": "implementation",
+    "ui_ux_agent": "implementation",
+    "security_agent": "implementation",
+    "prd_agent": "implementation",
+    "api_agent": "implementation",
+    "llm_agent": "implementation",
+    "mcp_agent": "implementation",
+    "ml_agent": "implementation",
+    "dba_agent": "implementation",
+    "data_engineer_agent": "implementation",
+    
+    "devops_agent": "operations",
+    "analytics_agent": "operations",
+    "seo_agent": "operations",
+    "ppc_media_buyer_agent": "operations",
+    "social_media_agent": "operations",
+    "email_marketing_agent": "operations",
+    "optimization_agent": "operations",
+    "logger_agent": "operations",
+    
+    "scrum_master_agent": "orchestration",
+    "project_manager_agent": "orchestration",
+    "documentator_agent": "orchestration",
+    "document_manager_agent": "orchestration",
+    "project_state_manager_agent": "orchestration"
+  },
+  
+  "filename_keywords": {
+    "research": ["market", "competitive", "industry", "trends", "analysis", "research"],
+    "marketing": ["campaign", "brand", "content", "social", "email", "ppc", "seo"],
+    "finance": ["cost", "revenue", "budget", "roi", "financial", "investment"],
+    "security": ["threat", "vulnerability", "audit", "compliance", "encryption"],
+    "testing": ["test", "quality", "coverage", "validation", "verification"],
+    "deployment": ["deploy", "release", "rollout", "production", "staging"],
+    "analytics": ["metrics", "kpi", "dashboard", "reporting", "insights"],
+    "architecture": ["design", "architecture", "structure", "pattern", "framework"]
+  },
+  
+  "learned_patterns": {},
+  
+  "folder_creation": {
+    "enabled": true,
+    "all_agents_can_create": true,
+    "semantic_naming": true,
+    "kebab_case": true,
+    "no_depth_limit": false,
+    "max_depth": 4,
+    "auto_consolidation_threshold": 5,
+    "similarity_threshold": 0.8,
+    "recent_usage_boost": 0.2,
+    "client_folder_pattern": "{client}-requirements",
+    "domain_folder_pattern": "{domain}-{type}",
+    "default_folder_pattern": "{keywords}-docs"
+  },
+  
+  "routing_priorities": {
+    "description": "Order of precedence for routing decisions",
+    "order": [
+      "explicit_rules",
+      "learned_patterns",
+      "filename_patterns",
+      "content_analysis",
+      "agent_mapping",
+      "dynamic_creation"
+    ]
+  },
+  
+  "performance_targets": {
+    "routing_latency_ms": 50,
+    "cache_ttl_seconds": 300,
+    "max_cache_size": 1000,
+    "learning_threshold": 3,
+    "pattern_confidence_minimum": 0.7
+  },
+  
+  "migration_settings": {
+    "legacy_folder_support": true,
+    "numbered_folder_mapping": {
+      "00-orchestration": "orchestration",
+      "01-existing-project-analysis": "business-strategy/existing-project",
+      "02-research": "business-strategy/research",
+      "03-marketing": "business-strategy/marketing",
+      "04-finance": "business-strategy/finance",
+      "05-market-validation": "business-strategy/market-validation",
+      "06-customer-success": "business-strategy/customer-success",
+      "07-monetization": "business-strategy/monetization",
+      "08-analysis": "business-strategy/analysis",
+      "09-investment": "business-strategy/investment",
+      "10-security": "implementation/security",
+      "11-requirements": "implementation/requirements",
+      "12-llm-analysis": "implementation/llm-analysis",
+      "13-api-analysis": "implementation/api-analysis",
+      "14-mcp-analysis": "implementation/mcp-analysis",
+      "15-seo": "operations/seo",
+      "16-tech-documentation": "implementation/documentation",
+      "18-project-planning": "implementation/project-planning",
+      "19-environment": "implementation/environment",
+      "20-design": "implementation/design",
+      "21-implementation": "implementation/implementation",
+      "22-testing": "implementation/testing",
+      "23-deployment": "operations/deployment",
+      "24-launch": "operations/launch",
+      "25-analytics": "operations/analytics",
+      "26-optimization": "operations/optimization",
+      "27-email-marketing": "operations/crm-marketing",
+      "28-media-buying": "operations/media-buying",
+      "29-social-media": "operations/social-media"
+    },
+    "auto_redirect": true,
+    "preserve_legacy_paths": true
+  }
+}

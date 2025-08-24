@@ -1,0 +1,238 @@
+{
+  "meta": {
+    "document": "business-strategy-agent-example",
+    "title": "AI-Powered Task Management Market Analysis",
+    "timestamp": "2025-08-11T22:02:16.898Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md",
+    "document_type": "general_documentation",
+    "file_hash": "ea5220a4566cb334fb012ac8db8b7d7a",
+    "estimated_tokens": 389,
+    "full_md_tokens": 2249
+  },
+  "summary": "Example document demonstrating proper GitHub markdown formatting for Business & Strategy Agents (Research, Finance, Marketing, Analysis, Business Documents).",
+  "sections": [
+    {
+      "title": "Table of Contents",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#table-of-contents",
+      "content_preview": "* [Executive Summary](#executive-summary)\n* [Market Landscape](#market-landscape)\n* [Financial Analysis](#financial-analysis)\n* [Competitive Assessmen..."
+    },
+    {
+      "title": "Executive Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#executive-summary",
+      "content_preview": "> **Key Insight**: The AI-powered task management market represents a $2.3B opportunity with 23% annual growth, driven by remote work adoption and AI ..."
+    },
+    {
+      "title": "Market Landscape",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#market-landscape",
+      "content_preview": ""
+    },
+    {
+      "title": "Financial Analysis",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#financial-analysis",
+      "content_preview": ""
+    },
+    {
+      "title": "Competitive Assessment",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#competitive-assessment",
+      "content_preview": ""
+    },
+    {
+      "title": "Growth Opportunities",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#growth-opportunities",
+      "content_preview": ""
+    },
+    {
+      "title": "Investment Recommendation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#investment-recommendation",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration"
+  ],
+  "section_details": {
+    "Table of Contents": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#table-of-contents",
+      "tokens": 62,
+      "content_preview": "* [Executive Summary](#executive-summary)\n* [Market Landscape](#market-landscape)\n* [Financial Analysis](#financial-analysis)\n* [Competitive Assessmen..."
+    },
+    "Executive Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#executive-summary",
+      "tokens": 41,
+      "content_preview": "> **Key Insight**: The AI-powered task management market represents a $2.3B opportunity with 23% annual growth, driven by remote work adoption and AI ...",
+      "subsections": {
+        "Market Highlights": {
+          "content_preview": "* **Market Size**: $2.3B total addressable market\n* **Growth Rate**: 23% CAGR (2024-2028)\n* **Key Driver**: 78% increase in remote work adoption\n* **A...",
+          "tokens": 48,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#market-highlights-1"
+        },
+        "Investment Thesis": {
+          "content_preview": "The convergence of artificial intelligence and project management creates a compelling market opportunity. Our analysis indicates strong product-marke...",
+          "tokens": 52,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#investment-thesis-1"
+        }
+      }
+    },
+    "Market Landscape": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#market-landscape",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Market Segmentation": {
+          "content_preview": "| Segment | Market Size (2024) | Growth Rate | Key Players |\n|:--------|--------------------:|:-----------:|:------------|\n| Enterprise | $1.4B | 18% ...",
+          "tokens": 64,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#market-segmentation-1"
+        },
+        "Total Addressable Market (TAM)": {
+          "content_preview": "The TAM calculation incorporates multiple market segments:\n\n$$TAM = \\sum_{i=1}^{n} Segment_i \\times PenetrationRate_i \\times ARPU_i$$\n\nWhere:\n* Enterp...",
+          "tokens": 77,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#total-addressable-market-tam-1"
+        },
+        "Market Drivers": {
+          "content_preview": "1. **Remote Work Adoption**\n   * 78% increase since 2020\n   * Permanent remote policies at 65% of companies\n   * Hybrid work models requiring better c...",
+          "tokens": 129,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#market-drivers-1"
+        }
+      }
+    },
+    "Financial Analysis": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#financial-analysis",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Revenue Model Projections": {
+          "content_preview": "| Year | ARR | Growth | Customers | ARPU |\n|:-----|----:|:------:|----------:|-----:|\n| 2024 | $2.5M | - | 1,250 | $2,000 |\n| 2025 | $6.2M | 148% | 2,...",
+          "tokens": 72,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#revenue-model-projections-1"
+        },
+        "Unit Economics": {
+          "content_preview": "**Customer Acquisition Cost (CAC) Analysis:**\n\n$$CAC = \\frac{Sales\\_Marketing\\_Expenses}{New\\_Customers\\_Acquired}$$\n\nCurrent metrics:\n* **CAC**: $450...",
+          "tokens": 118,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#unit-economics-1"
+        },
+        "Investment Requirements": {
+          "content_preview": "<details>\n<summary>Detailed Financial Projections</summary>",
+          "tokens": 15,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#investment-requirements-1"
+        },
+        "Funding Requirements by Stage": {
+          "content_preview": "| Stage | Amount | Use of Funds | Timeline |\n|:------|-------:|:-------------|:---------|\n| Seed | $2.5M | Product development, initial team | 18 mont...",
+          "tokens": 72,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#funding-requirements-by-stage-1"
+        },
+        "Cash Flow Analysis": {
+          "content_preview": "```\nYear 1: -$1.8M (product development phase)\nYear 2: -$2.4M (go-to-market investment)\nYear 3: +$1.2M (break-even achieved)\nYear 4: +$5.8M (profitabl...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#cash-flow-analysis-1"
+        },
+        "Sensitivity Analysis": {
+          "content_preview": "Key assumptions and their impact on valuation:\n\n$$Valuation = \\frac{ARR \\times Revenue\\_Multiple}{(1 + Discount\\_Rate)^{Years}}$$\n\n* **Base Case**: 8x...",
+          "tokens": 74,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#sensitivity-analysis-1"
+        }
+      }
+    },
+    "Competitive Assessment": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#competitive-assessment",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Competitive Landscape Matrix": {
+          "content_preview": "| Competitor | Market Share | Strengths | Weaknesses | AI Integration |\n|:-----------|:------------:|:----------|:-----------|:-------------:|\n| Asana...",
+          "tokens": 120,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#competitive-landscape-matrix-1"
+        },
+        "Competitive Advantage Analysis": {
+          "content_preview": "> **Strategic Moat**: Our AI-first approach provides 3-5x productivity improvements over traditional task management tools.\n\n**Key Differentiators:**\n...",
+          "tokens": 136,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#competitive-advantage-analysis-1"
+        },
+        "Market Positioning": {
+          "content_preview": "```mermaid\ngraph TD\n    A[AI-Powered Task Management] --> B[Enterprise Features]\n    A --> C[SMB Accessibility]\n    A --> D[Individual Productivity]\n ...",
+          "tokens": 104,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#market-positioning-1"
+        }
+      }
+    },
+    "Growth Opportunities": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#growth-opportunities",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Market Expansion Vectors": {
+          "content_preview": "1. **Vertical Market Penetration**\n   * Healthcare: $180M opportunity\n   * Legal: $95M opportunity  \n   * Construction: $150M opportunity\n   * Educati...",
+          "tokens": 111,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#market-expansion-vectors-1"
+        },
+        "Partnership Opportunities": {
+          "content_preview": "| Partner Type | Strategic Value | Revenue Impact | Implementation |\n|:-------------|:----------------|:--------------:|:---------------|\n| Cloud Prov...",
+          "tokens": 92,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#partnership-opportunities-1"
+        },
+        "Risk Assessment": {
+          "content_preview": "<details>\n<summary>Detailed Risk Analysis</summary>",
+          "tokens": 13,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#risk-assessment-1"
+        },
+        "Market Risks": {
+          "content_preview": "* **Competition from Tech Giants**: Google, Microsoft entering market\n  * Mitigation: Focus on specialized features, superior user experience\n  * Prob...",
+          "tokens": 81,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#market-risks-1"
+        },
+        "Technology Risks": {
+          "content_preview": "* **AI Model Performance**: Accuracy degradation or bias issues\n  * Mitigation: Continuous model training, human oversight\n  * Probability: 25%\n  * Im...",
+          "tokens": 76,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#technology-risks-1"
+        }
+      }
+    },
+    "Investment Recommendation": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#investment-recommendation",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Investment Score: 8.7/10": {
+          "content_preview": "**Recommendation**: **STRONG BUY**",
+          "tokens": 7,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#investment-score-8710-1"
+        },
+        "Key Investment Rationale": {
+          "content_preview": "> **Bottom Line**: This represents a rare opportunity to invest in a rapidly growing market with a defensible AI-powered solution and exceptional unit...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#key-investment-rationale-1"
+        },
+        "Strengths": {
+          "content_preview": "* **Market Timing**: Perfect convergence of AI maturity and remote work needs\n* **Unit Economics**: LTV:CAC ratio of 18.9:1 indicates efficient growth...",
+          "tokens": 68,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#strengths-1"
+        },
+        "Financial Returns": {
+          "content_preview": "**3-Year Projection:**\n* Investment: $8M Series A\n* Projected Valuation: $285M (base case)\n* **Return Multiple**: 35.6x\n* **IRR**: 285%",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#financial-returns-1"
+        },
+        "Investment Terms": {
+          "content_preview": "| Term | Value | Rationale |\n|:-----|:------|:----------|\n| Valuation | $32M pre-money | 8x current ARR, 40% discount to comparables |\n| Investment | ...",
+          "tokens": 81,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#investment-terms-1"
+        },
+        "Next Steps": {
+          "content_preview": "1. **Due Diligence** (4 weeks)\n   * [ ] Technical audit of AI capabilities\n   * [ ] Financial model validation\n   * [ ] Customer reference calls\n   * ...",
+          "tokens": 185,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/business-strategy-agent-example.md#next-steps-1"
+        }
+      }
+    }
+  }
+}

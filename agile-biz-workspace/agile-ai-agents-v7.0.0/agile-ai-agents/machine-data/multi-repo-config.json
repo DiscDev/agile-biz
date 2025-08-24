@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "project_structure": "single-repo",
+  "repositories": {
+    "main": {
+      "name": "main",
+      "path": "./",
+      "purpose": "Main application repository",
+      "active": true,
+      "dependencies": []
+    }
+  },
+  "coordination_rules": {
+    "branch_naming": "feature/{ticket-id}-{description}",
+    "version_strategy": "synchronized",
+    "deployment_order": ["main"],
+    "pr_linking": true,
+    "ci_coordination": "parallel-with-dependencies"
+  },
+  "dependencies": {},
+  "last_updated": "2025-01-28T12:00:00.000Z"
+}

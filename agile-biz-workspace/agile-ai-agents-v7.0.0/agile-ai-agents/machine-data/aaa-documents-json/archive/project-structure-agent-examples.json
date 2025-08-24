@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "document": "project-structure-agent-examples",
+    "title": "Project Structure Agent Usage Examples",
+    "timestamp": "2025-07-22T01:40:48.566Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md",
+    "document_type": "general_documentation",
+    "file_hash": "7d370e63a2b1c01adf4200ff017bcfd3",
+    "estimated_tokens": 310,
+    "full_md_tokens": 2250
+  },
+  "summary": "## Example 1: Starting a New SaaS Project",
+  "sections": [
+    {
+      "title": "Example 1: Starting a New SaaS Project",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#example-1-starting-a-new-saas-project",
+      "content_preview": ""
+    },
+    {
+      "title": "Example 2: Existing Monolith Evaluation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#example-2-existing-monolith-evaluation",
+      "content_preview": ""
+    },
+    {
+      "title": "Example 3: Multi-Repo Feature Coordination",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#example-3-multi-repo-feature-coordination",
+      "content_preview": ""
+    },
+    {
+      "title": "Example 4: Repository Health Monitoring",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#example-4-repository-health-monitoring",
+      "content_preview": ""
+    },
+    {
+      "title": "Example 5: Learning from Community Patterns",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#example-5-learning-from-community-patterns",
+      "content_preview": ""
+    },
+    {
+      "title": "Quick Reference Prompts",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#quick-reference-prompts",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Example 1: Starting a New SaaS Project": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#example-1-starting-a-new-saas-project",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "User Request": {
+          "content_preview": "```\nI'm starting a new B2B SaaS project for healthcare data analytics. We're a team of 3 developers, expecting to grow to 8 within 6 months. The platf...",
+          "tokens": 66,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#user-request-1"
+        },
+        "Project Structure Agent Response": {
+          "content_preview": "```\nBased on your project profile and community patterns from similar healthcare SaaS projects, here's my recommendation:\n\n**Initial Structure (Months...",
+          "tokens": 322,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#project-structure-agent-response-1"
+        }
+      }
+    },
+    "Example 2: Existing Monolith Evaluation": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#example-2-existing-monolith-evaluation",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "User Request": {
+          "content_preview": "```\nOur e-commerce platform is 2 years old with 80k lines of code. Build times are 18 minutes, we have 5 devs, and deployment requires coordination. S...",
+          "tokens": 45,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#user-request-3"
+        },
+        "Project Structure Agent Response": {
+          "content_preview": "```\nAnalyzing your repository health metrics against successful e-commerce platform evolutions:\n\n**Current Health Score: 62/100** (Declining trend)\n\n*...",
+          "tokens": 260,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#project-structure-agent-response-3"
+        }
+      }
+    },
+    "Example 3: Multi-Repo Feature Coordination": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#example-3-multi-repo-feature-coordination",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "User Request": {
+          "content_preview": "```\nWe need to implement user authentication across our multi-repo setup (marketing, app, api, admin). How should we coordinate this?\n```",
+          "tokens": 33,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#user-request-5"
+        },
+        "Project Structure Agent Response": {
+          "content_preview": "```\nI'll create a cross-repository coordination plan for user authentication:\n\n**Feature: User Authentication System**\n\n**Repository Impact Analysis:*...",
+          "tokens": 468,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#project-structure-agent-response-5"
+        }
+      }
+    },
+    "Example 4: Repository Health Monitoring": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#example-4-repository-health-monitoring",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "User Request": {
+          "content_preview": "```\nHow can I monitor our repository structure health and know when it's time to evolve?\n```",
+          "tokens": 22,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#user-request-7"
+        },
+        "Project Structure Agent Response": {
+          "content_preview": "```\nI'll set up repository health monitoring with evolution triggers:\n\n**Health Metrics Dashboard:**\n\n```javascript\n// repository-health.json (updated...",
+          "tokens": 349,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#project-structure-agent-response-7"
+        }
+      }
+    },
+    "Example 5: Learning from Community Patterns": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#example-5-learning-from-community-patterns",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "User Request": {
+          "content_preview": "```\nWhat patterns has the Project Structure Agent learned from other projects like mine?\n```",
+          "tokens": 22,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#user-request-9"
+        },
+        "Project Structure Agent Response": {
+          "content_preview": "```\nBased on analysis of 35 similar projects, here are validated patterns for your project type:\n\n**Project Type: B2B SaaS with Mobile App**\n\n**Succes...",
+          "tokens": 315,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#project-structure-agent-response-9"
+        }
+      }
+    },
+    "Quick Reference Prompts": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#quick-reference-prompts",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Initial Analysis": {
+          "content_preview": "```\nActing as the Project Structure Agent, analyze my project and recommend initial repository structure.\n```",
+          "tokens": 26,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#initial-analysis-1"
+        },
+        "Evolution Check": {
+          "content_preview": "```\nActing as the Project Structure Agent, evaluate if my repository needs to be split based on current metrics.\n```",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#evolution-check-1"
+        },
+        "Migration Planning": {
+          "content_preview": "```\nActing as the Project Structure Agent, create a detailed migration plan for evolving from single to multi-repo.\n```",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#migration-planning-1"
+        },
+        "Health Monitoring": {
+          "content_preview": "```\nActing as the Project Structure Agent, provide a health assessment of our current repository structure.\n```",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#health-monitoring-1"
+        },
+        "Feature Coordination": {
+          "content_preview": "```\nActing as the Project Structure Agent, coordinate the implementation of [feature] across our multiple repositories.\n```\n\n---\n\nThese examples demon...",
+          "tokens": 84,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-examples.md#feature-coordination-1"
+        }
+      }
+    }
+  }
+}

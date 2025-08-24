@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "document": "evolution-tracking-examples",
+    "title": "Repository Evolution Tracking - Example Usage Patterns",
+    "timestamp": "2025-08-11T22:02:16.889Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/evolution-tracking-examples.md",
+    "document_type": "general_documentation",
+    "file_hash": "f354a0ef26024d0876ed6bee4d1ab644",
+    "estimated_tokens": 258,
+    "full_md_tokens": 4336
+  },
+  "summary": "## Real-World Evolution Scenarios",
+  "sections": [
+    {
+      "title": "Real-World Evolution Scenarios",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/evolution-tracking-examples.md#real-world-evolution-scenarios",
+      "content_preview": ""
+    },
+    {
+      "title": "Agent Integration Examples",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/evolution-tracking-examples.md#agent-integration-examples",
+      "content_preview": ""
+    },
+    {
+      "title": "Monitoring Dashboard Integration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/evolution-tracking-examples.md#monitoring-dashboard-integration",
+      "content_preview": ""
+    },
+    {
+      "title": "Advanced Usage Patterns",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/evolution-tracking-examples.md#advanced-usage-patterns",
+      "content_preview": ""
+    },
+    {
+      "title": "Testing and Validation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/evolution-tracking-examples.md#testing-and-validation",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Real-World Evolution Scenarios": {
+      "md_reference": "agile-ai-agents/aaa-documents/evolution-tracking-examples.md#real-world-evolution-scenarios",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Scenario 1: SaaS Platform Evolution": {
+          "content_preview": "**Week 0: Initial Setup**\n```javascript\n// Project starts as single repository\nconst tracker = new RepositoryEvolutionTracker('./');\ntracker.trackEvol...",
+          "tokens": 352,
+          "md_reference": "agile-ai-agents/aaa-documents/evolution-tracking-examples.md#scenario-1-saas-platform-evolution-2"
+        },
+        "Scenario 2: E-commerce Platform Fragmentation": {
+          "content_preview": "**Initial State**\n```javascript\n// Large monolithic repository\nreportCodeAnalysis('ecommerce-main', {\n  linesOfCode: 65000,\n  fileCount: 450,\n  comple...",
+          "tokens": 259,
+          "md_reference": "agile-ai-agents/aaa-documents/evolution-tracking-examples.md#scenario-2-e-commerce-platform-fragmentation-2"
+        },
+        "Scenario 3: Microservices Over-Fragmentation": {
+          "content_preview": "**Warning Signs**\n```javascript\n// System detects over-fragmentation\n// 12 repositories with complex deployment order\nconst healthCheck = await tracke...",
+          "tokens": 127,
+          "md_reference": "agile-ai-agents/aaa-documents/evolution-tracking-examples.md#scenario-3-microservices-over-fragmentation-2"
+        }
+      }
+    },
+    "Agent Integration Examples": {
+      "md_reference": "agile-ai-agents/aaa-documents/evolution-tracking-examples.md#agent-integration-examples",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Coder Agent Integration": {
+          "content_preview": "```javascript\n// coder-agent.js\nclass CoderAgent {\n  async buildProject(repository) {\n    const buildStart = Date.now();\n    \n    try {\n      // Build...",
+          "tokens": 404,
+          "md_reference": "agile-ai-agents/aaa-documents/evolution-tracking-examples.md#coder-agent-integration-1"
+        },
+        "DevOps Agent Integration": {
+          "content_preview": "```javascript\n// devops-agent.js\nclass DevOpsAgent {\n  async deployApplication(repository, environment) {\n    const deployStart = Date.now();\n    \n   ...",
+          "tokens": 368,
+          "md_reference": "agile-ai-agents/aaa-documents/evolution-tracking-examples.md#devops-agent-integration-1"
+        },
+        "Project Manager Agent Integration": {
+          "content_preview": "```javascript\n// project-manager-agent.js\nclass ProjectManagerAgent {\n  async planSprint() {\n    // Check evolution recommendations before sprint plan...",
+          "tokens": 530,
+          "md_reference": "agile-ai-agents/aaa-documents/evolution-tracking-examples.md#project-manager-agent-integration-1"
+        }
+      }
+    },
+    "Monitoring Dashboard Integration": {
+      "md_reference": "agile-ai-agents/aaa-documents/evolution-tracking-examples.md#monitoring-dashboard-integration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Real-time Health Monitoring": {
+          "content_preview": "```javascript\n// dashboard-integration.js\nclass EvolutionDashboard {\n  async getHealthData() {\n    const RepositoryEvolutionTracker = require('./machi...",
+          "tokens": 399,
+          "md_reference": "agile-ai-agents/aaa-documents/evolution-tracking-examples.md#real-time-health-monitoring-1"
+        },
+        "Alert System Integration": {
+          "content_preview": "```javascript\n// alert-system.js\nclass EvolutionAlertSystem {\n  async checkAlerts() {\n    const collector = new MetricsCollector();\n    const triggers...",
+          "tokens": 365,
+          "md_reference": "agile-ai-agents/aaa-documents/evolution-tracking-examples.md#alert-system-integration-1"
+        }
+      }
+    },
+    "Advanced Usage Patterns": {
+      "md_reference": "agile-ai-agents/aaa-documents/evolution-tracking-examples.md#advanced-usage-patterns",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Custom Metric Collection": {
+          "content_preview": "```javascript\n// custom-metrics.js\nclass CustomMetrics {\n  static async collectPerformanceMetrics(repository) {\n    const collector = new MetricsColle...",
+          "tokens": 315,
+          "md_reference": "agile-ai-agents/aaa-documents/evolution-tracking-examples.md#custom-metric-collection-1"
+        },
+        "Evolution Planning Workflows": {
+          "content_preview": "```javascript\n// evolution-planner.js\nclass EvolutionPlanner {\n  async createEvolutionPlan(repository, targetStructure) {\n    const tracker = new Repo...",
+          "tokens": 484,
+          "md_reference": "agile-ai-agents/aaa-documents/evolution-tracking-examples.md#evolution-planning-workflows-1"
+        }
+      }
+    },
+    "Testing and Validation": {
+      "md_reference": "agile-ai-agents/aaa-documents/evolution-tracking-examples.md#testing-and-validation",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Evolution Success Validation": {
+          "content_preview": "```javascript\n// evolution-validator.js\nclass EvolutionValidator {\n  async validateEvolution(evolutionId) {\n    const tracker = new RepositoryEvolutio...",
+          "tokens": 556,
+          "md_reference": "agile-ai-agents/aaa-documents/evolution-tracking-examples.md#evolution-success-validation-1"
+        }
+      }
+    }
+  }
+}

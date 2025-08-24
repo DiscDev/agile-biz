@@ -1,0 +1,279 @@
+{
+  "meta": {
+    "document": "github-markdown-migration-checklist",
+    "title": "GitHub Markdown Standards Migration Checklist",
+    "timestamp": "2025-08-11T22:02:16.893Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md",
+    "document_type": "technical",
+    "file_hash": "2c3a9096e167a53a31eaf521cfb2ffbe",
+    "estimated_tokens": 542,
+    "full_md_tokens": 3721
+  },
+  "summary": "This checklist tracks the migration of all AgileAiAgents components to GitHub markdown standards. Track progress by agent, document type, and overall system compliance.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#overview",
+      "content_preview": "This checklist tracks the migration of all AgileAiAgents components to GitHub markdown standards. Track progress by agent, document type, and overall ..."
+    },
+    {
+      "title": "Migration Progress Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#migration-progress-summary",
+      "content_preview": ""
+    },
+    {
+      "title": "Agent-by-Agent Tracking (38 Total)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#agent-by-agent-tracking-38-total",
+      "content_preview": ""
+    },
+    {
+      "title": "Document Type Tracking (12+ categories)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#document-type-tracking-12-categories",
+      "content_preview": ""
+    },
+    {
+      "title": "Quality Assurance Checkpoints",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#quality-assurance-checkpoints",
+      "content_preview": ""
+    },
+    {
+      "title": "Consolidation Opportunities",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#consolidation-opportunities",
+      "content_preview": ""
+    },
+    {
+      "title": "System Files Updates",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#system-files-updates",
+      "content_preview": ""
+    },
+    {
+      "title": "Migration Timeline",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#migration-timeline",
+      "content_preview": ""
+    },
+    {
+      "title": "Validation and Testing",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#validation-and-testing",
+      "content_preview": ""
+    },
+    {
+      "title": "Success Criteria",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#success-criteria",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#overview",
+      "tokens": 42,
+      "content_preview": "This checklist tracks the migration of all AgileAiAgents components to GitHub markdown standards. Track progress by agent, document type, and overall ..."
+    },
+    "Migration Progress Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#migration-progress-summary",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Overall Progress": {
+          "content_preview": "* [ ] **Phase 1: Foundation** - Style guides and examples\n  * [x] Core style guide created\n  * [x] Agent category examples created  \n  * [x] CLAUDE.md...",
+          "tokens": 157,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#overall-progress-1"
+        }
+      }
+    },
+    "Agent-by-Agent Tracking (38 Total)": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#agent-by-agent-tracking-38-total",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Phase 2 - Priority Agents (8 agents)": {
+          "content_preview": "* [x] **Scrum Master Agent** (`ai-agents/scrum_master_agent.md`)\n  * [x] Sprint document templates\n  * [x] Task management formatting\n  * [x] Stakehol...",
+          "tokens": 155,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#phase-2-priority-agents-8-agents-3"
+        },
+        "Phase 3 - Remaining Agents (30 agents)": {
+          "content_preview": "* [x] **Logger Agent** (`ai-agents/logger_agent.md`)\n  * [x] System health dashboard formatting\n  * [x] Distributed tracing visualization\n  * [x] Perf...",
+          "tokens": 816,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#phase-3-remaining-agents-30-agents-4"
+        }
+      }
+    },
+    "Document Type Tracking (12+ categories)": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#document-type-tracking-12-categories",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Sprint Templates": {
+          "content_preview": "* [ ] **Sprint Planning Templates** (`aaa-documents/sprint-planning-templates-enhanced.md`)\n  * [ ] Task list formatting updated\n  * [ ] Table structu...",
+          "tokens": 149,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#sprint-templates-1"
+        },
+        "Research Templates": {
+          "content_preview": "* [ ] **Research Document Template** (`aaa-documents/research-document-template.md`)\n  * [ ] Citation formatting\n  * [ ] Data table standards\n  * [ ] ...",
+          "tokens": 80,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#research-templates-1"
+        },
+        "Workflow Templates": {
+          "content_preview": "* [ ] **Workflow Templates Directory** (`aaa-documents/workflow-templates/`)\n  * [ ] Command-based workflows\n  * [ ] Agent coordination patterns\n  * [...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#workflow-templates-1"
+        },
+        "Testing Templates": {
+          "content_preview": "* [ ] **Testing Guide** (`tests/TESTING-GUIDE.md`)\n  * [ ] Test case formatting\n  * [ ] Coverage reporting\n  * [ ] Automation procedures",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#testing-templates-1"
+        },
+        "API Documentation Templates": {
+          "content_preview": "* [ ] **API Integration Patterns** (Various API-related documents)\n  * [ ] Endpoint documentation\n  * [ ] Parameter tables\n  * [ ] Code examples",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#api-documentation-templates-1"
+        },
+        "Business Analysis Templates": {
+          "content_preview": "* [ ] **Business Strategy Documents** (Various business templates)\n  * [ ] Market analysis formats\n  * [ ] Financial projections\n  * [ ] Strategic pla...",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#business-analysis-templates-1"
+        },
+        "Financial Modeling Templates": {
+          "content_preview": "* [ ] **Financial Analysis Templates** (Finance-related documents)\n  * [ ] ROI calculations\n  * [ ] Budget planning\n  * [ ] Investment analysis",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#financial-modeling-templates-1"
+        },
+        "Security Assessment Templates": {
+          "content_preview": "* [ ] **Security Documentation** (Security-related templates)\n  * [ ] Threat assessment\n  * [ ] Compliance checklists\n  * [ ] Audit procedures",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#security-assessment-templates-1"
+        },
+        "Architecture Documentation": {
+          "content_preview": "* [ ] **System Architecture Templates** (Architecture documentation)\n  * [ ] Component diagrams\n  * [ ] Integration patterns\n  * [ ] Deployment archit...",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#architecture-documentation-1"
+        },
+        "Deployment Guides": {
+          "content_preview": "* [ ] **Deployment Documentation** (`aaa-documents/deployment.md`)\n  * [ ] Deployment procedures\n  * [ ] Configuration management\n  * [ ] Rollback pro...",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#deployment-guides-1"
+        },
+        "System Configuration Guides": {
+          "content_preview": "* [ ] **Configuration Documentation** (Various config guides)\n  * [ ] Setup procedures\n  * [ ] Parameter references\n  * [ ] Troubleshooting guides",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#system-configuration-guides-1"
+        },
+        "Community Learning Templates": {
+          "content_preview": "* [ ] **Learning Analysis Templates** (Community learning documents)\n  * [ ] Pattern documentation\n  * [ ] Contribution guidelines\n  * [ ] Analysis pr...",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#community-learning-templates-1"
+        }
+      }
+    },
+    "Quality Assurance Checkpoints": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#quality-assurance-checkpoints",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Per-Agent Quality Review": {
+          "content_preview": "For each agent migration, verify:\n\n* [ ] **Basic Format Compliance**\n  * [ ] Headers start with `##` (not `#`)\n  * [ ] Lists use `*` (not `-`)\n  * [ ]...",
+          "tokens": 243,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#per-agent-quality-review-1"
+        }
+      }
+    },
+    "Consolidation Opportunities": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#consolidation-opportunities",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Documents to Review for Consolidation": {
+          "content_preview": "During migration, track potential consolidations:\n\n* [ ] **Duplicate Templates**: Templates covering similar functions\n* [ ] **Redundant Guides**: Mul...",
+          "tokens": 74,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#documents-to-review-for-consolidation-1"
+        },
+        "Consolidation Tracking": {
+          "content_preview": "* [ ] **Verbosity Documentation** - Multiple files to consolidate\n* [ ] **Folder Structure Documentation** - Potential redundancy  \n* [ ] **Sprint Man...",
+          "tokens": 69,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#consolidation-tracking-1"
+        }
+      }
+    },
+    "System Files Updates": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#system-files-updates",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Core System Components": {
+          "content_preview": "* [ ] **Document Creation Rules** (`machine-data/document-creation-rules.json`)\n  * [ ] Add formatting standards\n  * [ ] Include quality checks\n  * [ ...",
+          "tokens": 123,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#core-system-components-1"
+        }
+      }
+    },
+    "Migration Timeline": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#migration-timeline",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Estimated Completion Times": {
+          "content_preview": "* **Phase 1 Foundation**: ✅ Completed\n* **Phase 2 Priority Agents**: 4-5 hours (5 + 3 agents)\n* **Phase 3 Remaining Agents**: 6-8 hours (30 agents)\n* ...",
+          "tokens": 51,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#estimated-completion-times-1"
+        },
+        "Milestone Targets": {
+          "content_preview": "* **Week 1**: Complete Phase 2 (Priority agents)\n* **Week 2**: Complete Phase 3 Batches 3-4 (Technical and Business agents)\n* **Week 3**: Complete Pha...",
+          "tokens": 56,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#milestone-targets-1"
+        }
+      }
+    },
+    "Validation and Testing": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#validation-and-testing",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Pre-Migration Testing": {
+          "content_preview": "* [ ] **Style Guide Validation**: Test formatting examples\n* [ ] **Template Testing**: Verify agent examples work correctly\n* [ ] **Cross-Reference Te...",
+          "tokens": 56,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#pre-migration-testing-1"
+        },
+        "Post-Migration Validation": {
+          "content_preview": "* [ ] **Agent Template Testing**: Test each updated agent\n* [ ] **Document Creation Testing**: Create sample documents\n* [ ] **System Integration Test...",
+          "tokens": 55,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#post-migration-validation-1"
+        }
+      }
+    },
+    "Success Criteria": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#success-criteria",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Completion Indicators": {
+          "content_preview": "* [ ] **All 38 agents updated** with proper markdown formatting\n* [ ] **All document templates** follow GitHub standards\n* [ ] **System files updated*...",
+          "tokens": 78,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#completion-indicators-1"
+        },
+        "Quality Metrics": {
+          "content_preview": "* **Format Compliance**: 100% of agents use proper markdown\n* **Feature Utilization**: Appropriate use of advanced features by agent type\n* **Document...",
+          "tokens": 114,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-migration-checklist.md#quality-metrics-1"
+        }
+      }
+    }
+  }
+}

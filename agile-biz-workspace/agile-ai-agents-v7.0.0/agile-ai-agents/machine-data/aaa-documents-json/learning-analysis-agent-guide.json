@@ -1,0 +1,367 @@
+{
+  "meta": {
+    "document": "learning-analysis-agent-guide",
+    "title": "Learning Analysis Agent Guide",
+    "timestamp": "2025-08-11T22:02:16.896Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md",
+    "document_type": "guide",
+    "file_hash": "7dbc31673cccd549cac0a2f9611dcf29",
+    "estimated_tokens": 814,
+    "full_md_tokens": 1597
+  },
+  "summary": "The Learning Analysis Agent (#37) is a specialized agent responsible for analyzing community contributions, identifying patterns, and implementing improvements across all AgileAiAgents. This agent represents the continuous improvement engine of the system.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#overview",
+      "content_preview": "The Learning Analysis Agent (#37) is a specialized agent responsible for analyzing community contributions, identifying patterns, and implementing imp..."
+    },
+    {
+      "title": "Agent Responsibilities",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#agent-responsibilities",
+      "content_preview": ""
+    },
+    {
+      "title": "Implementation Guide",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#implementation-guide",
+      "content_preview": ""
+    },
+    {
+      "title": "Implementation Plans",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#implementation-plans",
+      "content_preview": ""
+    },
+    {
+      "title": "Analysis Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#analysis-summary",
+      "content_preview": "- Contributions analyzed: 5\n- Key patterns identified: 3\n- Affected agents: [list]\n- Expected impact: +15% efficiency"
+    },
+    {
+      "title": "Implementation Phases",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#implementation-phases",
+      "content_preview": ""
+    },
+    {
+      "title": "Version Tracking",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#version-tracking",
+      "content_preview": ""
+    },
+    {
+      "title": "Version History",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#version-history",
+      "content_preview": ""
+    },
+    {
+      "title": "Learning Broadcasts",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#learning-broadcasts",
+      "content_preview": ""
+    },
+    {
+      "title": "Success Metrics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#success-metrics",
+      "content_preview": ""
+    },
+    {
+      "title": "Commands and Usage",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#commands-and-usage",
+      "content_preview": ""
+    },
+    {
+      "title": "Integration Points",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#integration-points",
+      "content_preview": ""
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "Future Enhancements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#future-enhancements",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#overview",
+      "tokens": 64,
+      "content_preview": "The Learning Analysis Agent (#37) is a specialized agent responsible for analyzing community contributions, identifying patterns, and implementing imp..."
+    },
+    "Agent Responsibilities": {
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#agent-responsibilities",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Contribution Analysis": {
+          "content_preview": "- Reviews all submitted community learnings\n- Identifies common patterns across projects\n- Extracts actionable improvements\n- Prioritizes implementati...",
+          "tokens": 42,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#contribution-analysis-1"
+        },
+        "Pattern Recognition": {
+          "content_preview": "- **Success Patterns**: What works consistently well\n- **Anti-Patterns**: What to avoid\n- **Technology Patterns**: Framework-specific insights\n- **Coo...",
+          "tokens": 48,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#pattern-recognition-1"
+        },
+        "Implementation Planning": {
+          "content_preview": "- Creates detailed implementation plans\n- Assigns improvements to specific agents\n- Estimates impact and risk\n- Tracks implementation success",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#implementation-planning-1"
+        },
+        "Version Management": {
+          "content_preview": "- Updates agent versions after improvements\n- Maintains dual versioning system\n- Tracks which contributions led to improvements\n- Manages rollback cap...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#version-management-1"
+        },
+        "Cross-Agent Learning": {
+          "content_preview": "- Broadcasts high-confidence learnings\n- Manages learning subscriptions\n- Tracks adoption rates\n- Measures effectiveness",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#cross-agent-learning-1"
+        }
+      }
+    },
+    "Implementation Guide": {
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#implementation-guide",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Workflow Overview": {
+          "content_preview": "```mermaid\ngraph TD\n    A[Community Contributions] -->|Analyze| B[Learning Analysis Agent]\n    B --> C[Pattern Detection]\n    C --> D[Implementation P...",
+          "tokens": 68,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#workflow-overview-1"
+        },
+        "Analysis Process": {
+          "content_preview": "1. **Data Collection**\n   ```javascript\n   analyzeContributions() {\n     const contributions = loadRecentContributions();\n     const patterns = extrac...",
+          "tokens": 135,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#analysis-process-1"
+        }
+      }
+    },
+    "Implementation Plans": {
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#implementation-plans",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Plan Structure": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#plan-structure-1"
+        }
+      }
+    },
+    "Analysis Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#analysis-summary",
+      "tokens": 29,
+      "content_preview": "- Contributions analyzed: 5\n- Key patterns identified: 3\n- Affected agents: [list]\n- Expected impact: +15% efficiency"
+    },
+    "Implementation Phases": {
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#implementation-phases",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Phase 1: Update Coder Agent ⬜": {
+          "content_preview": "- [ ] Add React 18 concurrent features pattern\n- [ ] Update TypeScript configurations\n- [ ] Add performance monitoring\n- Expected impact: +20% render ...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#phase-1-update-coder-agent-1"
+        },
+        "Phase 2: Enhance Testing Agent ⬜": {
+          "content_preview": "- [ ] Add browser-based testing patterns\n- [ ] Implement visual regression tests\n- [ ] Add performance benchmarks\n- Expected impact: +15% bug detectio...",
+          "tokens": 37,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#phase-2-enhance-testing-agent-1"
+        },
+        "Approval Process": {
+          "content_preview": "1. User reviews implementation plan\n2. Can modify or reject specific phases\n3. Approved phases are implemented\n4. Success metrics tracked for 7 days",
+          "tokens": 37,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#approval-process-1"
+        }
+      }
+    },
+    "Version Tracking": {
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#version-tracking",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Dual Versioning System": {
+          "content_preview": "- **System Version**: `1.2.0` (official releases)\n- **Self-Improvement Version**: `1.2.0+20250128.1`",
+          "tokens": 22,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#dual-versioning-system-1"
+        },
+        "Version History Format": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#version-history-format-1"
+        }
+      }
+    },
+    "Version History": {
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#version-history",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "v1.2.0+20250128.1": {
+          "content_preview": "- **Source**: contributions/2025-01-27-saas-dashboard\n- **Changes**: Added browser testing for SPAs\n- **Impact**: +15% bug detection rate\n- **Validate...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#v120202501281-1"
+        }
+      }
+    },
+    "Learning Broadcasts": {
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#learning-broadcasts",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Broadcast Criteria": {
+          "content_preview": "- Confidence > 0.9\n- Validated in production\n- Applicable to multiple agents\n- Clear implementation path",
+          "tokens": 26,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#broadcast-criteria-1"
+        },
+        "Broadcast Format": {
+          "content_preview": "```json\n{\n  \"source_agent\": \"coder_agent\",\n  \"learning_type\": \"pattern\",\n  \"title\": \"React 18 Concurrent Features\",\n  \"description\": \"Improved render ...",
+          "tokens": 89,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#broadcast-format-1"
+        }
+      }
+    },
+    "Success Metrics": {
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#success-metrics",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Tracking Implementation Success": {
+          "content_preview": "1. **Before Metrics**: Baseline measurements\n2. **After Metrics**: Post-implementation measurements\n3. **Validation Period**: 7 days monitoring\n4. **R...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#tracking-implementation-success-1"
+        },
+        "Key Metrics": {
+          "content_preview": "- Development velocity\n- Bug detection rate\n- Token usage efficiency\n- Time to deployment\n- Error recovery time",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#key-metrics-1"
+        }
+      }
+    },
+    "Commands and Usage": {
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#commands-and-usage",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Analyze Recent Contributions": {
+          "content_preview": "```bash\nnpm run analyze-learnings\n```\nThis command:\n- Loads contributions from last 30 days\n- Identifies patterns with 3+ occurrences\n- Generates impl...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#analyze-recent-contributions-1"
+        },
+        "View Learning Report": {
+          "content_preview": "```bash\nnpm run learning-report\n```\nShows:\n- Recent implementations\n- Success metrics\n- Failed improvements\n- Upcoming plans",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#view-learning-report-1"
+        },
+        "Force Analysis (Admin)": {
+          "content_preview": "```bash\nnode machine-data/learning-analysis-workflow.js analyze --force\n```\nAnalyzes all contributions regardless of date.",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#force-analysis-admin-1"
+        }
+      }
+    },
+    "Integration Points": {
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#integration-points",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "With Project State Manager": {
+          "content_preview": "- Receives learning capture notifications\n- Updates learning state\n- Triggers contribution prompts",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#with-project-state-manager-1"
+        },
+        "With Other Agents": {
+          "content_preview": "- Sends implementation instructions\n- Receives success/failure reports\n- Coordinates version updates",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#with-other-agents-1"
+        },
+        "With Version Manager": {
+          "content_preview": "- Requests version updates\n- Tracks improvement history\n- Manages rollbacks",
+          "tokens": 19,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#with-version-manager-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "For Contribution Analysis": {
+          "content_preview": "1. Wait for 3+ similar patterns\n2. Validate with real metrics\n3. Start with low-risk improvements\n4. Monitor for 7 days minimum",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#for-contribution-analysis-1"
+        },
+        "For Implementation": {
+          "content_preview": "1. Make atomic changes\n2. Include tests with changes\n3. Document the learning source\n4. Track specific metrics",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#for-implementation-1"
+        },
+        "For Broadcasting": {
+          "content_preview": "1. Only broadcast proven patterns\n2. Include clear implementation\n3. Make adoption optional\n4. Track adoption success",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#for-broadcasting-1"
+        }
+      }
+    },
+    "Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Troubleshooting": {
+          "content_preview": "**Pattern Detection Too Sensitive**\n- Increase minimum occurrence to 5\n- Raise confidence threshold to 0.8\n\n**Implementations Failing**\n- Check agent ...",
+          "tokens": 77,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#troubleshooting-2"
+        }
+      }
+    },
+    "Future Enhancements": {
+      "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#future-enhancements",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Planned Features": {
+          "content_preview": "1. **ML-Based Pattern Detection**: Use machine learning for deeper insights\n2. **Predictive Impact**: Estimate improvement impact before implementatio...",
+          "tokens": 65,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#planned-features-1"
+        },
+        "Research Areas": {
+          "content_preview": "- Cross-project learning networks\n- Automatic code generation from patterns\n- Performance prediction models\n- Failure pattern prevention\n\n---\n\n**Remem...",
+          "tokens": 74,
+          "md_reference": "agile-ai-agents/aaa-documents/learning-analysis-agent-guide.md#research-areas-1"
+        }
+      }
+    }
+  }
+}

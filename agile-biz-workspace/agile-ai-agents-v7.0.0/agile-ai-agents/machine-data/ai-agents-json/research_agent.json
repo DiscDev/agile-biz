@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "agent": "research_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 237,
+    "full_md_tokens": 10539,
+    "md_file": "agile-ai-agents/ai-agents/research_agent.md",
+    "file_hash": "79a34dd351193d5e6e7540f544f99542"
+  },
+  "summary": "## Overview\nThe Research Agent specializes in comprehensive information discovery, competitive analysis, and knowledge synthesis. This agent provides evidence-based insights to support strategic decision-making across all project areas.",
+  "core_responsibilities": {
+    "summary": [
+      "Comprehensive Research Report Generation",
+      "Branding & Domain Name Research (ENHANCED SPECIALIZATION)",
+      "Data Synthesis & Analysis",
+      "Knowledge Organization & Reporting"
+    ],
+    "details_tokens": 2312,
+    "md_reference": "agile-ai-agents/ai-agents/research_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "Competitive Analysis Workflow (Standard Mode)",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/research_agent.md#competitive-analysis-workflow-standard-mode"
+      },
+      {
+        "name": "Parallel Research Workflow (Sub-Agent Mode)",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/research_agent.md#parallel-research-workflow-sub-agent-mode"
+      },
+      {
+        "name": "Comprehensive Branding & Domain Research Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/research_agent.md#comprehensive-branding-domain-research-workflow"
+      },
+      {
+        "name": "Firecrawl MCP Competitive Intelligence Workflow (WHEN CONFIGURED) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/research_agent.md#firecrawl-mcp-competitive-intelligence-workflow-when-configured-workflow"
+      },
+      {
+        "name": "Perplexity MCP Real-time Research Workflow (WHEN CONFIGURED) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/research_agent.md#perplexity-mcp-real-time-research-workflow-when-configured-workflow"
+      },
+      {
+        "name": "Google Trends Market Intelligence Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/research_agent.md#google-trends-market-intelligence-workflow"
+      },
+      {
+        "name": "Technology Research Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/research_agent.md#technology-research-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/research_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/research_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "document": "state",
+    "title": "Sprint State",
+    "timestamp": "2025-07-22T01:41:03.750Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/state.md",
+    "document_type": "general_documentation",
+    "file_hash": "26f7aefe69778a42e639366e8c3a3723",
+    "estimated_tokens": 111,
+    "full_md_tokens": 241
+  },
+  "summary": "**Sprint**: sprint-2025-01-09-example-structure",
+  "sections": [
+    {
+      "title": "State History",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/state.md#state-history",
+      "content_preview": "| Previous State | New State | Changed At | Changed By | Notes |\n|----------------|-----------|------------|------------|-------|\n| - | planning | 202..."
+    },
+    {
+      "title": "Notes",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/state.md#notes",
+      "content_preview": "This is an example sprint demonstrating the new folder structure."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "sprint_management"
+  ],
+  "section_details": {
+    "State History": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/state.md#state-history",
+      "tokens": 170,
+      "content_preview": "| Previous State | New State | Changed At | Changed By | Notes |\n|----------------|-----------|------------|------------|-------|\n| - | planning | 202..."
+    },
+    "Notes": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/state.md#notes",
+      "tokens": 17,
+      "content_preview": "This is an example sprint demonstrating the new folder structure."
+    }
+  }
+}

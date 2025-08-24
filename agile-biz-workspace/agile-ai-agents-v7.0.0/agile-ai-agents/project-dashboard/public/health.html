@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgileAiAgents Dashboard Health Monitor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .status-banner {
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .status-healthy {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            box-shadow: 0 5px 20px rgba(56, 239, 125, 0.3);
+        }
+
+        .status-degraded {
+            background: linear-gradient(135deg, #f2994a 0%, #f2c94c 100%);
+            box-shadow: 0 5px 20px rgba(242, 201, 76, 0.3);
+        }
+
+        .status-critical {
+            background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+            box-shadow: 0 5px 20px rgba(235, 51, 73, 0.3);
+        }
+
+        .status-error {
+            background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 100%);
+            box-shadow: 0 5px 20px rgba(253, 29, 29, 0.3);
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .metric-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .metric-title {
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .metric-value {
+            font-size: 2em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .checks-container {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .check-item:last-child {
+            border-bottom: none;
+        }
+
+        .check-name {
+            font-size: 1.1em;
+        }
+
+        .check-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .status-ok {
+            background: #38ef7d;
+            box-shadow: 0 0 10px rgba(56, 239, 125, 0.5);
+        }
+
+        .status-fail {
+            background: #f45c43;
+            box-shadow: 0 0 10px rgba(244, 92, 67, 0.5);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .alerts-container {
+            margin-bottom: 30px;
+        }
+
+        .alert {
+            background: #1a1a1a;
+            border-left: 4px solid;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        .alert-warning {
+            border-color: #f2c94c;
+            background: rgba(242, 201, 76, 0.1);
+        }
+
+        .alert-critical {
+            border-color: #f45c43;
+            background: rgba(244, 92, 67, 0.1);
+        }
+
+        .alert-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .alert-details {
+            color: #aaa;
+            font-size: 0.9em;
+        }
+
+        .refresh-info {
+            text-align: center;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .error-message {
+            background: rgba(244, 92, 67, 0.1);
+            border: 1px solid #f45c43;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            color: #f45c43;
+        }
+
+        .health-score {
+            font-size: 3em;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .score-100 { color: #38ef7d; }
+        .score-80 { color: #a8e063; }
+        .score-60 { color: #f2c94c; }
+        .score-40 { color: #ff8c42; }
+        .score-20 { color: #f45c43; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏥 Dashboard Health Monitor</h1>
+        
+        <div id="health-content">
+            <div class="loading">Loading health status...</div>
+        </div>
+        
+        <div class="refresh-info">
+            Auto-refreshes every 30 seconds • Last update: <span id="last-update">-</span>
+        </div>
+    </div>
+
+    <script>
+        let healthData = null;
+
+        async function fetchHealthStatus() {
+            try {
+                const response = await fetch('/api/health');
+                healthData = await response.json();
+                updateHealthDisplay();
+            } catch (error) {
+                console.error('Failed to fetch health status:', error);
+                showError('Failed to connect to health monitor');
+            }
+        }
+
+        function updateHealthDisplay() {
+            const container = document.getElementById('health-content');
+            
+            if (!healthData) {
+                container.innerHTML = '<div class="loading">No health data available</div>';
+                return;
+            }
+
+            let html = '';
+
+            // Status Banner
+            const statusClass = `status-${healthData.status}`;
+            html += `
+                <div class="status-banner ${statusClass}">
+                    System Status: ${healthData.status.toUpperCase()}
+                    ${healthData.summary ? ` (${healthData.summary.healthPercentage}% Healthy)` : ''}
+                </div>
+            `;
+
+            // Health Score
+            if (healthData.summary) {
+                const scoreClass = healthData.summary.healthPercentage >= 90 ? 'score-100' :
+                                 healthData.summary.healthPercentage >= 80 ? 'score-80' :
+                                 healthData.summary.healthPercentage >= 60 ? 'score-60' :
+                                 healthData.summary.healthPercentage >= 40 ? 'score-40' : 'score-20';
+                html += `
+                    <div class="health-score ${scoreClass}">
+                        ${healthData.summary.healthPercentage}%
+                    </div>
+                `;
+            }
+
+            // Alerts
+            if (healthData.alerts && healthData.alerts.length > 0) {
+                html += '<div class="alerts-container"><h2>⚠️ Active Alerts</h2>';
+                healthData.alerts.forEach(alert => {
+                    html += `
+                        <div class="alert alert-${alert.level}">
+                            <div class="alert-title">${alert.message}</div>
+                            <div class="alert-details">${alert.details}</div>
+                        </div>
+                    `;
+                });
+                html += '</div>';
+            }
+
+            // Metrics Grid
+            if (healthData.metrics) {
+                html += '<div class="metrics-grid">';
+                
+                // Memory Metrics
+                if (healthData.metrics.memory) {
+                    html += `
+                        <div class="metric-card">
+                            <div class="metric-title">Heap Memory</div>
+                            <div class="metric-value">${healthData.metrics.memory.heapUsedPercent}%</div>
+                            <div style="color: #666; font-size: 0.9em;">
+                                ${healthData.metrics.memory.heapUsed}MB / ${healthData.metrics.memory.heapTotal}MB
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-title">System Memory</div>
+                            <div class="metric-value">${healthData.metrics.memory.systemUsedPercent}%</div>
+                            <div style="color: #666; font-size: 0.9em;">
+                                ${healthData.metrics.memory.systemFree}GB free
+                            </div>
+                        </div>
+                    `;
+                }
+
+                // Disk Space
+                if (healthData.metrics.diskSpace) {
+                    html += `
+                        <div class="metric-card">
+                            <div class="metric-title">Disk Space</div>
+                            <div class="metric-value">${healthData.metrics.diskSpace.usedPercent}%</div>
+                            <div style="color: #666; font-size: 0.9em;">
+                                ${healthData.metrics.diskSpace.availableGB}GB available
+                            </div>
+                        </div>
+                    `;
+                }
+
+                // CPU
+                if (healthData.metrics.cpu) {
+                    html += `
+                        <div class="metric-card">
+                            <div class="metric-title">CPU Load (1min)</div>
+                            <div class="metric-value">${healthData.metrics.cpu.loadAverage['1min']}</div>
+                            <div style="color: #666; font-size: 0.9em;">
+                                ${healthData.metrics.cpu.cores} cores
+                            </div>
+                        </div>
+                    `;
+                }
+
+                // Uptime
+                if (healthData.metrics.uptime) {
+                    const hours = Math.floor(healthData.metrics.uptime / 3600);
+                    const minutes = Math.floor((healthData.metrics.uptime % 3600) / 60);
+                    html += `
+                        <div class="metric-card">
+                            <div class="metric-title">Uptime</div>
+                            <div class="metric-value">${hours}h ${minutes}m</div>
+                        </div>
+                    `;
+                }
+
+                // Response Time
+                if (healthData.metrics.responseTime !== undefined) {
+                    html += `
+                        <div class="metric-card">
+                            <div class="metric-title">Health Check Time</div>
+                            <div class="metric-value">${healthData.metrics.responseTime}ms</div>
+                        </div>
+                    `;
+                }
+
+                html += '</div>';
+            }
+
+            // System Checks
+            if (healthData.checks) {
+                html += '<div class="checks-container"><h2>🔍 System Checks</h2>';
+                
+                const checkNames = {
+                    fileSystem: 'File System Access',
+                    webSocket: 'WebSocket Server',
+                    memory: 'Memory Usage',
+                    diskSpace: 'Disk Space',
+                    cpu: 'CPU Usage',
+                    folderPermissions: 'Folder Permissions',
+                    process: 'Process Health',
+                    dependencies: 'Dependencies',
+                    port: 'Port Availability',
+                    fileWatcher: 'File Watcher'
+                };
+
+                Object.entries(healthData.checks).forEach(([key, value]) => {
+                    const displayName = checkNames[key] || key;
+                    const statusClass = value ? 'status-ok' : 'status-fail';
+                    const statusText = value ? 'OK' : 'FAIL';
+                    
+                    html += `
+                        <div class="check-item">
+                            <div class="check-name">${displayName}</div>
+                            <div class="check-status">
+                                <span>${statusText}</span>
+                                <div class="status-indicator ${statusClass}"></div>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                html += '</div>';
+            }
+
+            container.innerHTML = html;
+            document.getElementById('last-update').textContent = new Date().toLocaleTimeString();
+        }
+
+        function showError(message) {
+            const container = document.getElementById('health-content');
+            container.innerHTML = `<div class="error-message">❌ ${message}</div>`;
+        }
+
+        // Initial fetch
+        fetchHealthStatus();
+
+        // Refresh every 30 seconds
+        setInterval(fetchHealthStatus, 30000);
+
+        // Also listen for real-time updates if WebSocket is available
+        if (typeof io !== 'undefined') {
+            const socket = io();
+            socket.on('health-update', (data) => {
+                healthData = data;
+                updateHealthDisplay();
+            });
+        }
+    </script>
+</body>
+</html>

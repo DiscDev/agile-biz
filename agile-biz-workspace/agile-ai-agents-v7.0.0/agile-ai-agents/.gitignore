@@ -1,0 +1,17 @@
+.DS_Store
+**/.DS_Store
+diagnostic-report.json
+
+# Release artifacts
+agile-ai-agents-v*.zip
+*.zip
+
+# Claude Code settings
+.claude/settings.local.json
+
+# Agent backups
+.agent-backups/
+
+# Log files
+logs/
+*.log

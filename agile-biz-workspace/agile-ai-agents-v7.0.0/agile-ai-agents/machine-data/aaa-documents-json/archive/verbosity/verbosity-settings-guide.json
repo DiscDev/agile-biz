@@ -1,0 +1,207 @@
+{
+  "meta": {
+    "document": "verbosity-settings-guide",
+    "title": "Verbosity Settings Guide",
+    "timestamp": "2025-07-22T01:40:48.572Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md",
+    "document_type": "guide",
+    "file_hash": "d6f4d97e60ad845c9e4e35bd48b92dc2",
+    "estimated_tokens": 487,
+    "full_md_tokens": 1126
+  },
+  "summary": "This guide explains how to configure the verbosity level for your AgileAiAgents project to control how much detail agents display during operations.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#overview",
+      "content_preview": "This guide explains how to configure the verbosity level for your AgileAiAgents project to control how much detail agents display during operations."
+    },
+    {
+      "title": "Where to Set Verbosity",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#where-to-set-verbosity",
+      "content_preview": "The verbosity level is configured in the **CLAUDE.md** file at the root of your agile-ai-agents directory."
+    },
+    {
+      "title": "Verbosity Levels",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#verbosity-levels",
+      "content_preview": ""
+    },
+    {
+      "title": "What Each Setting Controls",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#what-each-setting-controls",
+      "content_preview": ""
+    },
+    {
+      "title": "Example Outputs by Level",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#example-outputs-by-level",
+      "content_preview": ""
+    },
+    {
+      "title": "Changing Verbosity Settings",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#changing-verbosity-settings",
+      "content_preview": "1. Open `agile-ai-agents/CLAUDE.md`\n2. Find the `verbosity:` section near the top\n3. Change the `level:` to your desired setting\n4. Adjust display set..."
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#best-practices",
+      "content_preview": "1. **Development**: Use `verbose` to understand what agents are doing\n2. **Production**: Use `quiet` or `normal` to reduce noise\n3. **Debugging**: Use..."
+    },
+    {
+      "title": "Per-Agent Override",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#per-agent-override",
+      "content_preview": "Some agents may have their own verbosity settings for specific operations. These override the global setting when specified."
+    },
+    {
+      "title": "External Projects",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#external-projects",
+      "content_preview": "When using AgileAiAgents in external projects:\n1. Create a `CLAUDE.md` file in your project root\n2. Copy the verbosity configuration section\n3. Adjust..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#overview",
+      "tokens": 37,
+      "content_preview": "This guide explains how to configure the verbosity level for your AgileAiAgents project to control how much detail agents display during operations."
+    },
+    "Where to Set Verbosity": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#where-to-set-verbosity",
+      "tokens": 26,
+      "content_preview": "The verbosity level is configured in the **CLAUDE.md** file at the root of your agile-ai-agents directory.",
+      "subsections": {
+        "Location": {
+          "content_preview": "`agile-ai-agents/CLAUDE.md`",
+          "tokens": 7,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#location-1"
+        },
+        "Configuration Section": {
+          "content_preview": "```yaml\nverbosity:\n  level: \"verbose\"              # Options: quiet, normal, verbose, debug\n  display:\n    format: \"grouped_by_agent\"  # How to group ...",
+          "tokens": 82,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#configuration-section-1"
+        }
+      }
+    },
+    "Verbosity Levels": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#verbosity-levels",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. quiet": {
+          "content_preview": "- Minimal output\n- Only critical errors and final results\n- No progress indicators\n- Best for: Production environments, automated scripts",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#1-quiet-1"
+        },
+        "2. normal (default)": {
+          "content_preview": "- Standard output\n- Key milestones and phase transitions\n- Important status updates\n- Errors and warnings\n- Best for: Regular development work",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#2-normal-default-1"
+        },
+        "3. verbose (recommended for development)": {
+          "content_preview": "- Detailed progress tracking\n- Phase-by-phase updates with timing\n- Real-time status indicators\n- Percentage completion\n- Elapsed time tracking\n- Best...",
+          "tokens": 53,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#3-verbose-recommended-for-development-1"
+        },
+        "4. debug": {
+          "content_preview": "- Everything from verbose mode\n- Plus internal state information\n- Detailed error traces\n- All decision points\n- Best for: Troubleshooting complex iss...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#4-debug-1"
+        }
+      }
+    },
+    "What Each Setting Controls": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#what-each-setting-controls",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "level": {
+          "content_preview": "The main verbosity setting that determines how much information agents display.",
+          "tokens": 20,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#level-1"
+        },
+        "display.format": {
+          "content_preview": "How status messages are organized:\n- `grouped_by_agent` - Groups all messages from the same agent together\n- `chronological` - Shows messages in time ...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#displayformat-1"
+        },
+        "display.timezone": {
+          "content_preview": "Your local timezone for timestamps. Examples:\n- `America/New_York` (EST/EDT)\n- `America/Los_Angeles` (PST/PDT)\n- `Europe/London` (GMT/BST)\n- `Asia/Tok...",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#displaytimezone-1"
+        },
+        "display.time_format": {
+          "content_preview": "- `12h` - Shows time as \"10:30:45 AM\"\n- `24h` - Shows time as \"10:30:45\"",
+          "tokens": 17,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#displaytime_format-1"
+        },
+        "display.show_timezone": {
+          "content_preview": "- `true` - Shows \"10:30:45 AM PST\"\n- `false` - Shows \"10:30:45 AM\"",
+          "tokens": 16,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#displayshow_timezone-1"
+        }
+      }
+    },
+    "Example Outputs by Level": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#example-outputs-by-level",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "quiet Mode": {
+          "content_preview": "```\nPRD Document created successfully.\n```",
+          "tokens": 9,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#quiet-mode-1"
+        },
+        "normal Mode": {
+          "content_preview": "```\nPRD Agent: Starting requirements analysis...\nPRD Agent: Analysis complete. Creating document...\nPRD Agent: Document created at: project-documents/...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#normal-mode-1"
+        },
+        "verbose Mode": {
+          "content_preview": "```\nPRD AGENT INITIALIZING\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nStarting Time: 10:30:00 AM PST\nVerbosity Level: verbose\nTota...",
+          "tokens": 167,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#verbose-mode-1"
+        },
+        "debug Mode": {
+          "content_preview": "```\n[Same as verbose, plus:]\n\nDEBUG: Decision point reached - Feature prioritization\n  Input factors: {business_value: 8, technical_effort: 5, risk: 3...",
+          "tokens": 97,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#debug-mode-1"
+        }
+      }
+    },
+    "Changing Verbosity Settings": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#changing-verbosity-settings",
+      "tokens": 61,
+      "content_preview": "1. Open `agile-ai-agents/CLAUDE.md`\n2. Find the `verbosity:` section near the top\n3. Change the `level:` to your desired setting\n4. Adjust display set..."
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#best-practices",
+      "tokens": 67,
+      "content_preview": "1. **Development**: Use `verbose` to understand what agents are doing\n2. **Production**: Use `quiet` or `normal` to reduce noise\n3. **Debugging**: Use..."
+    },
+    "Per-Agent Override": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#per-agent-override",
+      "tokens": 31,
+      "content_preview": "Some agents may have their own verbosity settings for specific operations. These override the global setting when specified."
+    },
+    "External Projects": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-settings-guide.md#external-projects",
+      "tokens": 73,
+      "content_preview": "When using AgileAiAgents in external projects:\n1. Create a `CLAUDE.md` file in your project root\n2. Copy the verbosity configuration section\n3. Adjust..."
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "name": "custom",
+  "description": "User-defined configuration - fully customizable",
+  "target_performance": "User defined",
+  "use_cases": [
+    "Specific project requirements",
+    "Custom workflows",
+    "Experimental features",
+    "Domain-specific needs"
+  ],
+  "categories": {
+    "critical": {
+      "enabled": true,
+      "hooks": ["all"],
+      "description": "Critical hooks are always enabled for safety"
+    },
+    "valuable": {
+      "enabled": false,
+      "hooks": [],
+      "description": "User configurable"
+    },
+    "enhancement": {
+      "enabled": false,
+      "hooks": [],
+      "description": "User configurable"
+    },
+    "specialized": {
+      "enabled": false,
+      "hooks": [],
+      "description": "User configurable"
+    }
+  },
+  "performance_settings": {
+    "parallel_execution": true,
+    "cache_aggressively": false,
+    "skip_on_ci": false,
+    "adaptive_performance": true
+  },
+  "configuration_guide": {
+    "steps": [
+      "1. Start with a base profile (minimal, standard, or advanced)",
+      "2. Enable/disable specific hooks in each category",
+      "3. Adjust performance settings based on your needs",
+      "4. Test performance impact with dashboard monitoring",
+      "5. Fine-tune hook configurations in agent-defaults.json"
+    ],
+    "examples": {
+      "performance_focused": {
+        "description": "Maximum performance with essential checks",
+        "critical": ["vulnerability-scanner", "secret-rotation-reminder"],
+        "valuable": ["import-validator"],
+        "enhancement": [],
+        "specialized": []
+      },
+      "quality_focused": {
+        "description": "Maximum code quality enforcement",
+        "critical": ["all"],
+        "valuable": ["all"],
+        "enhancement": ["all"],
+        "specialized": ["gdpr-compliance-checker"]
+      },
+      "balanced_custom": {
+        "description": "Balanced approach with specific needs",
+        "critical": ["all"],
+        "valuable": ["dependency-checker", "test-categorizer", "api-contract-validator"],
+        "enhancement": ["code-complexity", "naming-conventions"],
+        "specialized": []
+      }
+    }
+  }
+}

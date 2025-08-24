@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "document": "MISC-001-cookie-consent",
+    "title": "Cookie Consent Banner",
+    "timestamp": "2025-07-22T01:41:03.734Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/unassigned/MISC-001-cookie-consent.md",
+    "document_type": "general_documentation",
+    "file_hash": "673cefe7a3c96b0040ae4f3e27a42892",
+    "estimated_tokens": 303,
+    "full_md_tokens": 397
+  },
+  "summary": "**ID**: MISC-001",
+  "sections": [
+    {
+      "title": "User Story",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/unassigned/MISC-001-cookie-consent.md#user-story",
+      "content_preview": "As a user visiting the site,\nI want to be informed about cookie usage and give my consent,\nSo that my privacy preferences are respected and the site c..."
+    },
+    {
+      "title": "Acceptance Criteria",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/unassigned/MISC-001-cookie-consent.md#acceptance-criteria",
+      "content_preview": "- [ ] Banner appears on first visit\n- [ ] User can accept all, reject all, or customize\n- [ ] Preferences are remembered across sessions\n- [ ] Banner ..."
+    },
+    {
+      "title": "Technical Requirements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/unassigned/MISC-001-cookie-consent.md#technical-requirements",
+      "content_preview": "- Implement consent management platform\n- Create cookie categorization system\n- Build preference storage mechanism\n- Integrate with analytics tools\n- ..."
+    },
+    {
+      "title": "Dependencies",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/unassigned/MISC-001-cookie-consent.md#dependencies",
+      "content_preview": "- Legal team must approve cookie policy\n- Analytics tools must support consent\n- Translation of consent text required"
+    },
+    {
+      "title": "Definition of Done",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/unassigned/MISC-001-cookie-consent.md#definition-of-done",
+      "content_preview": "- [ ] Implementation complete\n- [ ] Legal review passed\n- [ ] Accessibility audit passed\n- [ ] Cross-browser testing done\n- [ ] Documentation updated\n..."
+    },
+    {
+      "title": "Notes",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/unassigned/MISC-001-cookie-consent.md#notes",
+      "content_preview": "- Consider using open-source solution\n- May need different behavior for different regions\n- Monitor for consent fatigue\n\n---\n\n**Created**: 2025-01-18\n..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "User Story": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/unassigned/MISC-001-cookie-consent.md#user-story",
+      "tokens": 44,
+      "content_preview": "As a user visiting the site,\nI want to be informed about cookie usage and give my consent,\nSo that my privacy preferences are respected and the site c..."
+    },
+    "Acceptance Criteria": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/unassigned/MISC-001-cookie-consent.md#acceptance-criteria",
+      "tokens": 106,
+      "content_preview": "- [ ] Banner appears on first visit\n- [ ] User can accept all, reject all, or customize\n- [ ] Preferences are remembered across sessions\n- [ ] Banner ..."
+    },
+    "Technical Requirements": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/unassigned/MISC-001-cookie-consent.md#technical-requirements",
+      "tokens": 62,
+      "content_preview": "- Implement consent management platform\n- Create cookie categorization system\n- Build preference storage mechanism\n- Integrate with analytics tools\n- ..."
+    },
+    "Dependencies": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/unassigned/MISC-001-cookie-consent.md#dependencies",
+      "tokens": 30,
+      "content_preview": "- Legal team must approve cookie policy\n- Analytics tools must support consent\n- Translation of consent text required"
+    },
+    "Definition of Done": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/unassigned/MISC-001-cookie-consent.md#definition-of-done",
+      "tokens": 48,
+      "content_preview": "- [ ] Implementation complete\n- [ ] Legal review passed\n- [ ] Accessibility audit passed\n- [ ] Cross-browser testing done\n- [ ] Documentation updated\n..."
+    },
+    "Notes": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/unassigned/MISC-001-cookie-consent.md#notes",
+      "tokens": 51,
+      "content_preview": "- Consider using open-source solution\n- May need different behavior for different regions\n- Monitor for consent fatigue\n\n---\n\n**Created**: 2025-01-18\n..."
+    }
+  }
+}

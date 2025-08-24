@@ -1,0 +1,225 @@
+{
+  "workflow": {
+    "id": "rebuild-project",
+    "name": "Rebuild Project Workflow",
+    "version": "1.0.0",
+    "description": "Comprehensive rebuild workflow for projects requiring technical or business model reconstruction",
+    "category": "transformation",
+    "priority": 1
+  },
+  "commands": {
+    "primary": "/rebuild-project-workflow",
+    "aliases": ["/rebuild", "/rpw"],
+    "options": [
+      {
+        "flag": "--type",
+        "values": ["technical", "partial", "business-model", "complete"],
+        "description": "Specify rebuild type",
+        "required": false
+      },
+      {
+        "flag": "--resume",
+        "description": "Resume from last checkpoint",
+        "required": false
+      },
+      {
+        "flag": "--status",
+        "description": "Show current rebuild phase and progress",
+        "required": false
+      },
+      {
+        "flag": "--comparison",
+        "description": "Compare original vs rebuilt systems",
+        "required": false
+      },
+      {
+        "flag": "--migration-status",
+        "description": "Show data migration progress",
+        "required": false
+      }
+    ]
+  },
+  "triggers": {
+    "from_existing_workflow": {
+      "enabled": true,
+      "conditions": [
+        "technical_viability_score < 3",
+        "business_model_health < 3",
+        "technical_debt_percentage > 60",
+        "framework_deprecated === true",
+        "ltv_cac_ratio < 1.5"
+      ]
+    },
+    "direct_command": {
+      "enabled": true,
+      "requirements": [
+        "stakeholder_approval",
+        "rebuild_decision_documented"
+      ]
+    },
+    "crisis_trigger": {
+      "enabled": true,
+      "conditions": [
+        "security_breach_critical",
+        "scale_failure_production",
+        "compliance_violation_major"
+      ]
+    }
+  },
+  "state_management": {
+    "state_files": [
+      "project-state/workflow-state.json",
+      "project-state/rebuild-state.json",
+      "project-state/migration-state.json"
+    ],
+    "checkpoint_strategy": {
+      "automatic": true,
+      "frequency": "phase_completion",
+      "manual_triggers": ["approval_gates", "sprint_completion"],
+      "retention": "30_days"
+    },
+    "parallel_tracking": {
+      "enabled": true,
+      "metrics": [
+        "traffic_distribution",
+        "performance_comparison",
+        "error_rates",
+        "user_sessions"
+      ]
+    }
+  },
+  "integration": {
+    "dashboard": {
+      "enabled": true,
+      "routes": [
+        "/dashboard/rebuild",
+        "/dashboard/rebuild/comparison",
+        "/dashboard/rebuild/migration",
+        "/dashboard/rebuild/parity",
+        "/dashboard/rebuild/metrics"
+      ],
+      "widgets": [
+        "rebuild_status",
+        "migration_progress",
+        "system_comparison",
+        "feature_parity_matrix",
+        "cutover_readiness"
+      ]
+    },
+    "hooks": {
+      "enabled": true,
+      "active_hooks": [
+        "rebuild-decision",
+        "migration-progress",
+        "parallel-operations",
+        "feature-parity",
+        "cutover-readiness"
+      ]
+    },
+    "agents": {
+      "primary": [
+        "stakeholder_interview_agent",
+        "project_manager_agent",
+        "project_analyzer_agent",
+        "devops_agent"
+      ],
+      "supporting": [
+        "coder_agent",
+        "testing_agent",
+        "security_agent",
+        "dba_agent",
+        "architecture_agent",
+        "research_agent",
+        "analysis_agent",
+        "optimization_agent"
+      ]
+    }
+  },
+  "documentation": {
+    "structure": {
+      "root": "project-documents/rebuild/",
+      "categories": [
+        "stakeholder-interview",
+        "legacy-analysis",
+        "market-research",
+        "requirements",
+        "architecture",
+        "migration",
+        "testing",
+        "operations"
+      ]
+    },
+    "templates": [
+      "rebuild-decision-matrix.md",
+      "migration-strategy.md",
+      "parallel-operations-plan.md",
+      "cutover-checklist.md",
+      "rollback-procedures.md"
+    ]
+  },
+  "sprint_configuration": {
+    "naming_pattern": "sprint-YYYY-MM-DD-rebuild-{purpose}",
+    "duration": {
+      "planning": "2-3 days",
+      "implementation": "2-3 days",
+      "migration": "2-3 days",
+      "operations": "ongoing"
+    },
+    "velocity_tracking": {
+      "separate": true,
+      "baseline": "rebuild_velocity",
+      "adjustment_factor": 0.7
+    }
+  },
+  "success_metrics": {
+    "technical": {
+      "performance_improvement": "> 50%",
+      "cost_reduction": "> 30%",
+      "scalability_increase": "> 10x",
+      "security_score": "> 90%",
+      "technical_debt": "< 10%"
+    },
+    "business": {
+      "user_satisfaction_increase": "> 20%",
+      "revenue_growth_enabled": "true",
+      "market_expansion_capability": "true",
+      "operational_cost_reduction": "> 30%",
+      "team_productivity_gain": "> 40%"
+    },
+    "migration": {
+      "data_integrity": "100%",
+      "user_retention": "> 95%",
+      "feature_parity": "100%",
+      "downtime": "< planned_threshold",
+      "rollback_readiness": "always"
+    }
+  },
+  "risk_management": {
+    "mitigation_strategies": [
+      "parallel_systems_always",
+      "incremental_migration_only",
+      "feature_flags_required",
+      "dual_monitoring_mandatory",
+      "regular_stakeholder_updates"
+    ],
+    "rollback_triggers": [
+      "data_corruption_detected",
+      "performance_degradation_severe",
+      "user_experience_failure",
+      "security_vulnerability_critical",
+      "business_metrics_decline"
+    ],
+    "communication_plan": {
+      "frequency": "daily_during_critical_phases",
+      "channels": ["dashboard", "email", "slack"],
+      "stakeholders": ["technical_team", "business_owners", "end_users"]
+    }
+  },
+  "defaults": {
+    "rebuild_type": "technical",
+    "research_level": "standard",
+    "parallel_operation_days": 7,
+    "cutover_strategy": "gradual",
+    "rollback_window_hours": 72
+  }
+}

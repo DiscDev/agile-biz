@@ -1,0 +1,233 @@
+template:
+  id: "healthcare-platform"
+  name: "Healthcare Platform Structure"
+  description: "HIPAA-compliant repository structure for healthcare applications"
+  
+  compliance_note: "This template considers HIPAA, GDPR, and other healthcare regulations"
+  
+  repositories:
+    patient-portal:
+      purpose: "Patient-facing application"
+      compliance: "HIPAA compliant UI"
+      initial_week: 1
+      
+      structure:
+        "src/":
+          subdirs:
+            - "features/"
+              - "appointments/"
+              - "medical-records/"
+              - "messaging/"
+              - "prescriptions/"
+            - "components/"
+              security: "No PHI in code"
+            - "services/"
+              encryption: "All API calls"
+      
+      security_requirements:
+        - "Session timeout (15 min)"
+        - "Audit all actions"
+        - "No local storage of PHI"
+        - "Encrypted communications"
+      
+      deployment: "HIPAA-compliant cloud"
+    
+    provider-portal:
+      purpose: "Healthcare provider application"
+      compliance: "Enhanced security"
+      initial_week: 2
+      
+      structure:
+        "src/":
+          subdirs:
+            - "modules/"
+              - "patients/"
+              - "encounters/"
+              - "prescriptions/"
+              - "lab-results/"
+            - "clinical-tools/"
+              - "decision-support/"
+              - "drug-interactions/"
+      
+      special_features:
+        - "Role-based access (RBAC)"
+        - "Electronic prescribing"
+        - "Clinical decision support"
+        - "Audit trail for all actions"
+    
+    api-gateway:
+      purpose: "Secure API gateway"
+      compliance: "HIPAA Security Rule"
+      initial_week: 1
+      critical: true
+      
+      structure:
+        "src/":
+          subdirs:
+            - "authentication/"
+              mfa: "Required"
+            - "authorization/"
+              rbac: "Granular permissions"
+            - "audit/"
+              retention: "6 years minimum"
+            - "encryption/"
+              at_rest: "AES-256"
+              in_transit: "TLS 1.3"
+      
+      requirements:
+        - "FHIR compliance"
+        - "HL7 support"
+        - "Consent management"
+        - "Data access logging"
+    
+    clinical-api:
+      purpose: "Core clinical data API"
+      compliance: "HIPAA + Clinical standards"
+      initial_week: 1
+      
+      structure:
+        "src/":
+          subdirs:
+            - "fhir/"         # FHIR resources
+            - "hl7/"          # HL7 messaging
+            - "terminology/"  # Medical codes
+            - "clinical/"     # Clinical logic
+      
+      database:
+        encryption: "Transparent data encryption"
+        backup: "HIPAA-compliant backups"
+        access: "Minimal privilege principle"
+    
+    integration-service:
+      purpose: "Third-party integrations"
+      compliance: "BAA required"
+      initial_week: 4
+      
+      structure:
+        "src/":
+          subdirs:
+            - "ehr/"          # EHR integrations
+            - "lab/"          # Lab systems
+            - "pharmacy/"     # Pharmacy systems
+            - "insurance/"    # Payer systems
+      
+      security:
+        - "VPN connections"
+        - "Certificate pinning"
+        - "Audit all data exchange"
+    
+    analytics-service:
+      purpose: "Healthcare analytics"
+      compliance: "De-identified data only"
+      initial_week: 8
+      
+      structure:
+        "src/":
+          subdirs:
+            - "population-health/"
+            - "quality-measures/"
+            - "risk-analysis/"
+            - "reporting/"
+      
+      data_handling:
+        - "PHI de-identification"
+        - "Aggregate reporting only"
+        - "No patient-level exports"
+  
+  shared_infrastructure:
+    audit-service:
+      purpose: "Centralized audit logging"
+      retention: "6 years minimum"
+      tamper_proof: "Immutable logs"
+    
+    consent-service:
+      purpose: "Patient consent management"
+      features:
+        - "Granular consent"
+        - "Consent history"
+        - "Withdrawal handling"
+    
+    notification-service:
+      purpose: "Secure communications"
+      channels:
+        - "Secure messaging"
+        - "Encrypted email"
+        - "SMS (no PHI)"
+  
+  security_architecture:
+    network_isolation:
+      - "DMZ for public-facing"
+      - "Private subnet for APIs"
+      - "Isolated data tier"
+    
+    encryption:
+      at_rest: "AES-256"
+      in_transit: "TLS 1.3 minimum"
+      key_management: "HSM required"
+    
+    access_control:
+      - "Multi-factor authentication"
+      - "Role-based permissions"
+      - "Attribute-based access"
+      - "Break-glass procedures"
+    
+    monitoring:
+      - "SIEM integration"
+      - "Anomaly detection"
+      - "Real-time alerts"
+      - "Compliance dashboards"
+  
+  compliance_considerations:
+    hipaa:
+      - "Business Associate Agreements"
+      - "Risk assessments"
+      - "Incident response plan"
+      - "Employee training"
+    
+    gdpr:
+      - "Data portability"
+      - "Right to deletion"
+      - "Privacy by design"
+      - "Data minimization"
+    
+    clinical:
+      - "FDA regulations (if applicable)"
+      - "Clinical decision support rules"
+      - "Medical device classification"
+  
+  deployment_requirements:
+    infrastructure:
+      - "HIPAA-compliant hosting"
+      - "SOC 2 Type II certified"
+      - "HITRUST certified preferred"
+    
+    disaster_recovery:
+      - "RPO: 1 hour"
+      - "RTO: 4 hours"
+      - "Geo-redundant backups"
+      - "Tested quarterly"
+    
+    monitoring:
+      - "24/7 SOC monitoring"
+      - "Automated compliance scans"
+      - "Vulnerability assessments"
+  
+  evolution_timeline:
+    week_1:
+      repos: ["patient-portal", "provider-portal", "api-gateway", "clinical-api"]
+      reason: "Core HIPAA-compliant infrastructure"
+    
+    week_4:
+      repos: ["all-previous", "integration-service"]
+      reason: "Connect to existing systems"
+    
+    week_8:
+      repos: ["all-previous", "analytics-service"]
+      reason: "Quality reporting needs"
+  
+  critical_warnings:
+    - "Never store PHI in logs"
+    - "All developers need HIPAA training"
+    - "Security review for all PRs"
+    - "Penetration testing required"
+    - "Compliance audit before launch"

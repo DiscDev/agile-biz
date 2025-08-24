@@ -1,0 +1,260 @@
+{
+  "meta": {
+    "document": "sprint-planning-templates-enhanced",
+    "title": "Enhanced Sprint Planning Templates",
+    "timestamp": "2025-08-11T22:02:16.920Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md",
+    "document_type": "template",
+    "file_hash": "9baa5eb0ca82c5d42bda7664fed9e341",
+    "estimated_tokens": 647,
+    "full_md_tokens": 2365
+  },
+  "summary": "These templates incorporate critical learnings about authentication testing, deployment validation, and defensive programming. All sprint planning MUST include DevOps Agent participation.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#overview",
+      "content_preview": "These templates incorporate critical learnings about authentication testing, deployment validation, and defensive programming. All sprint planning MUS..."
+    },
+    {
+      "title": "Sprint Planning Meeting Template",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#sprint-planning-meeting-template",
+      "content_preview": ""
+    },
+    {
+      "title": "Story Planning Template",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#story-planning-template",
+      "content_preview": ""
+    },
+    {
+      "title": "Story: [STORY-ID] [Title]",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#story-story-id-title",
+      "content_preview": ""
+    },
+    {
+      "title": "Sprint Capacity Planning Template",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#sprint-capacity-planning-template",
+      "content_preview": ""
+    },
+    {
+      "title": "Sprint Risk Assessment Template",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#sprint-risk-assessment-template",
+      "content_preview": ""
+    },
+    {
+      "title": "Definition of Ready Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#definition-of-ready-checklist",
+      "content_preview": ""
+    },
+    {
+      "title": "Sprint Kickoff Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#sprint-kickoff-checklist",
+      "content_preview": ""
+    },
+    {
+      "title": "Sprint Execution Daily Flow",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#sprint-execution-daily-flow",
+      "content_preview": ""
+    },
+    {
+      "title": "Sprint Review Template",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#sprint-review-template",
+      "content_preview": ""
+    },
+    {
+      "title": "Sprint Retrospective Template",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#sprint-retrospective-template",
+      "content_preview": ""
+    },
+    {
+      "title": "Metrics Tracking Template",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#metrics-tracking-template",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#overview",
+      "tokens": 47,
+      "content_preview": "These templates incorporate critical learnings about authentication testing, deployment validation, and defensive programming. All sprint planning MUS..."
+    },
+    "Sprint Planning Meeting Template": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#sprint-planning-meeting-template",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Meeting Structure": {
+          "content_preview": "```yaml\nsprint_planning_meeting:\n  duration: 2-3 hours (AI-speed adjusted)\n  participants:\n    required:\n      - scrum_master_agent\n      - project_ma...",
+          "tokens": 320,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#meeting-structure-1"
+        }
+      }
+    },
+    "Story Planning Template": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#story-planning-template",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Enhanced User Story Format": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#enhanced-user-story-format-1"
+        }
+      }
+    },
+    "Story: [STORY-ID] [Title]": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#story-story-id-title",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "User Story": {
+          "content_preview": "As a [user type]  \nI want [functionality]  \nSo that [business value]",
+          "tokens": 16,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#user-story-1"
+        },
+        "Technical Specifications": {
+          "content_preview": "- **Frontend Components**: [List components]\n- **Backend Endpoints**: [List APIs]\n- **Database Changes**: [List schema changes]\n- **External Dependenc...",
+          "tokens": 37,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#technical-specifications-1"
+        },
+        "Deployment Requirements (NEW - MANDATORY)": {
+          "content_preview": "- **New Dependencies**: [List packages with versions]\n- **Environment Variables**: [List new env vars]\n- **Infrastructure Changes**: [List any infra n...",
+          "tokens": 46,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#deployment-requirements-new-mandatory-1"
+        },
+        "Definition of Done (ENHANCED)": {
+          "content_preview": "- [ ] Deployment validation gates passed\n- [ ] Monitoring configured\n- [ ] Rollback plan documented\n- [ ] Performance benchmarks met",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#definition-of-done-enhanced-5"
+        },
+        "Acceptance Criteria": {
+          "content_preview": "1. [Specific testable criteria]\n2. [End-to-end flow validation]\n3. [Performance requirements]\n4. [Error handling scenarios]",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#acceptance-criteria-1"
+        },
+        "Story Points: [X]": {
+          "content_preview": "- Development Complexity: [X]\n- Testing Complexity: [X]  \n- Deployment Complexity: [X]  # NEW\n- Total: [Sum]\n```",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#story-points-x-1"
+        }
+      }
+    },
+    "Sprint Capacity Planning Template": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#sprint-capacity-planning-template",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Team Capacity Calculation": {
+          "content_preview": "```yaml\nsprint_capacity:\n  sprint_duration: 1 day (AI-speed)\n  \n  agent_availability:\n    coder_agent: \n      hours: 20\n      reserve_for_fixes: 4\n   ...",
+          "tokens": 182,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#team-capacity-calculation-1"
+        }
+      }
+    },
+    "Sprint Risk Assessment Template": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#sprint-risk-assessment-template",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Risk Categories (ENHANCED)": {
+          "content_preview": "```yaml\nsprint_risks:\n  technical_risks:\n    - authentication_implementation_gaps  # NEW\n    - api_contract_mismatches           # NEW\n    - defensive...",
+          "tokens": 220,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#risk-categories-enhanced-1"
+        }
+      }
+    },
+    "Definition of Ready Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#definition-of-ready-checklist",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Story Ready Criteria (ENHANCED)": {
+          "content_preview": "```yaml\ndefinition_of_ready:\n  requirements:\n    - [ ] User story clearly written\n    - [ ] Acceptance criteria defined\n    - [ ] UI/UX designs approv...",
+          "tokens": 208,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#story-ready-criteria-enhanced-1"
+        }
+      }
+    },
+    "Sprint Kickoff Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#sprint-kickoff-checklist",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Day 1 Sprint Start": {
+          "content_preview": "```yaml\nsprint_kickoff:\n  preparation:\n    - [ ] All stories meet Definition of Ready\n    - [ ] Sprint goal clearly defined\n    - [ ] Deployment pipel...",
+          "tokens": 206,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#day-1-sprint-start-1"
+        }
+      }
+    },
+    "Sprint Execution Daily Flow": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#sprint-execution-daily-flow",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "AI-Speed Sprint Pulse": {
+          "content_preview": "```yaml\ncontinuous_sprint_pulse:\n  frequency: every_30_minutes\n  \n  status_check:\n    - stories_in_progress\n    - stories_completed\n    - validation_s...",
+          "tokens": 122,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#ai-speed-sprint-pulse-1"
+        }
+      }
+    },
+    "Sprint Review Template": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#sprint-review-template",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Demo Preparation Checklist": {
+          "content_preview": "```yaml\nsprint_review_prep:\n  technical_validation:              # NEW SECTION\n    - [ ] All validation gates passed\n    - [ ] Deployment ready confir...",
+          "tokens": 142,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#demo-preparation-checklist-1"
+        }
+      }
+    },
+    "Sprint Retrospective Template": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#sprint-retrospective-template",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Enhanced Retrospective Topics": {
+          "content_preview": "```yaml\nretrospective_topics:\n  what_went_well:\n    - stories_completed_successfully\n    - validation_gates_caught_issues     # NEW\n    - defensive_pr...",
+          "tokens": 180,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#enhanced-retrospective-topics-1"
+        }
+      }
+    },
+    "Metrics Tracking Template": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#metrics-tracking-template",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Sprint Metrics (ENHANCED)": {
+          "content_preview": "```yaml\nsprint_metrics:\n  velocity:\n    - planned_points: X\n    - completed_points: Y\n    - validation_overhead: Z%        # NEW\n  \n  quality:\n    - d...",
+          "tokens": 190,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-planning-templates-enhanced.md#sprint-metrics-enhanced-1"
+        }
+      }
+    }
+  }
+}

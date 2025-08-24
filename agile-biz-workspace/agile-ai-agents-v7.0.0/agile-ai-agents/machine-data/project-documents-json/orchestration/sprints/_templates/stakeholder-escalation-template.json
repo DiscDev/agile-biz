@@ -1,0 +1,320 @@
+{
+  "meta": {
+    "document": "stakeholder-escalation-template",
+    "title": "Stakeholder Escalation: [Escalation Title]",
+    "timestamp": "2025-07-22T01:41:03.741Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md",
+    "document_type": "template",
+    "file_hash": "950e4bd9c9460f52f744e42f9f8afbdd",
+    "estimated_tokens": 877,
+    "full_md_tokens": 1086
+  },
+  "summary": "This folder contains all stakeholder escalations raised during the sprint-YYYY-MM-DD-feature-name sprint.",
+  "sections": [
+    {
+      "title": "Escalation Details",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#escalation-details",
+      "content_preview": ""
+    },
+    {
+      "title": "Business Impact",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#business-impact",
+      "content_preview": ""
+    },
+    {
+      "title": "Resolution Attempts",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#resolution-attempts",
+      "content_preview": ""
+    },
+    {
+      "title": "Proposed Solutions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#proposed-solutions",
+      "content_preview": ""
+    },
+    {
+      "title": "Stakeholder Response",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#stakeholder-response",
+      "content_preview": ""
+    },
+    {
+      "title": "Resolution",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#resolution",
+      "content_preview": ""
+    },
+    {
+      "title": "Follow-up Actions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#follow-up-actions",
+      "content_preview": ""
+    },
+    {
+      "title": "Lessons Learned",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#lessons-learned",
+      "content_preview": "[What we learned from this escalation]"
+    },
+    {
+      "title": "Reference Documentation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#reference-documentation",
+      "content_preview": "- [Related escalations]\n- [Related decisions]\n- [Technical documentation]"
+    },
+    {
+      "title": "Escalation History",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#escalation-history",
+      "content_preview": "| Date | Status | Action | By |\n|------|--------|--------|-----|\n| YYYY-MM-DD | Open | Escalation created | agent_name |\n| YYYY-MM-DD | In Progress | ..."
+    },
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#overview",
+      "content_preview": "This folder contains all stakeholder escalations raised during the sprint-YYYY-MM-DD-feature-name sprint."
+    },
+    {
+      "title": "File Naming Convention",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#file-naming-convention",
+      "content_preview": "`escalation-YYYY-MM-DD-HH-MM.md`\n\nExample: `escalation-2025-01-09-10-15.md`"
+    },
+    {
+      "title": "Process",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#process",
+      "content_preview": "1. Agent encounters blocker that cannot be resolved at sprint level\n2. Scrum Master Agent attempts resolution\n3. If unresolved, escalation document cr..."
+    },
+    {
+      "title": "Severity Levels",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#severity-levels",
+      "content_preview": "- **Critical**: Blocks entire sprint, needs immediate resolution\n- **High**: Blocks multiple agents or critical path\n- **Medium**: Blocks single agent..."
+    },
+    {
+      "title": "Quick Links",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#quick-links",
+      "content_preview": "- [Project-Level Escalations](../../stakeholder-escalations.md)\n- [Escalation Template](../../_templates/stakeholder-escalation-template.md)"
+    },
+    {
+      "title": "Escalations in This Sprint",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#escalations-in-this-sprint",
+      "content_preview": "| Date | Title | Severity | Status | Resolution Time |\n|------|-------|----------|--------|-----------------|\n| | | | | |\n\n*Table updated as escalatio..."
+    },
+    {
+      "title": "Metrics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#metrics",
+      "content_preview": "- **Total Escalations**: 0\n- **Average Resolution Time**: N/A\n- **Promoted to Project Level**: 0\n```"
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Escalation Details": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#escalation-details",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Originating Information": {
+          "content_preview": "**Raised By**: [agent_name]  \n**Affected Agents**: [List of impacted agents]  \n**Escalation Type**: [Blocker/Risk/Decision Required/Resource/Timeline/...",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#originating-information-1"
+        },
+        "Issue Description": {
+          "content_preview": "[Detailed description of the issue requiring escalation]",
+          "tokens": 14,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#issue-description-1"
+        },
+        "Root Cause": {
+          "content_preview": "[If known, what caused this issue]",
+          "tokens": 8,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#root-cause-1"
+        },
+        "Timeline": {
+          "content_preview": "- **Issue Detected**: YYYY-MM-DDTHH:MM:SS\n- **First Attempt to Resolve**: YYYY-MM-DDTHH:MM:SS\n- **Escalated**: YYYY-MM-DDTHH:MM:SS\n- **Target Resoluti...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#timeline-1"
+        }
+      }
+    },
+    "Business Impact": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#business-impact",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Immediate Impact": {
+          "content_preview": "- [Impact on current sprint]\n- [Blocked work items]\n- [Affected deliverables]",
+          "tokens": 18,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#immediate-impact-1"
+        },
+        "Potential Risks": {
+          "content_preview": "- [Risk if not resolved quickly]\n- [Cascade effects]\n- [Business consequences]",
+          "tokens": 18,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#potential-risks-1"
+        },
+        "Quantified Impact": {
+          "content_preview": "- **Story Points Blocked**: X\n- **Agents Blocked**: X\n- **Revenue Impact**: $X (if applicable)\n- **Timeline Impact**: X days",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#quantified-impact-1"
+        }
+      }
+    },
+    "Resolution Attempts": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#resolution-attempts",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Actions Taken Before Escalation": {
+          "content_preview": "1. [Action 1 - Result]\n2. [Action 2 - Result]\n3. [Action 3 - Result]",
+          "tokens": 16,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#actions-taken-before-escalation-1"
+        },
+        "Why Escalation is Required": {
+          "content_preview": "[Explanation of why normal channels cannot resolve this]",
+          "tokens": 14,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#why-escalation-is-required-1"
+        }
+      }
+    },
+    "Proposed Solutions": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#proposed-solutions",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Option 1: [Quick Fix]": {
+          "content_preview": "**Description**: [Details]  \n**Time to Implement**: X hours/days  \n**Resources Needed**: [List]  \n**Trade-offs**: [What we sacrifice]",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#option-1-quick-fix-1"
+        },
+        "Option 2: [Proper Solution]": {
+          "content_preview": "**Description**: [Details]  \n**Time to Implement**: X hours/days  \n**Resources Needed**: [List]  \n**Trade-offs**: [What we sacrifice]",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#option-2-proper-solution-1"
+        },
+        "Option 3: [Workaround]": {
+          "content_preview": "**Description**: [Details]  \n**Time to Implement**: X hours/days  \n**Resources Needed**: [List]  \n**Trade-offs**: [What we sacrifice]",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#option-3-workaround-1"
+        }
+      }
+    },
+    "Stakeholder Response": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#stakeholder-response",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Decision": {
+          "content_preview": "**Response Date**: YYYY-MM-DDTHH:MM:SS  \n**Stakeholder**: [Name and Role]  \n**Decision**: [Selected solution or alternative approach]  \n**Rationale**:...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#decision-1"
+        },
+        "Additional Guidance": {
+          "content_preview": "[Any additional instructions or constraints from stakeholder]",
+          "tokens": 15,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#additional-guidance-1"
+        }
+      }
+    },
+    "Resolution": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#resolution",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Implementation Guide": {
+          "content_preview": "**Start Time**: YYYY-MM-DDTHH:MM:SS  \n**End Time**: YYYY-MM-DDTHH:MM:SS  \n**Implemented By**: [agent_names]",
+          "tokens": 24,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#implementation-guide-1"
+        },
+        "Outcome": {
+          "content_preview": "[Description of how the issue was resolved]",
+          "tokens": 11,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#outcome-1"
+        },
+        "Verification": {
+          "content_preview": "- [ ] Issue resolved\n- [ ] Blocked work resumed\n- [ ] No regression introduced\n- [ ] Stakeholder informed",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#verification-1"
+        }
+      }
+    },
+    "Follow-up Actions": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#follow-up-actions",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Immediate": {
+          "content_preview": "- [ ] Action 1 (Owner: agent_name)\n- [ ] Action 2 (Owner: agent_name)",
+          "tokens": 16,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#immediate-1"
+        },
+        "Preventive Measures": {
+          "content_preview": "- [ ] Process improvement to prevent recurrence\n- [ ] Documentation update\n- [ ] Training/knowledge sharing",
+          "tokens": 26,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#preventive-measures-1"
+        }
+      }
+    },
+    "Lessons Learned": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#lessons-learned",
+      "tokens": 9,
+      "content_preview": "[What we learned from this escalation]"
+    },
+    "Reference Documentation": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#reference-documentation",
+      "tokens": 17,
+      "content_preview": "- [Related escalations]\n- [Related decisions]\n- [Technical documentation]"
+    },
+    "Escalation History": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#escalation-history",
+      "tokens": 86,
+      "content_preview": "| Date | Status | Action | By |\n|------|--------|--------|-----|\n| YYYY-MM-DD | Open | Escalation created | agent_name |\n| YYYY-MM-DD | In Progress | ..."
+    },
+    "Overview": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#overview",
+      "tokens": 27,
+      "content_preview": "This folder contains all stakeholder escalations raised during the sprint-YYYY-MM-DD-feature-name sprint."
+    },
+    "File Naming Convention": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#file-naming-convention",
+      "tokens": 18,
+      "content_preview": "`escalation-YYYY-MM-DD-HH-MM.md`\n\nExample: `escalation-2025-01-09-10-15.md`"
+    },
+    "Process": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#process",
+      "tokens": 80,
+      "content_preview": "1. Agent encounters blocker that cannot be resolved at sprint level\n2. Scrum Master Agent attempts resolution\n3. If unresolved, escalation document cr..."
+    },
+    "Severity Levels": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#severity-levels",
+      "tokens": 40,
+      "content_preview": "- **Critical**: Blocks entire sprint, needs immediate resolution\n- **High**: Blocks multiple agents or critical path\n- **Medium**: Blocks single agent..."
+    },
+    "Quick Links": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#quick-links",
+      "tokens": 33,
+      "content_preview": "- [Project-Level Escalations](../../stakeholder-escalations.md)\n- [Escalation Template](../../_templates/stakeholder-escalation-template.md)"
+    },
+    "Escalations in This Sprint": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#escalations-in-this-sprint",
+      "tokens": 41,
+      "content_preview": "| Date | Title | Severity | Status | Resolution Time |\n|------|-------|----------|--------|-----------------|\n| | | | | |\n\n*Table updated as escalatio..."
+    },
+    "Metrics": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md#metrics",
+      "tokens": 22,
+      "content_preview": "- **Total Escalations**: 0\n- **Average Resolution Time**: N/A\n- **Promoted to Project Level**: 0\n```"
+    }
+  }
+}

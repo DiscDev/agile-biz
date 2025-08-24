@@ -1,0 +1,324 @@
+{
+  "version": "1.0.0",
+  "description": "Rebuild decision indicators and thresholds for existing projects",
+  "last_updated": "2025-08-12",
+  
+  "technical_rebuild_triggers": {
+    "critical": {
+      "description": "Any one of these triggers immediate rebuild assessment",
+      "indicators": [
+        {
+          "name": "framework_deprecated",
+          "description": "Core framework is deprecated or unsupported",
+          "detection": "Framework EOL date passed or security updates stopped",
+          "severity": "critical"
+        },
+        {
+          "name": "security_unfixable",
+          "description": "Security vulnerabilities in core architecture",
+          "detection": "Penetration test failures that require architecture change",
+          "severity": "critical"
+        },
+        {
+          "name": "scale_impossible",
+          "description": "Cannot scale beyond current 2x load",
+          "detection": "Load testing shows hard limits",
+          "severity": "critical"
+        },
+        {
+          "name": "data_corruption_risk",
+          "description": "Database design causes data integrity issues",
+          "detection": "Recurring data inconsistencies or corruption",
+          "severity": "critical"
+        }
+      ]
+    },
+    "important": {
+      "description": "3+ of these indicators suggest rebuild",
+      "indicators": [
+        {
+          "name": "tech_debt_over_60_percent",
+          "description": "Technical debt exceeds 60% of codebase",
+          "detection": "Code analysis tools show high complexity/duplication",
+          "threshold": 60,
+          "unit": "percent"
+        },
+        {
+          "name": "developer_velocity_blocked",
+          "description": "Feature development takes 3x longer than industry standard",
+          "detection": "Sprint velocity declining over 3 months",
+          "threshold": 3,
+          "unit": "multiplier"
+        },
+        {
+          "name": "maintenance_cost_escalating",
+          "description": "Maintenance costs growing >20% quarterly",
+          "detection": "Engineering time on fixes vs features",
+          "threshold": 20,
+          "unit": "percent_growth"
+        },
+        {
+          "name": "response_time_degraded",
+          "description": "Response time >5x industry standard",
+          "detection": "Performance monitoring shows consistent slowness",
+          "threshold": 5,
+          "unit": "multiplier"
+        },
+        {
+          "name": "hiring_impossible",
+          "description": "Cannot hire developers for tech stack",
+          "detection": "Open positions >6 months, candidate rejection rate >80%",
+          "threshold": 6,
+          "unit": "months"
+        }
+      ]
+    },
+    "warning": {
+      "description": "Early warning signs to monitor",
+      "indicators": [
+        "test_coverage_below_30_percent",
+        "deployment_frequency_declining",
+        "rollback_rate_increasing",
+        "incident_frequency_rising",
+        "code_review_time_increasing"
+      ]
+    }
+  },
+  
+  "business_model_rebuild_triggers": {
+    "critical": {
+      "description": "Immediate business model rebuild needed",
+      "indicators": [
+        {
+          "name": "ltv_cac_below_1_5",
+          "description": "Customer lifetime value below acquisition cost",
+          "detection": "LTV:CAC ratio consistently <1.5 for 3+ months",
+          "threshold": 1.5,
+          "severity": "critical"
+        },
+        {
+          "name": "gross_margin_below_30",
+          "description": "Gross margins unsustainable",
+          "detection": "Gross margin <30% with no improvement path",
+          "threshold": 30,
+          "unit": "percent",
+          "severity": "critical"
+        },
+        {
+          "name": "churn_above_20_monthly",
+          "description": "Customer churn exceeding sustainable levels",
+          "detection": "Monthly churn >20% for 2+ months",
+          "threshold": 20,
+          "unit": "percent_monthly",
+          "severity": "critical"
+        },
+        {
+          "name": "unit_economics_negative",
+          "description": "Unit economics never positive",
+          "detection": "No path to positive unit economics in model",
+          "severity": "critical"
+        }
+      ]
+    },
+    "important": {
+      "description": "3+ indicate business model issues",
+      "indicators": [
+        {
+          "name": "cac_rising_15_percent_quarterly",
+          "description": "Customer acquisition cost escalating",
+          "threshold": 15,
+          "unit": "percent_quarterly"
+        },
+        {
+          "name": "price_sensitivity_blocking",
+          "description": "Cannot raise prices without massive churn",
+          "threshold": 50,
+          "unit": "percent_churn_on_increase"
+        },
+        {
+          "name": "market_rejecting_model",
+          "description": "Consistent feedback rejecting pricing/delivery",
+          "threshold": 60,
+          "unit": "percent_negative_feedback"
+        },
+        {
+          "name": "competition_10x_value",
+          "description": "Competitors offer 10x value at same price",
+          "threshold": 10,
+          "unit": "value_multiplier"
+        },
+        {
+          "name": "sales_cycle_2x_average",
+          "description": "Sales cycle exceeding industry norms",
+          "threshold": 2,
+          "unit": "multiplier"
+        }
+      ]
+    }
+  },
+  
+  "partial_rebuild_criteria": {
+    "qualification": {
+      "description": "All must be true for partial rebuild",
+      "requirements": [
+        {
+          "name": "salvageable_code_30_70_percent",
+          "description": "Between 30-70% of codebase is salvageable",
+          "min": 30,
+          "max": 70,
+          "unit": "percent"
+        },
+        {
+          "name": "clear_boundaries",
+          "description": "Components have clear separation",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "name": "maintain_service",
+          "description": "Can maintain service during rebuild",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "name": "incremental_value",
+          "description": "Can deliver value incrementally",
+          "type": "boolean",
+          "required": true
+        },
+        {
+          "name": "team_capacity",
+          "description": "Team can handle parallel work",
+          "type": "boolean",
+          "required": true
+        }
+      ]
+    }
+  },
+  
+  "rebuild_roi_thresholds": {
+    "technical_rebuild": {
+      "minimum_roi": 300,
+      "payback_months": 18,
+      "confidence_required": 70,
+      "unit": "percent"
+    },
+    "business_model_rebuild": {
+      "minimum_roi": 500,
+      "payback_months": 12,
+      "confidence_required": 60,
+      "unit": "percent"
+    },
+    "partial_rebuild": {
+      "minimum_roi": 250,
+      "payback_months": 12,
+      "confidence_required": 75,
+      "unit": "percent"
+    }
+  },
+  
+  "assessment_scoring": {
+    "market_validation": {
+      "weight": 0.25,
+      "factors": {
+        "customer_retention": 0.3,
+        "organic_growth": 0.2,
+        "nps_score": 0.2,
+        "market_demand": 0.3
+      }
+    },
+    "technical_viability": {
+      "weight": 0.25,
+      "factors": {
+        "scalability": 0.25,
+        "performance": 0.25,
+        "maintainability": 0.25,
+        "security": 0.25
+      }
+    },
+    "business_model_health": {
+      "weight": 0.25,
+      "factors": {
+        "unit_economics": 0.35,
+        "growth_efficiency": 0.25,
+        "margin_structure": 0.25,
+        "pricing_power": 0.15
+      }
+    },
+    "competitive_position": {
+      "weight": 0.25,
+      "factors": {
+        "feature_parity": 0.3,
+        "differentiation": 0.3,
+        "market_share": 0.2,
+        "brand_strength": 0.2
+      }
+    }
+  },
+  
+  "decision_matrix": {
+    "strong_rebuild_signal": {
+      "conditions": {
+        "market_validation": ">6",
+        "technical_viability": "<3",
+        "business_model": "any",
+        "action": "technical_rebuild"
+      }
+    },
+    "business_rebuild_signal": {
+      "conditions": {
+        "market_validation": ">6",
+        "technical_viability": ">6",
+        "business_model": "<3",
+        "action": "business_model_rebuild"
+      }
+    },
+    "partial_rebuild_signal": {
+      "conditions": {
+        "market_validation": ">5",
+        "technical_viability": "4-6",
+        "business_model": ">5",
+        "salvageable_code": "30-70%",
+        "action": "partial_rebuild"
+      }
+    },
+    "iterate_signal": {
+      "conditions": {
+        "market_validation": ">6",
+        "technical_viability": ">6",
+        "business_model": ">6",
+        "action": "continue_iterating"
+      }
+    },
+    "pivot_or_exit_signal": {
+      "conditions": {
+        "market_validation": "<3",
+        "technical_viability": "any",
+        "business_model": "any",
+        "action": "pivot_or_exit"
+      }
+    }
+  },
+  
+  "monitoring_frequency": {
+    "critical_indicators": "real_time",
+    "important_indicators": "weekly",
+    "warning_indicators": "monthly",
+    "full_assessment": "quarterly"
+  },
+  
+  "escalation_triggers": {
+    "immediate_escalation": [
+      "Any critical indicator triggered",
+      "3+ important indicators triggered",
+      "ROI declining below threshold",
+      "Customer exodus detected"
+    ],
+    "scheduled_review": [
+      "2+ warning indicators present",
+      "Velocity declining 2 sprints",
+      "Support tickets increasing 20%",
+      "Competition gaining market share"
+    ]
+  }
+}

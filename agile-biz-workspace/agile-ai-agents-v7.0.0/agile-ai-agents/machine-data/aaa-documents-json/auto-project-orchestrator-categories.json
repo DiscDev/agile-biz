@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "document": "auto-project-orchestrator-categories",
+    "timestamp": "2025-07-17T02:10:22.172Z",
+    "version": "1.0.0",
+    "source_file": "aaa-documents/auto-project-orchestrator-categories.md",
+    "document_type": "general_documentation"
+  },
+  "summary": "This file enables automatic project orchestration. When Claude Code detects this file in the agile-ai-agents folder, it will automatically coordinate all 27 AgileAiAgents to take a project idea from concept to completion using agile methodology without requiring manual agent activation.",
+  "sections": [
+    {
+      "title": "Overview",
+      "content_preview": "This file enables automatic project orchestration. When Claude Code detects this file in the agile-ai-agents folder, it will automatically coordinate "
+    },
+    {
+      "title": "Implementation Guide",
+      "content_preview": "1. **User provides project idea** - Just describe what you want to build 2. **AgileAiAgents asks qualifying questions** - Clarifies scope, requirement"
+    },
+    {
+      "title": "🆕 Context Persistence with Project State Manager Agent",
+      "content_preview": "The Project State Manager Agent ensures seamless continuity across Claude Code sessions: ### Automatic State Preservation - **Continuous Saving**: Pro"
+    },
+    {
+      "title": "Important: Single-Folder Structure",
+      "content_preview": "All AgileAiAgents components are now contained within the `agile-ai-agents/` folder. This keeps your project root clean and makes upgrades easier. The"
+    },
+    {
+      "title": "Project Documents Structure",
+      "content_preview": "All agent deliverables are automatically saved to the `agile-ai-agents/project-documents/` folder for easy reference: ``` agile-ai-agents/project-docu"
+    },
+    {
+      "title": "Existing Project Integration Workflow",
+      "content_preview": "**When adding this AI agent coordination system to an existing project, use this workflow instead:** ### Phase 0: Existing Project Analysis & Integrat"
+    },
+    {
+      "title": "Automated Project Workflow",
+      "content_preview": "**For NEW projects starting from scratch, use this workflow:** ### Phase 1: Project Discovery & Validation ```"
+    },
+    {
+      "title": "Quality Gates & User Decision Points",
+      "content_preview": "### Project Viability Gate **Trigger:** After Research Agent completes market analysis **User Decision:** Continue with project or modify/cancel"
+    },
+    {
+      "title": "Qualifying Questions Framework",
+      "content_preview": "When a user provides a project idea, Claude will automatically ask these categories of questions: ### Project Scope & Vision - What is the main proble"
+    },
+    {
+      "title": "Automatic Agent Coordination Rules",
+      "content_preview": "### Agent Activation Triggers - **Research Agent**: Automatically activates after qualifying questions - **Analysis Agent**: Activates after Research "
+    },
+    {
+      "title": "User Interaction Points",
+      "content_preview": "### Agile Stakeholder Interaction Points (SPRINT-BASED) #### 🎯 Required Sprint Reviews (Stakeholder Engagement) 1. **Initial project idea** - Brief d"
+    },
+    {
+      "title": "Expected User Experience",
+      "content_preview": "### Initial Interaction ``` User: \"I want to build a task management app for small teams\""
+    },
+    {
+      "title": "Configuration for Different Project Types",
+      "content_preview": "### Web Applications **Agents Used:** Research → Analysis → Marketing → Finance → VC Report → Business Documents → PRD → API → LLM → ML → MCP → Projec"
+    },
+    {
+      "title": "MCP Server Integration",
+      "content_preview": "When agents reference MCP servers, they can access additional capabilities: ### Available MCP Integrations - **GitHub MCP Server**: Repository managem"
+    },
+    {
+      "title": "Activation Instructions for Claude",
+      "content_preview": "When Claude Code detects this file (`auto-project-orchestrator.md`) in a project directory and receives a project idea from the user: 1. **Create proj"
+    },
+    {
+      "title": "[DECISION TYPE] - [TIMESTAMP]",
+      "content_preview": "**Context**: [Phase/Agent/Deliverable being reviewed] **Decision**: [User's exact decision - Approved/Modified/Rejected/Selected Option] **Rationale**"
+    },
+    {
+      "title": "PROJECT IDENTITY CONFIRMATION - [TIMESTAMP]",
+      "content_preview": "**Context**: Finalizing project identity before implementation begins **Project Name**: [Official product/service name] **Domain Name**: [Confirmed do"
+    },
+    {
+      "title": "Session Recovery Workflow (NEW)",
+      "content_preview": "**When returning to a project after a break, the system automatically restores context:** ### Automatic Session Recovery ```"
+    }
+  ],
+  "key_points": [
+    "**Continuous Saving**: Project state saved after every significant action",
+    "**Decision Context**: All user decisions preserved with full rationale",
+    "**Sprint Progress**: Task completions and blockers tracked continuously",
+    "**Milestone Tracking**: Strategic milestones and achievements recorded",
+    "**Instant Context Restoration**: Resume exactly where you left off",
+    "**\"Where We Left Off\" Summaries**: Clear recap when reopening project",
+    "**Checkpoint System**: Major milestones create restorable checkpoints",
+    "**Team Handoffs**: Comprehensive handoff documentation for collaboration",
+    "All user decisions and approvals with context",
+    "Sprint progress and task assignments"
+  ],
+  "usage_context": [
+    "general_reference"
+  ]
+}

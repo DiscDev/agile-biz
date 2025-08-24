@@ -1,0 +1,280 @@
+{
+  "meta": {
+    "document": "context-verification-examples",
+    "title": "Context Verification Examples & Scenarios",
+    "timestamp": "2025-08-11T22:02:16.874Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/context-verification-examples.md",
+    "document_type": "general_documentation",
+    "file_hash": "44055038c6390b406d144a2ac85c4291",
+    "estimated_tokens": 755,
+    "full_md_tokens": 3134
+  },
+  "summary": "## Real-World Examples",
+  "sections": [
+    {
+      "title": "Real-World Examples",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#real-world-examples",
+      "content_preview": ""
+    },
+    {
+      "title": "WHAT WE'RE BUILDING",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#what-were-building",
+      "content_preview": "A B2B wholesale marketplace connecting manufacturers with retailers for bulk orders."
+    },
+    {
+      "title": "INDUSTRY/DOMAIN",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#industrydomain",
+      "content_preview": "Online gambling / Casino affiliate marketing"
+    },
+    {
+      "title": "TARGET USERS",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#target-users",
+      "content_preview": "- Primary: Online gambling enthusiasts aged 21-45\n- Secondary: First-time online casino players"
+    },
+    {
+      "title": "NOT THIS",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#not-this",
+      "content_preview": "**Blocked**:\n```javascript\n{\n  title: \"Add Instagram shopping integration\",\n  confidence: 96,\n  message: \"User misalignment: Instagram shopping is B2C..."
+    },
+    {
+      "title": "COMPETITORS",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#competitors",
+      "content_preview": "- Casino.org - Casino reviews and guides\n- AskGamblers.com - Player reviews and complaints\n- ThePogg.com - Casino blacklist and reviews"
+    },
+    {
+      "title": "DOMAIN TERMS",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#domain-terms",
+      "content_preview": "**Blocked Feature Request #1**:\n```javascript\n{\n  title: \"Add invoice generation for affiliate payments\",\n  description: \"Allow affiliates to create i..."
+    },
+    {
+      "title": "WHAT WE'RE BUILDING",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#what-were-building-1",
+      "content_preview": "A B2B wholesale marketplace connecting manufacturers with retailers for bulk orders."
+    },
+    {
+      "title": "NOT THIS",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#not-this-1",
+      "content_preview": "**Blocked**:\n```javascript\n{\n  title: \"Add Instagram shopping integration\",\n  confidence: 96,\n  message: \"User misalignment: Instagram shopping is B2C..."
+    },
+    {
+      "title": "Test Scenarios",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#test-scenarios",
+      "content_preview": ""
+    },
+    {
+      "title": "Command Examples",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#command-examples",
+      "content_preview": ""
+    },
+    {
+      "title": "Prevention Success Stories",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#prevention-success-stories",
+      "content_preview": ""
+    },
+    {
+      "title": "Integration Patterns",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#integration-patterns",
+      "content_preview": ""
+    },
+    {
+      "title": "Metrics and KPIs",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#metrics-and-kpis",
+      "content_preview": ""
+    },
+    {
+      "title": "Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#summary",
+      "content_preview": "These examples demonstrate how the Context Verification System prevents real-world project drift through:\n\n1. **Clear Boundaries**: Explicit NOT THIS ..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Real-World Examples": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#real-world-examples",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Example 1: The BankRolls.com Incident": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#example-1-the-bankrollscom-incident-2"
+        }
+      }
+    },
+    "WHAT WE'RE BUILDING": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#what-were-building-1",
+      "tokens": 21,
+      "content_preview": "A B2B wholesale marketplace connecting manufacturers with retailers for bulk orders."
+    },
+    "INDUSTRY/DOMAIN": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#industrydomain",
+      "tokens": 11,
+      "content_preview": "Online gambling / Casino affiliate marketing"
+    },
+    "TARGET USERS": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#target-users",
+      "tokens": 24,
+      "content_preview": "- Primary: Online gambling enthusiasts aged 21-45\n- Secondary: First-time online casino players"
+    },
+    "NOT THIS": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#not-this-1",
+      "tokens": 85,
+      "content_preview": "**Blocked**:\n```javascript\n{\n  title: \"Add Instagram shopping integration\",\n  confidence: 96,\n  message: \"User misalignment: Instagram shopping is B2C...",
+      "subsections": {
+        "Example 3: Healthcare App Drift": {
+          "content_preview": "```javascript\n// Pattern: Feature Creep into Fitness\nviolations: [\n  \"Add step counter\",\n  \"Track workout routines\",\n  \"Calorie counting feature\",\n  \"...",
+          "tokens": 115,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#example-3-healthcare-app-drift-2"
+        }
+      }
+    },
+    "COMPETITORS": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#competitors",
+      "tokens": 34,
+      "content_preview": "- Casino.org - Casino reviews and guides\n- AskGamblers.com - Player reviews and complaints\n- ThePogg.com - Casino blacklist and reviews"
+    },
+    "DOMAIN TERMS": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#domain-terms",
+      "tokens": 295,
+      "content_preview": "**Blocked Feature Request #1**:\n```javascript\n{\n  title: \"Add invoice generation for affiliate payments\",\n  description: \"Allow affiliates to create i...",
+      "subsections": {
+        "Example 2: E-Commerce Platform Drift": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#example-2-e-commerce-platform-drift-2"
+        }
+      }
+    },
+    "Test Scenarios": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#test-scenarios",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Scenario 1: New Sprint Planning": {
+          "content_preview": "**Setup**: Sprint for \"Payment Processing\" features\n\n**Test Cases**:\n\n1. **Valid Task - Passes**\n   ```\n   Task: \"Integrate Stripe for subscription pa...",
+          "tokens": 171,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#scenario-1-new-sprint-planning-1"
+        },
+        "Scenario 2: Continuous Drift Monitoring": {
+          "content_preview": "**Project**: Food Delivery App\n**Timeline**: 3-month simulation\n\n**Month 1**: Baseline\n- Drift: 5% (healthy)\n- Focus: Restaurant partnerships, deliver...",
+          "tokens": 111,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#scenario-2-continuous-drift-monitoring-1"
+        },
+        "Scenario 3: Learning System Evolution": {
+          "content_preview": "**Initial State**: No patterns detected\n\n**After 10 Violations**:\n```javascript\nlearnedPatterns: {\n  \"admin-feature-creep\": {\n    occurrences: 8,\n    ...",
+          "tokens": 128,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#scenario-3-learning-system-evolution-1"
+        }
+      }
+    },
+    "Command Examples": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#command-examples",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Creating Project Truth": {
+          "content_preview": "```bash\n$ /verify-context --create-truth\n\n📋 Project Truth Document Creation\n\nProject name: FitTracker Pro\nIn one sentence, what is this product? A mo...",
+          "tokens": 245,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#creating-project-truth-1"
+        },
+        "Checking Drift": {
+          "content_preview": "```bash\n$ /verify-context --check-drift\n\n🔍 Checking for Context Drift...\n\n📊 Context Alignment Summary:\n   Total Items: 47\n   ✅ Aligned: 38 (81%)\n   ...",
+          "tokens": 203,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#checking-drift-1"
+        },
+        "Monitoring Dashboard Output": {
+          "content_preview": "```\n┌─────────────────────────────────────┐\n│ 🎯 Context Verification             │\n├─────────────────────────────────────┤\n│ ✅ 15%  ████░░░░░░░░░░░░░...",
+          "tokens": 149,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#monitoring-dashboard-output-1"
+        },
+        "Audit Report Summary": {
+          "content_preview": "```bash\n$ /verify-context --export\n\n📊 Generating Comprehensive Context Verification Report...\n\nInclude all sections in the report? n\nInclude backlog ...",
+          "tokens": 217,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#audit-report-summary-1"
+        }
+      }
+    },
+    "Prevention Success Stories": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#prevention-success-stories",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Story 1: Caught Early": {
+          "content_preview": "**Project**: LegalDoc AI\n**Attempted Feature**: \"Add medical document templates\"\n**Result**: Blocked immediately\n**Outcome**: Stayed focused on legal ...",
+          "tokens": 42,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#story-1-caught-early-1"
+        },
+        "Story 2: Learning Applied": {
+          "content_preview": "**Project**: RestaurantPOS\n**Pattern Detected**: \"delivery-feature-creep\" (from 3 previous projects)\n**Prevention**: Auto-flagged all delivery-related...",
+          "tokens": 50,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#story-2-learning-applied-1"
+        },
+        "Story 3: Stakeholder Alignment": {
+          "content_preview": "**Project**: StudyBuddy\n**Drift Detected**: 45% drift toward social networking\n**Action**: Emergency stakeholder review\n**Resolution**: Created separa...",
+          "tokens": 55,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#story-3-stakeholder-alignment-1"
+        }
+      }
+    },
+    "Integration Patterns": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#integration-patterns",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "With Git Hooks": {
+          "content_preview": "```bash\n#!/bin/bash",
+          "tokens": 4,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#with-git-hooks-1"
+        }
+      }
+    },
+    "Metrics and KPIs": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#metrics-and-kpis",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Success Metrics": {
+          "content_preview": "1. **Drift Prevention Rate**: 94% of drift caught before implementation\n2. **False Positive Rate**: <5% of legitimate features flagged\n3. **Learning E...",
+          "tokens": 67,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#success-metrics-1"
+        },
+        "Health Indicators": {
+          "content_preview": "- **Green (Healthy)**: <20% drift, <5 violations/sprint\n- **Yellow (Caution)**: 20-40% drift, 5-10 violations/sprint  \n- **Red (Critical)**: >40% drif...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#health-indicators-1"
+        },
+        "ROI Calculation": {
+          "content_preview": "```\nPrevented Feature Cost = Developer Hours × Hourly Rate × Prevented Features\nROI = (Prevented Feature Cost - Context System Time) / Context System ...",
+          "tokens": 76,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#roi-calculation-1"
+        }
+      }
+    },
+    "Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-examples.md#summary",
+      "tokens": 129,
+      "content_preview": "These examples demonstrate how the Context Verification System prevents real-world project drift through:\n\n1. **Clear Boundaries**: Explicit NOT THIS ..."
+    }
+  }
+}

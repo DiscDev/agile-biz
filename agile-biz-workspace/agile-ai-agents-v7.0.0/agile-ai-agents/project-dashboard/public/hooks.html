@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Hook Configuration - AgileAiAgents</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0f172a;
+            color: #e2e8f0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .hooks-container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 100vh;
+        }
+        
+        .hooks-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .hooks-header h1 {
+            color: #e2e8f0;
+            margin: 0;
+        }
+        
+        .hooks-tabs {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            background: #1a1f2e;
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid #374151;
+        }
+        
+        .hooks-tab {
+            padding: 12px 24px;
+            background: transparent;
+            border: 1px solid transparent;
+            cursor: pointer;
+            font-size: 16px;
+            color: #94a3b8;
+            border-radius: 8px;
+            transition: all 0.3s;
+            white-space: nowrap;
+            font-weight: 400;
+        }
+        
+        .hooks-tab:hover {
+            color: #cbd5e1;
+            background: rgba(148, 163, 184, 0.1);
+            border-color: #475569;
+        }
+        
+        .hooks-tab.active {
+            color: #ffffff;
+            background: #3b82f6;
+            border-color: #3b82f6;
+            font-weight: 500;
+            box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+        }
+        
+        .tab-panel {
+            display: none;
+        }
+        
+        .tab-panel.active {
+            display: block;
+        }
+        
+        .config-section {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #334155;
+        }
+        
+        .config-section h3 {
+            color: #e2e8f0;
+            margin-top: 0;
+        }
+        
+        .config-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #334155;
+        }
+        
+        .config-row:last-child {
+            border-bottom: none;
+        }
+        
+        .config-label {
+            font-weight: 500;
+            color: #e2e8f0;
+        }
+        
+        .config-description {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+        
+        .toggle-switch {
+            position: relative;
+            width: 48px;
+            height: 24px;
+        }
+        
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .toggle-slider {
+            background-color: #2563eb;
+        }
+        
+        input:checked + .toggle-slider:before {
+            transform: translateX(24px);
+        }
+        
+        .hook-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.2s;
+        }
+        
+        .hook-card:hover {
+            border-color: #475569;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hook-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 10px;
+        }
+        
+        .hook-info {
+            flex: 1;
+        }
+        
+        .hook-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #e2e8f0;
+        }
+        
+        .hook-description {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+        
+        .hook-meta {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .hook-badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .badge-critical {
+            background: #fee2e2;
+            color: #dc2626;
+        }
+        
+        .badge-important {
+            background: #fef3c7;
+            color: #d97706;
+        }
+        
+        .badge-helpful {
+            background: #dbeafe;
+            color: #2563eb;
+        }
+        
+        .performance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .metric-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        
+        .metric-label {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .metric-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #e2e8f0;
+        }
+        
+        .metric-unit {
+            font-size: 16px;
+            font-weight: 400;
+            color: #94a3b8;
+        }
+        
+        .status-message {
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .status-success {
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #6ee7b7;
+        }
+        
+        .status-error {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #fca5a5;
+        }
+        
+        .status-info {
+            background-color: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 10px;
+        }
+        
+        .status-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+        }
+        
+        .status-row span:first-child {
+            font-weight: 500;
+            color: #666;
+        }
+        
+        select {
+            padding: 8px 12px;
+            border: 1px solid #475569;
+            border-radius: 6px;
+            background: #1e293b;
+            color: #e2e8f0;
+            font-size: 14px;
+        }
+        
+        select:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        input[type="number"] {
+            padding: 8px 12px;
+            border: 1px solid #475569;
+            border-radius: 6px;
+            background: #1e293b;
+            color: #e2e8f0;
+            font-size: 14px;
+        }
+        
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        button {
+            padding: 8px 16px;
+            border: 1px solid #475569;
+            border-radius: 6px;
+            background: #334155;
+            color: #e2e8f0;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        
+        button:hover {
+            background: #475569;
+            border-color: #64748b;
+        }
+        
+        button.primary {
+            background: #3b82f6;
+            color: white;
+            border-color: #3b82f6;
+        }
+        
+        button.primary:hover {
+            background: #2563eb;
+            border-color: #2563eb;
+        }
+        
+        .hook-category-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .badge-impact-low {
+            background: #10b981;
+            color: white;
+        }
+        
+        .badge-impact-medium {
+            background: #f59e0b;
+            color: white;
+        }
+        
+        .badge-impact-high {
+            background: #ef4444;
+            color: white;
+        }
+        
+        .badge-impact-async {
+            background: #6366f1;
+            color: white;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hooks-container {
+                padding: 10px;
+            }
+            
+            .hooks-header {
+                flex-direction: column;
+                gap: 15px;
+                align-items: stretch;
+                margin-bottom: 20px;
+            }
+            
+            .hooks-header h1 {
+                font-size: 24px;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            
+            .save-button {
+                width: 100%;
+                padding: 12px 20px;
+                font-size: 16px;
+            }
+            
+            .hooks-tabs {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                padding: 8px;
+                margin-bottom: 15px;
+                background: #1a1f2e;
+                border-radius: 8px;
+                border: 1px solid #374151;
+            }
+            
+            .hooks-tab {
+                font-size: 13px;
+                padding: 8px 12px;
+                flex: 1;
+                min-width: 0;
+                text-align: center;
+                color: #94a3b8;
+                border: 1px solid transparent;
+                background: transparent;
+                border-radius: 6px;
+                transition: all 0.2s;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            
+            .hooks-tab:hover {
+                background: rgba(148, 163, 184, 0.1);
+                border-color: #475569;
+            }
+            
+            .hooks-tab.active {
+                color: #ffffff;
+                background: #3b82f6;
+                border-color: #3b82f6;
+                font-weight: 500;
+                box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+            }
+            
+            .config-section {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+            
+            .config-section h3 {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+            
+            .config-row {
+                flex-direction: column;
+                gap: 10px;
+                padding: 12px 0;
+            }
+            
+            .config-label {
+                font-size: 16px;
+            }
+            
+            .config-description {
+                font-size: 13px;
+            }
+            
+            select, input[type="number"] {
+                width: 100%;
+                font-size: 16px; /* Prevents zoom on iOS */
+                padding: 10px 12px;
+            }
+            
+            .hook-card {
+                padding: 15px;
+                margin-bottom: 12px;
+            }
+            
+            .hook-header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .hook-name {
+                font-size: 16px;
+            }
+            
+            .hook-description {
+                font-size: 13px;
+            }
+            
+            .hook-meta {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            
+            .hook-badge {
+                font-size: 11px;
+                padding: 3px 6px;
+            }
+            
+            .toggle-switch {
+                align-self: flex-end;
+            }
+            
+            .performance-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+                margin-bottom: 20px;
+            }
+            
+            .metric-card {
+                padding: 15px;
+            }
+            
+            .metric-label {
+                font-size: 12px;
+            }
+            
+            .metric-value {
+                font-size: 24px;
+            }
+            
+            .metric-unit {
+                font-size: 14px;
+            }
+            
+            #data-source-indicator {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+                margin-left: 0 !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hooks-header h1 {
+                font-size: 20px;
+            }
+            
+            .hooks-tab {
+                font-size: 13px;
+                padding: 8px 12px;
+            }
+            
+            .config-section {
+                padding: 12px;
+            }
+            
+            .hook-card {
+                padding: 12px;
+            }
+            
+            .performance-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            button {
+                width: 100%;
+                padding: 10px 16px;
+            }
+        }
+        
+        /* Fix for select dropdown on mobile */
+        @media (hover: none) and (pointer: coarse) {
+            select {
+                background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2714%27%20height%3D%278%27%20viewBox%3D%270%200%2014%208%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3Cpath%20d%3D%27M1%201l6%206%206-6%27%20stroke%3D%27%23333%27%20stroke-width%3D%272%27%20fill%3D%27none%27%20fill-rule%3D%27evenodd%27/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: right 10px center;
+                background-size: 12px;
+                padding-right: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hooks-container">
+        <div class="hooks-header">
+            <h1>🎣 Hook Configuration</h1>
+            <button class="primary save-button">Save Changes</button>
+        </div>
+        
+        <div id="status-message" class="status-message"></div>
+        
+        <div class="hooks-tabs">
+            <button class="hooks-tab active">General Settings</button>
+            <button class="hooks-tab">Hook Management</button>
+            <button class="hooks-tab">Agent Hooks</button>
+            <button class="hooks-tab">Performance</button>
+            <button class="hooks-tab">Activity Logs</button>
+        </div>
+        
+        <!-- General Settings Tab -->
+        <div id="general-tab" class="tab-panel active">
+            <div class="config-section">
+                <h3>Global Configuration</h3>
+                
+                <div class="config-row">
+                    <div>
+                        <div class="config-label">Hooks Enabled</div>
+                        <div class="config-description">Master switch for all hooks</div>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="hooks-enabled" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                
+                <div class="config-row">
+                    <div>
+                        <div class="config-label">Logging Level</div>
+                        <div class="config-description">Control the verbosity of hook logs</div>
+                    </div>
+                    <select id="logging-level">
+                        <option value="debug">Debug</option>
+                        <option value="info" selected>Info</option>
+                        <option value="warn">Warning</option>
+                        <option value="error">Error</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Claude Code Integration -->
+            <div class="config-section" style="margin-top: 20px;">
+                <h3>Claude Code Integration</h3>
+                
+                <div class="config-row">
+                    <div>
+                        <div class="config-label">Master Hook Control</div>
+                        <div class="config-description">Controls both AgileAiAgents and Claude Code hooks</div>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="master-hooks-enabled" checked onchange="toggleMasterHooks(this.checked)">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                
+                <div class="config-row">
+                    <div>
+                        <div class="config-label">Auto-Sync to Parent</div>
+                        <div class="config-description">Automatically sync agents to parent directory</div>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="auto-sync-enabled" checked onchange="toggleAutoSync(this.checked)">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                
+                <div id="claude-status" class="status-info" style="margin-top: 10px;">
+                    <div class="status-row">
+                        <span>Execution Context:</span>
+                        <span id="execution-context">-</span>
+                    </div>
+                    <div class="status-row">
+                        <span>AgileAiAgents Hooks:</span>
+                        <span id="agile-hooks-status">-</span>
+                    </div>
+                    <div class="status-row">
+                        <span>Claude Code Hooks:</span>
+                        <span id="claude-hooks-status">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hook Management Tab -->
+        <div id="hooks-tab" class="tab-panel">
+            <div class="config-section">
+                <h3>Hook Profile</h3>
+                <div class="config-row">
+                    <div>
+                        <div class="config-label">Select Hook Profile</div>
+                        <div class="config-description">Choose a pre-configured hook profile for all system hooks</div>
+                    </div>
+                    <select id="hook-profile" onchange="applyHookProfile(this.value)">
+                        <option value="minimal">Minimal - Essential hooks only (7 hooks)</option>
+                        <option value="standard" selected>Standard - Recommended configuration (16 hooks)</option>
+                        <option value="advanced">Advanced - ALL hooks enabled (44 hooks)</option>
+                        <option value="custom">Custom - Configure individually</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div id="hooks-list" style="margin-top: 20px;">
+                <div class="loading">Loading hooks...</div>
+            </div>
+        </div>
+        
+        <!-- Agent Hooks Tab -->
+        <div id="agent-hooks-tab" class="tab-panel">
+            <div class="config-section">
+                <h3>Agent-Specific Hook Profile</h3>
+                <div class="config-row">
+                    <div>
+                        <div class="config-label">Agent Hook Profile</div>
+                        <div class="config-description">Select performance/quality balance for agent hooks</div>
+                    </div>
+                    <select id="agent-hook-profile" onchange="updateAgentHookProfile(this.value)">
+                        <option value="minimal">Minimal - Critical hooks only (300ms budget)</option>
+                        <option value="standard" selected>Standard - Critical + Valuable (500ms budget)</option>
+                        <option value="advanced">Advanced - Most hooks enabled (1000ms budget)</option>
+                        <option value="all">All - Every agent hook enabled (no budget limit)</option>
+                        <option value="custom">Custom - Configure individually</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="config-section">
+                <h3>Critical Hooks (Always Recommended)</h3>
+                <div id="critical-hooks-list" class="hook-category-list"></div>
+            </div>
+            
+            <div class="config-section">
+                <h3>Valuable Hooks (Recommended for Teams)</h3>
+                <div id="valuable-hooks-list" class="hook-category-list"></div>
+            </div>
+            
+            <div class="config-section">
+                <h3>Enhancement Hooks (Nice to Have)</h3>
+                <div id="enhancement-hooks-list" class="hook-category-list"></div>
+            </div>
+            
+            <div class="config-section">
+                <h3>Specialized Hooks (Domain Specific)</h3>
+                <div id="specialized-hooks-list" class="hook-category-list"></div>
+            </div>
+        </div>
+        
+        <!-- Performance Tab -->
+        <div id="performance-tab" class="tab-panel">
+            <div class="performance-grid" id="performance-metrics">
+                <div class="metric-card">
+                    <div class="metric-label">Total Executions</div>
+                    <div class="metric-value">0</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Average Time</div>
+                    <div class="metric-value">0<span class="metric-unit">ms</span></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Success Rate</div>
+                    <div class="metric-value">100<span class="metric-unit">%</span></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Active Hooks</div>
+                    <div class="metric-value">0</div>
+                </div>
+            </div>
+            
+            <div class="config-section">
+                <h3>Performance Settings</h3>
+                
+                <div class="config-row">
+                    <div>
+                        <div class="config-label">Timeout (ms)</div>
+                        <div class="config-description">Maximum execution time for hooks</div>
+                    </div>
+                    <input type="number" id="timeout" value="5000" min="1000" max="30000">
+                </div>
+                
+                <div class="config-row">
+                    <div>
+                        <div class="config-label">Warning Threshold (ms)</div>
+                        <div class="config-description">Log warnings for slow hooks</div>
+                    </div>
+                    <input type="number" id="warning-threshold" value="1000" min="100" max="10000">
+                </div>
+                
+                <div class="config-row">
+                    <div>
+                        <div class="config-label">Max Retries</div>
+                        <div class="config-description">Retry attempts for failed critical hooks</div>
+                    </div>
+                    <input type="number" id="max-retries" value="3" min="0" max="10">
+                </div>
+            </div>
+            
+            <button onclick="resetPerformanceMetrics()">Reset Performance Metrics</button>
+        </div>
+        
+        <!-- Activity Logs Tab -->
+        <div id="logs-tab" class="tab-panel">
+            <div class="config-section">
+                <h3>Recent Hook Activity</h3>
+                <div id="activity-logs">
+                    <div class="loading">Loading activity logs...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let currentConfig = {};
+        let hookRegistry = {};
+        let performanceData = {};
+        let agentHookDefaults = {};
+        
+        // Load configuration on startup
+        async function loadConfiguration() {
+            try {
+                const response = await fetch('/api/hooks/config');
+                currentConfig = await response.json();
+                updateUIFromConfig();
+                
+                // Load agent hook defaults
+                try {
+                    const agentResponse = await fetch('/api/hooks/agent-defaults');
+                    if (agentResponse.ok) {
+                        agentHookDefaults = await agentResponse.json();
+                        console.log('Loaded agent hook defaults:', agentHookDefaults);
+                    } else {
+                        console.warn('Agent hook defaults API returned:', agentResponse.status);
+                        // Use fallback defaults
+                        agentHookDefaults = getAgentHookDefaultsFallback();
+                    }
+                } catch (e) {
+                    console.warn('Agent hook defaults not available:', e);
+                    // Use fallback defaults
+                    agentHookDefaults = getAgentHookDefaultsFallback();
+                }
+            } catch (error) {
+                console.error('Failed to load configuration:', error);
+                showStatus('Failed to load configuration', 'error');
+            }
+        }
+        
+        // Load hook registry
+        async function loadHookRegistry() {
+            try {
+                console.log('Loading hook registry...');
+                
+                // Try the API first
+                let registry;
+                let dataSource = 'API';
+                try {
+                    const response = await fetch('/api/hooks/registry');
+                    if (response.ok) {
+                        registry = await response.json();
+                        console.log('✅ Successfully loaded data from API');
+                    } else {
+                        throw new Error(`API returned ${response.status}`);
+                    }
+                } catch (apiError) {
+                    // Fallback: Load registry directly for development
+                    console.warn('⚠️ API not available:', apiError.message);
+                    console.log('📦 Loading registry from fallback mock data...');
+                    registry = await loadRegistryFallback();
+                    dataSource = 'MOCK';
+                }
+                
+                console.log(`📊 Registry loaded from: ${dataSource}`);
+                console.log('Registry response:', registry);
+                hookRegistry = registry;
+                
+                // Show data source indicator in UI
+                showDataSourceIndicator(dataSource);
+                
+                // Display hooks from the registry
+                if (registry && registry.hooks) {
+                    const hookCount = Object.keys(registry.hooks).length;
+                    console.log(`Found ${hookCount} hooks in registry`);
+                    
+                    // Additional verification
+                    if (dataSource === 'API') {
+                        console.log('Hook examples from API:', Object.keys(registry.hooks).slice(0, 5));
+                        // The real API should have more hooks than our mock
+                        if (hookCount < 25) {
+                            console.warn('⚠️ API returned fewer hooks than expected');
+                        }
+                    }
+                    
+                    displayHooks(registry.hooks);
+                } else {
+                    console.warn('No hooks found in registry');
+                    displayHooks({});
+                }
+            } catch (error) {
+                console.error('Failed to load hook registry:', error);
+                displayHooks({});
+            }
+        }
+        
+        // Get agent hook defaults fallback
+        function getAgentHookDefaultsFallback() {
+            return {
+                "version": "1.0.0",
+                "profiles": {
+                    "minimal": {
+                        "description": "Only critical hooks for minimal performance impact",
+                        "performanceBudget": 300,
+                        "enabledByDefault": [
+                            "vulnerability-scanner",
+                            "secret-rotation-reminder",
+                            "coverage-gatekeeper",
+                            "defensive-patterns"
+                        ]
+                    },
+                    "standard": {
+                        "description": "Critical and valuable hooks for balanced approach",
+                        "performanceBudget": 500,
+                        "enabledByDefault": [
+                            "vulnerability-scanner",
+                            "secret-rotation-reminder",
+                            "coverage-gatekeeper",
+                            "defensive-patterns",
+                            "deployment-window-enforcer",
+                            "requirement-completeness",
+                            "dependency-checker",
+                            "import-validator",
+                            "test-categorizer"
+                        ]
+                    },
+                    "advanced": {
+                        "description": "Most hooks enabled for maximum quality",
+                        "performanceBudget": 1000,
+                        "enabledByDefault": [
+                            "vulnerability-scanner",
+                            "secret-rotation-reminder",
+                            "coverage-gatekeeper",
+                            "defensive-patterns",
+                            "deployment-window-enforcer",
+                            "requirement-completeness",
+                            "dependency-checker",
+                            "import-validator",
+                            "test-categorizer",
+                            "code-documentation",
+                            "error-boundary-enforcer",
+                            "performance-profiler",
+                            "accessibility-checker",
+                            "api-contract-validator",
+                            "naming-conventions",
+                            "code-complexity",
+                            "code-formatter",
+                            "commit-message-validator",
+                            "pr-template-checker",
+                            "dead-code-detector",
+                            "complexity-analyzer"
+                        ]
+                    }
+                }
+            };
+        }
+        
+        // Fallback registry loader for development
+        async function loadRegistryFallback() {
+            // Mock registry data based on actual hook-registry.json structure
+            return {
+                "version": "1.0.0",
+                "hooks": {
+                    "md-json-sync": {
+                        "name": "MD to JSON Auto-Sync",
+                        "description": "Automatically converts MD files to JSON when created or modified",
+                        "priority": "critical",
+                        "category": "file-sync",
+                        "triggers": ["file-create", "file-change"]
+                    },
+                    "vulnerability-scanner": {
+                        "name": "Vulnerability Scanner",
+                        "description": "Scans dependencies for known security vulnerabilities",
+                        "priority": "critical",
+                        "category": "agents/critical",
+                        "triggers": ["file-change", "dependency-install"]
+                    },
+                    "secret-rotation-reminder": {
+                        "name": "Secret Rotation Reminder",
+                        "description": "Reminds about secret rotation schedules",
+                        "priority": "critical",
+                        "category": "agents/critical",
+                        "triggers": ["time-interval", "secret-access"]
+                    },
+                    "coverage-gatekeeper": {
+                        "name": "Coverage Gatekeeper",
+                        "description": "Enforces minimum code coverage thresholds",
+                        "priority": "critical",
+                        "category": "agents/critical",
+                        "triggers": ["pre-commit", "test-run"]
+                    },
+                    "defensive-patterns": {
+                        "name": "Defensive Patterns Checker",
+                        "description": "Enforces defensive programming patterns",
+                        "priority": "critical",
+                        "category": "agents/critical",
+                        "triggers": ["file-save", "pre-commit"]
+                    },
+                    "deployment-window-enforcer": {
+                        "name": "Deployment Window Enforcer",
+                        "description": "Ensures deployments happen within approved windows",
+                        "priority": "critical",
+                        "category": "agents/critical",
+                        "triggers": ["deployment-request"]
+                    },
+                    "requirement-completeness": {
+                        "name": "Requirement Completeness Checker",
+                        "description": "Ensures all requirements are implemented before marking stories done",
+                        "priority": "critical",
+                        "category": "agents/critical",
+                        "triggers": ["story-complete", "mark-done"]
+                    },
+                    "dependency-checker": {
+                        "name": "Dependency Checker",
+                        "description": "Validates dependency versions and conflicts",
+                        "priority": "valuable",
+                        "category": "agents/valuable",
+                        "triggers": ["dependency-change"]
+                    },
+                    "import-validator": {
+                        "name": "Import Validator",
+                        "description": "Validates import statements and module resolution",
+                        "priority": "valuable",
+                        "category": "agents/valuable",
+                        "triggers": ["file-save", "import-change"]
+                    },
+                    "test-categorizer": {
+                        "name": "Test Categorizer",
+                        "description": "Categorizes and validates test structure",
+                        "priority": "valuable",
+                        "category": "agents/valuable",
+                        "triggers": ["test-create", "test-change"]
+                    },
+                    "code-documentation": {
+                        "name": "Code Documentation Checker",
+                        "description": "Ensures adequate code documentation",
+                        "priority": "valuable",
+                        "category": "agents/valuable",
+                        "triggers": ["function-create", "class-create"]
+                    },
+                    "error-boundary-enforcer": {
+                        "name": "Error Boundary Enforcer",
+                        "description": "Ensures proper error handling boundaries",
+                        "priority": "valuable",
+                        "category": "agents/valuable",
+                        "triggers": ["component-create", "file-save"]
+                    },
+                    "performance-profiler": {
+                        "name": "Performance Profiler",
+                        "description": "Profiles code performance characteristics",
+                        "priority": "valuable",
+                        "category": "agents/valuable",
+                        "triggers": ["function-change", "performance-test"]
+                    },
+                    "accessibility-checker": {
+                        "name": "Accessibility Checker",
+                        "description": "Validates accessibility standards",
+                        "priority": "valuable",
+                        "category": "agents/valuable",
+                        "triggers": ["ui-change", "component-create"]
+                    },
+                    "api-contract-validator": {
+                        "name": "API Contract Validator",
+                        "description": "Validates API contracts and schemas",
+                        "priority": "valuable",
+                        "category": "agents/valuable",
+                        "triggers": ["api-change", "schema-update"]
+                    },
+                    "code-formatter": {
+                        "name": "Code Formatter",
+                        "description": "Automatically formats code before commits",
+                        "priority": "enhancement",
+                        "category": "agents/enhancement",
+                        "triggers": ["file.modified", "pre-commit"]
+                    },
+                    "commit-message-validator": {
+                        "name": "Commit Message Validator",
+                        "description": "Validates commit messages against conventional standards",
+                        "priority": "enhancement",
+                        "category": "agents/enhancement",
+                        "triggers": ["pre-commit", "commit-msg"]
+                    },
+                    "pr-template-checker": {
+                        "name": "PR Template Checker",
+                        "description": "Ensures PR descriptions follow the template",
+                        "priority": "enhancement",
+                        "category": "agents/enhancement",
+                        "triggers": ["pr.created", "pr.updated", "pre-pr"]
+                    },
+                    "dead-code-detector": {
+                        "name": "Dead Code Detector",
+                        "description": "Detects unused code, imports, and exports",
+                        "priority": "enhancement",
+                        "category": "agents/enhancement",
+                        "triggers": ["file.modified", "analysis.requested", "pre-commit"]
+                    },
+                    "complexity-analyzer": {
+                        "name": "Complexity Analyzer",
+                        "description": "Analyzes cyclomatic complexity and suggests refactoring",
+                        "priority": "enhancement",
+                        "category": "agents/enhancement",
+                        "triggers": ["file.modified", "analysis.requested", "pre-commit"]
+                    }
+                }
+            };
+        }
+        
+        // Load performance data
+        async function loadPerformanceData() {
+            try {
+                const response = await fetch('/api/hooks/performance');
+                performanceData = await response.json();
+                displayPerformanceMetrics(performanceData);
+            } catch (error) {
+                console.error('Failed to load performance data:', error);
+            }
+        }
+        
+        // Load activity logs
+        async function loadActivityLogs() {
+            try {
+                const response = await fetch('/api/hooks/history?limit=50');
+                const data = await response.json();
+                displayActivityLogs(data.history);
+            } catch (error) {
+                console.error('Failed to load activity logs:', error);
+            }
+        }
+        
+        // Update UI from configuration
+        function updateUIFromConfig() {
+            document.getElementById('hooks-enabled').checked = currentConfig.enabled;
+            const profile = currentConfig.profile || 'standard';
+            document.getElementById('hook-profile').value = profile;
+            
+            // Set agent hook profile separately (or default to same as main profile)
+            const agentProfileSelect = document.getElementById('agent-hook-profile');
+            if (agentProfileSelect) {
+                const agentProfile = currentConfig.agentHookProfile || profile;
+                agentProfileSelect.value = agentProfile;
+            }
+            
+            document.getElementById('logging-level').value = currentConfig.logging?.level || 'info';
+            document.getElementById('timeout').value = currentConfig.performance?.timeout || 5000;
+            document.getElementById('warning-threshold').value = currentConfig.performance?.warningThreshold || 1000;
+            document.getElementById('max-retries').value = currentConfig.performance?.maxRetries || 3;
+            
+            // Apply the profile after registry is loaded
+            if (hookRegistry && hookRegistry.profiles) {
+                console.log(`Applying saved profile: ${profile}`);
+                applyHookProfile(profile);
+            }
+        }
+        
+        // Display hooks
+        function displayHooks(hooks) {
+            const container = document.getElementById('hooks-list');
+            container.innerHTML = '';
+            
+            if (!hooks || typeof hooks !== 'object' || Object.keys(hooks).length === 0) {
+                container.innerHTML = '<p>No hooks available</p>';
+                return;
+            }
+            
+            Object.entries(hooks).forEach(([hookName, hook]) => {
+                // Check if hook is enabled in current config
+                const isEnabled = currentConfig.hooks?.[hookName]?.enabled === true;
+                
+                const hookCard = document.createElement('div');
+                hookCard.className = 'hook-card';
+                hookCard.innerHTML = `
+                    <div class="hook-header">
+                        <div class="hook-info">
+                            <div class="hook-name">${hook.name}</div>
+                            <div class="hook-description">${hook.description}</div>
+                            <div class="hook-meta">
+                                <span class="hook-badge badge-${hook.priority}">${hook.priority}</span>
+                                <span class="hook-badge">${hook.category}</span>
+                                <span class="hook-badge">Triggers: ${hook.triggers.join(', ')}</span>
+                            </div>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="hook-${hookName}" ${isEnabled ? 'checked' : ''} 
+                                   onchange="toggleHook('${hookName}', this.checked)">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                `;
+                container.appendChild(hookCard);
+            });
+        }
+        
+        // Display performance metrics
+        function displayPerformanceMetrics(data) {
+            const metrics = document.getElementById('performance-metrics');
+            const totalExec = data.summary?.totalExecutions || 0;
+            const avgTime = data.summary?.avgTime || 0;
+            const totalHooks = Object.keys(hookRegistry.hooks || {}).length;
+            const activeHooks = Object.keys(currentConfig.hooks || {})
+                .filter(h => currentConfig.hooks[h].enabled !== false).length;
+            
+            metrics.innerHTML = `
+                <div class="metric-card">
+                    <div class="metric-label">Total Executions</div>
+                    <div class="metric-value">${totalExec.toLocaleString()}</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Average Time</div>
+                    <div class="metric-value">${avgTime}<span class="metric-unit">ms</span></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Success Rate</div>
+                    <div class="metric-value">95<span class="metric-unit">%</span></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Active Hooks</div>
+                    <div class="metric-value">${activeHooks}<span class="metric-unit">/${totalHooks}</span></div>
+                </div>
+            `;
+        }
+        
+        // Display activity logs
+        function displayActivityLogs(logs) {
+            const container = document.getElementById('activity-logs');
+            
+            if (!logs || logs.length === 0) {
+                container.innerHTML = '<p>No recent activity</p>';
+                return;
+            }
+            
+            container.innerHTML = logs.map(log => `
+                <div class="log-entry">
+                    <span class="log-time">${new Date(log.timestamp).toLocaleTimeString()}</span>
+                    <span class="log-level log-${log.level}">${log.level}</span>
+                    <span class="log-message">${log.message}</span>
+                </div>
+            `).join('');
+        }
+        
+        // Toggle hook
+        function toggleHook(hookName, enabled) {
+            if (!currentConfig.hooks) currentConfig.hooks = {};
+            if (!currentConfig.hooks[hookName]) currentConfig.hooks[hookName] = {};
+            currentConfig.hooks[hookName].enabled = enabled;
+        }
+        
+        // Save configuration
+        async function saveConfiguration() {
+            // Update config from UI
+            currentConfig.enabled = document.getElementById('hooks-enabled').checked;
+            currentConfig.profile = document.getElementById('hook-profile').value;
+            
+            // Also save the agent hook profile if on that tab
+            const agentProfileSelect = document.getElementById('agent-hook-profile');
+            if (agentProfileSelect) {
+                currentConfig.agentHookProfile = agentProfileSelect.value;
+            }
+            
+            if (!currentConfig.logging) currentConfig.logging = {};
+            currentConfig.logging.level = document.getElementById('logging-level').value;
+            
+            if (!currentConfig.performance) currentConfig.performance = {};
+            currentConfig.performance.timeout = parseInt(document.getElementById('timeout').value);
+            currentConfig.performance.warningThreshold = parseInt(document.getElementById('warning-threshold').value);
+            currentConfig.performance.maxRetries = parseInt(document.getElementById('max-retries').value);
+            
+            // Important: currentConfig.hooks should already have the individual hook states
+            console.log('Saving configuration with hooks:', Object.keys(currentConfig.hooks || {}).length);
+            
+            try {
+                const response = await fetch('/api/hooks/config', {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(currentConfig)
+                });
+                
+                if (response.ok) {
+                    showStatus('Configuration saved successfully', 'success');
+                } else {
+                    showStatus('Failed to save configuration', 'error');
+                }
+            } catch (error) {
+                console.error('Failed to save configuration:', error);
+                showStatus('Failed to save configuration', 'error');
+            }
+        }
+        
+        // Claude Code Integration Functions
+        async function loadClaudeStatus() {
+            try {
+                const response = await fetch('/api/hooks/claude-settings');
+                if (response.ok) {
+                    const data = await response.json();
+                    const { settings, status } = data;
+                    
+                    // Update UI elements
+                    document.getElementById('master-hooks-enabled').checked = settings.hookSettings.enabled;
+                    document.getElementById('auto-sync-enabled').checked = settings.hookSettings.syncEnabled;
+                    
+                    // Update status display
+                    document.getElementById('execution-context').textContent = status.executionContext;
+                    document.getElementById('agile-hooks-status').textContent = status.agileHooksEnabled ? '✓ Enabled' : '✗ Disabled';
+                    document.getElementById('agile-hooks-status').style.color = status.agileHooksEnabled ? '#4caf50' : '#f44336';
+                    document.getElementById('claude-hooks-status').textContent = status.claudeHooksEnabled ? '✓ Enabled' : '✗ Disabled';
+                    document.getElementById('claude-hooks-status').style.color = status.claudeHooksEnabled ? '#4caf50' : '#f44336';
+                }
+            } catch (error) {
+                console.error('Failed to load Claude status:', error);
+            }
+        }
+        
+        async function toggleMasterHooks(enabled) {
+            try {
+                const response = await fetch('/api/hooks/claude-settings', {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ enabled })
+                });
+                
+                if (response.ok) {
+                    showStatus(`All hooks ${enabled ? 'enabled' : 'disabled'}`, 'success');
+                    // Update the original hooks enabled checkbox too
+                    document.getElementById('hooks-enabled').checked = enabled;
+                    // Reload status
+                    loadClaudeStatus();
+                    loadConfiguration();
+                } else {
+                    showStatus('Failed to update master hook control', 'error');
+                    // Revert checkbox
+                    document.getElementById('master-hooks-enabled').checked = !enabled;
+                }
+            } catch (error) {
+                console.error('Failed to toggle master hooks:', error);
+                showStatus('Failed to update master hook control', 'error');
+                // Revert checkbox
+                document.getElementById('master-hooks-enabled').checked = !enabled;
+            }
+        }
+        
+        async function toggleAutoSync(enabled) {
+            try {
+                const response = await fetch('/api/hooks/claude-settings', {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ syncEnabled: enabled })
+                });
+                
+                if (response.ok) {
+                    showStatus(`Auto-sync ${enabled ? 'enabled' : 'disabled'}`, 'success');
+                } else {
+                    showStatus('Failed to update auto-sync setting', 'error');
+                    // Revert checkbox
+                    document.getElementById('auto-sync-enabled').checked = !enabled;
+                }
+            } catch (error) {
+                console.error('Failed to toggle auto-sync:', error);
+                showStatus('Failed to update auto-sync setting', 'error');
+                // Revert checkbox
+                document.getElementById('auto-sync-enabled').checked = !enabled;
+            }
+        }
+        
+        // Reset performance metrics
+        async function resetPerformanceMetrics() {
+            if (!confirm('Are you sure you want to reset all performance metrics?')) return;
+            
+            try {
+                const response = await fetch('/api/hooks/performance/reset', { method: 'POST' });
+                if (response.ok) {
+                    showStatus('Performance metrics reset successfully', 'success');
+                    loadPerformanceData();
+                }
+            } catch (error) {
+                console.error('Failed to reset metrics:', error);
+                showStatus('Failed to reset metrics', 'error');
+            }
+        }
+        
+        // Switch tabs
+        function switchTab(tabName, buttonElement) {
+            // Update tab buttons
+            document.querySelectorAll('.hooks-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            buttonElement.classList.add('active');
+            
+            // Update tab panels
+            document.querySelectorAll('.tab-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            document.getElementById(`${tabName}-tab`).classList.add('active');
+            
+            // Load data for specific tabs
+            if (tabName === 'hooks') {
+                console.log('Loading hooks tab');
+                loadHookRegistry();
+            } else if (tabName === 'agent-hooks') {
+                console.log('Loading agent-hooks tab');
+                loadHookRegistry().then(() => {
+                    // Populate agent-specific hooks by category
+                    displayAgentHooks();
+                    
+                    // Apply saved agent profile after hooks are displayed (silently)
+                    if (currentConfig.agentHookProfile && agentHookDefaults?.profiles) {
+                        console.log(`Applying agent profile after tab switch: ${currentConfig.agentHookProfile}`);
+                        setTimeout(() => {
+                            updateAgentHookProfile(currentConfig.agentHookProfile, true);  // Pass silent=true
+                        }, 100);
+                    }
+                });
+            } else if (tabName === 'performance') {
+                loadPerformanceData();
+            } else if (tabName === 'logs') {
+                loadActivityLogs();
+            }
+        }
+        
+        // Show status message
+        function showStatus(message, type) {
+            const statusEl = document.getElementById('status-message');
+            statusEl.textContent = message;
+            statusEl.className = `status-message status-${type}`;
+            statusEl.style.display = 'block';
+            
+            setTimeout(() => {
+                statusEl.style.display = 'none';
+            }, 3000);
+        }
+        
+        // Show data source indicator
+        function showDataSourceIndicator(source) {
+            // Add indicator to the header
+            const header = document.querySelector('.hooks-header h1');
+            const existingIndicator = document.getElementById('data-source-indicator');
+            if (existingIndicator) {
+                existingIndicator.remove();
+            }
+            
+            const indicator = document.createElement('span');
+            indicator.id = 'data-source-indicator';
+            indicator.style.cssText = `
+                margin-left: 15px;
+                padding: 4px 12px;
+                border-radius: 20px;
+                font-size: 14px;
+                font-weight: normal;
+                ${source === 'API' ? 
+                    'background: #10b981; color: white;' : 
+                    'background: #f59e0b; color: white;'}
+            `;
+            indicator.textContent = source === 'API' ? '🔌 Live API' : '📦 Mock Data';
+            header.appendChild(indicator);
+            
+            // Also show in console with styling
+            if (source === 'API') {
+                console.log('%c🔌 Connected to Live API - Showing real hook data', 'color: #10b981; font-weight: bold; font-size: 14px;');
+            } else {
+                console.log('%c📦 Using Mock Data - API not available', 'color: #f59e0b; font-weight: bold; font-size: 14px;');
+            }
+        }
+        
+        // Display agent hooks by category
+        function displayAgentHooks() {
+            const categories = {
+                'critical': document.getElementById('critical-hooks-list'),
+                'valuable': document.getElementById('valuable-hooks-list'),
+                'enhancement': document.getElementById('enhancement-hooks-list'),
+                'specialized': document.getElementById('specialized-hooks-list')
+            };
+            
+            // Clear all category lists
+            Object.values(categories).forEach(container => {
+                if (container) container.innerHTML = '';
+            });
+            
+            // Group hooks by category
+            Object.entries(hookRegistry.hooks || {}).forEach(([hookName, hook]) => {
+                if (!hook.category || !hook.category.startsWith('agents/')) return;
+                
+                const category = hook.category.split('/')[1];
+                const container = categories[category];
+                if (!container) return;
+                
+                const isEnabled = currentConfig.hooks?.[hookName]?.enabled !== false;
+                const impact = agentHookDefaults?.hooks?.[hookName]?.impact || 'medium';
+                
+                const hookCard = document.createElement('div');
+                hookCard.className = 'hook-card';
+                hookCard.innerHTML = `
+                    <div class="hook-header">
+                        <div class="hook-info">
+                            <div class="hook-name">${hook.name}</div>
+                            <div class="hook-description">${hook.description}</div>
+                            <div class="hook-meta">
+                                <span class="hook-badge badge-${hook.priority}">${hook.priority}</span>
+                                <span class="hook-badge badge-impact-${impact}">Impact: ${impact}</span>
+                                <span class="hook-badge">Triggers: ${hook.triggers.join(', ')}</span>
+                            </div>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="agent-hook-${hookName}" ${isEnabled ? 'checked' : ''} 
+                                   onchange="toggleHook('${hookName}', this.checked)">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                `;
+                container.appendChild(hookCard);
+            });
+            
+            // Show message if no hooks in category
+            Object.entries(categories).forEach(([category, container]) => {
+                if (container && container.children.length === 0) {
+                    container.innerHTML = `<p style="color: #6b7280;">No ${category} hooks available</p>`;
+                }
+            });
+        }
+        
+        // Apply hook profile
+        function applyHookProfile(profile) {
+            console.log(`Applying ${profile} profile...`);
+            
+            // Special handling for custom profile - no changes
+            if (profile === 'custom') {
+                console.log('Custom profile selected - configure hooks individually');
+                currentConfig.profile = profile;
+                showStatus('Custom profile selected - configure hooks individually', 'success');
+                return;
+            }
+            
+            // Special handling for advanced profile - enable ALL hooks
+            if (profile === 'advanced') {
+                console.log('Advanced profile selected - enabling ALL hooks');
+                let enabledCount = 0;
+                
+                Object.keys(hookRegistry.hooks || {}).forEach(hookName => {
+                    const checkbox = document.getElementById(`hook-${hookName}`);
+                    if (checkbox) {
+                        checkbox.checked = true;
+                        toggleHook(hookName, true);
+                        enabledCount++;
+                    }
+                });
+                
+                currentConfig.profile = profile;
+                showStatus(`Applied ${profile} profile (ALL ${enabledCount} hooks enabled)`, 'success');
+                return;
+            }
+            
+            // For other profiles, use the registry definition
+            if (!hookRegistry?.profiles?.[profile]) {
+                console.error(`Profile ${profile} not found in registry`);
+                return;
+            }
+            
+            const profileConfig = hookRegistry.profiles[profile];
+            const enabledHooks = profileConfig.enabled_hooks || [];
+            
+            console.log(`Profile has ${enabledHooks.length} enabled hooks:`, enabledHooks);
+            
+            // First, disable all hooks
+            Object.keys(hookRegistry.hooks || {}).forEach(hookName => {
+                const checkbox = document.getElementById(`hook-${hookName}`);
+                if (checkbox) {
+                    checkbox.checked = false;
+                    toggleHook(hookName, false);
+                }
+            });
+            
+            // Then enable only the ones in the profile
+            enabledHooks.forEach(hookName => {
+                const checkbox = document.getElementById(`hook-${hookName}`);
+                if (checkbox) {
+                    checkbox.checked = true;
+                    toggleHook(hookName, true);
+                } else {
+                    console.warn(`Checkbox not found for hook: ${hookName}`);
+                }
+            });
+            
+            // Update the config profile
+            currentConfig.profile = profile;
+            
+            showStatus(`Applied ${profile} profile (${enabledHooks.length} hooks enabled)`, 'success');
+        }
+        
+        // Update agent hook profile
+        function updateAgentHookProfile(profile, silent = false) {
+            console.log(`Applying agent hook profile: ${profile}${silent ? ' (silent)' : ''}`);
+            
+            // Special handling for "custom" profile - no changes
+            if (profile === 'custom') {
+                console.log('Custom agent profile selected - configure hooks individually');
+                currentConfig.agentHookProfile = profile;
+                if (!silent) {
+                    showStatus('Custom profile selected - configure agent hooks individually', 'success');
+                }
+                return;
+            }
+            
+            // Special handling for "all" profile - enable ALL agent hooks
+            if (profile === 'all') {
+                console.log('All profile selected - enabling ALL agent hooks');
+                let enabledCount = 0;
+                
+                Object.entries(hookRegistry.hooks || {}).forEach(([hookName, hook]) => {
+                    if (!hook.category || !hook.category.startsWith('agents/')) return;
+                    
+                    const checkbox = document.getElementById(`agent-hook-${hookName}`);
+                    if (checkbox) {
+                        checkbox.checked = true;
+                        toggleHook(hookName, true);
+                        enabledCount++;
+                    }
+                });
+                
+                currentConfig.agentHookProfile = profile;
+                if (!silent) {
+                    showStatus(`Applied ${profile} agent hook profile (ALL ${enabledCount} agent hooks enabled, no budget limit)`, 'success');
+                }
+                return;
+            }
+            
+            // Check if we have agent defaults loaded
+            if (!agentHookDefaults?.profiles?.[profile]) {
+                console.error(`Agent profile ${profile} not found in defaults`);
+                return;
+            }
+            
+            const profileConfig = agentHookDefaults.profiles[profile];
+            const enabledHooks = profileConfig.enabledByDefault || [];
+            
+            console.log(`Agent profile has ${enabledHooks.length} agent hooks to enable:`, enabledHooks);
+            
+            // First disable ALL agent hooks
+            Object.entries(hookRegistry.hooks || {}).forEach(([hookName, hook]) => {
+                if (!hook.category || !hook.category.startsWith('agents/')) return;
+                
+                const checkbox = document.getElementById(`agent-hook-${hookName}`);
+                if (checkbox) {
+                    checkbox.checked = false;
+                    toggleHook(hookName, false);
+                }
+            });
+            
+            // Then enable only the ones in the agent profile
+            let enabledCount = 0;
+            enabledHooks.forEach(hookName => {
+                const checkbox = document.getElementById(`agent-hook-${hookName}`);
+                if (checkbox) {
+                    checkbox.checked = true;
+                    toggleHook(hookName, true);
+                    enabledCount++;
+                } else {
+                    console.warn(`Agent hook checkbox not found for: ${hookName}`);
+                }
+            });
+            
+            // Update config
+            currentConfig.agentHookProfile = profile;
+            
+            if (!silent) {
+                showStatus(`Applied ${profile} agent hook profile (${enabledCount} agent hooks enabled, ${profileConfig.performanceBudget}ms budget)`, 'success');
+            }
+        }
+        
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadConfiguration();
+            await loadHookRegistry();
+            await loadPerformanceData();
+            
+            // Apply the saved profile after everything is loaded
+            if (currentConfig.profile && hookRegistry?.profiles) {
+                console.log(`Applying initial profile: ${currentConfig.profile}`);
+                applyHookProfile(currentConfig.profile);
+            }
+            
+            // Also apply agent hook profile if set
+            if (currentConfig.agentHookProfile && agentHookDefaults?.profiles) {
+                console.log(`Applying initial agent hook profile: ${currentConfig.agentHookProfile}`);
+                // Need to delay this to ensure agent hooks are displayed first
+                setTimeout(() => {
+                    updateAgentHookProfile(currentConfig.agentHookProfile);
+                }, 100);
+            }
+        });
+        // Handle hash navigation
+        function handleHashChange() {
+            const hash = window.location.hash.substring(1); // Remove the #
+            const tabMap = {
+                'general': 0,
+                'hooks': 1,
+                'agent-hooks': 2,
+                'performance': 3,
+                'logs': 4
+            };
+            
+            if (hash && tabMap.hasOwnProperty(hash)) {
+                const tabIndex = tabMap[hash];
+                const tabs = document.querySelectorAll('.hooks-tab');
+                if (tabs[tabIndex]) {
+                    switchTab(hash, tabs[tabIndex]);
+                }
+            }
+        }
+        
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            console.log('Initializing hooks UI...');
+            
+            // Set up tab click handlers
+            document.querySelectorAll('.hooks-tab').forEach((tab, index) => {
+                tab.addEventListener('click', (e) => {
+                    const tabNames = ['general', 'hooks', 'agent-hooks', 'performance', 'logs'];
+                    const tabName = tabNames[index];
+                    switchTab(tabName, e.target);
+                    // Update URL hash
+                    window.location.hash = tabName;
+                });
+            });
+            
+            // Set up save button
+            const saveButton = document.querySelector('.save-button');
+            if (saveButton) {
+                saveButton.addEventListener('click', saveConfiguration);
+            }
+            
+            // Load initial data
+            loadConfiguration();
+            loadClaudeStatus();
+            
+            // Handle initial hash
+            handleHashChange();
+            
+            // Listen for hash changes
+            window.addEventListener('hashchange', handleHashChange);
+            
+            console.log('Hooks UI initialized');
+        });
+    </script>
+</body>
+</html>

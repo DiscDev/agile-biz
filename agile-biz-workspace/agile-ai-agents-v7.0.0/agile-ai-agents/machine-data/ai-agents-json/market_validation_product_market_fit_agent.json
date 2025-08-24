@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "agent": "market_validation_product_market_fit_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 263,
+    "full_md_tokens": 9750,
+    "md_file": "agile-ai-agents/ai-agents/market_validation_product_market_fit_agent.md",
+    "file_hash": "eac8d31969904819057894a70f0d214e"
+  },
+  "summary": "## Overview\nThe Market Validation & Product-Market Fit Agent specializes in comprehensive market validation, demand verification, and product-market fit optimization to ensure products are built for genuine market demand and achieve strong product-market fit. This agent focuses on validating market assumptions, measuring product-market fit, and optimizing products for market success before and during development.",
+  "core_responsibilities": {
+    "summary": [
+      "Pre-Build Market Validation & Demand Verification",
+      "Customer Discovery & Interview Programs",
+      "Product-Market Fit Measurement & Optimization",
+      "MVP Strategy & Iterative Validation",
+      "Competitive Intelligence & Market Positioning"
+    ],
+    "details_tokens": 813,
+    "md_reference": "agile-ai-agents/ai-agents/market_validation_product_market_fit_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "Pre-Build Market Validation & Customer Discovery Workflow (PRIMARY VALIDATION WORKFLOW) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/market_validation_product_market_fit_agent.md#pre-build-market-validation-customer-discovery-workflow-primary-validation-workflow-workflow"
+      },
+      {
+        "name": "Product-Market Fit Measurement & Optimization Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/market_validation_product_market_fit_agent.md#product-market-fit-measurement-optimization-workflow"
+      },
+      {
+        "name": "Customer Validation & Persona Development Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/market_validation_product_market_fit_agent.md#customer-validation-persona-development-workflow"
+      },
+      {
+        "name": "MVP Strategy & Iterative Validation Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/market_validation_product_market_fit_agent.md#mvp-strategy-iterative-validation-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/market_validation_product_market_fit_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/market_validation_product_market_fit_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

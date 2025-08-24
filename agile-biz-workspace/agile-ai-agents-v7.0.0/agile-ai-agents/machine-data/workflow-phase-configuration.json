@@ -1,0 +1,437 @@
+{
+  "version": "2.0.0",
+  "description": "Two-stage workflow phase configuration",
+  "last_updated": "2025-08-10",
+  
+  "workflows": {
+    "new-project": {
+      "description": "New project from idea to implementation",
+      "stages": {
+        "development": {
+          "description": "Sequential development phases (required)",
+          "execution": "sequential",
+          "phases": [
+            {
+              "id": "setup_verification",
+              "name": "Setup Verification",
+              "order": 1,
+              "required": true,
+              "agent": "stakeholder_interview_agent",
+              "estimated_time": "5-10 minutes",
+              "outputs": ["setup-checklist.md"],
+              "next": "stakeholder_discovery"
+            },
+            {
+              "id": "stakeholder_discovery",
+              "name": "Stakeholder Discovery",
+              "order": 2,
+              "required": true,
+              "agent": "stakeholder_interview_agent",
+              "estimated_time": "45-90 minutes",
+              "outputs": ["stakeholder-interview/"],
+              "approval_gate": true,
+              "next": "research_depth_selection"
+            },
+            {
+              "id": "research_depth_selection",
+              "name": "Research Depth Selection",
+              "order": 3,
+              "required": true,
+              "agent": "stakeholder_interview_agent",
+              "estimated_time": "5 minutes",
+              "outputs": ["research-level-selection.md"],
+              "default": "thorough",
+              "next": "research_execution"
+            },
+            {
+              "id": "research_execution",
+              "name": "Research Execution",
+              "order": 4,
+              "required": true,
+              "agents": ["research_agent", "marketing_agent", "finance_agent"],
+              "execution": "parallel",
+              "estimated_time": "1-10 hours",
+              "outputs": ["business-strategy/research/"],
+              "next": "research_analysis"
+            },
+            {
+              "id": "research_analysis",
+              "name": "Research Analysis & Synthesis",
+              "order": 5,
+              "required": true,
+              "agent": "analysis_agent",
+              "estimated_time": "30-60 minutes",
+              "outputs": ["business-strategy/analysis/"],
+              "approval_gate": true,
+              "next": "requirements_document"
+            },
+            {
+              "id": "requirements_document",
+              "name": "Product Requirements Document",
+              "order": 6,
+              "required": true,
+              "agent": "prd_agent",
+              "estimated_time": "1-2 hours",
+              "outputs": ["implementation/requirements/prd-document.md"],
+              "approval_gate": true,
+              "next": "strategic_planning"
+            },
+            {
+              "id": "strategic_planning",
+              "name": "Strategic Planning",
+              "order": 7,
+              "required": true,
+              "agents": ["project_manager_agent", "ui_ux_agent", "devops_agent"],
+              "execution": "parallel",
+              "estimated_time": "2-3 hours",
+              "outputs": ["implementation/project-planning/"],
+              "next": "product_backlog"
+            },
+            {
+              "id": "product_backlog",
+              "name": "Product Backlog Creation",
+              "order": 8,
+              "required": true,
+              "agents": ["project_manager_agent", "scrum_master_agent"],
+              "estimated_time": "1-2 hours",
+              "outputs": ["orchestration/product-backlog/"],
+              "next": "project_scaffolding"
+            },
+            {
+              "id": "project_scaffolding",
+              "name": "Project Scaffolding",
+              "order": 9,
+              "required": true,
+              "agents": ["project_structure_agent", "coder_agent"],
+              "estimated_time": "30-60 minutes",
+              "outputs": ["project structure files"],
+              "next": "first_sprint"
+            },
+            {
+              "id": "first_sprint",
+              "name": "First Sprint Implementation",
+              "order": 10,
+              "required": true,
+              "agents": ["scrum_master_agent", "coder_agent", "testing_agent"],
+              "execution": "sprint",
+              "estimated_time": "3-7 days",
+              "outputs": ["orchestration/sprints/sprint-001/"],
+              "approval_gate": true,
+              "next": "mvp_deployment"
+            },
+            {
+              "id": "mvp_deployment",
+              "name": "MVP Deployment",
+              "order": 11,
+              "required": true,
+              "agent": "devops_agent",
+              "estimated_time": "1-2 hours",
+              "outputs": ["operations/deployment/"],
+              "approval_gate": true,
+              "unlocks": "operations",
+              "next": null
+            }
+          ]
+        },
+        "operations": {
+          "description": "Operational phases (user selection)",
+          "execution": "user_selected",
+          "available_after": "mvp_deployment",
+          "phases": [
+            {
+              "id": "launch_campaigns",
+              "name": "Launch Marketing Campaigns",
+              "category": "growth",
+              "agents": ["marketing_agent", "social_media_agent"],
+              "estimated_time": "2-4 hours",
+              "outputs": ["operations/launch/"]
+            },
+            {
+              "id": "seo_optimization",
+              "name": "SEO Optimization",
+              "category": "growth",
+              "agent": "seo_agent",
+              "estimated_time": "2-3 hours",
+              "outputs": ["operations/seo/"]
+            },
+            {
+              "id": "email_marketing",
+              "name": "Email Marketing Setup",
+              "category": "growth",
+              "agent": "email_marketing_agent",
+              "estimated_time": "3-4 hours",
+              "outputs": ["operations/email-marketing/"]
+            },
+            {
+              "id": "analytics_setup",
+              "name": "Analytics & Intelligence",
+              "category": "analytics",
+              "agent": "analytics_growth_intelligence_agent",
+              "estimated_time": "2-3 hours",
+              "outputs": ["operations/analytics/"]
+            },
+            {
+              "id": "customer_onboarding",
+              "name": "Customer Onboarding Optimization",
+              "category": "customer_success",
+              "agent": "customer_lifecycle_retention_agent",
+              "estimated_time": "3-4 hours",
+              "outputs": ["business-strategy/customer-success/"]
+            },
+            {
+              "id": "monetization_strategy",
+              "name": "Monetization & Revenue",
+              "category": "revenue",
+              "agent": "revenue_optimization_agent",
+              "estimated_time": "3-4 hours",
+              "outputs": ["business-strategy/monetization/"]
+            },
+            {
+              "id": "performance_optimization",
+              "name": "Performance Optimization",
+              "category": "technical",
+              "agent": "optimization_agent",
+              "estimated_time": "2-4 hours",
+              "outputs": ["operations/optimization/"]
+            },
+            {
+              "id": "security_hardening",
+              "name": "Security Hardening",
+              "category": "technical",
+              "agent": "security_agent",
+              "estimated_time": "3-4 hours",
+              "outputs": ["implementation/security/"]
+            }
+          ]
+        }
+      }
+    },
+    "existing-project": {
+      "description": "Analyze and enhance existing codebase",
+      "stages": {
+        "analysis": {
+          "description": "Sequential analysis phases (required)",
+          "execution": "sequential",
+          "phases": [
+            {
+              "id": "setup_verification",
+              "name": "Setup Verification",
+              "order": 1,
+              "required": true,
+              "agent": "stakeholder_interview_agent",
+              "estimated_time": "5-10 minutes",
+              "outputs": ["setup-checklist.md"],
+              "next": "preflight_checks"
+            },
+            {
+              "id": "preflight_checks",
+              "name": "Pre-flight Checks",
+              "order": 2,
+              "required": true,
+              "agent": "project_analyzer_agent",
+              "estimated_time": "10-15 minutes",
+              "outputs": ["preflight-report.md"],
+              "next": "code_analysis"
+            },
+            {
+              "id": "code_analysis",
+              "name": "Comprehensive Code Analysis",
+              "order": 3,
+              "required": true,
+              "agents": ["project_analyzer_agent", "security_agent", "testing_agent"],
+              "execution": "parallel",
+              "estimated_time": "2-4 hours",
+              "outputs": ["business-strategy/existing-project/"],
+              "next": "identity_verification"
+            },
+            {
+              "id": "identity_verification",
+              "name": "Project Identity Verification",
+              "order": 4,
+              "required": true,
+              "agent": "stakeholder_interview_agent",
+              "estimated_time": "15-30 minutes",
+              "outputs": ["project-identity.md"],
+              "approval_gate": true,
+              "next": "enhancement_goals"
+            },
+            {
+              "id": "enhancement_goals",
+              "name": "Enhancement Goals Discovery",
+              "order": 5,
+              "required": true,
+              "agent": "stakeholder_interview_agent",
+              "estimated_time": "30-45 minutes",
+              "outputs": ["enhancement-goals.md"],
+              "next": "analysis_depth_selection"
+            },
+            {
+              "id": "analysis_depth_selection",
+              "name": "Analysis Depth Selection",
+              "order": 6,
+              "required": true,
+              "agent": "stakeholder_interview_agent",
+              "estimated_time": "5 minutes",
+              "outputs": ["analysis-level-selection.md"],
+              "default": "standard",
+              "next": "gap_analysis"
+            },
+            {
+              "id": "gap_analysis",
+              "name": "Gap Analysis",
+              "order": 7,
+              "required": true,
+              "agent": "analysis_agent",
+              "estimated_time": "1-2 hours",
+              "outputs": ["gap-analysis.md"],
+              "next": "enhancement_planning"
+            },
+            {
+              "id": "enhancement_planning",
+              "name": "Enhancement Planning",
+              "order": 8,
+              "required": true,
+              "agents": ["project_manager_agent", "prd_agent"],
+              "estimated_time": "2-3 hours",
+              "outputs": ["enhancement-plan.md"],
+              "approval_gate": true,
+              "unlocks": "enhancements",
+              "next": null
+            }
+          ]
+        },
+        "enhancements": {
+          "description": "Enhancement phases (user selection)",
+          "execution": "user_selected",
+          "available_after": "enhancement_planning",
+          "phases": [
+            {
+              "id": "refactoring",
+              "name": "Code Refactoring",
+              "category": "technical",
+              "agent": "coder_agent",
+              "estimated_time": "variable",
+              "outputs": ["refactoring-log.md"]
+            },
+            {
+              "id": "performance_optimization",
+              "name": "Performance Optimization",
+              "category": "technical",
+              "agent": "optimization_agent",
+              "estimated_time": "2-4 hours",
+              "outputs": ["operations/optimization/"]
+            },
+            {
+              "id": "security_audit",
+              "name": "Security Audit & Fixes",
+              "category": "technical",
+              "agent": "security_agent",
+              "estimated_time": "3-4 hours",
+              "outputs": ["implementation/security/"]
+            },
+            {
+              "id": "test_coverage",
+              "name": "Test Coverage Improvement",
+              "category": "technical",
+              "agent": "testing_agent",
+              "estimated_time": "variable",
+              "outputs": ["implementation/testing/"]
+            },
+            {
+              "id": "new_features",
+              "name": "New Feature Development",
+              "category": "features",
+              "agents": ["prd_agent", "coder_agent"],
+              "estimated_time": "variable",
+              "outputs": ["feature-implementation/"]
+            },
+            {
+              "id": "ui_redesign",
+              "name": "UI/UX Redesign",
+              "category": "features",
+              "agent": "ui_ux_agent",
+              "estimated_time": "variable",
+              "outputs": ["implementation/design/"]
+            },
+            {
+              "id": "api_expansion",
+              "name": "API Expansion",
+              "category": "features",
+              "agent": "api_agent",
+              "estimated_time": "variable",
+              "outputs": ["implementation/api-analysis/"]
+            },
+            {
+              "id": "migration",
+              "name": "Technology Migration",
+              "category": "infrastructure",
+              "agents": ["devops_agent", "coder_agent"],
+              "estimated_time": "variable",
+              "outputs": ["migration-plan.md"]
+            }
+          ]
+        }
+      }
+    }
+  },
+  
+  "phase_selection_menu": {
+    "quick_packages": {
+      "startup": {
+        "name": "Startup Package",
+        "description": "Essential growth and analytics",
+        "phases": ["launch_campaigns", "analytics_setup", "customer_onboarding"]
+      },
+      "enterprise": {
+        "name": "Enterprise Package",
+        "description": "Security, performance, and scale",
+        "phases": ["security_hardening", "performance_optimization", "analytics_setup"]
+      },
+      "growth": {
+        "name": "Growth Package",
+        "description": "Marketing and revenue optimization",
+        "phases": ["seo_optimization", "email_marketing", "monetization_strategy"]
+      }
+    },
+    "execution_modes": {
+      "sequential": {
+        "description": "Execute phases one at a time in order"
+      },
+      "parallel": {
+        "description": "Execute independent phases simultaneously"
+      },
+      "priority": {
+        "description": "Execute based on business priority"
+      }
+    }
+  },
+  
+  "dependencies": {
+    "blocking": {
+      "research_execution": ["stakeholder_discovery"],
+      "requirements_document": ["research_analysis"],
+      "product_backlog": ["requirements_document"],
+      "first_sprint": ["project_scaffolding"],
+      "mvp_deployment": ["first_sprint"]
+    },
+    "soft": {
+      "strategic_planning": ["requirements_document"],
+      "project_scaffolding": ["strategic_planning"]
+    }
+  },
+  
+  "approval_gates": {
+    "timeout_hours": 24,
+    "default_action": "approve",
+    "notification_methods": ["dashboard", "console"],
+    "gates": [
+      "stakeholder_discovery",
+      "research_analysis",
+      "requirements_document",
+      "first_sprint",
+      "mvp_deployment",
+      "identity_verification",
+      "enhancement_planning"
+    ]
+  }
+}

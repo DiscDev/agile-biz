@@ -1,0 +1,364 @@
+{
+  "meta": {
+    "document": "context-verification-system-guide",
+    "title": "Context Verification System Guide",
+    "timestamp": "2025-08-11T22:02:16.878Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/context-verification-system-guide.md",
+    "document_type": "guide",
+    "file_hash": "71a5550a087536cab10c2b56e2837e46",
+    "estimated_tokens": 836,
+    "full_md_tokens": 3538
+  },
+  "summary": "The Context Verification System is a comprehensive solution designed to prevent project drift and ensure all development activities align with the original project intent. Inspired by real-world incidents where projects dramatically deviated from their intended purpose, this system provides multiple layers of protection against context drift.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#overview",
+      "content_preview": "The Context Verification System is a comprehensive solution designed to prevent project drift and ensure all development activities align with the ori..."
+    },
+    {
+      "title": "Table of Contents",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#table-of-contents",
+      "content_preview": "1. [Introduction](#introduction)\n2. [System Architecture](#system-architecture)\n3. [Core Components](#core-components)\n4. [User Commands](#user-comman..."
+    },
+    {
+      "title": "Introduction",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#introduction",
+      "content_preview": ""
+    },
+    {
+      "title": "System Architecture",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#system-architecture",
+      "content_preview": ""
+    },
+    {
+      "title": "Core Components",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#core-components",
+      "content_preview": ""
+    },
+    {
+      "title": "User Commands",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#user-commands",
+      "content_preview": ""
+    },
+    {
+      "title": "Workflow Integration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#workflow-integration",
+      "content_preview": ""
+    },
+    {
+      "title": "Dashboard Widget",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#dashboard-widget",
+      "content_preview": ""
+    },
+    {
+      "title": "Audit Reports",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#audit-reports",
+      "content_preview": ""
+    },
+    {
+      "title": "Configuration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#configuration",
+      "content_preview": ""
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "Integration Examples",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#integration-examples",
+      "content_preview": ""
+    },
+    {
+      "title": "Future Enhancements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#future-enhancements",
+      "content_preview": ""
+    },
+    {
+      "title": "Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#summary",
+      "content_preview": "The Context Verification System provides comprehensive protection against project drift through:\n\n1. **Clear Context Definition**: Project truth as si..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#overview",
+      "tokens": 86,
+      "content_preview": "The Context Verification System is a comprehensive solution designed to prevent project drift and ensure all development activities align with the ori..."
+    },
+    "Table of Contents": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#table-of-contents",
+      "tokens": 85,
+      "content_preview": "1. [Introduction](#introduction)\n2. [System Architecture](#system-architecture)\n3. [Core Components](#core-components)\n4. [User Commands](#user-comman..."
+    },
+    "Introduction": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#introduction",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Why Context Verification Matters": {
+          "content_preview": "Projects can drift from their original intent due to:\n- **Feature Creep**: Adding features that seem useful but don't align with core purpose\n- **Term...",
+          "tokens": 105,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#why-context-verification-matters-1"
+        },
+        "The BankRolls.com Incident": {
+          "content_preview": "The system was inspired by a real incident where a casino affiliate website project (BankRolls.com) drifted into becoming a full bookkeeping platform....",
+          "tokens": 88,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#the-bankrollscom-incident-1"
+        }
+      }
+    },
+    "System Architecture": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#system-architecture",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Component Overview": {
+          "content_preview": "```\nContext Verification System\n├── Verification Engine (Core)\n│   ├── Project Truth Management\n│   ├── Confidence Scoring\n│   └── Item Verification\n├...",
+          "tokens": 166,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#component-overview-1"
+        },
+        "Data Flow": {
+          "content_preview": "1. **Project Truth Creation**: Establish single source of truth\n2. **Continuous Verification**: Check all new items against truth\n3. **Drift Detection...",
+          "tokens": 78,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#data-flow-1"
+        }
+      }
+    },
+    "Core Components": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#core-components",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Verification Engine": {
+          "content_preview": "**Location**: `machine-data/context-verification/verification-engine.js`\n\nThe core engine that manages project truth and verifies items:\n\n```javascrip...",
+          "tokens": 84,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#1-verification-engine-1"
+        },
+        "2. Confidence Scorer": {
+          "content_preview": "**Location**: `machine-data/context-verification/confidence-scorer.js`\n\nCalculates violation confidence using weighted scoring:\n\n```\nConfidence Score ...",
+          "tokens": 88,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#2-confidence-scorer-1"
+        },
+        "3. Drift Detector": {
+          "content_preview": "**Location**: `machine-data/context-verification/drift-detector.js`\n\nMonitors project for context drift across multiple areas:\n\n- **Backlog Items**: N...",
+          "tokens": 120,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#3-drift-detector-1"
+        },
+        "4. Violation Learning System": {
+          "content_preview": "**Location**: `machine-data/context-verification/violation-learning-system.js`\n\nLearns from violations to improve future detection:\n\nPattern Types:\n- ...",
+          "tokens": 90,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#4-violation-learning-system-1"
+        },
+        "5. Truth Version Manager": {
+          "content_preview": "**Location**: `machine-data/context-verification/truth-version-manager.js`\n\nManages project truth evolution:\n\n- Semantic versioning (major.minor.patch...",
+          "tokens": 63,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#5-truth-version-manager-1"
+        },
+        "6. Drift Resolution Coordinator": {
+          "content_preview": "**Location**: `machine-data/context-verification/drift-resolution-coordinator.js`\n\nCoordinates agent response based on drift severity:\n\nResolution Str...",
+          "tokens": 99,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#6-drift-resolution-coordinator-1"
+        }
+      }
+    },
+    "User Commands": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#user-commands",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Primary Command: `/verify-context`": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#primary-command-verify-context-1"
+        }
+      }
+    },
+    "Workflow Integration": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#workflow-integration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Project Start (Phase 1)": {
+          "content_preview": "During stakeholder interviews, Section 0 asks critical context questions:\n\n```\nSection 0: What Are We Building? (CRITICAL)\n\nQ1: In one sentence, what ...",
+          "tokens": 79,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#1-project-start-phase-1-1"
+        },
+        "2. Pre-Sprint Verification": {
+          "content_preview": "Before each sprint starts:\n\n```javascript\n// Hook: pre-sprint-verification\n- Verifies all sprint tasks\n- Blocks sprint if violations detected\n- Genera...",
+          "tokens": 50,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#2-pre-sprint-verification-1"
+        },
+        "3. Backlog Item Creation": {
+          "content_preview": "When new items are added:\n\n```javascript\n// Hook: backlog-item-validator\n- Real-time verification\n- Auto-blocks high-confidence violations\n- Creates v...",
+          "tokens": 48,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#3-backlog-item-creation-1"
+        },
+        "4. Continuous Monitoring": {
+          "content_preview": "Throughout development:\n\n```javascript\n// Hook: drift-monitor\n- Periodic drift checks\n- Trend analysis\n- Escalation triggers\n- Sprint summaries\n```",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#4-continuous-monitoring-1"
+        }
+      }
+    },
+    "Dashboard Widget": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#dashboard-widget",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Location": {
+          "content_preview": "- **Widget**: `project-dashboard/public/js/context-verification-widget.js`\n- **Styles**: `project-dashboard/public/css/context-verification-widget.css...",
+          "tokens": 48,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#location-1"
+        },
+        "Features": {
+          "content_preview": "1. **Real-time Drift Meter**\n   - Visual drift percentage\n   - Color-coded severity\n   - Monitoring status\n\n2. **Recent Violations**\n   - Top 5 contex...",
+          "tokens": 97,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#features-1"
+        },
+        "Widget States": {
+          "content_preview": "- **Setup Required**: No project truth exists\n- **Monitoring Active**: Real-time updates\n- **Drift Detected**: Shows issues and actions\n- **All Clear*...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#widget-states-1"
+        }
+      }
+    },
+    "Audit Reports": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#audit-reports",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Report Generation": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#report-generation-1"
+        }
+      }
+    },
+    "Configuration": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#configuration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "In CLAUDE.md": {
+          "content_preview": "```yaml\ncontext_verification:\n  # Verification thresholds\n  confidence_thresholds:\n    block: 95        # Auto-block threshold\n    review: 80       # ...",
+          "tokens": 130,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#in-claudemd-1"
+        },
+        "Hook Configuration": {
+          "content_preview": "```yaml\nhooks:\n  pre_sprint_verification:\n    enabled: true\n    config:\n      blockOnViolations: true\n      confidenceThreshold: 80\n      \n  backlog_i...",
+          "tokens": 91,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#hook-configuration-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Project Truth Creation": {
+          "content_preview": "**DO:**\n- Be specific about what you're building\n- Define clear \"NOT THIS\" items\n- Include real competitor examples\n- Use industry-specific terminolog...",
+          "tokens": 80,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#1-project-truth-creation-1"
+        },
+        "2. Regular Verification": {
+          "content_preview": "- **Daily**: Monitor dashboard widget\n- **Sprint Start**: Run pre-sprint verification\n- **Sprint End**: Review drift trends\n- **Monthly**: Generate fu...",
+          "tokens": 49,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#2-regular-verification-1"
+        },
+        "3. Handling Violations": {
+          "content_preview": "1. **Immediate Action** (95%+ confidence)\n   - Item is auto-blocked\n   - Review with PM immediately\n   - Either revise or remove\n\n2. **Review Required...",
+          "tokens": 81,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#3-handling-violations-1"
+        },
+        "4. Learning Integration": {
+          "content_preview": "- Review insights monthly\n- Implement prevention strategies\n- Update \"NOT THIS\" list based on patterns\n- Share learnings with team\n- Contribute to com...",
+          "tokens": 42,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#4-learning-integration-1"
+        }
+      }
+    },
+    "Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Common Issues": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#common-issues-2"
+        }
+      }
+    },
+    "Integration Examples": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#integration-examples",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "With Sprint Planning": {
+          "content_preview": "```javascript\n// In sprint-planning-handler.js\nconst verification = await verificationEngine.verifySprintTasks(sprintName);\n\nif (!verification.results...",
+          "tokens": 73,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#with-sprint-planning-1"
+        },
+        "With Backlog Management": {
+          "content_preview": "```javascript\n// In backlog-handler.js\nconst newItem = {\n  title: \"Add invoice generation feature\",\n  description: \"Users can create and send invoices...",
+          "tokens": 89,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#with-backlog-management-1"
+        },
+        "With Document Creation": {
+          "content_preview": "```javascript\n// In document-creator.js\nconst doc = await createDocument(content);\nconst drift = await driftDetector.checkDocumentDrift(doc.path);\n\nif...",
+          "tokens": 56,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#with-document-creation-1"
+        }
+      }
+    },
+    "Future Enhancements": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#future-enhancements",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Planned Features": {
+          "content_preview": "1. **AI-Powered Suggestions**\n   - Auto-generate \"NOT THIS\" items\n   - Suggest domain terminology\n   - Predict drift patterns\n\n2. **Integration Expans...",
+          "tokens": 105,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#planned-features-1"
+        }
+      }
+    },
+    "Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-system-guide.md#summary",
+      "tokens": 144,
+      "content_preview": "The Context Verification System provides comprehensive protection against project drift through:\n\n1. **Clear Context Definition**: Project truth as si..."
+    }
+  }
+}

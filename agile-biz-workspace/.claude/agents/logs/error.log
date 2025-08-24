@@ -1,0 +1,5 @@
+# Agent Logging Error Log
+# Format: YYYY-MM-DDTHH:MM:SS.sssZ [LEVEL] Agent agent_id: message
+# 
+# This file captures all agent logging errors and warnings for debugging
+#

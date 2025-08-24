@@ -1,0 +1,276 @@
+{
+  "meta": {
+    "document": "version-management-guide",
+    "title": "Version Management Guide",
+    "timestamp": "2025-08-11T22:02:16.935Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/version-management-guide.md",
+    "document_type": "guide",
+    "file_hash": "5ba0cfb6dad333a79ce1b67db38f11c1",
+    "estimated_tokens": 650,
+    "full_md_tokens": 1432
+  },
+  "summary": "AgileAiAgents uses a dual versioning system to track both official system releases and continuous improvements from community learnings. This guide explains how versions work and how to manage them.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#overview",
+      "content_preview": "AgileAiAgents uses a dual versioning system to track both official system releases and continuous improvements from community learnings. This guide ex..."
+    },
+    {
+      "title": "Version Format",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#version-format",
+      "content_preview": ""
+    },
+    {
+      "title": "Version History Location",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#version-history-location",
+      "content_preview": ""
+    },
+    {
+      "title": "Version History",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#version-history",
+      "content_preview": ""
+    },
+    {
+      "title": "Managing Versions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#managing-versions",
+      "content_preview": ""
+    },
+    {
+      "title": "Version Management Commands",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#version-management-commands",
+      "content_preview": ""
+    },
+    {
+      "title": "Version Validation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#version-validation",
+      "content_preview": ""
+    },
+    {
+      "title": "Rollback Procedures",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#rollback-procedures",
+      "content_preview": ""
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Example Scenarios",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#example-scenarios",
+      "content_preview": ""
+    },
+    {
+      "title": "Version History Schema",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#version-history-schema",
+      "content_preview": "```json\n{\n  \"agent\": \"testing_agent\",\n  \"current_version\": \"1.2.0+20250128.1\",\n  \"base_version\": \"1.2.0\",\n  \"improvements\": [\n    {\n      \"date\": \"202..."
+    },
+    {
+      "title": "Integration with Learning System",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#integration-with-learning-system",
+      "content_preview": "The version management system is tightly integrated with the Learning Analysis workflow:\n\n1. **Contribution Analysis** → Identify improvements\n2. **Im..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#overview",
+      "tokens": 50,
+      "content_preview": "AgileAiAgents uses a dual versioning system to track both official system releases and continuous improvements from community learnings. This guide ex..."
+    },
+    "Version Format": {
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#version-format",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "System Version": {
+          "content_preview": "- **Format**: `MAJOR.MINOR.PATCH` (Semantic Versioning)\n- **Example**: `1.2.0`\n- **Used for**: Official AgileAiAgents releases\n- **Updated**: During c...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#system-version-1"
+        },
+        "Agent Self-Improvement Version": {
+          "content_preview": "- **Format**: `MAJOR.MINOR.PATCH+YYYYMMDD.N`\n- **Example**: `1.2.0+20250128.1`\n- **Used for**: Individual agent improvements from learnings\n- **Update...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#agent-self-improvement-version-1"
+        },
+        "Version Components": {
+          "content_preview": "- `MAJOR`: Breaking changes to agent interfaces or system architecture\n- `MINOR`: New capabilities, patterns, or non-breaking features\n- `PATCH`: Bug ...",
+          "tokens": 74,
+          "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#version-components-1"
+        }
+      }
+    },
+    "Version History Location": {
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#version-history-location",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "In Agent MD Files": {
+          "content_preview": "Each agent maintains its version history in a dedicated section:\n\n```markdown",
+          "tokens": 19,
+          "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#in-agent-md-files-1"
+        }
+      }
+    },
+    "Version History": {
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#version-history",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "v1.2.0+20250128.1": {
+          "content_preview": "- **Source**: contributions/2025-01-27-saas-dashboard\n- **Changes**: Added browser testing patterns for SPAs\n- **Impact**: +15% bug detection rate\n- *...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#v120202501281-1"
+        },
+        "v1.2.0 (2025-01-15)": {
+          "content_preview": "- **Release**: Added new testing strategies\n- **Features**: E2E testing, visual regression\n- **Breaking**: Changed test configuration format\n```",
+          "tokens": 33,
+          "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#v120-2025-01-15-1"
+        },
+        "Central Version Tracking": {
+          "content_preview": "- **File**: `/machine-data/version-history.json`\n- **Contents**: Complete version history for all agents\n- **Purpose**: Tracking, rollback, and report...",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#central-version-tracking-1"
+        }
+      }
+    },
+    "Managing Versions": {
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#managing-versions",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "When to Update Versions": {
+          "content_preview": "- Applied when implementing learnings from community contributions\n- Maintains base version, adds date suffix\n- Multiple improvements on same day incr...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#when-to-update-versions-3"
+        },
+        "Version Update Process": {
+          "content_preview": "1. Learning Analysis Agent implements approved changes\n2. Version Manager updates agent version\n3. Changes tracked in version history\n4. Success metri...",
+          "tokens": 49,
+          "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#version-update-process-3"
+        }
+      }
+    },
+    "Version Management Commands": {
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#version-management-commands",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Using Version Manager": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#using-version-manager-1"
+        }
+      }
+    },
+    "Version Validation": {
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#version-validation",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Success Criteria": {
+          "content_preview": "Before marking a version as validated:\n- All tests pass\n- Performance metrics meet or exceed baseline\n- No critical errors in production\n- Positive us...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#success-criteria-1"
+        },
+        "Validation Process": {
+          "content_preview": "1. Implement changes with new version\n2. Monitor metrics for validation period (7 days)\n3. Compare before/after performance\n4. Mark as validated or ro...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#validation-process-1"
+        }
+      }
+    },
+    "Rollback Procedures": {
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#rollback-procedures",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "When to Rollback": {
+          "content_preview": "- Test failure rate > 20%\n- Performance degradation > 10%\n- Critical errors detected\n- Negative user feedback",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#when-to-rollback-1"
+        },
+        "Rollback Process": {
+          "content_preview": "1. Version Manager identifies issue\n2. Restore previous version from history\n3. Update version records\n4. Notify about rollback\n5. Analyze failure for...",
+          "tokens": 42,
+          "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#rollback-process-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Version Documentation": {
+          "content_preview": "- Always include clear change description\n- Reference source contribution\n- Document measurable impact\n- Track validation status",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#version-documentation-1"
+        },
+        "Version Coordination": {
+          "content_preview": "- Keep related agents in sync\n- Test version compatibility\n- Document dependencies\n- Plan rollback strategy",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#version-coordination-1"
+        },
+        "Communication": {
+          "content_preview": "- Announce major version updates\n- Document breaking changes clearly\n- Provide migration guides\n- Track version adoption",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#communication-1"
+        }
+      }
+    },
+    "Example Scenarios": {
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#example-scenarios",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Scenario 1: Bug Fix from Contribution": {
+          "content_preview": "```\nCurrent: v1.2.0\nLearning: \"Fix TypeScript inference bug\"\nNew Version: v1.2.0+20250128.1\n```",
+          "tokens": 23,
+          "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#scenario-1-bug-fix-from-contribution-1"
+        },
+        "Scenario 2: New Feature Pattern": {
+          "content_preview": "```\nCurrent: v1.2.0+20250125.2\nLearning: \"Add WebSocket patterns\"\nNew Version: v1.2.0+20250128.3\n```",
+          "tokens": 24,
+          "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#scenario-2-new-feature-pattern-1"
+        },
+        "Scenario 3: Official Release": {
+          "content_preview": "```\nCurrent: v1.2.0+20250128.3\nRelease: Include all validated improvements\nNew Version: v1.3.0\n```",
+          "tokens": 23,
+          "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#scenario-3-official-release-1"
+        }
+      }
+    },
+    "Version History Schema": {
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#version-history-schema",
+      "tokens": 118,
+      "content_preview": "```json\n{\n  \"agent\": \"testing_agent\",\n  \"current_version\": \"1.2.0+20250128.1\",\n  \"base_version\": \"1.2.0\",\n  \"improvements\": [\n    {\n      \"date\": \"202..."
+    },
+    "Integration with Learning System": {
+      "md_reference": "agile-ai-agents/aaa-documents/version-management-guide.md#integration-with-learning-system",
+      "tokens": 132,
+      "content_preview": "The version management system is tightly integrated with the Learning Analysis workflow:\n\n1. **Contribution Analysis** → Identify improvements\n2. **Im..."
+    }
+  }
+}

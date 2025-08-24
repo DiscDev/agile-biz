@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "document": "sprint-summary-template",
+    "title": "Sprint Summary - sprint-YYYY-MM-DD-feature-name",
+    "timestamp": "2025-07-22T01:41:03.738Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-summary-template.md",
+    "document_type": "template",
+    "file_hash": "ebade7c55a4eda6e3eab506ea23eefb3",
+    "estimated_tokens": 365,
+    "full_md_tokens": 132
+  },
+  "summary": "Brief description of what this sprint aims to accomplish.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-summary-template.md#overview",
+      "content_preview": "Brief description of what this sprint aims to accomplish."
+    },
+    {
+      "title": "Sprint Goal",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-summary-template.md#sprint-goal",
+      "content_preview": "Clear, measurable goal for this sprint."
+    },
+    {
+      "title": "Key Features/Tasks",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-summary-template.md#key-featurestasks",
+      "content_preview": "- [ ] Task 1\n- [ ] Task 2\n- [ ] Task 3"
+    },
+    {
+      "title": "Success Criteria",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-summary-template.md#success-criteria",
+      "content_preview": "- Criterion 1\n- Criterion 2\n- Criterion 3"
+    },
+    {
+      "title": "Dependencies",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-summary-template.md#dependencies",
+      "content_preview": "- Previous sprints this depends on\n- External dependencies"
+    },
+    {
+      "title": "Risks",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-summary-template.md#risks",
+      "content_preview": "- Risk 1 and mitigation strategy\n- Risk 2 and mitigation strategy"
+    },
+    {
+      "title": "Team Capacity",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-summary-template.md#team-capacity",
+      "content_preview": "- Total story points capacity: XX\n- Committed story points: XX\n- Buffer: XX%"
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-summary-template.md#overview",
+      "tokens": 15,
+      "content_preview": "Brief description of what this sprint aims to accomplish."
+    },
+    "Sprint Goal": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-summary-template.md#sprint-goal",
+      "tokens": 10,
+      "content_preview": "Clear, measurable goal for this sprint."
+    },
+    "Key Features/Tasks": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-summary-template.md#key-featurestasks",
+      "tokens": 8,
+      "content_preview": "- [ ] Task 1\n- [ ] Task 2\n- [ ] Task 3"
+    },
+    "Success Criteria": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-summary-template.md#success-criteria",
+      "tokens": 11,
+      "content_preview": "- Criterion 1\n- Criterion 2\n- Criterion 3"
+    },
+    "Dependencies": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-summary-template.md#dependencies",
+      "tokens": 15,
+      "content_preview": "- Previous sprints this depends on\n- External dependencies"
+    },
+    "Risks": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-summary-template.md#risks",
+      "tokens": 17,
+      "content_preview": "- Risk 1 and mitigation strategy\n- Risk 2 and mitigation strategy"
+    },
+    "Team Capacity": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-summary-template.md#team-capacity",
+      "tokens": 19,
+      "content_preview": "- Total story points capacity: XX\n- Committed story points: XX\n- Buffer: XX%"
+    }
+  }
+}

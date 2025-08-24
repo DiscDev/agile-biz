@@ -1,0 +1,217 @@
+{
+  "meta": {
+    "document": "folder-structure-enforcement-guide",
+    "title": "Folder Structure Enforcement Guide",
+    "timestamp": "2025-07-22T01:40:48.559Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md",
+    "document_type": "guide",
+    "file_hash": "90203d32dec58a0c6bf3624d9866c31c",
+    "estimated_tokens": 595,
+    "full_md_tokens": 1733
+  },
+  "summary": "This guide explains how the AgileAiAgents system enforces the standard 30-folder structure in `project-documents/` to prevent agents from creating duplicate or non-standard folders.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#overview",
+      "content_preview": "This guide explains how the AgileAiAgents system enforces the standard 30-folder structure in `project-documents/` to prevent agents from creating dup..."
+    },
+    {
+      "title": "The Problem",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#the-problem",
+      "content_preview": "When agents create documents, they may try to create folders like:\n- `01-research` (duplicate of `02-research`)\n- `03-finance` (should be `04-finance`..."
+    },
+    {
+      "title": "The Solution",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#the-solution",
+      "content_preview": ""
+    },
+    {
+      "title": "How It Works",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#how-it-works",
+      "content_preview": ""
+    },
+    {
+      "title": "Standard 30-Folder Structure",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#standard-30-folder-structure",
+      "content_preview": "```\n00-orchestration          - Sprints and coordination (scrum_master_agent)\n01-existing-project-analysis - Analysis of existing projects (analysis_a..."
+    },
+    {
+      "title": "Using the Validator",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#using-the-validator",
+      "content_preview": ""
+    },
+    {
+      "title": "Common Aliases",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#common-aliases",
+      "content_preview": "The system recognizes these common mistakes:\n\n- `01-research` → `02-research`\n- `02-marketing` → `03-marketing`\n- `03-finance` → `04-finance`\n- `finan..."
+    },
+    {
+      "title": "Integration Points",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#integration-points",
+      "content_preview": ""
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#best-practices",
+      "content_preview": "1. **Never hardcode folder names** - Use the validator to get standard names\n2. **Check validator logs** - See what corrections were made\n3. **Run sca..."
+    },
+    {
+      "title": "Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#summary",
+      "content_preview": "The folder structure enforcement system ensures:\n- ✅ No duplicate folders with different names\n- ✅ Consistent folder structure across all projects\n- ✅..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#overview",
+      "tokens": 45,
+      "content_preview": "This guide explains how the AgileAiAgents system enforces the standard 30-folder structure in `project-documents/` to prevent agents from creating dup..."
+    },
+    "The Problem": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#the-problem",
+      "tokens": 55,
+      "content_preview": "When agents create documents, they may try to create folders like:\n- `01-research` (duplicate of `02-research`)\n- `03-finance` (should be `04-finance`..."
+    },
+    "The Solution": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#the-solution",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Project Folder Structure Definition": {
+          "content_preview": "**File**: `agile-ai-agents/machine-data/project-folder-structure.json`\n\nThis file defines:\n- All 30 standard folders with exact names\n- Which agent ma...",
+          "tokens": 53,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#1-project-folder-structure-definition-1"
+        },
+        "2. Folder Structure Validator": {
+          "content_preview": "**File**: `agile-ai-agents/machine-data/folder-structure-validator.js`\n\nThis validator:\n- Checks all document paths against the standard structure\n- A...",
+          "tokens": 72,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#2-folder-structure-validator-1"
+        },
+        "3. Automatic Path Correction": {
+          "content_preview": "The `document-creation-tracker.js` automatically uses the validator to:\n- Validate paths when documents are queued\n- Correct paths to use standard fol...",
+          "tokens": 58,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#3-automatic-path-correction-1"
+        }
+      }
+    },
+    "How It Works": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#how-it-works",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "For Agents": {
+          "content_preview": "When an agent tries to create a document:\n\n```javascript\n// Agent attempts to create in wrong folder\nqueueDocument({\n  path: \"01-research/market-analy...",
+          "tokens": 65,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#for-agents-1"
+        },
+        "Validation Process": {
+          "content_preview": "1. Agent requests document creation\n2. Document Creation Tracker validates the path\n3. If folder name is non-standard:\n   - Check aliases (e.g., \"01-r...",
+          "tokens": 71,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#validation-process-1"
+        }
+      }
+    },
+    "Standard 30-Folder Structure": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#standard-30-folder-structure",
+      "tokens": 470,
+      "content_preview": "```\n00-orchestration          - Sprints and coordination (scrum_master_agent)\n01-existing-project-analysis - Analysis of existing projects (analysis_a..."
+    },
+    "Using the Validator": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#using-the-validator",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Command Line Usage": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#command-line-usage-1"
+        }
+      }
+    },
+    "Common Aliases": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#common-aliases",
+      "tokens": 83,
+      "content_preview": "The system recognizes these common mistakes:\n\n- `01-research` → `02-research`\n- `02-marketing` → `03-marketing`\n- `03-finance` → `04-finance`\n- `finan..."
+    },
+    "Integration Points": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#integration-points",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Document Creation Tracker": {
+          "content_preview": "Already integrated - automatically validates and corrects paths.",
+          "tokens": 16,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#1-document-creation-tracker-1"
+        },
+        "2. Agent Document Creation": {
+          "content_preview": "Agents should use the validator when creating documents directly:\n\n```javascript\n// In agent code\nconst validator = new FolderStructureValidator(proje...",
+          "tokens": 70,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#2-agent-document-creation-1"
+        },
+        "3. External Projects": {
+          "content_preview": "When using AgileAiAgents in external projects:\n\n1. The standard folders are enforced automatically\n2. Any attempts to create non-standard folders are ...",
+          "tokens": 65,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#3-external-projects-1"
+        }
+      }
+    },
+    "Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Issue: Agent creates document in wrong folder": {
+          "content_preview": "**Solution**: The system automatically corrects it. Check logs for corrections.",
+          "tokens": 19,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#issue-agent-creates-document-in-wrong-folder-1"
+        },
+        "Issue: Need to add a new standard folder": {
+          "content_preview": "**Solution**: Update `project-folder-structure.json` with the new folder definition.",
+          "tokens": 20,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#issue-need-to-add-a-new-standard-folder-1"
+        },
+        "Issue: Folder name conflicts": {
+          "content_preview": "**Solution**: Use the validator's scan and fix commands to resolve conflicts.",
+          "tokens": 19,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#issue-folder-name-conflicts-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#best-practices",
+      "tokens": 86,
+      "content_preview": "1. **Never hardcode folder names** - Use the validator to get standard names\n2. **Check validator logs** - See what corrections were made\n3. **Run sca..."
+    },
+    "Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-enforcement-guide.md#summary",
+      "tokens": 93,
+      "content_preview": "The folder structure enforcement system ensures:\n- ✅ No duplicate folders with different names\n- ✅ Consistent folder structure across all projects\n- ✅..."
+    }
+  }
+}

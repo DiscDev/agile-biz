@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "document": "deployment-guide",
+    "title": "Deployment Guide",
+    "timestamp": "2025-08-11T22:02:16.883Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/deployment-guide.md",
+    "document_type": "guide",
+    "file_hash": "07efcfdff1bdca1634451d95a5237cc8",
+    "estimated_tokens": 61,
+    "full_md_tokens": 37
+  },
+  "summary": "Update relevant documentation for deployment",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/deployment-guide.md#overview",
+      "content_preview": "Update relevant documentation for deployment"
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/deployment-guide.md#overview",
+      "tokens": 11,
+      "content_preview": "Update relevant documentation for deployment"
+    }
+  }
+}

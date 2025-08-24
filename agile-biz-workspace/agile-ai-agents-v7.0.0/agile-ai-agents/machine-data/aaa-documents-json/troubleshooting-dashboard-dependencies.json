@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "document": "troubleshooting-dashboard-dependencies",
+    "title": "Troubleshooting Dashboard Dependencies",
+    "timestamp": "2025-08-11T22:02:16.932Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/troubleshooting-dashboard-dependencies.md",
+    "document_type": "general_documentation",
+    "file_hash": "68e1412f3a86a5f8c0e2c6451fcffc7e",
+    "estimated_tokens": 62,
+    "full_md_tokens": 583
+  },
+  "summary": "## Issue: \"Cannot find module 'fs-extra'\" Error",
+  "sections": [
+    {
+      "title": "Issue: \"Cannot find module 'fs-extra'\" Error",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting-dashboard-dependencies.md#issue-cannot-find-module-fs-extra-error",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Issue: \"Cannot find module 'fs-extra'\" Error": {
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting-dashboard-dependencies.md#issue-cannot-find-module-fs-extra-error",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Symptoms": {
+          "content_preview": "When starting the dashboard, you see:\n```\nError: Cannot find module 'fs-extra'\nRequire stack:\n- .../machine-data/profile-selector.js\n- .../project-das...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/aaa-documents/troubleshooting-dashboard-dependencies.md#symptoms-1"
+        },
+        "Cause": {
+          "content_preview": "The dashboard dependencies were not properly installed during setup. This typically happens when:\n1. Network issues prevent npm from downloading packa...",
+          "tokens": 57,
+          "md_reference": "agile-ai-agents/aaa-documents/troubleshooting-dashboard-dependencies.md#cause-1"
+        },
+        "Solution": {
+          "content_preview": "1. **Navigate to the dashboard directory**:\n   ```bash\n   cd agile-ai-agents/project-dashboard\n   ```\n\n2. **Clean any partial installations**:\n   ```b...",
+          "tokens": 95,
+          "md_reference": "agile-ai-agents/aaa-documents/troubleshooting-dashboard-dependencies.md#solution-3"
+        },
+        "Alternative Solutions": {
+          "content_preview": "```bash\ncd project-dashboard\nnpm install fs-extra@11.3.0\nnpm install\n```",
+          "tokens": 17,
+          "md_reference": "agile-ai-agents/aaa-documents/troubleshooting-dashboard-dependencies.md#alternative-solutions-3"
+        },
+        "Prevention": {
+          "content_preview": "The setup.sh script has been updated (v3.8.0+) to:\n1. Remove the `--silent` flag from npm install for better error visibility\n2. Check if installation...",
+          "tokens": 73,
+          "md_reference": "agile-ai-agents/aaa-documents/troubleshooting-dashboard-dependencies.md#prevention-1"
+        },
+        "Related Issues": {
+          "content_preview": "- **EACCES errors**: Permission issues - try with `sudo` or fix npm permissions\n- **ECONNRESET**: Network issues - check internet connection or proxy ...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/troubleshooting-dashboard-dependencies.md#related-issues-1"
+        },
+        "Still Having Issues?": {
+          "content_preview": "1. Check the full error log:\n   ```bash\n   cat npm-debug.log\n   ```\n\n2. Verify all dependencies:\n   ```bash\n   cd project-dashboard\n   npm ls\n   ```\n\n...",
+          "tokens": 87,
+          "md_reference": "agile-ai-agents/aaa-documents/troubleshooting-dashboard-dependencies.md#still-having-issues-1"
+        }
+      }
+    }
+  }
+}

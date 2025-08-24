@@ -1,0 +1,260 @@
+{
+  "meta": {
+    "document": "contribution-handler",
+    "title": "Contribution Handler Documentation",
+    "timestamp": "2025-08-11T22:02:16.879Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/contribution-handler.md",
+    "document_type": "general_documentation",
+    "file_hash": "4b4efa6612821ee985406cbe855cf0db",
+    "estimated_tokens": 581,
+    "full_md_tokens": 1839
+  },
+  "summary": "This document defines how the Learning Analysis Agent and other agents handle community contribution triggers and workflows.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#overview",
+      "content_preview": "This document defines how the Learning Analysis Agent and other agents handle community contribution triggers and workflows."
+    },
+    {
+      "title": "Trigger Event Processing",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#trigger-event-processing",
+      "content_preview": ""
+    },
+    {
+      "title": "Prompt Scheduling",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#prompt-scheduling",
+      "content_preview": ""
+    },
+    {
+      "title": "Skip Handling",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#skip-handling",
+      "content_preview": ""
+    },
+    {
+      "title": "Contribution Content Capture",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#contribution-content-capture",
+      "content_preview": ""
+    },
+    {
+      "title": "Anonymization Process",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#anonymization-process",
+      "content_preview": ""
+    },
+    {
+      "title": "Status Display",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#status-display",
+      "content_preview": ""
+    },
+    {
+      "title": "Integration Points",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#integration-points",
+      "content_preview": ""
+    },
+    {
+      "title": "Error Scenarios",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#error-scenarios",
+      "content_preview": ""
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#best-practices",
+      "content_preview": "1. **Respect User Time**: Honor delay settings and skip preferences\n2. **Context Awareness**: Tailor prompts to trigger type\n3. **Privacy First**: Alw..."
+    },
+    {
+      "title": "Testing Contribution Flow",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#testing-contribution-flow",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#overview",
+      "tokens": 31,
+      "content_preview": "This document defines how the Learning Analysis Agent and other agents handle community contribution triggers and workflows."
+    },
+    "Trigger Event Processing": {
+      "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#trigger-event-processing",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Sprint Retrospective Trigger": {
+          "content_preview": "When `/sprint-retrospective` completes:\n1. **Scrum Master Agent** completes retrospective\n2. Signals **Learning Analysis Agent** with event:\n   ```jso...",
+          "tokens": 141,
+          "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#sprint-retrospective-trigger-1"
+        },
+        "Milestone Trigger": {
+          "content_preview": "When `/milestone` executed:\n1. **Project Manager Agent** records milestone\n2. Signals **Learning Analysis Agent**:\n   ```json\n   {\n     \"event\": \"mile...",
+          "tokens": 85,
+          "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#milestone-trigger-1"
+        },
+        "Deployment Success Trigger": {
+          "content_preview": "When `/deployment-success` executed:\n1. **DevOps Agent** records deployment\n2. Captures metrics and challenges\n3. Signals **Learning Analysis Agent**\n...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#deployment-success-trigger-1"
+        },
+        "Project Complete Trigger": {
+          "content_preview": "When `/project-complete` executed:\n1. **Project Manager Agent** marks completion\n2. Comprehensive project summary generated\n3. **Learning Analysis Age...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#project-complete-trigger-1"
+        }
+      }
+    },
+    "Prompt Scheduling": {
+      "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#prompt-scheduling",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Delay Timer Management": {
+          "content_preview": "```javascript\n// Pseudo-code for delay handling\non_trigger_event(event) {\n  if (!should_trigger_contribution(event)) return;\n  \n  const delay = config...",
+          "tokens": 139,
+          "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#delay-timer-management-1"
+        },
+        "Auto-Prompt Behavior": {
+          "content_preview": "Based on `auto_prompt_after_command` setting:\n\n**true (automatic)**:\n```javascript\nshow_contribution_prompt(event) {\n  display_prompt({\n    title: \"🎯...",
+          "tokens": 169,
+          "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#auto-prompt-behavior-1"
+        }
+      }
+    },
+    "Skip Handling": {
+      "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#skip-handling",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Skip Command Processing": {
+          "content_preview": "When `/skip-contribution [reason]` executed:\n1. Cancel pending prompt timer\n2. Record skip reason\n3. Apply skip duration:\n   ```javascript\n   const sk...",
+          "tokens": 95,
+          "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#skip-command-processing-1"
+        },
+        "Skip Pattern Analysis": {
+          "content_preview": "Track common skip reasons:\n- NDA/confidentiality\n- Sensitive client data\n- Incomplete sprint\n- Technical blockers\n- Time constraints",
+          "tokens": 33,
+          "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#skip-pattern-analysis-1"
+        }
+      }
+    },
+    "Contribution Content Capture": {
+      "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#contribution-content-capture",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Data Collection by Trigger Type": {
+          "content_preview": "**Sprint Contributions**:\n```json\n{\n  \"sprint_metrics\": {\n    \"velocity\": 24,\n    \"planned_vs_actual\": 0.8,\n    \"bug_rate\": 0.15,\n    \"test_coverage_c...",
+          "tokens": 195,
+          "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#data-collection-by-trigger-type-1"
+        }
+      }
+    },
+    "Anonymization Process": {
+      "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#anonymization-process",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Automatic Sanitization": {
+          "content_preview": "1. **Remove Identifiers**:\n   - Names → [PERSON]\n   - Emails → [EMAIL]\n   - Domains → [DOMAIN]\n   - IPs → [IP]\n\n2. **Path Conversion**:\n   - `/Users/j...",
+          "tokens": 104,
+          "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#automatic-sanitization-1"
+        }
+      }
+    },
+    "Status Display": {
+      "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#status-display",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "`/contribution-status` Implementation": {
+          "content_preview": "```javascript\nshow_contribution_status() {\n  const status = {\n    pending: get_pending_contributions(),\n    history: get_contribution_history(),\n    c...",
+          "tokens": 76,
+          "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#contribution-status-implementation-1"
+        },
+        "Readiness Indicators": {
+          "content_preview": "- **Green**: Rich learnings ready (>80% score)\n- **Yellow**: Some learnings available (40-80%)\n- **Red**: Insufficient learnings (<40%)",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#readiness-indicators-1"
+        }
+      }
+    },
+    "Integration Points": {
+      "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#integration-points",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Project State Manager": {
+          "content_preview": "- Updates contribution_state on all events\n- Tracks contribution history\n- Maintains skip preferences\n- Stores pending prompt info",
+          "tokens": 33,
+          "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#project-state-manager-1"
+        },
+        "Learning Analysis Agent": {
+          "content_preview": "- Primary handler for all contribution commands\n- Manages contribution workflow\n- Performs anonymization\n- Submits to community system",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#learning-analysis-agent-1"
+        },
+        "Other Agents": {
+          "content_preview": "- **Scrum Master**: Signals sprint completion\n- **Project Manager**: Signals milestones/completion\n- **DevOps**: Signals deployment success\n- All agen...",
+          "tokens": 45,
+          "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#other-agents-1"
+        }
+      }
+    },
+    "Error Scenarios": {
+      "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#error-scenarios",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Configuration Conflicts": {
+          "content_preview": "```\nif (config.contribution.enabled === false) {\n  log(\"Contributions disabled - skipping all triggers\");\n  return;\n}\n\nif (config.command_triggers.ena...",
+          "tokens": 68,
+          "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#configuration-conflicts-1"
+        },
+        "Sprint Too Short": {
+          "content_preview": "```\nif (sprint_duration < config.min_sprint_duration) {\n  notify(\"Sprint too short for contribution\");\n  capture_learnings_without_prompt();\n}\n```",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#sprint-too-short-1"
+        },
+        "No Learnings Available": {
+          "content_preview": "```\nif (accumulated_learnings.length === 0) {\n  notify(\"No significant learnings to contribute yet\");\n  suggest_actions_to_generate_learnings();\n}\n```",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#no-learnings-available-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#best-practices",
+      "tokens": 84,
+      "content_preview": "1. **Respect User Time**: Honor delay settings and skip preferences\n2. **Context Awareness**: Tailor prompts to trigger type\n3. **Privacy First**: Alw..."
+    },
+    "Testing Contribution Flow": {
+      "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#testing-contribution-flow",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Manual Test Sequence": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/contribution-handler.md#manual-test-sequence-1"
+        }
+      }
+    }
+  }
+}

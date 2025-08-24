@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "document": "defensive-programming-templates",
+    "title": "Defensive Programming Templates",
+    "timestamp": "2025-07-22T01:40:48.556Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/archive/defensive-programming-templates.md",
+    "document_type": "template",
+    "file_hash": "e854dd7807b705713452499c357d867e",
+    "estimated_tokens": 291,
+    "full_md_tokens": 3213
+  },
+  "summary": "These templates provide copy-paste ready defensive programming patterns to prevent runtime errors. Based on real-world failures identified in community learnings.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-templates.md#overview",
+      "content_preview": "These templates provide copy-paste ready defensive programming patterns to prevent runtime errors. Based on real-world failures identified in communit..."
+    },
+    {
+      "title": "JavaScript/TypeScript Templates",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-templates.md#javascripttypescript-templates",
+      "content_preview": ""
+    },
+    {
+      "title": "React Component Templates",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-templates.md#react-component-templates",
+      "content_preview": ""
+    },
+    {
+      "title": "Utility Functions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-templates.md#utility-functions",
+      "content_preview": ""
+    },
+    {
+      "title": "ESLint Configuration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-templates.md#eslint-configuration",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "workflow_guidance",
+    "technical_integration"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-templates.md#overview",
+      "tokens": 41,
+      "content_preview": "These templates provide copy-paste ready defensive programming patterns to prevent runtime errors. Based on real-world failures identified in communit..."
+    },
+    "JavaScript/TypeScript Templates": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-templates.md#javascripttypescript-templates",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Safe Object Access Patterns": {
+          "content_preview": "```javascript\n// ❌ BAD - Multiple failure points\nconst city = user.address.city;\nconst theme = config.ui.theme.primary;\n\n// ✅ GOOD - Safe at every lev...",
+          "tokens": 119,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-templates.md#safe-object-access-patterns-3"
+        },
+        "Safe Array Operations": {
+          "content_preview": "```javascript\n// ❌ BAD - Throws if users is not an array\nconst activeUsers = users.filter(u => u.active);\nconst userNames = users.map(u => u.name);\n\n/...",
+          "tokens": 136,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-templates.md#safe-array-operations-3"
+        },
+        "API Response Handling": {
+          "content_preview": "```javascript\n// ❌ BAD - No validation\nasync function fetchUsers() {\n  const response = await api.get('/users');\n  return response.data;\n}\n\n// ✅ GOOD ...",
+          "tokens": 232,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-templates.md#api-response-handling-3"
+        }
+      }
+    },
+    "React Component Templates": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-templates.md#react-component-templates",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Props Validation": {
+          "content_preview": "```jsx\n// ❌ BAD - No prop validation\nfunction UserCard({ user, onUpdate }) {\n  return (\n    <div>\n      <h2>{user.name}</h2>\n      <p>{user.email}</p>...",
+          "tokens": 340,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-templates.md#props-validation-2"
+        },
+        "State Management Safety": {
+          "content_preview": "```jsx\n// ❌ BAD - Assumes data structure\nfunction UserList() {\n  const [users, setUsers] = useState([]);\n  \n  useEffect(() => {\n    fetchUsers().then(...",
+          "tokens": 291,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-templates.md#state-management-safety-2"
+        },
+        "Event Handler Safety": {
+          "content_preview": "```jsx\n// ❌ BAD - No validation\nfunction Form({ onSubmit }) {\n  const handleSubmit = (e) => {\n    e.preventDefault();\n    const data = new FormData(e....",
+          "tokens": 233,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-templates.md#event-handler-safety-1"
+        },
+        "Error Boundaries": {
+          "content_preview": "```jsx\n// ✅ REQUIRED - Error boundary for all major components\nclass ErrorBoundary extends React.Component {\n  constructor(props) {\n    super(props);\n...",
+          "tokens": 230,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-templates.md#error-boundaries-1"
+        }
+      }
+    },
+    "Utility Functions": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-templates.md#utility-functions",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Safe Get/Set Utilities": {
+          "content_preview": "```javascript\n// Safe get nested value\nfunction get(obj, path, defaultValue = undefined) {\n  const keys = path.split('.');\n  let result = obj;\n  \n  fo...",
+          "tokens": 147,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-templates.md#safe-getset-utilities-1"
+        },
+        "Type Validation Helpers": {
+          "content_preview": "```javascript\nconst validators = {\n  isObject: (val) => val !== null && typeof val === 'object' && !Array.isArray(val),\n  isArray: (val) => Array.isAr...",
+          "tokens": 201,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-templates.md#type-validation-helpers-1"
+        },
+        "API Response Validator": {
+          "content_preview": "```javascript\nclass ResponseValidator {\n  constructor(schema) {\n    this.schema = schema;\n  }\n  \n  validate(response) {\n    const errors = [];\n    con...",
+          "tokens": 437,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-templates.md#api-response-validator-1"
+        }
+      }
+    },
+    "ESLint Configuration": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-templates.md#eslint-configuration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Defensive Programming Rules": {
+          "content_preview": "```javascript\n// .eslintrc.js\nmodule.exports = {\n  rules: {\n    // Enforce optional chaining\n    'prefer-optional-chain': 'error',\n    \n    // Prevent...",
+          "tokens": 205,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-templates.md#defensive-programming-rules-1"
+        }
+      }
+    }
+  }
+}

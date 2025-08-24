@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "document": "pulse-2025-01-09-101500-milestone-20pct",
+    "title": "Sprint Pulse Update #005",
+    "timestamp": "2025-07-22T01:41:03.746Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-101500-milestone-20pct.md",
+    "document_type": "general_documentation",
+    "file_hash": "b5e527b2b55a9c352054e489c3b7828e",
+    "estimated_tokens": 307,
+    "full_md_tokens": 290
+  },
+  "summary": "**Trigger**: milestone_reached",
+  "sections": [
+    {
+      "title": "Current State",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-101500-milestone-20pct.md#current-state",
+      "content_preview": "- **Active WIP**: \n  - Setting up folder structure (5 points) - 80% complete\n  - Creating example documents (8 points) - 10% complete\n- **Completed Si..."
+    },
+    {
+      "title": "Key Events",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-101500-milestone-20pct.md#key-events",
+      "content_preview": "- 🎯 MILESTONE: 20% Sprint Completion Reached\n- Planning templates completed with YAML format\n- Folder structure nearing completion\n- Team operating a..."
+    },
+    {
+      "title": "Milestone Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-101500-milestone-20pct.md#milestone-summary",
+      "content_preview": "**Progress**: 4 of 20 story points (20%)\n**Time Elapsed**: 1 hour 15 minutes\n**Projected Completion**: ~5 hours total at current velocity\n**Status**: ..."
+    },
+    {
+      "title": "Completed Items",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-101500-milestone-20pct.md#completed-items",
+      "content_preview": "1. Initialize sprint structure (3 points)\n2. Creating sprint planning templates (2 points)"
+    },
+    {
+      "title": "Blockers/Risks",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-101500-milestone-20pct.md#blockersrisks",
+      "content_preview": "- **Active Blockers**: 0\n- **Risks**: None identified"
+    },
+    {
+      "title": "Next Actions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-101500-milestone-20pct.md#next-actions",
+      "content_preview": "- Complete folder structure setup (1 point remaining)\n- Accelerate example document creation\n- Target 40% milestone within next hour\n- Maintain curren..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "sprint_management"
+  ],
+  "section_details": {
+    "Current State": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-101500-milestone-20pct.md#current-state",
+      "tokens": 65,
+      "content_preview": "- **Active WIP**: \n  - Setting up folder structure (5 points) - 80% complete\n  - Creating example documents (8 points) - 10% complete\n- **Completed Si..."
+    },
+    "Key Events": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-101500-milestone-20pct.md#key-events",
+      "tokens": 48,
+      "content_preview": "- 🎯 MILESTONE: 20% Sprint Completion Reached\n- Planning templates completed with YAML format\n- Folder structure nearing completion\n- Team operating a..."
+    },
+    "Milestone Summary": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-101500-milestone-20pct.md#milestone-summary",
+      "tokens": 35,
+      "content_preview": "**Progress**: 4 of 20 story points (20%)\n**Time Elapsed**: 1 hour 15 minutes\n**Projected Completion**: ~5 hours total at current velocity\n**Status**: ..."
+    },
+    "Completed Items": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-101500-milestone-20pct.md#completed-items",
+      "tokens": 22,
+      "content_preview": "1. Initialize sprint structure (3 points)\n2. Creating sprint planning templates (2 points)"
+    },
+    "Blockers/Risks": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-101500-milestone-20pct.md#blockersrisks",
+      "tokens": 12,
+      "content_preview": "- **Active Blockers**: 0\n- **Risks**: None identified"
+    },
+    "Next Actions": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-101500-milestone-20pct.md#next-actions",
+      "tokens": 45,
+      "content_preview": "- Complete folder structure setup (1 point remaining)\n- Accelerate example document creation\n- Target 40% milestone within next hour\n- Maintain curren..."
+    }
+  }
+}

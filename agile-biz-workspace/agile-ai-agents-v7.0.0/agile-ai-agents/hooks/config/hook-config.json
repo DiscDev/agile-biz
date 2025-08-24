@@ -1,0 +1,264 @@
+{
+  "enabled": true,
+  "profile": "advanced",
+  "performance": {
+    "timeout": 5000,
+    "warningThreshold": 1000,
+    "maxRetries": 3,
+    "debounceDelay": 1000
+  },
+  "logging": {
+    "level": "info",
+    "file": "hooks.log",
+    "maxSize": "10MB",
+    "maxFiles": 5
+  },
+  "features": {
+    "autoSync": true,
+    "sprintTracking": true,
+    "stateManagement": true,
+    "validation": true,
+    "learning": true
+  },
+  "agentSpecific": {
+    "coder_agent": {
+      "enabled": true,
+      "hooks": [
+        "structure-validation",
+        "defensive-check",
+        "format-on-save"
+      ]
+    },
+    "testing_agent": {
+      "enabled": true,
+      "hooks": [
+        "test-location-check",
+        "coverage-update"
+      ]
+    },
+    "scrum_master_agent": {
+      "enabled": true,
+      "hooks": [
+        "sprint-tracking",
+        "pulse-generation"
+      ]
+    },
+    "research_agent": {
+      "enabled": true,
+      "hooks": [
+        "source-validation",
+        "cache-results"
+      ]
+    }
+  },
+  "hooks": {
+    "vulnerability-scanner": {
+      "enabled": true
+    },
+    "md-json-sync": {
+      "enabled": true
+    },
+    "json-cleanup": {
+      "enabled": true
+    },
+    "structure-validation": {
+      "enabled": true
+    },
+    "sprint-tracking": {
+      "enabled": true
+    },
+    "command-validation": {
+      "enabled": true
+    },
+    "state-backup": {
+      "enabled": true
+    },
+    "document-registry": {
+      "enabled": true
+    },
+    "security-scan": {
+      "enabled": true
+    },
+    "agent-context": {
+      "enabled": true
+    },
+    "cost-monitor": {
+      "enabled": true
+    },
+    "secret-rotation-reminder": {
+      "enabled": true
+    },
+    "coverage-gatekeeper": {
+      "enabled": true
+    },
+    "defensive-patterns": {
+      "enabled": true
+    },
+    "deployment-window-enforcer": {
+      "enabled": true
+    },
+    "requirement-completeness": {
+      "enabled": true
+    },
+    "dependency-checker": {
+      "enabled": true
+    },
+    "import-validator": {
+      "enabled": true
+    },
+    "test-categorizer": {
+      "enabled": true
+    },
+    "code-documentation": {
+      "enabled": true
+    },
+    "error-boundary-enforcer": {
+      "enabled": true
+    },
+    "performance-profiler": {
+      "enabled": true
+    },
+    "accessibility-checker": {
+      "enabled": true
+    },
+    "api-contract-validator": {
+      "enabled": true
+    },
+    "naming-conventions": {
+      "enabled": true
+    },
+    "code-complexity": {
+      "enabled": true
+    },
+    "design-token-validator": {
+      "enabled": true
+    },
+    "i18n-completeness": {
+      "enabled": true
+    },
+    "style-consistency": {
+      "enabled": true
+    },
+    "bundle-size-monitor": {
+      "enabled": true
+    },
+    "dead-code-detector": {
+      "enabled": true
+    },
+    "code-formatter": {
+      "enabled": true
+    },
+    "commit-message-validator": {
+      "enabled": true
+    },
+    "pr-template-checker": {
+      "enabled": true
+    },
+    "complexity-analyzer": {
+      "enabled": true
+    },
+    "test-quality-scorer": {
+      "enabled": true
+    },
+    "resource-usage-predictor": {
+      "enabled": true
+    },
+    "critical-path-monitor": {
+      "enabled": true
+    },
+    "user-flow-validator": {
+      "enabled": true
+    },
+    "multi-tenant-validator": {
+      "enabled": true
+    },
+    "gdpr-compliance-checker": {
+      "enabled": true
+    },
+    "blockchain-audit": {
+      "enabled": true
+    },
+    "ml-model-validator": {
+      "enabled": true
+    },
+    "quantum-readiness": {
+      "enabled": true
+    },
+    "interaction-pattern-library": {
+      "enabled": true
+    },
+    "citation-formatter": {
+      "enabled": true
+    },
+    "fact-vs-opinion-tagger": {
+      "enabled": true
+    },
+    "reading-level-analyzer": {
+      "enabled": true
+    },
+    "changelog-generator": {
+      "enabled": true
+    },
+    "test-naming-validator": {
+      "enabled": true
+    },
+    "flaky-test-detector": {
+      "enabled": true
+    },
+    "fixture-validator": {
+      "enabled": true
+    },
+    "blocker-escalator": {
+      "enabled": true
+    },
+    "velocity-anomaly-detector": {
+      "enabled": true
+    },
+    "doc-code-sync-validator": {
+      "enabled": true
+    },
+    "permission-scope-validator": {
+      "enabled": true
+    },
+    "accessibility-tester": {
+      "enabled": true
+    },
+    "memory-leak-detector": {
+      "enabled": true
+    },
+    "database-query-analyzer": {
+      "enabled": true
+    },
+    "api-response-validator": {
+      "enabled": true
+    },
+    "cross-browser-compatibility": {
+      "enabled": true
+    },
+    "localization-validator": {
+      "enabled": true
+    },
+    "seo-analyzer": {
+      "enabled": true
+    },
+    "mobile-responsiveness": {
+      "enabled": true
+    },
+    "project-state-monitor": {
+      "enabled": true
+    },
+    "user-prompt-submit": {
+      "enabled": true
+    },
+    "pre-sprint-verification": {
+      "enabled": true
+    },
+    "backlog-item-validator": {
+      "enabled": true
+    },
+    "drift-monitor": {
+      "enabled": true
+    }
+  },
+  "agentHookProfile": "all"
+}

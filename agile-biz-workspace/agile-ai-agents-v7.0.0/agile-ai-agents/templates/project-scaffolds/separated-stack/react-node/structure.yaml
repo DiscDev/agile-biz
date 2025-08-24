@@ -1,0 +1,78 @@
+name: "React + Node.js"
+category: "separated-stack"
+description: "Modern full-stack JavaScript application with React frontend and Node.js Express backend"
+tech_stack:
+  frontend: "React + Vite + TypeScript"
+  backend: "Node.js + Express + TypeScript"
+  database: "PostgreSQL / MongoDB"
+  deployment: "Docker + Docker Compose"
+
+structure:
+  - path: "frontend/"
+    type: "directory"
+    description: "React application with Vite and TypeScript"
+    init_command: "npm create vite@latest . -- --template react-ts"
+    
+  - path: "backend/"
+    type: "directory"
+    description: "Node.js Express API with TypeScript"
+    init_command: "npm init -y && npm install express typescript @types/node @types/express ts-node nodemon"
+    
+  - path: "shared/"
+    type: "directory"
+    description: "Shared TypeScript types and utilities"
+    
+  - path: "docs/"
+    type: "directory"
+    description: "Project documentation"
+    
+  - path: "scripts/"
+    type: "directory"
+    description: "Build and deployment scripts"
+    
+  - path: "package.json"
+    type: "file"
+    template: "root-package.json"
+    description: "Root orchestration scripts"
+    
+  - path: "docker-compose.yml"
+    type: "file"
+    template: "docker-compose.yml"
+    description: "Local development environment"
+    
+  - path: ".gitignore"
+    type: "file"
+    template: "gitignore"
+    description: "Git ignore patterns"
+    
+  - path: "README.md"
+    type: "file"
+    template: "readme.md"
+    description: "Project documentation"
+    
+  - path: ".env.example"
+    type: "file"
+    template: "env-example"
+    description: "Environment variables template"
+
+post_init_commands:
+  - description: "Install root dependencies"
+    command: "npm install --save-dev concurrently"
+  - description: "Install frontend dependencies"
+    command: "cd frontend && npm install"
+  - description: "Install backend dependencies"
+    command: "cd backend && npm install"
+  - description: "Set up shared types"
+    command: "cd shared && npm init -y && npm install --save-dev typescript"
+
+development_ports:
+  frontend: 5173
+  backend: 3001
+  database: 5432
+
+benefits:
+  - "Complete type safety across full stack"
+  - "Independent deployment of frontend and backend"
+  - "Hot module replacement for rapid development"
+  - "Shared TypeScript types prevent API contract drift"
+  - "Docker ensures consistent development environment"

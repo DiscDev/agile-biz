@@ -1,0 +1,25 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace/.claude/hooks/agent-detection-hook.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace/.claude/hooks/task-completion-hook.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

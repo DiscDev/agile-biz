@@ -1,0 +1,229 @@
+{
+  "meta": {
+    "document": "estimation-guidelines",
+    "title": "Story Point Estimation Guidelines",
+    "timestamp": "2025-07-22T01:41:03.736Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md",
+    "document_type": "guide",
+    "file_hash": "ac27d1962b2fa37056bc8b52beb85959",
+    "estimated_tokens": 497,
+    "full_md_tokens": 1141
+  },
+  "summary": "Story points are a unit of measure for expressing the overall effort required to fully implement a product backlog item. This guide helps ensure consistent estimation across all agents.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#overview",
+      "content_preview": "Story points are a unit of measure for expressing the overall effort required to fully implement a product backlog item. This guide helps ensure consi..."
+    },
+    {
+      "title": "Story Point Scale",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#story-point-scale",
+      "content_preview": "We use a modified Fibonacci sequence: 1, 2, 3, 5, 8, 13, 20, 40"
+    },
+    {
+      "title": "Estimation Factors",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#estimation-factors",
+      "content_preview": ""
+    },
+    {
+      "title": "Estimation Process",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#estimation-process",
+      "content_preview": ""
+    },
+    {
+      "title": "Common Estimation Mistakes",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#common-estimation-mistakes",
+      "content_preview": ""
+    },
+    {
+      "title": "Reference Stories",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#reference-stories",
+      "content_preview": ""
+    },
+    {
+      "title": "Velocity Considerations",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#velocity-considerations",
+      "content_preview": ""
+    },
+    {
+      "title": "Re-estimation Guidelines",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#re-estimation-guidelines",
+      "content_preview": ""
+    },
+    {
+      "title": "Tips for Accurate Estimation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#tips-for-accurate-estimation",
+      "content_preview": "1. **Don't Estimate in Hours**: Focus on relative complexity\n2. **Consider the Whole Team**: Not just the fastest developer\n3. **Include All Work**: D..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#overview",
+      "tokens": 47,
+      "content_preview": "Story points are a unit of measure for expressing the overall effort required to fully implement a product backlog item. This guide helps ensure consi..."
+    },
+    "Story Point Scale": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#story-point-scale",
+      "tokens": 16,
+      "content_preview": "We use a modified Fibonacci sequence: 1, 2, 3, 5, 8, 13, 20, 40",
+      "subsections": {
+        "Point Definitions": {
+          "content_preview": "- Needs to be broken down\n- Multiple sprint effort\n- Should be an epic\n- Break into smaller stories",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#point-definitions-9"
+        }
+      }
+    },
+    "Estimation Factors": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#estimation-factors",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Complexity": {
+          "content_preview": "- **Technical Complexity**: Algorithm difficulty, integration points\n- **Business Logic**: Rules, validations, edge cases\n- **Unknown Factors**: Resea...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#complexity-1"
+        },
+        "Effort": {
+          "content_preview": "- **Development Time**: Actual coding effort\n- **Testing Time**: Unit, integration, and system testing\n- **Review Time**: Code review and feedback cyc...",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#effort-1"
+        },
+        "Risk": {
+          "content_preview": "- **Technical Risk**: New technology, performance concerns\n- **Business Risk**: Critical functionality, customer impact\n- **Dependency Risk**: Externa...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#risk-1"
+        },
+        "Definition of Done Impact": {
+          "content_preview": "- Documentation requirements\n- Security review needs\n- Performance benchmarks\n- Deployment complexity",
+          "tokens": 26,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#definition-of-done-impact-1"
+        }
+      }
+    },
+    "Estimation Process": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#estimation-process",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Understand the Requirement": {
+          "content_preview": "- Read user story completely\n- Review acceptance criteria\n- Ask clarifying questions",
+          "tokens": 21,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#1-understand-the-requirement-1"
+        },
+        "2. Identify Tasks": {
+          "content_preview": "- Break down into development tasks\n- Consider testing requirements\n- Include documentation needs",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#2-identify-tasks-1"
+        },
+        "3. Assess Factors": {
+          "content_preview": "- Evaluate complexity\n- Consider effort required\n- Identify risks",
+          "tokens": 17,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#3-assess-factors-1"
+        },
+        "4. Compare to Reference Stories": {
+          "content_preview": "- Find similar completed stories\n- Use historical data\n- Adjust for differences",
+          "tokens": 20,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#4-compare-to-reference-stories-1"
+        },
+        "5. Team Discussion": {
+          "content_preview": "- Present your estimate\n- Listen to other perspectives\n- Reach consensus",
+          "tokens": 18,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#5-team-discussion-1"
+        }
+      }
+    },
+    "Common Estimation Mistakes": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#common-estimation-mistakes",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Under-estimation": {
+          "content_preview": "- Forgetting testing effort\n- Ignoring integration complexity\n- Missing edge cases\n- Not considering reviews",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#under-estimation-1"
+        },
+        "Over-estimation": {
+          "content_preview": "- Adding too much buffer\n- Assuming worst-case scenarios\n- Not leveraging existing code\n- Ignoring team improvements",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#over-estimation-1"
+        }
+      }
+    },
+    "Reference Stories": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#reference-stories",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Authentication System (Sprint 1)": {
+          "content_preview": "- User Registration (AUTH-001): 13 points\n- Login Flow (AUTH-002): 8 points\n- Session Management (AUTH-003): 5 points\n- Total: 26 points (completed in...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#authentication-system-sprint-1-1"
+        },
+        "API Documentation (Sprint 2)": {
+          "content_preview": "- OpenAPI Spec (API-001): 5 points\n- Endpoint Docs (API-002): 3 points\n- Integration Guide (API-003): 8 points\n- Total: 16 points (completed in 7 days...",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#api-documentation-sprint-2-1"
+        }
+      }
+    },
+    "Velocity Considerations": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#velocity-considerations",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Team Velocity Factors": {
+          "content_preview": "- **New Team**: Start conservative (15-20 points)\n- **Established Team**: Use 3-sprint average\n- **Mixed Skills**: Account for learning curve",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#team-velocity-factors-1"
+        },
+        "Adjustment Factors": {
+          "content_preview": "- **Technical Debt**: Reduce by 10-20%\n- **New Domain**: Reduce by 20-30%\n- **Platform Changes**: Reduce by 15-25%",
+          "tokens": 26,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#adjustment-factors-1"
+        }
+      }
+    },
+    "Re-estimation Guidelines": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#re-estimation-guidelines",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "When to Re-estimate": {
+          "content_preview": "- Significant requirement changes\n- New dependencies discovered\n- Technical approach changes\n- After 50% completion if way off",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#when-to-re-estimate-1"
+        },
+        "When NOT to Re-estimate": {
+          "content_preview": "- Minor clarifications\n- Small scope additions\n- To meet sprint capacity\n- After work has started",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#when-not-to-re-estimate-1"
+        }
+      }
+    },
+    "Tips for Accurate Estimation": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md#tips-for-accurate-estimation",
+      "tokens": 152,
+      "content_preview": "1. **Don't Estimate in Hours**: Focus on relative complexity\n2. **Consider the Whole Team**: Not just the fastest developer\n3. **Include All Work**: D..."
+    }
+  }
+}

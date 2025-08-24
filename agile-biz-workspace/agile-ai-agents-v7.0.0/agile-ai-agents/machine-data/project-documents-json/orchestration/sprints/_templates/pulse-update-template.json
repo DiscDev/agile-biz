@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "document": "pulse-update-template",
+    "title": "Sprint Pulse Update - YYYY-MM-DD [Morning/Afternoon/Evening]",
+    "timestamp": "2025-07-22T01:41:03.737Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/_templates/pulse-update-template.md",
+    "document_type": "template",
+    "file_hash": "63eb2268815b6c27c9eb67d6d6c0de78",
+    "estimated_tokens": 310,
+    "full_md_tokens": 249
+  },
+  "summary": "**Sprint**: sprint-YYYY-MM-DD-feature-name",
+  "sections": [
+    {
+      "title": "Progress Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/pulse-update-template.md#progress-summary",
+      "content_preview": ""
+    },
+    {
+      "title": "Blockers & Impediments",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/pulse-update-template.md#blockers-impediments",
+      "content_preview": "| Blocker | Severity | Affected | Action Needed |\n|---------|----------|----------|---------------|\n| None | - | - | - |"
+    },
+    {
+      "title": "Help Needed",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/pulse-update-template.md#help-needed",
+      "content_preview": "| From Agent | To Agent | What's Needed | Priority |\n|------------|----------|---------------|----------|\n| - | - | - | - |"
+    },
+    {
+      "title": "Key Decisions Made",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/pulse-update-template.md#key-decisions-made",
+      "content_preview": "- Decision 1\n- Decision 2"
+    },
+    {
+      "title": "Next Actions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/pulse-update-template.md#next-actions",
+      "content_preview": "- [ ] Action 1\n- [ ] Action 2"
+    },
+    {
+      "title": "Health Status",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/pulse-update-template.md#health-status",
+      "content_preview": "🟢 Green - On track\n🟡 Yellow - Minor concerns  \n🔴 Red - Major blockers\n\n**Current Status**: 🟢 Green"
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Progress Summary": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/pulse-update-template.md#progress-summary",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Story Points": {
+          "content_preview": "- **Completed Today**: X points\n- **In Progress**: X points  \n- **Total Completed**: X/XX points (X%)\n- **Velocity Trend**: On track/Ahead/Behind",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/pulse-update-template.md#story-points-1"
+        },
+        "Active Work": {
+          "content_preview": "| Agent | Current Task | Status | Est. Completion |\n|-------|--------------|--------|-----------------|\n| agent_name | Task description | In Progress ...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/pulse-update-template.md#active-work-1"
+        }
+      }
+    },
+    "Blockers & Impediments": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/pulse-update-template.md#blockers-impediments",
+      "tokens": 30,
+      "content_preview": "| Blocker | Severity | Affected | Action Needed |\n|---------|----------|----------|---------------|\n| None | - | - | - |"
+    },
+    "Help Needed": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/pulse-update-template.md#help-needed",
+      "tokens": 31,
+      "content_preview": "| From Agent | To Agent | What's Needed | Priority |\n|------------|----------|---------------|----------|\n| - | - | - | - |"
+    },
+    "Key Decisions Made": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/pulse-update-template.md#key-decisions-made",
+      "tokens": 7,
+      "content_preview": "- Decision 1\n- Decision 2"
+    },
+    "Next Actions": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/pulse-update-template.md#next-actions",
+      "tokens": 7,
+      "content_preview": "- [ ] Action 1\n- [ ] Action 2"
+    },
+    "Health Status": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/pulse-update-template.md#health-status",
+      "tokens": 25,
+      "content_preview": "🟢 Green - On track\n🟡 Yellow - Minor concerns  \n🔴 Red - Major blockers\n\n**Current Status**: 🟢 Green"
+    }
+  }
+}

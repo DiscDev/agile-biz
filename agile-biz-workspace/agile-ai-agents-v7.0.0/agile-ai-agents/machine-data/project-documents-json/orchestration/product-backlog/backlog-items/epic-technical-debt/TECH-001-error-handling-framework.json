@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "document": "TECH-001-error-handling-framework",
+    "title": "Error Handling Framework",
+    "timestamp": "2025-07-22T01:41:03.733Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-technical-debt/TECH-001-error-handling-framework.md",
+    "document_type": "general_documentation",
+    "file_hash": "aeaeb81f4e565dae4e4fecd279fd5bab",
+    "estimated_tokens": 303,
+    "full_md_tokens": 464
+  },
+  "summary": "**ID**: TECH-001",
+  "sections": [
+    {
+      "title": "User Story",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-technical-debt/TECH-001-error-handling-framework.md#user-story",
+      "content_preview": "As a developer,\nI want a consistent error handling framework across the application,\nSo that errors are properly caught, logged, and presented to user..."
+    },
+    {
+      "title": "Acceptance Criteria",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-technical-debt/TECH-001-error-handling-framework.md#acceptance-criteria",
+      "content_preview": "- [ ] Global error handler catches all unhandled exceptions\n- [ ] Errors are categorized (user, system, network, validation)\n- [ ] Each error has a un..."
+    },
+    {
+      "title": "Technical Requirements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-technical-debt/TECH-001-error-handling-framework.md#technical-requirements",
+      "content_preview": "- Create centralized error classes\n- Implement error boundary components (React)\n- Set up structured logging with levels\n- Create error translation se..."
+    },
+    {
+      "title": "Dependencies",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-technical-debt/TECH-001-error-handling-framework.md#dependencies",
+      "content_preview": "- Logging infrastructure must be in place\n- Monitoring service must be selected\n- API standards must be defined"
+    },
+    {
+      "title": "Definition of Done",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-technical-debt/TECH-001-error-handling-framework.md#definition-of-done",
+      "content_preview": "- [ ] Error handling implemented across all layers\n- [ ] Unit tests cover error scenarios\n- [ ] Integration tests verify error flow\n- [ ] Documentatio..."
+    },
+    {
+      "title": "Notes",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-technical-debt/TECH-001-error-handling-framework.md#notes",
+      "content_preview": "- Consider implementing error budget SLOs\n- Plan for internationalization of error messages\n- May need custom errors for business logic\n\n---\n\n**Create..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "User Story": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-technical-debt/TECH-001-error-handling-framework.md#user-story",
+      "tokens": 42,
+      "content_preview": "As a developer,\nI want a consistent error handling framework across the application,\nSo that errors are properly caught, logged, and presented to user..."
+    },
+    "Acceptance Criteria": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-technical-debt/TECH-001-error-handling-framework.md#acceptance-criteria",
+      "tokens": 127,
+      "content_preview": "- [ ] Global error handler catches all unhandled exceptions\n- [ ] Errors are categorized (user, system, network, validation)\n- [ ] Each error has a un..."
+    },
+    "Technical Requirements": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-technical-debt/TECH-001-error-handling-framework.md#technical-requirements",
+      "tokens": 76,
+      "content_preview": "- Create centralized error classes\n- Implement error boundary components (React)\n- Set up structured logging with levels\n- Create error translation se..."
+    },
+    "Dependencies": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-technical-debt/TECH-001-error-handling-framework.md#dependencies",
+      "tokens": 28,
+      "content_preview": "- Logging infrastructure must be in place\n- Monitoring service must be selected\n- API standards must be defined"
+    },
+    "Definition of Done": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-technical-debt/TECH-001-error-handling-framework.md#definition-of-done",
+      "tokens": 79,
+      "content_preview": "- [ ] Error handling implemented across all layers\n- [ ] Unit tests cover error scenarios\n- [ ] Integration tests verify error flow\n- [ ] Documentatio..."
+    },
+    "Notes": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-technical-debt/TECH-001-error-handling-framework.md#notes",
+      "tokens": 55,
+      "content_preview": "- Consider implementing error budget SLOs\n- Plan for internationalization of error messages\n- May need custom errors for business logic\n\n---\n\n**Create..."
+    }
+  }
+}

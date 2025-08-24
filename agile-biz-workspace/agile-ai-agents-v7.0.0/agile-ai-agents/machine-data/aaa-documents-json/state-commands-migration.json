@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "document": "state-commands-migration",
+    "title": "State Commands Migration Guide",
+    "timestamp": "2025-08-11T22:02:16.925Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/state-commands-migration.md",
+    "document_type": "general_documentation",
+    "file_hash": "6bcb1ea5727050ebc4852db3626075ae",
+    "estimated_tokens": 476,
+    "full_md_tokens": 1052
+  },
+  "summary": "This guide helps users transition from natural language state commands to the new command-based system.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#overview",
+      "content_preview": "This guide helps users transition from natural language state commands to the new command-based system."
+    },
+    {
+      "title": "Command Mappings",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#command-mappings",
+      "content_preview": ""
+    },
+    {
+      "title": "New Features Not Previously Available",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#new-features-not-previously-available",
+      "content_preview": ""
+    },
+    {
+      "title": "Configuration Migration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#configuration-migration",
+      "content_preview": ""
+    },
+    {
+      "title": "Migration Steps",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#migration-steps",
+      "content_preview": ""
+    },
+    {
+      "title": "Common Scenarios",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#common-scenarios",
+      "content_preview": ""
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "Benefits of New System",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#benefits-of-new-system",
+      "content_preview": "1. **Consistency**: All actions use same pattern\n2. **Discoverability**: `/aaa-help` shows everything\n3. **Reliability**: Auto-save actually works\n4. ..."
+    },
+    {
+      "title": "Getting Help",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#getting-help",
+      "content_preview": "- `/aaa-help` - See all commands\n- `/aaa-help [command]` - Detailed command help\n- `/quickstart` - Interactive menu\n\nRemember: The old natural languag..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "workflow_guidance",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#overview",
+      "tokens": 26,
+      "content_preview": "This guide helps users transition from natural language state commands to the new command-based system."
+    },
+    "Command Mappings": {
+      "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#command-mappings",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Old Format → New Command": {
+          "content_preview": "| Natural Language | New Command | Notes |\n|-----------------|-------------|-------|\n| \"Checkpoint now\" | `/checkpoint` | Creates manual save point |\n...",
+          "tokens": 174,
+          "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#old-format-new-command-1"
+        }
+      }
+    },
+    "New Features Not Previously Available": {
+      "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#new-features-not-previously-available",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Enhanced Checkpoint Options": {
+          "content_preview": "- `/checkpoint --full` - Forces full checkpoint regardless of settings\n- `/checkpoint \"message\" --full` - Combines custom message with full checkpoint",
+          "tokens": 37,
+          "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#enhanced-checkpoint-options-1"
+        },
+        "Better Decision Tracking": {
+          "content_preview": "- `/save-decision \"decision\" \"rationale\"` - Now supports separate rationale\n- Automatic save triggering based on decision count",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#better-decision-tracking-1"
+        },
+        "Improved Status Display": {
+          "content_preview": "- `/status` now shows:\n  - Last save timestamp\n  - Workflow phase progress\n  - Formatted task lists\n  - Next suggested actions",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#improved-status-display-1"
+        }
+      }
+    },
+    "Configuration Migration": {
+      "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#configuration-migration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Auto-Save Settings": {
+          "content_preview": "Previously, auto-save was configured but not active. Now you can control it:\n\n1. **Choose a frequency preset**:\n   ```yaml\n   frequency_preset: \"balan...",
+          "tokens": 102,
+          "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#auto-save-settings-1"
+        },
+        "Confirmation Styles": {
+          "content_preview": "Control how much feedback you get:\n- `silent` - No confirmations\n- `minimal` - Simple \"✓ State saved\"\n- `verbose` - Detailed save information",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#confirmation-styles-1"
+        }
+      }
+    },
+    "Migration Steps": {
+      "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#migration-steps",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "For Existing Projects": {
+          "content_preview": "1. **Update your workflow**:\n   - Replace \"Where are we?\" with `/status`\n   - Replace \"Checkpoint now\" with `/checkpoint`\n   - Use `/continue` to resu...",
+          "tokens": 109,
+          "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#for-existing-projects-1"
+        },
+        "For New Projects": {
+          "content_preview": "Start fresh with commands:\n1. `/start-new-project-workflow` or `/start-existing-project-workflow`\n2. Auto-save will work throughout the workflow\n3. Us...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#for-new-projects-1"
+        }
+      }
+    },
+    "Common Scenarios": {
+      "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#common-scenarios",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Scenario 1: End of Day": {
+          "content_preview": "**Old way**:\n```\n\"Checkpoint now with summary: Completed auth feature, need to fix OAuth tomorrow\"\n```\n\n**New way**:\n```\n/checkpoint \"Completed auth f...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#scenario-1-end-of-day-1"
+        },
+        "Scenario 2: Resuming Work": {
+          "content_preview": "**Old way**:\n```\n\"Where are we?\"\n\"Continue working from yesterday\"\n```\n\n**New way**:\n```\n/status\n/continue\n```",
+          "tokens": 23,
+          "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#scenario-2-resuming-work-1"
+        },
+        "Scenario 3: Recording Decisions": {
+          "content_preview": "**Old way**:\n```\n\"Save decision: Chose PostgreSQL over MySQL for better JSON support\"\n```\n\n**New way**:\n```\n/save-decision \"Use PostgreSQL for databas...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#scenario-3-recording-decisions-1"
+        }
+      }
+    },
+    "Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Auto-save not working?": {
+          "content_preview": "1. Check `frequency_preset` in CLAUDE.md\n2. Ensure it's not set to \"manual\"\n3. Verify `auto_save.enabled: true`",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#auto-save-not-working-1"
+        },
+        "Commands not recognized?": {
+          "content_preview": "1. Ensure you're using forward slash: `/status`\n2. Check spelling exactly\n3. Use `/aaa-help` to see all commands",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#commands-not-recognized-1"
+        },
+        "State not persisting?": {
+          "content_preview": "1. Check for save confirmations\n2. Use `/checkpoint --full` to force save\n3. Verify project-state directory exists",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#state-not-persisting-1"
+        }
+      }
+    },
+    "Benefits of New System": {
+      "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#benefits-of-new-system",
+      "tokens": 54,
+      "content_preview": "1. **Consistency**: All actions use same pattern\n2. **Discoverability**: `/aaa-help` shows everything\n3. **Reliability**: Auto-save actually works\n4. ..."
+    },
+    "Getting Help": {
+      "md_reference": "agile-ai-agents/aaa-documents/state-commands-migration.md#getting-help",
+      "tokens": 62,
+      "content_preview": "- `/aaa-help` - See all commands\n- `/aaa-help [command]` - Detailed command help\n- `/quickstart` - Interactive menu\n\nRemember: The old natural languag..."
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "last_updated": "TEMPLATE_TIMESTAMP",
+    "version": "2.0.0",
+    "managed_by": "scrum_master_agent",
+    "velocity_profile": "custom",
+    "profile_selected_at": "TEMPLATE_TIMESTAMP"
+  },
+  "sprints": [],
+  "metrics": {
+    "average_velocity": 0,
+    "velocity_range": {
+      "min": 0,
+      "max": 0
+    },
+    "trend": "no_data",
+    "confidence_level": 0,
+    "sample_size": 0,
+    "is_community_default": false
+  },
+  "velocity_history": [],
+  "forecasting": {
+    "next_sprint_estimate": 0,
+    "confidence_interval": {
+      "low": 0,
+      "high": 0
+    },
+    "factors": {
+      "team_changes": false,
+      "technical_debt": "normal",
+      "domain_complexity": "normal"
+    }
+  },
+  "community_benchmarks": {
+    "enabled": true,
+    "profile": "custom",
+    "profile_name": "Custom Project",
+    "last_updated": "2025-01-23",
+    "using_defaults": false,
+    "comparison": {
+      "your_velocity": 0,
+      "community_average": 0,
+      "percentile": "N/A",
+      "performance": "N/A"
+    }
+  }
+}

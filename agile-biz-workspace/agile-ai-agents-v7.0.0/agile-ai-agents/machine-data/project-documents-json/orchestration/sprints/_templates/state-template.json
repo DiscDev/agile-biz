@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "document": "state-template",
+    "title": "Sprint State",
+    "timestamp": "2025-07-22T01:41:03.741Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/_templates/state-template.md",
+    "document_type": "template",
+    "file_hash": "9a0959ff7677ec99562536022079abf8",
+    "estimated_tokens": 110,
+    "full_md_tokens": 144
+  },
+  "summary": "**Sprint**: sprint-YYYY-MM-DD-feature-name",
+  "sections": [
+    {
+      "title": "State History",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/state-template.md#state-history",
+      "content_preview": "| Previous State | New State | Changed At | Changed By | Notes |\n|----------------|-----------|------------|------------|-------|\n| - | planning | YYY..."
+    },
+    {
+      "title": "Valid State Transitions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/state-template.md#valid-state-transitions",
+      "content_preview": "- planning → active\n- active → testing  \n- testing → review\n- review → retrospective\n- retrospective → completed\n- completed → archived"
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "sprint_management"
+  ],
+  "section_details": {
+    "State History": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/state-template.md#state-history",
+      "tokens": 54,
+      "content_preview": "| Previous State | New State | Changed At | Changed By | Notes |\n|----------------|-----------|------------|------------|-------|\n| - | planning | YYY..."
+    },
+    "Valid State Transitions": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/state-template.md#valid-state-transitions",
+      "tokens": 34,
+      "content_preview": "- planning → active\n- active → testing  \n- testing → review\n- review → retrospective\n- retrospective → completed\n- completed → archived"
+    }
+  }
+}

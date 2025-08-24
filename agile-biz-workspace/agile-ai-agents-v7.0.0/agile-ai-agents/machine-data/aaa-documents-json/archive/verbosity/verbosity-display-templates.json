@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "document": "verbosity-display-templates",
+    "title": "AgileAiAgents Verbosity Display Templates",
+    "timestamp": "2025-07-22T01:40:48.569Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md",
+    "document_type": "template",
+    "file_hash": "2a9efee6234c56c367c515341940c79e",
+    "estimated_tokens": 403,
+    "full_md_tokens": 1555
+  },
+  "summary": "This document provides standardized verbosity display templates that all agents can use for consistent progress tracking and status reporting. These templates integrate with the verbosity settings in CLAUDE.md.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#overview",
+      "content_preview": "This document provides standardized verbosity display templates that all agents can use for consistent progress tracking and status reporting. These t..."
+    },
+    {
+      "title": "Configuration Reference",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#configuration-reference",
+      "content_preview": "All displays respect the verbosity settings in CLAUDE.md:\n```yaml\nverbosity:\n  level: \"verbose\"              # quiet, normal, verbose, debug\n  display..."
+    },
+    {
+      "title": "Standard Display Templates",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#standard-display-templates",
+      "content_preview": ""
+    },
+    {
+      "title": "Verbosity Level Guidelines",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#verbosity-level-guidelines",
+      "content_preview": ""
+    },
+    {
+      "title": "Implementation Guidelines",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#implementation-guidelines",
+      "content_preview": ""
+    },
+    {
+      "title": "Example Usage in Agent",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#example-usage-in-agent",
+      "content_preview": "```markdown\nWhen the Testing Agent starts browser testing:\n\nBROWSER TESTING - PHASE 3 OF 5 [3:45:30 PM PST] | Elapsed: 00:15:30\n━━━━━━━━━━━━━━━━━━━━━━..."
+    },
+    {
+      "title": "Benefits of Standardization",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#benefits-of-standardization",
+      "content_preview": "1. **Consistency**: Users see the same format across all agents\n2. **Clarity**: Progress is always clear and easy to understand\n3. **Timezone Aware**:..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#overview",
+      "tokens": 53,
+      "content_preview": "This document provides standardized verbosity display templates that all agents can use for consistent progress tracking and status reporting. These t..."
+    },
+    "Configuration Reference": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#configuration-reference",
+      "tokens": 70,
+      "content_preview": "All displays respect the verbosity settings in CLAUDE.md:\n```yaml\nverbosity:\n  level: \"verbose\"              # quiet, normal, verbose, debug\n  display..."
+    },
+    "Standard Display Templates": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#standard-display-templates",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Agent Initialization Display": {
+          "content_preview": "Use when an agent starts its work:\n```\n[AGENT_NAME] AGENT INITIALIZING\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nStarting Time: [...",
+          "tokens": 78,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#agent-initialization-display-1"
+        },
+        "Multi-Phase Progress Display": {
+          "content_preview": "For agents with multiple sequential or parallel phases:\n```\n[PHASE_NAME] - PHASE [X] OF [Y] [[TIME] [TIMEZONE]] | Elapsed: [DURATION]\n━━━━━━━━━━━━━━━━...",
+          "tokens": 110,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#multi-phase-progress-display-1"
+        },
+        "Parallel Operations Display": {
+          "content_preview": "For operations running in parallel (like multiple tests or scans):\n```\nPARALLEL OPERATIONS STATUS [[TIME] [TIMEZONE]] | Total Elapsed: [DURATION]\n━━━━...",
+          "tokens": 211,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#parallel-operations-display-1"
+        },
+        "Error/Warning Display": {
+          "content_preview": "For errors, warnings, or critical findings:\n```\n⚠️  [ERROR_TYPE] DETECTED [[TIME] [TIMEZONE]]\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━...",
+          "tokens": 148,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#errorwarning-display-1"
+        },
+        "Completion Summary Display": {
+          "content_preview": "For when an agent completes its work:\n```\n[AGENT_NAME] COMPLETE [[TIME] [TIMEZONE]] | Total Duration: [DURATION]\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━...",
+          "tokens": 220,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#completion-summary-display-1"
+        }
+      }
+    },
+    "Verbosity Level Guidelines": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#verbosity-level-guidelines",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "QUIET Mode": {
+          "content_preview": "```\n[AGENT_NAME]: Phase [X]/[Y] complete - [KEY_RESULT]\n```",
+          "tokens": 12,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#quiet-mode-1"
+        },
+        "NORMAL Mode": {
+          "content_preview": "```\n[AGENT_NAME] - Phase [X]: [PHASE_NAME]\nStatus: [STATUS] | Progress: [%] | Duration: [TIME]\nResult: [BRIEF_SUMMARY]\n```",
+          "tokens": 26,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#normal-mode-1"
+        },
+        "VERBOSE Mode": {
+          "content_preview": "Use the full templates above with all details.",
+          "tokens": 12,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#verbose-mode-1"
+        },
+        "DEBUG Mode": {
+          "content_preview": "Add technical details to verbose mode:\n```\n[Same as verbose, plus:]\n├─ [DEBUG] File: [filepath:line]\n├─ [DEBUG] Memory: [XXX]MB | CPU: [XX]%\n├─ [DEBUG...",
+          "tokens": 51,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#debug-mode-1"
+        }
+      }
+    },
+    "Implementation Guidelines": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#implementation-guidelines",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Reading Verbosity Settings": {
+          "content_preview": "Agents should check CLAUDE.md for current settings:\n```\nCheck verbosity.level: \"verbose\"\nCheck verbosity.display.timezone: \"America/Los_Angeles\"\nCheck...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#reading-verbosity-settings-1"
+        },
+        "Timezone Handling": {
+          "content_preview": "All timestamps should use the configured timezone:\n- Format: [3:45:30 PM PST] for 12h format\n- Format: [15:45:30 PST] for 24h format",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#timezone-handling-1"
+        },
+        "Progress Updates": {
+          "content_preview": "- Update progress every 30 seconds (or as configured)\n- Show elapsed time for long-running operations\n- Include ETA when possible",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#progress-updates-1"
+        },
+        "Error Priority": {
+          "content_preview": "- 🚨 CRITICAL: Always show regardless of verbosity\n- ⚠️ WARNING: Show in normal, verbose, debug\n- ℹ️ INFO: Show in verbose, debug only",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#error-priority-1"
+        },
+        "Emoji Usage": {
+          "content_preview": "Standard emoji for consistency:\n- 🔒 Security Agent\n- 🧪 Testing Agent\n- 🚀 DevOps Agent\n- 🎨 UI/UX Agent\n- 💻 Coder Agent\n- 📊 Analysis Agent\n- ✅ Com...",
+          "tokens": 52,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#emoji-usage-1"
+        }
+      }
+    },
+    "Example Usage in Agent": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#example-usage-in-agent",
+      "tokens": 123,
+      "content_preview": "```markdown\nWhen the Testing Agent starts browser testing:\n\nBROWSER TESTING - PHASE 3 OF 5 [3:45:30 PM PST] | Elapsed: 00:15:30\n━━━━━━━━━━━━━━━━━━━━━━..."
+    },
+    "Benefits of Standardization": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-display-templates.md#benefits-of-standardization",
+      "tokens": 115,
+      "content_preview": "1. **Consistency**: Users see the same format across all agents\n2. **Clarity**: Progress is always clear and easy to understand\n3. **Timezone Aware**:..."
+    }
+  }
+}

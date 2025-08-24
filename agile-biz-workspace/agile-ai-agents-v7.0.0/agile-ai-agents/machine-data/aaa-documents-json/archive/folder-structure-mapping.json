@@ -1,0 +1,279 @@
+{
+  "meta": {
+    "document": "folder-structure-mapping",
+    "title": "Project Documents Folder Structure Mapping",
+    "timestamp": "2025-07-22T01:40:48.562Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md",
+    "document_type": "general_documentation",
+    "file_hash": "51539e1c8de0a0b3a236bdf4f34ba376",
+    "estimated_tokens": 310,
+    "full_md_tokens": 5941
+  },
+  "summary": "## Proposed Category-Based Organization",
+  "sections": [
+    {
+      "title": "Proposed Category-Based Organization",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#proposed-category-based-organization",
+      "content_preview": ""
+    },
+    {
+      "title": "**ORCHESTRATION** (Core Coordination - Always Present)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#orchestration-core-coordination-always-present",
+      "content_preview": "*Primary Agent: Scrum Master Agent*"
+    },
+    {
+      "title": "**BUSINESS-STRATEGY** (Business Analysis & Planning)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#business-strategy-business-analysis-planning",
+      "content_preview": ""
+    },
+    {
+      "title": "**DEVELOPMENT** (Technical Implementation)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#development-technical-implementation",
+      "content_preview": ""
+    },
+    {
+      "title": "**OPERATIONS** (Launch, Growth, Optimization)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#operations-launch-growth-optimization",
+      "content_preview": ""
+    },
+    {
+      "title": "**SUMMARY**",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#summary",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Proposed Category-Based Organization": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#proposed-category-based-organization",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Structure: `project-documents` → `category` → `folders` → `documents`": {
+          "content_preview": "---",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#structure-project-documents-category-folders-documents-1"
+        }
+      }
+    },
+    "**ORCHESTRATION** (Core Coordination - Always Present)": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#orchestration-core-coordination-always-present",
+      "tokens": 9,
+      "content_preview": "*Primary Agent: Scrum Master Agent*",
+      "subsections": {
+        "`orchestration/`": {
+          "content_preview": "**Agent**: Scrum Master Agent\n- `project-log.md` ← Real-time agent activity log\n- `agent-coordination.md` ← Agent handoffs and decisions\n- `stakeholde...",
+          "tokens": 192,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#orchestration-1"
+        }
+      }
+    },
+    "**BUSINESS-STRATEGY** (Business Analysis & Planning)": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#business-strategy-business-analysis-planning",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "`existing-project/`": {
+          "content_preview": "**Agent**: Project Analyzer Agent\n- `project-brief.md` ← Comprehensive project summary for all agents to reference\n- `technology-stack-analysis.md` ← ...",
+          "tokens": 231,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#existing-project-1"
+        },
+        "`research/`": {
+          "content_preview": "**Agent**: Research Agent\n- `competitive-analysis.md` ← Market & Competitive Intelligence\n- `market-analysis.md` ← Market & Competitive Intelligence\n-...",
+          "tokens": 705,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#research-1"
+        },
+        "`marketing/`": {
+          "content_preview": "**Agent**: Marketing Agent\n- `marketing-strategy.md` ← Core Marketing Strategy\n- `brand-positioning-messaging.md` ← Core Marketing Strategy\n- `target-...",
+          "tokens": 826,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#marketing-1"
+        },
+        "`finance/`": {
+          "content_preview": "**Agent**: Finance Agent\n- `ai-development-cost-analysis.md` ← AI-FIRST: LLM token costs vs traditional developer salaries\n- `ai-vs-human-cost-compari...",
+          "tokens": 114,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#finance-1"
+        },
+        "`market-validation/`": {
+          "content_preview": "**Agent**: Market Validation Product Market Fit Agent\n- `market-validation-strategy.md` ← Comprehensive market validation framework\n- `customer-discov...",
+          "tokens": 372,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#market-validation-1"
+        },
+        "`customer-success/`": {
+          "content_preview": "**Agent**: Customer Lifecycle Retention Agent\n- `onboarding-optimization.md` ← Customer onboarding experience optimization\n- `customer-activation-stra...",
+          "tokens": 389,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#customer-success-1"
+        },
+        "`monetization/`": {
+          "content_preview": "**Agent**: Revenue Optimization Agent\n- `subscription-model.md` ← Subscription tier architecture and pricing strategy\n- `pricing-optimization.md` ← Pr...",
+          "tokens": 383,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#monetization-1"
+        },
+        "`analysis/`": {
+          "content_preview": "**Agent**: Analysis Agent\n- `executive-intelligence-summary.md` ← Strategic synthesis of all reports\n- `strategic-recommendations.md` ← Consolidated r...",
+          "tokens": 79,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#analysis-1"
+        },
+        "`investment/`": {
+          "content_preview": "**Agent**: VC Report Agent\n- `investor-teaser.md` ← 1-2 page investor overview and key highlights\n- `executive-summary.md` ← Comprehensive 2-3 page ex...",
+          "tokens": 346,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#investment-1"
+        }
+      }
+    },
+    "**DEVELOPMENT** (Technical Implementation)": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#development-technical-implementation",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "`requirements/`": {
+          "content_preview": "**Agent**: PRD Agent\n- `prd-document.md` ← Comprehensive 16-section PRD\n- `user-stories.md` ← Detailed user stories with acceptance criteria\n- `accept...",
+          "tokens": 102,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#requirements-1"
+        },
+        "`security/`": {
+          "content_preview": "**Agent**: Security Agent\n- `security-architecture-strategy.md` ← Security Architecture & Framework Design\n- `threat-modeling-analysis.md` ← Threat As...",
+          "tokens": 226,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#security-1"
+        },
+        "`llm-analysis/`": {
+          "content_preview": "**Agent**: LLM Agent\n- `feature-to-llm-mapping.md` ← Feature-specific LLM implementation analysis\n- `llm-selection-analysis.md` ← LLM provider compari...",
+          "tokens": 71,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#llm-analysis-1"
+        },
+        "`api-analysis/`": {
+          "content_preview": "**Agent**: API Agent\n- `feature-to-api-mapping.md` ← Feature-specific API integration analysis\n- `api-provider-analysis.md` ← API provider evaluation ...",
+          "tokens": 73,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#api-analysis-1"
+        },
+        "`mcp-analysis/`": {
+          "content_preview": "**Agent**: MCP Agent\n- `development-mcp-strategy.md` ← MCP servers for Claude Code development\n- `application-mcp-integration.md` ← MCP servers for ap...",
+          "tokens": 75,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#mcp-analysis-1"
+        },
+        "`project-planning/`": {
+          "content_preview": "**Agent**: Project Manager Agent\n- `project-charter.md` ← Comprehensive project planning\n- `work-breakdown-structure.md` ← Task decomposition and depe...",
+          "tokens": 82,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#project-planning-1"
+        },
+        "`environment/`": {
+          "content_preview": "**Agent**: DevOps Agent\n- `setup-complete.md` ← Environment setup completion status",
+          "tokens": 20,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#environment-1"
+        },
+        "`design/`": {
+          "content_preview": "**Agent**: UI/UX Agent\n- `competitive-design-analysis.md`\n- `ui-designs.md`\n- `user-flows.md`\n- `technical-architecture.md`",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#design-1"
+        },
+        "`implementation/`": {
+          "content_preview": "**Agent**: Coder Agent\n- `development-log.md`\n- `api-documentation.md`\n- `code-review-notes.md`",
+          "tokens": 22,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#implementation-1"
+        },
+        "`testing/`": {
+          "content_preview": "**Agent**: Testing Agent\n- `test-plan.md`\n- `test-results.md`\n- `quality-report.md`",
+          "tokens": 19,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#testing-1"
+        },
+        "`documentation/`": {
+          "content_preview": "**Agent**: Documentation Agent\n- `technical-documentation.md`\n- `api-documentation.md`\n- `developer-guides.md`\n\n---",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#documentation-1"
+        }
+      }
+    },
+    "**OPERATIONS** (Launch, Growth, Optimization)": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#operations-launch-growth-optimization",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "`deployment/`": {
+          "content_preview": "**Agent**: DevOps Agent\n- `deployment-guide.md`\n- `monitoring-setup.md`\n- `project-summary.md`",
+          "tokens": 21,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#deployment-1"
+        },
+        "`launch/`": {
+          "content_preview": "**Agent**: Project Manager Agent\n- `launch-plan.md`\n- `marketing-campaigns.md`\n- `success-metrics.md`",
+          "tokens": 23,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#launch-1"
+        },
+        "`analytics/`": {
+          "content_preview": "**Agent**: Analytics Growth Intelligence Agent\n- `business-intelligence-strategy.md` ← Comprehensive BI strategy and framework\n- `revenue-analytics-da...",
+          "tokens": 414,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#analytics-1"
+        },
+        "`monitoring/`": {
+          "content_preview": "**Agent**: Logger Agent\n- `system-monitoring.md`\n- `observability-setup.md`",
+          "tokens": 17,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#monitoring-1"
+        },
+        "`optimization/`": {
+          "content_preview": "**Agent**: Optimization Agent\n- `performance-optimization-strategy.md`\n- `frontend-performance-optimization.md`\n- `backend-performance-optimization.md...",
+          "tokens": 141,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#optimization-1"
+        },
+        "`seo/`": {
+          "content_preview": "**Agent**: SEO Agent\n- `seo-strategy.md` ← Traditional and LLM search optimization\n- `keyword-research.md` ← Search engine and AI platform keywords\n- ...",
+          "tokens": 72,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#seo-1"
+        },
+        "`email-marketing/`": {
+          "content_preview": "**Agent**: Email Marketing Agent\n- `email-marketing-strategy.md` ← Comprehensive email marketing strategy and automation\n- `email-automation-sequences...",
+          "tokens": 418,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#email-marketing-1"
+        },
+        "`media-buying/`": {
+          "content_preview": "**Agent**: PPC Media Buyer Agent\n- `ppc-campaign-strategy.md`\n- `ad-creative-testing.md`\n- `media-buying-optimization.md`",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#media-buying-1"
+        },
+        "`social-media/`": {
+          "content_preview": "**Agent**: Social Media Agent\n- `social-media-strategy.md`\n- `content-calendar-planning.md`\n- `community-management.md`\n\n---",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#social-media-1"
+        }
+      }
+    },
+    "**SUMMARY**": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#summary",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "**Category Distribution:**": {
+          "content_preview": "- **Orchestration**: 1 folder (always present)\n- **Business-Strategy**: 9 folders (flexible creation)\n- **Development**: 9 folders (flexible creation)...",
+          "tokens": 44,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#category-distribution-1"
+        },
+        "**Total**: 27 folders (vs 30 numbered folders)": {
+          "content_preview": "",
+          "tokens": 0,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#total-27-folders-vs-30-numbered-folders-1"
+        },
+        "**Key Benefits:**": {
+          "content_preview": "1. **Logical Grouping** - Related documents together\n2. **Agent Clarity** - Clear ownership and responsibility\n3. **User-Friendly** - Intuitive naviga...",
+          "tokens": 63,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#key-benefits-1"
+        },
+        "**Agent Coordination:**": {
+          "content_preview": "- Each folder has a primary responsible agent\n- Dependencies can be managed between folders\n- JSON conversion happens immediately after document creat...",
+          "tokens": 59,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/folder-structure-mapping.md#agent-coordination-1"
+        }
+      }
+    }
+  }
+}

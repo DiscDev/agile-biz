@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "document": "research-document-template",
+    "title": "Research Document Template",
+    "timestamp": "2025-08-11T22:02:16.914Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/research-document-template.md",
+    "document_type": "template",
+    "file_hash": "9944b3a0e149566763e878c8fb224789",
+    "estimated_tokens": 585,
+    "full_md_tokens": 849
+  },
+  "summary": "This template should be used by all agents when creating research-based documents to ensure proper verification and minimize hallucinations.",
+  "sections": [
+    {
+      "title": "Document Metadata",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#document-metadata",
+      "content_preview": "- **Created By**: [Agent Name]\n- **Date**: [YYYY-MM-DD HH:MM TZ]\n- **Document Type**: [market_research/competitor_analysis/technical_research/etc.]\n- ..."
+    },
+    {
+      "title": "Verification Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#verification-summary",
+      "content_preview": "- **MCP Services Used**: \n  - [ ] Perplexity (Web Search)\n  - [ ] Firecrawl (Web Scraping)\n  - [ ] GitHub (Code Verification)\n  - [ ] WebSearch (Gener..."
+    },
+    {
+      "title": "Executive Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#executive-summary",
+      "content_preview": "[Brief overview of key findings - 2-3 paragraphs]\n\n---"
+    },
+    {
+      "title": "Verified Information",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#verified-information",
+      "content_preview": "*All claims in this section have been verified through MCP services or authoritative sources*"
+    },
+    {
+      "title": "Analysis & Insights",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#analysis-insights",
+      "content_preview": "*This section contains interpretations and analysis based on verified data*"
+    },
+    {
+      "title": "Unverified Information",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#unverified-information",
+      "content_preview": "*The following information could not be verified through available sources*"
+    },
+    {
+      "title": "Recommendations",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#recommendations",
+      "content_preview": "*Strategic recommendations based on the research findings*\n\n1. **[Recommendation 1]**\n   - Based on: [Reference to verified data]\n   - Confidence: [Hi..."
+    },
+    {
+      "title": "Data Limitations",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#data-limitations",
+      "content_preview": "- **Cutoff Dates**: [Any time limitations on data]\n- **Geographic Scope**: [Regions covered/not covered]\n- **Industry Scope**: [Specific sectors analy..."
+    },
+    {
+      "title": "Next Steps",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#next-steps",
+      "content_preview": "1. [Suggested follow-up research]\n2. [Additional verification needed]\n3. [Recommended actions]"
+    },
+    {
+      "title": "Appendix: Source List",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#appendix-source-list",
+      "content_preview": "1. [Source 1 - Full Citation]\n2. [Source 2 - Full Citation]\n3. [Source 3 - Full Citation]\n[Continue for all sources]\n\n---"
+    },
+    {
+      "title": "Verification Log",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#verification-log",
+      "content_preview": "*For transparency and audit purposes*\n\n```\n[YYYY-MM-DD HH:MM] - Started research on [topic]\n[YYYY-MM-DD HH:MM] - Perplexity search: \"[search query]\" -..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "technical_integration"
+  ],
+  "section_details": {
+    "Document Metadata": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#document-metadata",
+      "tokens": 50,
+      "content_preview": "- **Created By**: [Agent Name]\n- **Date**: [YYYY-MM-DD HH:MM TZ]\n- **Document Type**: [market_research/competitor_analysis/technical_research/etc.]\n- ..."
+    },
+    "Verification Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#verification-summary",
+      "tokens": 72,
+      "content_preview": "- **MCP Services Used**: \n  - [ ] Perplexity (Web Search)\n  - [ ] Firecrawl (Web Scraping)\n  - [ ] GitHub (Code Verification)\n  - [ ] WebSearch (Gener..."
+    },
+    "Executive Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#executive-summary",
+      "tokens": 13,
+      "content_preview": "[Brief overview of key findings - 2-3 paragraphs]\n\n---"
+    },
+    "Verified Information": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#verified-information",
+      "tokens": 23,
+      "content_preview": "*All claims in this section have been verified through MCP services or authoritative sources*",
+      "subsections": {
+        "[Topic 1]": {
+          "content_preview": "**Claim**: [Specific factual claim]\n- **Source**: [Source Name with URL](https://actual-url.com)\n- **Retrieved**: [YYYY-MM-DD HH:MM TZ]\n- **Verificati...",
+          "tokens": 70,
+          "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#topic-1-1"
+        },
+        "[Topic 2]": {
+          "content_preview": "**Claim**: [Specific factual claim]\n- **Source**: [Source Name with URL](https://actual-url.com)\n- **Retrieved**: [YYYY-MM-DD HH:MM TZ]\n- **Verificati...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#topic-2-1"
+        }
+      }
+    },
+    "Analysis & Insights": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#analysis-insights",
+      "tokens": 19,
+      "content_preview": "*This section contains interpretations and analysis based on verified data*",
+      "subsections": {
+        "[Analysis Topic 1]": {
+          "content_preview": "**Based on verified data above**, [analytical insight or interpretation]\n- **Confidence Level**: [High/Medium/Low]\n- **Key Assumptions**: \n  - [Assump...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#analysis-topic-1-1"
+        },
+        "[Analysis Topic 2]": {
+          "content_preview": "**Trend Analysis**: [Description of trends observed in verified data]\n- **Data Points Used**: [Reference to verified sections]\n- **Confidence Level**:...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#analysis-topic-2-1"
+        }
+      }
+    },
+    "Unverified Information": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#unverified-information",
+      "tokens": 19,
+      "content_preview": "*The following information could not be verified through available sources*",
+      "subsections": {
+        "[Unverified Topic 1]": {
+          "content_preview": "- **Claim**: [Information that couldn't be verified]\n- **Source**: [Where this was mentioned, if any]\n- **Reason Unverified**: [No authoritative sourc...",
+          "tokens": 57,
+          "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#unverified-topic-1-1"
+        }
+      }
+    },
+    "Recommendations": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#recommendations",
+      "tokens": 80,
+      "content_preview": "*Strategic recommendations based on the research findings*\n\n1. **[Recommendation 1]**\n   - Based on: [Reference to verified data]\n   - Confidence: [Hi..."
+    },
+    "Data Limitations": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#data-limitations",
+      "tokens": 42,
+      "content_preview": "- **Cutoff Dates**: [Any time limitations on data]\n- **Geographic Scope**: [Regions covered/not covered]\n- **Industry Scope**: [Specific sectors analy..."
+    },
+    "Next Steps": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#next-steps",
+      "tokens": 22,
+      "content_preview": "1. [Suggested follow-up research]\n2. [Additional verification needed]\n3. [Recommended actions]"
+    },
+    "Appendix: Source List": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#appendix-source-list",
+      "tokens": 29,
+      "content_preview": "1. [Source 1 - Full Citation]\n2. [Source 2 - Full Citation]\n3. [Source 3 - Full Citation]\n[Continue for all sources]\n\n---"
+    },
+    "Verification Log": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-document-template.md#verification-log",
+      "tokens": 106,
+      "content_preview": "*For transparency and audit purposes*\n\n```\n[YYYY-MM-DD HH:MM] - Started research on [topic]\n[YYYY-MM-DD HH:MM] - Perplexity search: \"[search query]\" -..."
+    }
+  }
+}

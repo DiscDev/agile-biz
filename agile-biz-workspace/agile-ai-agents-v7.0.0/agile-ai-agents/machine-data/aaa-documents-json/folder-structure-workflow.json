@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "document": "folder-structure-workflow",
+    "title": "Document Creation Workflow (16-Phase Process)",
+    "timestamp": "2025-08-11T22:02:16.892Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/folder-structure-workflow.md",
+    "document_type": "workflow",
+    "file_hash": "47649bfb420e39e9503687a89a51b9e0",
+    "estimated_tokens": 508,
+    "full_md_tokens": 4061
+  },
+  "summary": "This guide outlines the 16-phase workflow for creating all project documents in the AgileAiAgents system. It shows the optimal order, parallelization opportunities, and agent coordination required for efficient document generation.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#overview",
+      "content_preview": "This guide outlines the 16-phase workflow for creating all project documents in the AgileAiAgents system. It shows the optimal order, parallelization ..."
+    },
+    {
+      "title": "Workflow Principles",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#workflow-principles",
+      "content_preview": ""
+    },
+    {
+      "title": "The 16 Phases",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#the-16-phases",
+      "content_preview": ""
+    },
+    {
+      "title": "Critical Path Dependencies",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#critical-path-dependencies",
+      "content_preview": ""
+    },
+    {
+      "title": "Maximum Parallelization Requirements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#maximum-parallelization-requirements",
+      "content_preview": ""
+    },
+    {
+      "title": "Optimization Opportunities",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#optimization-opportunities",
+      "content_preview": ""
+    },
+    {
+      "title": "Success Metrics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#success-metrics",
+      "content_preview": ""
+    },
+    {
+      "title": "Implementation Guidelines",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#implementation-guidelines",
+      "content_preview": ""
+    },
+    {
+      "title": "Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#summary",
+      "content_preview": "This 16-phase workflow optimizes document creation through:\n- ✅ Strategic parallelization reducing time by 40-45%\n- ✅ Clear phase dependencies and cri..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#overview",
+      "tokens": 58,
+      "content_preview": "This guide outlines the 16-phase workflow for creating all project documents in the AgileAiAgents system. It shows the optimal order, parallelization ..."
+    },
+    "Workflow Principles": {
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#workflow-principles",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Execution Strategy": {
+          "content_preview": "- **Sequential where necessary**: Foundation documents must come first\n- **Parallel where possible**: Independent domains can execute simultaneously  ...",
+          "tokens": 72,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#execution-strategy-1"
+        },
+        "Time Optimization": {
+          "content_preview": "- **Sequential Execution**: 65-95 hours (one agent at a time)\n- **Parallel Execution**: 36-52 hours (5-7 agents working simultaneously)\n- **Time Savin...",
+          "tokens": 46,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#time-optimization-1"
+        }
+      }
+    },
+    "The 16 Phases": {
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#the-16-phases",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Phase 1: Foundation Analysis (Sequential - Required Base)": {
+          "content_preview": "**Dependencies**: None  \n**Estimated Time**: 2-4 hours  \n**Parallelization**: None (foundational data needed for all subsequent phases)\n\n**Documents C...",
+          "tokens": 117,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#phase-1-foundation-analysis-sequential-required-base-1"
+        },
+        "Phase 2: Core Project Analysis (Parallel Opportunities)": {
+          "content_preview": "**Dependencies**: Phase 1 complete  \n**Estimated Time**: 3-5 hours  \n**Parallelization**: High - Multiple agents can work simultaneously\n\n**Parallel G...",
+          "tokens": 186,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#phase-2-core-project-analysis-parallel-opportunities-1"
+        },
+        "Phase 3: Market & Business Research (Parallel Opportunities)": {
+          "content_preview": "**Dependencies**: Phase 1 complete (project-brief.md)  \n**Estimated Time**: 4-6 hours  \n**Parallelization**: High - Independent research streams\n\n**Pa...",
+          "tokens": 202,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#phase-3-market-business-research-parallel-opportunities-1"
+        },
+        "Phase 4: Strategic Planning (Sequential Dependencies)": {
+          "content_preview": "**Dependencies**: Phase 3 complete  \n**Estimated Time**: 3-4 hours  \n**Parallelization**: Medium - Some dependencies within phase\n\n**Sequential Sub-Ph...",
+          "tokens": 139,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#phase-4-strategic-planning-sequential-dependencies-1"
+        },
+        "Phase 5: Market Validation (Parallel Opportunities)": {
+          "content_preview": "**Dependencies**: Phase 3 & 4A complete  \n**Estimated Time**: 4-5 hours  \n**Parallelization**: High - Independent validation streams\n\n**Parallel Group...",
+          "tokens": 238,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#phase-5-market-validation-parallel-opportunities-1"
+        },
+        "Phase 6: Business Strategy Development (Parallel Opportunities)": {
+          "content_preview": "**Dependencies**: Phase 4 & 5 complete  \n**Estimated Time**: 5-7 hours  \n**Parallelization**: High - Multiple business domains\n\n**Parallel Group 6A: M...",
+          "tokens": 296,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#phase-6-business-strategy-development-parallel-opportunities-1"
+        },
+        "Phase 7: Investment Planning (Sequential Dependencies)": {
+          "content_preview": "**Dependencies**: Phase 6 complete  \n**Estimated Time**: 3-4 hours  \n**Parallelization**: Low - Sequential nature of investment documents\n\n**Sequentia...",
+          "tokens": 110,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#phase-7-investment-planning-sequential-dependencies-1"
+        },
+        "Phase 8: Technical Requirements (Parallel Opportunities)": {
+          "content_preview": "**Dependencies**: Phase 4 complete (strategic direction set)  \n**Estimated Time**: 4-6 hours  \n**Parallelization**: High - Independent technical domai...",
+          "tokens": 200,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#phase-8-technical-requirements-parallel-opportunities-1"
+        },
+        "Phase 9: Project Planning (Sequential Dependencies)": {
+          "content_preview": "**Dependencies**: Phase 8 complete  \n**Estimated Time**: 2-3 hours  \n**Parallelization**: Low - Planning requires sequential coordination\n\n**Sequentia...",
+          "tokens": 107,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#phase-9-project-planning-sequential-dependencies-1"
+        },
+        "Phase 10: Implementation Preparation (Parallel Opportunities)": {
+          "content_preview": "**Dependencies**: Phase 9 complete  \n**Estimated Time**: 3-4 hours  \n**Parallelization**: High - Independent preparation streams\n\n**Parallel Group 10A...",
+          "tokens": 141,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#phase-10-implementation-preparation-parallel-opportunities-1"
+        },
+        "Phase 11: Development Implementation (Parallel Opportunities)": {
+          "content_preview": "**Dependencies**: Phase 10 complete  \n**Estimated Time**: Variable (depends on project scope)  \n**Parallelization**: High - Multiple development strea...",
+          "tokens": 115,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#phase-11-development-implementation-parallel-opportunities-1"
+        },
+        "Phase 12: Deployment Preparation (Sequential Dependencies)": {
+          "content_preview": "**Dependencies**: Phase 11 complete  \n**Estimated Time**: 2-3 hours  \n**Parallelization**: Low - Deployment requires coordination\n\n**Sequential Deploy...",
+          "tokens": 75,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#phase-12-deployment-preparation-sequential-dependencies-1"
+        },
+        "Phase 13: Launch Coordination (Parallel Opportunities)": {
+          "content_preview": "**Dependencies**: Phase 12 complete  \n**Estimated Time**: 3-4 hours  \n**Parallelization**: Medium - Some dependencies between launch activities\n\n**Par...",
+          "tokens": 94,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#phase-13-launch-coordination-parallel-opportunities-1"
+        },
+        "Phase 14: Operations Setup (Parallel Opportunities)": {
+          "content_preview": "**Dependencies**: Phase 13 complete  \n**Estimated Time**: 4-5 hours  \n**Parallelization**: High - Independent operational domains\n\n**Parallel Group 14...",
+          "tokens": 191,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#phase-14-operations-setup-parallel-opportunities-1"
+        },
+        "Phase 15: Growth Optimization (Parallel Opportunities)": {
+          "content_preview": "**Dependencies**: Phase 14 complete + 2-4 weeks operational data  \n**Estimated Time**: 5-7 hours  \n**Parallelization**: High - Independent optimizatio...",
+          "tokens": 236,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#phase-15-growth-optimization-parallel-opportunities-1"
+        },
+        "Phase 16: Advanced Growth (Parallel Opportunities)": {
+          "content_preview": "**Dependencies**: Phase 15 complete + significant operational data  \n**Estimated Time**: 6-8 hours  \n**Parallelization**: High - Advanced optimization...",
+          "tokens": 253,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#phase-16-advanced-growth-parallel-opportunities-1"
+        }
+      }
+    },
+    "Critical Path Dependencies": {
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#critical-path-dependencies",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Foundation Dependencies": {
+          "content_preview": "1. **Phase 1** (Foundation) → **Everything**\n   - All subsequent work requires project brief and architecture understanding",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#foundation-dependencies-1"
+        },
+        "Strategic Dependencies": {
+          "content_preview": "2. **Phase 4** (Strategic Planning) → **All Technical & Business Development**\n   - Sets direction for all implementation work",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#strategic-dependencies-1"
+        },
+        "Requirements Dependencies": {
+          "content_preview": "3. **Phase 8** (Requirements) → **All Implementation**\n   - Technical work cannot begin without requirements",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#requirements-dependencies-1"
+        },
+        "Implementation Dependencies": {
+          "content_preview": "4. **Phase 11** (Implementation) → **All Operations**\n   - Operations require working system",
+          "tokens": 21,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#implementation-dependencies-1"
+        }
+      }
+    },
+    "Maximum Parallelization Requirements": {
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#maximum-parallelization-requirements",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Agent Resources": {
+          "content_preview": "- **5-7 agents** working simultaneously during peak phases\n- **Clear handoff protocols** between phases\n- **Shared context management** for cross-agen...",
+          "tokens": 48,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#agent-resources-1"
+        },
+        "Coordination Points": {
+          "content_preview": "- Phase 1-2: Sequential foundation building\n- Phase 3-6: Maximum parallelization (5-7 agents)\n- Phase 7-9: Mixed sequential/parallel\n- Phase 10-11: Hi...",
+          "tokens": 64,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#coordination-points-1"
+        }
+      }
+    },
+    "Optimization Opportunities": {
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#optimization-opportunities",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Cross-Phase Overlap": {
+          "content_preview": "Some Phase N+1 activities can begin before Phase N is 100% complete:\n- Start research (Phase 3) when project brief is ready\n- Begin requirements (Phas...",
+          "tokens": 58,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#cross-phase-overlap-1"
+        },
+        "Agent Specialization": {
+          "content_preview": "Agents can prepare next-phase work while waiting:\n- Research Agent can draft templates during analysis\n- PRD Agent can outline structure during strate...",
+          "tokens": 50,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#agent-specialization-1"
+        },
+        "Iterative Refinement": {
+          "content_preview": "Early phases can be refined while later phases execute:\n- Update research with new findings\n- Refine requirements based on implementation\n- Adjust str...",
+          "tokens": 46,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#iterative-refinement-1"
+        },
+        "Conditional Execution": {
+          "content_preview": "Some advanced phases only execute based on needs:\n- Skip investment planning if self-funded\n- Defer advanced analytics for MVPs\n- Postpone optimizatio...",
+          "tokens": 44,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#conditional-execution-1"
+        }
+      }
+    },
+    "Success Metrics": {
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#success-metrics",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Efficiency Indicators": {
+          "content_preview": "- **Time Reduction**: 40-45% vs sequential execution\n- **Agent Utilization**: 70-80% during peak phases\n- **Handoff Success**: <5% rework due to misco...",
+          "tokens": 51,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#efficiency-indicators-1"
+        },
+        "Document Quality": {
+          "content_preview": "- **Completeness**: All required sections filled\n- **Consistency**: Cross-document alignment\n- **Accuracy**: Verified facts and data\n- **Actionability...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#document-quality-1"
+        },
+        "Coordination Success": {
+          "content_preview": "- **Parallel Execution**: Multiple agents active\n- **Dependencies Met**: No blocking delays\n- **Context Sharing**: Efficient information flow\n- **Stat...",
+          "tokens": 44,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#coordination-success-1"
+        }
+      }
+    },
+    "Implementation Guidelines": {
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#implementation-guidelines",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "For Scrum Master Agent": {
+          "content_preview": "1. Monitor phase transitions\n2. Coordinate parallel agent activation\n3. Track dependencies and blockers\n4. Ensure quality gates are met\n5. Maintain sp...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#for-scrum-master-agent-1"
+        },
+        "For Individual Agents": {
+          "content_preview": "1. Check phase dependencies before starting\n2. Coordinate with parallel agents in same group\n3. Update document registry on completion\n4. Signal phase...",
+          "tokens": 53,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#for-individual-agents-1"
+        },
+        "For Project Manager": {
+          "content_preview": "1. Plan resource allocation by phase\n2. Monitor critical path progress\n3. Identify optimization opportunities\n4. Manage phase gate approvals\n5. Track ...",
+          "tokens": 44,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#for-project-manager-1"
+        }
+      }
+    },
+    "Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-workflow.md#summary",
+      "tokens": 107,
+      "content_preview": "This 16-phase workflow optimizes document creation through:\n- ✅ Strategic parallelization reducing time by 40-45%\n- ✅ Clear phase dependencies and cri..."
+    }
+  }
+}

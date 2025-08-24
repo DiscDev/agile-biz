@@ -1,0 +1,197 @@
+{
+  "meta": {
+    "document": "command-handlers",
+    "title": "Command Handlers Documentation",
+    "timestamp": "2025-08-11T22:02:16.872Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/command-handlers.md",
+    "document_type": "general_documentation",
+    "file_hash": "9586b8e937e90310778001e72a229090",
+    "estimated_tokens": 427,
+    "full_md_tokens": 2419
+  },
+  "summary": "This document defines how each command should be processed by Claude Code when working with AgileAiAgents.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#overview",
+      "content_preview": "This document defines how each command should be processed by Claude Code when working with AgileAiAgents."
+    },
+    {
+      "title": "Command Processing Flow",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#command-processing-flow",
+      "content_preview": ""
+    },
+    {
+      "title": "Command Handler Implementations",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#command-handler-implementations",
+      "content_preview": ""
+    },
+    {
+      "title": "Error Handling Patterns",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#error-handling-patterns",
+      "content_preview": ""
+    },
+    {
+      "title": "State Persistence",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#state-persistence",
+      "content_preview": "All commands that modify state should:\n1. Update workflow_state immediately\n2. Create checkpoint after significant actions\n3. Log command execution in..."
+    },
+    {
+      "title": "Command Aliases (Future)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#command-aliases-future",
+      "content_preview": "Consider supporting common aliases:\n- `/new` → `/start-new-project-workflow`\n- `/existing` → `/start-existing-project-workflow`\n- `/start` → `/quickst..."
+    },
+    {
+      "title": "Integration with Auto-Orchestrator",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#integration-with-auto-orchestrator",
+      "content_preview": "When auto-orchestrator is active:\n1. Commands take precedence\n2. Direct project descriptions still work\n3. Command provides more structured experience..."
+    },
+    {
+      "title": "Error Recovery Integration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#error-recovery-integration",
+      "content_preview": "All command handlers include error recovery:\n1. Automatic error detection and logging\n2. Recovery suggestions based on error type\n3. State corruption ..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#overview",
+      "tokens": 27,
+      "content_preview": "This document defines how each command should be processed by Claude Code when working with AgileAiAgents."
+    },
+    "Command Processing Flow": {
+      "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#command-processing-flow",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Command Detection": {
+          "content_preview": "```\nUser Input → Check for \"/\" prefix → Validate Command → Route to Handler\n```",
+          "tokens": 19,
+          "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#1-command-detection-1"
+        },
+        "2. State Initialization": {
+          "content_preview": "When a workflow command is executed:\n```json\n{\n  \"workflow_state\": {\n    \"active_workflow\": \"[workflow-type]\",\n    \"initiated_by\": \"[command]\",\n    \"s...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#2-state-initialization-1"
+        }
+      }
+    },
+    "Command Handler Implementations": {
+      "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#command-handler-implementations",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "`/start-new-project-workflow`": {
+          "content_preview": "**Handler**: Project Analyzer Agent\n**Workflow**: new-project-discovery\n\n**Processing Steps**:\n1. Initialize workflow state as \"new-project\"\n2. Set ph...",
+          "tokens": 141,
+          "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#start-new-project-workflow-1"
+        },
+        "`/start-existing-project-workflow`": {
+          "content_preview": "**Handler**: Code Analyzer Agent → Project Analyzer Agent\n**Workflow**: existing-project-discovery\n\n**Processing Steps**:\n1. Initialize workflow state...",
+          "tokens": 161,
+          "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#start-existing-project-workflow-1"
+        },
+        "`/quickstart`": {
+          "content_preview": "**Handler**: Scrum Master Agent\n**Workflow**: interactive-menu\n\n**Processing Steps**:\n1. Load menu from `workflow-templates/quickstart-menu-template.m...",
+          "tokens": 135,
+          "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#quickstart-1"
+        },
+        "`/aaa-help`": {
+          "content_preview": "**Handler**: Scrum Master Agent\n**Workflow**: show-commands\n\n**Processing Steps**:\n1. If no parameter: Show general help from template\n2. If parameter...",
+          "tokens": 112,
+          "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#aaa-help-1"
+        },
+        "Sprint Management Commands": {
+          "content_preview": "**Handler**: Scrum Master Agent\n**Steps**:\n1. Compile sprint accomplishments\n2. Generate review document\n3. Ask for stakeholder feedback",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#sprint-management-commands-4"
+        },
+        "Research & Analysis Commands": {
+          "content_preview": "**Handler**: Code Analyzer Agent\n**Steps**:\n1. Deep code analysis only\n2. Generate comprehensive report\n3. No enhancement planning",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#research-analysis-commands-4"
+        },
+        "Documentation Commands": {
+          "content_preview": "**Handler**: VC Report Agent\n**Steps**:\n1. Compile project information\n2. Create investor presentation\n3. Include financials if available",
+          "tokens": 33,
+          "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#documentation-commands-3"
+        },
+        "State Management Commands": {
+          "content_preview": "**Handler**: Learning Analysis Agent\n**Steps**:\n1. Load learnings from project\n2. Categorize and format display\n3. Show contribution readiness\n4. Prov...",
+          "tokens": 44,
+          "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#state-management-commands-7"
+        },
+        "Community Contribution Commands": {
+          "content_preview": "**Handler**: Learning Analysis Agent\n**Steps**:\n1. Cancel any scheduled prompts\n2. Immediately start contribution workflow\n3. Capture and anonymize le...",
+          "tokens": 49,
+          "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#community-contribution-commands-8"
+        }
+      }
+    },
+    "Error Handling Patterns": {
+      "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#error-handling-patterns",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Invalid Command": {
+          "content_preview": "```\n❌ Unknown command: /[input]\n\nDid you mean:\n  /[suggestion1] - [description]\n  /[suggestion2] - [description]\n\nType /aaa-help to see all commands.\n...",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#invalid-command-1"
+        },
+        "Workflow Already Active": {
+          "content_preview": "```\n⚠️ You already have an active workflow: [workflow-name]\n\nWould you like to:\n1. Continue the current workflow (/continue)\n2. Save and switch to new...",
+          "tokens": 46,
+          "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#workflow-already-active-1"
+        },
+        "Missing Prerequisites": {
+          "content_preview": "```\n⚠️ This command requires [prerequisite]\n\nPlease ensure:\n- [Requirement 1]\n- [Requirement 2]\n\nWould you like help with this? (yes/no)\n```",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#missing-prerequisites-1"
+        }
+      }
+    },
+    "State Persistence": {
+      "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#state-persistence",
+      "tokens": 50,
+      "content_preview": "All commands that modify state should:\n1. Update workflow_state immediately\n2. Create checkpoint after significant actions\n3. Log command execution in...",
+      "subsections": {
+        "`/workflow-recovery`": {
+          "content_preview": "**Handler**: Workflow Recovery Handler  \n**Workflow**: workflow-recovery\n\n**Processing Steps**:\n1. Parse recovery command argument\n2. Execute appropri...",
+          "tokens": 194,
+          "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#workflow-recovery-1"
+        }
+      }
+    },
+    "Command Aliases (Future)": {
+      "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#command-aliases-future",
+      "tokens": 48,
+      "content_preview": "Consider supporting common aliases:\n- `/new` → `/start-new-project-workflow`\n- `/existing` → `/start-existing-project-workflow`\n- `/start` → `/quickst..."
+    },
+    "Integration with Auto-Orchestrator": {
+      "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#integration-with-auto-orchestrator",
+      "tokens": 50,
+      "content_preview": "When auto-orchestrator is active:\n1. Commands take precedence\n2. Direct project descriptions still work\n3. Command provides more structured experience..."
+    },
+    "Error Recovery Integration": {
+      "md_reference": "agile-ai-agents/aaa-documents/command-handlers.md#error-recovery-integration",
+      "tokens": 65,
+      "content_preview": "All command handlers include error recovery:\n1. Automatic error detection and logging\n2. Recovery suggestions based on error type\n3. State corruption ..."
+    }
+  }
+}

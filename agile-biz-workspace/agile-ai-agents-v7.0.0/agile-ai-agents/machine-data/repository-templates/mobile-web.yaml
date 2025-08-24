@@ -1,0 +1,152 @@
+template:
+  id: "mobile-web"
+  name: "Mobile + Web Platform"
+  description: "Structure for projects with both mobile and web applications"
+  best_for:
+    - "Cross-platform applications"
+    - "Mobile-first products with web companions"
+    - "Progressive web apps"
+  
+  repositories:
+    - id: "mobile"
+      name: "Mobile Application"
+      purpose: "Native or React Native mobile app"
+      typical_tech:
+        - "React Native"
+        - "Flutter"
+        - "Native iOS/Android"
+      initial_structure:
+        - "src/screens/"
+        - "src/components/"
+        - "src/navigation/"
+        - "src/services/"
+        - "src/store/"
+      evolution_notes: "Primary repository for mobile-first products"
+    
+    - id: "web"
+      name: "Web Application"
+      purpose: "Web companion or full web app"
+      typical_tech:
+        - "React/Next.js"
+        - "Vue.js"
+        - "Progressive Web App"
+      initial_structure:
+        - "src/pages/"
+        - "src/components/"
+        - "src/hooks/"
+        - "src/services/"
+        - "src/styles/"
+      evolution_notes: "Often starts as marketing site, evolves to full app"
+    
+    - id: "api"
+      name: "Backend API"
+      purpose: "Shared backend for mobile and web"
+      typical_tech:
+        - "Node.js/Express"
+        - "Python/FastAPI"
+        - "Go"
+      initial_structure:
+        - "src/routes/"
+        - "src/controllers/"
+        - "src/models/"
+        - "src/middleware/"
+        - "src/services/"
+      evolution_notes: "Must support both mobile and web client needs"
+    
+    - id: "shared"
+      name: "Shared Components"
+      purpose: "Cross-platform shared code"
+      typical_tech:
+        - "TypeScript"
+        - "Component libraries"
+        - "Business logic"
+      initial_structure:
+        - "packages/ui/"
+        - "packages/utils/"
+        - "packages/types/"
+        - "packages/validators/"
+      evolution_notes: "Emerges when code duplication becomes problematic"
+    
+    - id: "admin"
+      name: "Admin Dashboard"
+      purpose: "Management and analytics interface"
+      typical_tech:
+        - "React Admin"
+        - "Internal tools"
+      initial_structure:
+        - "src/modules/"
+        - "src/components/"
+        - "src/services/"
+      evolution_notes: "Splits when admin needs differ from main app"
+
+  evolution_triggers:
+    - trigger: "platform_divergence"
+      threshold: "Platform-specific code > 30%"
+      action: "Strengthen platform separation"
+    
+    - trigger: "shared_code_duplication"
+      threshold: "Duplicate code > 20%"
+      action: "Extract shared components library"
+    
+    - trigger: "api_versioning"
+      threshold: "Mobile and web need different API versions"
+      action: "Implement API versioning strategy"
+    
+    - trigger: "team_specialization"
+      threshold: "Dedicated mobile/web teams"
+      action: "Optimize repo structure for team autonomy"
+
+  dependencies:
+    - from: "mobile"
+      to: "api"
+      type: "REST/GraphQL API"
+      notes: "Mobile-optimized endpoints"
+    
+    - from: "web"
+      to: "api"
+      type: "REST/GraphQL API"
+      notes: "Web-optimized endpoints"
+    
+    - from: "mobile"
+      to: "shared"
+      type: "Package dependency"
+      notes: "Shared business logic"
+    
+    - from: "web"
+      to: "shared"
+      type: "Package dependency"
+      notes: "Shared components and utils"
+    
+    - from: "admin"
+      to: "api"
+      type: "REST API"
+      notes: "Management endpoints"
+
+  platform_considerations:
+    mobile:
+      - "App store deployment cycles"
+      - "Offline-first architecture"
+      - "Platform-specific features"
+      - "Binary size optimization"
+    
+    web:
+      - "SEO requirements"
+      - "Browser compatibility"
+      - "Progressive enhancement"
+      - "Bundle size optimization"
+    
+    shared:
+      - "Cross-platform compatibility"
+      - "Type safety"
+      - "Minimal dependencies"
+      - "Tree-shaking support"
+
+  success_metrics:
+    - metric: "code_reuse"
+      target: "60% shared code between platforms"
+    - metric: "platform_parity"
+      target: "Feature parity within 1 sprint"
+    - metric: "deployment_speed"
+      target: "Independent platform deployments"
+    - metric: "user_experience"
+      target: "Native feel on each platform"

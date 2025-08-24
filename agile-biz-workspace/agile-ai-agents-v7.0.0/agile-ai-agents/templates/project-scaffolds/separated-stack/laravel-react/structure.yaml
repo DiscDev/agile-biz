@@ -1,0 +1,106 @@
+name: "Laravel + React"
+category: "separated-stack"
+description: "Laravel API backend with React SPA frontend, ideal for modern web applications"
+tech_stack:
+  frontend: "React + Vite + TypeScript"
+  backend: "Laravel API + Sanctum"
+  database: "MySQL / PostgreSQL"
+  deployment: "Docker + Docker Compose"
+
+structure:
+  - path: "frontend/"
+    type: "directory"
+    description: "React SPA application"
+    init_command: "npm create vite@latest . -- --template react-ts"
+    
+  - path: "backend/"
+    type: "directory"
+    description: "Laravel API application"
+    init_command: "composer create-project laravel/laravel . --prefer-dist"
+    
+  - path: "shared/"
+    type: "directory"
+    description: "Shared TypeScript types for API contracts"
+    
+  - path: "docs/"
+    type: "directory"
+    description: "API documentation and project guides"
+    subdirs:
+      - "api/"
+      - "deployment/"
+    
+  - path: "scripts/"
+    type: "directory"
+    description: "Build and deployment scripts"
+    
+  - path: "docker-compose.yml"
+    type: "file"
+    template: "docker-compose.yml"
+    description: "Local development environment"
+    
+  - path: "Makefile"
+    type: "file"
+    template: "makefile"
+    description: "Common development commands"
+    
+  - path: ".gitignore"
+    type: "file"
+    template: "gitignore"
+    description: "Git ignore patterns"
+    
+  - path: "README.md"
+    type: "file"
+    template: "readme.md"
+    description: "Project documentation"
+
+backend_structure:
+  - "Remove default frontend views"
+  - "Configure for API-only mode"
+  - "Install Laravel Sanctum for authentication"
+  - "Set up CORS for frontend origin"
+  - "Configure API routes"
+
+frontend_structure:
+  - "Set up API client with Axios"
+  - "Configure environment variables"
+  - "Add authentication context"
+  - "Set up routing with React Router"
+
+post_init_commands:
+  backend:
+    - description: "Install Sanctum for API authentication"
+      command: "cd backend && composer require laravel/sanctum"
+    - description: "Publish Sanctum configuration"
+      command: "cd backend && php artisan vendor:publish --provider=\"Laravel\\Sanctum\\SanctumServiceProvider\""
+    - description: "Configure API mode"
+      command: "cd backend && php artisan install:api"
+    - description: "Generate application key"
+      command: "cd backend && php artisan key:generate"
+      
+  frontend:
+    - description: "Install dependencies"
+      command: "cd frontend && npm install"
+    - description: "Install routing and HTTP client"
+      command: "cd frontend && npm install react-router-dom axios"
+    - description: "Install UI library (optional)"
+      command: "cd frontend && npm install @mui/material @emotion/react @emotion/styled"
+
+development_ports:
+  frontend: 5173
+  backend: 8000
+  database: 3306
+  phpmyadmin: 8080
+
+api_configuration:
+  cors_origin: "http://localhost:5173"
+  api_prefix: "/api"
+  auth_type: "sanctum"
+  session_driver: "cookie"
+
+benefits:
+  - "Complete separation of frontend and backend"
+  - "Laravel's powerful backend features"
+  - "React's component-based UI"
+  - "Type-safe API contracts with TypeScript"
+  - "Sanctum for secure SPA authentication"
+  - "Independent scaling and deployment"

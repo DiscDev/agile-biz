@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "document": "hooks-enabled-by-default",
+    "title": "Hooks Enabled by Default - Release Configuration",
+    "timestamp": "2025-08-11T22:02:16.914Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/release-notes/hooks-enabled-by-default.md",
+    "document_type": "general_documentation",
+    "file_hash": "6b86f36b377297db3039b277f980c9ae",
+    "estimated_tokens": 448,
+    "full_md_tokens": 820
+  },
+  "summary": "For the clean slate release of AgileAiAgents, all hooks are now enabled by default to provide the most comprehensive project management and quality assurance experience right out of the box.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/hooks-enabled-by-default.md#overview",
+      "content_preview": "For the clean slate release of AgileAiAgents, all hooks are now enabled by default to provide the most comprehensive project management and quality as..."
+    },
+    {
+      "title": "Changes Made",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/hooks-enabled-by-default.md#changes-made",
+      "content_preview": ""
+    },
+    {
+      "title": "Why This Change?",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/hooks-enabled-by-default.md#why-this-change",
+      "content_preview": "1. **Complete Experience**: New users get the full AgileAiAgents experience without needing to configure hooks\n2. **Best Practices by Default**: All q..."
+    },
+    {
+      "title": "User Control",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/hooks-enabled-by-default.md#user-control",
+      "content_preview": "Users can still:\n- Disable specific hooks if needed via the dashboard\n- Switch to the \"minimal\" profile for performance-critical environments\n- Create..."
+    },
+    {
+      "title": "Performance Considerations",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/hooks-enabled-by-default.md#performance-considerations",
+      "content_preview": "- The \"advanced\" profile has a 1000ms performance budget\n- Individual hooks have configurable timeouts\n- Non-critical hooks run asynchronously to avoi..."
+    },
+    {
+      "title": "Recommendation for New Users",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/hooks-enabled-by-default.md#recommendation-for-new-users",
+      "content_preview": "1. **Start with all hooks enabled** (default configuration)\n2. **Monitor performance** using the dashboard\n3. **Disable specific hooks** only if they ..."
+    },
+    {
+      "title": "Migration from Previous Versions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/hooks-enabled-by-default.md#migration-from-previous-versions",
+      "content_preview": "Existing users upgrading to this release will:\n- Have their current hook settings preserved\n- See a notification about newly available hooks\n- Can opt..."
+    },
+    {
+      "title": "Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/hooks-enabled-by-default.md#summary",
+      "content_preview": "This change ensures that every AgileAiAgents installation starts with maximum project quality assurance and monitoring capabilities. Users get the bes..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/hooks-enabled-by-default.md#overview",
+      "tokens": 48,
+      "content_preview": "For the clean slate release of AgileAiAgents, all hooks are now enabled by default to provide the most comprehensive project management and quality as..."
+    },
+    "Changes Made": {
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/hooks-enabled-by-default.md#changes-made",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Main Hook Configuration (`hooks/config/hook-config.json`)": {
+          "content_preview": "- **error-boundary-enforcer** - Ensures proper error handling in all components\n- **accessibility-checker** - Validates accessibility compliance\n- **a...",
+          "tokens": 201,
+          "md_reference": "agile-ai-agents/aaa-documents/release-notes/hooks-enabled-by-default.md#1-main-hook-configuration-hooksconfighook-configjson-2"
+        },
+        "2. Profile Configurations": {
+          "content_preview": "- Kept as-is (only critical hooks enabled) to maintain its minimal nature",
+          "tokens": 18,
+          "md_reference": "agile-ai-agents/aaa-documents/release-notes/hooks-enabled-by-default.md#2-profile-configurations-4"
+        }
+      }
+    },
+    "Why This Change?": {
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/hooks-enabled-by-default.md#why-this-change",
+      "tokens": 113,
+      "content_preview": "1. **Complete Experience**: New users get the full AgileAiAgents experience without needing to configure hooks\n2. **Best Practices by Default**: All q..."
+    },
+    "User Control": {
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/hooks-enabled-by-default.md#user-control",
+      "tokens": 58,
+      "content_preview": "Users can still:\n- Disable specific hooks if needed via the dashboard\n- Switch to the \"minimal\" profile for performance-critical environments\n- Create..."
+    },
+    "Performance Considerations": {
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/hooks-enabled-by-default.md#performance-considerations",
+      "tokens": 55,
+      "content_preview": "- The \"advanced\" profile has a 1000ms performance budget\n- Individual hooks have configurable timeouts\n- Non-critical hooks run asynchronously to avoi..."
+    },
+    "Recommendation for New Users": {
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/hooks-enabled-by-default.md#recommendation-for-new-users",
+      "tokens": 52,
+      "content_preview": "1. **Start with all hooks enabled** (default configuration)\n2. **Monitor performance** using the dashboard\n3. **Disable specific hooks** only if they ..."
+    },
+    "Migration from Previous Versions": {
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/hooks-enabled-by-default.md#migration-from-previous-versions",
+      "tokens": 48,
+      "content_preview": "Existing users upgrading to this release will:\n- Have their current hook settings preserved\n- See a notification about newly available hooks\n- Can opt..."
+    },
+    "Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/hooks-enabled-by-default.md#summary",
+      "tokens": 61,
+      "content_preview": "This change ensures that every AgileAiAgents installation starts with maximum project quality assurance and monitoring capabilities. Users get the bes..."
+    }
+  }
+}

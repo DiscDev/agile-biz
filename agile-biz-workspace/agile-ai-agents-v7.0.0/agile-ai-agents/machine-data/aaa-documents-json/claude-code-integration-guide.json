@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "document": "claude-code-integration-guide",
+    "title": "Claude Code Integration Guide",
+    "timestamp": "2025-08-11T22:02:16.867Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md",
+    "document_type": "guide",
+    "file_hash": "64df063d5ed9ffbedeb28131af58a473",
+    "estimated_tokens": 513,
+    "full_md_tokens": 1518
+  },
+  "summary": "AgileAiAgents is built on top of [Claude Code](https://claude.ai/code), Anthropic's powerful AI coding assistant. This integration provides the foundation for all agent operations while adding specialized project management and coordination capabilities.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#overview",
+      "content_preview": "AgileAiAgents is built on top of [Claude Code](https://claude.ai/code), Anthropic's powerful AI coding assistant. This integration provides the founda..."
+    },
+    {
+      "title": "How AgileAiAgents Extends Claude Code",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#how-agileaiagents-extends-claude-code",
+      "content_preview": ""
+    },
+    {
+      "title": "Key Integration Points",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#key-integration-points",
+      "content_preview": ""
+    },
+    {
+      "title": "For Users",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#for-users",
+      "content_preview": ""
+    },
+    {
+      "title": "For AgileAiAgents System",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#for-agileaiagents-system",
+      "content_preview": ""
+    },
+    {
+      "title": "Common Integration Scenarios",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#common-integration-scenarios",
+      "content_preview": ""
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "Related Guides",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#related-guides",
+      "content_preview": "- **Commands Reference**: `claude-code-commands-reference.md`\n- **Memory Optimization**: `claude-code-memory-optimization.md`\n- **Cost Management**: `..."
+    },
+    {
+      "title": "Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#summary",
+      "content_preview": "AgileAiAgents and Claude Code work together to provide:\n- **Claude Code**: Core AI capabilities and tool access\n- **AgileAiAgents**: Specialized agent..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#overview",
+      "tokens": 63,
+      "content_preview": "AgileAiAgents is built on top of [Claude Code](https://claude.ai/code), Anthropic's powerful AI coding assistant. This integration provides the founda...",
+      "subsections": {
+        "Architecture Overview": {
+          "content_preview": "```\n┌─────────────────────────────────────────┐\n│           User Interface                 │\n│  (Terminal with Claude Code REPL)       │\n└────────────...",
+          "tokens": 218,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#architecture-overview-1"
+        }
+      }
+    },
+    "How AgileAiAgents Extends Claude Code": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#how-agileaiagents-extends-claude-code",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. **Specialized Agent System**": {
+          "content_preview": "While Claude Code provides general AI assistance, AgileAiAgents adds:\n- 38 domain-specific expert agents\n- Coordinated multi-agent workflows\n- Structu...",
+          "tokens": 51,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#1-specialized-agent-system-1"
+        },
+        "2. **Project Management Layer**": {
+          "content_preview": "AgileAiAgents adds comprehensive project management:\n- Sprint-based development cycles\n- Project state persistence\n- Structured document organization\n...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#2-project-management-layer-1"
+        },
+        "3. **Enhanced Memory Management**": {
+          "content_preview": "Building on Claude Code's CLAUDE.md system:\n- Automatic MD → JSON conversion (80-90% token savings)\n- Smart context loading priorities\n- Document cate...",
+          "tokens": 49,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#3-enhanced-memory-management-1"
+        },
+        "4. **Command Extensions**": {
+          "content_preview": "AgileAiAgents adds its own command set:\n- `/aaa-help` - AgileAiAgents commands (vs Claude Code's `/help`)\n- `/start-new-project-workflow` - Structured...",
+          "tokens": 61,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#4-command-extensions-1"
+        }
+      }
+    },
+    "Key Integration Points": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#key-integration-points",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Memory System Integration": {
+          "content_preview": "- **Claude Code**: Loads CLAUDE.md files automatically\n- **AgileAiAgents**: Extends with project-specific configurations\n- **Optimization**: Auto-conv...",
+          "tokens": 44,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#memory-system-integration-1"
+        },
+        "Command Namespace": {
+          "content_preview": "- **Claude Code Commands**: Start with `/` (e.g., `/help`, `/cost`)\n- **AgileAiAgents Commands**: Also start with `/` but use distinct names\n- **Confl...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#command-namespace-1"
+        },
+        "File Operations": {
+          "content_preview": "- **Claude Code**: Provides file read/write capabilities\n- **AgileAiAgents**: Adds structured folder organization\n- **Security**: FileOperationManager...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#file-operations-1"
+        },
+        "Tool Usage": {
+          "content_preview": "- **Claude Code Tools**: Bash, Edit, Read, Write, etc.\n- **AgileAiAgents**: Orchestrates tool usage across agents\n- **Enhancement**: Adds validation a...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#tool-usage-1"
+        }
+      }
+    },
+    "For Users": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#for-users",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Getting Started": {
+          "content_preview": "1. Install Claude Code first\n2. Set up AgileAiAgents following README.md\n3. Use both command sets together\n4. Leverage combined capabilities",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#getting-started-1"
+        },
+        "Command Interaction Examples": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#command-interaction-examples-1"
+        }
+      }
+    },
+    "For AgileAiAgents System": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#for-agileaiagents-system",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Agent Guidelines": {
+          "content_preview": "All agents should:\n1. **Respect Claude Code Limits**: Understand token limits and rate limits\n2. **Use Available Tools**: Leverage Claude Code's tool ...",
+          "tokens": 71,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#agent-guidelines-1"
+        },
+        "Integration Patterns": {
+          "content_preview": "```javascript\n// Good: Use Claude Code tools through AgileAiAgents\nconst FileOperationManager = require('./file-operation-manager');\nawait fileManager...",
+          "tokens": 76,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#integration-patterns-1"
+        },
+        "Error Handling": {
+          "content_preview": "- **Claude Code Errors**: Network, API, tool failures\n- **AgileAiAgents Errors**: Validation, organization, workflow errors\n- **User Communication**: ...",
+          "tokens": 42,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#error-handling-1"
+        }
+      }
+    },
+    "Common Integration Scenarios": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#common-integration-scenarios",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Starting a Project": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#1-starting-a-project-1"
+        }
+      }
+    },
+    "Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Issue: Commands Not Working": {
+          "content_preview": "- Check if it's a Claude Code command: See `/help`\n- Check if it's an AgileAiAgents command: See `/aaa-help`\n- Verify command syntax and parameters",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#issue-commands-not-working-1"
+        },
+        "Issue: High Token Usage": {
+          "content_preview": "- Use `/cost` to check current usage\n- Run `/compact` to reduce context\n- Check if agents are loading JSON (efficient) vs MD (expensive)",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#issue-high-token-usage-1"
+        },
+        "Issue: Memory Not Loading": {
+          "content_preview": "- Verify CLAUDE.md exists in project root\n- Check file permissions\n- Ensure no syntax errors in CLAUDE.md",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#issue-memory-not-loading-1"
+        }
+      }
+    },
+    "Related Guides": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#related-guides",
+      "tokens": 60,
+      "content_preview": "- **Commands Reference**: `claude-code-commands-reference.md`\n- **Memory Optimization**: `claude-code-memory-optimization.md`\n- **Cost Management**: `..."
+    },
+    "Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-integration-guide.md#summary",
+      "tokens": 81,
+      "content_preview": "AgileAiAgents and Claude Code work together to provide:\n- **Claude Code**: Core AI capabilities and tool access\n- **AgileAiAgents**: Specialized agent..."
+    }
+  }
+}

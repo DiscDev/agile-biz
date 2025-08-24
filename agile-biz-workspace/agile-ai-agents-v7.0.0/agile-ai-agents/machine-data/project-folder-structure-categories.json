@@ -1,0 +1,629 @@
+{
+  "structure_type": "category-based",
+  "version": "3.0.0",
+  "description": "Category-based folder structure for AgileAiAgents project documentation",
+  "categories": {
+    "orchestration": {
+      "description": "Core coordination and project management",
+      "path": "project-documents/orchestration",
+      "agent": "Scrum Master Agent",
+      "folders": {
+        "orchestration": {
+          "name": "orchestration",
+          "description": "Project coordination and sprint management",
+          "agent": "Scrum Master Agent",
+          "documents": [
+            "project-log.md",
+            "agent-coordination.md",
+            "stakeholder-decisions.md",
+            "stakeholder-escalations.md"
+          ],
+          "subfolders": ["sprints"]
+        }
+      }
+    },
+    "business-strategy": {
+      "description": "Business analysis, planning, and strategy",
+      "path": "project-documents/business-strategy",
+      "folders": {
+        "existing-project": {
+          "name": "existing-project",
+          "description": "Analysis of existing project and codebase",
+          "agent": "Project Analyzer Agent",
+          "aliases": ["01-existing-project-analysis"],
+          "documents": [
+            "project-brief.md",
+            "technology-stack-analysis.md",
+            "system-architecture-analysis.md",
+            "code-quality-assessment.md",
+            "feature-functionality-inventory.md",
+            "security-implementation-analysis.md",
+            "performance-optimization-analysis.md",
+            "external-integrations-analysis.md",
+            "enhancement-opportunities.md",
+            "development-environment-analysis.md"
+          ]
+        },
+        "research": {
+          "name": "research",
+          "description": "Market research and competitive intelligence",
+          "agent": "Research Agent",
+          "aliases": ["02-research"],
+          "documents": [
+            "competitive-analysis.md",
+            "market-analysis.md",
+            "industry-trends.md",
+            "customer-research.md",
+            "brand-research-report.md",
+            "viability-analysis.md",
+            "financial-analysis.md",
+            "technology-landscape.md",
+            "risk-assessment.md",
+            "demand-analysis.md",
+            "business-model-analysis.md",
+            "roi-projection.md",
+            "pricing-strategy.md",
+            "go-to-market-strategy.md",
+            "strategic-recommendations.md",
+            "executive-summary.md",
+            "market-size-analysis.md",
+            "target-market-segmentation.md",
+            "customer-persona-profiles.md",
+            "competitor-feature-matrix.md",
+            "competitor-pricing-analysis.md",
+            "market-gap-analysis.md",
+            "industry-regulations-compliance.md",
+            "technology-adoption-trends.md",
+            "customer-pain-points.md",
+            "solution-alternatives.md",
+            "market-entry-barriers.md",
+            "partnership-opportunities.md",
+            "supply-chain-analysis.md",
+            "intellectual-property-landscape.md",
+            "market-growth-projections.md",
+            "customer-acquisition-cost-analysis.md",
+            "lifetime-value-analysis.md",
+            "competitive-positioning.md",
+            "swot-analysis.md",
+            "pestle-analysis.md",
+            "value-proposition-canvas.md",
+            "business-model-canvas.md",
+            "market-timing-analysis.md",
+            "technology-readiness-assessment.md",
+            "regulatory-risk-assessment.md",
+            "market-saturation-analysis.md",
+            "customer-journey-mapping.md",
+            "pricing-elasticity-study.md",
+            "distribution-channel-analysis.md",
+            "brand-perception-study.md",
+            "market-trends-forecast.md",
+            "competitive-response-planning.md"
+          ]
+        },
+        "marketing": {
+          "name": "marketing",
+          "description": "Marketing strategy and campaigns",
+          "agent": "Marketing Agent",
+          "aliases": ["03-marketing"],
+          "documents": [
+            "marketing-strategy.md",
+            "brand-positioning-messaging.md",
+            "digital-marketing-strategy.md",
+            "content-marketing-strategy.md",
+            "social-media-strategy.md",
+            "ppc-campaign-strategy.md",
+            "seo-content-strategy.md",
+            "email-marketing-strategy.md",
+            "influencer-marketing-strategy.md",
+            "affiliate-marketing-strategy.md",
+            "video-marketing-strategy.md",
+            "podcast-marketing-strategy.md",
+            "webinar-marketing-strategy.md",
+            "event-marketing-strategy.md",
+            "pr-media-strategy.md",
+            "community-building-strategy.md",
+            "referral-program-strategy.md",
+            "partnership-marketing-strategy.md",
+            "product-launch-campaign.md",
+            "brand-voice-guidelines.md",
+            "visual-identity-guidelines.md",
+            "content-calendar-template.md",
+            "buyer-journey-content-map.md",
+            "lead-nurturing-sequences.md",
+            "conversion-optimization-plan.md",
+            "landing-page-strategy.md",
+            "a-b-testing-framework.md",
+            "marketing-automation-setup.md",
+            "customer-testimonial-strategy.md",
+            "case-study-development-plan.md",
+            "thought-leadership-strategy.md",
+            "crisis-communication-plan.md",
+            "brand-ambassador-program.md",
+            "user-generated-content-strategy.md",
+            "retention-marketing-strategy.md",
+            "cross-selling-upselling-strategy.md",
+            "seasonal-campaign-planning.md",
+            "marketing-budget-allocation.md",
+            "marketing-metrics-dashboard.md",
+            "competitor-marketing-analysis.md",
+            "marketing-technology-stack.md"
+          ]
+        },
+        "finance": {
+          "name": "finance",
+          "description": "Financial analysis and projections",
+          "agent": "Finance Agent",
+          "aliases": ["04-finance"],
+          "documents": [
+            "ai-development-cost-analysis.md",
+            "ai-vs-human-cost-comparison.md",
+            "llm-token-budget-projections.md",
+            "ai-development-roi-analysis.md",
+            "ai-financial-risk-assessment.md"
+          ]
+        },
+        "market-validation": {
+          "name": "market-validation",
+          "description": "Product market fit validation",
+          "agent": "Market Validation Product Market Fit Agent",
+          "aliases": ["05-market-validation"],
+          "documents": [
+            "market-validation-strategy.md",
+            "customer-discovery-report.md",
+            "competitive-landscape-analysis.md",
+            "market-demand-quantification.md",
+            "product-market-fit-framework.md",
+            "pmf-measurement-system.md",
+            "pmf-optimization-strategy.md",
+            "pmf-monitoring-dashboard.md",
+            "validated-customer-personas.md",
+            "customer-journey-validation.md",
+            "mvp-validation-strategy.md",
+            "pricing-validation-strategy.md",
+            "feature-prioritization-validation.md",
+            "user-testing-protocols.md",
+            "beta-program-strategy.md",
+            "early-adopter-feedback-system.md",
+            "market-fit-indicators.md",
+            "pivoting-strategy-framework.md",
+            "validation-metrics-dashboard.md"
+          ]
+        },
+        "customer-success": {
+          "name": "customer-success",
+          "description": "Customer lifecycle and retention",
+          "agent": "Customer Lifecycle Retention Agent",
+          "aliases": ["06-customer-success"],
+          "documents": [
+            "onboarding-optimization.md",
+            "customer-activation-strategy.md",
+            "customer-education-program.md",
+            "time-to-value-optimization.md",
+            "churn-prediction-system.md",
+            "customer-health-scoring.md",
+            "retention-intervention-workflows.md",
+            "win-back-campaign-strategy.md",
+            "customer-success-management.md",
+            "feature-adoption-campaigns.md",
+            "customer-community-strategy.md",
+            "expansion-revenue-automation.md",
+            "customer-feedback-loops.md",
+            "success-metrics-framework.md",
+            "customer-segmentation-strategy.md",
+            "loyalty-program-design.md",
+            "nps-improvement-strategy.md",
+            "customer-advocacy-program.md",
+            "support-escalation-optimization.md",
+            "proactive-support-strategy.md",
+            "customer-lifecycle-automation.md",
+            "retention-dashboard-design.md",
+            "customer-success-playbooks.md",
+            "value-realization-framework.md"
+          ]
+        },
+        "monetization": {
+          "name": "monetization",
+          "description": "Revenue optimization strategies",
+          "agent": "Revenue Optimization Agent",
+          "aliases": ["07-monetization"],
+          "documents": [
+            "subscription-model.md",
+            "pricing-optimization.md",
+            "revenue-forecasting.md",
+            "customer-lifetime-value-strategy.md",
+            "revenue-stream-diversification.md",
+            "passive-income-strategies.md",
+            "partnership-revenue-models.md",
+            "expansion-revenue-strategy.md",
+            "pricing-psychology-strategy.md",
+            "revenue-analytics-dashboard.md",
+            "freemium-conversion-optimization.md",
+            "tiered-pricing-strategy.md",
+            "usage-based-pricing-model.md",
+            "enterprise-pricing-strategy.md",
+            "discount-strategy-framework.md",
+            "billing-optimization-strategy.md",
+            "revenue-recognition-policies.md",
+            "churn-revenue-impact-analysis.md",
+            "pricing-a-b-testing-framework.md",
+            "competitor-pricing-monitoring.md",
+            "value-metric-identification.md",
+            "pricing-localization-strategy.md",
+            "revenue-operations-playbook.md",
+            "monetization-experimentation-framework.md"
+          ]
+        },
+        "analysis": {
+          "name": "analysis",
+          "description": "Strategic analysis and recommendations",
+          "agent": "Analysis Agent",
+          "aliases": ["08-analysis"],
+          "documents": [
+            "executive-intelligence-summary.md",
+            "strategic-recommendations.md",
+            "risk-opportunity-matrix.md",
+            "go-no-go-recommendation.md"
+          ]
+        },
+        "investment": {
+          "name": "investment",
+          "description": "Investor relations and funding",
+          "agent": "VC Report Agent",
+          "aliases": ["09-investment"],
+          "documents": [
+            "investor-teaser.md",
+            "executive-summary.md",
+            "pitch-deck.md",
+            "business-plan.md",
+            "financial-projections.md",
+            "market-opportunity-analysis.md",
+            "competitive-positioning-investors.md",
+            "valuation-analysis.md",
+            "use-of-funds.md",
+            "investor-targeting-strategy.md",
+            "exit-strategy-scenarios.md",
+            "traction-metrics.md",
+            "cap-table-overview.md",
+            "term-sheet-negotiation-guide.md",
+            "due-diligence-preparation.md",
+            "investor-update-template.md",
+            "fundraising-timeline.md",
+            "investor-faq-document.md",
+            "strategic-partnerships-overview.md"
+          ]
+        }
+      }
+    },
+    "implementation": {
+      "description": "Technical implementation and development",
+      "path": "project-documents/implementation",
+      "folders": {
+        "requirements": {
+          "name": "requirements",
+          "description": "Product requirements and specifications",
+          "agent": "PRD Agent",
+          "aliases": ["11-requirements"],
+          "documents": [
+            "prd-document.md",
+            "user-stories.md",
+            "acceptance-criteria.md",
+            "feature-prioritization-matrix.md",
+            "technical-architecture-requirements.md",
+            "success-metrics-framework.md"
+          ]
+        },
+        "security": {
+          "name": "security",
+          "description": "Security architecture and compliance",
+          "agent": "Security Agent",
+          "aliases": ["10-security"],
+          "documents": [
+            "security-architecture-strategy.md",
+            "threat-modeling-analysis.md",
+            "compliance-framework-strategy.md",
+            "application-security-design.md",
+            "infrastructure-security.md",
+            "data-security-encryption.md",
+            "security-operations-monitoring.md",
+            "incident-response-plan.md",
+            "penetration-testing-strategy.md",
+            "security-training-awareness.md",
+            "vulnerability-management-process.md",
+            "access-control-strategy.md",
+            "security-audit-checklist.md"
+          ]
+        },
+        "llm-analysis": {
+          "name": "llm-analysis",
+          "description": "LLM integration analysis",
+          "agent": "LLM Agent",
+          "aliases": ["12-llm-analysis"],
+          "documents": [
+            "feature-to-llm-mapping.md",
+            "llm-selection-analysis.md",
+            "llm-integration-strategy.md",
+            "llm-cost-analysis.md"
+          ]
+        },
+        "api-analysis": {
+          "name": "api-analysis",
+          "description": "API integration analysis",
+          "agent": "API Agent",
+          "aliases": ["13-api-analysis"],
+          "documents": [
+            "feature-to-api-mapping.md",
+            "api-provider-analysis.md",
+            "api-integration-strategy.md",
+            "api-cost-benefit-analysis.md"
+          ]
+        },
+        "mcp-analysis": {
+          "name": "mcp-analysis",
+          "description": "MCP integration analysis",
+          "agent": "MCP Agent",
+          "aliases": ["14-mcp-analysis"],
+          "documents": [
+            "development-mcp-strategy.md",
+            "application-mcp-integration.md",
+            "feature-to-mcp-mapping.md",
+            "mcp-installation-guide.md"
+          ]
+        },
+        "project-planning": {
+          "name": "project-planning",
+          "description": "Project management and planning",
+          "agent": "Project Manager Agent",
+          "aliases": ["18-project-planning"],
+          "documents": [
+            "project-charter.md",
+            "work-breakdown-structure.md",
+            "sprint-framework.md",
+            "agent-coordination-plan.md",
+            "quality-gates.md"
+          ]
+        },
+        "environment": {
+          "name": "environment",
+          "description": "Development environment setup",
+          "agent": "DevOps Agent",
+          "aliases": ["19-environment"],
+          "documents": [
+            "setup-complete.md"
+          ]
+        },
+        "design": {
+          "name": "design",
+          "description": "UI/UX design and user flows",
+          "agent": "UI/UX Agent",
+          "aliases": ["20-design"],
+          "documents": [
+            "competitive-design-analysis.md",
+            "ui-designs.md",
+            "user-flows.md",
+            "technical-architecture.md"
+          ]
+        },
+        "implementation": {
+          "name": "implementation",
+          "description": "Code implementation and development",
+          "agent": "Coder Agent",
+          "aliases": ["21-implementation"],
+          "documents": [
+            "development-log.md",
+            "api-documentation.md",
+            "code-review-notes.md"
+          ]
+        },
+        "testing": {
+          "name": "testing",
+          "description": "Testing and quality assurance",
+          "agent": "Testing Agent",
+          "aliases": ["22-testing"],
+          "documents": [
+            "test-plan.md",
+            "test-results.md",
+            "quality-report.md"
+          ]
+        },
+        "documentation": {
+          "name": "documentation",
+          "description": "Technical documentation",
+          "agent": "Documentation Agent",
+          "aliases": ["16-tech-documentation"],
+          "documents": [
+            "technical-documentation.md",
+            "api-documentation.md",
+            "developer-guides.md"
+          ]
+        }
+      }
+    },
+    "operations": {
+      "description": "Launch, growth, and optimization",
+      "path": "project-documents/operations",
+      "folders": {
+        "deployment": {
+          "name": "deployment",
+          "description": "Deployment and infrastructure",
+          "agent": "DevOps Agent",
+          "aliases": ["23-deployment"],
+          "documents": [
+            "deployment-guide.md",
+            "monitoring-setup.md",
+            "project-summary.md"
+          ]
+        },
+        "launch": {
+          "name": "launch",
+          "description": "Product launch coordination",
+          "agent": "Project Manager Agent",
+          "aliases": ["24-launch"],
+          "documents": [
+            "launch-plan.md",
+            "marketing-campaigns.md",
+            "success-metrics.md"
+          ]
+        },
+        "analytics": {
+          "name": "analytics",
+          "description": "Business intelligence and analytics",
+          "agent": "Analytics Growth Intelligence Agent",
+          "aliases": ["25-analytics"],
+          "documents": [
+            "business-intelligence-strategy.md",
+            "revenue-analytics-dashboard.md",
+            "customer-analytics-framework.md",
+            "growth-metrics-framework.md",
+            "growth-experimentation-platform.md",
+            "conversion-funnel-analytics.md",
+            "product-analytics-optimization.md",
+            "predictive-analytics-models.md",
+            "real-time-analytics-monitoring.md",
+            "analytics-infrastructure-architecture.md",
+            "data-governance-framework.md",
+            "kpi-definition-framework.md",
+            "attribution-modeling-strategy.md",
+            "cohort-analysis-framework.md",
+            "user-behavior-analytics.md",
+            "revenue-attribution-model.md",
+            "marketing-mix-modeling.md",
+            "customer-segmentation-analytics.md",
+            "analytics-tool-selection.md",
+            "data-visualization-standards.md",
+            "analytics-automation-strategy.md",
+            "reporting-cadence-framework.md",
+            "analytics-training-program.md"
+          ]
+        },
+        "monitoring": {
+          "name": "monitoring",
+          "description": "System monitoring and observability",
+          "agent": "Logger Agent",
+          "aliases": ["17-monitoring"],
+          "documents": [
+            "system-monitoring.md",
+            "observability-setup.md"
+          ]
+        },
+        "optimization": {
+          "name": "optimization",
+          "description": "Performance optimization",
+          "agent": "Optimization Agent",
+          "aliases": ["26-optimization"],
+          "documents": [
+            "performance-optimization-strategy.md",
+            "frontend-performance-optimization.md",
+            "backend-performance-optimization.md",
+            "database-optimization-strategy.md",
+            "api-performance-optimization.md",
+            "infrastructure-optimization.md",
+            "caching-strategy.md",
+            "seo-performance-optimization.md",
+            "cost-optimization-strategy.md",
+            "load-balancing-strategy.md",
+            "cdn-optimization-strategy.md",
+            "code-splitting-strategy.md",
+            "resource-bundling-optimization.md",
+            "image-optimization-strategy.md",
+            "lazy-loading-implementation.md",
+            "performance-monitoring-setup.md",
+            "optimization-testing-framework.md",
+            "performance-budget-definition.md"
+          ]
+        },
+        "seo": {
+          "name": "seo",
+          "description": "Search engine optimization",
+          "agent": "SEO Agent",
+          "aliases": ["15-seo"],
+          "documents": [
+            "seo-strategy.md",
+            "keyword-research.md",
+            "technical-seo-requirements.md",
+            "seo-implementation-plan.md"
+          ]
+        },
+        "crm-marketing": {
+          "name": "crm-marketing",
+          "description": "CRM and multi-channel marketing automation",
+          "agent": "Email Marketing Agent",
+          "aliases": ["27-email-marketing", "email-marketing"],
+          "documents": [
+            "email-marketing-strategy.md",
+            "email-automation-sequences.md",
+            "revenue-email-campaigns.md",
+            "email-segmentation-strategy.md",
+            "onboarding-email-sequences.md",
+            "welcome-series-optimization.md",
+            "churn-prevention-automation.md",
+            "retention-email-sequences.md",
+            "upselling-email-automation.md",
+            "email-performance-analytics.md",
+            "deliverability-management.md",
+            "sms-marketing-strategy.md",
+            "multi-channel-campaigns.md",
+            "abandoned-cart-sequences.md",
+            "re-engagement-campaigns.md",
+            "product-launch-email-series.md",
+            "email-design-system.md",
+            "a-b-testing-email-framework.md",
+            "email-compliance-guidelines.md",
+            "push-notification-strategy.md",
+            "in-app-messaging-strategy.md",
+            "crm-integration-strategy.md",
+            "customer-journey-automation.md"
+          ]
+        },
+        "media-buying": {
+          "name": "media-buying",
+          "description": "Paid media and advertising",
+          "agent": "PPC Media Buyer Agent",
+          "aliases": ["28-media-buying"],
+          "documents": [
+            "ppc-campaign-strategy.md",
+            "ad-creative-testing.md",
+            "media-buying-optimization.md"
+          ]
+        },
+        "social-media": {
+          "name": "social-media",
+          "description": "Social media management",
+          "agent": "Social Media Agent",
+          "aliases": ["29-social-media"],
+          "documents": [
+            "social-media-strategy.md",
+            "content-calendar-planning.md",
+            "community-management.md"
+          ]
+        }
+      }
+    },
+    "stakeholder-input": {
+      "description": "Stakeholder-prepared project prompts and supporting materials",
+      "path": "project-documents/stakeholder-input",
+      "folders": {
+        "stakeholder-input": {
+          "name": "stakeholder-input",
+          "description": "Pre-filled project prompts and discovery materials",
+          "agent": "Project Analyzer Agent",
+          "documents": [
+            "project-prompt.md"
+          ],
+          "subfolders": ["supporting-docs", "examples", "requirements"]
+        }
+      }
+    }
+  },
+  "validation": {
+    "folder_pattern": "^[a-z-]+$",
+    "allow_subfolders": true,
+    "enforce_agent_assignment": true,
+    "auto_correction": true
+  },
+  "migration": {
+    "from_version": "2.0.0",
+    "maintain_aliases": true,
+    "parallel_structure": true,
+    "rollback_enabled": true
+  }
+}

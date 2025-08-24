@@ -1,0 +1,310 @@
+{
+  "meta": {
+    "document": "project-document-creation-timing-guide",
+    "title": "Project Document Creation Timing Guide",
+    "timestamp": "2025-08-11T22:02:16.909Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md",
+    "document_type": "guide",
+    "file_hash": "f0f68601097a647b80d3e2db98fd7994",
+    "estimated_tokens": 595,
+    "full_md_tokens": 2428
+  },
+  "summary": "This guide ensures project documents are created at the right time during the project lifecycle, preventing document overload while ensuring critical documentation is never missed.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#overview",
+      "content_preview": "This guide ensures project documents are created at the right time during the project lifecycle, preventing document overload while ensuring critical ..."
+    },
+    {
+      "title": "Document Creation Principles",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#document-creation-principles",
+      "content_preview": ""
+    },
+    {
+      "title": "Document Creation Timing Matrix",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#document-creation-timing-matrix",
+      "content_preview": ""
+    },
+    {
+      "title": "Conditional Document Trees",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#conditional-document-trees",
+      "content_preview": ""
+    },
+    {
+      "title": "Implementation Strategy",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#implementation-strategy",
+      "content_preview": ""
+    },
+    {
+      "title": "Document Creation Workflow",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#document-creation-workflow",
+      "content_preview": ""
+    },
+    {
+      "title": "Monitoring & Optimization",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#monitoring-optimization",
+      "content_preview": ""
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Document Prioritization",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#document-prioritization",
+      "content_preview": ""
+    },
+    {
+      "title": "Integration with Agents",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#integration-with-agents",
+      "content_preview": ""
+    },
+    {
+      "title": "Conclusion",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#conclusion",
+      "content_preview": "By implementing this timing guide, the AgileAiAgents system can:\n- Reduce document overload by 70-80%\n- Ensure critical documents are never missed\n- C..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#overview",
+      "tokens": 45,
+      "content_preview": "This guide ensures project documents are created at the right time during the project lifecycle, preventing document overload while ensuring critical ..."
+    },
+    "Document Creation Principles": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#document-creation-principles",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Just-In-Time Documentation": {
+          "content_preview": "- Documents should be created only when needed\n- Avoid creating documents \"just in case\"\n- Each document must have a clear trigger and purpose",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#just-in-time-documentation-1"
+        },
+        "Progressive Disclosure": {
+          "content_preview": "- Start with essential documents only\n- Add specialized documents based on project needs\n- Use decision trees to determine document requirements",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#progressive-disclosure-1"
+        },
+        "Context-Aware Creation": {
+          "content_preview": "- Different project types require different documents\n- Industry-specific documents only for relevant industries\n- Scale documentation based on projec...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#context-aware-creation-1"
+        }
+      }
+    },
+    "Document Creation Timing Matrix": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#document-creation-timing-matrix",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Phase 0: Project Initialization (Always Created)": {
+          "content_preview": "| Document | Trigger | Required | Owner |\n|----------|---------|----------|-------|\n| `orchestration/project-log.md` | Project start | ✅ Always | Orch...",
+          "tokens": 82,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#phase-0-project-initialization-always-created-1"
+        },
+        "Phase 1: Discovery & Analysis": {
+          "content_preview": "| Document | Trigger | Required | Owner |\n|----------|---------|----------|-------|\n| **For Existing Projects:** | | | |\n| `business-strategy/existing...",
+          "tokens": 209,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#phase-1-discovery-analysis-1"
+        },
+        "Phase 2: Strategic Planning (Conditional)": {
+          "content_preview": "| Document | Trigger | Required | Owner |\n|----------|---------|----------|-------|\n| `business-strategy/research/regulatory-compliance.md` | If regul...",
+          "tokens": 135,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#phase-2-strategic-planning-conditional-1"
+        },
+        "Phase 3: Requirements & Design (After Approval)": {
+          "content_preview": "| Document | Trigger | Required | Owner |\n|----------|---------|----------|-------|\n| `implementation/requirements/prd-document.md` | Stakeholder appr...",
+          "tokens": 97,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#phase-3-requirements-design-after-approval-1"
+        },
+        "Phase 4: Implementation Planning": {
+          "content_preview": "| Document | Trigger | Required | Owner |\n|----------|---------|----------|-------|\n| `implementation/project-planning/project-charter.md` | Requireme...",
+          "tokens": 131,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#phase-4-implementation-planning-1"
+        },
+        "Phase 5: Development & Testing": {
+          "content_preview": "| Document | Trigger | Required | Owner |\n|----------|---------|----------|-------|\n| `implementation/implementation/development-log.md` | Sprint 1 st...",
+          "tokens": 96,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#phase-5-development-testing-1"
+        },
+        "Phase 6: Launch & Growth": {
+          "content_preview": "| Document | Trigger | Required | Owner |\n|----------|---------|----------|-------|\n| `operations/deployment/deployment-guide.md` | Pre-deployment | ✅...",
+          "tokens": 92,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#phase-6-launch-growth-1"
+        }
+      }
+    },
+    "Conditional Document Trees": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#conditional-document-trees",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Industry-Specific Documents": {
+          "content_preview": "```\nIF industry == \"healthcare\" THEN\n  - Create: compliance-framework-strategy.md (HIPAA)\n  - Create: data-security-encryption.md (PHI protection)\n  \n...",
+          "tokens": 102,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#industry-specific-documents-1"
+        },
+        "Project Type Documents": {
+          "content_preview": "```\nIF project_type == \"saas\" THEN\n  - Create: subscription-model.md\n  - Create: customer-lifecycle-analytics.md\n  - Create: churn-prediction-system.m...",
+          "tokens": 119,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#project-type-documents-1"
+        },
+        "Scale-Based Documents": {
+          "content_preview": "```\nIF expected_users > 10000 THEN\n  - Create: infrastructure-scaling-strategy.md\n  - Create: performance-optimization-plan.md\n  - Create: cdn-strateg...",
+          "tokens": 74,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#scale-based-documents-1"
+        }
+      }
+    },
+    "Implementation Strategy": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#implementation-strategy",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Document Creation Service": {
+          "content_preview": "```javascript\nclass DocumentCreationService {\n  constructor(projectContext) {\n    this.context = projectContext;\n    this.createdDocuments = new Set()...",
+          "tokens": 167,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#document-creation-service-1"
+        },
+        "Trigger System": {
+          "content_preview": "```javascript\nconst DocumentTriggers = {\n  PROJECT_START: 'project_start',\n  EXISTING_PROJECT_DETECTED: 'existing_project_detected',\n  STAKEHOLDER_APP...",
+          "tokens": 93,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#trigger-system-1"
+        },
+        "Document Rules Engine": {
+          "content_preview": "```javascript\nconst DocumentRules = {\n  'business-strategy/research/regulatory-compliance.md': {\n    triggers: ['COMPLIANCE_REQUIRED'],\n    conditions...",
+          "tokens": 135,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#document-rules-engine-1"
+        }
+      }
+    },
+    "Document Creation Workflow": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#document-creation-workflow",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Trigger Detection": {
+          "content_preview": "```\nEvent Occurs → Check Document Rules → Queue Required Documents\n```",
+          "tokens": 16,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#trigger-detection-1"
+        },
+        "Document Creation": {
+          "content_preview": "```\nProcess Queue → Assign to Agent → Create Document → Update Tracking\n```",
+          "tokens": 18,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#document-creation-1"
+        },
+        "Dependency Management": {
+          "content_preview": "```\nCheck Dependencies → Wait for Prerequisites → Create in Order\n```",
+          "tokens": 16,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#dependency-management-1"
+        }
+      }
+    },
+    "Monitoring & Optimization": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#monitoring-optimization",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Track Document Usage": {
+          "content_preview": "- Monitor which documents are actually read/referenced\n- Identify documents that are never used\n- Refine creation rules based on usage patterns",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#track-document-usage-1"
+        },
+        "Feedback Loop": {
+          "content_preview": "```\nDocument Created → Track Usage → Analyze Value → Update Rules\n```",
+          "tokens": 16,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#feedback-loop-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Start Minimal": {
+          "content_preview": "- Begin with core documents only\n- Add specialized documents based on actual needs\n- Review and prune unused documents",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#start-minimal-1"
+        },
+        "Clear Ownership": {
+          "content_preview": "- Each document has one responsible agent\n- Clear handoff procedures\n- Version control for updates",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#clear-ownership-1"
+        },
+        "Quality Over Quantity": {
+          "content_preview": "- Focus on high-value documentation\n- Ensure documents are actionable\n- Regular reviews and updates",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#quality-over-quantity-1"
+        },
+        "Progressive Enhancement": {
+          "content_preview": "- Basic documents first\n- Detailed documents as needed\n- Specialized documents for edge cases",
+          "tokens": 24,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#progressive-enhancement-1"
+        }
+      }
+    },
+    "Document Prioritization": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#document-prioritization",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Priority Levels": {
+          "content_preview": "1. **🔴 Critical**: Project cannot proceed without these\n2. **🟡 Important**: Significantly improves project success\n3. **🟢 Helpful**: Provides addit...",
+          "tokens": 49,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#priority-levels-1"
+        },
+        "Creation Order": {
+          "content_preview": "1. Critical documents immediately\n2. Important documents within phase\n3. Helpful documents as time permits\n4. Optional documents on request only",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#creation-order-1"
+        }
+      }
+    },
+    "Integration with Agents": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#integration-with-agents",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Agent Responsibilities": {
+          "content_preview": "Each agent should:\n1. Check document triggers at phase boundaries\n2. Create only assigned documents\n3. Update document tracking\n4. Mark documents as c...",
+          "tokens": 48,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#agent-responsibilities-1"
+        },
+        "Orchestrator Coordination": {
+          "content_preview": "The Orchestrator should:\n1. Monitor document creation progress\n2. Enforce dependency order\n3. Prevent duplicate creation\n4. Track document completion\n...",
+          "tokens": 45,
+          "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#orchestrator-coordination-1"
+        }
+      }
+    },
+    "Conclusion": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-document-creation-timing-guide.md#conclusion",
+      "tokens": 85,
+      "content_preview": "By implementing this timing guide, the AgileAiAgents system can:\n- Reduce document overload by 70-80%\n- Ensure critical documents are never missed\n- C..."
+    }
+  }
+}

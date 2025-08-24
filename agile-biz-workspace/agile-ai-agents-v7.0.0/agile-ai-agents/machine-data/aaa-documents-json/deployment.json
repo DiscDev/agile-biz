@@ -1,0 +1,275 @@
+{
+  "meta": {
+    "document": "deployment",
+    "title": "AgileAiAgents Production Deployment Guide",
+    "timestamp": "2025-08-11T22:02:16.884Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/deployment.md",
+    "document_type": "general_documentation",
+    "file_hash": "947ed1f4b3b8e289ad4d9c17ac268fc6",
+    "estimated_tokens": 703,
+    "full_md_tokens": 3807
+  },
+  "summary": "## 🚀 Overview",
+  "sections": [
+    {
+      "title": "🚀 Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#overview",
+      "content_preview": "This guide covers deploying AgileAiAgents Dashboard in production environments using various methods including PM2, systemd, Docker, and cloud platfor..."
+    },
+    {
+      "title": "📋 Table of Contents",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#table-of-contents",
+      "content_preview": "1. [Pre-Deployment Checklist](#pre-deployment-checklist)\n2. [PM2 Deployment](#pm2-deployment)\n3. [Systemd Service](#systemd-service)\n4. [Nginx Configu..."
+    },
+    {
+      "title": "✅ Pre-Deployment Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#pre-deployment-checklist",
+      "content_preview": "Before deploying to production:\n\n- [ ] Change all default passwords in `.env`\n- [ ] Enable authentication (`DASHBOARD_AUTH_ENABLED=true`)\n- [ ] Config..."
+    },
+    {
+      "title": "🔧 PM2 Deployment",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#pm2-deployment",
+      "content_preview": "PM2 is a production process manager for Node.js applications."
+    },
+    {
+      "title": "🐧 Systemd Service",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#systemd-service",
+      "content_preview": "For Linux systems using systemd."
+    },
+    {
+      "title": "🌐 Nginx Configuration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#nginx-configuration",
+      "content_preview": "Production-ready Nginx configuration."
+    },
+    {
+      "title": "🔒 SSL/TLS Setup",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#ssltls-setup",
+      "content_preview": ""
+    },
+    {
+      "title": "💾 Backup Procedures",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#backup-procedures",
+      "content_preview": ""
+    },
+    {
+      "title": "📊 Monitoring Setup",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#monitoring-setup",
+      "content_preview": ""
+    },
+    {
+      "title": "📈 Scaling Considerations",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#scaling-considerations",
+      "content_preview": ""
+    },
+    {
+      "title": "☁️ Cloud Deployments",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#cloud-deployments",
+      "content_preview": ""
+    },
+    {
+      "title": "🔧 Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "📋 Post-Deployment Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#post-deployment-checklist",
+      "content_preview": "- [ ] Verify health endpoint responds correctly\n- [ ] Test authentication works\n- [ ] Check SSL certificate is valid\n- [ ] Confirm backups are running..."
+    },
+    {
+      "title": "🔄 Maintenance",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#maintenance",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "🚀 Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#overview",
+      "tokens": 39,
+      "content_preview": "This guide covers deploying AgileAiAgents Dashboard in production environments using various methods including PM2, systemd, Docker, and cloud platfor..."
+    },
+    "📋 Table of Contents": {
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#table-of-contents",
+      "tokens": 96,
+      "content_preview": "1. [Pre-Deployment Checklist](#pre-deployment-checklist)\n2. [PM2 Deployment](#pm2-deployment)\n3. [Systemd Service](#systemd-service)\n4. [Nginx Configu..."
+    },
+    "✅ Pre-Deployment Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#pre-deployment-checklist",
+      "tokens": 89,
+      "content_preview": "Before deploying to production:\n\n- [ ] Change all default passwords in `.env`\n- [ ] Enable authentication (`DASHBOARD_AUTH_ENABLED=true`)\n- [ ] Config..."
+    },
+    "🔧 PM2 Deployment": {
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#pm2-deployment",
+      "tokens": 16,
+      "content_preview": "PM2 is a production process manager for Node.js applications.",
+      "subsections": {
+        "Install PM2": {
+          "content_preview": "```bash\nnpm install -g pm2\npm2 install pm2-logrotate  # Optional: log rotation\n```",
+          "tokens": 19,
+          "md_reference": "agile-ai-agents/aaa-documents/deployment.md#install-pm2-1"
+        },
+        "Create ecosystem.config.js": {
+          "content_preview": "```javascript\nmodule.exports = {\n  apps: [{\n    name: 'agileai-dashboard',\n    script: './project-dashboard/server-secure.js',\n    instances: 'max', /...",
+          "tokens": 177,
+          "md_reference": "agile-ai-agents/aaa-documents/deployment.md#create-ecosystemconfigjs-1"
+        },
+        "PM2 Commands": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/deployment.md#pm2-commands-1"
+        }
+      }
+    },
+    "🐧 Systemd Service": {
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#systemd-service",
+      "tokens": 8,
+      "content_preview": "For Linux systems using systemd.",
+      "subsections": {
+        "Create Service File": {
+          "content_preview": "`/etc/systemd/system/agileai-dashboard.service`:\n```ini\n[Unit]\nDescription=AgileAiAgents Dashboard\nDocumentation=https://github.com/your-repo/agile-ai...",
+          "tokens": 83,
+          "md_reference": "agile-ai-agents/aaa-documents/deployment.md#create-service-file-1"
+        }
+      }
+    },
+    "🌐 Nginx Configuration": {
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#nginx-configuration",
+      "tokens": 10,
+      "content_preview": "Production-ready Nginx configuration.",
+      "subsections": {
+        "Install Nginx": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/deployment.md#install-nginx-1"
+        }
+      }
+    },
+    "🔒 SSL/TLS Setup": {
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#ssltls-setup",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Let's Encrypt (Certbot)": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/deployment.md#lets-encrypt-certbot-1"
+        }
+      }
+    },
+    "💾 Backup Procedures": {
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#backup-procedures",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Automated Backup Script": {
+          "content_preview": "Create `/opt/agile-ai-agents/scripts/bash/backup.sh`:\n```bash\n#!/bin/bash\nBACKUP_DIR=\"/backup/agileai\"\nDATE=$(date +%Y%m%d_%H%M%S)\nPROJECT_DIR=\"/opt/a...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/aaa-documents/deployment.md#automated-backup-script-1"
+        }
+      }
+    },
+    "📊 Monitoring Setup": {
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#monitoring-setup",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Prometheus + Grafana": {
+          "content_preview": "Add to `server-secure.js`:\n```javascript\nconst promClient = require('prom-client');\nconst collectDefaultMetrics = promClient.collectDefaultMetrics;\nco...",
+          "tokens": 76,
+          "md_reference": "agile-ai-agents/aaa-documents/deployment.md#prometheus-grafana-3"
+        },
+        "Health Monitoring Script": {
+          "content_preview": "```bash\n#!/bin/bash",
+          "tokens": 4,
+          "md_reference": "agile-ai-agents/aaa-documents/deployment.md#health-monitoring-script-1"
+        }
+      }
+    },
+    "📈 Scaling Considerations": {
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#scaling-considerations",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Horizontal Scaling": {
+          "content_preview": "```\nglobal\n    maxconn 4096\n\ndefaults\n    mode http\n    timeout connect 5000ms\n    timeout client 50000ms\n    timeout server 50000ms\n\nfrontend web_fro...",
+          "tokens": 122,
+          "md_reference": "agile-ai-agents/aaa-documents/deployment.md#horizontal-scaling-2"
+        },
+        "Vertical Scaling": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/deployment.md#vertical-scaling-1"
+        }
+      }
+    },
+    "☁️ Cloud Deployments": {
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#cloud-deployments",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "AWS EC2": {
+          "content_preview": "```bash\n#!/bin/bash",
+          "tokens": 4,
+          "md_reference": "agile-ai-agents/aaa-documents/deployment.md#aws-ec2-2"
+        }
+      }
+    },
+    "🔧 Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Troubleshooting": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/deployment.md#troubleshooting-3"
+        }
+      }
+    },
+    "📋 Post-Deployment Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#post-deployment-checklist",
+      "tokens": 84,
+      "content_preview": "- [ ] Verify health endpoint responds correctly\n- [ ] Test authentication works\n- [ ] Check SSL certificate is valid\n- [ ] Confirm backups are running..."
+    },
+    "🔄 Maintenance": {
+      "md_reference": "agile-ai-agents/aaa-documents/deployment.md#maintenance",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Regular Tasks": {
+          "content_preview": "- **Daily**: Check logs for errors\n- **Weekly**: Review resource usage trends\n- **Monthly**: Update dependencies, review security patches\n- **Quarterl...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/aaa-documents/deployment.md#regular-tasks-1"
+        },
+        "Update Procedure": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/deployment.md#update-procedure-1"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "sprint_end": {
+    "enabled": true,
+    "template": "🎉 Sprint {sprint_number} Completed!\n\nGreat work on completing this sprint! Your project has made significant progress.\n\nWould you like to contribute your learnings to help improve AgileAiAgents for everyone?\n\nBy contributing, you'll help:\n• Improve agent performance for future projects\n• Share valuable patterns with the community\n• Make AgileAiAgents smarter with each project\n\nYour contribution will be anonymized by default, protecting sensitive information.\n\nWould you like to contribute? (yes/no): ",
+    "timing": "immediate"
+  },
+  "milestone_completion": {
+    "enabled": true,
+    "template": "🏆 Milestone Achieved: {milestone_name}\n\nCongratulations on reaching this important milestone!\n\nThis is a great opportunity to share the learnings from this achievement.\nWould you like to contribute your insights? (yes/no): ",
+    "timing": "immediate"
+  },
+  "project_completion": {
+    "enabled": true,
+    "template": "🚀 Project Successfully Completed!\n\nCongratulations on completing your project! \n\nYour journey from idea to deployment contains valuable learnings that could help\ncountless other developers using AgileAiAgents.\n\nWould you like to share your project learnings with the community? (yes/no): ",
+    "timing": "immediate"
+  },
+  "weekly_check": {
+    "enabled": false,
+    "template": "📊 Weekly Learning Check\n\nIt's been a productive week! Would you like to capture any learnings\nfrom the past week's development? (yes/no): ",
+    "timing": "scheduled"
+  }
+}

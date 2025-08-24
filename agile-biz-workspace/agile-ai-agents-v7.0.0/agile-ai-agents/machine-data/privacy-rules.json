@@ -1,0 +1,109 @@
+{
+  "patterns": {
+    "api_keys": [
+      "[a-zA-Z0-9]{32,}",
+      "sk_[a-zA-Z0-9]{32,}",
+      "AIza[a-zA-Z0-9_-]{35}",
+      "ghp_[a-zA-Z0-9]{36}",
+      "[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}"
+    ],
+    "secrets": [
+      "password\\s*[:=]\\s*[\"']([^\"']+)[\"']",
+      "secret\\s*[:=]\\s*[\"']([^\"']+)[\"']",
+      "token\\s*[:=]\\s*[\"']([^\"']+)[\"']",
+      "apikey\\s*[:=]\\s*[\"']([^\"']+)[\"']"
+    ],
+    "urls": [
+      "https?:\\/\\/[a-zA-Z0-9.-]+\\.(internal|local|corp|private)[^\\s]*",
+      "https?:\\/\\/\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}[^\\s]*",
+      "https?:\\/\\/localhost[^\\s]*",
+      "https?:\\/\\/127\\.0\\.0\\.1[^\\s]*"
+    ],
+    "emails": [
+      "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}"
+    ],
+    "names": [
+      "\\b[A-Z][a-z]+ [A-Z][a-z]+\\b"
+    ],
+    "financial": [
+      "\\$\\d{1,3}(,\\d{3})*(\\.\\d{2})?",
+      "\\b\\d{4}[\\s-]?\\d{4}[\\s-]?\\d{4}[\\s-]?\\d{4}\\b",
+      "\\b\\d{3}-\\d{2}-\\d{4}\\b"
+    ]
+  },
+  "whitelist": {
+    "urls": [
+      "https://github.com",
+      "https://example.com",
+      "https://localhost:3000",
+      "http://localhost:3001",
+      "https://api.example.com",
+      "https://docs.example.com"
+    ],
+    "emails": [
+      "noreply@anthropic.com",
+      "example@example.com",
+      "test@test.com",
+      "user@example.com",
+      "admin@example.com"
+    ],
+    "names": [
+      "John Doe",
+      "Jane Smith",
+      "Test User",
+      "Example User",
+      "Demo User"
+    ]
+  },
+  "anonymization_rules": {
+    "company_names": {
+      "pattern": "(?:Inc\\.|LLC|Corp\\.|Corporation|Ltd\\.|Limited|Company)",
+      "replacement": "[Company]"
+    },
+    "specific_numbers": {
+      "users": {
+        "ranges": [
+          { "max": 100, "replacement": "Under 100" },
+          { "max": 1000, "replacement": "100-1000" },
+          { "max": 10000, "replacement": "1K-10K" },
+          { "max": 100000, "replacement": "10K-100K" },
+          { "max": 1000000, "replacement": "100K-1M" },
+          { "max": null, "replacement": "1M+" }
+        ]
+      },
+      "revenue": {
+        "ranges": [
+          { "max": 1000, "replacement": "Under $1K" },
+          { "max": 10000, "replacement": "$1K-10K" },
+          { "max": 100000, "replacement": "$10K-100K" },
+          { "max": 1000000, "replacement": "$100K-1M" },
+          { "max": 10000000, "replacement": "$1M-10M" },
+          { "max": null, "replacement": "$10M+" }
+        ]
+      },
+      "time": {
+        "ranges": [
+          { "max": 1, "replacement": "Under 1 hour" },
+          { "max": 8, "replacement": "1-8 hours" },
+          { "max": 40, "replacement": "1-5 days" },
+          { "max": 160, "replacement": "1-4 weeks" },
+          { "max": null, "replacement": "1+ months" }
+        ]
+      }
+    }
+  },
+  "scan_settings": {
+    "auto_scan": true,
+    "scan_on_generate": true,
+    "scan_on_submit": true,
+    "block_on_critical": true,
+    "prompt_on_warning": true,
+    "ignore_info": false
+  },
+  "reporting": {
+    "include_line_numbers": true,
+    "max_context_chars": 100,
+    "group_by_severity": true,
+    "show_suggestions": true
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "agent": "analytics_growth_intelligence_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 256,
+    "full_md_tokens": 11229,
+    "md_file": "agile-ai-agents/ai-agents/analytics_growth_intelligence_agent.md",
+    "file_hash": "e093d4613d1068db6bd1c6013fd482e5"
+  },
+  "summary": "## Overview\nThe Analytics & Growth Intelligence Agent specializes in comprehensive business intelligence, growth analytics, and data-driven optimization strategies that maximize revenue growth, customer acquisition efficiency, and business performance. This agent transforms raw data into actionable insights that drive strategic decision-making and sustainable business growth.",
+  "core_responsibilities": {
+    "summary": [
+      "Business Intelligence & Revenue Analytics",
+      "Growth Metrics Framework & KPI Optimization",
+      "Predictive Analytics & Growth Modeling",
+      "Customer Journey Analytics & Optimization",
+      "Growth Intelligence & Strategic Insights"
+    ],
+    "details_tokens": 805,
+    "md_reference": "agile-ai-agents/ai-agents/analytics_growth_intelligence_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "Business Intelligence Dashboard & Revenue Analytics Workflow (PRIMARY ANALYTICS WORKFLOW) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/analytics_growth_intelligence_agent.md#business-intelligence-dashboard-revenue-analytics-workflow-primary-analytics-workflow-workflow"
+      },
+      {
+        "name": "Growth Experimentation & Optimization Analytics Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/analytics_growth_intelligence_agent.md#growth-experimentation-optimization-analytics-workflow"
+      },
+      {
+        "name": "Customer Journey Analytics & Attribution Modeling Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/analytics_growth_intelligence_agent.md#customer-journey-analytics-attribution-modeling-workflow"
+      },
+      {
+        "name": "Predictive Analytics & Business Intelligence Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/analytics_growth_intelligence_agent.md#predictive-analytics-business-intelligence-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/analytics_growth_intelligence_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/analytics_growth_intelligence_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

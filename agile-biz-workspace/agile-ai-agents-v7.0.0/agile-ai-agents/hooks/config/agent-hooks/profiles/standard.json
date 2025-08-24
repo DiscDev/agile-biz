@@ -1,0 +1,37 @@
+{
+  "name": "standard",
+  "description": "Critical and valuable hooks for balanced performance",
+  "performanceBudget": 500,
+  "hooks": {
+    "critical": {
+      "enabled": true,
+      "hooks": {
+        "vulnerability-scanner": true,
+        "secret-rotation-reminder": true,
+        "coverage-gatekeeper": true,
+        "defensive-patterns": true,
+        "deployment-window-enforcer": true,
+        "requirement-completeness": true
+      }
+    },
+    "valuable": {
+      "enabled": true,
+      "hooks": {
+        "dependency-checker": true,
+        "import-validator": true,
+        "test-categorizer": true,
+        "fixture-validator": true,
+        "blocker-escalator": true,
+        "velocity-anomaly-detector": true,
+        "doc-code-sync-validator": true,
+        "permission-scope-validator": true
+      }
+    },
+    "enhancement": {
+      "enabled": true
+    },
+    "specialized": {
+      "enabled": true
+    }
+  }
+}

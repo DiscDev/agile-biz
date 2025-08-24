@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "document": "command-detection",
+    "title": "Command Detection System",
+    "timestamp": "2025-08-11T22:02:16.872Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/command-detection.md",
+    "document_type": "general_documentation",
+    "file_hash": "6eebfcd1b406c43161cc9879f304c10f",
+    "estimated_tokens": 532,
+    "full_md_tokens": 2892
+  },
+  "summary": "This document defines how AgileAiAgents detects and processes user commands starting with \"/\" to initiate specific workflows.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#overview",
+      "content_preview": "This document defines how AgileAiAgents detects and processes user commands starting with \"/\" to initiate specific workflows."
+    },
+    {
+      "title": "Command Patterns",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#command-patterns",
+      "content_preview": ""
+    },
+    {
+      "title": "Detection Logic",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#detection-logic",
+      "content_preview": "1. **Pattern Matching**: Check if user input starts with \"/\"\n2. **Command Validation**: Verify command exists in registry\n3. **Parameter Extraction**:..."
+    },
+    {
+      "title": "Command Registry",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#command-registry",
+      "content_preview": "```javascript\nconst commands = {\n  '/start-new-project-workflow': {\n    agent: 'Project Analyzer Agent',\n    workflow: 'new-project-discovery',\n    de..."
+    },
+    {
+      "title": "Error Handling",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#error-handling",
+      "content_preview": ""
+    },
+    {
+      "title": "Implementation Guidelines",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#implementation-guidelines",
+      "content_preview": ""
+    },
+    {
+      "title": "Backward Compatibility",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#backward-compatibility",
+      "content_preview": "- If user provides project description without command, check for auto-orchestrator\n- Commands take precedence over automatic detection\n- Existing \"Co..."
+    },
+    {
+      "title": "MD to JSON Conversion Commands",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#md-to-json-conversion-commands",
+      "content_preview": "These commands handle the conversion of markdown files to JSON format:\n- `/convert-md-to-json-aaa-documents` - Convert aaa-documents to JSON\n- `/conve..."
+    },
+    {
+      "title": "Workflow Recovery Commands",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#workflow-recovery-commands",
+      "content_preview": "The `/workflow-recovery` command provides comprehensive error handling and recovery:"
+    },
+    {
+      "title": "Future Commands",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#future-commands",
+      "content_preview": "Reserved for future implementation:\n- `/start-migration-workflow` - Technology migration projects\n- `/start-optimization-workflow` - Performance optim..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#overview",
+      "tokens": 32,
+      "content_preview": "This document defines how AgileAiAgents detects and processes user commands starting with \"/\" to initiate specific workflows."
+    },
+    "Command Patterns": {
+      "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#command-patterns",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Primary Workflow Commands": {
+          "content_preview": "- `/start-new-project-workflow` - Initiates new project discovery and implementation\n  - `--status` - Show current phase and progress\n  - `--resume` -...",
+          "tokens": 209,
+          "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#primary-workflow-commands-1"
+        },
+        "Sprint & State Commands": {
+          "content_preview": "- `/status` - Shows current project and workflow status\n- `/continue` - Resumes previous work session\n- `/checkpoint` - Creates manual save point\n- `/...",
+          "tokens": 49,
+          "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#sprint-state-commands-1"
+        },
+        "Research & Analysis Commands": {
+          "content_preview": "- `/research-only` - Conducts research without implementation\n- `/analyze-market` - Market analysis workflow\n- `/analyze-competition` - Competitive an...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#research-analysis-commands-1"
+        },
+        "Sprint Management Commands": {
+          "content_preview": "- `/start-sprint` - Begins a new sprint\n- `/sprint-status` - Shows current sprint progress\n- `/sprint-review` - Triggers sprint review process\n- `/spr...",
+          "tokens": 48,
+          "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#sprint-management-commands-1"
+        },
+        "Document Generation Commands": {
+          "content_preview": "- `/generate-prd` - Creates PRD from research\n- `/generate-pitch-deck` - Creates investor materials\n- `/generate-documentation` - Technical documentat...",
+          "tokens": 37,
+          "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#document-generation-commands-1"
+        },
+        "Project Context Commands": {
+          "content_preview": "- `/add-agile-context` - Add AgileAiAgents context to existing project CLAUDE.md\n- `/init` - Initialize CLAUDE.md for current project (enhanced with A...",
+          "tokens": 42,
+          "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#project-context-commands-1"
+        },
+        "Community Contribution Commands": {
+          "content_preview": "- `/milestone` - Record milestone achievement and trigger contribution\n- `/deployment-success` - Mark successful deployment and trigger contribution\n-...",
+          "tokens": 140,
+          "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#community-contribution-commands-1"
+        }
+      }
+    },
+    "Detection Logic": {
+      "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#detection-logic",
+      "tokens": 72,
+      "content_preview": "1. **Pattern Matching**: Check if user input starts with \"/\"\n2. **Command Validation**: Verify command exists in registry\n3. **Parameter Extraction**:..."
+    },
+    "Command Registry": {
+      "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#command-registry",
+      "tokens": 1419,
+      "content_preview": "```javascript\nconst commands = {\n  '/start-new-project-workflow': {\n    agent: 'Project Analyzer Agent',\n    workflow: 'new-project-discovery',\n    de..."
+    },
+    "Error Handling": {
+      "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#error-handling",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Invalid Commands": {
+          "content_preview": "If user types an unrecognized command:\n```\nUnknown command: /[command]\nDid you mean: /[suggestion]?\nType /aaa-help to see all available commands.\n```",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#invalid-commands-1"
+        },
+        "Missing Parameters": {
+          "content_preview": "If required parameters are missing:\n```\nCommand /[command] requires: [parameter]\nUsage: /[command] [parameter]\nExample: /[command] [example]\n```",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#missing-parameters-1"
+        }
+      }
+    },
+    "Implementation Guidelines": {
+      "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#implementation-guidelines",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "For Claude Code": {
+          "content_preview": "When detecting a command:\n1. Check if input starts with \"/\"\n2. Look up command in registry\n3. If found, initiate the specified workflow\n4. If not foun...",
+          "tokens": 61,
+          "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#for-claude-code-1"
+        },
+        "State Tracking": {
+          "content_preview": "When a command initiates a workflow:\n```json\n{\n  \"workflow_state\": {\n    \"active_workflow\": \"new-project\",\n    \"initiated_by\": \"/start-new-project-wor...",
+          "tokens": 59,
+          "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#state-tracking-1"
+        }
+      }
+    },
+    "Backward Compatibility": {
+      "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#backward-compatibility",
+      "tokens": 49,
+      "content_preview": "- If user provides project description without command, check for auto-orchestrator\n- Commands take precedence over automatic detection\n- Existing \"Co..."
+    },
+    "MD to JSON Conversion Commands": {
+      "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#md-to-json-conversion-commands",
+      "tokens": 85,
+      "content_preview": "These commands handle the conversion of markdown files to JSON format:\n- `/convert-md-to-json-aaa-documents` - Convert aaa-documents to JSON\n- `/conve...",
+      "subsections": {
+        "Conversion Features": {
+          "content_preview": "- Progress reporting during conversion\n- Token reduction statistics\n- Automatic CLAUDE.md reference updates\n- File hash-based change detection\n- Compr...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#conversion-features-1"
+        }
+      }
+    },
+    "Workflow Recovery Commands": {
+      "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#workflow-recovery-commands",
+      "tokens": 21,
+      "content_preview": "The `/workflow-recovery` command provides comprehensive error handling and recovery:",
+      "subsections": {
+        "Diagnostic Options": {
+          "content_preview": "- `--diagnostic` - Run comprehensive workflow diagnostics\n- `--validate-state` - Validate current workflow state integrity\n- `--show-errors [count]` -...",
+          "tokens": 44,
+          "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#diagnostic-options-1"
+        },
+        "Recovery Options": {
+          "content_preview": "- `--restore-checkpoint [name]` - Restore from saved checkpoint\n- `--reset-workflow` - Reset entire workflow (creates backup)\n- `--reset-phase` - Rese...",
+          "tokens": 80,
+          "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#recovery-options-1"
+        },
+        "Safe Mode": {
+          "content_preview": "- `--safe-mode` - Enable restricted operations mode\n- `--exit-safe-mode` - Return to normal operations",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#safe-mode-1"
+        },
+        "State Management": {
+          "content_preview": "- `--export-state [file]` - Export workflow state to file\n- `--import-state [file]` - Import workflow state from file",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#state-management-1"
+        }
+      }
+    },
+    "Future Commands": {
+      "md_reference": "agile-ai-agents/aaa-documents/command-detection.md#future-commands",
+      "tokens": 74,
+      "content_preview": "Reserved for future implementation:\n- `/start-migration-workflow` - Technology migration projects\n- `/start-optimization-workflow` - Performance optim..."
+    }
+  }
+}

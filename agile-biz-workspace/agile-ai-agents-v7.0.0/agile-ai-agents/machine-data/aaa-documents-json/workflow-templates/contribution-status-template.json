@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "document": "contribution-status-template",
+    "title": "Contribution Status Template",
+    "timestamp": "2025-08-11T22:02:16.939Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md",
+    "document_type": "template",
+    "file_hash": "b3d5ad971c4a9e5f9c30e5a4ebd73696",
+    "estimated_tokens": 320,
+    "full_md_tokens": 1311
+  },
+  "summary": "This template defines the output format for the `/contribution-status` command.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#overview",
+      "content_preview": "This template defines the output format for the `/contribution-status` command."
+    },
+    {
+      "title": "Status Display Format",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#status-display-format",
+      "content_preview": ""
+    },
+    {
+      "title": "Readiness Calculation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#readiness-calculation",
+      "content_preview": ""
+    },
+    {
+      "title": "Dynamic Elements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#dynamic-elements",
+      "content_preview": ""
+    },
+    {
+      "title": "Special Cases",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#special-cases",
+      "content_preview": ""
+    },
+    {
+      "title": "Command Integration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#command-integration",
+      "content_preview": "Always end with clear next steps based on status:\n\n**High Readiness**:\n- Emphasize immediate contribution value\n- Show both immediate and scheduled op..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#overview",
+      "tokens": 20,
+      "content_preview": "This template defines the output format for the `/contribution-status` command."
+    },
+    "Status Display Format": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#status-display-format",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Full Status (Rich Learnings Available)": {
+          "content_preview": "```\n📊 Contribution Status\n=====================\n\n📋 PENDING CONTRIBUTIONS\n  • Sprint retrospective - Ready in 5 minutes\n    Sprint: sprint-2025-01-20...",
+          "tokens": 376,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#full-status-rich-learnings-available-1"
+        },
+        "Minimal Status (Few Learnings)": {
+          "content_preview": "```\n📊 Contribution Status\n=====================\n\n📋 PENDING CONTRIBUTIONS\n  None scheduled\n\n📜 CONTRIBUTION HISTORY\n  No contributions yet\n\n🎯 CURREN...",
+          "tokens": 127,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#minimal-status-few-learnings-1"
+        },
+        "No Learnings Status": {
+          "content_preview": "```\n📊 Contribution Status\n=====================\n\n📋 PENDING CONTRIBUTIONS\n  None scheduled\n\n📜 CONTRIBUTION HISTORY\n  No contributions yet\n\n🎯 CURREN...",
+          "tokens": 123,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#no-learnings-status-1"
+        },
+        "Contributions Disabled Status": {
+          "content_preview": "```\n📊 Contribution Status\n=====================\n\n⚠️ CONTRIBUTIONS DISABLED\n  Community contributions are currently disabled in settings.\n  \n  To enab...",
+          "tokens": 71,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#contributions-disabled-status-1"
+        }
+      }
+    },
+    "Readiness Calculation": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#readiness-calculation",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Readiness Score Components": {
+          "content_preview": "```javascript\nreadiness_score = {\n  technical_patterns: count * 10,      // Max 50\n  team_insights: count * 8,           // Max 24\n  performance_metri...",
+          "tokens": 80,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#readiness-score-components-1"
+        },
+        "Readiness Indicators": {
+          "content_preview": "- 🟢 **HIGH** (80-100): Rich, valuable learnings ready\n- 🟡 **MEDIUM** (40-79): Some learnings, could be richer\n- 🔴 **LOW** (0-39): Insufficient lear...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#readiness-indicators-1"
+        }
+      }
+    },
+    "Dynamic Elements": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#dynamic-elements",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Pending Contributions": {
+          "content_preview": "Show each pending contribution with:\n- Trigger type (sprint/milestone/deployment/project)\n- Time until prompt (\"Ready in X minutes\" or \"Scheduled\")\n- ...",
+          "tokens": 45,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#pending-contributions-1"
+        },
+        "Contribution History": {
+          "content_preview": "- Contribution ID (format: CLN-YYYY-MMDD-XXXX)\n- Type of contribution\n- Date submitted\n- Impact rating (1-5 stars based on community value)",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#contribution-history-1"
+        },
+        "Current Learnings": {
+          "content_preview": "Group by category:\n- Technical Patterns\n- Team Insights  \n- Performance Improvements\n- Tool Effectiveness\n- Architecture Decisions\n- Process Improveme...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#current-learnings-1"
+        },
+        "Skip History": {
+          "content_preview": "Only show if skips exist:\n- Date of skip\n- Reason provided\n- Frequency (if multiple)",
+          "tokens": 21,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#skip-history-1"
+        }
+      }
+    },
+    "Special Cases": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#special-cases",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Active Sprint": {
+          "content_preview": "If sprint is active, add:\n```\n🏃 ACTIVE SPRINT\n  Sprint: sprint-2025-01-20-feature\n  Progress: 60% (6/10 tasks)\n  Days Remaining: 2\n  \n  Complete spri...",
+          "tokens": 45,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#active-sprint-1"
+        },
+        "Recent Milestone": {
+          "content_preview": "If milestone recorded < 24 hours ago:\n```\n🎉 RECENT MILESTONE\n  \"Launched MVP with 10 beta users\"\n  Recorded: 2 hours ago\n  Contribution prompt schedu...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#recent-milestone-1"
+        },
+        "Blocked Contribution": {
+          "content_preview": "If contribution was attempted but failed:\n```\n⚠️ LAST CONTRIBUTION ATTEMPT\n  Failed: Network error\n  Date: Jan 20, 10:30 AM\n  Action: Run /contribute-...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#blocked-contribution-1"
+        }
+      }
+    },
+    "Command Integration": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-status-template.md#command-integration",
+      "tokens": 101,
+      "content_preview": "Always end with clear next steps based on status:\n\n**High Readiness**:\n- Emphasize immediate contribution value\n- Show both immediate and scheduled op..."
+    }
+  }
+}

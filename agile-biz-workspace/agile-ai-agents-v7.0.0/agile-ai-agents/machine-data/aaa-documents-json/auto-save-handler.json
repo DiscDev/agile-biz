@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "document": "auto-save-handler",
+    "title": "Auto-Save Handler Documentation",
+    "timestamp": "2025-08-11T22:02:16.861Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/auto-save-handler.md",
+    "document_type": "general_documentation",
+    "file_hash": "fa8e9e45c66d32bdfe61977dc0bf5a64",
+    "estimated_tokens": 586,
+    "full_md_tokens": 1379
+  },
+  "summary": "This document defines how the Project State Manager Agent handles automatic state saving based on configured triggers and frequency settings.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#overview",
+      "content_preview": "This document defines how the Project State Manager Agent handles automatic state saving based on configured triggers and frequency settings."
+    },
+    {
+      "title": "Configuration Reference",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#configuration-reference",
+      "content_preview": "Auto-save behavior is controlled by settings in CLAUDE.md:\n- `frequency_preset`: aggressive, balanced, minimal, manual\n- `save_frequency`: Custom over..."
+    },
+    {
+      "title": "Trigger Points",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#trigger-points",
+      "content_preview": ""
+    },
+    {
+      "title": "Confirmation Messages",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#confirmation-messages",
+      "content_preview": "Based on `confirmation_style` setting:"
+    },
+    {
+      "title": "Save Operations",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#save-operations",
+      "content_preview": ""
+    },
+    {
+      "title": "Debouncing",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#debouncing",
+      "content_preview": "To prevent excessive saves during rapid actions:\n- `debounce_ms`: 5000 (5 seconds default)\n- Batches multiple triggers within window\n- Single save ope..."
+    },
+    {
+      "title": "Implementation Logic",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#implementation-logic",
+      "content_preview": "```pseudo\non_trigger(event):\n  if not auto_save.enabled:\n    return\n    \n  if not should_save_for_trigger(event.type):\n    return\n    \n  add_to_save_q..."
+    },
+    {
+      "title": "Frequency Presets",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#frequency-presets",
+      "content_preview": ""
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#best-practices",
+      "content_preview": "1. **For New Projects**: Use \"balanced\" or \"aggressive\" during discovery\n2. **For Existing Projects**: Use \"aggressive\" when making changes\n3. **For L..."
+    },
+    {
+      "title": "Error Handling",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#error-handling",
+      "content_preview": ""
+    },
+    {
+      "title": "Performance Considerations",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#performance-considerations",
+      "content_preview": "- State updates are incremental when possible\n- Checkpoints are compressed\n- Old checkpoints auto-cleaned (keep last 20)\n- File watches use efficient ..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#overview",
+      "tokens": 36,
+      "content_preview": "This document defines how the Project State Manager Agent handles automatic state saving based on configured triggers and frequency settings."
+    },
+    "Configuration Reference": {
+      "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#configuration-reference",
+      "tokens": 65,
+      "content_preview": "Auto-save behavior is controlled by settings in CLAUDE.md:\n- `frequency_preset`: aggressive, balanced, minimal, manual\n- `save_frequency`: Custom over..."
+    },
+    "Trigger Points": {
+      "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#trigger-points",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Document Creation": {
+          "content_preview": "**Trigger**: Any agent creates a .md file in project-documents/\n**Detection**: Watch `project-documents/**/*.md` for new files\n**Action**:\n```json\n{\n ...",
+          "tokens": 76,
+          "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#1-document-creation-1"
+        },
+        "2. Section Approval": {
+          "content_preview": "**Trigger**: Stakeholder approves interview section\n**Detection**: Approval recorded in interview files\n**Action**:\n```json\n{\n  \"trigger\": \"section_ap...",
+          "tokens": 77,
+          "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#2-section-approval-1"
+        },
+        "3. Phase Transitions": {
+          "content_preview": "**Trigger**: Workflow moves between major phases\n**Detection**: `workflow_state.workflow_phase` changes\n**Action**:\n```json\n{\n  \"trigger\": \"phase_tran...",
+          "tokens": 84,
+          "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#3-phase-transitions-1"
+        },
+        "4. Research/Analysis Selection": {
+          "content_preview": "**Trigger**: User selects research or analysis depth\n**Detection**: Level selection recorded\n**Action**:\n```json\n{\n  \"trigger\": \"depth_selection\",\n  \"...",
+          "tokens": 71,
+          "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#4-researchanalysis-selection-1"
+        },
+        "5. Decision Recording": {
+          "content_preview": "**Trigger**: `/save-decision` command or inline decision\n**Detection**: Decision added to log\n**Action**:\n```json\n{\n  \"trigger\": \"decision_recorded\",\n...",
+          "tokens": 73,
+          "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#5-decision-recording-1"
+        },
+        "6. Error Occurrence": {
+          "content_preview": "**Trigger**: Any caught error or failure\n**Detection**: Error handlers activated\n**Action**:\n```json\n{\n  \"trigger\": \"error_occurrence\",\n  \"error\": \"[e...",
+          "tokens": 65,
+          "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#6-error-occurrence-1"
+        },
+        "7. Time Interval": {
+          "content_preview": "**Trigger**: Elapsed time since last save\n**Detection**: Timer running during active work\n**Action**:\n```json\n{\n  \"trigger\": \"time_interval\",\n  \"minut...",
+          "tokens": 61,
+          "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#7-time-interval-1"
+        }
+      }
+    },
+    "Confirmation Messages": {
+      "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#confirmation-messages",
+      "tokens": 9,
+      "content_preview": "Based on `confirmation_style` setting:",
+      "subsections": {
+        "Silent Mode": {
+          "content_preview": "- No output to user\n- State saves happen invisibly\n- Only errors are reported",
+          "tokens": 20,
+          "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#silent-mode-1"
+        },
+        "Minimal Mode (Default)": {
+          "content_preview": "```\n✓ State saved\n```",
+          "tokens": 4,
+          "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#minimal-mode-default-1"
+        },
+        "Verbose Mode": {
+          "content_preview": "```\n✓ State saved: Document created - market-analysis.md\n✓ State saved: Section approved - Project Vision\n✓ State saved: Phase complete - Discovery → ...",
+          "tokens": 59,
+          "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#verbose-mode-1"
+        }
+      }
+    },
+    "Save Operations": {
+      "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#save-operations",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Update Mode (Default)": {
+          "content_preview": "- Updates `project-state/current-state.json` only\n- Lightweight and fast\n- No checkpoint created",
+          "tokens": 24,
+          "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#update-mode-default-1"
+        },
+        "Checkpoint Mode": {
+          "content_preview": "- Creates full checkpoint in `project-state/checkpoints/`\n- Includes complete state snapshot\n- Used for manual `/checkpoint` commands",
+          "tokens": 33,
+          "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#checkpoint-mode-1"
+        },
+        "Hybrid Mode": {
+          "content_preview": "- Updates current-state.json for most triggers\n- Creates checkpoint on phase transitions\n- Balances performance with recoverability",
+          "tokens": 33,
+          "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#hybrid-mode-1"
+        }
+      }
+    },
+    "Debouncing": {
+      "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#debouncing",
+      "tokens": 44,
+      "content_preview": "To prevent excessive saves during rapid actions:\n- `debounce_ms`: 5000 (5 seconds default)\n- Batches multiple triggers within window\n- Single save ope..."
+    },
+    "Implementation Logic": {
+      "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#implementation-logic",
+      "tokens": 121,
+      "content_preview": "```pseudo\non_trigger(event):\n  if not auto_save.enabled:\n    return\n    \n  if not should_save_for_trigger(event.type):\n    return\n    \n  add_to_save_q..."
+    },
+    "Frequency Presets": {
+      "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#frequency-presets",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Aggressive": {
+          "content_preview": "- Saves on every action\n- Minimal data loss risk\n- Higher overhead\n- Good for critical projects",
+          "tokens": 24,
+          "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#aggressive-1"
+        },
+        "Balanced (Default)": {
+          "content_preview": "- Saves on key actions\n- 30-minute intervals\n- Reasonable overhead\n- Good for most projects",
+          "tokens": 23,
+          "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#balanced-default-1"
+        },
+        "Minimal": {
+          "content_preview": "- Only phase transitions\n- 60-minute intervals\n- Low overhead\n- Good for stable projects",
+          "tokens": 22,
+          "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#minimal-1"
+        },
+        "Manual": {
+          "content_preview": "- No automatic saves\n- Only explicit commands\n- User full control\n- Good for experiments",
+          "tokens": 22,
+          "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#manual-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#best-practices",
+      "tokens": 73,
+      "content_preview": "1. **For New Projects**: Use \"balanced\" or \"aggressive\" during discovery\n2. **For Existing Projects**: Use \"aggressive\" when making changes\n3. **For L..."
+    },
+    "Error Handling": {
+      "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#error-handling",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Save Failures": {
+          "content_preview": "- Retry with exponential backoff\n- Fall back to checkpoint if update fails\n- Alert user on persistent failures\n- Log errors for debugging",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#save-failures-1"
+        },
+        "Corrupt State": {
+          "content_preview": "- Validate state before saving\n- Keep last known good state\n- Provide recovery commands\n- Never overwrite with bad data",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#corrupt-state-1"
+        }
+      }
+    },
+    "Performance Considerations": {
+      "md_reference": "agile-ai-agents/aaa-documents/auto-save-handler.md#performance-considerations",
+      "tokens": 47,
+      "content_preview": "- State updates are incremental when possible\n- Checkpoints are compressed\n- Old checkpoints auto-cleaned (keep last 20)\n- File watches use efficient ..."
+    }
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "meta": {
+    "document": "stakeholder-prompt-template-implementation-plan",
+    "title": "Stakeholder Prompt Template Implementation Plan",
+    "timestamp": "2025-08-11T22:02:16.924Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md",
+    "document_type": "template",
+    "file_hash": "1f0b8cce0000b5544471dd2523d6bc92",
+    "estimated_tokens": 868,
+    "full_md_tokens": 2221
+  },
+  "summary": "This plan outlines the implementation of a comprehensive stakeholder prompt template system that allows stakeholders to prepare detailed project information before the interview phase. This will enhance the quality of project inputs and streamline the discovery process.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#overview",
+      "content_preview": "This plan outlines the implementation of a comprehensive stakeholder prompt template system that allows stakeholders to prepare detailed project infor..."
+    },
+    {
+      "title": "Goals",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#goals",
+      "content_preview": "1. **Reduce Interview Time**: Pre-filled answers minimize real-time questioning\n2. **Improve Quality**: Stakeholders have time to think and collaborat..."
+    },
+    {
+      "title": "Implementation Phases",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#implementation-phases",
+      "content_preview": ""
+    },
+    {
+      "title": "1. Project Vision (Required)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#1-project-vision-required",
+      "content_preview": "- What are we building? (one sentence)\n- Why does this need to exist?\n- What problem does it solve?\n- What's the vision 3 years from now?"
+    },
+    {
+      "title": "2. Boundaries - What This Is NOT (Critical)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#2-boundaries-what-this-is-not-critical",
+      "content_preview": "Minimum 5 specific items:\n- NOT a...\n- Will NOT include...\n- NOT for... (user type)\n- Will NOT integrate with...\n- NOT competing with..."
+    },
+    {
+      "title": "3. Target Users (Required)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#3-target-users-required",
+      "content_preview": "- Primary user persona (detailed)\n- Secondary users\n- User problems/pain points\n- Day in the life scenario"
+    },
+    {
+      "title": "4. Success Metrics (Required)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#4-success-metrics-required",
+      "content_preview": "- Launch success criteria\n- 6-month goals\n- Growth metrics\n- Quality metrics"
+    },
+    {
+      "title": "5. Technical Preferences",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#5-technical-preferences",
+      "content_preview": "- Preferred tech stack (if any)\n- Must-have integrations\n- Performance requirements\n- Security requirements\n- Scalability needs"
+    },
+    {
+      "title": "6. Business Model",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#6-business-model",
+      "content_preview": "- Revenue model\n- Pricing strategy\n- Cost considerations\n- Market positioning"
+    },
+    {
+      "title": "7. Constraints & Risks",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#7-constraints-risks",
+      "content_preview": "- Timeline constraints\n- Budget limitations\n- Technical constraints\n- Known risks\n- Compliance requirements"
+    },
+    {
+      "title": "8. Competition & Differentiation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#8-competition-differentiation",
+      "content_preview": "**Optional Sections by Type**:\n\n**SaaS Module** (`templates/stakeholder-prompts/modules/saas-module.md`):\n- Subscription tiers\n- Multi-tenancy needs\n-..."
+    },
+    {
+      "title": "Implementation Timeline",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#implementation-timeline",
+      "content_preview": "**Week 1**: \n- Create universal template\n- Design optional modules\n- Build example prompts\n\n**Week 2**:\n- Implement validator\n- Update Project Analyze..."
+    },
+    {
+      "title": "Success Criteria",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#success-criteria",
+      "content_preview": "1. **Adoption**: 50%+ of new projects use prompt templates\n2. **Time Savings**: 40% reduction in interview time\n3. **Quality**: Average prompt score >..."
+    },
+    {
+      "title": "Risk Mitigation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#risk-mitigation",
+      "content_preview": "1. **Over-complexity**: Keep template simple and guided\n2. **Adoption resistance**: Show clear time/quality benefits\n3. **Technical barriers**: Suppor..."
+    },
+    {
+      "title": "Future Enhancements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#future-enhancements",
+      "content_preview": "1. **AI-Assisted Filling**: Help complete sections based on partial input\n2. **Industry Templates**: Specialized templates by industry\n3. **Collaborat..."
+    },
+    {
+      "title": "Approval Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#approval-checklist",
+      "content_preview": "- [ ] Universal template structure approved\n- [ ] Optional modules list confirmed\n- [ ] Example projects selected\n- [ ] Scoring rubric acceptable\n- [ ..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#overview",
+      "tokens": 68,
+      "content_preview": "This plan outlines the implementation of a comprehensive stakeholder prompt template system that allows stakeholders to prepare detailed project infor..."
+    },
+    "Goals": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#goals",
+      "tokens": 96,
+      "content_preview": "1. **Reduce Interview Time**: Pre-filled answers minimize real-time questioning\n2. **Improve Quality**: Stakeholders have time to think and collaborat..."
+    },
+    "Implementation Phases": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#implementation-phases",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Phase 1: Template Design & Structure": {
+          "content_preview": "**Files to Create**:\n- `templates/stakeholder-prompts/universal-project-prompt.md`\n- `templates/stakeholder-prompts/prompt-template-guide.md`\n- `templ...",
+          "tokens": 56,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#phase-1-template-design-structure-2"
+        }
+      }
+    },
+    "1. Project Vision (Required)": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#1-project-vision-required",
+      "tokens": 34,
+      "content_preview": "- What are we building? (one sentence)\n- Why does this need to exist?\n- What problem does it solve?\n- What's the vision 3 years from now?"
+    },
+    "2. Boundaries - What This Is NOT (Critical)": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#2-boundaries-what-this-is-not-critical",
+      "tokens": 34,
+      "content_preview": "Minimum 5 specific items:\n- NOT a...\n- Will NOT include...\n- NOT for... (user type)\n- Will NOT integrate with...\n- NOT competing with..."
+    },
+    "3. Target Users (Required)": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#3-target-users-required",
+      "tokens": 26,
+      "content_preview": "- Primary user persona (detailed)\n- Secondary users\n- User problems/pain points\n- Day in the life scenario"
+    },
+    "4. Success Metrics (Required)": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#4-success-metrics-required",
+      "tokens": 19,
+      "content_preview": "- Launch success criteria\n- 6-month goals\n- Growth metrics\n- Quality metrics"
+    },
+    "5. Technical Preferences": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#5-technical-preferences",
+      "tokens": 32,
+      "content_preview": "- Preferred tech stack (if any)\n- Must-have integrations\n- Performance requirements\n- Security requirements\n- Scalability needs"
+    },
+    "6. Business Model": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#6-business-model",
+      "tokens": 20,
+      "content_preview": "- Revenue model\n- Pricing strategy\n- Cost considerations\n- Market positioning"
+    },
+    "7. Constraints & Risks": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#7-constraints-risks",
+      "tokens": 27,
+      "content_preview": "- Timeline constraints\n- Budget limitations\n- Technical constraints\n- Known risks\n- Compliance requirements"
+    },
+    "8. Competition & Differentiation": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#8-competition-differentiation",
+      "tokens": 209,
+      "content_preview": "**Optional Sections by Type**:\n\n**SaaS Module** (`templates/stakeholder-prompts/modules/saas-module.md`):\n- Subscription tiers\n- Multi-tenancy needs\n-...",
+      "subsections": {
+        "Phase 2: Example Prompts & References": {
+          "content_preview": "Create `templates/stakeholder-prompts/prompt-quality-rubric.md`:\n\n**Scoring Criteria**:\n- **Vision Clarity** (0-20 points)\n  - Single sentence descrip...",
+          "tokens": 194,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#phase-2-example-prompts-references-3"
+        },
+        "Phase 3: Workflow Integration": {
+          "content_preview": "**With Context Verification**:\n- NOT THIS list → Project Truth constraints\n- Success metrics → Monitoring thresholds\n- User definitions → Validation r...",
+          "tokens": 86,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#phase-3-workflow-integration-4"
+        },
+        "Phase 4: Supporting Tools": {
+          "content_preview": "Support for:\n- Google Docs exported markdown\n- Existing PRDs (with mapping)\n- Notion exports\n- Other common formats",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#phase-4-supporting-tools-4"
+        },
+        "Phase 5: Documentation & Training": {
+          "content_preview": "Update agents to understand:\n- Prompt file structure\n- How to reference prompt content\n- Integration with their workflows\n- Quality indicators",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#phase-5-documentation-training-3"
+        },
+        "Phase 6: Testing & Refinement": {
+          "content_preview": "- Time saved in interviews\n- Prompt quality scores\n- Project success correlation\n- User satisfaction\n- Template evolution rate",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#phase-6-testing-refinement-3"
+        }
+      }
+    },
+    "Implementation Timeline": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#implementation-timeline",
+      "tokens": 82,
+      "content_preview": "**Week 1**: \n- Create universal template\n- Design optional modules\n- Build example prompts\n\n**Week 2**:\n- Implement validator\n- Update Project Analyze..."
+    },
+    "Success Criteria": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#success-criteria",
+      "tokens": 61,
+      "content_preview": "1. **Adoption**: 50%+ of new projects use prompt templates\n2. **Time Savings**: 40% reduction in interview time\n3. **Quality**: Average prompt score >..."
+    },
+    "Risk Mitigation": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#risk-mitigation",
+      "tokens": 56,
+      "content_preview": "1. **Over-complexity**: Keep template simple and guided\n2. **Adoption resistance**: Show clear time/quality benefits\n3. **Technical barriers**: Suppor..."
+    },
+    "Future Enhancements": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#future-enhancements",
+      "tokens": 78,
+      "content_preview": "1. **AI-Assisted Filling**: Help complete sections based on partial input\n2. **Industry Templates**: Specialized templates by industry\n3. **Collaborat..."
+    },
+    "Approval Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-prompt-template-implementation-plan.md#approval-checklist",
+      "tokens": 80,
+      "content_preview": "- [ ] Universal template structure approved\n- [ ] Optional modules list confirmed\n- [ ] Example projects selected\n- [ ] Scoring rubric acceptable\n- [ ..."
+    }
+  }
+}

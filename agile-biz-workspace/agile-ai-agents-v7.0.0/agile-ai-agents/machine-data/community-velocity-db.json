@@ -1,0 +1,413 @@
+{
+  "meta": {
+    "document_type": "community_velocity_database",
+    "version": "1.0.0",
+    "created_at": "2025-06-27T04:00:00.000Z",
+    "updated_at": "2025-06-27T04:00:00.000Z",
+    "total_contributions": 12,
+    "total_teams": 12
+  },
+  "schema": {
+    "contribution": {
+      "team_id": "string (anonymized)",
+      "project_type": "string",
+      "tech_stack": "array of strings",
+      "team_size": "number",
+      "metrics": {
+        "avg_velocity": "number",
+        "velocity_range": { "min": "number", "max": "number" },
+        "story_patterns": "object",
+        "coverage_achievements": "object",
+        "estimation_accuracy": "number (0-1)"
+      },
+      "contributed_at": "ISO timestamp"
+    }
+  },
+  "industry_benchmarks": {
+    "web_application": {
+      "small_team": {
+        "avg_velocity": 22,
+        "velocity_range": { "min": 15, "max": 30 },
+        "estimation_accuracy": 0.75,
+        "common_story_sizes": {
+          "user_authentication": 5,
+          "crud_operations": 3,
+          "dashboard_ui": 8,
+          "api_integration": 5,
+          "payment_processing": 13
+        }
+      },
+      "medium_team": {
+        "avg_velocity": 45,
+        "velocity_range": { "min": 35, "max": 60 },
+        "estimation_accuracy": 0.80,
+        "common_story_sizes": {
+          "user_authentication": 8,
+          "crud_operations": 5,
+          "dashboard_ui": 13,
+          "api_integration": 8,
+          "payment_processing": 21
+        }
+      }
+    },
+    "mobile_application": {
+      "small_team": {
+        "avg_velocity": 18,
+        "velocity_range": { "min": 12, "max": 25 },
+        "estimation_accuracy": 0.70,
+        "common_story_sizes": {
+          "user_authentication": 8,
+          "ui_screen": 5,
+          "api_integration": 8,
+          "push_notifications": 5,
+          "offline_sync": 13
+        }
+      }
+    },
+    "api_service": {
+      "small_team": {
+        "avg_velocity": 25,
+        "velocity_range": { "min": 18, "max": 35 },
+        "estimation_accuracy": 0.82,
+        "common_story_sizes": {
+          "endpoint_creation": 3,
+          "authentication": 5,
+          "data_validation": 3,
+          "integration": 8,
+          "rate_limiting": 5
+        }
+      }
+    }
+  },
+  "contributions": [
+    {
+      "team_id": "anonymous_001",
+      "project_type": "web_application",
+      "tech_stack": ["react", "node", "postgres"],
+      "team_size": 3,
+      "metrics": {
+        "avg_velocity": 28,
+        "velocity_range": { "min": 20, "max": 35 },
+        "story_patterns": {
+          "authentication": { "avg_points": 5, "completion_rate": 0.95 },
+          "crud": { "avg_points": 3, "completion_rate": 0.98 },
+          "ui_components": { "avg_points": 5, "completion_rate": 0.92 }
+        },
+        "coverage_achievements": {
+          "overall": 0.85,
+          "critical_code": 0.92,
+          "improvement_rate": 0.05
+        },
+        "estimation_accuracy": 0.83
+      },
+      "contributed_at": "2025-06-15T10:00:00.000Z"
+    },
+    {
+      "team_id": "anonymous_002",
+      "project_type": "web_application",
+      "tech_stack": ["vue", "python", "mysql"],
+      "team_size": 2,
+      "metrics": {
+        "avg_velocity": 20,
+        "velocity_range": { "min": 15, "max": 25 },
+        "story_patterns": {
+          "authentication": { "avg_points": 8, "completion_rate": 0.88 },
+          "api_endpoints": { "avg_points": 3, "completion_rate": 0.95 },
+          "frontend_features": { "avg_points": 5, "completion_rate": 0.90 }
+        },
+        "coverage_achievements": {
+          "overall": 0.78,
+          "critical_code": 0.88,
+          "improvement_rate": 0.03
+        },
+        "estimation_accuracy": 0.75
+      },
+      "contributed_at": "2025-06-10T14:30:00.000Z"
+    },
+    {
+      "team_id": "anonymous_003",
+      "project_type": "mobile_application",
+      "tech_stack": ["react-native", "node", "mongodb"],
+      "team_size": 4,
+      "metrics": {
+        "avg_velocity": 22,
+        "velocity_range": { "min": 18, "max": 28 },
+        "story_patterns": {
+          "ui_screens": { "avg_points": 5, "completion_rate": 0.93 },
+          "api_integration": { "avg_points": 8, "completion_rate": 0.85 },
+          "native_features": { "avg_points": 8, "completion_rate": 0.80 }
+        },
+        "coverage_achievements": {
+          "overall": 0.72,
+          "critical_code": 0.85,
+          "improvement_rate": 0.04
+        },
+        "estimation_accuracy": 0.70
+      },
+      "contributed_at": "2025-06-08T09:15:00.000Z"
+    },
+    {
+      "team_id": "anonymous_004",
+      "project_type": "api_service",
+      "tech_stack": ["node", "express", "postgres"],
+      "team_size": 2,
+      "metrics": {
+        "avg_velocity": 30,
+        "velocity_range": { "min": 25, "max": 38 },
+        "story_patterns": {
+          "endpoints": { "avg_points": 3, "completion_rate": 0.97 },
+          "authentication": { "avg_points": 5, "completion_rate": 0.92 },
+          "integrations": { "avg_points": 8, "completion_rate": 0.88 }
+        },
+        "coverage_achievements": {
+          "overall": 0.88,
+          "critical_code": 0.95,
+          "improvement_rate": 0.06
+        },
+        "estimation_accuracy": 0.85
+      },
+      "contributed_at": "2025-06-05T16:45:00.000Z"
+    },
+    {
+      "team_id": "anonymous_005",
+      "project_type": "web_application",
+      "tech_stack": ["angular", "java", "postgres"],
+      "team_size": 5,
+      "metrics": {
+        "avg_velocity": 42,
+        "velocity_range": { "min": 35, "max": 50 },
+        "story_patterns": {
+          "features": { "avg_points": 8, "completion_rate": 0.91 },
+          "bug_fixes": { "avg_points": 2, "completion_rate": 0.98 },
+          "refactoring": { "avg_points": 5, "completion_rate": 0.85 }
+        },
+        "coverage_achievements": {
+          "overall": 0.82,
+          "critical_code": 0.90,
+          "improvement_rate": 0.04
+        },
+        "estimation_accuracy": 0.78
+      },
+      "contributed_at": "2025-06-01T11:20:00.000Z"
+    },
+    {
+      "team_id": "anonymous_006",
+      "project_type": "web_application",
+      "tech_stack": ["react", "python", "redis"],
+      "team_size": 3,
+      "metrics": {
+        "avg_velocity": 25,
+        "velocity_range": { "min": 20, "max": 32 },
+        "story_patterns": {
+          "real_time_features": { "avg_points": 8, "completion_rate": 0.87 },
+          "data_processing": { "avg_points": 5, "completion_rate": 0.92 },
+          "ui_updates": { "avg_points": 3, "completion_rate": 0.95 }
+        },
+        "coverage_achievements": {
+          "overall": 0.80,
+          "critical_code": 0.88,
+          "improvement_rate": 0.05
+        },
+        "estimation_accuracy": 0.81
+      },
+      "contributed_at": "2025-05-28T13:00:00.000Z"
+    },
+    {
+      "team_id": "anonymous_007",
+      "project_type": "mobile_application",
+      "tech_stack": ["flutter", "firebase"],
+      "team_size": 2,
+      "metrics": {
+        "avg_velocity": 18,
+        "velocity_range": { "min": 14, "max": 22 },
+        "story_patterns": {
+          "ui_screens": { "avg_points": 5, "completion_rate": 0.90 },
+          "firebase_integration": { "avg_points": 3, "completion_rate": 0.94 },
+          "offline_features": { "avg_points": 8, "completion_rate": 0.82 }
+        },
+        "coverage_achievements": {
+          "overall": 0.70,
+          "critical_code": 0.82,
+          "improvement_rate": 0.03
+        },
+        "estimation_accuracy": 0.72
+      },
+      "contributed_at": "2025-05-25T08:30:00.000Z"
+    },
+    {
+      "team_id": "anonymous_008",
+      "project_type": "api_service",
+      "tech_stack": ["go", "postgresql", "redis"],
+      "team_size": 3,
+      "metrics": {
+        "avg_velocity": 35,
+        "velocity_range": { "min": 28, "max": 42 },
+        "story_patterns": {
+          "microservices": { "avg_points": 8, "completion_rate": 0.89 },
+          "caching": { "avg_points": 5, "completion_rate": 0.93 },
+          "optimization": { "avg_points": 5, "completion_rate": 0.91 }
+        },
+        "coverage_achievements": {
+          "overall": 0.90,
+          "critical_code": 0.96,
+          "improvement_rate": 0.07
+        },
+        "estimation_accuracy": 0.87
+      },
+      "contributed_at": "2025-05-20T15:15:00.000Z"
+    },
+    {
+      "team_id": "anonymous_009",
+      "project_type": "web_application",
+      "tech_stack": ["nextjs", "typescript", "mongodb"],
+      "team_size": 4,
+      "metrics": {
+        "avg_velocity": 38,
+        "velocity_range": { "min": 30, "max": 45 },
+        "story_patterns": {
+          "ssr_features": { "avg_points": 8, "completion_rate": 0.88 },
+          "api_routes": { "avg_points": 3, "completion_rate": 0.96 },
+          "ui_components": { "avg_points": 5, "completion_rate": 0.92 }
+        },
+        "coverage_achievements": {
+          "overall": 0.84,
+          "critical_code": 0.91,
+          "improvement_rate": 0.06
+        },
+        "estimation_accuracy": 0.82
+      },
+      "contributed_at": "2025-05-15T12:00:00.000Z"
+    },
+    {
+      "team_id": "anonymous_010",
+      "project_type": "web_application",
+      "tech_stack": ["django", "postgres", "celery"],
+      "team_size": 3,
+      "metrics": {
+        "avg_velocity": 26,
+        "velocity_range": { "min": 22, "max": 32 },
+        "story_patterns": {
+          "admin_features": { "avg_points": 5, "completion_rate": 0.94 },
+          "async_tasks": { "avg_points": 5, "completion_rate": 0.90 },
+          "api_endpoints": { "avg_points": 3, "completion_rate": 0.97 }
+        },
+        "coverage_achievements": {
+          "overall": 0.86,
+          "critical_code": 0.93,
+          "improvement_rate": 0.05
+        },
+        "estimation_accuracy": 0.84
+      },
+      "contributed_at": "2025-05-10T09:45:00.000Z"
+    },
+    {
+      "team_id": "anonymous_011",
+      "project_type": "mobile_application",
+      "tech_stack": ["swift", "ios", "coredata"],
+      "team_size": 2,
+      "metrics": {
+        "avg_velocity": 16,
+        "velocity_range": { "min": 12, "max": 20 },
+        "story_patterns": {
+          "ui_features": { "avg_points": 5, "completion_rate": 0.91 },
+          "data_persistence": { "avg_points": 5, "completion_rate": 0.88 },
+          "animations": { "avg_points": 3, "completion_rate": 0.93 }
+        },
+        "coverage_achievements": {
+          "overall": 0.75,
+          "critical_code": 0.85,
+          "improvement_rate": 0.04
+        },
+        "estimation_accuracy": 0.73
+      },
+      "contributed_at": "2025-05-05T14:20:00.000Z"
+    },
+    {
+      "team_id": "anonymous_012",
+      "project_type": "api_service",
+      "tech_stack": ["python", "fastapi", "redis"],
+      "team_size": 2,
+      "metrics": {
+        "avg_velocity": 28,
+        "velocity_range": { "min": 22, "max": 35 },
+        "story_patterns": {
+          "async_endpoints": { "avg_points": 3, "completion_rate": 0.96 },
+          "websockets": { "avg_points": 8, "completion_rate": 0.85 },
+          "caching": { "avg_points": 5, "completion_rate": 0.92 }
+        },
+        "coverage_achievements": {
+          "overall": 0.89,
+          "critical_code": 0.94,
+          "improvement_rate": 0.06
+        },
+        "estimation_accuracy": 0.86
+      },
+      "contributed_at": "2025-05-01T10:10:00.000Z"
+    }
+  ],
+  "aggregated_insights": {
+    "by_project_type": {
+      "web_application": {
+        "avg_velocity": 28.5,
+        "avg_estimation_accuracy": 0.80,
+        "most_common_stack": ["react", "node"],
+        "coverage_average": 0.82
+      },
+      "mobile_application": {
+        "avg_velocity": 18.7,
+        "avg_estimation_accuracy": 0.72,
+        "most_common_stack": ["react-native"],
+        "coverage_average": 0.72
+      },
+      "api_service": {
+        "avg_velocity": 31.0,
+        "avg_estimation_accuracy": 0.86,
+        "most_common_stack": ["node"],
+        "coverage_average": 0.89
+      }
+    },
+    "by_team_size": {
+      "small": {
+        "range": "1-2 members",
+        "avg_velocity": 22,
+        "avg_estimation_accuracy": 0.78
+      },
+      "medium": {
+        "range": "3-4 members",
+        "avg_velocity": 32,
+        "avg_estimation_accuracy": 0.82
+      },
+      "large": {
+        "range": "5+ members",
+        "avg_velocity": 42,
+        "avg_estimation_accuracy": 0.78
+      }
+    },
+    "coverage_trends": {
+      "overall_average": 0.81,
+      "critical_code_average": 0.89,
+      "average_improvement_rate": 0.05
+    }
+  },
+  "contribution_guidelines": {
+    "required_fields": [
+      "project_type",
+      "tech_stack",
+      "team_size",
+      "avg_velocity",
+      "estimation_accuracy"
+    ],
+    "anonymization_rules": [
+      "No company names or identifiers",
+      "No specific project names",
+      "No individual developer names",
+      "No proprietary technology names"
+    ],
+    "quality_checks": [
+      "Velocity must be between 5 and 100",
+      "Estimation accuracy must be between 0 and 1",
+      "Team size must be between 1 and 20",
+      "At least 5 sprints of data required"
+    ]
+  }
+}

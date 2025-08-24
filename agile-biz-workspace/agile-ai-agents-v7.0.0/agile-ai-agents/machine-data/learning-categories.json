@@ -1,0 +1,150 @@
+{
+  "categories": {
+    "bug_fix": {
+      "priority": "high",
+      "description": "Fixes for identified bugs and errors",
+      "impact_weight": 0.9,
+      "implementation_speed": "immediate",
+      "validation_required": true,
+      "examples": [
+        "TypeScript compilation errors",
+        "Runtime exceptions",
+        "Memory leaks",
+        "Race conditions"
+      ]
+    },
+    "optimization": {
+      "priority": "medium",
+      "description": "Performance and efficiency improvements",
+      "impact_weight": 0.7,
+      "implementation_speed": "phased",
+      "validation_required": true,
+      "examples": [
+        "Token usage reduction",
+        "Response time improvement",
+        "Memory optimization",
+        "Algorithm efficiency"
+      ]
+    },
+    "pattern": {
+      "priority": "medium",
+      "description": "New development patterns and best practices",
+      "impact_weight": 0.6,
+      "implementation_speed": "gradual",
+      "validation_required": true,
+      "examples": [
+        "Architecture patterns",
+        "Coordination workflows",
+        "Testing strategies",
+        "Deployment patterns"
+      ]
+    },
+    "anti_pattern": {
+      "priority": "high",
+      "description": "Patterns to avoid and their alternatives",
+      "impact_weight": 0.8,
+      "implementation_speed": "immediate",
+      "validation_required": false,
+      "examples": [
+        "Inefficient workflows",
+        "Error-prone practices",
+        "Performance bottlenecks",
+        "Security vulnerabilities"
+      ]
+    },
+    "technology": {
+      "priority": "low",
+      "description": "Technology-specific learnings and integrations",
+      "impact_weight": 0.5,
+      "implementation_speed": "selective",
+      "validation_required": true,
+      "examples": [
+        "Framework updates",
+        "Library integrations",
+        "Tool configurations",
+        "Platform optimizations"
+      ]
+    },
+    "coordination": {
+      "priority": "medium",
+      "description": "Agent coordination and communication improvements",
+      "impact_weight": 0.7,
+      "implementation_speed": "phased",
+      "validation_required": true,
+      "examples": [
+        "Handoff patterns",
+        "Parallel execution",
+        "Conflict resolution",
+        "Information sharing"
+      ]
+    },
+    "recovery": {
+      "priority": "high",
+      "description": "Error recovery and resilience patterns",
+      "impact_weight": 0.8,
+      "implementation_speed": "immediate",
+      "validation_required": true,
+      "examples": [
+        "Rollback procedures",
+        "Error handling",
+        "Graceful degradation",
+        "Retry strategies"
+      ]
+    }
+  },
+  "confidence_factors": {
+    "sample_size": {
+      "weight": 0.3,
+      "thresholds": {
+        "low": 1,
+        "medium": 3,
+        "high": 10
+      }
+    },
+    "success_rate": {
+      "weight": 0.4,
+      "thresholds": {
+        "low": 0.5,
+        "medium": 0.75,
+        "high": 0.9
+      }
+    },
+    "consistency": {
+      "weight": 0.3,
+      "thresholds": {
+        "low": 0.6,
+        "medium": 0.8,
+        "high": 0.95
+      }
+    }
+  },
+  "implementation_rules": {
+    "priority_order": ["bug_fix", "anti_pattern", "recovery", "optimization", "coordination", "pattern", "technology"],
+    "batch_size": {
+      "high": 10,
+      "medium": 5,
+      "low": 3
+    },
+    "validation_period_days": {
+      "bug_fix": 3,
+      "optimization": 7,
+      "pattern": 14,
+      "technology": 7
+    },
+    "rollback_thresholds": {
+      "error_rate_increase": 0.2,
+      "performance_degradation": 0.1,
+      "test_failure_rate": 0.15
+    }
+  },
+  "tagging_schema": {
+    "required_tags": ["category", "priority", "confidence", "agent"],
+    "optional_tags": ["technology", "phase", "industry", "project_type"],
+    "metadata": {
+      "source_contribution": "string",
+      "implementation_date": "date",
+      "validation_status": "enum:pending|validated|failed",
+      "impact_metrics": "object"
+    }
+  }
+}

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgileAiAgents - Project Dashboard</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Fallback data URL favicon for immediate display -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%232563eb'/%3E%3Crect x='10' y='8' width='12' height='10' rx='2' fill='white' opacity='0.9'/%3E%3Ccircle cx='13' cy='12' r='1.5' fill='%232563eb'/%3E%3Ccircle cx='19' cy='12' r='1.5' fill='%232563eb'/%3E%3Crect x='12' y='15' width='8' height='1.5' rx='0.75' fill='%232563eb'/%3E%3Ccircle cx='24' cy='10' r='2' fill='%2310b981'/%3E%3C/svg%3E">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/workflow-widget.css">
+    <link rel="stylesheet" href="css/context-verification-widget.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+            ☰
+        </button>
+        
+        <!-- Mobile Overlay -->
+        <div class="mobile-overlay" id="mobile-overlay"></div>
+        
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <h1>
+                    <span id="project-name">🤖 AgileAiAgents Dashboard</span>
+                    <span id="header-version" class="version-tag">v4.8.0</span>
+                    <button id="edit-project-name" class="edit-btn" title="Edit project name" style="display: none;">✏️</button>
+                </h1>
+                <div class="header-status">
+                    <div class="status-indicator" id="connection-status">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Connecting...</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Progress Section -->
+            <div class="project-progress-section">
+                <div class="progress-section-header">
+                    <button class="section-collapse-btn" id="progress-section-toggle" title="Toggle project progress">
+                        <span class="section-collapse-icon">▼</span>
+                        <span class="section-label">Project Progress</span>
+                    </button>
+                </div>
+                
+                <div class="project-progress-content" id="project-progress-content">
+                    <!-- Project Progress Bar -->
+                    <div class="project-progress-container">
+                        <div class="progress-header">
+                            <span class="progress-label">Project Completion</span>
+                            <span class="progress-percentage" id="progress-percentage">0%</span>
+                        </div>
+                <div class="progress-bar-wrapper">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="progress-details" id="progress-details">
+                    <span class="phase-info">Phase: <span id="current-phase">Initializing</span></span>
+                    <span class="sprint-info">Sprint: <span id="current-sprint">-</span></span>
+                    <span class="tasks-info">Tasks: <span id="tasks-completed">0</span> / <span id="tasks-total">0</span></span>
+                </div>
+            </div>
+            
+            <!-- Product Backlog Metrics -->
+            <div class="backlog-metrics-container">
+                <div class="backlog-header">
+                    <span class="backlog-label">📋 Product Backlog</span>
+                    <button class="collapse-btn" id="backlog-collapse-btn" title="Toggle backlog">
+                        <span class="collapse-icon">▼</span>
+                    </button>
+                </div>
+                <div class="backlog-stats" id="backlog-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Total Items:</span>
+                        <span class="stat-value" id="backlog-total-items">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Total Points:</span>
+                        <span class="stat-value" id="backlog-total-points">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Ready Points:</span>
+                        <span class="stat-value" id="backlog-ready-points">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Avg Velocity:</span>
+                        <span class="stat-value" id="backlog-avg-velocity">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Sprints Left:</span>
+                        <span class="stat-value" id="backlog-sprints-remaining">0</span>
+                    </div>
+                </div>
+            </div>
+                </div> <!-- End project-progress-content -->
+            </div> <!-- End project-progress-section -->
+        </header>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Sidebar Container -->
+            <div class="sidebar-container">
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                <div class="sidebar-tabs">
+                    <button class="tab-button active" data-tab="documents">📁 Docs</button>
+                    <button class="tab-button" data-tab="mcp">🔧 MCP</button>
+                    <button class="tab-button" data-tab="agents">🤖 Agents</button>
+                    <button class="tab-button" data-tab="system">⚙️ System</button>
+                    <button class="tab-button" data-tab="guide">📘 Guide</button>
+                    <button class="tab-button" data-tab="hooks">🎣 Hooks</button>
+                </div>
+                
+                <!-- Documents Tab -->
+                <div id="documents-tab" class="tab-content active">
+                    <div class="sidebar-section">
+                        <h3>📁 Project Documents</h3>
+                        <div class="document-tree" id="document-tree">
+                            <div class="loading">Loading documents...</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- MCP Tab -->
+                <div id="mcp-tab" class="tab-content">
+                    <div class="sidebar-section">
+                        <h3>🔧 MCP Integrations</h3>
+                        <div class="document-tree" id="mcp-tree">
+                            <div class="loading">Loading MCP guides...</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Agents Tab -->
+                <div id="agents-tab" class="tab-content">
+                    <div class="sidebar-section">
+                        <h3>🤖 Available Agents</h3>
+                        <div class="agent-list" id="agent-list">
+                            <div class="loading">Loading agents...</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- System Tab -->
+                <div id="system-tab" class="tab-content">
+                    <div class="sidebar-section">
+                        <h3>📚 System Documentation</h3>
+                        <div class="system-docs" id="system-docs">
+                            <div class="loading">Loading system docs...</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Guide Tab -->
+                <div id="guide-tab" class="tab-content">
+                    <div class="sidebar-section">
+                        <h3>📘 User Guides</h3>
+                        <div class="guide-docs" id="guide-docs">
+                            <div class="guide-item" data-guide-path="CLAUDE.md">
+                                <span class="doc-icon">🤖</span>
+                                <span class="doc-name">CLAUDE.md</span>
+                                <p class="doc-description">Claude Code guidance and configuration</p>
+                            </div>
+                            <div class="guide-item" data-guide-path="CLAUDE-core.md">
+                                <span class="doc-icon">💎</span>
+                                <span class="doc-name">CLAUDE-core.md</span>
+                                <p class="doc-description">Essential information (Under 15k tokens)</p>
+                            </div>
+                            <div class="guide-item" data-guide-path="CLAUDE-config.md">
+                                <span class="doc-icon">⚙️</span>
+                                <span class="doc-name">CLAUDE-config.md</span>
+                                <p class="doc-description">All configuration sections</p>
+                            </div>
+                            <div class="guide-item" data-guide-path="CLAUDE-agents.md">
+                                <span class="doc-icon">🤝</span>
+                                <span class="doc-name">CLAUDE-agents.md</span>
+                                <p class="doc-description">Universal agent guidelines</p>
+                            </div>
+                            <div class="guide-item" data-guide-path="CLAUDE-reference.md">
+                                <span class="doc-icon">📚</span>
+                                <span class="doc-name">CLAUDE-reference.md</span>
+                                <p class="doc-description">Core reference documents</p>
+                            </div>
+                            <div class="guide-item" data-guide-path="README.md">
+                                <span class="doc-icon">📖</span>
+                                <span class="doc-name">README.md</span>
+                                <p class="doc-description">AgileAiAgents system overview</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hooks Tab -->
+                <div id="hooks-tab" class="tab-content">
+                    <div class="sidebar-section">
+                        <h3>🎣 Hook Configuration</h3>
+                        <div class="hooks-section" id="hooks-section">
+                            <button class="hook-action" data-action="configure">⚙️ Configure Hooks</button>
+                            <button class="hook-action" data-action="performance">📊 Performance</button>
+                            <button class="hook-action" data-action="logs">📋 Hook Logs</button>
+                            <button class="hook-action" data-action="test">🧪 Test Hooks</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3>🎯 Quick Actions</h3>
+                    <div class="quick-actions">
+                        <button data-action="refresh">🔄 Refresh</button>
+                        <button data-action="toggle-autoscroll">📜 Auto-scroll</button>
+                        <button data-action="clear-activity">🧹 Clear Activity</button>
+                    </div>
+                </div>
+                
+                <!-- Live Agent Activity -->
+                <div class="sidebar-section activity-section">
+                    <h3>⚡ Live Agent Activity</h3>
+                    <div class="activity-feed" id="activity-feed">
+                        <div class="activity-item startup">
+                            <div class="activity-time">Just now</div>
+                            <div class="activity-content">
+                                <strong>🚀 Dashboard Started</strong>
+                                <p>Real-time monitoring active - ready for AI agent coordination</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <!-- Resize Handle -->
+            <div class="resize-handle"></div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Document Viewer -->
+                <section class="document-section">
+                    <h2>📖 Document Viewer</h2>
+                    <div class="document-viewer" id="document-viewer">
+                        <div class="document-placeholder">
+                            <h3>Welcome to AgileAiAgents Dashboard</h3>
+                            <p>This dashboard provides real-time monitoring of your agile AI agent coordination system.</p>
+                            
+                            <h4>Features:</h4>
+                            <ul>
+                                <li>📄 Live document updates as agents create/modify files</li>
+                                <li>⚡ Real-time agent activity feed</li>
+                                <li>📊 Sprint progress tracking</li>
+                                <li>🎯 Stakeholder decision alerts</li>
+                                <li>🔍 Searchable document library</li>
+                            </ul>
+                            
+                            <p><strong>Select a document from the sidebar to view its contents.</strong></p>
+                            
+                            <div class="getting-started">
+                                <h4>Getting Started:</h4>
+                                <ol>
+                                    <li>Start your AI agent coordination process</li>
+                                    <li>Watch as documents appear in real-time</li>
+                                    <li>Monitor agent activities in the activity feed</li>
+                                    <li>Review documents as they're created</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Project State Widget -->
+                <div class="project-state-widget" id="project-state-widget">
+                    <div class="widget-header">
+                        <h3>📊 Project State</h3>
+                        <button class="widget-collapse-btn" id="state-widget-toggle" title="Toggle project state">
+                            <span class="collapse-icon">▼</span>
+                        </button>
+                    </div>
+                    <div class="widget-content" id="state-widget-content">
+                        <div class="state-grid">
+                            <div class="state-card">
+                                <h4>🎯 Current Workflow</h4>
+                                <div id="current-workflow" class="state-value">No active workflow</div>
+                            </div>
+                            <div class="state-card">
+                                <h4>📈 Workflow Phase</h4>
+                                <div id="workflow-phase" class="state-value">--</div>
+                            </div>
+                            <div class="state-card">
+                                <h4>⏱️ Last Updated</h4>
+                                <div id="state-last-updated" class="state-value">Never</div>
+                            </div>
+                            <div class="state-card">
+                                <h4>📝 Active Tasks</h4>
+                                <div id="active-tasks-count" class="state-value">0 tasks</div>
+                            </div>
+                        </div>
+                        <div class="state-details">
+                            <div class="detail-section">
+                                <h4>💡 Recent Decisions</h4>
+                                <ul id="recent-decisions" class="decision-list">
+                                    <li class="empty-state">No decisions recorded</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dashboard Widgets -->
+                <div class="dashboard-widgets">
+                    <!-- Context Verification Widget -->
+                    <div id="context-verification-container"></div>
+                    
+                    <!-- Workflow Progress Widget -->
+                    <div id="workflow-progress-widget"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="dashboard-footer">
+            <div class="footer-content">
+                <span>AgileAiAgents Dashboard <span id="footer-version">v4.8.0</span></span>
+                <span>Real-time monitoring: <span id="uptime">Active</span></span>
+                <span>Last update: <span id="last-update">Just now</span></span>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Define mobile menu functions immediately to ensure they're available
+        window.toggleMobileMenu = function() {
+            const sidebar = document.querySelector('.sidebar-container');
+            const overlay = document.getElementById('mobile-overlay');
+            
+            if (sidebar && overlay) {
+                const isOpen = sidebar.classList.contains('mobile-open');
+                
+                if (!isOpen) {
+                    // Opening menu
+                    overlay.style.display = 'block';
+                    setTimeout(() => {
+                        sidebar.classList.add('mobile-open');
+                        overlay.classList.add('active');
+                    }, 10);
+                } else {
+                    // Closing menu
+                    sidebar.classList.remove('mobile-open');
+                    overlay.classList.remove('active');
+                    setTimeout(() => {
+                        overlay.style.display = 'none';
+                    }, 300);
+                }
+            }
+        };
+
+        window.closeMobileMenu = function() {
+            const sidebar = document.querySelector('.sidebar-container');
+            const overlay = document.getElementById('mobile-overlay');
+            
+            if (sidebar && overlay) {
+                sidebar.classList.remove('mobile-open');
+                overlay.classList.remove('active');
+                setTimeout(() => {
+                    overlay.style.display = 'none';
+                }, 300);
+            }
+        };
+        
+        // Set up event listeners when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('mobile-menu-toggle');
+            const overlay = document.getElementById('mobile-overlay');
+            
+            if (menuToggle) {
+                menuToggle.addEventListener('click', window.toggleMobileMenu);
+            }
+            
+            if (overlay) {
+                overlay.addEventListener('click', window.closeMobileMenu);
+            }
+        });
+    </script>
+    <script src="dashboard.js"></script>
+    <script src="js/workflow-progress-widget.js"></script>
+    <script src="js/context-verification-widget.js"></script>
+</body>
+</html>

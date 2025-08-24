@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "document": "verbosity-rollout-guide",
+    "title": "Verbosity System Rollout Guide for All Agents",
+    "timestamp": "2025-07-22T01:40:48.571Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md",
+    "document_type": "guide",
+    "file_hash": "19938edc1edd9b7e6eb2f1fe6926c97d",
+    "estimated_tokens": 454,
+    "full_md_tokens": 1121
+  },
+  "summary": "## Quick Summary",
+  "sections": [
+    {
+      "title": "Quick Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#quick-summary",
+      "content_preview": "We've implemented a standardized verbosity system that all agents can use to provide consistent, timezone-aware progress tracking. The system is confi..."
+    },
+    {
+      "title": "What's Been Created",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#whats-been-created",
+      "content_preview": ""
+    },
+    {
+      "title": "How to Add Verbosity to Your Agent",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#how-to-add-verbosity-to-your-agent",
+      "content_preview": ""
+    },
+    {
+      "title": "Priority Agents for Implementation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#priority-agents-for-implementation",
+      "content_preview": "Based on our analysis, these agents would benefit most from verbosity:"
+    },
+    {
+      "title": "Standard Emoji Reference",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#standard-emoji-reference",
+      "content_preview": "Use these for consistency:\n- 💻 Coder Agent\n- 🧪 Testing Agent\n- 🚀 DevOps Agent\n- 🔒 Security Agent\n- 🎨 UI/UX Agent\n- 📊 Analysis Agents\n- 📋 Manage..."
+    },
+    {
+      "title": "Benefits of Implementation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#benefits-of-implementation",
+      "content_preview": ""
+    },
+    {
+      "title": "Implementation Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#implementation-checklist",
+      "content_preview": "When adding verbosity to an agent:\n- [ ] Add verbosity configuration section\n- [ ] Reference display templates document\n- [ ] Identify workflows over ..."
+    },
+    {
+      "title": "Example from Testing Agent",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#example-from-testing-agent",
+      "content_preview": "The Testing Agent now shows:\n- Build verification progress across 7 phases\n- Real-time dependency resolution status\n- Browser testing progress across ..."
+    },
+    {
+      "title": "Next Steps",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#next-steps",
+      "content_preview": "1. **Review** the display templates document\n2. **Choose** workflows in your agent that need verbosity\n3. **Implement** using the templates and guide\n..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Quick Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#quick-summary",
+      "tokens": 51,
+      "content_preview": "We've implemented a standardized verbosity system that all agents can use to provide consistent, timezone-aware progress tracking. The system is confi..."
+    },
+    "What's Been Created": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#whats-been-created",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "**Verbosity Configuration** (in CLAUDE.md)": {
+          "content_preview": "- Global verbosity settings with PST as default timezone\n- Support for quiet, normal, verbose, and debug levels\n- Per-agent override capabilities\n- Ti...",
+          "tokens": 46,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#verbosity-configuration-in-claudemd-1"
+        },
+        "**Display Templates** (`/aaa-documents/verbosity-display-templates.md`)": {
+          "content_preview": "- Agent initialization displays\n- Multi-phase progress tracking\n- Parallel operations display\n- Error and warning templates\n- Completion summaries",
+          "tokens": 37,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#display-templates-aaa-documentsverbosity-display-templatesmd-1"
+        },
+        "**Implementation Guide** (`/aaa-documents/verbosity-implementation-guide.md`)": {
+          "content_preview": "- Step-by-step instructions for adding verbosity\n- Best practices and examples\n- Integration with CLAUDE.md settings",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#implementation-guide-aaa-documentsverbosity-implementation-guidemd-1"
+        },
+        "**Example Implementation** (Testing Agent)": {
+          "content_preview": "- Shows verbosity in action for complex workflows\n- Demonstrates error handling displays\n- Examples of phase progress and completion summaries",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#example-implementation-testing-agent-1"
+        }
+      }
+    },
+    "How to Add Verbosity to Your Agent": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#how-to-add-verbosity-to-your-agent",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Step 1: Add Verbosity Section": {
+          "content_preview": "Add this near the top of your agent document:\n```markdown",
+          "tokens": 14,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#step-1-add-verbosity-section-1"
+        },
+        "Verbosity Configuration": {
+          "content_preview": "This agent respects the verbosity settings in CLAUDE.md:\n- Shows detailed progress for [your key operations] in verbose mode\n- Displays phase-by-phase...",
+          "tokens": 81,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#verbosity-configuration-1"
+        },
+        "Step 2: Identify Key Workflows": {
+          "content_preview": "Look for operations that:\n- Take more than 30 seconds\n- Have multiple steps or phases\n- Can fail at various points\n- Users would want to monitor",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#step-2-identify-key-workflows-1"
+        },
+        "Step 3: Add Progress Displays": {
+          "content_preview": "For each major workflow, add verbosity displays:\n\n```markdown\nWhen executing in verbose mode, displays:\n\\```\n[WORKFLOW NAME] - PHASE [X] OF [Y] [[TIME...",
+          "tokens": 94,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#step-3-add-progress-displays-1"
+        },
+        "Step 4: Add Error Handling": {
+          "content_preview": "Show how errors appear:\n```markdown\nIf errors occur:\n\\```\n⚠️  [ERROR TYPE] DETECTED [[TIME] [TIMEZONE]]\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━...",
+          "tokens": 50,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#step-4-add-error-handling-1"
+        }
+      }
+    },
+    "Priority Agents for Implementation": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#priority-agents-for-implementation",
+      "tokens": 18,
+      "content_preview": "Based on our analysis, these agents would benefit most from verbosity:",
+      "subsections": {
+        "**Coder Agent** 💻": {
+          "content_preview": "- Feature development phases\n- Dependency updates\n- Build processes",
+          "tokens": 17,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#coder-agent-1"
+        },
+        "**DevOps Agent** 🚀": {
+          "content_preview": "- Deployment execution\n- Infrastructure setup\n- Port management",
+          "tokens": 16,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#devops-agent-1"
+        },
+        "**Security Agent** 🔒": {
+          "content_preview": "- Vulnerability scanning\n- Compliance checks\n- Penetration testing",
+          "tokens": 17,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#security-agent-1"
+        },
+        "**Scrum Master Agent** 📋": {
+          "content_preview": "- Sprint planning\n- Daily standups\n- Blocker resolution",
+          "tokens": 14,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#scrum-master-agent-1"
+        },
+        "**UI/UX Agent** 🎨": {
+          "content_preview": "- Design creation phases\n- Competitive analysis\n- Figma integration",
+          "tokens": 17,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#uiux-agent-1"
+        }
+      }
+    },
+    "Standard Emoji Reference": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#standard-emoji-reference",
+      "tokens": 41,
+      "content_preview": "Use these for consistency:\n- 💻 Coder Agent\n- 🧪 Testing Agent\n- 🚀 DevOps Agent\n- 🔒 Security Agent\n- 🎨 UI/UX Agent\n- 📊 Analysis Agents\n- 📋 Manage..."
+    },
+    "Benefits of Implementation": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#benefits-of-implementation",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "For Users:": {
+          "content_preview": "- Always know what's happening\n- See time estimates\n- Understand failures immediately\n- Track progress in real-time",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#for-users-1"
+        },
+        "For Agents:": {
+          "content_preview": "- Consistent format across system\n- Reduced support questions\n- Professional appearance\n- Better error communication",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#for-agents-1"
+        }
+      }
+    },
+    "Implementation Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#implementation-checklist",
+      "tokens": 88,
+      "content_preview": "When adding verbosity to an agent:\n- [ ] Add verbosity configuration section\n- [ ] Reference display templates document\n- [ ] Identify workflows over ..."
+    },
+    "Example from Testing Agent": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#example-from-testing-agent",
+      "tokens": 61,
+      "content_preview": "The Testing Agent now shows:\n- Build verification progress across 7 phases\n- Real-time dependency resolution status\n- Browser testing progress across ..."
+    },
+    "Next Steps": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-rollout-guide.md#next-steps",
+      "tokens": 107,
+      "content_preview": "1. **Review** the display templates document\n2. **Choose** workflows in your agent that need verbosity\n3. **Implement** using the templates and guide\n..."
+    }
+  }
+}

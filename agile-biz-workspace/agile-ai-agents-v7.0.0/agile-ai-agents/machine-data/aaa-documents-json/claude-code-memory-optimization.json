@@ -1,0 +1,297 @@
+{
+  "meta": {
+    "document": "claude-code-memory-optimization",
+    "title": "Claude Code Memory and Context Optimization Guide",
+    "timestamp": "2025-08-11T22:02:16.869Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md",
+    "document_type": "general_documentation",
+    "file_hash": "b8ca3657c911ae9496651e0acaa70db3",
+    "estimated_tokens": 700,
+    "full_md_tokens": 2516
+  },
+  "summary": "This guide explains how AgileAiAgents optimizes Claude Code's memory system and context window usage, achieving 80-90% token reduction through intelligent document management and loading strategies.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#overview",
+      "content_preview": "This guide explains how AgileAiAgents optimizes Claude Code's memory system and context window usage, achieving 80-90% token reduction through intelli..."
+    },
+    {
+      "title": "Understanding the Two Memory Systems",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#understanding-the-two-memory-systems",
+      "content_preview": ""
+    },
+    {
+      "title": "The MD → JSON Conversion System",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#the-md-json-conversion-system",
+      "content_preview": ""
+    },
+    {
+      "title": "Executive Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#executive-summary",
+      "content_preview": "The AI-powered task management market is experiencing rapid growth..."
+    },
+    {
+      "title": "Detailed Analysis",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#detailed-analysis",
+      "content_preview": "[... 2000 more words ...]\n```\n**Token Count**: ~3,500 tokens\n\n**JSON Equivalent**:\n```json\n{\n  \"title\": \"Market Analysis for AI Task Manager\",\n  \"sect..."
+    },
+    {
+      "title": "Memory Optimization Strategies",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#memory-optimization-strategies",
+      "content_preview": ""
+    },
+    {
+      "title": "Context Window Management",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#context-window-management",
+      "content_preview": ""
+    },
+    {
+      "title": "Agent-Specific Optimizations",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#agent-specific-optimizations",
+      "content_preview": ""
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Monitoring and Metrics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#monitoring-and-metrics",
+      "content_preview": ""
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "Advanced Optimizations",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#advanced-optimizations",
+      "content_preview": ""
+    },
+    {
+      "title": "Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#summary",
+      "content_preview": "Effective memory optimization in AgileAiAgents involves:\n\n1. **Automatic MD → JSON conversion** for 80-90% token savings\n2. **Smart context loading** ..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#overview",
+      "tokens": 50,
+      "content_preview": "This guide explains how AgileAiAgents optimizes Claude Code's memory system and context window usage, achieving 80-90% token reduction through intelli..."
+    },
+    "Understanding the Two Memory Systems": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#understanding-the-two-memory-systems",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Claude Code Memory System (CLAUDE.md)": {
+          "content_preview": "- **Purpose**: Persistent instructions and context\n- **Files**:\n  - `./CLAUDE.md` - Project-specific memory (team-shared)\n  - `~/.claude/CLAUDE.md` - ...",
+          "tokens": 67,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#1-claude-code-memory-system-claudemd-1"
+        },
+        "2. AgileAiAgents Document System": {
+          "content_preview": "- **Purpose**: Project deliverables and agent coordination\n- **Files**:\n  - `project-documents/` - Human-readable markdown\n  - `machine-data/project-d...",
+          "tokens": 67,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#2-agileaiagents-document-system-1"
+        }
+      }
+    },
+    "The MD → JSON Conversion System": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#the-md-json-conversion-system",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "How It Works": {
+          "content_preview": "```\n┌─────────────────────┐     ┌──────────────────────┐     ┌─────────────────┐\n│   Agent Creates     │     │  Document Manager    │     │  Agents Lo...",
+          "tokens": 132,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#how-it-works-1"
+        },
+        "Key Components": {
+          "content_preview": "1. **Markdown Creation** (`project-documents/`)\n   - All agents create documents as `.md` files\n   - Full formatting, headers, lists, code blocks\n   -...",
+          "tokens": 156,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#key-components-1"
+        },
+        "Example Token Savings": {
+          "content_preview": "**Markdown Document** (market-analysis.md):\n```markdown",
+          "tokens": 12,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#example-token-savings-1"
+        }
+      }
+    },
+    "Executive Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#executive-summary",
+      "tokens": 18,
+      "content_preview": "The AI-powered task management market is experiencing rapid growth...",
+      "subsections": {
+        "Key Findings": {
+          "content_preview": "- Market size: $2.3B in 2024\n- Growth rate: 45% CAGR\n- Main competitors: Notion AI, Taskade, ClickUp",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#key-findings-1"
+        }
+      }
+    },
+    "Detailed Analysis": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#detailed-analysis",
+      "tokens": 122,
+      "content_preview": "[... 2000 more words ...]\n```\n**Token Count**: ~3,500 tokens\n\n**JSON Equivalent**:\n```json\n{\n  \"title\": \"Market Analysis for AI Task Manager\",\n  \"sect..."
+    },
+    "Memory Optimization Strategies": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#memory-optimization-strategies",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. CLAUDE.md Optimization": {
+          "content_preview": "**Keep It Focused**:\n```markdown",
+          "tokens": 7,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#1-claudemd-optimization-1"
+        }
+      }
+    },
+    "Context Window Management": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#context-window-management",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Understanding Token Limits": {
+          "content_preview": "Claude Code models have context windows:\n- **Haiku**: ~100k tokens\n- **Sonnet**: ~200k tokens  \n- **Opus**: ~200k tokens\n\nAgileAiAgents typically uses...",
+          "tokens": 78,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#understanding-token-limits-1"
+        },
+        "When to Clear Context": {
+          "content_preview": "**Use `/compact`** (Recommended):\n- Between major project phases\n- After completing a sprint\n- When switching focus areas\n- Preserves essential contex...",
+          "tokens": 71,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#when-to-clear-context-1"
+        },
+        "Checkpoint Before Clearing": {
+          "content_preview": "Always checkpoint before context management:\n```bash",
+          "tokens": 13,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#checkpoint-before-clearing-1"
+        }
+      }
+    },
+    "Agent-Specific Optimizations": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#agent-specific-optimizations",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Research Agent": {
+          "content_preview": "- Creates large MD files during research\n- Should immediately trigger JSON conversion\n- Load JSON for all analysis operations\n- Only show MD to users ...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#research-agent-1"
+        },
+        "Coder Agent": {
+          "content_preview": "- Generate code directly (no JSON needed)\n- Reference JSON for requirements/specs\n- Keep active file context minimal\n- Clear after major implementatio...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#coder-agent-1"
+        },
+        "Documentation Agent": {
+          "content_preview": "- Create MD for readability\n- Trigger JSON for cross-references\n- Load templates as JSON\n- Output final docs as MD",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#documentation-agent-1"
+        },
+        "Project State Manager": {
+          "content_preview": "- Always works with JSON\n- Compresses old states\n- Maintains sliding window\n- Prunes unnecessary history",
+          "tokens": 26,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#project-state-manager-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. For Users": {
+          "content_preview": "**Optimize CLAUDE.md**:\n- Keep instructions concise\n- Use bullet points over paragraphs\n- Import shared configurations\n- Remove outdated instructions\n...",
+          "tokens": 44,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#1-for-users-1"
+        }
+      }
+    },
+    "Monitoring and Metrics": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#monitoring-and-metrics",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Check Token Usage": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#check-token-usage-1"
+        }
+      }
+    },
+    "Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "High Token Usage Despite Optimizations": {
+          "content_preview": "1. **Check CLAUDE.md Size**:\n   ```bash\n   wc -w CLAUDE.md\n   # Should be under 1000 words\n   ```\n\n2. **Verify JSON Loading**:\n   - Check logs for MD ...",
+          "tokens": 94,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#high-token-usage-despite-optimizations-1"
+        },
+        "JSON Files Not Being Created": {
+          "content_preview": "1. **Check Document Manager**:\n   - Verify it's initialized\n   - Check write permissions\n   - Look for error logs\n\n2. **Manual Trigger**:\n   ```bash\n ...",
+          "tokens": 48,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#json-files-not-being-created-1"
+        },
+        "Context Still Growing": {
+          "content_preview": "1. **Check Auto-Save Frequency**:\n   - May be creating too many checkpoints\n   - Adjust in CLAUDE.md settings\n\n2. **Review Conversation Length**:\n   -...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#context-still-growing-1"
+        }
+      }
+    },
+    "Advanced Optimizations": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#advanced-optimizations",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Custom JSON Schemas": {
+          "content_preview": "Create targeted JSON structures for specific use cases:\n\n```javascript\n// research-optimizer.js\nfunction optimizeResearch(markdown) {\n  return {\n    s...",
+          "tokens": 74,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#custom-json-schemas-1"
+        },
+        "Lazy Loading Implementation": {
+          "content_preview": "Load documents only when accessed:\n\n```javascript\nclass LazyDocumentLoader {\n  constructor() {\n    this.cache = new Map();\n  }\n  \n  async getDocument(...",
+          "tokens": 75,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#lazy-loading-implementation-1"
+        },
+        "Context Sliding Window": {
+          "content_preview": "Maintain only recent context:\n\n```javascript\nclass ContextWindow {\n  constructor(maxSize = 10) {\n    this.contexts = [];\n    this.maxSize = maxSize;\n ...",
+          "tokens": 74,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#context-sliding-window-1"
+        }
+      }
+    },
+    "Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-memory-optimization.md#summary",
+      "tokens": 120,
+      "content_preview": "Effective memory optimization in AgileAiAgents involves:\n\n1. **Automatic MD → JSON conversion** for 80-90% token savings\n2. **Smart context loading** ..."
+    }
+  }
+}

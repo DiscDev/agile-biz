@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "agent": "devops_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 250,
+    "full_md_tokens": 8875,
+    "md_file": "agile-ai-agents/ai-agents/devops_agent.md",
+    "file_hash": "a4001e34857bd29b17a432ab01bf9891"
+  },
+  "summary": "## Overview\nThe DevOps Agent specializes in infrastructure management, deployment automation, and operational excellence. This agent focuses on the reliable delivery, scaling, and monitoring of software systems in production environments.",
+  "core_responsibilities": {
+    "summary": [
+      "Infrastructure Management & Automation",
+      "CI/CD Pipeline Management",
+      "Monitoring & Observability",
+      "Security & Compliance Operations",
+      "Sprint Integration & Story Validation (CRITICAL - NEW)"
+    ],
+    "details_tokens": 1045,
+    "md_reference": "agile-ai-agents/ai-agents/devops_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "Dynamic Port Management & Deployment Workflow (NEW CRITICAL REQUIREMENT) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/devops_agent.md#dynamic-port-management-deployment-workflow-new-critical-requirement-workflow"
+      },
+      {
+        "name": "Environment-Based Port Configuration Workflow (MULTI-PROJECT SUPPORT) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/devops_agent.md#environment-based-port-configuration-workflow-multi-project-support-workflow"
+      },
+      {
+        "name": "Production Deployment Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/devops_agent.md#production-deployment-workflow"
+      },
+      {
+        "name": "Infrastructure Scaling Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/devops_agent.md#infrastructure-scaling-workflow"
+      },
+      {
+        "name": "AWS MCP Infrastructure Workflow (WHEN CONFIGURED) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/devops_agent.md#aws-mcp-infrastructure-workflow-when-configured-workflow"
+      },
+      {
+        "name": "Context7 MCP Infrastructure Documentation Workflow (WHEN CONFIGURED) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/devops_agent.md#context7-mcp-infrastructure-documentation-workflow-when-configured-workflow"
+      },
+      {
+        "name": "Incident Response Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/devops_agent.md#incident-response-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/devops_agent.md#workflows"
+  },
+  "reference_documentation": {
+    "deployment_guide": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/deployment.json",
+      "tokens": 1000
+    },
+    "ci/cd_setup": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/ci-cd-setup.json",
+      "tokens": 1000
+    },
+    "deployment_validation_gates": {
+      "path": "agile-ai-agents/ai-agent-coordination/deployment-validation-gates.md",
+      "tokens": 1000
+    },
+    "orchestrator_workflows": {
+      "path": "agile-ai-agents/ai-agent-coordination/orchestrator-workflows.md",
+      "tokens": 1000
+    }
+  },
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/devops_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

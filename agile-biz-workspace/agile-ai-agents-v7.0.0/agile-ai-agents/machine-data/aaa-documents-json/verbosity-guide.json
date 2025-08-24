@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "document": "verbosity-guide",
+    "title": "Verbosity Guide",
+    "timestamp": "2025-08-11T22:02:16.934Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/verbosity-guide.md",
+    "document_type": "guide",
+    "file_hash": "b31a7a3320c54502a8ff9a47fa4b0302",
+    "estimated_tokens": 516,
+    "full_md_tokens": 1757
+  },
+  "summary": "The AgileAiAgents verbosity system controls how much detail AI agents display during their operations. This guide helps you configure verbosity to match your needs, whether you want minimal output for production or detailed progress tracking during development.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#overview",
+      "content_preview": "The AgileAiAgents verbosity system controls how much detail AI agents display during their operations. This guide helps you configure verbosity to mat..."
+    },
+    {
+      "title": "Quick Start",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#quick-start",
+      "content_preview": "Set your verbosity level in `CLAUDE.md`:\n```yaml\nverbosity:\n  level: \"verbose\"  # Choose: quiet, normal, verbose, debug\n```"
+    },
+    {
+      "title": "Configuration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#configuration",
+      "content_preview": ""
+    },
+    {
+      "title": "Verbosity Levels Explained",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#verbosity-levels-explained",
+      "content_preview": ""
+    },
+    {
+      "title": "What Different Agents Show",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#what-different-agents-show",
+      "content_preview": ""
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "Examples by Workflow",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#examples-by-workflow",
+      "content_preview": ""
+    },
+    {
+      "title": "Related Documentation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#related-documentation",
+      "content_preview": "- **For Agents**: See `verbosity-agent-implementation.md` for implementation details\n- **Configuration**: Full settings reference in `CLAUDE.md`\n- **E..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#overview",
+      "tokens": 66,
+      "content_preview": "The AgileAiAgents verbosity system controls how much detail AI agents display during their operations. This guide helps you configure verbosity to mat..."
+    },
+    "Quick Start": {
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#quick-start",
+      "tokens": 29,
+      "content_preview": "Set your verbosity level in `CLAUDE.md`:\n```yaml\nverbosity:\n  level: \"verbose\"  # Choose: quiet, normal, verbose, debug\n```"
+    },
+    "Configuration": {
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#configuration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Location": {
+          "content_preview": "All verbosity settings are configured in the `CLAUDE.md` file at the root of your agile-ai-agents directory.",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#location-1"
+        },
+        "Full Configuration Options": {
+          "content_preview": "```yaml\nverbosity:\n  level: \"verbose\"              # Output detail level\n  display:\n    format: \"grouped_by_agent\"  # How to group status messages\n   ...",
+          "tokens": 81,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#full-configuration-options-1"
+        },
+        "Timezone Configuration": {
+          "content_preview": "- Use IANA timezone format (e.g., \"America/New_York\", \"Europe/London\", \"Asia/Tokyo\")\n- Find your timezone: https://en.wikipedia.org/wiki/List_of_tz_da...",
+          "tokens": 52,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#timezone-configuration-1"
+        }
+      }
+    },
+    "Verbosity Levels Explained": {
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#verbosity-levels-explained",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "🔇 quiet": {
+          "content_preview": "**When to use**: Production environments, automated scripts, minimal logging needs\n\n**What you'll see**:\n- Critical errors only\n- Final results\n- No p...",
+          "tokens": 66,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#quiet-1"
+        },
+        "📢 normal (default)": {
+          "content_preview": "**When to use**: Regular development work, balanced information\n\n**What you'll see**:\n- Key milestones and phase transitions\n- Important status update...",
+          "tokens": 109,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#normal-default-1"
+        },
+        "📊 verbose (recommended for development)": {
+          "content_preview": "**When to use**: Development, debugging, learning agent workflows\n\n**What you'll see**:\n- Detailed progress tracking with progress bars\n- Phase-by-pha...",
+          "tokens": 228,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#verbose-recommended-for-development-1"
+        },
+        "🔍 debug": {
+          "content_preview": "**When to use**: Troubleshooting, deep debugging, development of agents\n\n**What you'll see**:\n- Everything from verbose mode\n- Internal state informat...",
+          "tokens": 136,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#debug-1"
+        }
+      }
+    },
+    "What Different Agents Show": {
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#what-different-agents-show",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "During Multi-Phase Operations": {
+          "content_preview": "Agents with complex workflows (PRD, Coder, Testing) show:\n- Phase initialization with time estimates\n- Progress bars with percentages\n- Subtask comple...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#during-multi-phase-operations-1"
+        },
+        "During Parallel Operations": {
+          "content_preview": "When multiple agents work together:\n```\nPARALLEL AGENT OPERATIONS [10:45:30 AM PST]\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n⚡ P...",
+          "tokens": 96,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#during-parallel-operations-1"
+        },
+        "Error Displays": {
+          "content_preview": "Errors are ALWAYS shown regardless of verbosity level:\n```\n❌ ERROR in Coder Agent [10:50:15 AM PST]\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━...",
+          "tokens": 92,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#error-displays-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "For Different Scenarios": {
+          "content_preview": "**New to AgileAiAgents**:\n- Start with `verbose` to understand agent workflows\n- Watch how agents collaborate and hand off work\n- Learn the typical du...",
+          "tokens": 154,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#for-different-scenarios-1"
+        },
+        "Performance Considerations": {
+          "content_preview": "- `quiet` and `normal` have minimal performance impact\n- `verbose` adds ~2-5% overhead due to progress tracking\n- `debug` can add 10-15% overhead - us...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#performance-considerations-1"
+        }
+      }
+    },
+    "Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Not Seeing Expected Output?": {
+          "content_preview": "1. **Check verbosity level**: Ensure it's set correctly in CLAUDE.md\n2. **Verify file location**: CLAUDE.md must be in the agile-ai-agents root\n3. **A...",
+          "tokens": 72,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#not-seeing-expected-output-1"
+        },
+        "Timezone Issues?": {
+          "content_preview": "1. **Verify timezone format**: Use IANA format (e.g., \"America/New_York\")\n2. **Check daylight saving**: System handles DST automatically\n3. **Update t...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#timezone-issues-1"
+        },
+        "Progress Bars Not Displaying?": {
+          "content_preview": "- Ensure terminal width is at least 80 characters\n- Check terminal Unicode support\n- Try switching to a different terminal emulator",
+          "tokens": 33,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#progress-bars-not-displaying-1"
+        }
+      }
+    },
+    "Examples by Workflow": {
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#examples-by-workflow",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Sprint Planning (Verbose)": {
+          "content_preview": "```\nSPRINT PLANNING - PHASE 1 OF 3 [09:00:00 AM PST] | Elapsed: 00:00:00\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n📋 ANALYZING B...",
+          "tokens": 90,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#sprint-planning-verbose-1"
+        },
+        "Code Generation (Normal)": {
+          "content_preview": "```\nCoder Agent: Starting implementation of user authentication\nCoder Agent: Generated auth module (2 min)\nCoder Agent: Added test coverage (1 min)\n✓ ...",
+          "tokens": 42,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#code-generation-normal-1"
+        },
+        "Error Handling (All Levels)": {
+          "content_preview": "```\n❌ ERROR: Database connection failed\nConnection timeout after 30 seconds\nCheck database server status and credentials\n```",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#error-handling-all-levels-1"
+        }
+      }
+    },
+    "Related Documentation": {
+      "md_reference": "agile-ai-agents/aaa-documents/verbosity-guide.md#related-documentation",
+      "tokens": 53,
+      "content_preview": "- **For Agents**: See `verbosity-agent-implementation.md` for implementation details\n- **Configuration**: Full settings reference in `CLAUDE.md`\n- **E..."
+    }
+  }
+}

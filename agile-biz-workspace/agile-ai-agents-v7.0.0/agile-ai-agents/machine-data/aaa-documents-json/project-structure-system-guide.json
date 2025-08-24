@@ -1,0 +1,376 @@
+{
+  "meta": {
+    "document": "project-structure-system-guide",
+    "title": "Project Structure System Guide",
+    "timestamp": "2025-08-11T22:02:16.912Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/project-structure-system-guide.md",
+    "document_type": "guide",
+    "file_hash": "efe0a408f2ad4b67751e179202cf8839",
+    "estimated_tokens": 777,
+    "full_md_tokens": 2252
+  },
+  "summary": "The Project Structure Agent (#38) is a self-learning agent that manages repository structures for projects, learning from patterns and outcomes to provide increasingly better recommendations over time. It helps teams make data-driven decisions about when to evolve from single to multi-repository architectures.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#overview",
+      "content_preview": "The Project Structure Agent (#38) is a self-learning agent that manages repository structures for projects, learning from patterns and outcomes to pro..."
+    },
+    {
+      "title": "Core Principles",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#core-principles",
+      "content_preview": "1. **Start Simple** - Always begin with a single repository\n2. **Evolve Based on Need** - Split only when concrete triggers appear\n3. **Learn from Pat..."
+    },
+    {
+      "title": "When to Use the Project Structure Agent",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#when-to-use-the-project-structure-agent",
+      "content_preview": ""
+    },
+    {
+      "title": "Common Evolution Patterns",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#common-evolution-patterns",
+      "content_preview": ""
+    },
+    {
+      "title": "Repository Health Metrics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#repository-health-metrics",
+      "content_preview": "The Project Structure Agent monitors these key indicators:"
+    },
+    {
+      "title": "Migration Guide",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#migration-guide",
+      "content_preview": ""
+    },
+    {
+      "title": "Industry-Specific Considerations",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#industry-specific-considerations",
+      "content_preview": ""
+    },
+    {
+      "title": "Anti-Patterns to Avoid",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#anti-patterns-to-avoid",
+      "content_preview": ""
+    },
+    {
+      "title": "Multi-Repository Coordination",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#multi-repository-coordination-2",
+      "content_preview": ""
+    },
+    {
+      "title": "Success Patterns from Community",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#success-patterns-from-community",
+      "content_preview": "Based on analysis of 35+ similar projects:"
+    },
+    {
+      "title": "Quick Reference Commands",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#quick-reference-commands",
+      "content_preview": ""
+    },
+    {
+      "title": "Continuous Learning",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#continuous-learning",
+      "content_preview": "The Project Structure Agent continuously improves through:"
+    },
+    {
+      "title": "Getting Started",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#getting-started",
+      "content_preview": ""
+    },
+    {
+      "title": "Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#summary",
+      "content_preview": "The Project Structure Agent helps teams:\n- ✅ Start simple and evolve based on real needs\n- ✅ Make data-driven structure decisions\n- ✅ Avoid common pit..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#overview",
+      "tokens": 77,
+      "content_preview": "The Project Structure Agent (#38) is a self-learning agent that manages repository structures for projects, learning from patterns and outcomes to pro..."
+    },
+    "Core Principles": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#core-principles",
+      "tokens": 74,
+      "content_preview": "1. **Start Simple** - Always begin with a single repository\n2. **Evolve Based on Need** - Split only when concrete triggers appear\n3. **Learn from Pat..."
+    },
+    "When to Use the Project Structure Agent": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#when-to-use-the-project-structure-agent",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Initial Project Setup": {
+          "content_preview": "- Starting a new project and unsure about repository structure\n- Want to avoid over-engineering from the start\n- Need industry-specific structure reco...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#initial-project-setup-1"
+        },
+        "Existing Project Evolution": {
+          "content_preview": "- Build times exceeding 15 minutes\n- Frequent merge conflicts (>25% of PRs)\n- Team size approaching coordination limits (6-8 developers)\n- Different d...",
+          "tokens": 48,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#existing-project-evolution-1"
+        },
+        "Multi-Repository Coordination": {
+          "content_preview": "- Implementing features across multiple repositories\n- Managing cross-repository dependencies\n- Synchronizing releases and deployments",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#multi-repository-coordination-1"
+        }
+      }
+    },
+    "Common Evolution Patterns": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#common-evolution-patterns",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Pattern 1: Marketing Site Split (Most Common)": {
+          "content_preview": "**Trigger**: SEO requirements conflict with app framework  \n**Timeline**: Usually within first 2-3 months  \n**Success Rate**: 92% report improved metr...",
+          "tokens": 142,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#pattern-1-marketing-site-split-most-common-1"
+        },
+        "Pattern 2: API Service Extraction": {
+          "content_preview": "**Trigger**: Backend complexity requires versioning  \n**Timeline**: 4-6 months into project  \n**Success Rate**: 83% report better stability\n\n```\nBefor...",
+          "tokens": 95,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#pattern-2-api-service-extraction-1"
+        },
+        "Pattern 3: Admin Dashboard Split": {
+          "content_preview": "**Trigger**: Admin features exceed 20+ screens  \n**Timeline**: 6-12 months  \n**Success Rate**: 88% report faster feature development\n\n```\nBefore:\n  my...",
+          "tokens": 107,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#pattern-3-admin-dashboard-split-1"
+        }
+      }
+    },
+    "Repository Health Metrics": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#repository-health-metrics",
+      "tokens": 15,
+      "content_preview": "The Project Structure Agent monitors these key indicators:",
+      "subsections": {
+        "Build Time Thresholds": {
+          "content_preview": "- **Green**: < 10 minutes\n- **Yellow**: 10-15 minutes (monitor closely)\n- **Red**: > 15 minutes (consider splitting)",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#build-time-thresholds-1"
+        },
+        "Team Size Boundaries": {
+          "content_preview": "- **Small**: 1-3 developers (single repo optimal)\n- **Medium**: 4-6 developers (monitor friction)\n- **Large**: 7+ developers (multi-repo likely benefi...",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#team-size-boundaries-1"
+        },
+        "Merge Conflict Frequency": {
+          "content_preview": "- **Healthy**: < 10% of PRs have conflicts\n- **Warning**: 10-25% conflict rate\n- **Critical**: > 25% conflict rate",
+          "tokens": 26,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#merge-conflict-frequency-1"
+        },
+        "Deployment Complexity": {
+          "content_preview": "- **Simple**: Single deployment, all features together\n- **Moderate**: Feature flags for independent releases\n- **Complex**: Coordination required for...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#deployment-complexity-1"
+        }
+      }
+    },
+    "Migration Guide": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#migration-guide",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Step 1: Initial Analysis": {
+          "content_preview": "```\nActing as the Project Structure Agent, analyze my existing project structure and identify:\n1. Current repository health metrics\n2. Potential evolu...",
+          "tokens": 53,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#step-1-initial-analysis-1"
+        },
+        "Step 2: Migration Planning": {
+          "content_preview": "If evolution is recommended, the agent provides:\n1. **Phased approach** - Start with highest-impact splits\n2. **Risk mitigation** - Minimize disruptio...",
+          "tokens": 46,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#step-2-migration-planning-1"
+        },
+        "Step 3: Implementation Checklist": {
+          "content_preview": "- [ ] Verify functionality\n- [ ] Monitor metrics\n- [ ] Document workflow\n- [ ] Train team\n- [ ] Track success (30 days)",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#step-3-implementation-checklist-4"
+        }
+      }
+    },
+    "Industry-Specific Considerations": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#industry-specific-considerations",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Healthcare/Fintech (High Compliance)": {
+          "content_preview": "- **Isolate**: PHI/PII processing into separate repository\n- **Audit**: Dedicated logging service\n- **Compliance**: Reports in isolated repository\n- *...",
+          "tokens": 50,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#healthcarefintech-high-compliance-1"
+        },
+        "E-commerce": {
+          "content_preview": "- **Performance**: Separate storefront for speed\n- **Real-time**: Inventory service isolation\n- **Analytics**: Big data processing separation\n- **Exam...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#e-commerce-1"
+        },
+        "SaaS B2B": {
+          "content_preview": "- **Marketing**: SEO-optimized public site\n- **Application**: Core product features\n- **API**: Versioned service layer\n- **Example**: `marketing` | `a...",
+          "tokens": 37,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#saas-b2b-1"
+        }
+      }
+    },
+    "Anti-Patterns to Avoid": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#anti-patterns-to-avoid",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "❌ Premature Splitting": {
+          "content_preview": "**Signs**: \n- Team < 3 developers\n- Codebase < 10,000 lines\n- No friction points\n\n**Better**: Wait for concrete triggers",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#premature-splitting-1"
+        },
+        "❌ Over-Fragmentation": {
+          "content_preview": "**Signs**:\n- More repos than developers\n- Every feature separate\n- High coordination overhead\n\n**Better**: Logical domain boundaries",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#over-fragmentation-1"
+        },
+        "❌ Technology-Based Splits": {
+          "content_preview": "**Signs**:\n- Frontend/backend only\n- No clear ownership\n- Tight coupling remains\n\n**Better**: Split by business domain",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#technology-based-splits-1"
+        }
+      }
+    },
+    "Multi-Repository Coordination": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#multi-repository-coordination-2",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Feature Implementation Across Repos": {
+          "content_preview": "```yaml\nFeature: User Authentication\nRepositories Affected:\n  - api: Auth endpoints, JWT management\n  - app: Login UI, auth context\n  - admin: User ma...",
+          "tokens": 95,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#feature-implementation-across-repos-1"
+        },
+        "Cross-Repository Dependencies": {
+          "content_preview": "The agent tracks and manages:\n- Shared types and interfaces\n- API contracts\n- Common UI components\n- Deployment dependencies",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#cross-repository-dependencies-1"
+        }
+      }
+    },
+    "Success Patterns from Community": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#success-patterns-from-community",
+      "tokens": 11,
+      "content_preview": "Based on analysis of 35+ similar projects:",
+      "subsections": {
+        "Early Wins (95% confidence)": {
+          "content_preview": "1. **Mobile + API Split** - Start with separate mobile/API repos\n2. **Marketing Independence** - Split by month 3 for SEO\n3. **Progressive Admin** - E...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#early-wins-95-confidence-1"
+        },
+        "Common Timelines": {
+          "content_preview": "- **Month 0-2**: Single repository development\n- **Month 2-3**: Marketing site extraction\n- **Month 4-5**: API service separation\n- **Month 6-7**: Adm...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#common-timelines-1"
+        },
+        "Metric Improvements": {
+          "content_preview": "- **Build time**: 50-70% reduction per repo\n- **Deploy frequency**: 2-3x increase\n- **Merge conflicts**: 60-80% reduction\n- **Team velocity**: 40% ave...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#metric-improvements-1"
+        }
+      }
+    },
+    "Quick Reference Commands": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#quick-reference-commands",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Analyze Current Structure": {
+          "content_preview": "```\nActing as the Project Structure Agent, analyze my repository structure and provide health metrics.\n```",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#analyze-current-structure-1"
+        },
+        "Get Evolution Recommendation": {
+          "content_preview": "```\nActing as the Project Structure Agent, evaluate if my repository needs to be split based on current metrics.\n```",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#get-evolution-recommendation-1"
+        },
+        "Create Migration Plan": {
+          "content_preview": "```\nActing as the Project Structure Agent, create a detailed migration plan for evolving from single to multi-repo.\n```",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#create-migration-plan-1"
+        },
+        "Coordinate Cross-Repo Feature": {
+          "content_preview": "```\nActing as the Project Structure Agent, coordinate the implementation of [feature] across our multiple repositories.\n```",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#coordinate-cross-repo-feature-1"
+        },
+        "Monitor Repository Health": {
+          "content_preview": "```\nActing as the Project Structure Agent, provide a health assessment of our current repository structure.\n```",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#monitor-repository-health-1"
+        }
+      }
+    },
+    "Continuous Learning": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#continuous-learning",
+      "tokens": 15,
+      "content_preview": "The Project Structure Agent continuously improves through:",
+      "subsections": {
+        "Community Patterns": {
+          "content_preview": "- Learns from every project evolution\n- Identifies successful patterns\n- Warns about anti-patterns\n- Confidence scoring based on sample size",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#community-patterns-1"
+        },
+        "Success Tracking": {
+          "content_preview": "- Before/after metrics comparison\n- Developer satisfaction surveys\n- Deployment frequency improvements\n- Build time reductions",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#success-tracking-1"
+        },
+        "Pattern Recognition": {
+          "content_preview": "- Minimum 3 similar cases for recommendations\n- Industry-specific pattern detection\n- Technology stack considerations\n- Team size correlations",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#pattern-recognition-1"
+        }
+      }
+    },
+    "Getting Started": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#getting-started",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "For New Projects": {
+          "content_preview": "1. Start with single repository (always)\n2. Let agent monitor health metrics\n3. Evolve when triggers appear\n4. Follow phased migration approach",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#for-new-projects-1"
+        },
+        "For Existing Projects": {
+          "content_preview": "1. Run initial health analysis\n2. Review evolution recommendations\n3. Plan migration if triggered\n4. Track success metrics",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#for-existing-projects-1"
+        },
+        "For Multi-Repo Teams": {
+          "content_preview": "1. Use agent for coordination\n2. Standardize workflows\n3. Monitor coupling between repos\n4. Optimize based on patterns",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#for-multi-repo-teams-1"
+        }
+      }
+    },
+    "Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-system-guide.md#summary",
+      "tokens": 133,
+      "content_preview": "The Project Structure Agent helps teams:\n- ✅ Start simple and evolve based on real needs\n- ✅ Make data-driven structure decisions\n- ✅ Avoid common pit..."
+    }
+  }
+}

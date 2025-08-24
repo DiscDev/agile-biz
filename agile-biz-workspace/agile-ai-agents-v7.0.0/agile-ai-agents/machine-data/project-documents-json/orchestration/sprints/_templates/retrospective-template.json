@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "document": "retrospective-template",
+    "title": "Sprint Retrospective - [Agent Name] - sprint-YYYY-MM-DD-feature-name",
+    "timestamp": "2025-07-22T01:41:03.738Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/_templates/retrospective-template.md",
+    "document_type": "template",
+    "file_hash": "55299e65fcab7a2f484565b47b4ee3bd",
+    "estimated_tokens": 355,
+    "full_md_tokens": 194
+  },
+  "summary": "**Agent**: agent_name",
+  "sections": [
+    {
+      "title": "What Went Well",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/retrospective-template.md#what-went-well",
+      "content_preview": "- Success 1\n- Success 2\n- Success 3"
+    },
+    {
+      "title": "What Could Be Improved",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/retrospective-template.md#what-could-be-improved",
+      "content_preview": "- Improvement area 1\n- Improvement area 2\n- Improvement area 3"
+    },
+    {
+      "title": "What We Learned",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/retrospective-template.md#what-we-learned",
+      "content_preview": "- Learning 1\n- Learning 2\n- Learning 3"
+    },
+    {
+      "title": "Action Items for Next Sprint",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/retrospective-template.md#action-items-for-next-sprint",
+      "content_preview": "- [ ] Action 1 (Owner: agent_name)\n- [ ] Action 2 (Owner: agent_name)\n- [ ] Action 3 (Owner: agent_name)"
+    },
+    {
+      "title": "Metrics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/retrospective-template.md#metrics",
+      "content_preview": "- Story points completed: X/Y\n- Blockers encountered: X\n- Blockers resolved: X\n- Average cycle time: X hours"
+    },
+    {
+      "title": "Recommendations",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/retrospective-template.md#recommendations",
+      "content_preview": "- Process improvement 1\n- Tool suggestion 1\n- Communication enhancement 1"
+    },
+    {
+      "title": "Appreciation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/retrospective-template.md#appreciation",
+      "content_preview": "- Thank agent_x for help with Y\n- Recognize agent_z for quick turnaround on Z"
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "sprint_management"
+  ],
+  "section_details": {
+    "What Went Well": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/retrospective-template.md#what-went-well",
+      "tokens": 9,
+      "content_preview": "- Success 1\n- Success 2\n- Success 3"
+    },
+    "What Could Be Improved": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/retrospective-template.md#what-could-be-improved",
+      "tokens": 16,
+      "content_preview": "- Improvement area 1\n- Improvement area 2\n- Improvement area 3"
+    },
+    "What We Learned": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/retrospective-template.md#what-we-learned",
+      "tokens": 10,
+      "content_preview": "- Learning 1\n- Learning 2\n- Learning 3"
+    },
+    "Action Items for Next Sprint": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/retrospective-template.md#action-items-for-next-sprint",
+      "tokens": 23,
+      "content_preview": "- [ ] Action 1 (Owner: agent_name)\n- [ ] Action 2 (Owner: agent_name)\n- [ ] Action 3 (Owner: agent_name)"
+    },
+    "Metrics": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/retrospective-template.md#metrics",
+      "tokens": 27,
+      "content_preview": "- Story points completed: X/Y\n- Blockers encountered: X\n- Blockers resolved: X\n- Average cycle time: X hours"
+    },
+    "Recommendations": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/retrospective-template.md#recommendations",
+      "tokens": 19,
+      "content_preview": "- Process improvement 1\n- Tool suggestion 1\n- Communication enhancement 1"
+    },
+    "Appreciation": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/retrospective-template.md#appreciation",
+      "tokens": 20,
+      "content_preview": "- Thank agent_x for help with Y\n- Recognize agent_z for quick turnaround on Z"
+    }
+  }
+}

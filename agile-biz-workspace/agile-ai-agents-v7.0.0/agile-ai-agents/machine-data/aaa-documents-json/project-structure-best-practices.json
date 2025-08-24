@@ -1,0 +1,235 @@
+{
+  "meta": {
+    "document": "project-structure-best-practices",
+    "title": "Project Structure Best Practices Guide",
+    "timestamp": "2025-08-11T22:02:16.911Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/project-structure-best-practices.md",
+    "document_type": "technical",
+    "file_hash": "fd0979fd4dae400c69893b1ea4725e2a",
+    "estimated_tokens": 559,
+    "full_md_tokens": 2097
+  },
+  "summary": "This guide provides best practices for organizing project structures based on technology stack, team size, and project requirements. Following these practices ensures maintainability, scalability, and smooth evolution as projects grow.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#overview",
+      "content_preview": "This guide provides best practices for organizing project structures based on technology stack, team size, and project requirements. Following these p..."
+    },
+    {
+      "title": "Core Principles",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#core-principles",
+      "content_preview": ""
+    },
+    {
+      "title": "Architecture-Specific Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#architecture-specific-best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Common Patterns",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#common-patterns",
+      "content_preview": ""
+    },
+    {
+      "title": "Evolution Patterns",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#evolution-patterns",
+      "content_preview": ""
+    },
+    {
+      "title": "Monitoring and Metrics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#monitoring-and-metrics",
+      "content_preview": ""
+    },
+    {
+      "title": "Common Mistakes to Avoid",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#common-mistakes-to-avoid",
+      "content_preview": ""
+    },
+    {
+      "title": "Implementation Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#implementation-checklist",
+      "content_preview": ""
+    },
+    {
+      "title": "Scaffold Template Reference",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#scaffold-template-reference",
+      "content_preview": "Available templates in `/agile-ai-agents/templates/project-scaffolds/`:\n\n* **Separated Stack**: React+Node, Vue+Django, Laravel+React\n* **Full-Stack F..."
+    },
+    {
+      "title": "Conclusion",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#conclusion",
+      "content_preview": "Good project structure is essential for maintainability and team productivity. Start simple, follow conventions, and evolve based on actual needs rath..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#overview",
+      "tokens": 59,
+      "content_preview": "This guide provides best practices for organizing project structures based on technology stack, team size, and project requirements. Following these p..."
+    },
+    "Core Principles": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#core-principles",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Start Simple, Evolve Intentionally": {
+          "content_preview": "* Always begin with a single repository\n* Monitor metrics to identify when splits are needed\n* Evolution triggers: build time > 10min, merge conflicts...",
+          "tokens": 57,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#1-start-simple-evolve-intentionally-1"
+        },
+        "2. Separation of Concerns": {
+          "content_preview": "* Keep frontend and backend code clearly separated\n* Use distinct directories for different domains\n* Avoid mixing UI components with business logic\n*...",
+          "tokens": 48,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#2-separation-of-concerns-1"
+        },
+        "3. Convention Over Configuration": {
+          "content_preview": "* Follow framework conventions when available\n* Use standard directory names (src/, tests/, docs/)\n* Keep configuration files at appropriate levels\n* ...",
+          "tokens": 46,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#3-convention-over-configuration-1"
+        }
+      }
+    },
+    "Architecture-Specific Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#architecture-specific-best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Separated Stack (Frontend + Backend)": {
+          "content_preview": "**Recommended Structure**:\n```\nproject/\n├── frontend/\n│   ├── src/\n│   │   ├── components/\n│   │   ├── pages/\n│   │   ├── services/\n│   │   ├── store/...",
+          "tokens": 223,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#separated-stack-frontend-backend-1"
+        },
+        "Full-Stack Frameworks (Next.js, Nuxt, SvelteKit)": {
+          "content_preview": "**Recommended Structure**:\n```\nproject/\n├── app/                    # App Router (Next.js 13+)\n│   ├── api/               # API routes\n│   ├── (auth)/...",
+          "tokens": 188,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#full-stack-frameworks-nextjs-nuxt-sveltekit-1"
+        },
+        "Monolithic Applications (Django, Rails, Laravel)": {
+          "content_preview": "**Recommended Structure**:\n```\nproject/\n├── app/                    # Main application\n│   ├── controllers/\n│   ├── models/\n│   ├── views/\n│   └── ser...",
+          "tokens": 147,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#monolithic-applications-django-rails-laravel-1"
+        },
+        "Microservices Architecture": {
+          "content_preview": "**Recommended Structure**:\n```\nproject/\n├── services/\n│   ├── auth-service/\n│   ├── user-service/\n│   ├── payment-service/\n│   └── notification-servic...",
+          "tokens": 136,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#microservices-architecture-1"
+        }
+      }
+    },
+    "Common Patterns": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#common-patterns",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Test Organization": {
+          "content_preview": "**Unit Tests**:\n```\nsrc/\n├── components/\n│   ├── Button.tsx\n│   └── Button.test.tsx    # Co-located\ntests/\n└── unit/\n    └── utils/             # Cent...",
+          "tokens": 70,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#test-organization-1"
+        },
+        "Configuration Management": {
+          "content_preview": "**Environment-Specific**:\n```\nconfig/\n├── default.json           # Base configuration\n├── development.json       # Dev overrides\n├── production.json  ...",
+          "tokens": 72,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#configuration-management-1"
+        },
+        "Documentation Structure": {
+          "content_preview": "```\ndocs/\n├── api/                   # API documentation\n├── architecture/          # System design\n├── deployment/           # Deployment guides\n└── ...",
+          "tokens": 69,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#documentation-structure-1"
+        }
+      }
+    },
+    "Evolution Patterns": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#evolution-patterns",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "When to Split Repositories": {
+          "content_preview": "**Marketing Site Split (Month 2-3)**:\n* Different deployment needs (CDN vs servers)\n* SEO requirements conflict with app framework\n* Different team wo...",
+          "tokens": 134,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#when-to-split-repositories-1"
+        },
+        "Migration Strategies": {
+          "content_preview": "**Gradual Migration**:\n1. Create new directory structure\n2. Move components one at a time\n3. Update imports progressively\n4. Maintain backward compati...",
+          "tokens": 91,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#migration-strategies-1"
+        }
+      }
+    },
+    "Monitoring and Metrics": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#monitoring-and-metrics",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Health Indicators": {
+          "content_preview": "**Build Performance**:\n* Target: < 5 minutes for CI builds\n* Warning: 5-10 minutes\n* Critical: > 10 minutes\n\n**Merge Conflicts**:\n* Healthy: < 2 per w...",
+          "tokens": 77,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#health-indicators-1"
+        },
+        "Team Indicators": {
+          "content_preview": "**Team Size vs Structure**:\n* 1-3 developers: Single repo optimal\n* 4-8 developers: Consider feature splits\n* 9-15 developers: Multiple repos likely n...",
+          "tokens": 49,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#team-indicators-1"
+        }
+      }
+    },
+    "Common Mistakes to Avoid": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#common-mistakes-to-avoid",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Structure Anti-Patterns": {
+          "content_preview": "1. **Premature Optimization**\n   * Creating 10 repos for 2-person team\n   * Microservices for simple CRUD app\n   * Over-engineering from day one\n\n2. *...",
+          "tokens": 124,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#structure-anti-patterns-1"
+        }
+      }
+    },
+    "Implementation Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#implementation-checklist",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "New Project Setup": {
+          "content_preview": "- [ ] Choose appropriate scaffold template\n- [ ] Initialize version control\n- [ ] Set up .gitignore properly\n- [ ] Create .env.example\n- [ ] Set up RE...",
+          "tokens": 59,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#new-project-setup-1"
+        },
+        "Existing Project Migration": {
+          "content_preview": "- [ ] Analyze current structure\n- [ ] Identify anti-patterns\n- [ ] Plan migration approach\n- [ ] Create migration scripts\n- [ ] Update build processes...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#existing-project-migration-1"
+        }
+      }
+    },
+    "Scaffold Template Reference": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#scaffold-template-reference",
+      "tokens": 104,
+      "content_preview": "Available templates in `/agile-ai-agents/templates/project-scaffolds/`:\n\n* **Separated Stack**: React+Node, Vue+Django, Laravel+React\n* **Full-Stack F..."
+    },
+    "Conclusion": {
+      "md_reference": "agile-ai-agents/aaa-documents/project-structure-best-practices.md#conclusion",
+      "tokens": 97,
+      "content_preview": "Good project structure is essential for maintainability and team productivity. Start simple, follow conventions, and evolve based on actual needs rath..."
+    }
+  }
+}

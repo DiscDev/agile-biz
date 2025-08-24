@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "document": "help-command-template",
+    "title": "AAA-Help Command Template",
+    "timestamp": "2025-08-11T22:02:16.941Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md",
+    "document_type": "template",
+    "file_hash": "0c1bff1f435e1343b73d298e12076b37",
+    "estimated_tokens": 323,
+    "full_md_tokens": 3569
+  },
+  "summary": "This template defines the output for the `/aaa-help` command and `/aaa-help [command]` variations.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#overview",
+      "content_preview": "This template defines the output for the `/aaa-help` command and `/aaa-help [command]` variations."
+    },
+    {
+      "title": "General Help Output (`/aaa-help`)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#general-help-output-aaa-help",
+      "content_preview": "```\n📚 AgileAiAgents Command Reference\n=================================\n\n🚀 WORKFLOW COMMANDS\n  /start-new-project-workflow    Start a new project fr..."
+    },
+    {
+      "title": "Specific Command Help (`/aaa-help [command]`)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#specific-command-help-aaa-help-command",
+      "content_preview": ""
+    },
+    {
+      "title": "Command Not Found Help",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#command-not-found-help",
+      "content_preview": "When user types `/aaa-help [unknown-command]`:\n\n```\n❌ Command not found: /[unknown-command]\n\nDid you mean one of these?\n  /[suggestion-1] - [descripti..."
+    },
+    {
+      "title": "Dynamic Sections",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#dynamic-sections",
+      "content_preview": ""
+    },
+    {
+      "title": "Help Command Behavior",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#help-command-behavior",
+      "content_preview": "1. **No Parameters**: Show general help\n2. **With Valid Command**: Show detailed help for that command\n3. **With Invalid Command**: Show error with su..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#overview",
+      "tokens": 23,
+      "content_preview": "This template defines the output for the `/aaa-help` command and `/aaa-help [command]` variations."
+    },
+    "General Help Output (`/aaa-help`)": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#general-help-output-aaa-help",
+      "tokens": 622,
+      "content_preview": "```\n📚 AgileAiAgents Command Reference\n=================================\n\n🚀 WORKFLOW COMMANDS\n  /start-new-project-workflow    Start a new project fr..."
+    },
+    "Specific Command Help (`/aaa-help [command]`)": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#specific-command-help-aaa-help-command",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "`/aaa-help start-new-project-workflow`": {
+          "content_preview": "```\n📘 Command: /start-new-project-workflow\n=====================================\n\nDESCRIPTION:\nGuides you through creating a new project from scratch...",
+          "tokens": 328,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#aaa-help-start-new-project-workflow-1"
+        },
+        "`/aaa-help start-existing-project-workflow`": {
+          "content_preview": "```\n📘 Command: /start-existing-project-workflow  \n==========================================\n\nDESCRIPTION:\nAnalyzes your existing codebase and guides...",
+          "tokens": 412,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#aaa-help-start-existing-project-workflow-1"
+        },
+        "`/aaa-help quickstart`": {
+          "content_preview": "```\n📘 Command: /quickstart\n=====================\n\nDESCRIPTION:\nInteractive menu that helps you choose the right workflow for your needs.\nPerfect for ...",
+          "tokens": 200,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#aaa-help-quickstart-1"
+        },
+        "`/aaa-help checkpoint`": {
+          "content_preview": "```\n📘 Command: /checkpoint [message] [--full]\n======================================\n\nDESCRIPTION:\nCreates a manual checkpoint of your current projec...",
+          "tokens": 304,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#aaa-help-checkpoint-1"
+        },
+        "`/aaa-help status`": {
+          "content_preview": "```\n📘 Command: /status\n==================\n\nDESCRIPTION:\nDisplays comprehensive project status including current workflow,\nactive tasks, recent decisi...",
+          "tokens": 268,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#aaa-help-status-1"
+        },
+        "`/aaa-help save-decision`": {
+          "content_preview": "```\n📘 Command: /save-decision [decision] [rationale]\n===============================================\n\nDESCRIPTION:\nSaves important project decisions ...",
+          "tokens": 257,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#aaa-help-save-decision-1"
+        },
+        "`/aaa-help milestone`": {
+          "content_preview": "```\n📘 Command: /milestone [description]\n==================================\n\nDESCRIPTION:\nRecords a significant project milestone and triggers a contr...",
+          "tokens": 242,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#aaa-help-milestone-1"
+        },
+        "`/aaa-help sprint-retrospective`": {
+          "content_preview": "```\n📘 Command: /sprint-retrospective\n================================\n\nDESCRIPTION:\nConducts sprint retrospective with AI agents and automatically\ntr...",
+          "tokens": 253,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#aaa-help-sprint-retrospective-1"
+        },
+        "`/aaa-help contribution-status`": {
+          "content_preview": "```\n📘 Command: /contribution-status\n===============================\n\nDESCRIPTION:\nDisplays your contribution readiness, history, and any pending\ncont...",
+          "tokens": 231,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#aaa-help-contribution-status-1"
+        }
+      }
+    },
+    "Command Not Found Help": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#command-not-found-help",
+      "tokens": 55,
+      "content_preview": "When user types `/aaa-help [unknown-command]`:\n\n```\n❌ Command not found: /[unknown-command]\n\nDid you mean one of these?\n  /[suggestion-1] - [descripti..."
+    },
+    "Dynamic Sections": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#dynamic-sections",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Currently Active Information": {
+          "content_preview": "If a workflow or sprint is active, append to help output:\n\n```\n📊 CURRENT ACTIVITY\n  Active Workflow: New Project - Research Phase\n  Current Sprint: 2...",
+          "tokens": 63,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#currently-active-information-1"
+        },
+        "Context-Aware Suggestions": {
+          "content_preview": "Based on current state, add relevant suggestions:\n\n```\n💡 SUGGESTED NEXT STEPS\n  Based on your current progress:\n  • Complete authentication feature: ...",
+          "tokens": 59,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#context-aware-suggestions-1"
+        }
+      }
+    },
+    "Help Command Behavior": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/help-command-template.md#help-command-behavior",
+      "tokens": 127,
+      "content_preview": "1. **No Parameters**: Show general help\n2. **With Valid Command**: Show detailed help for that command\n3. **With Invalid Command**: Show error with su..."
+    }
+  }
+}

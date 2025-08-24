@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "document": "stakeholder-decisions",
+    "title": "Stakeholder Decisions Log",
+    "timestamp": "2025-07-22T01:41:03.752Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/stakeholder-decisions.md",
+    "document_type": "general_documentation",
+    "file_hash": "864cf1728335d9dfe641fb1cf1acfa5c",
+    "estimated_tokens": 357,
+    "full_md_tokens": 538
+  },
+  "summary": "This document tracks all project-wide stakeholder decisions and provides a rollup of sprint-level decisions. The Project Manager Agent maintains this log to ensure transparency and accountability in the decision-making process.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-decisions.md#overview",
+      "content_preview": "This document tracks all project-wide stakeholder decisions and provides a rollup of sprint-level decisions. The Project Manager Agent maintains this ..."
+    },
+    {
+      "title": "Structure",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-decisions.md#structure",
+      "content_preview": "- **Project-Wide Decisions**: Major decisions affecting the entire project\n- **Sprint Decision Rollup**: Links to sprint-specific decisions for easy r..."
+    },
+    {
+      "title": "Decision Log Format",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-decisions.md#decision-log-format",
+      "content_preview": "Each decision entry follows this structure:\n- **Date/Time**: [ISO 8601 timestamp]\n- **Decision Point**: [Type of decision required]\n- **Context**: [Ba..."
+    },
+    {
+      "title": "Project-Wide Decisions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-decisions.md#project-wide-decisions",
+      "content_preview": ""
+    },
+    {
+      "title": "Sprint Decision Rollup",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-decisions.md#sprint-decision-rollup",
+      "content_preview": ""
+    },
+    {
+      "title": "Statistics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-decisions.md#statistics",
+      "content_preview": "- **Total Project Decisions**: 0\n- **Total Sprint Decisions**: 0\n- **Pending Decisions**: 0\n- **Last Updated**: 2025-01-09\n\n---\n\n*This log is automati..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-decisions.md#overview",
+      "tokens": 57,
+      "content_preview": "This document tracks all project-wide stakeholder decisions and provides a rollup of sprint-level decisions. The Project Manager Agent maintains this ..."
+    },
+    "Structure": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-decisions.md#structure",
+      "tokens": 38,
+      "content_preview": "- **Project-Wide Decisions**: Major decisions affecting the entire project\n- **Sprint Decision Rollup**: Links to sprint-specific decisions for easy r..."
+    },
+    "Decision Log Format": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-decisions.md#decision-log-format",
+      "tokens": 97,
+      "content_preview": "Each decision entry follows this structure:\n- **Date/Time**: [ISO 8601 timestamp]\n- **Decision Point**: [Type of decision required]\n- **Context**: [Ba..."
+    },
+    "Project-Wide Decisions": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-decisions.md#project-wide-decisions",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Project Initialization": {
+          "content_preview": "**Date/Time**: [Timestamp]\n**Decision Point**: Project Idea Confirmation\n**Context**: Initial project concept provided by stakeholder\n**Options Presen...",
+          "tokens": 89,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-decisions.md#project-initialization-1"
+        }
+      }
+    },
+    "Sprint Decision Rollup": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-decisions.md#sprint-decision-rollup",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Overview": {
+          "content_preview": "Sprint-specific decisions are maintained within each sprint folder. This section provides quick links to all sprint decisions in chronological order.",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-decisions.md#overview-2"
+        },
+        "Active Sprints": {
+          "content_preview": "*No active sprints with decisions yet*",
+          "tokens": 9,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-decisions.md#active-sprints-1"
+        },
+        "Completed Sprints": {
+          "content_preview": "- [YYYY-MM-DD HH:MM - Decision Title](./sprints/sprint-YYYY-MM-DD-feature-name/stakeholder-decisions/decision-YYYY-MM-DD-HH-MM.md)\n- [YYYY-MM-DD HH:MM...",
+          "tokens": 66,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-decisions.md#completed-sprints-3"
+        }
+      }
+    },
+    "Statistics": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-decisions.md#statistics",
+      "tokens": 53,
+      "content_preview": "- **Total Project Decisions**: 0\n- **Total Sprint Decisions**: 0\n- **Pending Decisions**: 0\n- **Last Updated**: 2025-01-09\n\n---\n\n*This log is automati..."
+    }
+  }
+}

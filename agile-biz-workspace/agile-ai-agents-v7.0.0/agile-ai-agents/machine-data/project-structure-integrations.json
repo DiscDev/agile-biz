@@ -1,0 +1,257 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2025-01-28T14:00:00.000Z",
+  "integrations": {
+    "project_manager_agent": {
+      "receives_from_project_structure": [
+        "repository_structure_recommendations",
+        "evolution_timeline",
+        "repository_health_metrics",
+        "coordination_requirements"
+      ],
+      "provides_to_project_structure": [
+        "project_type",
+        "team_size",
+        "timeline_constraints",
+        "compliance_requirements"
+      ],
+      "coordination_points": [
+        {
+          "event": "project_kickoff",
+          "action": "Request initial structure recommendation",
+          "data_flow": "PM -> PSA: project details, PSA -> PM: recommended structure"
+        },
+        {
+          "event": "sprint_planning",
+          "action": "Check repository assignments for tasks",
+          "data_flow": "PM -> PSA: planned features, PSA -> PM: repository mapping"
+        },
+        {
+          "event": "evolution_trigger",
+          "action": "Evaluate structure change need",
+          "data_flow": "PSA -> PM: evolution recommendation, PM -> decision"
+        }
+      ],
+      "integration_code": {
+        "request_structure_recommendation": "const recommendation = await projectStructureAgent.generateRecommendation(projectDetails);",
+        "track_repository_assignment": "await projectStructureAgent.mapCodeToRepository(feature, repository);",
+        "monitor_evolution_triggers": "const triggers = await projectStructureAgent.checkEvolutionTriggers(metrics);"
+      }
+    },
+    "coder_agent": {
+      "receives_from_project_structure": [
+        "repository_boundaries",
+        "code_organization_guidelines",
+        "shared_code_strategies",
+        "file_location_rules"
+      ],
+      "provides_to_project_structure": [
+        "code_complexity_metrics",
+        "file_creation_events",
+        "boundary_violation_reports",
+        "refactoring_needs"
+      ],
+      "coordination_points": [
+        {
+          "event": "before_code_creation",
+          "action": "Check correct repository for code",
+          "data_flow": "Coder -> PSA: file type/purpose, PSA -> Coder: target repository"
+        },
+        {
+          "event": "cross_repo_feature",
+          "action": "Get coordination plan",
+          "data_flow": "Coder -> PSA: feature details, PSA -> Coder: implementation order"
+        }
+      ],
+      "integration_code": {
+        "check_file_location": "const targetRepo = await projectStructureAgent.findRepositoryForFile(filePath);",
+        "respect_boundaries": "const boundaries = await projectStructureAgent.getRepositoryBoundaries(currentRepo);",
+        "coordinate_feature": "const plan = await projectStructureAgent.coordinateFeature(featureInfo);"
+      }
+    },
+    "devops_agent": {
+      "receives_from_project_structure": [
+        "deployment_coordination_plan",
+        "repository_dependencies",
+        "ci_cd_setup_requirements",
+        "multi_repo_config"
+      ],
+      "provides_to_project_structure": [
+        "deployment_success_metrics",
+        "build_time_data",
+        "deployment_complexity_score",
+        "infrastructure_constraints"
+      ],
+      "coordination_points": [
+        {
+          "event": "ci_cd_setup",
+          "action": "Configure multi-repo pipelines",
+          "data_flow": "PSA -> DevOps: repo structure, DevOps -> PSA: pipeline config"
+        },
+        {
+          "event": "deployment",
+          "action": "Follow deployment order",
+          "data_flow": "PSA -> DevOps: deployment sequence, DevOps -> PSA: results"
+        }
+      ],
+      "integration_code": {
+        "setup_multi_repo_ci": "const ciConfig = await projectStructureAgent.generateCIConfig(repositories);",
+        "get_deployment_order": "const order = await projectStructureAgent.getDeploymentOrder();",
+        "coordinate_deployment": "await projectStructureAgent.trackDeployment(repo, status);"
+      }
+    },
+    "learning_analysis_agent": {
+      "receives_from_project_structure": [
+        "repository_evolution_data",
+        "structure_success_metrics",
+        "pattern_observations",
+        "anti_pattern_detections"
+      ],
+      "provides_to_project_structure": [
+        "community_structure_patterns",
+        "validated_evolution_triggers",
+        "industry_specific_patterns",
+        "improvement_recommendations"
+      ],
+      "coordination_points": [
+        {
+          "event": "pattern_detection",
+          "action": "Share repository patterns",
+          "data_flow": "LAA -> PSA: validated patterns, PSA -> LAA: implementation results"
+        },
+        {
+          "event": "learning_broadcast",
+          "action": "Receive structure improvements",
+          "data_flow": "LAA -> PSA: improvement broadcast, PSA -> LAA: adoption status"
+        }
+      ],
+      "integration_code": {
+        "share_patterns": "await learningAgent.broadcastPattern('repository_structure', pattern);",
+        "receive_improvements": "projectStructureAgent.implementImprovement(improvement);",
+        "track_success": "await learningAgent.trackImplementation(agentId, improvement, metrics);"
+      }
+    },
+    "project_state_manager": {
+      "receives_from_project_structure": [
+        "repository_evolution_history",
+        "structure_change_decisions",
+        "migration_progress_updates",
+        "current_repository_mapping"
+      ],
+      "provides_to_project_structure": [
+        "historical_structure_data",
+        "decision_rationale_history",
+        "project_phase_changes",
+        "team_growth_events"
+      ],
+      "coordination_points": [
+        {
+          "event": "structure_change",
+          "action": "Persist structure evolution",
+          "data_flow": "PSA -> PSM: evolution data, PSM -> PSA: saved state"
+        },
+        {
+          "event": "session_restore",
+          "action": "Load repository context",
+          "data_flow": "PSM -> PSA: saved structure, PSA -> PSM: current state"
+        }
+      ],
+      "integration_code": {
+        "save_evolution": "await stateManager.saveRepositoryEvolution(evolution);",
+        "load_structure": "const structure = await stateManager.loadRepositoryStructure();",
+        "track_decision": "await stateManager.recordStructureDecision(decision, rationale);"
+      }
+    },
+    "prd_agent": {
+      "receives_from_project_structure": [
+        "repository_mapping_requirements",
+        "feature_distribution_plan",
+        "structure_constraints",
+        "evolution_timeline"
+      ],
+      "provides_to_project_structure": [
+        "feature_complexity_scores",
+        "domain_boundaries",
+        "compliance_requirements",
+        "scalability_expectations"
+      ],
+      "coordination_points": [
+        {
+          "event": "requirements_definition",
+          "action": "Map features to repositories",
+          "data_flow": "PRD -> PSA: feature list, PSA -> PRD: repository assignments"
+        },
+        {
+          "event": "requirement_change",
+          "action": "Evaluate structure impact",
+          "data_flow": "PRD -> PSA: changes, PSA -> PRD: structure implications"
+        }
+      ],
+      "integration_code": {
+        "map_features": "const mapping = await projectStructureAgent.mapFeaturesToRepositories(features);",
+        "check_impact": "const impact = await projectStructureAgent.evaluateRequirementImpact(changes);",
+        "document_structure": "await prdAgent.documentRepositoryStructure(structure);"
+      }
+    }
+  },
+  "shared_interfaces": {
+    "repository_structure": {
+      "format": "json",
+      "schema": {
+        "repositories": "object",
+        "dependencies": "object",
+        "evolution_timeline": "array",
+        "current_phase": "string"
+      }
+    },
+    "evolution_trigger": {
+      "format": "event",
+      "data": {
+        "metric": "string",
+        "threshold_exceeded": "boolean",
+        "recommended_action": "string",
+        "confidence": "number"
+      }
+    },
+    "coordination_plan": {
+      "format": "json",
+      "schema": {
+        "feature_id": "string",
+        "repositories": "array",
+        "implementation_order": "array",
+        "dependencies": "object"
+      }
+    }
+  },
+  "integration_patterns": {
+    "structure_recommendation_flow": {
+      "sequence": [
+        "PM requests recommendation",
+        "PSA analyzes project type",
+        "PSA checks community patterns",
+        "PSA provides recommendation",
+        "PM reviews with stakeholder",
+        "Decision recorded in PSM"
+      ]
+    },
+    "evolution_monitoring_flow": {
+      "sequence": [
+        "Metrics collected by agents",
+        "PSA monitors thresholds",
+        "Evolution trigger detected",
+        "PSA notifies PM",
+        "PM evaluates with team",
+        "Migration planned if approved"
+      ]
+    },
+    "cross_repo_coordination_flow": {
+      "sequence": [
+        "Feature spans multiple repos",
+        "PSA creates coordination plan",
+        "Coder implements per plan",
+        "DevOps coordinates deployment",
+        "PSA tracks completion"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "agent": "dba_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 30,
+    "full_md_tokens": 5586,
+    "md_file": "agile-ai-agents/ai-agents/dba_agent.md",
+    "file_hash": "e1e03159deae3764627d20cfbcc1b505"
+  },
+  "summary": "",
+  "core_responsibilities": {
+    "summary": [],
+    "details_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/dba_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/dba_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/dba_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

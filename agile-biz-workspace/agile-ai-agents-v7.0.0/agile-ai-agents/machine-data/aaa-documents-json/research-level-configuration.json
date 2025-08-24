@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "document": "research-level-configuration",
+    "title": "Research Level Configuration",
+    "timestamp": "2025-08-11T22:02:16.915Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/research-level-configuration.md",
+    "document_type": "general_documentation",
+    "file_hash": "c714abd89b759e3ae9414239767bb7af",
+    "estimated_tokens": 409,
+    "full_md_tokens": 1087
+  },
+  "summary": "The AgileAiAgents system now supports three research levels that control the depth and breadth of document generation during workflows. The default level has been set to **\"thorough\"** to ensure comprehensive project analysis and planning.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-level-configuration.md#overview",
+      "content_preview": "The AgileAiAgents system now supports three research levels that control the depth and breadth of document generation during workflows. The default le..."
+    },
+    {
+      "title": "Research Levels",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-level-configuration.md#research-levels",
+      "content_preview": ""
+    },
+    {
+      "title": "Implementation Details",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-level-configuration.md#implementation-details",
+      "content_preview": ""
+    },
+    {
+      "title": "Usage Examples",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-level-configuration.md#usage-examples",
+      "content_preview": ""
+    },
+    {
+      "title": "Benefits",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-level-configuration.md#benefits",
+      "content_preview": "1. **Flexibility**: Projects can scale documentation to their needs\n2. **Efficiency**: Minimal research for quick validation (1-2 hours)\n3. **Complete..."
+    },
+    {
+      "title": "Migration Notes",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-level-configuration.md#migration-notes",
+      "content_preview": "- Existing projects will default to \"thorough\" level\n- No changes required to existing workflows\n- Backward compatible with current document creation ..."
+    },
+    {
+      "title": "Future Enhancements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-level-configuration.md#future-enhancements",
+      "content_preview": "1. **Dynamic Level Adjustment**: Upgrade research level mid-workflow\n2. **Custom Document Sets**: User-defined document combinations\n3. **Industry Tem..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-level-configuration.md#overview",
+      "tokens": 59,
+      "content_preview": "The AgileAiAgents system now supports three research levels that control the depth and breadth of document generation during workflows. The default le..."
+    },
+    "Research Levels": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-level-configuration.md#research-levels",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Minimal (1-2 hours)": {
+          "content_preview": "- **Documents**: 15 essential documents\n- **Focus**: Core market validation and feasibility\n- **Use Case**: Quick proof-of-concept or MVP validation\n-...",
+          "tokens": 71,
+          "md_reference": "agile-ai-agents/aaa-documents/research-level-configuration.md#1-minimal-1-2-hours-1"
+        },
+        "2. Medium (3-5 hours)": {
+          "content_preview": "- **Documents**: 48 comprehensive documents\n- **Focus**: Standard business and technical analysis\n- **Use Case**: Most startup and SMB projects\n- **Ke...",
+          "tokens": 80,
+          "md_reference": "agile-ai-agents/aaa-documents/research-level-configuration.md#2-medium-3-5-hours-1"
+        },
+        "3. Thorough (6-10 hours) - DEFAULT": {
+          "content_preview": "- **Documents**: 194 documents across all categories\n- **Focus**: Enterprise-level deep analysis\n- **Use Case**: Complex projects, enterprise clients,...",
+          "tokens": 123,
+          "md_reference": "agile-ai-agents/aaa-documents/research-level-configuration.md#3-thorough-6-10-hours-default-1"
+        }
+      }
+    },
+    "Implementation Details": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-level-configuration.md#implementation-details",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Configuration Files": {
+          "content_preview": "1. **research-level-documents.json**\n   - Maps each research level to specific document sets\n   - Defines document priorities within each level\n   - M...",
+          "tokens": 155,
+          "md_reference": "agile-ai-agents/aaa-documents/research-level-configuration.md#configuration-files-1"
+        },
+        "How It Works": {
+          "content_preview": "1. **Workflow Start**: User initiates workflow with `/start-new-project-workflow` or `/start-existing-project-workflow`\n\n2. **Research Level Selection...",
+          "tokens": 195,
+          "md_reference": "agile-ai-agents/aaa-documents/research-level-configuration.md#how-it-works-1"
+        }
+      }
+    },
+    "Usage Examples": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-level-configuration.md#usage-examples",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Setting Research Level": {
+          "content_preview": "```javascript\n// During workflow initialization\ntracker.updateContext({\n  research_level: 'thorough',  // or 'medium', 'minimal'\n  project_type: 'saas...",
+          "tokens": 45,
+          "md_reference": "agile-ai-agents/aaa-documents/research-level-configuration.md#setting-research-level-1"
+        },
+        "Checking Document Queue": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/research-level-configuration.md#checking-document-queue-1"
+        }
+      }
+    },
+    "Benefits": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-level-configuration.md#benefits",
+      "tokens": 76,
+      "content_preview": "1. **Flexibility**: Projects can scale documentation to their needs\n2. **Efficiency**: Minimal research for quick validation (1-2 hours)\n3. **Complete..."
+    },
+    "Migration Notes": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-level-configuration.md#migration-notes",
+      "tokens": 52,
+      "content_preview": "- Existing projects will default to \"thorough\" level\n- No changes required to existing workflows\n- Backward compatible with current document creation ..."
+    },
+    "Future Enhancements": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-level-configuration.md#future-enhancements",
+      "tokens": 79,
+      "content_preview": "1. **Dynamic Level Adjustment**: Upgrade research level mid-workflow\n2. **Custom Document Sets**: User-defined document combinations\n3. **Industry Tem..."
+    }
+  }
+}

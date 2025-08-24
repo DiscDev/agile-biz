@@ -1,0 +1,123 @@
+name: "Next.js Full-Stack"
+category: "fullstack-frameworks"
+description: "Next.js 14+ with App Router, ideal for full-stack React applications with SSR/SSG"
+tech_stack:
+  framework: "Next.js 14.x"
+  frontend: "React 18 + TypeScript"
+  backend: "API Routes (built-in)"
+  database: "PostgreSQL with Prisma ORM"
+  deployment: "Vercel / Docker"
+
+structure:
+  - path: "app/"
+    type: "directory"
+    description: "App Router pages and layouts"
+    subdirs:
+      - "api/"          # API routes
+      - "(auth)/"       # Authentication route group
+      - "(marketing)/"  # Marketing pages group
+      - "dashboard/"    # Dashboard pages
+      - "components/"   # Page-specific components
+    
+  - path: "components/"
+    type: "directory"
+    description: "Shared React components"
+    subdirs:
+      - "ui/"           # UI components
+      - "forms/"        # Form components
+      - "layouts/"      # Layout components
+    
+  - path: "lib/"
+    type: "directory"
+    description: "Utility functions and shared code"
+    subdirs:
+      - "api/"          # API utilities
+      - "auth/"         # Authentication helpers
+      - "db/"           # Database utilities
+      - "utils/"        # General utilities
+    
+  - path: "prisma/"
+    type: "directory"
+    description: "Database schema and migrations"
+    files:
+      - "schema.prisma"
+    
+  - path: "public/"
+    type: "directory"
+    description: "Static assets"
+    subdirs:
+      - "images/"
+      - "fonts/"
+    
+  - path: "styles/"
+    type: "directory"
+    description: "Global styles and CSS modules"
+    files:
+      - "globals.css"
+    
+  - path: "types/"
+    type: "directory"
+    description: "TypeScript type definitions"
+    
+  - path: "middleware.ts"
+    type: "file"
+    description: "Next.js middleware for auth, redirects, etc."
+    
+  - path: "next.config.js"
+    type: "file"
+    template: "next.config.js"
+    description: "Next.js configuration"
+    
+  - path: "package.json"
+    type: "file"
+    template: "package.json"
+    description: "Dependencies and scripts"
+    
+  - path: "tsconfig.json"
+    type: "file"
+    template: "tsconfig.json"
+    description: "TypeScript configuration"
+    
+  - path: ".env.example"
+    type: "file"
+    template: "env-example"
+    description: "Environment variables template"
+    
+  - path: "docker-compose.yml"
+    type: "file"
+    template: "docker-compose.yml"
+    description: "Local development with database"
+    
+  - path: "README.md"
+    type: "file"
+    template: "readme.md"
+    description: "Project documentation"
+
+init_commands:
+  - description: "Create Next.js app with TypeScript"
+    command: "npx create-next-app@latest . --typescript --tailwind --app --src-dir=false --import-alias='@/*'"
+
+post_init_commands:
+  - description: "Install additional dependencies"
+    command: "npm install @prisma/client prisma @tanstack/react-query axios zod react-hook-form"
+  - description: "Install UI library (optional)"
+    command: "npm install @radix-ui/themes @radix-ui/icons"
+  - description: "Install authentication (optional)"
+    command: "npm install next-auth @auth/prisma-adapter"
+  - description: "Initialize Prisma"
+    command: "npx prisma init"
+  - description: "Set up database"
+    command: "npx prisma migrate dev --name init"
+
+development_ports:
+  app: 3000
+  database: 5432
+
+benefits:
+  - "Full-stack React framework with file-based routing"
+  - "Built-in API routes eliminate need for separate backend"
+  - "Server-side rendering for SEO and performance"
+  - "Static generation for marketing pages"
+  - "App Router for modern React features"
+  - "TypeScript for full type safety"
+  - "Integrated with Vercel for easy deployment"

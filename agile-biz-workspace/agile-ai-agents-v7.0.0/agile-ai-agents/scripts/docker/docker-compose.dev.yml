@@ -1,0 +1,21 @@
+version: '3.8'
+
+# Development-specific overrides
+services:
+  dashboard:
+    build:
+      target: development
+    environment:
+      - NODE_ENV=development
+      - LOG_LEVEL=debug
+    volumes:
+      # Mount source code for hot reload
+      - ./project-dashboard:/app/project-dashboard
+      - ./ai-agents:/app/ai-agents
+      - ./ai-agent-coordination:/app/ai-agent-coordination
+      - ./project-mcps:/app/project-mcps
+      # Exclude node_modules
+      - /app/project-dashboard/node_modules
+    command: ["npm", "--prefix", "project-dashboard", "run", "dev:secure"]
+    # Disable restart in development
+    restart: "no"

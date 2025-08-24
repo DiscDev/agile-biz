@@ -1,0 +1,161 @@
+{
+  "generated": "2025-07-10T19:27:38.421Z",
+  "summary": {
+    "total_files": 62,
+    "successful": 62,
+    "errors": 0,
+    "average_token_reduction": "37.3"
+  },
+  "files": [
+    {
+      "file": "README",
+      "tokens": 390,
+      "reduction": 40.6
+    },
+    {
+      "file": "document-registry-template",
+      "tokens": 153,
+      "reduction": 19.5
+    },
+    {
+      "file": "planning-agenda-template",
+      "tokens": 156,
+      "reduction": 48.7
+    },
+    {
+      "file": "pulse-update-template",
+      "tokens": 311,
+      "reduction": -17.4
+    },
+    {
+      "file": "retrospective-template",
+      "tokens": 356,
+      "reduction": -74.5
+    },
+    {
+      "file": "sprint-summary-template",
+      "tokens": 365,
+      "reduction": -166.4
+    },
+    {
+      "file": "sprint-version-template",
+      "tokens": 206,
+      "reduction": -38.3
+    },
+    {
+      "file": "stakeholder-decision-template",
+      "tokens": 726,
+      "reduction": 5.3
+    },
+    {
+      "file": "stakeholder-escalation-template",
+      "tokens": 877,
+      "reduction": 25.9
+    },
+    {
+      "file": "state-template",
+      "tokens": 111,
+      "reduction": 26
+    },
+    {
+      "file": "README",
+      "tokens": 277,
+      "reduction": -26.5
+    },
+    {
+      "file": "README",
+      "tokens": 378,
+      "reduction": -16.7
+    },
+    {
+      "file": "state",
+      "tokens": 112,
+      "reduction": 54.7
+    },
+    {
+      "file": "sprint-dependencies",
+      "tokens": 325,
+      "reduction": -45.1
+    },
+    {
+      "file": "stakeholder-decisions",
+      "tokens": 357,
+      "reduction": 38.1
+    },
+    {
+      "file": "stakeholder-escalations",
+      "tokens": 417,
+      "reduction": 55.4
+    },
+    {
+      "file": "README",
+      "tokens": 129,
+      "reduction": 13.4
+    },
+    {
+      "file": "business-documents-agent-summary",
+      "tokens": 279,
+      "reduction": 61.7
+    },
+    {
+      "file": "README",
+      "tokens": 134,
+      "reduction": -1.5
+    },
+    {
+      "file": "README",
+      "tokens": 129,
+      "reduction": -1.6
+    },
+    {
+      "file": "README",
+      "tokens": 128,
+      "reduction": 16.9
+    },
+    {
+      "file": "README",
+      "tokens": 127,
+      "reduction": -1.6
+    },
+    {
+      "file": "README",
+      "tokens": 125,
+      "reduction": 16.1
+    },
+    {
+      "file": "README",
+      "tokens": 124,
+      "reduction": -3.3
+    },
+    {
+      "file": "README",
+      "tokens": 125,
+      "reduction": 8.1
+    },
+    {
+      "file": "README",
+      "tokens": 133,
+      "reduction": -2.3
+    },
+    {
+      "file": "README",
+      "tokens": 127,
+      "reduction": -0.8
+    },
+    {
+      "file": "README",
+      "tokens": 125,
+      "reduction": -2.5
+    },
+    {
+      "file": "README",
+      "tokens": 126,
+      "reduction": 8
+    },
+    {
+      "file": "README",
+      "tokens": 126,
+      "reduction": 7.4
+    }
+  ]
+}

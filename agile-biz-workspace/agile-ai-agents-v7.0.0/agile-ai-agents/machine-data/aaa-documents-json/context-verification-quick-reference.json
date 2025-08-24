@@ -1,0 +1,269 @@
+{
+  "meta": {
+    "document": "context-verification-quick-reference",
+    "title": "Context Verification System - Quick Reference",
+    "timestamp": "2025-08-11T22:02:16.877Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md",
+    "document_type": "general_documentation",
+    "file_hash": "ad115162dc595012223251365cf968a7",
+    "estimated_tokens": 554,
+    "full_md_tokens": 976
+  },
+  "summary": "## 🚀 Quick Start",
+  "sections": [
+    {
+      "title": "🚀 Quick Start",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#quick-start",
+      "content_preview": ""
+    },
+    {
+      "title": "📋 Essential Commands",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#essential-commands",
+      "content_preview": "| Command | Purpose |\n|---------|---------|\n| `/verify-context` | Show current context status |\n| `/verify-context --create-truth` | Create/update pro..."
+    },
+    {
+      "title": "🎯 Key Concepts",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#key-concepts",
+      "content_preview": ""
+    },
+    {
+      "title": "🔄 Workflow Integration Points",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#workflow-integration-points",
+      "content_preview": ""
+    },
+    {
+      "title": "📊 Dashboard Widget",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#dashboard-widget",
+      "content_preview": "**Location**: Project dashboard (http://localhost:3001)\n\n**Shows**:\n- Current drift percentage\n- Monitoring status\n- Recent violations\n- Recommendatio..."
+    },
+    {
+      "title": "🚨 Common Violations",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#common-violations",
+      "content_preview": ""
+    },
+    {
+      "title": "📈 Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "🛠️ Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "📝 Report Types",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#report-types",
+      "content_preview": ""
+    },
+    {
+      "title": "🎓 Learning System",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#learning-system",
+      "content_preview": "The system learns from:\n- ✅ Detected violations\n- ✅ Resolution patterns\n- ✅ Team decisions\n- ✅ Historical data\n\nAccess insights:\n```bash\n/verify-conte..."
+    },
+    {
+      "title": "🔗 Related Documentation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#related-documentation",
+      "content_preview": "- **Full Guide**: `aaa-documents/context-verification-system-guide.md`\n- **Architecture**: `machine-data/context-verification/README.md`\n- **Community..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "🚀 Quick Start": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#quick-start",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "First Time Setup": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#first-time-setup-1"
+        }
+      }
+    },
+    "📋 Essential Commands": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#essential-commands",
+      "tokens": 95,
+      "content_preview": "| Command | Purpose |\n|---------|---------|\n| `/verify-context` | Show current context status |\n| `/verify-context --create-truth` | Create/update pro..."
+    },
+    "🎯 Key Concepts": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#key-concepts",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Project Truth Document": {
+          "content_preview": "The single source of truth containing:\n- ✅ What we're building (one sentence)\n- 🏭 Industry/domain\n- 👥 Target users\n- ❌ NOT THIS list (critical!)\n- \ud83c...",
+          "tokens": 45,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#project-truth-document-1"
+        },
+        "Confidence Thresholds": {
+          "content_preview": "- **95%+** → 🚫 Auto-blocked\n- **80-94%** → 🔍 Review required\n- **60-79%** → ⚠️ Warning\n- **<60%** → ✅ Allowed",
+          "tokens": 24,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#confidence-thresholds-1"
+        },
+        "Drift Severity": {
+          "content_preview": "- **0-20%** → 🟢 None/Minor\n- **20-40%** → 🟡 Moderate\n- **40-60%** → 🟠 Major\n- **60-80%** → 🔴 Critical\n- **80-100%** → ⚫ Severe",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#drift-severity-1"
+        }
+      }
+    },
+    "🔄 Workflow Integration Points": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#workflow-integration-points",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Project Start": {
+          "content_preview": "```\nPhase 1 Discovery → Section 0: Critical Context Questions\n- What is this product?\n- What is it NOT?\n- Who uses it?\n```",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#1-project-start-1"
+        },
+        "2. Sprint Planning": {
+          "content_preview": "```\nPre-Sprint Hook → Verify all tasks\n- Blocks if violations detected\n- PM/SM notified\n- Must resolve before proceeding\n```",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#2-sprint-planning-1"
+        },
+        "3. Backlog Creation": {
+          "content_preview": "```\nNew Item → Auto-verification\n- High confidence = auto-block\n- Creates violation report\n- Learns from patterns\n```",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#3-backlog-creation-1"
+        },
+        "4. Continuous Monitoring": {
+          "content_preview": "```\nEvery 60 minutes → Drift check\n- Backlog, documents, decisions\n- Trend analysis\n- Auto-escalation if critical\n```",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#4-continuous-monitoring-1"
+        }
+      }
+    },
+    "📊 Dashboard Widget": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#dashboard-widget",
+      "tokens": 66,
+      "content_preview": "**Location**: Project dashboard (http://localhost:3001)\n\n**Shows**:\n- Current drift percentage\n- Monitoring status\n- Recent violations\n- Recommendatio..."
+    },
+    "🚨 Common Violations": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#common-violations",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Domain Mismatch": {
+          "content_preview": "**Example**: \"invoice\" in a gaming platform\n**Fix**: Use correct domain terms",
+          "tokens": 18,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#domain-mismatch-1"
+        },
+        "User Misalignment": {
+          "content_preview": "**Example**: Admin features for consumer app\n**Fix**: Focus on primary users",
+          "tokens": 17,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#user-misalignment-1"
+        },
+        "NOT THIS Violations": {
+          "content_preview": "**Example**: Building explicitly excluded features\n**Fix**: Review and remove",
+          "tokens": 18,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#not-this-violations-1"
+        },
+        "Feature Creep": {
+          "content_preview": "**Example**: Expanding beyond original scope\n**Fix**: Validate against project truth",
+          "tokens": 19,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#feature-creep-1"
+        }
+      }
+    },
+    "📈 Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Daily": {
+          "content_preview": "- ✅ Check dashboard widget\n- ✅ Review any new violations\n- ✅ Address warnings promptly",
+          "tokens": 22,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#daily-1"
+        },
+        "Sprint Start": {
+          "content_preview": "- ✅ Run `/verify-context --verify-sprint`\n- ✅ Resolve all blockers\n- ✅ Update project truth if needed",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#sprint-start-1"
+        },
+        "Monthly": {
+          "content_preview": "- ✅ Generate audit report\n- ✅ Review learning insights\n- ✅ Update prevention strategies",
+          "tokens": 22,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#monthly-1"
+        }
+      }
+    },
+    "🛠️ Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "\"No project truth found\"": {
+          "content_preview": "```bash\n/verify-context --create-truth\n```",
+          "tokens": 9,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#no-project-truth-found-1"
+        },
+        "\"High drift but seems wrong\"": {
+          "content_preview": "1. Review project truth accuracy\n2. Check for approved scope changes\n3. Update truth with versioning",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#high-drift-but-seems-wrong-1"
+        },
+        "\"Monitoring not active\"": {
+          "content_preview": "```bash\n/verify-context --monitor-drift start\n```",
+          "tokens": 11,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#monitoring-not-active-1"
+        },
+        "\"Too many false positives\"": {
+          "content_preview": "1. Add more NOT THIS examples\n2. Define more domain terms\n3. Clarify target users",
+          "tokens": 21,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#too-many-false-positives-1"
+        }
+      }
+    },
+    "📝 Report Types": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#report-types",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Quick Status": {
+          "content_preview": "```bash\n/verify-context\n```",
+          "tokens": 6,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#quick-status-1"
+        },
+        "Detailed Analysis": {
+          "content_preview": "```bash\n/verify-context --check-drift\n```",
+          "tokens": 9,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#detailed-analysis-1"
+        },
+        "Full Audit Report": {
+          "content_preview": "```bash\n/verify-context --export",
+          "tokens": 8,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#full-audit-report-1"
+        }
+      }
+    },
+    "🎓 Learning System": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#learning-system",
+      "tokens": 43,
+      "content_preview": "The system learns from:\n- ✅ Detected violations\n- ✅ Resolution patterns\n- ✅ Team decisions\n- ✅ Historical data\n\nAccess insights:\n```bash\n/verify-conte..."
+    },
+    "🔗 Related Documentation": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-quick-reference.md#related-documentation",
+      "tokens": 89,
+      "content_preview": "- **Full Guide**: `aaa-documents/context-verification-system-guide.md`\n- **Architecture**: `machine-data/context-verification/README.md`\n- **Community..."
+    }
+  }
+}

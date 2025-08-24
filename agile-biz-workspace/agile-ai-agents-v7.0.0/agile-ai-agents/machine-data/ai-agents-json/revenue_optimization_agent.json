@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "agent": "revenue_optimization_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 232,
+    "full_md_tokens": 9446,
+    "md_file": "agile-ai-agents/ai-agents/revenue_optimization_agent.md",
+    "file_hash": "222646006bd4503391b6673cc581904e"
+  },
+  "summary": "## Overview\nThe Revenue Optimization Agent specializes in designing, implementing, and optimizing revenue models that maximize both immediate ROI and long-term residual income. This agent focuses on the strategic monetization of products through subscription models, recurring revenue mechanics, pricing optimization, and revenue stream diversification.",
+  "core_responsibilities": {
+    "summary": [
+      "Subscription Model Architecture & Optimization",
+      "Recurring Revenue Mechanics & Growth",
+      "Pricing Psychology & Revenue Maximization",
+      "Revenue Stream Diversification & Innovation"
+    ],
+    "details_tokens": 593,
+    "md_reference": "agile-ai-agents/ai-agents/revenue_optimization_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "Subscription Model Architecture & Optimization Workflow (PRIMARY REVENUE WORKFLOW) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/revenue_optimization_agent.md#subscription-model-architecture-optimization-workflow-primary-revenue-workflow-workflow"
+      },
+      {
+        "name": "Revenue Stream Diversification & Growth Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/revenue_optimization_agent.md#revenue-stream-diversification-growth-workflow"
+      },
+      {
+        "name": "Pricing Optimization & Testing Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/revenue_optimization_agent.md#pricing-optimization-testing-workflow"
+      },
+      {
+        "name": "Customer Lifetime Value (LTV) & Revenue Expansion Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/revenue_optimization_agent.md#customer-lifetime-value-ltv-revenue-expansion-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/revenue_optimization_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/revenue_optimization_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

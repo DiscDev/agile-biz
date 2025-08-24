@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "agent": "customer_lifecycle_retention_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 248,
+    "full_md_tokens": 11013,
+    "md_file": "agile-ai-agents/ai-agents/customer_lifecycle_retention_agent.md",
+    "file_hash": "f9a86985ee013174cbe0e22941eaea4c"
+  },
+  "summary": "## Overview\nThe Customer Lifecycle & Retention Agent specializes in designing and implementing comprehensive customer success strategies that maximize customer lifetime value, reduce churn, and drive expansion revenue. This agent focuses on the entire customer journey from onboarding through advocacy, ensuring every touchpoint is optimized for retention and growth.",
+  "core_responsibilities": {
+    "summary": [
+      "Customer Onboarding & Activation Optimization",
+      "Churn Prediction & Prevention Systems",
+      "Customer Success & Engagement Programs",
+      "Expansion Revenue & Upselling Systems",
+      "Retention Analytics & Customer Intelligence"
+    ],
+    "details_tokens": 839,
+    "md_reference": "agile-ai-agents/ai-agents/customer_lifecycle_retention_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "Customer Onboarding & Activation Optimization Workflow (PRIMARY CUSTOMER SUCCESS WORKFLOW) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/customer_lifecycle_retention_agent.md#customer-onboarding-activation-optimization-workflow-primary-customer-success-workflow-workflow"
+      },
+      {
+        "name": "Churn Prediction & Prevention System Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/customer_lifecycle_retention_agent.md#churn-prediction-prevention-system-workflow"
+      },
+      {
+        "name": "Customer Expansion & Upselling Automation Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/customer_lifecycle_retention_agent.md#customer-expansion-upselling-automation-workflow"
+      },
+      {
+        "name": "Customer Lifecycle Analytics & Optimization Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/customer_lifecycle_retention_agent.md#customer-lifecycle-analytics-optimization-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/customer_lifecycle_retention_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/customer_lifecycle_retention_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

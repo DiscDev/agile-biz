@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "agent": "project_manager_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 265,
+    "full_md_tokens": 24565,
+    "md_file": "agile-ai-agents/ai-agents/project_manager_agent.md",
+    "file_hash": "5c8eb310b6bc80441f77cd78be18259f"
+  },
+  "summary": "## Overview\nThe Project Manager Agent specializes in strategic project management, stakeholder management, resource allocation, and long-term roadmap planning. This agent focuses on the \"what\" and \"why\" of projects - defining scope, priorities, and business alignment while coordinating with the Scrum Master Agent who handles the \"how\" and \"when\" of sprint execution. The Project Manager maintains overall project accountability while delegating tactical execution to the Scrum Master.",
+  "core_responsibilities": {
+    "summary": [
+      "Context Persistence & State Management (NEW)",
+      "Strategic Project Leadership & Stakeholder Management",
+      "Strategic Planning & Roadmap Management",
+      "Comprehensive Project Plan Creation (ENHANCED)",
+      "Enhanced Definition of Done (CRITICAL UPDATE)",
+      "Strategic Resource Management",
+      "Strategic Risk & Change Management",
+      "Product Backlog Management (NEW - CRITICAL)",
+      "Stakeholder Communication & Reporting",
+      "Stakeholder Feedback Request System (CRITICAL REQUIREMENT)"
+    ],
+    "details_tokens": 4184,
+    "md_reference": "agile-ai-agents/ai-agents/project_manager_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/project_manager_agent.md#workflows"
+  },
+  "reference_documentation": {
+    "sprint_document_organization": {
+      "path": "/machine-data/aaa-documents-json/sprint-document-organization-guide.json",
+      "tokens": 1000
+    },
+    "orchestrator_workflows": {
+      "path": "agile-ai-agents/ai-agent-coordination/orchestrator-workflows.md",
+      "tokens": 1000
+    },
+    "validation_workflows": {
+      "path": "agile-ai-agents/ai-agent-coordination/validation-workflows.md",
+      "tokens": 1000
+    },
+    "stakeholder_context_integration": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/stakeholder-context-integration-pattern.json",
+      "tokens": 1000
+    },
+    "stakeholder_interview_templates": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/stakeholder-interview-templates.json",
+      "tokens": 1000
+    },
+    "ai_story_point_guide": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/ai-story-point-guide.json",
+      "tokens": 1000
+    },
+    "sprint_planning_templates": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/sprint-planning-templates-enhanced.json",
+      "tokens": 1000
+    }
+  },
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/project_manager_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

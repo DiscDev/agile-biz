@@ -1,0 +1,291 @@
+{
+  "meta": {
+    "document": "ai-story-point-guide",
+    "title": "AI Agent Story Point Reference Guide",
+    "timestamp": "2025-08-11T22:02:16.856Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/ai-story-point-guide.md",
+    "document_type": "guide",
+    "file_hash": "d8b50e35b41e3baab38ab2d22d7a04ef",
+    "estimated_tokens": 507,
+    "full_md_tokens": 1813
+  },
+  "summary": "This guide provides standardized story point estimation for AI agents operating at accelerated speeds. Story points represent complexity and effort, not time duration. Sprints complete when committed story points are delivered.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#overview",
+      "content_preview": "This guide provides standardized story point estimation for AI agents operating at accelerated speeds. Story points represent complexity and effort, n..."
+    },
+    {
+      "title": "Story Point Scale (Fibonacci)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#story-point-scale-fibonacci",
+      "content_preview": ""
+    },
+    {
+      "title": "Estimation Factors",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#estimation-factors",
+      "content_preview": ""
+    },
+    {
+      "title": "AI Agent Specific Considerations",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#ai-agent-specific-considerations",
+      "content_preview": ""
+    },
+    {
+      "title": "Sprint Planning Guidelines",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#sprint-planning-guidelines",
+      "content_preview": ""
+    },
+    {
+      "title": "Planning Poker for AI Agents",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#planning-poker-for-ai-agents",
+      "content_preview": ""
+    },
+    {
+      "title": "Velocity Measurement",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#velocity-measurement",
+      "content_preview": ""
+    },
+    {
+      "title": "Quality Gates",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#quality-gates",
+      "content_preview": ""
+    },
+    {
+      "title": "Continuous Improvement",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#continuous-improvement",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#overview",
+      "tokens": 57,
+      "content_preview": "This guide provides standardized story point estimation for AI agents operating at accelerated speeds. Story points represent complexity and effort, n..."
+    },
+    "Story Point Scale (Fibonacci)": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#story-point-scale-fibonacci",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1 Point - Trivial": {
+          "content_preview": "**AI Agent Time**: 1-5 minutes\n**Examples**:\n- Update configuration file\n- Fix typo in documentation\n- Add simple validation rule\n- Update environment...",
+          "tokens": 45,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#1-point-trivial-1"
+        },
+        "2 Points - Simple": {
+          "content_preview": "**AI Agent Time**: 5-10 minutes\n**Examples**:\n- Add new field to existing form\n- Create basic CRUD endpoint\n- Simple database query optimization\n- Add...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#2-points-simple-1"
+        },
+        "3 Points - Standard": {
+          "content_preview": "**AI Agent Time**: 10-20 minutes\n**Examples**:\n- New API endpoint with validation\n- Component with multiple interactions\n- Database schema migration\n-...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#3-points-standard-1"
+        },
+        "5 Points - Complex": {
+          "content_preview": "**AI Agent Time**: 20-40 minutes\n**Examples**:\n- Multi-step workflow implementation\n- Complex data transformation\n- Advanced search functionality\n- Re...",
+          "tokens": 51,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#5-points-complex-1"
+        },
+        "8 Points - Very Complex": {
+          "content_preview": "**AI Agent Time**: 40-90 minutes\n**Examples**:\n- New microservice creation\n- Major feature with multiple components\n- Complex business logic implement...",
+          "tokens": 55,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#8-points-very-complex-1"
+        },
+        "13 Points - Epic (Consider Breaking Down)": {
+          "content_preview": "**AI Agent Time**: 90-180 minutes\n**Examples**:\n- Complete authentication system\n- Multi-tenant architecture implementation\n- Major architectural refa...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#13-points-epic-consider-breaking-down-1"
+        },
+        "21+ Points - Major Epic (Must Break Down)": {
+          "content_preview": "**AI Agent Time**: 3-6 hours\n- Should be decomposed into smaller stories\n- Too large for single sprint commitment\n- Requires detailed analysis and bre...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#21-points-major-epic-must-break-down-1"
+        }
+      }
+    },
+    "Estimation Factors": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#estimation-factors",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Technical Complexity": {
+          "content_preview": "- **Low**: Standard CRUD operations, simple UI components\n- **Medium**: Business logic, integrations, moderate algorithms\n- **High**: Complex algorith...",
+          "tokens": 48,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#technical-complexity-1"
+        },
+        "Integration Points": {
+          "content_preview": "- **None (0)**: Self-contained work\n- **Few (1-2)**: Simple API calls, database interactions\n- **Many (3+)**: Multiple service dependencies, complex d...",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#integration-points-1"
+        },
+        "Testing Requirements": {
+          "content_preview": "- **Basic (+0)**: Unit tests only\n- **Moderate (+1)**: Integration tests required\n- **Extensive (+2)**: E2E, performance, security testing",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#testing-requirements-1"
+        },
+        "Unknown/Risk Factors": {
+          "content_preview": "- **Low Risk (+0)**: Well-understood requirements\n- **Medium Risk (+1)**: Some unknowns, research needed\n- **High Risk (+2)**: Significant unknowns, p...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#unknownrisk-factors-1"
+        },
+        "Documentation Needs": {
+          "content_preview": "- **Minimal (+0)**: Code comments only\n- **Standard (+1)**: API docs, README updates\n- **Extensive (+2)**: User guides, architecture docs",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#documentation-needs-1"
+        }
+      }
+    },
+    "AI Agent Specific Considerations": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#ai-agent-specific-considerations",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Coder Agent Stories": {
+          "content_preview": "```yaml\n1 point: \"Fix CSS styling bug\"\n3 points: \"Implement user registration API\"\n5 points: \"Create real-time chat feature\"\n8 points: \"Build notifica...",
+          "tokens": 51,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#coder-agent-stories-1"
+        },
+        "Testing Agent Stories": {
+          "content_preview": "```yaml\n1 point: \"Add single unit test\"\n3 points: \"Create test suite for API endpoint\"\n5 points: \"Implement E2E testing for workflow\"\n8 points: \"Set u...",
+          "tokens": 55,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#testing-agent-stories-1"
+        },
+        "UI/UX Agent Stories": {
+          "content_preview": "```yaml\n1 point: \"Update button styling\"\n3 points: \"Design new form component\"\n5 points: \"Create responsive dashboard layout\"\n8 points: \"Design comple...",
+          "tokens": 55,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#uiux-agent-stories-1"
+        },
+        "DevOps Agent Stories": {
+          "content_preview": "```yaml\n1 point: \"Update environment variable\"\n3 points: \"Set up CI/CD pipeline\"\n5 points: \"Configure monitoring and alerting\"\n8 points: \"Implement bl...",
+          "tokens": 56,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#devops-agent-stories-1"
+        },
+        "Security Agent Stories": {
+          "content_preview": "```yaml\n1 point: \"Add input validation\"\n3 points: \"Implement rate limiting\"\n5 points: \"Set up security scanning\"\n8 points: \"Implement comprehensive au...",
+          "tokens": 53,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#security-agent-stories-1"
+        }
+      }
+    },
+    "Sprint Planning Guidelines": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#sprint-planning-guidelines",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Sprint Commitment Rules": {
+          "content_preview": "- **Total Points**: Aim for 15-25 points per sprint\n- **Risk Buffer**: Reserve 20% capacity for unknowns\n- **Agent Capacity**: Consider agent speciali...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#sprint-commitment-rules-1"
+        },
+        "Velocity Tracking": {
+          "content_preview": "- **Initial Velocity**: Start conservative (10-15 points)\n- **Velocity Adjustment**: Adjust based on completed sprints\n- **Team Velocity**: Track poin...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#velocity-tracking-1"
+        },
+        "Story Breakdown Guidelines": {
+          "content_preview": "```yaml\nLarge Stories (8+ points):\n  - Break into smaller, independent stories\n  - Ensure each story delivers value\n  - Consider dependencies and sequ...",
+          "tokens": 70,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#story-breakdown-guidelines-1"
+        }
+      }
+    },
+    "Planning Poker for AI Agents": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#planning-poker-for-ai-agents",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Estimation Process": {
+          "content_preview": "1. **Story Reading**: Review user story and acceptance criteria\n2. **Clarification**: Discuss unknowns and dependencies\n3. **Individual Estimation**: ...",
+          "tokens": 65,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#estimation-process-1"
+        },
+        "Common Estimation Biases": {
+          "content_preview": "- **Optimism Bias**: Underestimating complexity\n- **Anchoring**: Being influenced by first estimate\n- **Availability Heuristic**: Overweighting recent...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#common-estimation-biases-1"
+        },
+        "Estimation Calibration": {
+          "content_preview": "```yaml\nAfter Each Sprint:\n  - Review actual vs estimated effort\n  - Identify patterns in over/under estimation\n  - Adjust future estimates based on l...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#estimation-calibration-1"
+        }
+      }
+    },
+    "Velocity Measurement": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#velocity-measurement",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Points Per Hour Calculation": {
+          "content_preview": "```\nSprint Velocity = Completed Story Points / Total Sprint Hours\nTeam Velocity = Sum of Agent Velocities\nProjected Completion = Remaining Points / Te...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#points-per-hour-calculation-1"
+        },
+        "Velocity Trends": {
+          "content_preview": "- **Improving**: Velocity increasing over time\n- **Stable**: Consistent velocity (ideal state)\n- **Declining**: May indicate technical debt or complex...",
+          "tokens": 37,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#velocity-trends-1"
+        },
+        "Sprint Metrics": {
+          "content_preview": "```yaml\nKey Metrics:\n  - Commitment Accuracy: (Delivered Points / Committed Points) * 100\n  - Velocity Trend: 3-sprint moving average\n  - Estimation A...",
+          "tokens": 62,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#sprint-metrics-1"
+        }
+      }
+    },
+    "Quality Gates": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#quality-gates",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Definition of Done by Points": {
+          "content_preview": "```yaml\n1-2 Points:\n  - Code review completed\n  - Unit tests passing\n  - Basic documentation\n\n3-5 Points:\n  - Integration tests passing\n  - Security r...",
+          "tokens": 73,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#definition-of-done-by-points-1"
+        },
+        "Story Acceptance Criteria": {
+          "content_preview": "- All acceptance criteria met\n- Code quality standards maintained\n- Tests passing at appropriate level\n- Documentation updated\n- Stakeholder approval ...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#story-acceptance-criteria-1"
+        }
+      }
+    },
+    "Continuous Improvement": {
+      "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#continuous-improvement",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Sprint Retrospective Questions": {
+          "content_preview": "1. **Estimation Accuracy**: Were our estimates accurate?\n2. **Velocity Trends**: Is our velocity improving?\n3. **Story Sizing**: Are we breaking down ...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#sprint-retrospective-questions-1"
+        },
+        "Refinement Process": {
+          "content_preview": "- **Regular Backlog Grooming**: Keep stories estimated and ready\n- **Story Splitting**: Practice breaking large stories\n- **Estimation Review**: Calib...",
+          "tokens": 106,
+          "md_reference": "agile-ai-agents/aaa-documents/ai-story-point-guide.md#refinement-process-1"
+        }
+      }
+    }
+  }
+}

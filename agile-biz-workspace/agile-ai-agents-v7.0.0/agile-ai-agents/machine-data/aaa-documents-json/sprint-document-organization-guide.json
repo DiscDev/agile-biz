@@ -1,0 +1,359 @@
+{
+  "meta": {
+    "document": "sprint-document-organization-guide",
+    "title": "Sprint Document Organization Guide",
+    "timestamp": "2025-08-11T22:02:16.919Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md",
+    "document_type": "guide",
+    "file_hash": "bb7ab04b5578e81636354401aae02924",
+    "estimated_tokens": 912,
+    "full_md_tokens": 2523
+  },
+  "summary": "This guide defines the new consolidated sprint organization structure where ALL documents for a sprint are kept together in a single sprint folder. This approach improves cohesion, simplifies navigation, and makes sprint archival straightforward.",
+  "sections": [
+    {
+      "title": "Consolidated Sprint-Based Document Management",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#consolidated-sprint-based-document-management",
+      "content_preview": ""
+    },
+    {
+      "title": "Required Folder Structure",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#required-folder-structure",
+      "content_preview": "All sprint documents MUST be organized in this structure:\n\n```\nagile-ai-agents/project-documents/orchestration/\n├── stakeholder-decisions.md          ..."
+    },
+    {
+      "title": "Sprint Naming Convention",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#sprint-naming-convention",
+      "content_preview": ""
+    },
+    {
+      "title": "Sprint State Management",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#sprint-state-management",
+      "content_preview": ""
+    },
+    {
+      "title": "Document Creation Workflow",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#document-creation-workflow",
+      "content_preview": ""
+    },
+    {
+      "title": "Template Usage",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#template-usage",
+      "content_preview": ""
+    },
+    {
+      "title": "Active Sprint Management",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#active-sprint-management",
+      "content_preview": ""
+    },
+    {
+      "title": "Cross-Sprint Dependencies",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#cross-sprint-dependencies",
+      "content_preview": ""
+    },
+    {
+      "title": "sprint-2025-01-16-payment-integration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#sprint-2025-01-16-payment-integration",
+      "content_preview": "Depends on:\n- sprint-2025-01-09-authentication: User auth system required for payments\n- sprint-2025-01-02-database-setup: Payment tables need base sc..."
+    },
+    {
+      "title": "sprint-2025-01-23-user-dashboard",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#sprint-2025-01-23-user-dashboard",
+      "content_preview": "Depends on:\n- sprint-2025-01-09-authentication: User must be logged in\n- sprint-2025-01-16-payment-integration: Show payment history\n```"
+    },
+    {
+      "title": "Stakeholder Interaction Dual Structure",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#stakeholder-interaction-dual-structure",
+      "content_preview": ""
+    },
+    {
+      "title": "Version Control Integration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#version-control-integration",
+      "content_preview": ""
+    },
+    {
+      "title": "Benefits of Consolidated Structure",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#benefits-of-consolidated-structure",
+      "content_preview": "1. **Better Cohesion**: All sprint artifacts in one place\n2. **Clear Chronology**: Sprint folders show natural progression\n3. **Easier Archival**: Com..."
+    },
+    {
+      "title": "Migration Notes",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#migration-notes",
+      "content_preview": "This structure is for **new projects going forward**. Existing projects should continue using their current structure unless a migration is specifical..."
+    },
+    {
+      "title": "Common Patterns",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#common-patterns",
+      "content_preview": ""
+    },
+    {
+      "title": "Anti-Patterns to Avoid",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#anti-patterns-to-avoid",
+      "content_preview": ""
+    },
+    {
+      "title": "Monitoring and Compliance",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#monitoring-and-compliance",
+      "content_preview": "The Project Dashboard Agent monitors:\n- Document creation patterns\n- Compliance with structure\n- State transition validity\n- Registry completeness\n- C..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Consolidated Sprint-Based Document Management": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#consolidated-sprint-based-document-management",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Overview": {
+          "content_preview": "This guide defines the new consolidated sprint organization structure where ALL documents for a sprint are kept together in a single sprint folder. Th...",
+          "tokens": 62,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#overview-1"
+        }
+      }
+    },
+    "Required Folder Structure": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#required-folder-structure",
+      "tokens": 784,
+      "content_preview": "All sprint documents MUST be organized in this structure:\n\n```\nagile-ai-agents/project-documents/orchestration/\n├── stakeholder-decisions.md          ..."
+    },
+    "Sprint Naming Convention": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#sprint-naming-convention",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Format": {
+          "content_preview": "`sprint-YYYY-MM-DD-feature-name`",
+          "tokens": 8,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#format-1"
+        },
+        "Examples": {
+          "content_preview": "- `sprint-2025-01-09-authentication`\n- `sprint-2025-01-16-payment-integration`\n- `sprint-2025-01-23-user-dashboard`",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#examples-1"
+        },
+        "Rules": {
+          "content_preview": "- Use the sprint start date in ISO format (YYYY-MM-DD)\n- Feature name should be lowercase with hyphens instead of spaces\n- Keep feature names concise ...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#rules-1"
+        }
+      }
+    },
+    "Sprint State Management": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#sprint-state-management",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "State Transitions": {
+          "content_preview": "The Scrum Master Agent enforces these state transitions:\n\n```\nplanning → active → testing → review → retrospective → completed → archived\n```",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#state-transitions-1"
+        },
+        "State File (state.md)": {
+          "content_preview": "Each sprint folder MUST contain a `state.md` file tracking:\n```yaml\nsprint: sprint-2025-01-09-authentication\nstate: active\nstarted: 2025-01-09T09:00:0...",
+          "tokens": 56,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#state-file-statemd-1"
+        }
+      }
+    },
+    "Document Creation Workflow": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#document-creation-workflow",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "All Agents Request Through Scrum Master": {
+          "content_preview": "```javascript\n// Instead of creating documents directly:\n// ❌ DON'T: await createDocument('/project-documents/my-doc.md', content);\n\n// ✅ DO: Request ...",
+          "tokens": 98,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#all-agents-request-through-scrum-master-1"
+        },
+        "Scrum Master Validates and Creates": {
+          "content_preview": "The Scrum Master Agent:\n1. Validates the request is appropriate for current sprint\n2. Ensures proper naming conventions\n3. Creates document in correct...",
+          "tokens": 58,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#scrum-master-validates-and-creates-1"
+        },
+        "Document Registry Format": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#document-registry-format-1"
+        }
+      }
+    },
+    "Template Usage": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#template-usage",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Creating New Sprints": {
+          "content_preview": "1. Copy templates from `_templates/` folder\n2. Customize with sprint-specific information\n3. Maintain consistent format across all sprints",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#creating-new-sprints-1"
+        },
+        "Template Categories": {
+          "content_preview": "- **Planning Templates**: For sprint planning phase\n- **Tracking Templates**: For active sprint monitoring\n- **Review Templates**: For sprint review c...",
+          "tokens": 50,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#template-categories-1"
+        }
+      }
+    },
+    "Active Sprint Management": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#active-sprint-management",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Current Sprint Symlink": {
+          "content_preview": "- Always maintain `current-sprint` symlink pointing to active sprint\n- Update when transitioning to new sprint\n- Enables quick access without knowing ...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#current-sprint-symlink-1"
+        },
+        "Example Commands": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#example-commands-1"
+        }
+      }
+    },
+    "Cross-Sprint Dependencies": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#cross-sprint-dependencies",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Tracking in sprint-dependencies.md": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#tracking-in-sprint-dependenciesmd-1"
+        }
+      }
+    },
+    "sprint-2025-01-16-payment-integration": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#sprint-2025-01-16-payment-integration",
+      "tokens": 39,
+      "content_preview": "Depends on:\n- sprint-2025-01-09-authentication: User auth system required for payments\n- sprint-2025-01-02-database-setup: Payment tables need base sc..."
+    },
+    "sprint-2025-01-23-user-dashboard": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#sprint-2025-01-23-user-dashboard",
+      "tokens": 34,
+      "content_preview": "Depends on:\n- sprint-2025-01-09-authentication: User must be logged in\n- sprint-2025-01-16-payment-integration: Show payment history\n```"
+    },
+    "Stakeholder Interaction Dual Structure": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#stakeholder-interaction-dual-structure",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Overview": {
+          "content_preview": "Stakeholder decisions and escalations operate at both project and sprint levels:",
+          "tokens": 20,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#overview-3"
+        },
+        "Project Level (in 00-orchestration root)": {
+          "content_preview": "- **stakeholder-decisions.md**: Major project-wide decisions + sprint decision rollup\n- **stakeholder-escalations.md**: Project-wide escalations + spr...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#project-level-in-00-orchestration-root-1"
+        },
+        "Sprint Level (in each sprint folder)": {
+          "content_preview": "- **stakeholder-decisions/**: Sprint-specific decisions\n- **stakeholder-escalations/**: Sprint-specific escalations",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#sprint-level-in-each-sprint-folder-1"
+        },
+        "Implementation Guide": {
+          "content_preview": "1. Issues start at sprint level\n2. If resolved within sprint, stays in sprint folder\n3. If impacts beyond sprint, gets \"promoted\" to project level\n4. ...",
+          "tokens": 52,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#implementation-guide-3"
+        },
+        "Benefits:": {
+          "content_preview": "- Clear separation between sprint and project scope\n- Easy to find decisions/escalations at both levels\n- Natural escalation path from sprint to proje...",
+          "tokens": 61,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#benefits-1"
+        }
+      }
+    },
+    "Version Control Integration": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#version-control-integration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Sprint Version Tracking (sprint-version.md)": {
+          "content_preview": "```yaml\nsprint: sprint-2025-01-09-authentication\nstart_version: v1.2.3\nend_version: v1.3.0\ncommits: 47\nfeatures_added: \n  - JWT authentication\n  - Pas...",
+          "tokens": 53,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#sprint-version-tracking-sprint-versionmd-1"
+        }
+      }
+    },
+    "Benefits of Consolidated Structure": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#benefits-of-consolidated-structure",
+      "tokens": 98,
+      "content_preview": "1. **Better Cohesion**: All sprint artifacts in one place\n2. **Clear Chronology**: Sprint folders show natural progression\n3. **Easier Archival**: Com..."
+    },
+    "Migration Notes": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#migration-notes",
+      "tokens": 40,
+      "content_preview": "This structure is for **new projects going forward**. Existing projects should continue using their current structure unless a migration is specifical..."
+    },
+    "Common Patterns": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#common-patterns",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Starting a New Sprint": {
+          "content_preview": "1. Scrum Master creates new sprint folder\n2. Copies templates from `_templates/`\n3. Sets initial state to \"planning\"\n4. Updates current-sprint symlink...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#starting-a-new-sprint-1"
+        },
+        "During Active Sprint": {
+          "content_preview": "1. Agents request document creation through Scrum Master\n2. Pulse updates created multiple times daily\n3. Metrics updated continuously\n4. Blockers log...",
+          "tokens": 42,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#during-active-sprint-1"
+        },
+        "Completing a Sprint": {
+          "content_preview": "1. State transitions through testing → review → retrospective\n2. All ceremonies documented\n3. State set to \"completed\"\n4. Sprint can be archived later",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#completing-a-sprint-1"
+        }
+      }
+    },
+    "Anti-Patterns to Avoid": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#anti-patterns-to-avoid",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "❌ DON'T:": {
+          "content_preview": "- Create sprint documents outside the sprints folder\n- Bypass Scrum Master for document creation\n- Mix documents from different sprints\n- Forget to up...",
+          "tokens": 52,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#dont-1"
+        },
+        "✅ DO:": {
+          "content_preview": "- Always work within current sprint folder\n- Coordinate through Scrum Master\n- Maintain clear sprint boundaries\n- Keep state.md current\n- Track all do...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#do-1"
+        }
+      }
+    },
+    "Monitoring and Compliance": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-document-organization-guide.md#monitoring-and-compliance",
+      "tokens": 79,
+      "content_preview": "The Project Dashboard Agent monitors:\n- Document creation patterns\n- Compliance with structure\n- State transition validity\n- Registry completeness\n- C..."
+    }
+  }
+}

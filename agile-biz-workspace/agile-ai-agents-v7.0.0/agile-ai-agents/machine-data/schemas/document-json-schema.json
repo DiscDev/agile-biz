@@ -1,0 +1,139 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Document JSON Schema",
+  "description": "Schema for enhanced document JSON files with section references",
+  "type": "object",
+  "required": ["meta", "summary", "sections", "context_recommendations"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["document", "title", "category", "version", "last_updated", "estimated_tokens", "full_md_tokens", "md_file", "file_hash"],
+      "properties": {
+        "document": {
+          "type": "string",
+          "description": "Document filename without extension"
+        },
+        "title": {
+          "type": "string",
+          "description": "Human-readable document title"
+        },
+        "category": {
+          "type": "string",
+          "enum": ["guide", "template", "standard", "technical", "reference"],
+          "description": "Document category type"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Semantic version (e.g., 1.0.0)"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date",
+          "description": "ISO date of last update"
+        },
+        "estimated_tokens": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Estimated tokens for initial JSON load"
+        },
+        "full_md_tokens": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total tokens in full markdown document"
+        },
+        "md_file": {
+          "type": "string",
+          "description": "Relative path to source markdown file"
+        },
+        "file_hash": {
+          "type": "string",
+          "description": "MD5 hash of source file for change detection"
+        }
+      }
+    },
+    "summary": {
+      "type": "string",
+      "description": "Brief overview extracted from document"
+    },
+    "sections": {
+      "type": "object",
+      "patternProperties": {
+        ".*": {
+          "type": "object",
+          "required": ["tokens", "md_reference"],
+          "properties": {
+            "tokens": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Total tokens in this section"
+            },
+            "md_reference": {
+              "type": "string",
+              "pattern": "^agile-ai-agents/.+\\.md#[a-z0-9-]+$",
+              "description": "Reference to section in markdown file"
+            },
+            "content_tokens": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Tokens in section content (excluding subsections)"
+            },
+            "subsections": {
+              "type": "object",
+              "patternProperties": {
+                ".*": {
+                  "type": "object",
+                  "required": ["tokens", "md_reference"],
+                  "properties": {
+                    "tokens": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "md_reference": {
+                      "type": "string",
+                      "pattern": "^agile-ai-agents/.+\\.md#[a-z0-9-]+$"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "context_recommendations": {
+      "type": "object",
+      "required": ["minimal", "standard", "detailed"],
+      "properties": {
+        "minimal": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Paths to load for minimal context"
+        },
+        "standard": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Paths to load for standard context"
+        },
+        "detailed": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Paths to load for detailed context"
+        }
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of related documents referenced"
+    }
+  }
+}

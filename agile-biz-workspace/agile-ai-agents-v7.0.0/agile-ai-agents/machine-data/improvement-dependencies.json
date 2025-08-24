@@ -1,0 +1,121 @@
+{
+  "dependency_types": {
+    "technical": {
+      "description": "One improvement requires technical changes from another",
+      "examples": [
+        "Database migration must complete before query optimization",
+        "Authentication system must be updated before adding 2FA"
+      ],
+      "blocking": true
+    },
+    "logical": {
+      "description": "Logical sequence for implementation",
+      "examples": [
+        "Design system should be created before component refactoring",
+        "API documentation after API implementation"
+      ],
+      "blocking": false
+    },
+    "resource": {
+      "description": "Shared resource or component dependencies",
+      "examples": [
+        "Same team member needed for both tasks",
+        "Database maintenance window required"
+      ],
+      "blocking": false
+    },
+    "testing": {
+      "description": "Testing dependencies",
+      "examples": [
+        "Unit tests before integration tests",
+        "Test framework setup before test writing"
+      ],
+      "blocking": true
+    }
+  },
+  "common_dependency_patterns": [
+    {
+      "pattern": "security_chain",
+      "description": "Security improvements often have dependencies",
+      "sequence": [
+        "vulnerability_assessment",
+        "security_framework_setup",
+        "vulnerability_fixes",
+        "security_testing",
+        "security_monitoring"
+      ]
+    },
+    {
+      "pattern": "performance_chain",
+      "description": "Performance improvements build on each other",
+      "sequence": [
+        "performance_profiling",
+        "database_optimization",
+        "query_optimization",
+        "caching_implementation",
+        "cdn_setup"
+      ]
+    },
+    {
+      "pattern": "testing_pyramid",
+      "description": "Testing improvements follow testing pyramid",
+      "sequence": [
+        "test_framework_setup",
+        "unit_tests",
+        "integration_tests",
+        "e2e_tests",
+        "performance_tests"
+      ]
+    },
+    {
+      "pattern": "refactoring_sequence",
+      "description": "Refactoring should follow a safe sequence",
+      "sequence": [
+        "test_coverage",
+        "code_analysis",
+        "incremental_refactoring",
+        "architecture_improvements",
+        "documentation_update"
+      ]
+    }
+  ],
+  "dependency_resolution": {
+    "strategies": {
+      "respect_all": {
+        "description": "Respect all dependencies strictly",
+        "allow_parallel": false
+      },
+      "optimize_parallel": {
+        "description": "Run independent items in parallel",
+        "allow_parallel": true
+      },
+      "critical_path": {
+        "description": "Focus on critical path items first",
+        "allow_parallel": true
+      }
+    },
+    "default_strategy": "optimize_parallel"
+  },
+  "circular_dependency_handling": {
+    "detection": true,
+    "resolution": "break_at_weakest_link",
+    "alert_user": true
+  },
+  "dependency_validation_rules": [
+    {
+      "rule": "no_forward_references",
+      "description": "Cannot depend on improvements with lower priority",
+      "severity": "warning"
+    },
+    {
+      "rule": "category_consistency",
+      "description": "Security items should not depend on feature items",
+      "severity": "warning"
+    },
+    {
+      "rule": "effort_escalation",
+      "description": "High effort items should not block low effort quick wins",
+      "severity": "info"
+    }
+  ]
+}

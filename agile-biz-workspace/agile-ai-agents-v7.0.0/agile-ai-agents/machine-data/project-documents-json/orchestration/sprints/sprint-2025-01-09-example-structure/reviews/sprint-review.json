@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "document": "sprint-review",
+    "title": "Sprint Review - 2025-01-19",
+    "timestamp": "2025-07-22T01:41:03.749Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md",
+    "document_type": "general_documentation",
+    "file_hash": "68c8669266d315e55da15223e5954a67",
+    "estimated_tokens": 509,
+    "full_md_tokens": 815
+  },
+  "summary": "## Sprint: Authentication Foundation",
+  "sections": [
+    {
+      "title": "Sprint: Authentication Foundation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#sprint-authentication-foundation",
+      "content_preview": "**Review Date**: 2025-01-19  \n**Facilitator**: Scrum Master Agent  \n**Attendees**: Product Owner, Stakeholders, All Sprint Team Agents"
+    },
+    {
+      "title": "Sprint Goal Recap",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#sprint-goal-recap",
+      "content_preview": "Deliver a secure, scalable authentication system that allows users to register, log in, and maintain sessions across the application."
+    },
+    {
+      "title": "Completed User Stories",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#completed-user-stories",
+      "content_preview": ""
+    },
+    {
+      "title": "Sprint Metrics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#sprint-metrics",
+      "content_preview": "* **Velocity**: 24 points completed (92% of committed)\n* **Quality**: 0 production bugs, 3 minor issues found and fixed\n* **Test Coverage**: 87% (exce..."
+    },
+    {
+      "title": "Stakeholder Feedback",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#stakeholder-feedback",
+      "content_preview": ""
+    },
+    {
+      "title": "Product Backlog Updates",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#product-backlog-updates",
+      "content_preview": ""
+    },
+    {
+      "title": "Definition of Done Review",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#definition-of-done-review",
+      "content_preview": "✅ Code complete and reviewed  \n✅ Unit tests written and passing (87% coverage)  \n✅ Integration tests passing  \n✅ Security review completed  \n✅ Documen..."
+    },
+    {
+      "title": "Next Steps",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#next-steps",
+      "content_preview": "1. Deploy to production (scheduled for 2025-01-20)\n2. Monitor initial user adoption\n3. Begin Sprint 2 planning (2025-01-20)\n4. Address stakeholder UI ..."
+    },
+    {
+      "title": "Risk Assessment",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#risk-assessment",
+      "content_preview": "- **Low Risk**: Current implementation is stable\n- **Monitor**: Initial production usage patterns\n- **Mitigate**: Have rollback plan ready for deploym..."
+    },
+    {
+      "title": "Overall Sprint Success Rating",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#overall-sprint-success-rating",
+      "content_preview": "⭐⭐⭐⭐☆ (4/5) - Successful sprint with minor items deferred\n\n---\n\n**Meeting Duration**: 90 minutes  \n**Recording Available**: Yes  \n**Next Sprint Planni..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Sprint: Authentication Foundation": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#sprint-authentication-foundation",
+      "tokens": 31,
+      "content_preview": "**Review Date**: 2025-01-19  \n**Facilitator**: Scrum Master Agent  \n**Attendees**: Product Owner, Stakeholders, All Sprint Team Agents"
+    },
+    "Sprint Goal Recap": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#sprint-goal-recap",
+      "tokens": 34,
+      "content_preview": "Deliver a secure, scalable authentication system that allows users to register, log in, and maintain sessions across the application."
+    },
+    "Completed User Stories": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#completed-user-stories",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "✅ AUTH-001: User Registration System (13 points)": {
+          "content_preview": "**Demo**: Live demonstration of user registration flow\n- Email/password validation working correctly\n- Duplicate email prevention implemented\n- Succes...",
+          "tokens": 72,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#auth-001-user-registration-system-13-points-1"
+        },
+        "✅ AUTH-002: Login Flow Implementation (8 points)": {
+          "content_preview": "**Demo**: Complete login process demonstrated\n- Valid credentials allow access\n- Invalid credentials show appropriate errors\n- Session tokens generate...",
+          "tokens": 60,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#auth-002-login-flow-implementation-8-points-1"
+        },
+        "⚠️ AUTH-003: Session Management (5 points - partial)": {
+          "content_preview": "**Demo**: Session persistence demonstrated\n- Sessions maintained across page refreshes\n- Logout functionality working\n- Session expiry not fully imple...",
+          "tokens": 58,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#auth-003-session-management-5-points-partial-1"
+        }
+      }
+    },
+    "Sprint Metrics": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#sprint-metrics",
+      "tokens": 50,
+      "content_preview": "* **Velocity**: 24 points completed (92% of committed)\n* **Quality**: 0 production bugs, 3 minor issues found and fixed\n* **Test Coverage**: 87% (exce..."
+    },
+    "Stakeholder Feedback": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#stakeholder-feedback",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Positive Feedback": {
+          "content_preview": "- \"The registration flow is very smooth and user-friendly\"\n- \"Security implementation appears robust\"\n- \"API documentation is comprehensive\"\n- \"Error ...",
+          "tokens": 46,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#positive-feedback-1"
+        },
+        "Improvement Suggestions": {
+          "content_preview": "- Add password strength indicator during registration\n- Include \"Remember Me\" checkbox on login\n- Consider social login options for future\n- Enhance m...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#improvement-suggestions-1"
+        },
+        "Decisions Made": {
+          "content_preview": "1. **Approved**: Current implementation for production deployment\n2. **Deferred**: Session expiry to next sprint (AUTH-003b)\n3. **Added**: Password st...",
+          "tokens": 55,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#decisions-made-1"
+        }
+      }
+    },
+    "Product Backlog Updates": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#product-backlog-updates",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "New Items Added": {
+          "content_preview": "- UX-010: Password Strength Indicator (2 points)\n- AUTH-003b: Session Expiry Implementation (3 points)\n- AUTH-011: \"Remember Me\" Feature (3 points)",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#new-items-added-1"
+        },
+        "Reprioritized Items": {
+          "content_preview": "- AUTH-004: OAuth Integration (moved to Sprint 3)\n- SEC-001: Rate Limiting (elevated to High priority)",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#reprioritized-items-1"
+        }
+      }
+    },
+    "Definition of Done Review": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#definition-of-done-review",
+      "tokens": 59,
+      "content_preview": "✅ Code complete and reviewed  \n✅ Unit tests written and passing (87% coverage)  \n✅ Integration tests passing  \n✅ Security review completed  \n✅ Documen..."
+    },
+    "Next Steps": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#next-steps",
+      "tokens": 43,
+      "content_preview": "1. Deploy to production (scheduled for 2025-01-20)\n2. Monitor initial user adoption\n3. Begin Sprint 2 planning (2025-01-20)\n4. Address stakeholder UI ..."
+    },
+    "Risk Assessment": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#risk-assessment",
+      "tokens": 36,
+      "content_preview": "- **Low Risk**: Current implementation is stable\n- **Monitor**: Initial production usage patterns\n- **Mitigate**: Have rollback plan ready for deploym..."
+    },
+    "Overall Sprint Success Rating": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/sprint-review.md#overall-sprint-success-rating",
+      "tokens": 41,
+      "content_preview": "⭐⭐⭐⭐☆ (4/5) - Successful sprint with minor items deferred\n\n---\n\n**Meeting Duration**: 90 minutes  \n**Recording Available**: Yes  \n**Next Sprint Planni..."
+    }
+  }
+}

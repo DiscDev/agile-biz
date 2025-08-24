@@ -1,0 +1,227 @@
+{
+  "meta": {
+    "document": "smart-context-loading-guide",
+    "title": "Smart Context Loading Guide",
+    "timestamp": "2025-08-11T22:02:16.917Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md",
+    "document_type": "guide",
+    "file_hash": "b91182b0e2861ce66856b183e6f0c6bc",
+    "estimated_tokens": 611,
+    "full_md_tokens": 1509
+  },
+  "summary": "The Smart Context Loading system optimizes token usage by implementing progressive context loading strategies. This allows AI agents to start with minimal JSON context and progressively load more detailed information from MD files as needed.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#overview",
+      "content_preview": "The Smart Context Loading system optimizes token usage by implementing progressive context loading strategies. This allows AI agents to start with min..."
+    },
+    {
+      "title": "Key Components",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#key-components",
+      "content_preview": ""
+    },
+    {
+      "title": "Standard Meta Fields",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#standard-meta-fields",
+      "content_preview": "All JSON files now include standardized meta fields:\n\n```json\n{\n  \"meta\": {\n    \"agent\": \"agent_name\",\n    \"version\": \"1.0.0\",\n    \"timestamp\": \"2025-..."
+    },
+    {
+      "title": "Agent Usage Pattern",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#agent-usage-pattern",
+      "content_preview": ""
+    },
+    {
+      "title": "Token Budget Management",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#token-budget-management",
+      "content_preview": "The system supports token budget allocation across agents:\n\n```javascript\nconst strategy = loader.generateLoadingStrategy([\n  { name: 'prd_agent', tas..."
+    },
+    {
+      "title": "Context Caching",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#context-caching",
+      "content_preview": "The system implements a multi-level cache:\n\n1. **Memory Cache**: 5-minute TTL for frequently accessed data\n2. **Disk Cache**: Persistent cache for ses..."
+    },
+    {
+      "title": "Benefits",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#benefits",
+      "content_preview": ""
+    },
+    {
+      "title": "Integration with Project State Manager",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#integration-with-project-state-manager",
+      "content_preview": "The Project State Manager uses smart context loading for:\n\n1. **Session Recovery**: Loads minimal context first, then expands\n2. **Agent Coordination*..."
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "Future Enhancements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#future-enhancements",
+      "content_preview": "1. **Automatic Level Selection**: AI-driven context level recommendations\n2. **Predictive Loading**: Pre-load likely needed context\n3. **Compression**..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#overview",
+      "tokens": 61,
+      "content_preview": "The Smart Context Loading system optimizes token usage by implementing progressive context loading strategies. This allows AI agents to start with min..."
+    },
+    "Key Components": {
+      "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#key-components",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "MD/JSON Synchronization Monitor (`sync-monitor.js`)": {
+          "content_preview": "Monitors changes to MD files and ensures JSON files stay synchronized.\n\n**Features:**\n- Real-time file watching for MD changes\n- Synchronization statu...",
+          "tokens": 58,
+          "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#mdjson-synchronization-monitor-sync-monitorjs-1"
+        }
+      }
+    },
+    "Standard Meta Fields": {
+      "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#standard-meta-fields",
+      "tokens": 94,
+      "content_preview": "All JSON files now include standardized meta fields:\n\n```json\n{\n  \"meta\": {\n    \"agent\": \"agent_name\",\n    \"version\": \"1.0.0\",\n    \"timestamp\": \"2025-...",
+      "subsections": {
+        "Meta Field Definitions": {
+          "content_preview": "- **source_file**: Relative path to source MD file from project root\n- **last_synced**: When JSON was last generated from MD\n- **sync_status**: \"synce...",
+          "tokens": 73,
+          "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#meta-field-definitions-1"
+        }
+      }
+    },
+    "Agent Usage Pattern": {
+      "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#agent-usage-pattern",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Start with Stakeholder Context (HIGHEST PRIORITY)": {
+          "content_preview": "```javascript\nconst stakeholderContext = await loader.loadStakeholderContext();\n// Always load first - contains business objectives, constraints, succ...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#start-with-stakeholder-context-highest-priority-1"
+        },
+        "Progressive Loading Based on Task": {
+          "content_preview": "```javascript\n// Quick data retrieval\nconst minimalContext = await loader.loadContext('prd_agent', 1);\n\n// Standard analysis\nconst fullJson = await lo...",
+          "tokens": 88,
+          "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#progressive-loading-based-on-task-1"
+        },
+        "Query Specific Data": {
+          "content_preview": "```javascript\n// Get just the tech stack from coder agent\nconst techStack = loader.queryJsonPath('coder_agent', 'key_findings.tech_stack');\n```",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#query-specific-data-1"
+        }
+      }
+    },
+    "Token Budget Management": {
+      "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#token-budget-management",
+      "tokens": 88,
+      "content_preview": "The system supports token budget allocation across agents:\n\n```javascript\nconst strategy = loader.generateLoadingStrategy([\n  { name: 'prd_agent', tas..."
+    },
+    "Context Caching": {
+      "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#context-caching",
+      "tokens": 51,
+      "content_preview": "The system implements a multi-level cache:\n\n1. **Memory Cache**: 5-minute TTL for frequently accessed data\n2. **Disk Cache**: Persistent cache for ses..."
+    },
+    "Benefits": {
+      "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#benefits",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Token Efficiency": {
+          "content_preview": "- 60-80% reduction in token usage\n- Smart deduplication of shared context\n- Progressive loading prevents waste",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#token-efficiency-1"
+        },
+        "Performance": {
+          "content_preview": "- 2-5 second initial load (vs 30-45 seconds)\n- 76% cache hit rate\n- Instant context switching",
+          "tokens": 23,
+          "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#performance-1"
+        },
+        "Reliability": {
+          "content_preview": "- Automatic sync validation\n- Orphan detection\n- Recovery optimization",
+          "tokens": 18,
+          "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#reliability-1"
+        }
+      }
+    },
+    "Integration with Project State Manager": {
+      "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#integration-with-project-state-manager",
+      "tokens": 66,
+      "content_preview": "The Project State Manager uses smart context loading for:\n\n1. **Session Recovery**: Loads minimal context first, then expands\n2. **Agent Coordination*..."
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Always Check Sync Status": {
+          "content_preview": "```javascript\nif (jsonData.meta.sync_status !== 'synced') {\n  console.warn('JSON may be outdated');\n}\n```",
+          "tokens": 24,
+          "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#always-check-sync-status-1"
+        },
+        "Use Appropriate Loading Level": {
+          "content_preview": "- Don't load full MD for simple queries\n- Start with JSON, escalate to MD only if needed\n- Cache frequently accessed data",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#use-appropriate-loading-level-1"
+        },
+        "Monitor Token Usage": {
+          "content_preview": "- Track token consumption per agent\n- Adjust loading strategies based on budget\n- Use query paths for specific data",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#monitor-token-usage-1"
+        },
+        "Handle Loading Errors": {
+          "content_preview": "```javascript\ntry {\n  const context = await loader.loadContext(agent, level);\n} catch (error) {\n  // Fallback to lower level or cached data\n}\n```",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#handle-loading-errors-1"
+        }
+      }
+    },
+    "Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Troubleshooting": {
+          "content_preview": "1. **\"JSON file not found\"**\n   - Run `npm run sync:report` to check status\n   - Ensure Document Manager has generated JSON\n\n2. **\"Checksum mismatch\"*...",
+          "tokens": 89,
+          "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#troubleshooting-2"
+        },
+        "Debug Commands": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#debug-commands-1"
+        }
+      }
+    },
+    "Future Enhancements": {
+      "md_reference": "agile-ai-agents/aaa-documents/smart-context-loading-guide.md#future-enhancements",
+      "tokens": 116,
+      "content_preview": "1. **Automatic Level Selection**: AI-driven context level recommendations\n2. **Predictive Loading**: Pre-load likely needed context\n3. **Compression**..."
+    }
+  }
+}

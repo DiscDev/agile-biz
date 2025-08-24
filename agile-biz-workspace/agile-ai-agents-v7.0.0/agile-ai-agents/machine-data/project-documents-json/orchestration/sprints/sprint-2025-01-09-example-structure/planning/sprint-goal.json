@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "document": "sprint-goal",
+    "title": "Sprint Goal",
+    "timestamp": "2025-07-22T01:41:03.744Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/sprint-goal.md",
+    "document_type": "general_documentation",
+    "file_hash": "842480e419ea025c22ebf6c3ce449936",
+    "estimated_tokens": 62,
+    "full_md_tokens": 259
+  },
+  "summary": "## Sprint: 2025-01-09 - Authentication Foundation",
+  "sections": [
+    {
+      "title": "Sprint: 2025-01-09 - Authentication Foundation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/sprint-goal.md#sprint-2025-01-09-authentication-foundation",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Sprint: 2025-01-09 - Authentication Foundation": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/sprint-goal.md#sprint-2025-01-09-authentication-foundation",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Primary Goal": {
+          "content_preview": "Deliver a secure, scalable authentication system that allows users to register, log in, and maintain sessions across the application.",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/sprint-goal.md#primary-goal-1"
+        },
+        "Success Criteria": {
+          "content_preview": "1. Users can successfully register with email and password\n2. Users can log in with valid credentials\n3. Sessions persist across page refreshes\n4. Inv...",
+          "tokens": 79,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/sprint-goal.md#success-criteria-1"
+        },
+        "Stretch Goals": {
+          "content_preview": "- Implement \"Remember Me\" functionality\n- Add password strength indicators\n- Create user profile endpoint",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/sprint-goal.md#stretch-goals-1"
+        },
+        "Out of Scope for This Sprint": {
+          "content_preview": "- OAuth integration (planned for next sprint)\n- Two-factor authentication\n- Password reset flow",
+          "tokens": 24,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/sprint-goal.md#out-of-scope-for-this-sprint-1"
+        },
+        "Definition of Done": {
+          "content_preview": "- [ ] Code complete and reviewed\n- [ ] Unit tests written and passing\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] Documentat...",
+          "tokens": 56,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/sprint-goal.md#definition-of-done-1"
+        }
+      }
+    }
+  }
+}

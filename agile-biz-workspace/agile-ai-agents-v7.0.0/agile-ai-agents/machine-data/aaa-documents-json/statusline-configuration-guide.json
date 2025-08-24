@@ -1,0 +1,354 @@
+{
+  "meta": {
+    "document": "statusline-configuration-guide",
+    "title": "AgileAiAgents Statusline Configuration Guide",
+    "timestamp": "2025-08-11T22:02:16.926Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md",
+    "document_type": "guide",
+    "file_hash": "94ece80410bf59072eeb182d856c985c",
+    "estimated_tokens": 744,
+    "full_md_tokens": 1781
+  },
+  "summary": "The AgileAiAgents statusline provides real-time visibility into project status, workflow progress, agent coordination, and system health directly in Claude Code's interface.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#overview",
+      "content_preview": "The AgileAiAgents statusline provides real-time visibility into project status, workflow progress, agent coordination, and system health directly in C..."
+    },
+    {
+      "title": "How It Works",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#how-it-works",
+      "content_preview": "The statusline appears at the bottom of your Claude Code interface and updates automatically as you work. It reads from multiple AgileAiAgents system ..."
+    },
+    {
+      "title": "Display Modes",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#display-modes",
+      "content_preview": ""
+    },
+    {
+      "title": "Configuration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#configuration",
+      "content_preview": ""
+    },
+    {
+      "title": "Verbosity Levels",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#verbosity-levels",
+      "content_preview": "The statusline adapts based on your verbosity setting in `CLAUDE-config.md`:"
+    },
+    {
+      "title": "Status Indicators",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#status-indicators",
+      "content_preview": ""
+    },
+    {
+      "title": "Alert Thresholds",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#alert-thresholds",
+      "content_preview": "The statusline will automatically switch to alert mode when:"
+    },
+    {
+      "title": "Workflow-Specific Displays",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#workflow-specific-displays",
+      "content_preview": ""
+    },
+    {
+      "title": "Customization",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#customization",
+      "content_preview": ""
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "Examples by Scenario",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#examples-by-scenario",
+      "content_preview": ""
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#best-practices",
+      "content_preview": "1. **Keep it Readable** - Don't overload with information\n2. **Prioritize Actions** - Always show what needs human attention\n3. **Use Color Wisely** -..."
+    },
+    {
+      "title": "Integration with Commands",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#integration-with-commands",
+      "content_preview": "The statusline works seamlessly with AgileAiAgents commands:\n- `/aaa-status` - Full status details\n- `/aaa-config` - View/modify statusline settings\n-..."
+    },
+    {
+      "title": "Version Compatibility",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#version-compatibility",
+      "content_preview": "- **AgileAiAgents**: v4.8.0+\n- **Claude Code**: Latest version\n- **Requirements**: Bash, jq, curl\n\n---\n\n**Created**: 2025-01-14  \n**Version**: 1.0.0  ..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#overview",
+      "tokens": 44,
+      "content_preview": "The AgileAiAgents statusline provides real-time visibility into project status, workflow progress, agent coordination, and system health directly in C..."
+    },
+    "How It Works": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#how-it-works",
+      "tokens": 53,
+      "content_preview": "The statusline appears at the bottom of your Claude Code interface and updates automatically as you work. It reads from multiple AgileAiAgents system ...",
+      "subsections": {
+        "Information Sources": {
+          "content_preview": "- `CLAUDE-config.md` - Configuration settings\n- `project-state/current-state.json` - Active workflow and progress\n- `project-documents/orchestration/s...",
+          "tokens": 72,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#information-sources-1"
+        }
+      }
+    },
+    "Display Modes": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#display-modes",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Normal Operations": {
+          "content_preview": "Shows standard project progress and agent activity:\n```\n🟢 Sprint 1 CI/CD | 3 agents working | Step 4/7 (57%) | Auto-save ✓ | $2.34 | Dashboard ↗\n```",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#1-normal-operations-1"
+        },
+        "2. Stakeholder Action Required": {
+          "content_preview": "Prioritizes urgent actions that need human intervention:\n```\n⚠️ ACTION NEEDED | Create GitHub repo \"project-name\" | 5 mins until blocked | See above ⬆...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#2-stakeholder-action-required-1"
+        },
+        "3. System Alert": {
+          "content_preview": "Highlights critical issues requiring attention:\n```\n🔴 BLOCKED | 2 agents timeout | Token limit 85% | Recovery in progress | Check dashboard\n```",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#3-system-alert-1"
+        }
+      }
+    },
+    "Configuration": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#configuration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Enable/Disable Statusline": {
+          "content_preview": "Edit `.claude/settings.json`:\n```json\n{\n  \"statusLine\": {\n    \"type\": \"command\",\n    \"command\": \"/path/to/.claude/hooks/statusline.sh\",\n    \"padding\":...",
+          "tokens": 49,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#enabledisable-statusline-1"
+        },
+        "Configuration Options": {
+          "content_preview": "Edit the statusline section in `CLAUDE-config.md`:\n\n```yaml\nstatusline:\n  enabled: true                  # Master switch\n  mode: \"adaptive\"           ...",
+          "tokens": 164,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#configuration-options-1"
+        }
+      }
+    },
+    "Verbosity Levels": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#verbosity-levels",
+      "tokens": 19,
+      "content_preview": "The statusline adapts based on your verbosity setting in `CLAUDE-config.md`:",
+      "subsections": {
+        "Quiet Mode": {
+          "content_preview": "Minimal information for focused work:\n```\nSprint 1 | 3/5\n```",
+          "tokens": 14,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#quiet-mode-1"
+        },
+        "Normal Mode (Default)": {
+          "content_preview": "Balanced information display:\n```\n🟢 Sprint 1 | 3/5 stories | 2 agents | $2.34 | Dashboard ↗\n```",
+          "tokens": 23,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#normal-mode-default-1"
+        },
+        "Verbose Mode": {
+          "content_preview": "Detailed information including metrics:\n```\n🟢 ✓ Research Done | Sprint 1 Day 2 | 3/5 stories | 2 agents (60% faster) | $2.34 (23k tokens) | Dashboard...",
+          "tokens": 37,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#verbose-mode-1"
+        },
+        "Debug Mode": {
+          "content_preview": "Everything including internal states:\n```\n🟢 ✓ Research Done | Sprint 1 Day 2 | 3/5 stories | DevOps+Coder+Testing (parallel 60%) | $2.34 (23,456/100k...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#debug-mode-1"
+        }
+      }
+    },
+    "Status Indicators": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#status-indicators",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Health Icons": {
+          "content_preview": "- 🟢 **Green** - Healthy, no issues\n- 🟡 **Yellow** - Warning, 1-2 blockers\n- 🔴 **Red** - Critical, 3+ blockers or major issues",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#health-icons-1"
+        },
+        "Progress Indicators": {
+          "content_preview": "- `3/5` - Numeric progress (completed/total)\n- `57%` - Percentage completion\n- `Step 4/7` - Current step in process",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#progress-indicators-1"
+        },
+        "Efficiency Metrics": {
+          "content_preview": "- `45% faster` - 2 agents working in parallel\n- `60% faster` - 3 agents working in parallel\n- `70% faster` - 4 agents working in parallel\n- `75% faste...",
+          "tokens": 44,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#efficiency-metrics-1"
+        },
+        "Special Indicators": {
+          "content_preview": "- ✓ - Completed milestone\n- ⚠️ - Action required\n- ↗ - External link available\n- ⬆️ - See information above in conversation",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#special-indicators-1"
+        }
+      }
+    },
+    "Alert Thresholds": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#alert-thresholds",
+      "tokens": 15,
+      "content_preview": "The statusline will automatically switch to alert mode when:",
+      "subsections": {
+        "Cost Thresholds": {
+          "content_preview": "- **Warning** at $5 per session\n- **Alert** at $10 per session\n- **Critical** at $50 per session",
+          "tokens": 21,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#cost-thresholds-1"
+        },
+        "Token Usage": {
+          "content_preview": "- **Warning** at 80% of limit\n- **Alert** at 90% of limit\n- **Critical** at 95% of limit",
+          "tokens": 19,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#token-usage-1"
+        },
+        "Time-Based": {
+          "content_preview": "- **Phase stall** after 15 minutes of inactivity\n- **Agent timeout** after 5 minutes no response\n- **Action urgency** countdown when blocking",
+          "tokens": 33,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#time-based-1"
+        }
+      }
+    },
+    "Workflow-Specific Displays": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#workflow-specific-displays",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "New Project Workflow": {
+          "content_preview": "**Discovery Phase:**\n```\n🔵 Discovery | Section 2/5: Technical | Awaiting approval\n```\n\n**Research Phase:**\n```\n🔵 Research (Medium) | 28/48 docs | Ma...",
+          "tokens": 61,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#new-project-workflow-1"
+        },
+        "Existing Project Workflow": {
+          "content_preview": "**Analysis Phase:**\n```\n🔵 Analyzing | 1,234 files scanned | 78% complete\n```\n\n**Migration Phase:**\n```\n🟡 Migration | Zero-downtime mode | Rollback r...",
+          "tokens": 57,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#existing-project-workflow-1"
+        }
+      }
+    },
+    "Customization": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#customization",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Change Colors": {
+          "content_preview": "Edit the colors section in `CLAUDE-config.md`:\n```yaml\ncolors:\n  health_good: \"green\"\n  health_warning: \"yellow\"\n  health_critical: \"red\"\n  action_nee...",
+          "tokens": 62,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#change-colors-1"
+        },
+        "Adjust Auto-Mode Switching": {
+          "content_preview": "```yaml\nauto_mode_switches:\n  alert_on_error: true        # Auto-switch to alert mode\n  verbose_on_action: true     # Expand for actions\n  quiet_durin...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#adjust-auto-mode-switching-1"
+        },
+        "Configure Abbreviations": {
+          "content_preview": "```yaml\nabbreviations:\n  use_icons: true             # Use emoji icons\n  shorten_agent_names: true   # DevOps → DO\n  compress_progress: true     # 3/5...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#configure-abbreviations-1"
+        }
+      }
+    },
+    "Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Statusline Not Appearing": {
+          "content_preview": "1. Check `.claude/settings.json` has statusLine configured\n2. Verify `statusline.sh` is executable: `chmod +x .claude/hooks/statusline.sh`\n3. Check `C...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#statusline-not-appearing-1"
+        },
+        "Incorrect Information": {
+          "content_preview": "1. Verify `project-state/current-state.json` exists and is valid JSON\n2. Check file permissions on state files\n3. Ensure AgileAiAgents hooks are runni...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#incorrect-information-1"
+        },
+        "Performance Issues": {
+          "content_preview": "1. Increase `update_frequency` in config (e.g., 1000ms)\n2. Disable unnecessary display options\n3. Use quiet mode during intensive operations",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#performance-issues-1"
+        },
+        "Testing Statusline": {
+          "content_preview": "Test with mock data:\n```bash\necho '{\"currentWorkingDirectory\":\"$(pwd)\",\"model\":\"claude-opus-4-1\"}' | .claude/hooks/statusline.sh\n```",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#testing-statusline-1"
+        }
+      }
+    },
+    "Examples by Scenario": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#examples-by-scenario",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Sprint Development": {
+          "content_preview": "```\n🟢 Sprint 2 Day 1 | User Auth Story | 2/8 complete | 3 agents | $4.56\n```",
+          "tokens": 18,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#sprint-development-1"
+        },
+        "CI/CD Setup (Sprint 1)": {
+          "content_preview": "```\n🟡 Sprint 1 CI/CD | GitHub Actions setup | ACTION: Add secrets | 3m ⚠️\n```",
+          "tokens": 18,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#cicd-setup-sprint-1-1"
+        },
+        "Long Research Phase": {
+          "content_preview": "```\n🔵 Research Phase | 124/194 docs | 4 agents parallel | 3.5hrs | $12.34\n```",
+          "tokens": 18,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#long-research-phase-1"
+        },
+        "Multiple Issues": {
+          "content_preview": "```\n🔴 ALERT | 3 blockers | Agent timeout | Token 87% | Recovery active\n```",
+          "tokens": 18,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#multiple-issues-1"
+        },
+        "Project Complete": {
+          "content_preview": "```\n🟢 Project Complete | 5 sprints done | 47 stories delivered | Archive ready\n```",
+          "tokens": 20,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#project-complete-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#best-practices",
+      "tokens": 75,
+      "content_preview": "1. **Keep it Readable** - Don't overload with information\n2. **Prioritize Actions** - Always show what needs human attention\n3. **Use Color Wisely** -..."
+    },
+    "Integration with Commands": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#integration-with-commands",
+      "tokens": 57,
+      "content_preview": "The statusline works seamlessly with AgileAiAgents commands:\n- `/aaa-status` - Full status details\n- `/aaa-config` - View/modify statusline settings\n-..."
+    },
+    "Version Compatibility": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-configuration-guide.md#version-compatibility",
+      "tokens": 44,
+      "content_preview": "- **AgileAiAgents**: v4.8.0+\n- **Claude Code**: Latest version\n- **Requirements**: Bash, jq, curl\n\n---\n\n**Created**: 2025-01-14  \n**Version**: 1.0.0  ..."
+    }
+  }
+}

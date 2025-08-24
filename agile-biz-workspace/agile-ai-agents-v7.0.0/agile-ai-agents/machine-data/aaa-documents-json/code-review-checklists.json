@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "document": "code-review-checklists",
+    "title": "Code Review Checklists",
+    "timestamp": "2025-08-11T22:02:16.871Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/code-review-checklists.md",
+    "document_type": "technical",
+    "file_hash": "08a3f71c1a87dded86dbaf5e14d02238",
+    "estimated_tokens": 294,
+    "full_md_tokens": 2068
+  },
+  "summary": "Comprehensive checklists for code reviewers to ensure defensive programming patterns, authentication testing, and deployment readiness. Use these during pull request reviews.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#overview",
+      "content_preview": "Comprehensive checklists for code reviewers to ensure defensive programming patterns, authentication testing, and deployment readiness. Use these duri..."
+    },
+    {
+      "title": "Master Code Review Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#master-code-review-checklist",
+      "content_preview": ""
+    },
+    {
+      "title": "Quick Reference Card",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#quick-reference-card",
+      "content_preview": ""
+    },
+    {
+      "title": "PR Review Template",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#pr-review-template",
+      "content_preview": "```markdown"
+    },
+    {
+      "title": "Code Review Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#code-review-checklist",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "workflow_guidance",
+    "technical_integration",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#overview",
+      "tokens": 44,
+      "content_preview": "Comprehensive checklists for code reviewers to ensure defensive programming patterns, authentication testing, and deployment readiness. Use these duri..."
+    },
+    "Master Code Review Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#master-code-review-checklist",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "🛡️ Defensive Programming Checklist": {
+          "content_preview": "- [ ] **Response Structure Validated**\n  ```javascript\n  // ❌ setData(response.data)\n  // ✅ if (response?.data) { setData(response.data) }\n  ```\n- [ ]...",
+          "tokens": 93,
+          "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#defensive-programming-checklist-4"
+        },
+        "🔐 Authentication & Security Checklist": {
+          "content_preview": "- [ ] **No Sensitive Data in Code**\n  - No hardcoded credentials\n  - No API keys in source\n  - Environment variables used\n  \n- [ ] **Input Validation*...",
+          "tokens": 89,
+          "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#authentication-security-checklist-3"
+        },
+        "🚀 Deployment Readiness Checklist": {
+          "content_preview": "- [ ] **Environment Variables Documented**\n  ```bash\n  # .env.example updated\n  # README includes env setup\n  ```\n- [ ] **Port Configuration Dynamic**...",
+          "tokens": 72,
+          "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#deployment-readiness-checklist-4"
+        },
+        "⚛️ React-Specific Checklist": {
+          "content_preview": "- [ ] **Unnecessary Renders Prevented**\n  - React.memo used appropriately\n  - useMemo/useCallback for expensive operations\n  - Key props stable\n  \n- [...",
+          "tokens": 64,
+          "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#react-specific-checklist-4"
+        },
+        "📊 API & Integration Checklist": {
+          "content_preview": "- [ ] **Frontend-Backend Sync**\n  - API endpoints match\n  - CORS configured correctly\n  - Proxy settings work\n  \n- [ ] **External Services**\n  - Third...",
+          "tokens": 56,
+          "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#api-integration-checklist-3"
+        },
+        "🧪 Testing Checklist": {
+          "content_preview": "- [ ] **Critical User Journeys**\n  - Login/logout flow\n  - Main feature flows\n  - Error recovery",
+          "tokens": 23,
+          "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#testing-checklist-4"
+        },
+        "📝 Documentation Checklist": {
+          "content_preview": "- [ ] **Endpoints Documented**\n  - Method, path, parameters\n  - Request/response examples\n  - Error codes listed\n  \n- [ ] **Authentication Documented*...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#documentation-checklist-3"
+        },
+        "🔄 DevOps Integration Checklist": {
+          "content_preview": "- [ ] **Rollback Plan**\n  - Previous version tagged\n  - Database migrations reversible\n  - Feature flags for risky changes\n  \n- [ ] **Performance Base...",
+          "tokens": 55,
+          "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#devops-integration-checklist-4"
+        }
+      }
+    },
+    "Quick Reference Card": {
+      "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#quick-reference-card",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "🚨 Red Flags - Block PR If Found": {
+          "content_preview": "1. Direct nested property access without `?.`\n2. Array methods without type checks\n3. API responses used without validation\n4. No error handling on as...",
+          "tokens": 78,
+          "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#red-flags-block-pr-if-found-1"
+        },
+        "✅ Green Flags - Good to Merge": {
+          "content_preview": "1. All object access uses optional chaining\n2. Fallback values everywhere\n3. Comprehensive error handling\n4. Tests start with unauthenticated state\n5....",
+          "tokens": 68,
+          "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#green-flags-good-to-merge-1"
+        }
+      }
+    },
+    "PR Review Template": {
+      "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#pr-review-template",
+      "tokens": 2,
+      "content_preview": "```markdown"
+    },
+    "Code Review Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#code-review-checklist",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Defensive Programming": {
+          "content_preview": "- [ ] Optional chaining used throughout\n- [ ] Array operations type-checked\n- [ ] API responses validated\n- [ ] Error boundaries present",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#defensive-programming-1"
+        },
+        "Security": {
+          "content_preview": "- [ ] Authentication tested properly\n- [ ] No sensitive data exposed\n- [ ] Input validation present",
+          "tokens": 24,
+          "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#security-1"
+        },
+        "Deployment": {
+          "content_preview": "- [ ] Dependencies correct\n- [ ] Builds successfully\n- [ ] Environment vars documented",
+          "tokens": 20,
+          "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#deployment-1"
+        },
+        "Testing": {
+          "content_preview": "- [ ] Unit tests present and passing\n- [ ] Integration tests cover API calls\n- [ ] Coverage meets standards",
+          "tokens": 26,
+          "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#testing-1"
+        },
+        "Documentation": {
+          "content_preview": "- [ ] Code comments adequate\n- [ ] API changes documented\n- [ ] README updated if needed",
+          "tokens": 21,
+          "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#documentation-1"
+        },
+        "Overall": {
+          "content_preview": "- [ ] Follows team standards\n- [ ] No console.logs left\n- [ ] Performance acceptable\n- [ ] Ready for production\n\n**Approval Decision**: ⬜ Approved / ⬜...",
+          "tokens": 68,
+          "md_reference": "agile-ai-agents/aaa-documents/code-review-checklists.md#overall-1"
+        }
+      }
+    }
+  }
+}

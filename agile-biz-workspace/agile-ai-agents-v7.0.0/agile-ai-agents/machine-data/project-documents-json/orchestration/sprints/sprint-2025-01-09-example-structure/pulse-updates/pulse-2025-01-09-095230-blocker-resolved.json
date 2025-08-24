@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "document": "pulse-2025-01-09-095230-blocker-resolved",
+    "title": "Sprint Pulse Update #004",
+    "timestamp": "2025-07-22T01:41:03.746Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-095230-blocker-resolved.md",
+    "document_type": "general_documentation",
+    "file_hash": "ca1f814b1a243bce1bcb403b38376c1a",
+    "estimated_tokens": 257,
+    "full_md_tokens": 288
+  },
+  "summary": "**Trigger**: blocker_resolved",
+  "sections": [
+    {
+      "title": "Current State",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-095230-blocker-resolved.md#current-state",
+      "content_preview": "- **Active WIP**: \n  - Creating sprint planning templates (2 points) - 30% complete ✅ UNBLOCKED\n  - Setting up folder structure (5 points) - 60% compl..."
+    },
+    {
+      "title": "Key Events",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-095230-blocker-resolved.md#key-events",
+      "content_preview": "- ✅ BLOCKER RESOLVED: Template format decision made\n- Project Manager decided on YAML format for better readability\n- Documentation Agent resumed work..."
+    },
+    {
+      "title": "Blocker Resolution",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-095230-blocker-resolved.md#blocker-resolution",
+      "content_preview": "**Blocker ID**: BLK-001\n**Resolution Time**: 7m 18s\n**Decision**: Use YAML format for all sprint configuration templates\n**Rationale**: Better human r..."
+    },
+    {
+      "title": "Blockers/Risks",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-095230-blocker-resolved.md#blockersrisks",
+      "content_preview": "- **Active Blockers**: 0\n- **Lessons Learned**: Create format standards document to prevent similar blockers"
+    },
+    {
+      "title": "Next Actions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-095230-blocker-resolved.md#next-actions",
+      "content_preview": "- Complete planning templates with YAML format\n- Continue folder structure setup\n- Document format decision in standards guide\n- Approaching 20% compl..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Current State": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-095230-blocker-resolved.md#current-state",
+      "tokens": 55,
+      "content_preview": "- **Active WIP**: \n  - Creating sprint planning templates (2 points) - 30% complete ✅ UNBLOCKED\n  - Setting up folder structure (5 points) - 60% compl..."
+    },
+    "Key Events": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-095230-blocker-resolved.md#key-events",
+      "tokens": 55,
+      "content_preview": "- ✅ BLOCKER RESOLVED: Template format decision made\n- Project Manager decided on YAML format for better readability\n- Documentation Agent resumed work..."
+    },
+    "Blocker Resolution": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-095230-blocker-resolved.md#blocker-resolution",
+      "tokens": 52,
+      "content_preview": "**Blocker ID**: BLK-001\n**Resolution Time**: 7m 18s\n**Decision**: Use YAML format for all sprint configuration templates\n**Rationale**: Better human r..."
+    },
+    "Blockers/Risks": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-095230-blocker-resolved.md#blockersrisks",
+      "tokens": 25,
+      "content_preview": "- **Active Blockers**: 0\n- **Lessons Learned**: Create format standards document to prevent similar blockers"
+    },
+    "Next Actions": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-095230-blocker-resolved.md#next-actions",
+      "tokens": 42,
+      "content_preview": "- Complete planning templates with YAML format\n- Continue folder structure setup\n- Document format decision in standards guide\n- Approaching 20% compl..."
+    }
+  }
+}

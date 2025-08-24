@@ -1,0 +1,160 @@
+{
+  "meta": {
+    "document": "document-creation-rules",
+    "title": "Document Creation Rules for AgileAiAgents",
+    "timestamp": "2025-08-11T22:02:16.885Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/document-creation-rules.md",
+    "document_type": "general_documentation",
+    "file_hash": "430294b11adef95a58b6f2b2aa39c373",
+    "estimated_tokens": 411,
+    "full_md_tokens": 1641
+  },
+  "summary": "## CRITICAL RULE: Document Creation Process",
+  "sections": [
+    {
+      "title": "CRITICAL RULE: Document Creation Process",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#critical-rule-document-creation-process",
+      "content_preview": ""
+    },
+    {
+      "title": "Directory Structure (Category-Based v3.0.0)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#directory-structure-category-based-v300",
+      "content_preview": "```\nagile-ai-agents/\n├── project-documents/              # STEP 1: All .md files go here\n│   ├── orchestration/             # Core coordination\n│   ├─..."
+    },
+    {
+      "title": "Document Categories (Category-Based Organization)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#document-categories-category-based-organization",
+      "content_preview": "Use the correct category and subfolder based on document type:"
+    },
+    {
+      "title": "JSON Conversion Schema",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#json-conversion-schema",
+      "content_preview": "When converting from MD to JSON, use this standard schema:\n\n```json\n{\n  \"meta\": {\n    \"document\": \"filename-without-extension\",\n    \"timestamp\": \"ISO-..."
+    },
+    {
+      "title": "Examples",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#examples",
+      "content_preview": ""
+    },
+    {
+      "title": "Enforcement",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#enforcement",
+      "content_preview": "1. **Document Manager Agent** should validate this process\n2. **File watchers** could auto-convert MD to JSON\n3. **CI/CD checks** to ensure both files..."
+    },
+    {
+      "title": "Benefits",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#benefits",
+      "content_preview": "1. **Human Readable**: Markdown files for documentation\n2. **Machine Readable**: JSON files for agents\n3. **Version Control**: Both formats tracked in..."
+    },
+    {
+      "title": "Remember",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#remember",
+      "content_preview": "> **Every project document MUST exist in BOTH formats:**\n> 1. Markdown in `/project-documents/`\n> 2. JSON in `/machine-data/project-documents-json/`\n\n..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "CRITICAL RULE: Document Creation Process": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#critical-rule-document-creation-process",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "⚠️ IMPORTANT: Two-Step Process for All Project Documents": {
+          "content_preview": "When creating ANY documentation for the AgileAiAgents system, you MUST follow this two-step process:",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#important-two-step-process-for-all-project-documents-1"
+        },
+        "Step 1: Create Markdown Document": {
+          "content_preview": "- **Location**: `/agile-ai-agents/project-documents/{category}/`\n- **Format**: Markdown (.md)\n- **Purpose**: Human-readable documentation",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#step-1-create-markdown-document-1"
+        },
+        "Step 2: Convert to JSON": {
+          "content_preview": "- **Location**: `/agile-ai-agents/machine-data/project-documents-json/{category}/`\n- **Format**: JSON (.json)\n- **Purpose**: Machine-readable for Docu...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#step-2-convert-to-json-1"
+        }
+      }
+    },
+    "Directory Structure (Category-Based v3.0.0)": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#directory-structure-category-based-v300",
+      "tokens": 333,
+      "content_preview": "```\nagile-ai-agents/\n├── project-documents/              # STEP 1: All .md files go here\n│   ├── orchestration/             # Core coordination\n│   ├─..."
+    },
+    "Document Categories (Category-Based Organization)": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#document-categories-category-based-organization",
+      "tokens": 16,
+      "content_preview": "Use the correct category and subfolder based on document type:",
+      "subsections": {
+        "Orchestration": {
+          "content_preview": "- `orchestration/` - Sprint planning, reviews, retrospectives, coordination\n- `orchestration/sprints/` - Sprint-specific documents",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#orchestration-1"
+        },
+        "Business Strategy": {
+          "content_preview": "- `business-strategy/existing-project/` - Existing project analysis\n- `business-strategy/research/` - Market research, competitive analysis\n- `busines...",
+          "tokens": 150,
+          "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#business-strategy-1"
+        },
+        "Implementation": {
+          "content_preview": "- `implementation/requirements/` - PRDs, feature specifications\n- `implementation/security/` - Security assessments and protocols\n- `implementation/ll...",
+          "tokens": 167,
+          "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#implementation-1"
+        },
+        "Operations": {
+          "content_preview": "- `operations/deployment/` - Deployment guides and configs\n- `operations/launch/` - Launch plans and checklists\n- `operations/analytics/` - Analytics ...",
+          "tokens": 121,
+          "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#operations-1"
+        }
+      }
+    },
+    "JSON Conversion Schema": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#json-conversion-schema",
+      "tokens": 153,
+      "content_preview": "When converting from MD to JSON, use this standard schema:\n\n```json\n{\n  \"meta\": {\n    \"document\": \"filename-without-extension\",\n    \"timestamp\": \"ISO-..."
+    },
+    "Examples": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#examples",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "❌ WRONG - Direct JSON creation in machine-data": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#wrong-direct-json-creation-in-machine-data-1"
+        }
+      }
+    },
+    "Enforcement": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#enforcement",
+      "tokens": 48,
+      "content_preview": "1. **Document Manager Agent** should validate this process\n2. **File watchers** could auto-convert MD to JSON\n3. **CI/CD checks** to ensure both files..."
+    },
+    "Benefits": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#benefits",
+      "tokens": 72,
+      "content_preview": "1. **Human Readable**: Markdown files for documentation\n2. **Machine Readable**: JSON files for agents\n3. **Version Control**: Both formats tracked in..."
+    },
+    "Remember": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-creation-rules.md#remember",
+      "tokens": 57,
+      "content_preview": "> **Every project document MUST exist in BOTH formats:**\n> 1. Markdown in `/project-documents/`\n> 2. JSON in `/machine-data/project-documents-json/`\n\n..."
+    }
+  }
+}

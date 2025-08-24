@@ -1,0 +1,31 @@
+{
+  "description": "Command aliases for backward compatibility and shortcuts",
+  "aliases": {
+    "/start-new-project-workflow": "/new-project-workflow",
+    "/start-existing-project-workflow": "/existing-project-workflow",
+    "/aaa": "/aaa-status",
+    "/help": "/aaa-help",
+    "/status": "/aaa-status",
+    "/resume": "/continue",
+    "/save": "/checkpoint",
+    "/sprint": "/sprint-review",
+    "/retro": "/sprint-retrospective",
+    "/phases": "/select-phases",
+    "/new": "/new-project-workflow",
+    "/existing": "/existing-project-workflow",
+    "/quick": "/quickstart",
+    "/decision": "/save-decision"
+  },
+  "deprecation_notices": {
+    "/start-new-project-workflow": {
+      "message": "💡 Tip: You can now use the shorter command: /new-project-workflow",
+      "deprecated_since": "v5.0.0",
+      "removal_version": null
+    },
+    "/start-existing-project-workflow": {
+      "message": "💡 Tip: You can now use the shorter command: /existing-project-workflow",
+      "deprecated_since": "v5.0.0",
+      "removal_version": null
+    }
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "generated": "2025-07-22T18:01:52.816Z",
+  "summary": {
+    "total_files": 37,
+    "successful": 37,
+    "errors": 0,
+    "average_token_reduction": 97.83783783783784
+  },
+  "files": [
+    {
+      "file": "analysis_agent.md",
+      "tokens": 124,
+      "reduction": 97
+    },
+    {
+      "file": "analytics_growth_intelligence_agent.md",
+      "tokens": 256,
+      "reduction": 98
+    },
+    {
+      "file": "api_agent.md",
+      "tokens": 201,
+      "reduction": 98
+    },
+    {
+      "file": "business_documents_agent.md",
+      "tokens": 33,
+      "reduction": 99
+    },
+    {
+      "file": "coder_agent.md",
+      "tokens": 255,
+      "reduction": 97
+    },
+    {
+      "file": "customer_lifecycle_retention_agent.md",
+      "tokens": 248,
+      "reduction": 98
+    },
+    {
+      "file": "data_engineer_agent.md",
+      "tokens": 30,
+      "reduction": 100
+    },
+    {
+      "file": "dba_agent.md",
+      "tokens": 30,
+      "reduction": 99
+    },
+    {
+      "file": "devops_agent.md",
+      "tokens": 250,
+      "reduction": 97
+    },
+    {
+      "file": "document_manager_agent.md",
+      "tokens": 179,
+      "reduction": 97
+    },
+    {
+      "file": "documentator_agent.md",
+      "tokens": 169,
+      "reduction": 96
+    },
+    {
+      "file": "email_marketing_agent.md",
+      "tokens": 268,
+      "reduction": 98
+    },
+    {
+      "file": "finance_agent.md",
+      "tokens": 201,
+      "reduction": 97
+    },
+    {
+      "file": "learning_analysis_agent.md",
+      "tokens": 108,
+      "reduction": 98
+    },
+    {
+      "file": "llm_agent.md",
+      "tokens": 219,
+      "reduction": 98
+    },
+    {
+      "file": "logger_agent.md",
+      "tokens": 120,
+      "reduction": 97
+    },
+    {
+      "file": "market_validation_product_market_fit_agent.md",
+      "tokens": 263,
+      "reduction": 97
+    },
+    {
+      "file": "marketing_agent.md",
+      "tokens": 149,
+      "reduction": 98
+    },
+    {
+      "file": "mcp_agent.md",
+      "tokens": 273,
+      "reduction": 98
+    },
+    {
+      "file": "ml_agent.md",
+      "tokens": 30,
+      "reduction": 99
+    },
+    {
+      "file": "optimization_agent.md",
+      "tokens": 158,
+      "reduction": 97
+    },
+    {
+      "file": "ppc_media_buyer_agent.md",
+      "tokens": 184,
+      "reduction": 98
+    },
+    {
+      "file": "prd_agent.md",
+      "tokens": 99,
+      "reduction": 99
+    },
+    {
+      "file": "project_analyzer_agent.md",
+      "tokens": 289,
+      "reduction": 98
+    },
+    {
+      "file": "project_dashboard_agent.md",
+      "tokens": 228,
+      "reduction": 97
+    },
+    {
+      "file": "project_manager_agent.md",
+      "tokens": 265,
+      "reduction": 99
+    },
+    {
+      "file": "project_state_manager_agent.md",
+      "tokens": 105,
+      "reduction": 99
+    },
+    {
+      "file": "project_structure_agent.md",
+      "tokens": 81,
+      "reduction": 98
+    },
+    {
+      "file": "research_agent.md",
+      "tokens": 220,
+      "reduction": 98
+    },
+    {
+      "file": "revenue_optimization_agent.md",
+      "tokens": 232,
+      "reduction": 98
+    },
+    {
+      "file": "scrum_master_agent.md",
+      "tokens": 188,
+      "reduction": 97
+    },
+    {
+      "file": "security_agent.md",
+      "tokens": 199,
+      "reduction": 98
+    },
+    {
+      "file": "seo_agent.md",
+      "tokens": 206,
+      "reduction": 98
+    },
+    {
+      "file": "social_media_agent.md",
+      "tokens": 204,
+      "reduction": 98
+    },
+    {
+      "file": "testing_agent.md",
+      "tokens": 391,
+      "reduction": 99
+    },
+    {
+      "file": "ui_ux_agent.md",
+      "tokens": 177,
+      "reduction": 96
+    },
+    {
+      "file": "vc_report_agent.md",
+      "tokens": 202,
+      "reduction": 97
+    }
+  ],
+  "errors": []
+}

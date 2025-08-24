@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "document": "agent-md-structure-standard",
+    "title": "Agent Markdown Structure Standard",
+    "timestamp": "2025-08-11T22:02:16.852Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md",
+    "document_type": "standard",
+    "file_hash": "c7413a1d870530bdf86fb31ffd679f01",
+    "estimated_tokens": 902,
+    "full_md_tokens": 1129
+  },
+  "summary": "This document defines the standardized structure for all agent markdown files in the AgileAiAgents system. Consistent structure enables reliable JSON reference generation and section-based content loading.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#overview",
+      "content_preview": "Brief description of the agent's purpose and primary focus."
+    },
+    {
+      "title": "Required Structure",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#required-structure",
+      "content_preview": "All agent files MUST follow this heading hierarchy:\n\n```markdown"
+    },
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#overview-1",
+      "content_preview": "Brief description of the agent's purpose and primary focus."
+    },
+    {
+      "title": "Reference Documentation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#reference-documentation",
+      "content_preview": "- **Guide Name**: `agile-ai-agents/path/to/guide.md`\n- Additional references specific to this agent"
+    },
+    {
+      "title": "Core Responsibilities",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#core-responsibilities",
+      "content_preview": ""
+    },
+    {
+      "title": "Workflows",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#workflows",
+      "content_preview": ""
+    },
+    {
+      "title": "Agent Coordination",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#agent-coordination",
+      "content_preview": ""
+    },
+    {
+      "title": "Input/Output Contracts",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#inputoutput-contracts",
+      "content_preview": ""
+    },
+    {
+      "title": "Success Metrics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#success-metrics",
+      "content_preview": "- Metric 1: Description and target\n- Metric 2: Description and target\n- Quality gates and validation criteria"
+    },
+    {
+      "title": "Clear Boundaries",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#clear-boundaries",
+      "content_preview": "❌ **What This Agent Does NOT Do**\n- Responsibility that belongs to another agent\n- Another boundary clarification"
+    },
+    {
+      "title": "Version History",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#version-history",
+      "content_preview": ""
+    },
+    {
+      "title": "Heading Standards",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#heading-standards",
+      "content_preview": ""
+    },
+    {
+      "title": "Section-Specific Guidelines",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#section-specific-guidelines",
+      "content_preview": ""
+    },
+    {
+      "title": "Token Optimization",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#token-optimization",
+      "content_preview": "To support efficient JSON reference generation:\n\n1. **Keep sections focused** - Each section should be independently useful\n2. **Avoid redundancy** - ..."
+    },
+    {
+      "title": "Migration Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#migration-checklist",
+      "content_preview": "When updating existing agent files:\n\n- [ ] Verify all required sections are present\n- [ ] Ensure heading hierarchy matches standard\n- [ ] Update Refer..."
+    },
+    {
+      "title": "Validation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#validation",
+      "content_preview": "Use this checklist to validate agent markdown files:\n\n1. **Structure Compliance**: All required sections present\n2. **Heading Format**: Consistent wit..."
+    },
+    {
+      "title": "Examples",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#examples",
+      "content_preview": "See these well-structured agent files as references:\n- `agile-ai-agents/ai-agents/coder_agent.md`\n- `agile-ai-agents/ai-agents/testing_agent.md`\n- `ag..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#overview-1",
+      "tokens": 15,
+      "content_preview": "Brief description of the agent's purpose and primary focus."
+    },
+    "Required Structure": {
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#required-structure",
+      "tokens": 16,
+      "content_preview": "All agent files MUST follow this heading hierarchy:\n\n```markdown"
+    },
+    "Reference Documentation": {
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#reference-documentation",
+      "tokens": 24,
+      "content_preview": "- **Guide Name**: `agile-ai-agents/path/to/guide.md`\n- Additional references specific to this agent"
+    },
+    "Core Responsibilities": {
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#core-responsibilities",
+      "tokens": 0,
+      "subsections": {
+        "[Responsibility Category 1]": {
+          "content_preview": "- Detailed responsibility points\n- Specific capabilities",
+          "tokens": 14,
+          "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#responsibility-category-1-1"
+        },
+        "[Responsibility Category 2]": {
+          "content_preview": "- Additional responsibilities",
+          "tokens": 8,
+          "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#responsibility-category-2-1"
+        }
+      }
+    },
+    "Workflows": {
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#workflows",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "[Workflow Name 1]": {
+          "content_preview": "- What this workflow produces\n- Format and location of outputs",
+          "tokens": 16,
+          "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#workflow-name-1-4"
+        },
+        "[Workflow Name 2]": {
+          "content_preview": "[Same structure as above]",
+          "tokens": 6,
+          "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#workflow-name-2-1"
+        }
+      }
+    },
+    "Agent Coordination": {
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#agent-coordination",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Inputs From Other Agents": {
+          "content_preview": "- **[Agent Name]**: What this agent provides\n- Additional agent inputs",
+          "tokens": 16,
+          "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#inputs-from-other-agents-1"
+        },
+        "Outputs To Other Agents": {
+          "content_preview": "- **[Agent Name]**: What this agent receives\n- Additional agent outputs",
+          "tokens": 17,
+          "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#outputs-to-other-agents-1"
+        },
+        "Coordination Patterns": {
+          "content_preview": "- Sequential handoffs\n- Parallel coordination\n- Specific integration points",
+          "tokens": 19,
+          "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#coordination-patterns-1"
+        }
+      }
+    },
+    "Input/Output Contracts": {
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#inputoutput-contracts",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Expected Inputs": {
+          "content_preview": "```json\n{\n  \"example\": \"structure\"\n}\n```",
+          "tokens": 9,
+          "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#expected-inputs-1"
+        },
+        "Produced Outputs": {
+          "content_preview": "```json\n{\n  \"example\": \"structure\"\n}\n```",
+          "tokens": 9,
+          "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#produced-outputs-1"
+        }
+      }
+    },
+    "Success Metrics": {
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#success-metrics",
+      "tokens": 28,
+      "content_preview": "- Metric 1: Description and target\n- Metric 2: Description and target\n- Quality gates and validation criteria"
+    },
+    "Clear Boundaries": {
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#clear-boundaries",
+      "tokens": 28,
+      "content_preview": "❌ **What This Agent Does NOT Do**\n- Responsibility that belongs to another agent\n- Another boundary clarification"
+    },
+    "Version History": {
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#version-history",
+      "tokens": 0,
+      "subsections": {
+        "v2.0.0": {
+          "content_preview": "- **Released**: Date\n- **Changes**: What changed\n- **Status**: Active/Deprecated\n```",
+          "tokens": 18,
+          "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#v200-1"
+        }
+      }
+    },
+    "Heading Standards": {
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#heading-standards",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Naming Conventions": {
+          "content_preview": "1. Use title case for main headings\n2. Use sentence case for sub-headings\n3. Keep headings concise but descriptive\n4. Avoid special characters except ...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#naming-conventions-1"
+        },
+        "Anchor-Friendly IDs": {
+          "content_preview": "All headings automatically generate anchors based on these rules:\n- Convert to lowercase\n- Replace spaces with hyphens\n- Remove special characters\n- E...",
+          "tokens": 52,
+          "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#anchor-friendly-ids-1"
+        }
+      }
+    },
+    "Section-Specific Guidelines": {
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#section-specific-guidelines",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Overview Section": {
+          "content_preview": "- 2-3 sentences maximum\n- Focus on primary purpose\n- Mention key differentiators",
+          "tokens": 20,
+          "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#overview-section-1"
+        },
+        "Reference Documentation": {
+          "content_preview": "- Use complete paths starting with `agile-ai-agents/`\n- Group related references\n- Include brief description of each reference's purpose",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#reference-documentation-2"
+        },
+        "Core Responsibilities": {
+          "content_preview": "- Group into logical categories\n- Use bullet points for specific capabilities\n- Be specific about what the agent does",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#core-responsibilities-2"
+        },
+        "Workflows": {
+          "content_preview": "- Each workflow must have Overview, Steps, Input Requirements, and Output Deliverables\n- Number steps sequentially\n- Include decision points and branc...",
+          "tokens": 45,
+          "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#workflows-2"
+        },
+        "Agent Coordination": {
+          "content_preview": "- Clearly define inputs and outputs\n- Specify data formats\n- Include timing and sequencing requirements",
+          "tokens": 26,
+          "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#agent-coordination-2"
+        },
+        "Success Metrics": {
+          "content_preview": "- Include quantifiable metrics where possible\n- Define quality gates\n- Specify validation criteria",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#success-metrics-2"
+        }
+      }
+    },
+    "Token Optimization": {
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#token-optimization",
+      "tokens": 77,
+      "content_preview": "To support efficient JSON reference generation:\n\n1. **Keep sections focused** - Each section should be independently useful\n2. **Avoid redundancy** - ..."
+    },
+    "Migration Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#migration-checklist",
+      "tokens": 78,
+      "content_preview": "When updating existing agent files:\n\n- [ ] Verify all required sections are present\n- [ ] Ensure heading hierarchy matches standard\n- [ ] Update Refer..."
+    },
+    "Validation": {
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#validation",
+      "tokens": 88,
+      "content_preview": "Use this checklist to validate agent markdown files:\n\n1. **Structure Compliance**: All required sections present\n2. **Heading Format**: Consistent wit..."
+    },
+    "Examples": {
+      "md_reference": "agile-ai-agents/aaa-documents/agent-md-structure-standard.md#examples",
+      "tokens": 64,
+      "content_preview": "See these well-structured agent files as references:\n- `agile-ai-agents/ai-agents/coder_agent.md`\n- `agile-ai-agents/ai-agents/testing_agent.md`\n- `ag..."
+    }
+  }
+}

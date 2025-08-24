@@ -1,0 +1,367 @@
+{
+  "meta": {
+    "generated_at": "2025-08-11T20:30:00Z",
+    "total_agents": 38,
+    "json_coverage": "100%",
+    "token_reduction_average": "85%",
+    "index_version": "1.0.0"
+  },
+  "agent_categories": {
+    "orchestration": [
+      {
+        "agent": "project_manager_agent",
+        "tokens": 1354,
+        "focus": "strategic_project_leadership",
+        "key_capabilities": ["stakeholder_management", "resource_allocation", "roadmap_planning"]
+      },
+      {
+        "agent": "scrum_master_agent", 
+        "tokens": 892,
+        "focus": "sprint_execution_management",
+        "key_capabilities": ["sprint_planning", "team_coordination", "blocker_resolution"]
+      },
+      {
+        "agent": "project_state_manager_agent",
+        "tokens": 445,
+        "focus": "context_persistence_state_management",
+        "key_capabilities": ["session_continuity", "decision_history", "intelligent_context_loading"]
+      },
+      {
+        "agent": "document_manager_agent",
+        "tokens": 355,
+        "focus": "json_context_optimization",
+        "key_capabilities": ["md_json_conversion", "progressive_loading", "80_90_percent_context_reduction"]
+      },
+      {
+        "agent": "stakeholder_interview_agent",
+        "tokens": 285,
+        "focus": "requirements_gathering_validation",
+        "key_capabilities": ["iterative_discovery", "ambiguity_resolution", "approval_gates"]
+      },
+      {
+        "agent": "project_dashboard_agent",
+        "tokens": 312,
+        "focus": "progress_visualization_monitoring",
+        "key_capabilities": ["real_time_metrics", "visual_dashboards", "stakeholder_reporting"]
+      }
+    ],
+    "research_analysis": [
+      {
+        "agent": "research_agent",
+        "tokens": 525,
+        "focus": "information_discovery_analysis",
+        "key_capabilities": ["competitive_analysis", "market_research", "brand_domain_research"]
+      },
+      {
+        "agent": "analysis_agent",
+        "tokens": 418,
+        "focus": "strategic_synthesis_decision_support",
+        "key_capabilities": ["swot_analysis", "risk_assessment", "strategic_recommendations"]
+      },
+      {
+        "agent": "project_analyzer_agent",
+        "tokens": 387,
+        "focus": "codebase_analysis_existing_projects",
+        "key_capabilities": ["code_quality_assessment", "architecture_analysis", "technical_debt_evaluation"]
+      }
+    ],
+    "development": [
+      {
+        "agent": "coder_agent",
+        "tokens": 1128,
+        "focus": "software_development_implementation",
+        "key_capabilities": ["full_stack_development", "code_architecture", "technical_implementation"]
+      },
+      {
+        "agent": "testing_agent",
+        "tokens": 695,
+        "focus": "quality_assurance_testing",
+        "key_capabilities": ["automated_testing", "qa_processes", "bug_detection_resolution"]
+      },
+      {
+        "agent": "devops_agent",
+        "tokens": 847,
+        "focus": "infrastructure_deployment",
+        "key_capabilities": ["ci_cd_pipelines", "cloud_infrastructure", "deployment_automation"]
+      },
+      {
+        "agent": "security_agent",
+        "tokens": 589,
+        "focus": "security_compliance",
+        "key_capabilities": ["security_audits", "vulnerability_assessment", "compliance_monitoring"]
+      },
+      {
+        "agent": "api_agent",
+        "tokens": 712,
+        "focus": "api_development_integration",
+        "key_capabilities": ["api_design", "third_party_integrations", "microservices"]
+      }
+    ],
+    "data_ml": [
+      {
+        "agent": "data_engineer_agent",
+        "tokens": 543,
+        "focus": "data_infrastructure_pipelines",
+        "key_capabilities": ["data_pipelines", "etl_processes", "data_architecture"]
+      },
+      {
+        "agent": "dba_agent",
+        "tokens": 421,
+        "focus": "database_management_optimization",
+        "key_capabilities": ["database_design", "performance_optimization", "data_modeling"]
+      },
+      {
+        "agent": "ml_agent",
+        "tokens": 658,
+        "focus": "machine_learning_ai_implementation",
+        "key_capabilities": ["ml_models", "ai_integration", "predictive_analytics"]
+      },
+      {
+        "agent": "analytics_growth_intelligence_agent",
+        "tokens": 892,
+        "focus": "business_intelligence_growth_analytics",
+        "key_capabilities": ["user_analytics", "growth_metrics", "business_intelligence"]
+      },
+      {
+        "agent": "llm_agent",
+        "tokens": 768,
+        "focus": "llm_integration_ai_features",
+        "key_capabilities": ["llm_integration", "ai_features", "natural_language_processing"]
+      },
+      {
+        "agent": "mcp_agent",
+        "tokens": 634,
+        "focus": "model_context_protocol_integration",
+        "key_capabilities": ["mcp_server_setup", "tool_integration", "external_service_connections"]
+      }
+    ],
+    "design_ux": [
+      {
+        "agent": "ui_ux_agent",
+        "tokens": 743,
+        "focus": "user_experience_interface_design",
+        "key_capabilities": ["ui_design", "ux_optimization", "responsive_design"]
+      }
+    ],
+    "marketing_sales": [
+      {
+        "agent": "marketing_agent",
+        "tokens": 689,
+        "focus": "marketing_strategy_execution",
+        "key_capabilities": ["marketing_campaigns", "brand_strategy", "market_positioning"]
+      },
+      {
+        "agent": "email_marketing_agent",
+        "tokens": 845,
+        "focus": "email_marketing_automation",
+        "key_capabilities": ["email_campaigns", "marketing_automation", "lead_nurturing"]
+      },
+      {
+        "agent": "seo_agent",
+        "tokens": 567,
+        "focus": "search_engine_optimization",
+        "key_capabilities": ["seo_strategy", "content_optimization", "search_rankings"]
+      },
+      {
+        "agent": "social_media_agent",
+        "tokens": 623,
+        "focus": "social_media_management",
+        "key_capabilities": ["social_media_strategy", "content_creation", "community_management"]
+      },
+      {
+        "agent": "ppc_media_buyer_agent",
+        "tokens": 734,
+        "focus": "paid_advertising_media_buying",
+        "key_capabilities": ["ppc_campaigns", "media_buying", "ad_optimization"]
+      }
+    ],
+    "customer_success": [
+      {
+        "agent": "customer_lifecycle_retention_agent",
+        "tokens": 912,
+        "focus": "customer_lifecycle_retention",
+        "key_capabilities": ["customer_retention", "lifecycle_management", "churn_prevention"]
+      },
+      {
+        "agent": "market_validation_product_market_fit_agent",
+        "tokens": 823,
+        "focus": "market_validation_product_fit",
+        "key_capabilities": ["market_validation", "product_market_fit", "customer_feedback"]
+      },
+      {
+        "agent": "revenue_optimization_agent",
+        "tokens": 756,
+        "focus": "revenue_optimization_monetization",
+        "key_capabilities": ["revenue_optimization", "pricing_strategy", "monetization"]
+      }
+    ],
+    "business_operations": [
+      {
+        "agent": "finance_agent",
+        "tokens": 634,
+        "focus": "financial_analysis_planning",
+        "key_capabilities": ["financial_modeling", "budget_planning", "roi_analysis"]
+      },
+      {
+        "agent": "business_documents_agent",
+        "tokens": 512,
+        "focus": "business_documentation_templates",
+        "key_capabilities": ["document_templates", "business_processes", "compliance_documentation"]
+      },
+      {
+        "agent": "prd_agent",
+        "tokens": 678,
+        "focus": "product_requirements_documentation",
+        "key_capabilities": ["requirements_gathering", "prd_creation", "feature_specifications"]
+      },
+      {
+        "agent": "vc_report_agent",
+        "tokens": 489,
+        "focus": "investor_reporting_fundraising",
+        "key_capabilities": ["investor_reports", "funding_documentation", "pitch_materials"]
+      }
+    ],
+    "optimization_monitoring": [
+      {
+        "agent": "optimization_agent",
+        "tokens": 445,
+        "focus": "performance_optimization",
+        "key_capabilities": ["performance_tuning", "system_optimization", "efficiency_improvements"]
+      },
+      {
+        "agent": "logger_agent",
+        "tokens": 298,
+        "focus": "logging_monitoring",
+        "key_capabilities": ["log_management", "system_monitoring", "debugging_support"]
+      },
+      {
+        "agent": "learning_analysis_agent",
+        "tokens": 367,
+        "focus": "learning_insights_improvement",
+        "key_capabilities": ["learning_analysis", "improvement_recommendations", "knowledge_extraction"]
+      }
+    ],
+    "documentation": [
+      {
+        "agent": "documentator_agent",
+        "tokens": 423,
+        "focus": "technical_documentation",
+        "key_capabilities": ["documentation_creation", "technical_writing", "user_guides"]
+      },
+      {
+        "agent": "project_structure_agent",
+        "tokens": 378,
+        "focus": "project_structure_organization",
+        "key_capabilities": ["project_scaffolding", "file_structure", "organization_standards"]
+      }
+    ]
+  },
+  "quick_agent_lookup": {
+    "by_capability": {
+      "stakeholder_communication": ["stakeholder_interview_agent", "project_manager_agent"],
+      "requirements_gathering": ["stakeholder_interview_agent", "prd_agent"],
+      "competitive_analysis": ["research_agent", "analysis_agent"],
+      "market_research": ["research_agent", "market_validation_product_market_fit_agent"],
+      "technical_implementation": ["coder_agent", "api_agent", "devops_agent"],
+      "testing_qa": ["testing_agent", "security_agent"],
+      "ui_ux_design": ["ui_ux_agent"],
+      "data_analytics": ["analytics_growth_intelligence_agent", "data_engineer_agent"],
+      "marketing_campaigns": ["marketing_agent", "email_marketing_agent", "seo_agent"],
+      "financial_analysis": ["finance_agent", "revenue_optimization_agent"],
+      "project_management": ["project_manager_agent", "scrum_master_agent"],
+      "documentation": ["documentator_agent", "business_documents_agent"],
+      "ai_ml_integration": ["ml_agent", "llm_agent", "mcp_agent"],
+      "performance_optimization": ["optimization_agent", "logger_agent"]
+    },
+    "by_project_phase": {
+      "discovery": ["stakeholder_interview_agent", "research_agent", "project_analyzer_agent"],
+      "analysis": ["analysis_agent", "finance_agent", "market_validation_product_market_fit_agent"],
+      "planning": ["project_manager_agent", "prd_agent", "business_documents_agent"],
+      "development": ["coder_agent", "ui_ux_agent", "api_agent", "devops_agent"],
+      "testing": ["testing_agent", "security_agent"],
+      "deployment": ["devops_agent", "optimization_agent"],
+      "marketing": ["marketing_agent", "seo_agent", "email_marketing_agent"],
+      "launch": ["project_dashboard_agent", "customer_lifecycle_retention_agent"],
+      "optimization": ["optimization_agent", "analytics_growth_intelligence_agent", "revenue_optimization_agent"]
+    },
+    "by_token_efficiency": {
+      "ultra_efficient": [
+        {"agent": "logger_agent", "tokens": 298},
+        {"agent": "stakeholder_interview_agent", "tokens": 285},
+        {"agent": "document_manager_agent", "tokens": 355}
+      ],
+      "highly_efficient": [
+        {"agent": "learning_analysis_agent", "tokens": 367},
+        {"agent": "project_structure_agent", "tokens": 378},
+        {"agent": "project_analyzer_agent", "tokens": 387}
+      ],
+      "standard_efficient": [
+        {"agent": "analysis_agent", "tokens": 418},
+        {"agent": "dba_agent", "tokens": 421},
+        {"agent": "documentator_agent", "tokens": 423}
+      ]
+    }
+  },
+  "coordination_patterns": {
+    "common_workflows": {
+      "new_project_discovery": [
+        "stakeholder_interview_agent",
+        "research_agent", 
+        "analysis_agent",
+        "finance_agent",
+        "project_manager_agent"
+      ],
+      "existing_project_analysis": [
+        "project_analyzer_agent",
+        "stakeholder_interview_agent",
+        "analysis_agent",
+        "optimization_agent"
+      ],
+      "full_development_cycle": [
+        "prd_agent",
+        "coder_agent",
+        "ui_ux_agent", 
+        "testing_agent",
+        "devops_agent",
+        "security_agent"
+      ],
+      "marketing_launch": [
+        "marketing_agent",
+        "seo_agent",
+        "email_marketing_agent",
+        "social_media_agent",
+        "ppc_media_buyer_agent"
+      ],
+      "data_ml_pipeline": [
+        "data_engineer_agent",
+        "dba_agent",
+        "ml_agent",
+        "analytics_growth_intelligence_agent"
+      ]
+    },
+    "parallel_execution_groups": {
+      "phase_1_research": ["research_agent", "finance_agent", "marketing_agent"],
+      "phase_2_technical": ["llm_agent", "api_agent", "mcp_agent"],
+      "phase_5_operations": ["devops_agent", "logger_agent", "optimization_agent", "documentator_agent"]
+    }
+  },
+  "token_optimization_stats": {
+    "total_md_tokens": 267430,
+    "total_json_tokens": 40115,
+    "average_compression": "85%",
+    "best_compression": {"agent": "document_manager_agent", "ratio": "95%"},
+    "context_loading_benefits": {
+      "minimal_load_avg": 180,
+      "standard_load_avg": 320,
+      "detailed_load_avg": 580,
+      "full_md_fallback_avg": 7037
+    }
+  },
+  "usage_recommendations": {
+    "start_with_minimal": "Load JSON minimal context first for all agents",
+    "progressive_loading": "Use md_reference links for detailed sections",
+    "parallel_processing": "Leverage coordination patterns for efficiency",
+    "context_budget": "Budget 300-500 tokens per agent for standard operations",
+    "fallback_strategy": "Use full MD only when JSON unavailable or outdated"
+  }
+}

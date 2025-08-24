@@ -1,0 +1,190 @@
+{
+  "meta": {
+    "document": "learn-from-contributions-workflow",
+    "title": "Learn From Contributions Workflow",
+    "timestamp": "2025-08-11T22:02:16.942Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md",
+    "document_type": "workflow",
+    "file_hash": "d8580d4634e642999c372e257ca66aef",
+    "estimated_tokens": 472,
+    "full_md_tokens": 1674
+  },
+  "summary": "The `/learn-from-contributions` command initiates a comprehensive analysis of community contributions to identify patterns, validate improvements, and implement system enhancements. This workflow leverages historical archive data to enhance validation scoring and implementation confidence.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#overview",
+      "content_preview": "The `/learn-from-contributions` command initiates a comprehensive analysis of community contributions to identify patterns, validate improvements, and..."
+    },
+    {
+      "title": "Command",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#command",
+      "content_preview": "```bash\n/learn-from-contributions\n```"
+    },
+    {
+      "title": "Workflow Phases",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#workflow-phases",
+      "content_preview": ""
+    },
+    {
+      "title": "Archive Benefits",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#archive-benefits",
+      "content_preview": ""
+    },
+    {
+      "title": "Success Metrics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#success-metrics",
+      "content_preview": "- Implementation success rate: >90%\n- Pattern identification accuracy: >85%\n- Stakeholder approval rate: >75%\n- Historical prediction accuracy: ±10%"
+    },
+    {
+      "title": "Integration Points",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#integration-points",
+      "content_preview": ""
+    },
+    {
+      "title": "Error Handling",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#error-handling",
+      "content_preview": "- **No New Contributions**: \"No new contributions found. Check again later.\"\n- **Archive Access Issues**: Fall back to base scoring without historical..."
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#best-practices",
+      "content_preview": "1. **Run Regularly**: Weekly or after 3+ new contributions\n2. **Review Archives**: Periodically check superseded patterns\n3. **Track Success**: Monito..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#overview",
+      "tokens": 72,
+      "content_preview": "The `/learn-from-contributions` command initiates a comprehensive analysis of community contributions to identify patterns, validate improvements, and..."
+    },
+    "Command": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#command",
+      "tokens": 8,
+      "content_preview": "```bash\n/learn-from-contributions\n```",
+      "subsections": {
+        "Command Options": {
+          "content_preview": "- `/learn-from-contributions --check-only` - Discovery phase only, shows new contributions\n- `/learn-from-contributions --analyze [contribution-id]` -...",
+          "tokens": 61,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#command-options-1"
+        }
+      }
+    },
+    "Workflow Phases": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#workflow-phases",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Phase 1: Discovery & Initial Assessment (30 min)": {
+          "content_preview": "**Objective**: Identify new contributions and score them using historical context\n\n1. **Scan All Sources**\n   - New contributions in `/community-learn...",
+          "tokens": 209,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#phase-1-discovery-initial-assessment-30-min-1"
+        },
+        "Phase 2: Association Analysis (45 min)": {
+          "content_preview": "**Objective**: Group related contributions and identify conflicts\n\n1. **Pattern Association**\n   - Group by problem domain\n   - Check historical resol...",
+          "tokens": 144,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#phase-2-association-analysis-45-min-1"
+        },
+        "Phase 3: Deep Analysis & Pattern Extraction (60 min)": {
+          "content_preview": "**Objective**: Extract patterns with historical validation\n\n1. **Success Pattern Matching**\n   - Compare against implemented archive\n   - Calculate co...",
+          "tokens": 115,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#phase-3-deep-analysis-pattern-extraction-60-min-1"
+        },
+        "Phase 4: Implementation Planning (45 min)": {
+          "content_preview": "**Objective**: Create detailed plans with historical context\n\n1. **Archive-Informed Planning**\n   - Reference successful implementations\n   - Include ...",
+          "tokens": 179,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#phase-4-implementation-planning-45-min-1"
+        },
+        "Phase 5: Stakeholder Review & Approval (30 min)": {
+          "content_preview": "**Objective**: Present findings for stakeholder decision\n\n1. **Summary Dashboard**\n   ```\n   === LEARNING ANALYSIS REPORT ===\n   New Contributions: 5\n...",
+          "tokens": 124,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#phase-5-stakeholder-review-approval-30-min-1"
+        },
+        "Phase 6: Implementation Execution (60-120 min)": {
+          "content_preview": "**Objective**: Execute approved changes with full archival\n\n1. **Pre-Implementation**\n   - Create archive entry structure\n   - Generate rollback plan\n...",
+          "tokens": 132,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#phase-6-implementation-execution-60-120-min-1"
+        },
+        "Phase 7: Archive Management (15 min)": {
+          "content_preview": "**Objective**: Update all systems and indices\n\n1. **Update Archive Indices**\n   - Implemented index\n   - Rejected index\n   - Search index\n   - Pattern...",
+          "tokens": 101,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#phase-7-archive-management-15-min-1"
+        }
+      }
+    },
+    "Archive Benefits": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#archive-benefits",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Historical Validation": {
+          "content_preview": "- Validation scores enhanced by past success/failure data\n- Confidence levels based on proven patterns\n- Risk reduction through failure avoidance",
+          "tokens": 37,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#historical-validation-1"
+        },
+        "Pattern Evolution Tracking": {
+          "content_preview": "```\n2024-11: Basic testing (6/10)\n2024-12: +Auth testing (7.5/10)\n2025-01: +Console errors (8.5/10)\n2025-02: +API contracts (9/10) ← NEW\n```",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#pattern-evolution-tracking-1"
+        },
+        "Search Capabilities": {
+          "content_preview": "- Find patterns by category\n- List high-success implementations\n- Track pattern evolution\n- Smart recommendations",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#search-capabilities-1"
+        }
+      }
+    },
+    "Success Metrics": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#success-metrics",
+      "tokens": 37,
+      "content_preview": "- Implementation success rate: >90%\n- Pattern identification accuracy: >85%\n- Stakeholder approval rate: >75%\n- Historical prediction accuracy: ±10%"
+    },
+    "Integration Points": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#integration-points",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Agents Involved": {
+          "content_preview": "- **Learning Analysis Agent**: Primary executor\n- **All Agents**: Receive updates from implementations",
+          "tokens": 24,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#agents-involved-1"
+        },
+        "File Interactions": {
+          "content_preview": "- Read: `/community-learnings/contributions/`\n- Read: `/community-learnings/archive/`\n- Write: Implementation updates to agent files\n- Write: Archive ...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#file-interactions-1"
+        },
+        "State Management": {
+          "content_preview": "- Track analysis progress\n- Record stakeholder decisions\n- Monitor implementation status\n- Update processed contributions log",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#state-management-1"
+        }
+      }
+    },
+    "Error Handling": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#error-handling",
+      "tokens": 68,
+      "content_preview": "- **No New Contributions**: \"No new contributions found. Check again later.\"\n- **Archive Access Issues**: Fall back to base scoring without historical..."
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/learn-from-contributions-workflow.md#best-practices",
+      "tokens": 69,
+      "content_preview": "1. **Run Regularly**: Weekly or after 3+ new contributions\n2. **Review Archives**: Periodically check superseded patterns\n3. **Track Success**: Monito..."
+    }
+  }
+}

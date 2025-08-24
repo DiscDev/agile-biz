@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "agent": "testing_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-31",
+    "estimated_tokens": 401,
+    "full_md_tokens": 33149,
+    "md_file": "agile-ai-agents/ai-agents/testing_agent.md",
+    "file_hash": "a9148cd6f523f3e08116417a1fff45e9"
+  },
+  "summary": "## Overview\nThe Testing Agent specializes in comprehensive testing strategy, test automation, and quality assurance. This agent ensures software quality through systematic testing approaches, focusing on validation, verification, and quality metrics.",
+  "core_responsibilities": {
+    "summary": [
+      "Real Browser Environment Testing (CRITICAL REQUIREMENT)",
+      "Test Strategy & Planning",
+      "Project Structure Validation Testing",
+      "Real Browser Test Execution & Environment Validation",
+      "Integration & End-to-End Testing (ENHANCED)",
+      "Authentication & Authorization Testing (ENHANCED - CRITICAL PROTOCOL)",
+      "Frontend Behavior Simulation Testing (CRITICAL - AUTHENTICATION FOCUS)",
+      "Quality Validation & Real Environment Verification",
+      "Real Environment Defect Management & Analysis",
+      "Development Environment Configuration Testing (NEW - CRITICAL)",
+      "Sprint Integration & DevOps Coordination (NEW - CRITICAL)"
+    ],
+    "details_tokens": 3775,
+    "md_reference": "agile-ai-agents/ai-agents/testing_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "Build Verification & Dependency Compatibility Validation Workflow (NEW CRITICAL REQUIREMENT) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/testing_agent.md#build-verification-dependency-compatibility-validation-workflow-new-critical-requirement-workflow"
+      },
+      {
+        "name": "Application Startup & Port Management Validation Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/testing_agent.md#application-startup-port-management-validation-workflow"
+      },
+      {
+        "name": "Latest Dependency Version Verification Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/testing_agent.md#latest-dependency-version-verification-workflow"
+      },
+      {
+        "name": "Playwright MCP Browser Testing Workflow (WHEN CONFIGURED) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/testing_agent.md#playwright-mcp-browser-testing-workflow-when-configured-workflow"
+      },
+      {
+        "name": "BrowserStack MCP Cross-Browser Testing Workflow (WHEN CONFIGURED) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/testing_agent.md#browserstack-mcp-cross-browser-testing-workflow-when-configured-workflow"
+      },
+      {
+        "name": "Full Stack Integration Testing Workflow (NEW - CRITICAL) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/testing_agent.md#full-stack-integration-testing-workflow-new---critical-workflow"
+      },
+      {
+        "name": "Authentication & Authorization Testing Workflow (NEW - CRITICAL) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/testing_agent.md#authentication-authorization-testing-workflow-new---critical-workflow"
+      },
+      {
+        "name": "Real Browser Interactive Testing Workflow (CRITICAL - LIVE BROWSER TESTING) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/testing_agent.md#real-browser-interactive-testing-workflow-critical---live-browser-testing-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/testing_agent.md#workflows"
+  },
+  "reference_documentation": {
+    "code_review_checklists": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/code-review-checklists.json",
+      "tokens": 1000
+    },
+    "validation_workflows": {
+      "path": "agile-ai-agents/ai-agent-coordination/validation-workflows.md",
+      "tokens": 1000
+    },
+    "deployment_validation_gates": {
+      "path": "agile-ai-agents/ai-agent-coordination/deployment-validation-gates.md",
+      "tokens": 1000
+    },
+    "error_codes_reference": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/error-codes.json",
+      "tokens": 1000
+    }
+  },
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/testing_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "last_updated": "TEMPLATE_TIMESTAMP",
+    "version": "1.0.0",
+    "managed_by": "project_manager_agent"
+  },
+  "statistics": {
+    "total_items": 0,
+    "total_points": 0,
+    "epics": []
+  },
+  "metrics": {
+    "completed_points": 0,
+    "in_progress_points": 0,
+    "ready_points": 0,
+    "blocked_points": 0,
+    "average_velocity": 0,
+    "velocity_trend": "no_data",
+    "estimated_sprints_remaining": 0
+  },
+  "items": {},
+  "epics": {},
+  "priority_distribution": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "status_distribution": {
+    "draft": 0,
+    "ready": 0,
+    "in_sprint": 0,
+    "in_progress": 0,
+    "testing": 0,
+    "done": 0,
+    "blocked": 0
+  }
+}

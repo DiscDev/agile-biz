@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "document": "claude-code-hook-fix",
+    "title": "Claude Code Hook Fix - Release Notes",
+    "timestamp": "2025-08-11T22:02:16.913Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/release-notes/claude-code-hook-fix.md",
+    "document_type": "general_documentation",
+    "file_hash": "cd5beaf1ccef2fd2ac85859722ccc4cf",
+    "estimated_tokens": 354,
+    "full_md_tokens": 660
+  },
+  "summary": "## Issue Resolved",
+  "sections": [
+    {
+      "title": "Issue Resolved",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/claude-code-hook-fix.md#issue-resolved",
+      "content_preview": "**Problem**: Users were seeing error notifications in Claude Code:\n```\nSessionStart:compact [.claude/hooks/session-start.sh] failed with non-blocking ..."
+    },
+    {
+      "title": "Solution Implemented",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/claude-code-hook-fix.md#solution-implemented",
+      "content_preview": ""
+    },
+    {
+      "title": "Technical Details",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/claude-code-hook-fix.md#technical-details",
+      "content_preview": "**Root Cause**: Claude Code executes hooks from its own working directory using relative paths, while the AgileAiAgents hook system expects to be run ..."
+    },
+    {
+      "title": "User Action Required",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/claude-code-hook-fix.md#user-action-required",
+      "content_preview": ""
+    },
+    {
+      "title": "Verification",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/claude-code-hook-fix.md#verification",
+      "content_preview": "After applying the fix:\n1. No more \"exit code 127\" errors in Claude Code\n2. Hooks continue to function correctly\n3. Dashboard and all features work as..."
+    },
+    {
+      "title": "Files Added/Modified",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/claude-code-hook-fix.md#files-addedmodified",
+      "content_preview": ""
+    },
+    {
+      "title": "Release Readiness",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/claude-code-hook-fix.md#release-readiness",
+      "content_preview": "✅ Error notifications eliminated\n✅ Automated fix available\n✅ Documentation complete\n✅ Installation process updated\n✅ Ready for public release\n\nThis fi..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Issue Resolved": {
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/claude-code-hook-fix.md#issue-resolved",
+      "tokens": 102,
+      "content_preview": "**Problem**: Users were seeing error notifications in Claude Code:\n```\nSessionStart:compact [.claude/hooks/session-start.sh] failed with non-blocking ..."
+    },
+    "Solution Implemented": {
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/claude-code-hook-fix.md#solution-implemented",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Automated Fix Script": {
+          "content_preview": "Created `fix-claude-hooks.sh` that:\n- Configures Claude Code to use absolute paths via `${workspaceRoot}`\n- Sets CLAUDE_PROJECT_DIR environment variab...",
+          "tokens": 63,
+          "md_reference": "agile-ai-agents/aaa-documents/release-notes/claude-code-hook-fix.md#1-automated-fix-script-1"
+        },
+        "2. Documentation Updates": {
+          "content_preview": "- Added troubleshooting section to main README\n- Created detailed technical documentation\n- Added fix step to installation process\n- Created user-frie...",
+          "tokens": 44,
+          "md_reference": "agile-ai-agents/aaa-documents/release-notes/claude-code-hook-fix.md#2-documentation-updates-1"
+        },
+        "3. Installation Process Update": {
+          "content_preview": "New users will now:\n1. Run setup script\n2. Run `fix-claude-hooks.sh` (new step)\n3. Configure environment\n4. Start using AgileAiAgents without seeing e...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/release-notes/claude-code-hook-fix.md#3-installation-process-update-1"
+        }
+      }
+    },
+    "Technical Details": {
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/claude-code-hook-fix.md#technical-details",
+      "tokens": 83,
+      "content_preview": "**Root Cause**: Claude Code executes hooks from its own working directory using relative paths, while the AgileAiAgents hook system expects to be run ..."
+    },
+    "User Action Required": {
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/claude-code-hook-fix.md#user-action-required",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Existing Users": {
+          "content_preview": "Run once from AgileAiAgents root:\n```bash\n./fix-claude-hooks.sh\n```\nThen restart Claude Code.",
+          "tokens": 22,
+          "md_reference": "agile-ai-agents/aaa-documents/release-notes/claude-code-hook-fix.md#existing-users-1"
+        },
+        "New Users": {
+          "content_preview": "The fix is now part of the installation process (Step 4).",
+          "tokens": 14,
+          "md_reference": "agile-ai-agents/aaa-documents/release-notes/claude-code-hook-fix.md#new-users-1"
+        }
+      }
+    },
+    "Verification": {
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/claude-code-hook-fix.md#verification",
+      "tokens": 40,
+      "content_preview": "After applying the fix:\n1. No more \"exit code 127\" errors in Claude Code\n2. Hooks continue to function correctly\n3. Dashboard and all features work as..."
+    },
+    "Files Added/Modified": {
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/claude-code-hook-fix.md#files-addedmodified",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "New Files:": {
+          "content_preview": "- `fix-claude-hooks.sh` - Automated fix script\n- `aaa-documents/debugging/hooks-exit-code-127-error.md` - Technical documentation\n- `aaa-documents/tro...",
+          "tokens": 67,
+          "md_reference": "agile-ai-agents/aaa-documents/release-notes/claude-code-hook-fix.md#new-files-1"
+        },
+        "Modified Files:": {
+          "content_preview": "- `README.md` - Added troubleshooting section and installation step\n- `.claude/config.json` - Created by fix script with proper paths",
+          "tokens": 33,
+          "md_reference": "agile-ai-agents/aaa-documents/release-notes/claude-code-hook-fix.md#modified-files-1"
+        }
+      }
+    },
+    "Release Readiness": {
+      "md_reference": "agile-ai-agents/aaa-documents/release-notes/claude-code-hook-fix.md#release-readiness",
+      "tokens": 73,
+      "content_preview": "✅ Error notifications eliminated\n✅ Automated fix available\n✅ Documentation complete\n✅ Installation process updated\n✅ Ready for public release\n\nThis fi..."
+    }
+  }
+}

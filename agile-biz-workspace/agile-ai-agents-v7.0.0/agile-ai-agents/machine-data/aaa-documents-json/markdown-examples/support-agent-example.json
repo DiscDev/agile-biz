@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "document": "support-agent-example",
+    "title": "System Monitoring and Performance Guide",
+    "timestamp": "2025-08-11T22:02:16.900Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md",
+    "document_type": "general_documentation",
+    "file_hash": "a4b399edb29009e282de121580961089",
+    "estimated_tokens": 394,
+    "full_md_tokens": 3374
+  },
+  "summary": "This guide demonstrates how Support Agents should format comprehensive documentation using GitHub markdown best practices, with focus on accessibility and cross-referencing.",
+  "sections": [
+    {
+      "title": "Table of Contents",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#table-of-contents",
+      "content_preview": "* [Overview](#overview)\n* [Monitoring Setup](#monitoring-setup)\n* [Performance Metrics](#performance-metrics)\n* [Alert Configuration](#alert-configura..."
+    },
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#overview",
+      "content_preview": "This guide demonstrates how Support Agents should format comprehensive documentation using GitHub markdown best practices, with focus on accessibility..."
+    },
+    {
+      "title": "Monitoring Setup",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#monitoring-setup",
+      "content_preview": ""
+    },
+    {
+      "title": "Performance Metrics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#performance-metrics",
+      "content_preview": ""
+    },
+    {
+      "title": "Alert Configuration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#alert-configuration",
+      "content_preview": ""
+    },
+    {
+      "title": "Troubleshooting Guide",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#troubleshooting-guide",
+      "content_preview": ""
+    },
+    {
+      "title": "Maintenance Procedures",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#maintenance-procedures",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Table of Contents": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#table-of-contents",
+      "tokens": 56,
+      "content_preview": "* [Overview](#overview)\n* [Monitoring Setup](#monitoring-setup)\n* [Performance Metrics](#performance-metrics)\n* [Alert Configuration](#alert-configura..."
+    },
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#overview",
+      "tokens": 44,
+      "content_preview": "This guide demonstrates how Support Agents should format comprehensive documentation using GitHub markdown best practices, with focus on accessibility...",
+      "subsections": {
+        "System Architecture Overview": {
+          "content_preview": "```mermaid\ngraph TD\n    A[Load Balancer] --> B[Web Servers]\n    A --> C[API Servers]\n    B --> D[Application Database]\n    C --> D\n    B --> E[Cache L...",
+          "tokens": 65,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#system-architecture-overview-1"
+        },
+        "Related Documentation": {
+          "content_preview": "* [Installation Guide](installation-guide.md)\n* [Configuration Reference](configuration-reference.md)\n* [API Documentation](api-documentation.md)\n* [S...",
+          "tokens": 53,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#related-documentation-1"
+        }
+      }
+    },
+    "Monitoring Setup": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#monitoring-setup",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Prerequisites": {
+          "content_preview": "Before setting up monitoring, ensure you have:\n\n* [ ] Administrative access to all servers\n* [ ] Monitoring tools installed (Prometheus, Grafana)\n* [ ...",
+          "tokens": 67,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#prerequisites-1"
+        },
+        "Installation Steps": {
+          "content_preview": "1. **Install Monitoring Agent**\n\n   ```bash\n   # Download and install monitoring agent\n   curl -LO https://releases.agileai.com/monitoring/latest/agen...",
+          "tokens": 298,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#installation-steps-1"
+        }
+      }
+    },
+    "Performance Metrics": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#performance-metrics",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Key Performance Indicators": {
+          "content_preview": "| Metric | Target | Warning | Critical | Description |\n|:-------|:------:|:-------:|:--------:|:------------|\n| Response Time | <200ms | >500ms | >100...",
+          "tokens": 105,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#key-performance-indicators-1"
+        },
+        "Real-Time Dashboard": {
+          "content_preview": "Access the monitoring dashboard at: [https://monitoring.agileai.com](https://monitoring.agileai.com)\n\n**Dashboard Components:**\n\n* **System Health**: ...",
+          "tokens": 95,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#real-time-dashboard-1"
+        },
+        "Custom Metrics Configuration": {
+          "content_preview": "```javascript\n// Application performance tracking\nconst prometheus = require('prom-client');\n\n// Custom metrics\nconst httpRequestDuration = new promet...",
+          "tokens": 208,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#custom-metrics-configuration-1"
+        }
+      }
+    },
+    "Alert Configuration": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#alert-configuration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Alert Rules": {
+          "content_preview": "```yaml",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#alert-rules-1"
+        }
+      }
+    },
+    "Troubleshooting Guide": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#troubleshooting-guide",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Common Issues and Solutions": {
+          "content_preview": "**Symptoms:**\n* Server response times increasing\n* Out of memory errors in logs\n* Application crashes or restarts\n\n**Diagnostic Steps:**\n\n1. **Check m...",
+          "tokens": 141,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#common-issues-and-solutions-2"
+        },
+        "Application-Level Fixes": {
+          "content_preview": "```javascript\n// Implement connection pooling\nconst pool = new Pool({\n  connectionString: process.env.DATABASE_URL,\n  max: 20,                    // M...",
+          "tokens": 188,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#application-level-fixes-1"
+        },
+        "Infrastructure-Level Fixes": {
+          "content_preview": "**Automated Monitoring Script:**\n\n```bash\n#!/bin/bash",
+          "tokens": 12,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#infrastructure-level-fixes-3"
+        }
+      }
+    },
+    "Maintenance Procedures": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#maintenance-procedures",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Regular Maintenance Schedule": {
+          "content_preview": "| Task | Frequency | Responsibility | Estimated Time |\n|:-----|:----------|:---------------|:--------------:|\n| System updates | Weekly | DevOps Team ...",
+          "tokens": 95,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#regular-maintenance-schedule-1"
+        },
+        "Maintenance Windows": {
+          "content_preview": "**Scheduled Maintenance:**\n* **Standard**: Sundays 2:00 AM - 4:00 AM UTC\n* **Extended**: First Sunday of month 12:00 AM - 6:00 AM UTC\n* **Emergency**:...",
+          "tokens": 97,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#maintenance-windows-1"
+        },
+        "Backup and Recovery": {
+          "content_preview": "```bash\n#!/bin/bash",
+          "tokens": 4,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/support-agent-example.md#backup-and-recovery-1"
+        }
+      }
+    }
+  }
+}

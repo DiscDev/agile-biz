@@ -1,0 +1,654 @@
+{
+  "meta": {
+    "document": "document-md-structure-standard",
+    "title": "Document Markdown Structure Standard",
+    "timestamp": "2025-08-11T22:02:16.886Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/document-md-structure-standard.md",
+    "document_type": "guide",
+    "file_hash": "7be90b2eceb4f0561ee8b145f4091d03",
+    "estimated_tokens": 2597,
+    "full_md_tokens": 1453
+  },
+  "summary": "This document defines the standardized structure for all markdown documents in the AgileAiAgents system to enable the enhanced JSON reference system with section-based progressive loading.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#overview",
+      "content_preview": "This guide helps teams plan effective sprints..."
+    },
+    {
+      "title": "Document Categories",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#document-categories",
+      "content_preview": ""
+    },
+    {
+      "title": "Standard Document Structure",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#standard-document-structure",
+      "content_preview": ""
+    },
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#overview-1",
+      "content_preview": "This guide helps teams plan effective sprints..."
+    },
+    {
+      "title": "[Main Content Sections]",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#main-content-sections",
+      "content_preview": "Core content organized by logical topics."
+    },
+    {
+      "title": "Key Concepts (if applicable)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#key-concepts-if-applicable",
+      "content_preview": "Important concepts, definitions, or principles."
+    },
+    {
+      "title": "Examples (if applicable)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#examples-if-applicable",
+      "content_preview": "Practical examples or use cases."
+    },
+    {
+      "title": "Reference Documentation (if applicable)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#reference-documentation-if-applicable",
+      "content_preview": "Links to related documents or external resources."
+    },
+    {
+      "title": "Version History (if applicable)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#version-history-if-applicable",
+      "content_preview": "Document version and change tracking.\n```"
+    },
+    {
+      "title": "Document Type Templates",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#document-type-templates",
+      "content_preview": ""
+    },
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#overview-2",
+      "content_preview": "This guide helps teams plan effective sprints..."
+    },
+    {
+      "title": "Prerequisites",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#prerequisites",
+      "content_preview": "- Understanding of Agile principles\n- Access to project backlog"
+    },
+    {
+      "title": "Core Concepts",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#core-concepts",
+      "content_preview": "Key concepts explained."
+    },
+    {
+      "title": "Step-by-Step Instructions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#step-by-step-instructions",
+      "content_preview": ""
+    },
+    {
+      "title": "Examples",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#examples",
+      "content_preview": "Compliant and non-compliant examples.\n```"
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#troubleshooting",
+      "content_preview": "Common issues and debugging.\n```"
+    },
+    {
+      "title": "Reference Documentation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#reference-documentation",
+      "content_preview": "Related guides and resources.\n```"
+    },
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#overview-3",
+      "content_preview": "This guide helps teams plan effective sprints..."
+    },
+    {
+      "title": "Template Structure",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#template-structure",
+      "content_preview": "Explanation of the template components."
+    },
+    {
+      "title": "Usage Instructions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#usage-instructions",
+      "content_preview": "How to use this template."
+    },
+    {
+      "title": "Template",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#template",
+      "content_preview": "```[template content]```"
+    },
+    {
+      "title": "Customization Guide",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#customization-guide",
+      "content_preview": "How to adapt for specific needs."
+    },
+    {
+      "title": "Examples",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#examples-1",
+      "content_preview": "Compliant and non-compliant examples.\n```"
+    },
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#overview-4",
+      "content_preview": "This guide helps teams plan effective sprints..."
+    },
+    {
+      "title": "Scope",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#scope",
+      "content_preview": "What is and isn't covered."
+    },
+    {
+      "title": "Prerequisites",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#prerequisites-1",
+      "content_preview": "- Understanding of Agile principles\n- Access to project backlog"
+    },
+    {
+      "title": "Implementation Guidelines",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#implementation-guidelines",
+      "content_preview": "How to implement this standard."
+    },
+    {
+      "title": "Validation Criteria",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#validation-criteria",
+      "content_preview": "How to verify compliance."
+    },
+    {
+      "title": "Examples",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#examples-2",
+      "content_preview": "Compliant and non-compliant examples.\n```"
+    },
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#overview-5",
+      "content_preview": "This guide helps teams plan effective sprints..."
+    },
+    {
+      "title": "Architecture",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#architecture",
+      "content_preview": "System design and components."
+    },
+    {
+      "title": "API Reference (if applicable)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#api-reference-if-applicable",
+      "content_preview": ""
+    },
+    {
+      "title": "Configuration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#configuration",
+      "content_preview": "Setup and configuration options."
+    },
+    {
+      "title": "Usage Guide",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#usage-guide",
+      "content_preview": "How to use the system/feature."
+    },
+    {
+      "title": "Monitoring & Maintenance",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#monitoring-maintenance",
+      "content_preview": "Operational considerations."
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#troubleshooting-1",
+      "content_preview": "Common issues and debugging.\n```"
+    },
+    {
+      "title": "Progressive Loading Sections",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#progressive-loading-sections",
+      "content_preview": "To optimize token usage, structure documents with progressive disclosure:"
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#best-practices",
+      "content_preview": "...\n```"
+    },
+    {
+      "title": "JSON Generation Metadata",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#json-generation-metadata",
+      "content_preview": "Documents should include metadata comments for JSON generation:\n\n```markdown\n<!-- \nmetadata:\n  category: guide|template|standard|technical|reference\n ..."
+    },
+    {
+      "title": "Section Token Guidelines",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#section-token-guidelines",
+      "content_preview": "Target token counts for optimal loading:\n- Overview: 100-300 tokens\n- Core sections: 500-1500 tokens each\n- Detailed sections: Can be larger, loaded o..."
+    },
+    {
+      "title": "Migration Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#migration-checklist",
+      "content_preview": "When updating existing documents:\n- [ ] Remove numbered headings (e.g., \"## 1. Overview\" → \"## Overview\")\n- [ ] Standardize section names\n- [ ] Add Ov..."
+    },
+    {
+      "title": "Examples of Well-Structured Documents",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#examples-of-well-structured-documents",
+      "content_preview": ""
+    },
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#overview-6",
+      "content_preview": "This guide helps teams plan effective sprints..."
+    },
+    {
+      "title": "Prerequisites",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#prerequisites-2",
+      "content_preview": "- Understanding of Agile principles\n- Access to project backlog"
+    },
+    {
+      "title": "Planning Process",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#planning-process",
+      "content_preview": ""
+    },
+    {
+      "title": "Templates",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#templates",
+      "content_preview": ""
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#best-practices-1",
+      "content_preview": "...\n```"
+    },
+    {
+      "title": "Introduction  ❌ (numbered)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#introduction-numbered",
+      "content_preview": "..."
+    },
+    {
+      "title": "How to Plan  ❌ (numbered + vague)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#how-to-plan-numbered-vague",
+      "content_preview": ""
+    },
+    {
+      "title": "Conclusion  ❌ (not useful section)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#conclusion-not-useful-section",
+      "content_preview": "```"
+    },
+    {
+      "title": "Version History",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#version-history",
+      "content_preview": "- v1.0.0 (2024-01-10): Initial standard for document structure with JSON reference support"
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#overview-6",
+      "tokens": 12,
+      "content_preview": "This guide helps teams plan effective sprints..."
+    },
+    "Document Categories": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#document-categories",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "aaa-documents (System Documentation)": {
+          "content_preview": "Core system documentation, guides, templates, and standards.",
+          "tokens": 15,
+          "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#aaa-documents-system-documentation-1"
+        },
+        "project-documents (Project Deliverables)": {
+          "content_preview": "Project-specific documents organized in 30 categorized folders.",
+          "tokens": 16,
+          "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#project-documents-project-deliverables-1"
+        }
+      }
+    },
+    "Standard Document Structure": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#standard-document-structure",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Required Sections": {
+          "content_preview": "All documents MUST include these top-level sections:\n\n```markdown",
+          "tokens": 16,
+          "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#required-sections-1"
+        }
+      }
+    },
+    "[Main Content Sections]": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#main-content-sections",
+      "tokens": 11,
+      "content_preview": "Core content organized by logical topics."
+    },
+    "Key Concepts (if applicable)": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#key-concepts-if-applicable",
+      "tokens": 12,
+      "content_preview": "Important concepts, definitions, or principles."
+    },
+    "Examples (if applicable)": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#examples-if-applicable",
+      "tokens": 8,
+      "content_preview": "Practical examples or use cases."
+    },
+    "Reference Documentation (if applicable)": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#reference-documentation-if-applicable",
+      "tokens": 13,
+      "content_preview": "Links to related documents or external resources."
+    },
+    "Version History (if applicable)": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#version-history-if-applicable",
+      "tokens": 10,
+      "content_preview": "Document version and change tracking.\n```",
+      "subsections": {
+        "Heading Standards": {
+          "content_preview": "1. **Document Title**: Use single `#` for the main title\n2. **Major Sections**: Use `##` for top-level sections\n3. **Subsections**: Use `###` for subs...",
+          "tokens": 126,
+          "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#heading-standards-1"
+        },
+        "Anchor Generation Rules": {
+          "content_preview": "Anchors are generated from headings following GitHub's format:\n- Convert to lowercase\n- Replace spaces with hyphens\n- Remove special characters (excep...",
+          "tokens": 78,
+          "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#anchor-generation-rules-1"
+        }
+      }
+    },
+    "Document Type Templates": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#document-type-templates",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Guide Documents": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#guide-documents-1"
+        }
+      }
+    },
+    "Prerequisites": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#prerequisites-2",
+      "tokens": 16,
+      "content_preview": "- Understanding of Agile principles\n- Access to project backlog"
+    },
+    "Core Concepts": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#core-concepts",
+      "tokens": 6,
+      "content_preview": "Key concepts explained."
+    },
+    "Step-by-Step Instructions": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#step-by-step-instructions",
+      "tokens": 0,
+      "subsections": {
+        "Step 3: [Action]": {
+          "content_preview": "",
+          "tokens": 0,
+          "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#step-3-action-1"
+        }
+      }
+    },
+    "Examples": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#examples-2",
+      "tokens": 10,
+      "content_preview": "Compliant and non-compliant examples.\n```",
+      "subsections": {
+        "Technical Documentation": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#technical-documentation-1"
+        }
+      }
+    },
+    "Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#troubleshooting-1",
+      "tokens": 8,
+      "content_preview": "Common issues and debugging.\n```"
+    },
+    "Reference Documentation": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#reference-documentation",
+      "tokens": 8,
+      "content_preview": "Related guides and resources.\n```",
+      "subsections": {
+        "Template Documents": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#template-documents-1"
+        }
+      }
+    },
+    "Template Structure": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#template-structure",
+      "tokens": 10,
+      "content_preview": "Explanation of the template components."
+    },
+    "Usage Instructions": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#usage-instructions",
+      "tokens": 7,
+      "content_preview": "How to use this template."
+    },
+    "Template": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#template",
+      "tokens": 4,
+      "content_preview": "```[template content]```"
+    },
+    "Customization Guide": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#customization-guide",
+      "tokens": 8,
+      "content_preview": "How to adapt for specific needs."
+    },
+    "Scope": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#scope",
+      "tokens": 7,
+      "content_preview": "What is and isn't covered."
+    },
+    "Implementation Guidelines": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#implementation-guidelines",
+      "tokens": 8,
+      "content_preview": "How to implement this standard."
+    },
+    "Validation Criteria": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#validation-criteria",
+      "tokens": 7,
+      "content_preview": "How to verify compliance."
+    },
+    "Architecture": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#architecture",
+      "tokens": 8,
+      "content_preview": "System design and components."
+    },
+    "API Reference (if applicable)": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#api-reference-if-applicable",
+      "tokens": 0,
+      "subsections": {
+        "Authentication": {
+          "content_preview": "",
+          "tokens": 0,
+          "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#authentication-1"
+        }
+      }
+    },
+    "Configuration": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#configuration",
+      "tokens": 8,
+      "content_preview": "Setup and configuration options."
+    },
+    "Usage Guide": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#usage-guide",
+      "tokens": 8,
+      "content_preview": "How to use the system/feature."
+    },
+    "Monitoring & Maintenance": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#monitoring-maintenance",
+      "tokens": 7,
+      "content_preview": "Operational considerations."
+    },
+    "Progressive Loading Sections": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#progressive-loading-sections",
+      "tokens": 19,
+      "content_preview": "To optimize token usage, structure documents with progressive disclosure:",
+      "subsections": {
+        "Minimal Context Sections": {
+          "content_preview": "- Overview\n- Summary (if different from overview)\n- Key Points or Quick Reference",
+          "tokens": 20,
+          "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#minimal-context-sections-1"
+        },
+        "Standard Context Sections": {
+          "content_preview": "- Core Concepts\n- Main workflows or procedures\n- Primary examples",
+          "tokens": 17,
+          "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#standard-context-sections-1"
+        },
+        "Detailed Context Sections": {
+          "content_preview": "- Implementation details\n- Advanced configurations\n- Troubleshooting guides\n- Complete API references",
+          "tokens": 26,
+          "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#detailed-context-sections-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#best-practices-1",
+      "tokens": 1,
+      "content_preview": "...\n```",
+      "subsections": {
+        "Avoid This Structure": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#avoid-this-structure-1"
+        }
+      }
+    },
+    "JSON Generation Metadata": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#json-generation-metadata",
+      "tokens": 65,
+      "content_preview": "Documents should include metadata comments for JSON generation:\n\n```markdown\n<!-- \nmetadata:\n  category: guide|template|standard|technical|reference\n ..."
+    },
+    "Section Token Guidelines": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#section-token-guidelines",
+      "tokens": 50,
+      "content_preview": "Target token counts for optimal loading:\n- Overview: 100-300 tokens\n- Core sections: 500-1500 tokens each\n- Detailed sections: Can be larger, loaded o..."
+    },
+    "Migration Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#migration-checklist",
+      "tokens": 69,
+      "content_preview": "When updating existing documents:\n- [ ] Remove numbered headings (e.g., \"## 1. Overview\" → \"## Overview\")\n- [ ] Standardize section names\n- [ ] Add Ov..."
+    },
+    "Examples of Well-Structured Documents": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#examples-of-well-structured-documents",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Good Structure": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#good-structure-1"
+        }
+      }
+    },
+    "Planning Process": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#planning-process",
+      "tokens": 0,
+      "subsections": {
+        "Preparation Phase": {
+          "content_preview": "...",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#preparation-phase-1"
+        },
+        "Planning Meeting": {
+          "content_preview": "...",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#planning-meeting-1"
+        },
+        "Finalization": {
+          "content_preview": "...",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#finalization-1"
+        }
+      }
+    },
+    "Templates": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#templates",
+      "tokens": 0,
+      "subsections": {
+        "Sprint Goal Template": {
+          "content_preview": "...",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#sprint-goal-template-1"
+        },
+        "Task Breakdown Template": {
+          "content_preview": "...",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#task-breakdown-template-1"
+        }
+      }
+    },
+    "Introduction  ❌ (numbered)": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#introduction-numbered",
+      "tokens": 1,
+      "content_preview": "..."
+    },
+    "How to Plan  ❌ (numbered + vague)": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#how-to-plan-numbered-vague",
+      "tokens": 0,
+      "subsections": {
+        "1 First Step  ❌ (sub-numbered)": {
+          "content_preview": "...",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#1-first-step-sub-numbered-1"
+        }
+      }
+    },
+    "Conclusion  ❌ (not useful section)": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#conclusion-not-useful-section",
+      "tokens": 0,
+      "content_preview": "```"
+    },
+    "Version History": {
+      "md_reference": "agile-ai-agents/aaa-documents/document-md-structure-standard.md#version-history",
+      "tokens": 22,
+      "content_preview": "- v1.0.0 (2024-01-10): Initial standard for document structure with JSON reference support"
+    }
+  }
+}

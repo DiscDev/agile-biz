@@ -1,0 +1,297 @@
+{
+  "meta": {
+    "generated_at": "2025-08-11T20:30:00Z",
+    "total_agents": 38,
+    "coordination_patterns": 156,
+    "dependency_relationships": 89,
+    "version": "1.0.0"
+  },
+  "agent_dependencies": {
+    "stakeholder_interview_agent": {
+      "depends_on": ["project_state_manager_agent"],
+      "provides_to": ["all_agents"],
+      "triggers": ["research_agent", "project_analyzer_agent"],
+      "coordination_strength": "foundational"
+    },
+    "document_manager_agent": {
+      "depends_on": ["project_state_manager_agent"],
+      "provides_to": ["all_agents"],
+      "coordinates_with": ["scrum_master_agent"],
+      "coordination_strength": "infrastructure"
+    },
+    "project_manager_agent": {
+      "depends_on": ["project_state_manager_agent", "stakeholder_interview_agent"],
+      "coordinates_with": ["scrum_master_agent"],
+      "provides_to": ["all_reporting_agents"],
+      "coordination_strength": "strategic_leadership"
+    },
+    "scrum_master_agent": {
+      "coordinates_with": ["project_manager_agent", "document_manager_agent"],
+      "manages": ["all_development_agents"],
+      "provides_to": ["project_manager_agent"],
+      "coordination_strength": "tactical_execution"
+    },
+    "research_agent": {
+      "triggered_by": ["stakeholder_interview_agent"],
+      "coordinates_with": ["analysis_agent", "finance_agent", "marketing_agent"],
+      "provides_to": ["prd_agent", "marketing_agent", "analysis_agent"],
+      "coordination_strength": "information_foundation"
+    },
+    "analysis_agent": {
+      "depends_on": ["research_agent", "stakeholder_interview_agent"],
+      "coordinates_with": ["finance_agent", "project_manager_agent"],
+      "provides_to": ["project_manager_agent", "prd_agent"],
+      "coordination_strength": "strategic_synthesis"
+    },
+    "coder_agent": {
+      "depends_on": ["prd_agent", "ui_ux_agent", "api_agent"],
+      "coordinates_with": ["testing_agent", "devops_agent", "security_agent"],
+      "managed_by": ["scrum_master_agent"],
+      "coordination_strength": "core_development"
+    },
+    "testing_agent": {
+      "depends_on": ["coder_agent"],
+      "coordinates_with": ["security_agent", "devops_agent"],
+      "provides_to": ["project_manager_agent", "scrum_master_agent"],
+      "coordination_strength": "quality_assurance"
+    }
+  },
+  "workflow_coordination_patterns": {
+    "new_project_flow": {
+      "sequence": [
+        {
+          "phase": "discovery",
+          "agents": ["stakeholder_interview_agent"],
+          "parallel": false,
+          "triggers_next": true
+        },
+        {
+          "phase": "research_analysis",
+          "agents": ["research_agent", "finance_agent", "marketing_agent"],
+          "parallel": true,
+          "coordination_agent": "project_manager_agent"
+        },
+        {
+          "phase": "synthesis",
+          "agents": ["analysis_agent"],
+          "parallel": false,
+          "depends_on_previous": true
+        },
+        {
+          "phase": "planning",
+          "agents": ["project_manager_agent", "prd_agent"],
+          "parallel": false,
+          "stakeholder_approval_required": true
+        },
+        {
+          "phase": "technical_strategy",
+          "agents": ["llm_agent", "api_agent", "mcp_agent"],
+          "parallel": true,
+          "coordination_agent": "project_manager_agent"
+        },
+        {
+          "phase": "development",
+          "agents": ["coder_agent", "ui_ux_agent", "testing_agent"],
+          "parallel": false,
+          "managed_by": "scrum_master_agent"
+        }
+      ]
+    },
+    "existing_project_flow": {
+      "sequence": [
+        {
+          "phase": "analysis",
+          "agents": ["project_analyzer_agent"],
+          "parallel": false
+        },
+        {
+          "phase": "stakeholder_validation", 
+          "agents": ["stakeholder_interview_agent"],
+          "parallel": false,
+          "depends_on_previous": true
+        },
+        {
+          "phase": "optimization_planning",
+          "agents": ["analysis_agent", "optimization_agent"],
+          "parallel": true
+        },
+        {
+          "phase": "implementation",
+          "agents": ["coder_agent", "testing_agent", "devops_agent"],
+          "parallel": false,
+          "managed_by": "scrum_master_agent"
+        }
+      ]
+    }
+  },
+  "parallel_execution_groups": {
+    "research_parallel": {
+      "agents": ["research_agent", "finance_agent", "marketing_agent"],
+      "coordination_method": "independent_with_synthesis",
+      "token_budget_per_agent": 15000,
+      "expected_duration": "2-3 hours",
+      "outputs_combined_by": "project_manager_agent"
+    },
+    "technical_strategy_parallel": {
+      "agents": ["llm_agent", "api_agent", "mcp_agent"],
+      "coordination_method": "integrated_recommendations",
+      "token_budget_per_agent": 12000,
+      "expected_duration": "1-2 hours",
+      "outputs_combined_by": "project_manager_agent"
+    },
+    "operations_parallel": {
+      "agents": ["devops_agent", "logger_agent", "optimization_agent", "documentator_agent"],
+      "coordination_method": "coordinated_implementation",
+      "token_budget_per_agent": 10000,
+      "expected_duration": "3-4 hours",
+      "managed_by": "scrum_master_agent"
+    }
+  },
+  "information_flow_patterns": {
+    "stakeholder_context_distribution": {
+      "source": "stakeholder_interview_agent",
+      "targets": {
+        "research_agent": ["business_objectives", "target_users", "competitive_landscape"],
+        "finance_agent": ["budget_constraints", "roi_expectations", "cost_sensitivity"],
+        "marketing_agent": ["target_segments", "positioning_preferences", "brand_vision"],
+        "prd_agent": ["feature_requirements", "user_stories", "success_metrics"],
+        "ui_ux_agent": ["user_preferences", "design_requirements", "accessibility_needs"],
+        "coder_agent": ["technical_preferences", "scalability_requirements", "integration_needs"]
+      }
+    },
+    "research_intelligence_flow": {
+      "source": "research_agent",
+      "targets": {
+        "marketing_agent": ["competitive_positioning", "market_trends", "brand_opportunities"],
+        "finance_agent": ["market_size", "pricing_benchmarks", "cost_analysis"],
+        "prd_agent": ["market_gaps", "feature_opportunities", "user_insights"],
+        "analysis_agent": ["competitive_threats", "market_opportunities", "risk_factors"],
+        "project_manager_agent": ["strategic_insights", "market_timing", "resource_implications"]
+      }
+    },
+    "development_coordination_flow": {
+      "hub": "scrum_master_agent",
+      "spokes": {
+        "coder_agent": ["task_assignments", "priorities", "blockers"],
+        "testing_agent": ["testing_requirements", "bug_reports", "quality_gates"],
+        "devops_agent": ["deployment_schedules", "infrastructure_needs", "monitoring_requirements"],
+        "ui_ux_agent": ["design_approvals", "user_feedback", "iteration_requests"],
+        "security_agent": ["security_requirements", "vulnerability_reports", "compliance_needs"]
+      }
+    }
+  },
+  "decision_escalation_paths": {
+    "technical_decisions": {
+      "level_1": ["coder_agent", "testing_agent", "devops_agent"],
+      "level_2": "scrum_master_agent",
+      "level_3": "project_manager_agent",
+      "stakeholder_escalation": "stakeholder_interview_agent"
+    },
+    "business_decisions": {
+      "level_1": ["marketing_agent", "finance_agent", "research_agent"],
+      "level_2": "analysis_agent",
+      "level_3": "project_manager_agent",
+      "stakeholder_escalation": "stakeholder_interview_agent"
+    },
+    "scope_changes": {
+      "detection": ["any_agent"],
+      "analysis": "analysis_agent",
+      "approval": "project_manager_agent",
+      "stakeholder_sign_off": "stakeholder_interview_agent"
+    }
+  },
+  "context_sharing_optimization": {
+    "high_frequency_pairs": [
+      ["stakeholder_interview_agent", "research_agent"],
+      ["research_agent", "analysis_agent"],
+      ["project_manager_agent", "scrum_master_agent"],
+      ["coder_agent", "testing_agent"],
+      ["marketing_agent", "seo_agent"],
+      ["devops_agent", "security_agent"]
+    ],
+    "context_inheritance_chains": [
+      ["stakeholder_interview_agent", "research_agent", "analysis_agent", "project_manager_agent"],
+      ["prd_agent", "coder_agent", "testing_agent", "devops_agent"],
+      ["research_agent", "marketing_agent", "seo_agent", "social_media_agent"]
+    ],
+    "shared_context_pools": {
+      "business_strategy": ["research_agent", "analysis_agent", "marketing_agent", "finance_agent"],
+      "technical_implementation": ["coder_agent", "testing_agent", "devops_agent", "security_agent"],
+      "user_experience": ["ui_ux_agent", "testing_agent", "analytics_growth_intelligence_agent"]
+    }
+  },
+  "coordination_efficiency_metrics": {
+    "handoff_optimization": {
+      "fastest_handoffs": [
+        {"from": "stakeholder_interview_agent", "to": "research_agent", "avg_time": "< 1 min"},
+        {"from": "coder_agent", "to": "testing_agent", "avg_time": "< 2 min"},
+        {"from": "research_agent", "to": "analysis_agent", "avg_time": "< 5 min"}
+      ],
+      "complex_handoffs": [
+        {"from": "analysis_agent", "to": "project_manager_agent", "avg_time": "10-15 min", "reason": "strategic_synthesis"},
+        {"from": "multiple_research_agents", "to": "project_manager_agent", "avg_time": "15-20 min", "reason": "parallel_coordination"}
+      ]
+    },
+    "bottleneck_identification": {
+      "common_bottlenecks": [
+        {"agent": "stakeholder_interview_agent", "reason": "human_response_dependency"},
+        {"agent": "project_manager_agent", "reason": "strategic_decision_authority"},
+        {"agent": "testing_agent", "reason": "quality_gate_sequential_dependency"}
+      ],
+      "optimization_strategies": [
+        "parallel_research_execution",
+        "pre_approval_workflows",
+        "automated_testing_pipelines"
+      ]
+    }
+  },
+  "agent_specialization_matrix": {
+    "core_competencies": {
+      "strategic_planning": ["project_manager_agent", "analysis_agent"],
+      "tactical_execution": ["scrum_master_agent", "coder_agent"],
+      "quality_assurance": ["testing_agent", "security_agent"],
+      "market_intelligence": ["research_agent", "marketing_agent"],
+      "stakeholder_interface": ["stakeholder_interview_agent", "project_manager_agent"],
+      "technical_architecture": ["coder_agent", "api_agent", "devops_agent"],
+      "data_insights": ["analytics_growth_intelligence_agent", "data_engineer_agent"],
+      "optimization": ["optimization_agent", "revenue_optimization_agent"]
+    },
+    "capability_overlap_management": {
+      "research_overlap": {
+        "primary": "research_agent",
+        "specialized": ["market_validation_product_market_fit_agent", "analytics_growth_intelligence_agent"],
+        "coordination": "domain_specific_delegation"
+      },
+      "development_overlap": {
+        "primary": "coder_agent", 
+        "specialized": ["api_agent", "ui_ux_agent", "ml_agent"],
+        "coordination": "feature_specific_delegation"
+      },
+      "marketing_overlap": {
+        "primary": "marketing_agent",
+        "specialized": ["seo_agent", "email_marketing_agent", "social_media_agent"],
+        "coordination": "channel_specific_delegation"
+      }
+    }
+  },
+  "coordination_best_practices": {
+    "context_efficiency": [
+      "Load stakeholder context first for all business-focused agents",
+      "Share research findings through structured JSON handoffs",
+      "Use progressive context loading for complex agents",
+      "Cache frequently accessed agent outputs"
+    ],
+    "parallel_execution": [
+      "Group agents by independence level",
+      "Use coordination agents for parallel group management",
+      "Set clear deliverable requirements before parallel launch",
+      "Implement validation gates for parallel output synthesis"
+    ],
+    "decision_quality": [
+      "Ensure stakeholder input reaches all relevant agents",
+      "Create decision audit trails through coordination chain",
+      "Implement approval gates at strategic transition points",
+      "Maintain decision context for future agent sessions"
+    ]
+  }
+}

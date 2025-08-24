@@ -1,0 +1,97 @@
+name: "Vue + Django"
+category: "separated-stack"
+description: "Vue.js frontend with Django REST Framework backend, ideal for modern web applications"
+tech_stack:
+  frontend: "Vue 3 + Vite + TypeScript"
+  backend: "Django 4.x + Django REST Framework"
+  database: "PostgreSQL"
+  deployment: "Docker + Docker Compose"
+
+structure:
+  - path: "frontend/"
+    type: "directory"
+    description: "Vue.js application with Vite and TypeScript"
+    init_command: "npm create vue@latest . -- --typescript --jsx --router --pinia"
+    
+  - path: "backend/"
+    type: "directory"
+    description: "Django REST API application"
+    init_command: "django-admin startproject config . && pip install djangorestframework django-cors-headers python-decouple"
+    
+  - path: "shared/"
+    type: "directory"
+    description: "Shared TypeScript types for API contracts"
+    
+  - path: "docs/"
+    type: "directory"
+    description: "Project documentation"
+    subdirs:
+      - "api/"
+      - "deployment/"
+    
+  - path: "scripts/"
+    type: "directory"
+    description: "Build and deployment scripts"
+    
+  - path: "docker-compose.yml"
+    type: "file"
+    template: "docker-compose.yml"
+    description: "Local development environment"
+    
+  - path: "Makefile"
+    type: "file"
+    template: "makefile"
+    description: "Common development commands"
+    
+  - path: ".gitignore"
+    type: "file"
+    template: "gitignore"
+    description: "Git ignore patterns"
+    
+  - path: "README.md"
+    type: "file"
+    template: "readme.md"
+    description: "Project documentation"
+    
+  - path: ".env.example"
+    type: "file"
+    template: "env-example"
+    description: "Environment variables template"
+
+post_init_commands:
+  frontend:
+    - description: "Install dependencies"
+      command: "cd frontend && npm install"
+    - description: "Install additional packages"
+      command: "cd frontend && npm install axios @vueuse/core"
+    - description: "Install UI framework (optional)"
+      command: "cd frontend && npm install vuetify @mdi/font"
+      
+  backend:
+    - description: "Create requirements file"
+      command: "cd backend && pip freeze > requirements.txt"
+    - description: "Create Django apps"
+      command: "cd backend && python manage.py startapp api && python manage.py startapp users"
+    - description: "Initial migrations"
+      command: "cd backend && python manage.py makemigrations && python manage.py migrate"
+    - description: "Create superuser"
+      command: "cd backend && python manage.py createsuperuser --noinput --username admin --email admin@example.com"
+
+development_ports:
+  frontend: 5173
+  backend: 8000
+  database: 5432
+
+api_configuration:
+  cors_origin: "http://localhost:5173"
+  api_prefix: "/api/v1/"
+  auth_type: "token"
+  session_type: "jwt"
+
+benefits:
+  - "Vue 3 composition API for modern reactive UI"
+  - "Django's robust backend with built-in admin"
+  - "Type safety with TypeScript in frontend"
+  - "DRF for powerful API development"
+  - "Hot module replacement for rapid development"
+  - "Built-in authentication and permissions"

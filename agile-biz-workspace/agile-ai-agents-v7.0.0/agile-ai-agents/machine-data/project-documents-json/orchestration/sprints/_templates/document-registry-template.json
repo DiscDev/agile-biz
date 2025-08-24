@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "document": "document-registry-template",
+    "title": "Document Registry - sprint-YYYY-MM-DD-feature-name",
+    "timestamp": "2025-07-22T01:41:03.736Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/_templates/document-registry-template.md",
+    "document_type": "template",
+    "file_hash": "ab5488c5736e986630f37f83ec4cb744",
+    "estimated_tokens": 153,
+    "full_md_tokens": 188
+  },
+  "summary": "## Registry",
+  "sections": [
+    {
+      "title": "Registry",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/document-registry-template.md#registry",
+      "content_preview": "| Document | Created By | Created At | Purpose |\n|----------|------------|------------|---------|\n| state.md | scrum_master_agent | YYYY-MM-DDTHH:MM:S..."
+    },
+    {
+      "title": "Statistics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/document-registry-template.md#statistics",
+      "content_preview": "- Total Documents: 4\n- By Agent:\n  - scrum_master_agent: 4\n  - Other agents: 0"
+    },
+    {
+      "title": "Document Creation Rules",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/document-registry-template.md#document-creation-rules",
+      "content_preview": "All agents must request document creation through the Scrum Master Agent to ensure proper organization and tracking."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Registry": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/document-registry-template.md#registry",
+      "tokens": 113,
+      "content_preview": "| Document | Created By | Created At | Purpose |\n|----------|------------|------------|---------|\n| state.md | scrum_master_agent | YYYY-MM-DDTHH:MM:S..."
+    },
+    "Statistics": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/document-registry-template.md#statistics",
+      "tokens": 20,
+      "content_preview": "- Total Documents: 4\n- By Agent:\n  - scrum_master_agent: 4\n  - Other agents: 0"
+    },
+    "Document Creation Rules": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/document-registry-template.md#document-creation-rules",
+      "tokens": 29,
+      "content_preview": "All agents must request document creation through the Scrum Master Agent to ensure proper organization and tracking."
+    }
+  }
+}

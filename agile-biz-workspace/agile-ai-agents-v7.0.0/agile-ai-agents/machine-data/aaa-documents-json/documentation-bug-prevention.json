@@ -1,0 +1,207 @@
+{
+  "meta": {
+    "document": "documentation-bug-prevention",
+    "title": "Documentation Bug Prevention System",
+    "timestamp": "2025-08-11T22:02:16.887Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md",
+    "document_type": "general_documentation",
+    "file_hash": "0c5241a5240f7aa4a13974f48a5572c2",
+    "estimated_tokens": 553,
+    "full_md_tokens": 1870
+  },
+  "summary": "## Background",
+  "sections": [
+    {
+      "title": "Background",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#background",
+      "content_preview": "Based on community learning from the brazil-project phase folder bug analysis, we've implemented a comprehensive system to prevent \"documentation bugs..."
+    },
+    {
+      "title": "The Problem",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#the-problem",
+      "content_preview": "**Root Cause Discovery**: The phase folder bug wasn't a code issue but a documentation issue. The orchestrator was correctly following instructions fr..."
+    },
+    {
+      "title": "Prevention System",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#prevention-system",
+      "content_preview": ""
+    },
+    {
+      "title": "Implementation Success Story",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#implementation-success-story",
+      "content_preview": ""
+    },
+    {
+      "title": "Implementation Details",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#implementation-details",
+      "content_preview": ""
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Debugging Documentation Bugs",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#debugging-documentation-bugs",
+      "content_preview": "When a bug persists despite code fixes, check:\n\n- [ ] **Configuration files** - Do they reference correct resources?\n- [ ] **Documentation instruction..."
+    },
+    {
+      "title": "Community Impact",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#community-impact",
+      "content_preview": "This prevention system:\n- **Prevents** the phase folder bug from recurring\n- **Validates** documentation accuracy automatically\n- **Catches** folder r..."
+    },
+    {
+      "title": "Integration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#integration",
+      "content_preview": "The validation system is integrated into:\n- **Testing Pipeline**: Runs automatically with `npm test`\n- **Pre-commit**: Can be added to git hooks\n- **D..."
+    },
+    {
+      "title": "Future Enhancements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#future-enhancements",
+      "content_preview": "Planned improvements:\n1. **Command Validation**: Validate bash commands in documentation\n2. **Link Checking**: Verify internal documentation links\n3. ..."
+    },
+    {
+      "title": "Conclusion",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#conclusion",
+      "content_preview": "By treating documentation as code and implementing automated validation, we prevent documentation bugs that can be harder to find and fix than traditi..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Background": {
+      "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#background",
+      "tokens": 54,
+      "content_preview": "Based on community learning from the brazil-project phase folder bug analysis, we've implemented a comprehensive system to prevent \"documentation bugs..."
+    },
+    "The Problem": {
+      "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#the-problem",
+      "tokens": 52,
+      "content_preview": "**Root Cause Discovery**: The phase folder bug wasn't a code issue but a documentation issue. The orchestrator was correctly following instructions fr...",
+      "subsections": {
+        "Key Insight": {
+          "content_preview": "**\"Documentation as Code\"** - When documentation contains executable instructions (folder paths, commands, configurations), it becomes part of the sys...",
+          "tokens": 46,
+          "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#key-insight-1"
+        }
+      }
+    },
+    "Prevention System": {
+      "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#prevention-system",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Automated Validation": {
+          "content_preview": "**Script**: `scripts/bash/validate-folder-references.js`\n\n**Purpose**: Validates that all folder references in documentation match the authoritative `...",
+          "tokens": 46,
+          "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#1-automated-validation-1"
+        }
+      }
+    },
+    "Implementation Success Story": {
+      "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#implementation-success-story",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Category Structure Migration Implementation": {
+          "content_preview": "The successful implementation of the category-based folder structure (v3.0.0) demonstrated key principles:\n\n1. **Backward Compatibility**: Maintained ...",
+          "tokens": 130,
+          "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#category-structure-migration-implementation-1"
+        },
+        "Key Metrics Achieved": {
+          "content_preview": "- **40-45% Performance Improvement**: Parallel document creation optimization\n- **Zero Breaking Changes**: All existing functionality preserved\n- **10...",
+          "tokens": 78,
+          "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#key-metrics-achieved-1"
+        },
+        "Lessons Applied": {
+          "content_preview": "- **Community Learning Integration**: Applied lessons from brazil-project phase folder bug\n- **Proactive Documentation**: Updated both user and system...",
+          "tokens": 69,
+          "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#lessons-applied-1"
+        }
+      }
+    },
+    "Implementation Details": {
+      "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#implementation-details",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Validation Pattern": {
+          "content_preview": "The validator uses regex patterns to identify folder references:\n```javascript\n// For numbered folders (legacy)\n/(?:^|\\s|`|│\\s+├──\\s+|│\\s+└──\\s+)(\\d{2...",
+          "tokens": 146,
+          "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#validation-pattern-1"
+        },
+        "Protected from False Positives": {
+          "content_preview": "The validator correctly ignores:\n- \"16-section PRD\" (content descriptions, not folder paths)\n- Version numbers (v2.1.0)\n- Other non-folder numeric pat...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#protected-from-false-positives-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Documentation Review Process": {
+          "content_preview": "1. **Validate Against Source of Truth**: Always check `project-folder-structure.json`\n2. **Run Validation**: Use `npm run validate-folders` before com...",
+          "tokens": 53,
+          "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#1-documentation-review-process-1"
+        },
+        "2. Writing Documentation": {
+          "content_preview": "1. **Use Exact Folder Names**: Copy from `project-folder-structure.json`\n2. **Include Trailing Slash**: Write `business-strategy/marketing/` not `busi...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#2-writing-documentation-1"
+        },
+        "3. Updating Documentation": {
+          "content_preview": "1. **Check Dependencies**: When changing folder structure, update all references\n2. **Run Full Validation**: Ensure no documentation points to old str...",
+          "tokens": 55,
+          "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#3-updating-documentation-1"
+        }
+      }
+    },
+    "Debugging Documentation Bugs": {
+      "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#debugging-documentation-bugs",
+      "tokens": 86,
+      "content_preview": "When a bug persists despite code fixes, check:\n\n- [ ] **Configuration files** - Do they reference correct resources?\n- [ ] **Documentation instruction..."
+    },
+    "Community Impact": {
+      "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#community-impact",
+      "tokens": 68,
+      "content_preview": "This prevention system:\n- **Prevents** the phase folder bug from recurring\n- **Validates** documentation accuracy automatically\n- **Catches** folder r..."
+    },
+    "Integration": {
+      "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#integration",
+      "tokens": 64,
+      "content_preview": "The validation system is integrated into:\n- **Testing Pipeline**: Runs automatically with `npm test`\n- **Pre-commit**: Can be added to git hooks\n- **D..."
+    },
+    "Future Enhancements": {
+      "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#future-enhancements",
+      "tokens": 63,
+      "content_preview": "Planned improvements:\n1. **Command Validation**: Validate bash commands in documentation\n2. **Link Checking**: Verify internal documentation links\n3. ..."
+    },
+    "Conclusion": {
+      "md_reference": "agile-ai-agents/aaa-documents/documentation-bug-prevention.md#conclusion",
+      "tokens": 71,
+      "content_preview": "By treating documentation as code and implementing automated validation, we prevent documentation bugs that can be harder to find and fix than traditi..."
+    }
+  }
+}

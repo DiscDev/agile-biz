@@ -1,0 +1,428 @@
+{
+  "meta": {
+    "document": "github-markdown-style-guide",
+    "title": "GitHub Markdown Style Guide for AgileAiAgents",
+    "timestamp": "2025-08-11T22:02:16.894Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md",
+    "document_type": "guide",
+    "file_hash": "274d247a991ee723bd8bc0404cec152a",
+    "estimated_tokens": 915,
+    "full_md_tokens": 2900
+  },
+  "summary": "This guide establishes consistent GitHub markdown formatting standards for all AI agents in the AgileAiAgents system. Following these standards ensures professional, readable, and accessible documentation that leverages GitHub's full formatting capabilities.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#overview",
+      "content_preview": "This guide establishes consistent GitHub markdown formatting standards for all AI agents in the AgileAiAgents system. Following these standards ensure..."
+    },
+    {
+      "title": "Table of Contents",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#table-of-contents",
+      "content_preview": "* [Section 1](#section-1)\n* [Section 2](#section-2)"
+    },
+    {
+      "title": "Basic Formatting Standards",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#basic-formatting-standards",
+      "content_preview": ""
+    },
+    {
+      "title": "Main Section",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#main-section",
+      "content_preview": ""
+    },
+    {
+      "title": "Advanced Formatting Features",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#advanced-formatting-features",
+      "content_preview": ""
+    },
+    {
+      "title": "Agent-Specific Guidelines",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#agent-specific-guidelines",
+      "content_preview": ""
+    },
+    {
+      "title": "Implementation Guide",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#implementation-guide",
+      "content_preview": ""
+    },
+    {
+      "title": "Market Analysis Report",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#market-analysis-report",
+      "content_preview": ""
+    },
+    {
+      "title": "Campaign Performance Report",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#campaign-performance-report",
+      "content_preview": ""
+    },
+    {
+      "title": "API Integration Guide",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#api-integration-guide",
+      "content_preview": ""
+    },
+    {
+      "title": "System Documentation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#system-documentation",
+      "content_preview": ""
+    },
+    {
+      "title": "Quality Standards",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#quality-standards",
+      "content_preview": ""
+    },
+    {
+      "title": "Table of Contents",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#table-of-contents-1",
+      "content_preview": "* [Section 1](#section-1)\n* [Section 2](#section-2)"
+    },
+    {
+      "title": "Main Content Sections",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#main-content-sections",
+      "content_preview": ""
+    },
+    {
+      "title": "Summary or Conclusion",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#summary-or-conclusion",
+      "content_preview": "Key takeaways and next steps.\n```"
+    },
+    {
+      "title": "Common Patterns",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#common-patterns-2",
+      "content_preview": ""
+    },
+    {
+      "title": "Validation Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#validation-checklist",
+      "content_preview": "Before publishing any document, verify:\n\n**Basic Format:**\n* [ ] Headers start with `##` (not `#`)\n* [ ] Lists use `*` (not `-`)\n* [ ] Code blocks spe..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#overview",
+      "tokens": 65,
+      "content_preview": "This guide establishes consistent GitHub markdown formatting standards for all AI agents in the AgileAiAgents system. Following these standards ensure..."
+    },
+    "Table of Contents": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#table-of-contents-1",
+      "tokens": 10,
+      "content_preview": "* [Section 1](#section-1)\n* [Section 2](#section-2)"
+    },
+    "Basic Formatting Standards": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#basic-formatting-standards",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Headers": {
+          "content_preview": "Always start with `##` for main sections (reserve `#` for document title only):\n\n```markdown",
+          "tokens": 20,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#headers-1"
+        }
+      }
+    },
+    "Main Section": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#main-section",
+      "tokens": 0,
+      "subsections": {
+        "Subsection": {
+          "content_preview": "```",
+          "tokens": 0,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#subsection-1"
+        },
+        "Lists": {
+          "content_preview": "**Unordered Lists - Use asterisks (`*`), never dashes (`-`) or plus (`+`):**\n\n```markdown\n* First item\n* Second item\n  * Nested item (2-space indentat...",
+          "tokens": 109,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#lists-1"
+        },
+        "Text Formatting": {
+          "content_preview": "```markdown\n**Bold text** for emphasis and important terms\n*Italic text* for subtle emphasis or technical terms\n`inline code` for commands, variables,...",
+          "tokens": 59,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#text-formatting-1"
+        },
+        "Links": {
+          "content_preview": "Always use descriptive link text:\n\n```markdown\n<!-- Good -->\n[GitHub markdown documentation](https://docs.github.com/en/get-started/writing-on-github)...",
+          "tokens": 57,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#links-1"
+        },
+        "Code Blocks": {
+          "content_preview": "Always specify the language for syntax highlighting:\n\n```markdown\n​```javascript\nconst config = {\n  apiKey: process.env.API_KEY,\n  timeout: 5000\n};\n​`...",
+          "tokens": 72,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#code-blocks-1"
+        }
+      }
+    },
+    "Advanced Formatting Features": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#advanced-formatting-features",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Tables": {
+          "content_preview": "Use proper alignment for different data types:\n\n```markdown\n| Feature | Description | Priority | Cost |\n|:--------|:------------|:--------:|-----:|\n| ...",
+          "tokens": 106,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#tables-1"
+        },
+        "Collapsible Sections": {
+          "content_preview": "Use for detailed information that doesn't need immediate visibility:\n\n```markdown\n<details>\n<summary>Technical Implementation Details</summary>\n\nThis ...",
+          "tokens": 104,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#collapsible-sections-1"
+        },
+        "Mathematical Expressions": {
+          "content_preview": "For financial calculations, algorithms, and formulas:\n\n**Inline math:**\n```markdown\nThe ROI calculation is $ROI = \\frac{Revenue - Cost}{Cost} \\times 1...",
+          "tokens": 62,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#mathematical-expressions-1"
+        },
+        "Diagrams": {
+          "content_preview": "Use Mermaid for system architecture, workflows, and process flows:\n\n```markdown\n​```mermaid\ngraph TD\n    A[User Request] --> B{Auth Check}\n    B -->|V...",
+          "tokens": 57,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#diagrams-1"
+        },
+        "Blockquotes": {
+          "content_preview": "For important insights, quotes, or highlighted information:\n\n```markdown\n> **Key Insight**: Performance improvements of 80-90% achieved through JSON o...",
+          "tokens": 63,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#blockquotes-1"
+        }
+      }
+    },
+    "Agent-Specific Guidelines": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#agent-specific-guidelines",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Development Agents (Coder, Testing, DevOps, Security, DBA, UI/UX)": {
+          "content_preview": "**Required Elements:**\n* Code blocks with specific language identifiers\n* Technical tables for configurations and parameters\n* Collapsible sections fo...",
+          "tokens": 59,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#development-agents-coder-testing-devops-security-dba-uiux-1"
+        }
+      }
+    },
+    "Implementation Guide": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#implementation-guide",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Quick Start": {
+          "content_preview": "​```bash\nnpm install package-name\n​```",
+          "tokens": 8,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#quick-start-1"
+        },
+        "Configuration": {
+          "content_preview": "| Parameter | Type | Default | Description |\n|:----------|:-----|:--------|:------------|\n| timeout   | number | 5000  | Request timeout in ms |\n| ret...",
+          "tokens": 91,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#configuration-1"
+        },
+        "Implementation Steps": {
+          "content_preview": "* [ ] Install dependencies\n* [ ] Configure environment\n* [ ] Run tests\n* [x] Deploy to staging\n```",
+          "tokens": 21,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#implementation-steps-1"
+        },
+        "Business & Strategy Agents (Research, Finance, Marketing, Analysis, Business Documents)": {
+          "content_preview": "**Required Elements:**\n* Tables with right-aligned numeric data\n* Mathematical expressions for calculations\n* Blockquotes for key insights\n* Collapsib...",
+          "tokens": 51,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#business-strategy-agents-research-finance-marketing-analysis-business-documents-1"
+        }
+      }
+    },
+    "Market Analysis Report": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#market-analysis-report",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Executive Summary": {
+          "content_preview": "> **Key Finding**: Market opportunity of $2.3B with 15% annual growth rate.",
+          "tokens": 18,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#executive-summary-1"
+        },
+        "Financial Projections": {
+          "content_preview": "| Year | Revenue (M) | Growth | Market Share |\n|:-----|------------:|:------:|:------------:|\n| 2024 | $1.2        | 25%    | 3.5%         |\n| 2025 | ...",
+          "tokens": 58,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#financial-projections-1"
+        },
+        "Market Size Calculation": {
+          "content_preview": "The Total Addressable Market (TAM) is calculated as:\n\n$$TAM = \\sum_{i=1}^{n} Segment_i \\times PenetrationRate_i$$\n\n<details>\n<summary>Detailed Market ...",
+          "tokens": 68,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#market-size-calculation-1"
+        },
+        "Growth & Revenue Agents (SEO, PPC, Social Media, Email Marketing, Revenue Optimization, Analytics, Customer Lifecycle)": {
+          "content_preview": "**Required Elements:**\n* Metrics tables with right-aligned numbers\n* Code blocks for tracking implementations\n* Mathematical expressions for conversio...",
+          "tokens": 57,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#growth-revenue-agents-seo-ppc-social-media-email-marketing-revenue-optimization-analytics-customer-lifecycle-1"
+        }
+      }
+    },
+    "Campaign Performance Report": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#campaign-performance-report",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Key Metrics": {
+          "content_preview": "| Channel | Impressions | Clicks | CTR  | Conversions | CPA   |\n|:--------|------------:|-------:|:----:|------------:|------:|\n| Google  | 125,000   ...",
+          "tokens": 64,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#key-metrics-1"
+        },
+        "Conversion Funnel": {
+          "content_preview": "​```mermaid\ngraph TD\n    A[100,000 Impressions] --> B[2,500 Clicks]\n    B --> C[750 Landing Page Views]\n    C --> D[127 Conversions]\n    D --> E[Reven...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#conversion-funnel-1"
+        },
+        "ROI Calculation": {
+          "content_preview": "$$ROI = \\frac{Revenue - Cost}{Cost} \\times 100 = \\frac{15240 - 5890}{5890} \\times 100 = 158.8\\%$$\n```",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#roi-calculation-1"
+        },
+        "Technical Integration Agents (API, LLM, MCP, ML, Data Engineer)": {
+          "content_preview": "**Required Elements:**\n* Multi-language code blocks\n* Technical parameter tables\n* Architecture diagrams\n* API endpoint documentation\n\n**Example Patte...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#technical-integration-agents-api-llm-mcp-ml-data-engineer-1"
+        }
+      }
+    },
+    "API Integration Guide": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#api-integration-guide",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Authentication": {
+          "content_preview": "​```bash\ncurl -H \"Authorization: Bearer $TOKEN\" \\\n     https://api.example.com/v1/users\n​```",
+          "tokens": 22,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#authentication-1"
+        },
+        "Endpoints": {
+          "content_preview": "| Method | Endpoint | Parameters | Response |\n|:-------|:---------|:-----------|:---------|\n| GET    | /users   | limit, offset | User array |\n| POST ...",
+          "tokens": 49,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#endpoints-1"
+        },
+        "Response Format": {
+          "content_preview": "​```json\n{\n  \"users\": [\n    {\n      \"id\": 123,\n      \"name\": \"John Doe\",\n      \"email\": \"john@example.com\"\n    }\n  ],\n  \"pagination\": {\n    \"total\": 1...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#response-format-1"
+        },
+        "System Architecture": {
+          "content_preview": "​```mermaid\ngraph LR\n    A[Client] --> B[API Gateway]\n    B --> C[Auth Service]\n    B --> D[User Service]\n    D --> E[Database]\n​```\n```",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#system-architecture-1"
+        },
+        "Support Agents (Documentation, Logger, Optimization, Dashboard, Project Analyzer, Document Manager, Project State Manager, Project Structure, Learning Analysis, VC Report)": {
+          "content_preview": "**Required Elements:**\n* Clear documentation structure\n* All formatting types as needed for context\n* Cross-references to other documents\n* Accessibil...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#support-agents-documentation-logger-optimization-dashboard-project-analyzer-document-manager-project-state-manager-project-structure-learning-analysis-vc-report-1"
+        }
+      }
+    },
+    "System Documentation": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#system-documentation",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Overview": {
+          "content_preview": "This document provides comprehensive guidance for [specific function].",
+          "tokens": 17,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#overview-2"
+        },
+        "Quick Reference": {
+          "content_preview": "* [Related Guide 1](link-to-guide-1.md)\n* [Related Guide 2](link-to-guide-2.md)\n* [Troubleshooting](troubleshooting.md)",
+          "tokens": 26,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#quick-reference-1"
+        },
+        "Configuration Options": {
+          "content_preview": "| Option | Default | Description |\n|:-------|:--------|:------------|\n| enabled | true   | Enable feature |\n| timeout | 30s    | Operation timeout |\n\n...",
+          "tokens": 66,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#configuration-options-1"
+        },
+        "Common Patterns": {
+          "content_preview": "​```javascript\n// Standard implementation pattern\nconst service = new DocumentService({\n  format: 'markdown',\n  validation: true\n});\n​```\n```",
+          "tokens": 33,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#common-patterns-1"
+        }
+      }
+    },
+    "Quality Standards": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#quality-standards",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Document Structure": {
+          "content_preview": "Every document should include:\n\n```markdown",
+          "tokens": 10,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#document-structure-1"
+        }
+      }
+    },
+    "Main Content Sections": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#main-content-sections",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Consistent Structure": {
+          "content_preview": "* Clear headings\n* Logical flow\n* Scannable format",
+          "tokens": 12,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#consistent-structure-1"
+        }
+      }
+    },
+    "Summary or Conclusion": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#summary-or-conclusion",
+      "tokens": 8,
+      "content_preview": "Key takeaways and next steps.\n```",
+      "subsections": {
+        "Accessibility Requirements": {
+          "content_preview": "* **Alt text for images**: `![Description of image](image.png)`\n* **Descriptive link text**: Never use \"click here\" or \"read more\"\n* **Logical heading...",
+          "tokens": 56,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#accessibility-requirements-1"
+        },
+        "Content Guidelines": {
+          "content_preview": "* **Scannable**: Use lists, headers, and white space effectively\n* **Concise**: Remove unnecessary words and phrases\n* **Accurate**: Verify all techni...",
+          "tokens": 55,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#content-guidelines-1"
+        }
+      }
+    },
+    "Common Patterns": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#common-patterns-2",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Error Documentation": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#error-documentation-1"
+        },
+        "Error: Connection Timeout": {
+          "content_preview": "**Symptoms:**\n* API requests fail after 30 seconds\n* Browser shows \"Request timeout\" message\n\n**Causes:**\n* Network connectivity issues\n* Server overl...",
+          "tokens": 68,
+          "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#error-connection-timeout-1"
+        }
+      }
+    },
+    "Validation Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/github-markdown-style-guide.md#validation-checklist",
+      "tokens": 244,
+      "content_preview": "Before publishing any document, verify:\n\n**Basic Format:**\n* [ ] Headers start with `##` (not `#`)\n* [ ] Lists use `*` (not `-`)\n* [ ] Code blocks spe..."
+    }
+  }
+}

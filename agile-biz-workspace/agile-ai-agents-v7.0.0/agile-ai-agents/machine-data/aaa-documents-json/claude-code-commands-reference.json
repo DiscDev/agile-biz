@@ -1,0 +1,343 @@
+{
+  "meta": {
+    "document": "claude-code-commands-reference",
+    "title": "Claude Code Commands Reference Card",
+    "timestamp": "2025-08-11T22:02:16.864Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md",
+    "document_type": "general_documentation",
+    "file_hash": "f71cc1be13f370a38479392727bfbfad",
+    "estimated_tokens": 704,
+    "full_md_tokens": 1741
+  },
+  "summary": "## Quick Reference",
+  "sections": [
+    {
+      "title": "Quick Reference",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#quick-reference",
+      "content_preview": "This reference card provides a complete list of Claude Code commands and keyboard shortcuts that work alongside AgileAiAgents commands."
+    },
+    {
+      "title": "Command Line Interface (CLI)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#command-line-interface-cli",
+      "content_preview": ""
+    },
+    {
+      "title": "Interactive Mode Commands (REPL)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#interactive-mode-commands-repl",
+      "content_preview": ""
+    },
+    {
+      "title": "Keyboard Shortcuts",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#keyboard-shortcuts",
+      "content_preview": ""
+    },
+    {
+      "title": "Special Input Prefixes",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#special-input-prefixes",
+      "content_preview": ""
+    },
+    {
+      "title": "Vim Mode",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#vim-mode",
+      "content_preview": "Enable with `/vim` command."
+    },
+    {
+      "title": "MCP (Model Context Protocol) Commands",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#mcp-model-context-protocol-commands",
+      "content_preview": ""
+    },
+    {
+      "title": "Custom Slash Commands",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#custom-slash-commands",
+      "content_preview": ""
+    },
+    {
+      "title": "Environment Variables",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#environment-variables",
+      "content_preview": ""
+    },
+    {
+      "title": "Cost Management Commands",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#cost-management-commands",
+      "content_preview": ""
+    },
+    {
+      "title": "Common Command Combinations",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#common-command-combinations",
+      "content_preview": ""
+    },
+    {
+      "title": "Integration with AgileAiAgents",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#integration-with-agileaiagents",
+      "content_preview": ""
+    },
+    {
+      "title": "Quick Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#quick-troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "Related Documentation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#related-documentation",
+      "content_preview": "- AgileAiAgents Commands: `/aaa-help`\n- Integration Guide: `claude-code-integration-guide.md`\n- Memory Optimization: `claude-code-memory-optimization...."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Quick Reference": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#quick-reference",
+      "tokens": 34,
+      "content_preview": "This reference card provides a complete list of Claude Code commands and keyboard shortcuts that work alongside AgileAiAgents commands."
+    },
+    "Command Line Interface (CLI)": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#command-line-interface-cli",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Starting Claude Code": {
+          "content_preview": "```bash\nclaude                          # Start interactive REPL\nclaude \"question\"               # Start with initial prompt\nclaude -p \"question\"     ...",
+          "tokens": 102,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#starting-claude-code-1"
+        },
+        "CLI Flags": {
+          "content_preview": "```bash\n--add-dir <path>               # Add working directories\n--continue/-c                  # Load most recent conversation\n--resume/-r <id>      ...",
+          "tokens": 125,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#cli-flags-1"
+        },
+        "Utility Commands": {
+          "content_preview": "```bash\nclaude update                  # Update to latest version\nclaude mcp                     # Configure MCP servers\nclaude config list           ...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#utility-commands-1"
+        }
+      }
+    },
+    "Interactive Mode Commands (REPL)": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#interactive-mode-commands-repl",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Core Commands": {
+          "content_preview": "| Command | Description |\n|---------|-------------|\n| `/help` | Show Claude Code built-in commands |\n| `/clear` | Clear conversation history and free ...",
+          "tokens": 82,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#core-commands-1"
+        },
+        "File and Directory Commands": {
+          "content_preview": "| Command | Description |\n|---------|-------------|\n| `/add-dir <path>` | Add additional working directory |\n| `/export` | Export conversation to file...",
+          "tokens": 50,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#file-and-directory-commands-1"
+        },
+        "Configuration Commands": {
+          "content_preview": "| Command | Description |\n|---------|-------------|\n| `/config` | Open configuration panel |\n| `/terminal-setup` | Configure terminal for multiline in...",
+          "tokens": 57,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#configuration-commands-1"
+        },
+        "Development Commands": {
+          "content_preview": "| Command | Description |\n|---------|-------------|\n| `/review` | Request code review of changes |\n| `/bug` | Submit feedback to Anthropic |\n| `/docto...",
+          "tokens": 46,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#development-commands-1"
+        }
+      }
+    },
+    "Keyboard Shortcuts": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#keyboard-shortcuts",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Essential Shortcuts": {
+          "content_preview": "| Shortcut | Action |\n|----------|--------|\n| `Ctrl+C` | Cancel current input/generation |\n| `Ctrl+D` | Exit Claude Code session |\n| `Ctrl+L` | Clear ...",
+          "tokens": 69,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#essential-shortcuts-1"
+        },
+        "Editing Shortcuts": {
+          "content_preview": "| Shortcut | Action |\n|----------|--------|\n| `Esc+Esc` | Edit previous message |\n| `Ctrl+A` | Go to beginning of line |\n| `Ctrl+E` | Go to end of lin...",
+          "tokens": 60,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#editing-shortcuts-1"
+        },
+        "Multiline Input": {
+          "content_preview": "| Method | Description |\n|--------|-------------|\n| `\\` + `Enter` | Quick escape (all terminals) |\n| `Option+Enter` | macOS default |\n| `Shift+Enter` ...",
+          "tokens": 42,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#multiline-input-1"
+        }
+      }
+    },
+    "Special Input Prefixes": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#special-input-prefixes",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Memory Shortcut": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#memory-shortcut-1"
+        }
+      }
+    },
+    "Vim Mode": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#vim-mode",
+      "tokens": 7,
+      "content_preview": "Enable with `/vim` command.",
+      "subsections": {
+        "Normal Mode Commands": {
+          "content_preview": "| Command | Action |\n|---------|--------|\n| `h/j/k/l` | Move left/down/up/right |\n| `w` | Next word |\n| `b` | Previous word |\n| `0` | Beginning of lin...",
+          "tokens": 82,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#normal-mode-commands-1"
+        },
+        "Mode Switching": {
+          "content_preview": "| Command | Action |\n|---------|--------|\n| `Esc` | Return to NORMAL mode |\n| `i/a/o/O` | Enter INSERT mode |",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#mode-switching-1"
+        }
+      }
+    },
+    "MCP (Model Context Protocol) Commands": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#mcp-model-context-protocol-commands",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "MCP Management": {
+          "content_preview": "```bash\nclaude mcp add <name>          # Add MCP server\nclaude mcp list                # List configured servers\nclaude mcp remove <name>       # Remo...",
+          "tokens": 51,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#mcp-management-1"
+        },
+        "Using MCP in Chat": {
+          "content_preview": "```bash\n@server:resource               # Reference MCP resource\n/mcp__server__command          # Execute server command\n```",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#using-mcp-in-chat-1"
+        }
+      }
+    },
+    "Custom Slash Commands": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#custom-slash-commands",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Creating Custom Commands": {
+          "content_preview": "1. Project commands: `.claude/commands/mycommand.md`\n2. Personal commands: `~/.claude/commands/mycommand.md`",
+          "tokens": 26,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#creating-custom-commands-1"
+        },
+        "Command Syntax": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#command-syntax-1"
+        }
+      }
+    },
+    "Environment Variables": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#environment-variables",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Authentication": {
+          "content_preview": "```bash\nANTHROPIC_API_KEY              # API authentication\nANTHROPIC_BASE_URL             # Custom API endpoint\n```",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#authentication-1"
+        },
+        "Model Selection": {
+          "content_preview": "```bash\nANTHROPIC_MODEL                # Default model\nCLAUDE_CODE_MODEL              # Override for Claude Code\n```",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#model-selection-1"
+        },
+        "Configuration": {
+          "content_preview": "```bash\nCLAUDE_CODE_CONFIG_DIR         # Config directory\nDISABLE_TELEMETRY              # Disable usage analytics\nCLAUDE_CODE_VERBOSE            # En...",
+          "tokens": 42,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#configuration-1"
+        }
+      }
+    },
+    "Cost Management Commands": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#cost-management-commands",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Monitoring Usage": {
+          "content_preview": "```bash\n/cost                          # Current session cost\n/cost --detailed               # Breakdown by operation\n```",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#monitoring-usage-1"
+        },
+        "Context Management": {
+          "content_preview": "```bash\n/clear                         # Full context reset (saves most tokens)\n/compact                       # Smart compression (keeps key info)\n``...",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#context-management-1"
+        }
+      }
+    },
+    "Common Command Combinations": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#common-command-combinations",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Start New Project": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#start-new-project-1"
+        }
+      }
+    },
+    "Integration with AgileAiAgents": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#integration-with-agileaiagents",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Command Precedence": {
+          "content_preview": "1. Claude Code processes `/` commands first\n2. Unknown commands passed to AgileAiAgents\n3. Use `/help` for Claude Code commands\n4. Use `/aaa-help` for...",
+          "tokens": 42,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#command-precedence-1"
+        },
+        "Shared Features": {
+          "content_preview": "- Both use CLAUDE.md for memory\n- Both respect MCP configurations\n- Both work with same file system\n- Commands can be combined in workflows",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#shared-features-1"
+        }
+      }
+    },
+    "Quick Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#quick-troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Command Not Found": {
+          "content_preview": "- Is it a Claude Code command? Check `/help`\n- Is it an AgileAiAgents command? Check `/aaa-help`\n- Check spelling and syntax",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#command-not-found-1"
+        },
+        "High Token Usage": {
+          "content_preview": "- Run `/cost` to check usage\n- Use `/compact` to reduce context\n- Consider `/clear` for fresh start",
+          "tokens": 24,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#high-token-usage-1"
+        },
+        "Session Issues": {
+          "content_preview": "- List sessions: `ls ~/.claude/sessions/`\n- Resume specific: `claude -r <session-id>`\n- Start fresh: `claude` (without -c flag)",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#session-issues-1"
+        }
+      }
+    },
+    "Related Documentation": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-commands-reference.md#related-documentation",
+      "tokens": 37,
+      "content_preview": "- AgileAiAgents Commands: `/aaa-help`\n- Integration Guide: `claude-code-integration-guide.md`\n- Memory Optimization: `claude-code-memory-optimization...."
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "document": "test-plan",
+    "title": "Sprint Test Plan",
+    "timestamp": "2025-07-22T01:41:03.750Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md",
+    "document_type": "general_documentation",
+    "file_hash": "679a6513ab64f4bf4af8fd27dc1d5f98",
+    "estimated_tokens": 412,
+    "full_md_tokens": 797
+  },
+  "summary": "## Sprint: 2025-01-09 - Authentication Foundation",
+  "sections": [
+    {
+      "title": "Sprint: 2025-01-09 - Authentication Foundation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#sprint-2025-01-09-authentication-foundation",
+      "content_preview": ""
+    },
+    {
+      "title": "Test Scope",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#test-scope",
+      "content_preview": ""
+    },
+    {
+      "title": "Test Scenarios",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#test-scenarios",
+      "content_preview": ""
+    },
+    {
+      "title": "Test Execution Schedule",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#test-execution-schedule",
+      "content_preview": "| Test Phase | Start Date | End Date | Owner |\n|:-----------|:-----------|:---------|:------|\n| Unit Testing | Day 1 | Day 5 | Coder Agent |\n| Integra..."
+    },
+    {
+      "title": "Test Environment",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#test-environment",
+      "content_preview": ""
+    },
+    {
+      "title": "Success Criteria",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#success-criteria",
+      "content_preview": "- All test cases executed\n- 0 critical bugs\n- < 3 minor bugs\n- 80% code coverage\n- All security tests pass\n- Performance < 200ms"
+    },
+    {
+      "title": "Risk Mitigation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#risk-mitigation",
+      "content_preview": "- Early security testing\n- Continuous integration runs\n- Daily test status updates\n- Immediate blocker escalation"
+    },
+    {
+      "title": "Test Deliverables",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#test-deliverables",
+      "content_preview": "1. Test execution report\n2. Code coverage report\n3. Security scan results\n4. Performance metrics\n5. Bug reports\n6. Test case documentation\n\n---\n\n**Cre..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Sprint: 2025-01-09 - Authentication Foundation": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#sprint-2025-01-09-authentication-foundation",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Test Strategy Overview": {
+          "content_preview": "**Approach**: Risk-based testing with focus on security and user experience  \n**Test Levels**: Unit → Integration → System → Acceptance  \n**Automation...",
+          "tokens": 49,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#test-strategy-overview-1"
+        }
+      }
+    },
+    "Test Scope": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#test-scope",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "In Scope": {
+          "content_preview": "- User registration functionality\n- Login/logout processes\n- Session management\n- API endpoint validation\n- Security vulnerability testing\n- Performan...",
+          "tokens": 48,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#in-scope-1"
+        },
+        "Out of Scope": {
+          "content_preview": "- OAuth integration (future sprint)\n- Password reset flow (future sprint)\n- Load testing (separate effort)\n- Cross-browser compatibility (basic only)",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#out-of-scope-1"
+        }
+      }
+    },
+    "Test Scenarios": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#test-scenarios",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "USER REGISTRATION (AUTH-001)": {
+          "content_preview": "1. **Invalid Inputs**\n   - Missing required fields\n   - Invalid email format\n   - Weak password\n   - Duplicate email\n   - SQL injection attempts\n   - ...",
+          "tokens": 80,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#user-registration-auth-001-3"
+        },
+        "LOGIN FLOW (AUTH-002)": {
+          "content_preview": "1. **Failed Login Attempts**\n   - Invalid email\n   - Wrong password\n   - Non-existent user\n   - Locked account\n   - Expected: Generic error message",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#login-flow-auth-002-3"
+        },
+        "SESSION MANAGEMENT (AUTH-003)": {
+          "content_preview": "1. **Session Persistence**\n   - Page refresh maintains session\n   - Valid token accepted\n   - Multiple tab support\n\n2. **Session Security**\n   - Inval...",
+          "tokens": 55,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#session-management-auth-003-2"
+        }
+      }
+    },
+    "Test Execution Schedule": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#test-execution-schedule",
+      "tokens": 86,
+      "content_preview": "| Test Phase | Start Date | End Date | Owner |\n|:-----------|:-----------|:---------|:------|\n| Unit Testing | Day 1 | Day 5 | Coder Agent |\n| Integra..."
+    },
+    "Test Environment": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#test-environment",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Requirements": {
+          "content_preview": "- Node.js test environment\n- Test database (isolated)\n- Mock email service\n- API testing tools\n- Security scanning tools",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#requirements-1"
+        },
+        "Test Data": {
+          "content_preview": "- Valid user accounts (5)\n- Invalid test cases (20)\n- Edge case scenarios (10)\n- Security payloads (15)",
+          "tokens": 24,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#test-data-1"
+        }
+      }
+    },
+    "Success Criteria": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#success-criteria",
+      "tokens": 32,
+      "content_preview": "- All test cases executed\n- 0 critical bugs\n- < 3 minor bugs\n- 80% code coverage\n- All security tests pass\n- Performance < 200ms"
+    },
+    "Risk Mitigation": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#risk-mitigation",
+      "tokens": 29,
+      "content_preview": "- Early security testing\n- Continuous integration runs\n- Daily test status updates\n- Immediate blocker escalation"
+    },
+    "Test Deliverables": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-plan.md#test-deliverables",
+      "tokens": 58,
+      "content_preview": "1. Test execution report\n2. Code coverage report\n3. Security scan results\n4. Performance metrics\n5. Bug reports\n6. Test case documentation\n\n---\n\n**Cre..."
+    }
+  }
+}

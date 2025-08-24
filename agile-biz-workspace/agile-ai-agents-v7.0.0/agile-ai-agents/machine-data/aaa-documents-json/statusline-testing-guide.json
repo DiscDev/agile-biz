@@ -1,0 +1,229 @@
+{
+  "meta": {
+    "document": "statusline-testing-guide",
+    "title": "AgileAiAgents Statusline Testing Guide",
+    "timestamp": "2025-08-11T22:02:16.927Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/statusline-testing-guide.md",
+    "document_type": "guide",
+    "file_hash": "d26e8d164857c1fc0f99121c5cbeb6b9",
+    "estimated_tokens": 487,
+    "full_md_tokens": 1817
+  },
+  "summary": "This guide provides comprehensive testing procedures for the AgileAiAgents statusline system to ensure proper functionality across all scenarios.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#overview",
+      "content_preview": "This guide provides comprehensive testing procedures for the AgileAiAgents statusline system to ensure proper functionality across all scenarios."
+    },
+    {
+      "title": "Test Setup",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#test-setup",
+      "content_preview": ""
+    },
+    {
+      "title": "Core Functionality Tests",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#core-functionality-tests",
+      "content_preview": ""
+    },
+    {
+      "title": "Edge Cases",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#edge-cases",
+      "content_preview": ""
+    },
+    {
+      "title": "Automated Test Suite",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#automated-test-suite",
+      "content_preview": ""
+    },
+    {
+      "title": "Performance Benchmarks",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#performance-benchmarks",
+      "content_preview": ""
+    },
+    {
+      "title": "Troubleshooting Common Issues",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#troubleshooting-common-issues",
+      "content_preview": ""
+    },
+    {
+      "title": "Validation Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#validation-checklist",
+      "content_preview": "Before considering the statusline ready for production:\n\n- [ ] All priority levels display correctly\n- [ ] Verbosity modes work as expected\n- [ ] Cach..."
+    },
+    {
+      "title": "Continuous Testing",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#continuous-testing",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#overview",
+      "tokens": 37,
+      "content_preview": "This guide provides comprehensive testing procedures for the AgileAiAgents statusline system to ensure proper functionality across all scenarios."
+    },
+    "Test Setup": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#test-setup",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Prerequisites": {
+          "content_preview": "- AgileAiAgents v4.8.0+ installed\n- Claude Code with statusline configured\n- Bash, jq, and curl available\n- Write access to project directories",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#prerequisites-1"
+        },
+        "Test Environment Setup": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#test-environment-setup-1"
+        }
+      }
+    },
+    "Core Functionality Tests": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#core-functionality-tests",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Basic Display Test": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#1-basic-display-test-1"
+        }
+      }
+    },
+    "Edge Cases": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#edge-cases",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Extremely Long Phases": {
+          "content_preview": "Test with phase names >50 characters\nExpected: Truncated with \"...\"",
+          "tokens": 17,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#1-extremely-long-phases-1"
+        },
+        "2. Negative Values": {
+          "content_preview": "Test with negative costs, tokens, progress\nExpected: Treated as 0 or ignored",
+          "tokens": 19,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#2-negative-values-1"
+        },
+        "3. Future Timestamps": {
+          "content_preview": "Test with future `last_update` times\nExpected: No stall detection triggered",
+          "tokens": 19,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#3-future-timestamps-1"
+        },
+        "4. Concurrent Modifications": {
+          "content_preview": "Modify state file while statusline is reading\nExpected: No corruption, uses last valid state",
+          "tokens": 23,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#4-concurrent-modifications-1"
+        },
+        "5. Unicode and Special Characters": {
+          "content_preview": "Test with emoji and special chars in state\nExpected: Proper display without breaking",
+          "tokens": 21,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#5-unicode-and-special-characters-1"
+        }
+      }
+    },
+    "Automated Test Suite": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#automated-test-suite",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Running the Full Test Suite": {
+          "content_preview": "```bash\n./test-statusline.sh\n```",
+          "tokens": 7,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#running-the-full-test-suite-1"
+        },
+        "Test Coverage Areas": {
+          "content_preview": "- [x] Priority system (P1-P5)\n- [x] All verbosity modes\n- [x] Workflow-specific displays\n- [x] Alert conditions\n- [x] Recovery status\n- [x] Learning o...",
+          "tokens": 73,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#test-coverage-areas-1"
+        }
+      }
+    },
+    "Performance Benchmarks": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#performance-benchmarks",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Expected Response Times": {
+          "content_preview": "- Cold start: <500ms\n- Cached: <50ms\n- Large state: <300ms\n- Error recovery: <200ms",
+          "tokens": 21,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#expected-response-times-1"
+        },
+        "Resource Usage": {
+          "content_preview": "- Memory: <10MB\n- CPU: <5% average\n- Disk I/O: Minimal (cached)",
+          "tokens": 16,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#resource-usage-1"
+        }
+      }
+    },
+    "Troubleshooting Common Issues": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#troubleshooting-common-issues",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Issue: Statusline Shows Old Information": {
+          "content_preview": "**Solution**: Clear cache\n```bash\nrm .claude/hooks/.statusline-cache\n```",
+          "tokens": 16,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#issue-statusline-shows-old-information-1"
+        },
+        "Issue: Colors Not Displaying": {
+          "content_preview": "**Solution**: Check terminal ANSI support\n```bash\necho -e \"\\033[32mGreen\\033[0m \\033[33mYellow\\033[0m \\033[31mRed\\033[0m\"\n```",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#issue-colors-not-displaying-1"
+        },
+        "Issue: Statusline Too Wide/Narrow": {
+          "content_preview": "**Solution**: Adjust max_width in CLAUDE-config.md\n```yaml\nstatusline:\n  display:\n    max_width: 100  # Adjust as needed\n```",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#issue-statusline-too-widenarrow-1"
+        },
+        "Issue: Dashboard Link Not Showing": {
+          "content_preview": "**Solution**: Check dashboard status file\n```bash\ncat agile-ai-agents/project-state/dashboard-status.json\ncurl -s http://localhost:3001/health\n```",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#issue-dashboard-link-not-showing-1"
+        },
+        "Issue: Performance Degradation": {
+          "content_preview": "**Solution**: Check for large files\n```bash\ndu -h agile-ai-agents/project-state/*.json\nfind .claude/hooks/status -type f | wc -l\n```",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#issue-performance-degradation-1"
+        }
+      }
+    },
+    "Validation Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#validation-checklist",
+      "tokens": 95,
+      "content_preview": "Before considering the statusline ready for production:\n\n- [ ] All priority levels display correctly\n- [ ] Verbosity modes work as expected\n- [ ] Cach..."
+    },
+    "Continuous Testing": {
+      "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#continuous-testing",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Monitor in Development": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/statusline-testing-guide.md#monitor-in-development-1"
+        }
+      }
+    }
+  }
+}

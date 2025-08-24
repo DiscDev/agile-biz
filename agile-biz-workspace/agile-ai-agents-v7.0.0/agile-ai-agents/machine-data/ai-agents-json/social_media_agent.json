@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "agent": "social_media_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 204,
+    "full_md_tokens": 8385,
+    "md_file": "agile-ai-agents/ai-agents/social_media_agent.md",
+    "file_hash": "c15b8d635c355f5c916ef062bd69e661"
+  },
+  "summary": "## Overview\nThe Social Media Agent specializes in social media strategy development, content creation, community management, and cross-platform social presence optimization. This agent focuses on building brand awareness, driving engagement, fostering community growth, and generating leads through strategic social media marketing across all major platforms.",
+  "core_responsibilities": {
+    "summary": [
+      "Comprehensive Social Media Strategy & Campaign Reports",
+      "Content Creation & Production",
+      "Community Engagement & Management",
+      "Social Media Advertising & Growth"
+    ],
+    "details_tokens": 2074,
+    "md_reference": "agile-ai-agents/ai-agents/social_media_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "Brand Launch Social Media Campaign Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/social_media_agent.md#brand-launch-social-media-campaign-workflow"
+      },
+      {
+        "name": "Social Media Lead Generation Campaign Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/social_media_agent.md#social-media-lead-generation-campaign-workflow"
+      },
+      {
+        "name": "Community Building & Engagement Optimization Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/social_media_agent.md#community-building-engagement-optimization-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/social_media_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/social_media_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

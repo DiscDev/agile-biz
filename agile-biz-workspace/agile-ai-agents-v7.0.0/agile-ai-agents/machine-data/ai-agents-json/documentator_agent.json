@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "agent": "documentator_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 169,
+    "full_md_tokens": 4714,
+    "md_file": "agile-ai-agents/ai-agents/documentator_agent.md",
+    "file_hash": "e910bda44da5fbde700f512d9411a113"
+  },
+  "summary": "## Overview\nThe Documentation Agent specializes in creating, maintaining, and organizing comprehensive documentation across all project aspects. This agent ensures knowledge preservation, stakeholder communication, and onboarding efficiency through clear, accurate, and accessible documentation.",
+  "core_responsibilities": {
+    "summary": [
+      "Technical Documentation Creation",
+      "User-Facing Documentation",
+      "Process & Workflow Documentation",
+      "Content Organization & Management"
+    ],
+    "details_tokens": 444,
+    "md_reference": "agile-ai-agents/ai-agents/documentator_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "Feature Documentation Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/documentator_agent.md#feature-documentation-workflow"
+      },
+      {
+        "name": "API Documentation Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/documentator_agent.md#api-documentation-workflow"
+      },
+      {
+        "name": "Knowledge Base Maintenance Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/documentator_agent.md#knowledge-base-maintenance-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/documentator_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/documentator_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+version: '3.8'
+
+# Production-specific overrides
+services:
+  dashboard:
+    restart: always
+    environment:
+      - NODE_ENV=production
+      - LOG_LEVEL=warn
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+    # Security options
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /tmp
+    # Production logging
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+        labels: "service=agileai-dashboard"
+
+  # Enable nginx in production
+  nginx:
+    profiles: []  # Remove profile to enable by default
+    restart: always
+    depends_on:
+      dashboard:
+        condition: service_healthy
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 128M
+    # Production logging
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+        labels: "service=agileai-nginx"

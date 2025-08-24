@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "document": "state-commands-template",
+    "title": "State Commands Template",
+    "timestamp": "2025-08-11T22:02:16.944Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md",
+    "document_type": "template",
+    "file_hash": "53ac6d528b91e5ae39faf3090942d176",
+    "estimated_tokens": 271,
+    "full_md_tokens": 1399
+  },
+  "summary": "This template defines the behavior and processing for all state management commands.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#overview",
+      "content_preview": "This template defines the behavior and processing for all state management commands."
+    },
+    {
+      "title": "Command Implementations",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#command-implementations",
+      "content_preview": ""
+    },
+    {
+      "title": "Auto-Save Integration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#auto-save-integration",
+      "content_preview": ""
+    },
+    {
+      "title": "Error Handling",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#error-handling",
+      "content_preview": ""
+    },
+    {
+      "title": "State File Management",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#state-file-management",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#overview",
+      "tokens": 21,
+      "content_preview": "This template defines the behavior and processing for all state management commands."
+    },
+    "Command Implementations": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#command-implementations",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "`/checkpoint [message] [--full]`": {
+          "content_preview": "**Purpose**: Create a manual checkpoint of current project state\n\n**Processing Steps**:\n1. Parse parameters:\n   - Extract optional message\n   - Check ...",
+          "tokens": 263,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#checkpoint-message-full-1"
+        },
+        "`/status`": {
+          "content_preview": "**Purpose**: Display comprehensive project status (replaces \"Where are we?\")\n\n**Display Format**:\n```\n📊 Project Status\n================\nWorkflow: [Ac...",
+          "tokens": 141,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#status-1"
+        },
+        "`/continue [sprint-name]`": {
+          "content_preview": "**Purpose**: Resume previous work session\n\n**Processing Steps**:\n1. If sprint-name provided:\n   - Load specific sprint state\n   - Show sprint context\n...",
+          "tokens": 178,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#continue-sprint-name-1"
+        },
+        "`/update-state [details]`": {
+          "content_preview": "**Purpose**: Manually update project state with specific information\n\n**Processing Steps**:\n1. Parse details string\n2. Update relevant state sections:...",
+          "tokens": 104,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#update-state-details-1"
+        },
+        "`/save-decision [decision] [rationale]`": {
+          "content_preview": "**Purpose**: Save important project decision with optional rationale\n\n**Processing Steps**:\n1. Create decision object:\n   ```json\n   {\n     \"decision\"...",
+          "tokens": 157,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#save-decision-decision-rationale-1"
+        },
+        "`/show-learnings`": {
+          "content_preview": "**Purpose**: Display captured learnings from current project\n\n**Display Format**:\n```\n📚 Project Learnings\n===================\n\n🔍 Technical Learnings...",
+          "tokens": 99,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#show-learnings-1"
+        }
+      }
+    },
+    "Auto-Save Integration": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#auto-save-integration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Trigger Points": {
+          "content_preview": "Commands that should trigger auto-save:\n- `/checkpoint` - Always saves\n- `/update-state` - Always saves\n- `/save-decision` - Saves if threshold reache...",
+          "tokens": 61,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#trigger-points-1"
+        },
+        "Confirmation Messages": {
+          "content_preview": "Based on `confirmation_style` setting:\n\n**Silent** (no output):\n- Commands execute without confirmation\n- State saves happen invisibly\n\n**Minimal** (d...",
+          "tokens": 96,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#confirmation-messages-1"
+        }
+      }
+    },
+    "Error Handling": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#error-handling",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Invalid Parameters": {
+          "content_preview": "```\n❌ Invalid parameter for /checkpoint\nUsage: /checkpoint [message] [--full]\nExample: /checkpoint \"Completed feature\" --full\n```",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#invalid-parameters-1"
+        },
+        "State Not Found": {
+          "content_preview": "```\n⚠️ No previous state found\nWould you like to:\n1. Start a new project (/start-new-project-workflow)\n2. Analyze existing code (/start-existing-proje...",
+          "tokens": 45,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#state-not-found-1"
+        },
+        "Save Failure": {
+          "content_preview": "```\n❌ Failed to save state\nError: [error message]\nTry: /checkpoint --full to force a full save\n```",
+          "tokens": 23,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#save-failure-1"
+        }
+      }
+    },
+    "State File Management": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#state-file-management",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "File Locations": {
+          "content_preview": "- Current state: `project-state/current-state.json`\n- Checkpoints: `project-state/checkpoints/`\n- Decisions: `project-state/decisions/decisions-log.js...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#file-locations-1"
+        },
+        "Cleanup Rules": {
+          "content_preview": "- Keep last 20 checkpoints (configurable)\n- Archive sessions older than 7 days\n- Compress old state files\n- Never delete manual checkpoints",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/state-commands-template.md#cleanup-rules-1"
+        }
+      }
+    }
+  }
+}

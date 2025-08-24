@@ -1,0 +1,47 @@
+# Backend Environment Variables
+NODE_ENV=development
+PORT=3001
+
+# Database
+DATABASE_URL=postgresql://user:password@localhost:5432/myapp
+# For MongoDB: DATABASE_URL=mongodb://localhost:27017/myapp
+
+# Authentication
+JWT_SECRET=your-jwt-secret-key-here
+JWT_EXPIRY=7d
+
+# Session
+SESSION_SECRET=your-session-secret-key-here
+
+# CORS
+ALLOWED_ORIGINS=http://localhost:5173,http://localhost:3000
+
+# Logging
+LOG_LEVEL=debug
+LOG_FORMAT=dev
+
+# External Services (add as needed)
+# SMTP_HOST=smtp.example.com
+# SMTP_PORT=587
+# SMTP_USER=your-email@example.com
+# SMTP_PASS=your-email-password
+
+# Cloud Storage (add as needed)
+# AWS_ACCESS_KEY_ID=your-access-key
+# AWS_SECRET_ACCESS_KEY=your-secret-key
+# AWS_REGION=us-east-1
+# S3_BUCKET=your-bucket-name
+
+# Third Party APIs (add as needed)
+# STRIPE_SECRET_KEY=sk_test_...
+# GOOGLE_CLIENT_ID=your-client-id
+# GOOGLE_CLIENT_SECRET=your-client-secret
+
+# Frontend Environment Variables (Vite requires VITE_ prefix)
+VITE_API_URL=http://localhost:3001
+VITE_APP_NAME=My App
+VITE_APP_VERSION=1.0.0
+
+# Feature Flags (add as needed)
+# VITE_FEATURE_ANALYTICS=true
+# VITE_FEATURE_PAYMENTS=false

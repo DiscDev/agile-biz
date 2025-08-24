@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "document": "stakeholder-ci-cd-setup-guide",
+    "title": "Stakeholder CI/CD Setup Guide",
+    "timestamp": "2025-08-11T22:02:16.921Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md",
+    "document_type": "guide",
+    "file_hash": "6e9b022ceb2e63a66c28b48c48da1ff0",
+    "estimated_tokens": 643,
+    "full_md_tokens": 2125
+  },
+  "summary": "This guide helps stakeholders collaborate with AgileAiAgents during Sprint 1 to set up complete infrastructure including GitHub, databases, CI/CD pipelines, and servers.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#overview",
+      "content_preview": "This guide helps stakeholders collaborate with AgileAiAgents during Sprint 1 to set up complete infrastructure including GitHub, databases, CI/CD pipe..."
+    },
+    {
+      "title": "Prerequisites Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#prerequisites-checklist",
+      "content_preview": "Before Sprint 1 begins, stakeholders should have:\n- [ ] Admin access to company GitHub/GitLab/Bitbucket account\n- [ ] Cloud provider account (AWS/Azur..."
+    },
+    {
+      "title": "Sprint 1 Collaboration Timeline",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#sprint-1-collaboration-timeline",
+      "content_preview": ""
+    },
+    {
+      "title": "Detailed Setup Steps",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#detailed-setup-steps",
+      "content_preview": ""
+    },
+    {
+      "title": "Cost Estimates",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#cost-estimates",
+      "content_preview": ""
+    },
+    {
+      "title": "Security Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#security-best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Troubleshooting Common Issues",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#troubleshooting-common-issues",
+      "content_preview": ""
+    },
+    {
+      "title": "Stakeholder Responsibilities",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#stakeholder-responsibilities",
+      "content_preview": ""
+    },
+    {
+      "title": "Communication During Setup",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#communication-during-setup",
+      "content_preview": ""
+    },
+    {
+      "title": "Success Criteria",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#success-criteria",
+      "content_preview": "Sprint 1 is successful when:\n- [ ] Code automatically builds on commit\n- [ ] Tests run automatically\n- [ ] Staging deployments work\n- [ ] Production d..."
+    },
+    {
+      "title": "Next Steps After Sprint 1",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#next-steps-after-sprint-1",
+      "content_preview": "1. **Sprint 2**: Begin feature development\n2. **Regular deployments**: Using established pipeline\n3. **Continuous improvement**: Optimize based on met..."
+    },
+    {
+      "title": "Quick Reference Card",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#quick-reference-card",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#overview",
+      "tokens": 43,
+      "content_preview": "This guide helps stakeholders collaborate with AgileAiAgents during Sprint 1 to set up complete infrastructure including GitHub, databases, CI/CD pipe..."
+    },
+    "Prerequisites Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#prerequisites-checklist",
+      "tokens": 88,
+      "content_preview": "Before Sprint 1 begins, stakeholders should have:\n- [ ] Admin access to company GitHub/GitLab/Bitbucket account\n- [ ] Cloud provider account (AWS/Azur..."
+    },
+    "Sprint 1 Collaboration Timeline": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#sprint-1-collaboration-timeline",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Day 1 Morning (2-3 hours active participation)": {
+          "content_preview": "- Infrastructure setup with DevOps Agent guidance\n- Account creation and configuration\n- Credentials and secrets management\n- Repository and CI/CD pip...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#day-1-morning-2-3-hours-active-participation-1"
+        },
+        "Day 1 Afternoon (On-call availability)": {
+          "content_preview": "- Answer questions as needed\n- Approve infrastructure decisions\n- Provide additional access as required",
+          "tokens": 26,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#day-1-afternoon-on-call-availability-1"
+        },
+        "Day 2 (1 hour validation)": {
+          "content_preview": "- Test deployment processes\n- Verify everything works\n- Final approval and sign-off",
+          "tokens": 21,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#day-2-1-hour-validation-1"
+        }
+      }
+    },
+    "Detailed Setup Steps": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#detailed-setup-steps",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. GitHub/GitLab Repository Setup": {
+          "content_preview": "**Time Required**: 30 minutes\n\n**What you'll do**:\n1. Create new repository or provide access to existing one\n2. Generate personal access tokens with ...",
+          "tokens": 161,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#1-githubgitlab-repository-setup-1"
+        },
+        "2. Cloud Provider Setup": {
+          "content_preview": "**Time Required**: 45 minutes\n\n**AWS Setup**:\n```\nRequired Services:\n- EC2/ECS for compute\n- RDS for database\n- S3 for storage\n- IAM for access manage...",
+          "tokens": 209,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#2-cloud-provider-setup-1"
+        },
+        "3. Database Configuration": {
+          "content_preview": "**Time Required**: 30 minutes\n\n**Options by Stack**:\n```\nPostgreSQL:\n- AWS RDS PostgreSQL\n- Azure Database for PostgreSQL\n- Google Cloud SQL for Postg...",
+          "tokens": 151,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#3-database-configuration-1"
+        },
+        "4. CI/CD Pipeline Configuration": {
+          "content_preview": "**Time Required**: 30 minutes\n\n**GitHub Actions Setup**:\n```yaml\nWorkflows to be created:\n- ci.yml (runs tests on every push)\n- deploy-staging.yml (de...",
+          "tokens": 117,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#4-cicd-pipeline-configuration-1"
+        },
+        "5. Domain and SSL Setup": {
+          "content_preview": "**Time Required**: 20 minutes\n\n**Domain Configuration**:\n1. Purchase domain (if needed) from registrar\n2. Point to load balancer/server IP\n3. Configur...",
+          "tokens": 97,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#5-domain-and-ssl-setup-1"
+        },
+        "6. Monitoring and Alerts": {
+          "content_preview": "**Time Required**: 15 minutes\n\n**Free Monitoring Options**:\n```\nBasic Setup:\n- GitHub Actions notifications\n- Uptime Robot (free tier)\n- Cloud provide...",
+          "tokens": 94,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#6-monitoring-and-alerts-1"
+        }
+      }
+    },
+    "Cost Estimates": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#cost-estimates",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Minimum Budget (Development/MVP)": {
+          "content_preview": "```\nMonthly Costs:\n- GitHub: Free (public) or $4/user (private)\n- Cloud hosting: $20-50 (small instances)\n- Database: $15-25 (small instance)\n- Domain...",
+          "tokens": 56,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#minimum-budget-developmentmvp-1"
+        },
+        "Production Budget": {
+          "content_preview": "```\nMonthly Costs:\n- GitHub: $4-21/user\n- Cloud hosting: $100-500\n- Database: $50-200\n- CDN: $20-50\n- Monitoring: $50-100\n- Backups: $20-50\n\nTotal: ~$...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#production-budget-1"
+        }
+      }
+    },
+    "Security Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#security-best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Secrets Management": {
+          "content_preview": "1. **Never commit secrets to code**\n2. **Use environment variables**\n3. **Rotate credentials regularly**\n4. **Use least privilege principle**\n5. **Ena...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#secrets-management-1"
+        },
+        "Access Control": {
+          "content_preview": "```\nRepository Access:\n- Admin: Only owners\n- Write: Development team\n- Read: Stakeholders\n\nCloud Access:\n- Separate accounts for dev/prod\n- IAM roles...",
+          "tokens": 49,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#access-control-1"
+        }
+      }
+    },
+    "Troubleshooting Common Issues": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#troubleshooting-common-issues",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "GitHub Actions Issues": {
+          "content_preview": "```\nProblem: \"Workflow not running\"\nSolution: Check Actions are enabled in repository settings\n\nProblem: \"Permission denied\"\nSolution: Verify token ha...",
+          "tokens": 62,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#github-actions-issues-1"
+        },
+        "Database Connection Issues": {
+          "content_preview": "```\nProblem: \"Connection timeout\"\nSolution: Check security group/firewall rules\n\nProblem: \"Authentication failed\"\nSolution: Verify username, password,...",
+          "tokens": 60,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#database-connection-issues-1"
+        },
+        "Deployment Failures": {
+          "content_preview": "```\nProblem: \"Build failed\"\nSolution: Check logs, usually dependency issue\n\nProblem: \"Deploy succeeded but app won't start\"\nSolution: Check environmen...",
+          "tokens": 65,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#deployment-failures-1"
+        }
+      }
+    },
+    "Stakeholder Responsibilities": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#stakeholder-responsibilities",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "During Sprint 1": {
+          "content_preview": "1. **Provide timely responses** to setup questions\n2. **Make infrastructure decisions** when options are presented\n3. **Create accounts and provide ac...",
+          "tokens": 56,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#during-sprint-1-1"
+        },
+        "Post Sprint 1": {
+          "content_preview": "1. **Maintain accounts** and billing\n2. **Monitor costs** and usage\n3. **Approve production deployments**\n4. **Manage team access** as it changes\n5. *...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#post-sprint-1-1"
+        }
+      }
+    },
+    "Communication During Setup": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#communication-during-setup",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "How Agents Will Communicate": {
+          "content_preview": "```\nFormat: Clear, step-by-step instructions\nChannel: Through Claude Code interface\nStyle: \n- Checklists for easy tracking\n- Options presented clearly...",
+          "tokens": 51,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#how-agents-will-communicate-1"
+        },
+        "What Stakeholders Should Communicate": {
+          "content_preview": "```\nImmediately share:\n- Error messages\n- Access issues\n- Budget constraints\n- Time constraints\n- Technical preferences\n- Existing infrastructure to p...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#what-stakeholders-should-communicate-1"
+        }
+      }
+    },
+    "Success Criteria": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#success-criteria",
+      "tokens": 84,
+      "content_preview": "Sprint 1 is successful when:\n- [ ] Code automatically builds on commit\n- [ ] Tests run automatically\n- [ ] Staging deployments work\n- [ ] Production d..."
+    },
+    "Next Steps After Sprint 1": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#next-steps-after-sprint-1",
+      "tokens": 58,
+      "content_preview": "1. **Sprint 2**: Begin feature development\n2. **Regular deployments**: Using established pipeline\n3. **Continuous improvement**: Optimize based on met..."
+    },
+    "Quick Reference Card": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#quick-reference-card",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Essential URLs to Bookmark": {
+          "content_preview": "```\nGitHub Actions: https://github.com/[org]/[repo]/actions\nAWS Console: https://console.aws.amazon.com\nAzure Portal: https://portal.azure.com\nGCP Con...",
+          "tokens": 77,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#essential-urls-to-bookmark-1"
+        },
+        "Emergency Contacts": {
+          "content_preview": "```\nDevOps Issues: [DevOps Agent via Claude Code]\nDatabase Issues: [Cloud provider support]\nDomain/DNS: [Registrar support]\nBilling Issues: [Cloud pro...",
+          "tokens": 71,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-ci-cd-setup-guide.md#emergency-contacts-1"
+        }
+      }
+    }
+  }
+}

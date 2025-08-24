@@ -1,0 +1,137 @@
+{
+  "version": "7.0.0",
+  "releaseDate": "2025-08-16",
+  "releaseName": "State Management Revolution",
+  "changelogUrl": "https://github.com/DiscDev/agile-ai-agents/blob/main/CHANGELOG.md",
+  "breaking": true,
+  "description": "Complete state management overhaul with three-file architecture. Eliminates state file chaos with clean separation of runtime, persistent, and configuration data. Ships with pristine clean-slate template.",
+  "features": [
+    "Three-file state management system (runtime, persistent, configuration)",
+    "Single source of truth for all configuration in configuration.json",
+    "New /aaa-config command for configuration management",
+    "New /reset-project-state command with granular reset options",
+    "Clean slate ships with only configuration.json (no pre-populated states)",
+    "Automatic state file migration with v6 backups",
+    "Configuration auto-correction for invalid values",
+    "State files properly separated by lifecycle",
+    "No more TEMPLATE_TIMESTAMP issues",
+    "Simplified state recovery and debugging",
+    "4-tier Document Router with intelligent routing strategy",
+    "Dynamic folder creation with semantic naming (Tier 4)",
+    "Document lifecycle management with freshness tracking",
+    "Import support for upgrades without duplication",
+    "Folder consolidation suggestions to prevent sprawl",
+    "Learning system for improved routing accuracy",
+    "Sprint-aware document organization",
+    "100% backward compatibility with numbered folders",
+    "Native Claude Code integration via .claude directory",
+    "40 specialized AI agents accessible via Task tool",
+    "94 custom commands for streamlined workflows",
+    "19 automated hooks for task automation",
+    "Real-time statusline showing project health",
+    "Enhanced setup.sh with interactive Claude Code configuration",
+    "Smart detection of Claude Code environment",
+    "Automatic path configuration for hooks",
+    "Improved user experience with opt-in integration",
+    "Rebuild workflow with 22 phases",
+    "Improvement selection system for existing projects",
+    "Document Registry for 80-90% token reduction"
+  ],
+  "agents": {
+    "total": 38,
+    "categories": {
+      "core_development": 11,
+      "business_strategy": 5,
+      "growth_revenue": 7,
+      "technical_integration": 5,
+      "support": 10
+    },
+    "subAgentSupport": {
+      "enabled": true,
+      "maxConcurrent": 5,
+      "supportedPhases": ["research", "sprint_execution", "project_analysis"]
+    }
+  },
+  "compatibility": {
+    "nodeVersion": ">=16.0.0",
+    "claudeCode": "latest",
+    "platforms": ["Windows", "macOS", "Linux"],
+    "subAgentRequirements": "Claude Code with sub-agent support",
+    "migrationRequired": true,
+    "backwardsCompatible": false
+  },
+  "repository": {
+    "url": "https://github.com/DiscDev/agile-ai-agents",
+    "branch": "main",
+    "releaseTag": "v7.0.0"
+  },
+  "updateCheck": {
+    "url": "https://api.github.com/repos/DiscDev/agile-ai-agents/releases/latest",
+    "autoCheck": true,
+    "checkInterval": "daily",
+    "lastChecked": null
+  },
+  "changes": {
+    "breaking": [
+      "Complete state file restructure - not backwards compatible",
+      "20+ state files consolidated into 3 files",
+      "All configuration moved to configuration.json",
+      "State file paths completely changed",
+      "Requires fresh start or manual migration"
+    ],
+    "major": [
+      "Three-file state architecture (runtime, persistent, configuration)",
+      "Single configuration.json as source of truth",
+      "Clean slate template ships empty (configuration only)",
+      "Automatic v6 backup creation during migration"
+    ],
+    "minor": [
+      "New command: /aaa-config for configuration management",
+      "New command: /reset-project-state with granular options",
+      "Configuration auto-correction for invalid values",
+      "State separation by lifecycle (runtime vs persistent)"
+    ],
+    "patch": [
+      "Fixed TEMPLATE_TIMESTAMP in clean slate",
+      "Fixed pre-populated state issues",
+      "Improved state file organization"
+    ]
+  },
+  "stateManagement": {
+    "version": "3.0",
+    "files": {
+      "runtime.json": "Current workflow and session state",
+      "persistent.json": "History, decisions, metrics",
+      "configuration.json": "All user settings and preferences"
+    },
+    "migration": {
+      "automatic": false,
+      "backupCreated": true,
+      "backupExtension": ".v6.backup"
+    }
+  },
+  "architecture": {
+    "folderStructure": "category-based",
+    "categories": ["orchestration", "business-strategy", "implementation", "operations"],
+    "documentWorkflow": "16-phase-parallel",
+    "tokenOptimization": "enhanced-json-structure",
+    "performanceImprovement": "95%",
+    "contextLoading": "progressive-minimal-standard-detailed",
+    "subAgentArchitecture": {
+      "pattern": "hub-and-spoke",
+      "orchestration": "parallel-first",
+      "conflictPrevention": "file-level-ownership",
+      "registryType": "hybrid"
+    },
+    "claudeCodeIntegration": {
+      "enabled": true,
+      "agents": 40,
+      "commands": 94,
+      "hooks": 19,
+      "statusline": true,
+      "autoConfiguration": true
+    }
+  },
+  "maintainers": ["AgileAiAgents Team"],
+  "license": "MIT"
+}

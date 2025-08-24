@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "agent": "analysis_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 124,
+    "full_md_tokens": 4506,
+    "md_file": "agile-ai-agents/ai-agents/analysis_agent.md",
+    "file_hash": "1f4d086156d13a0a14b4b3235e879dca"
+  },
+  "summary": "## Overview\nThe Analysis Agent specializes in data processing, statistical analysis, and business intelligence. This agent transforms raw data into actionable insights, supports data-driven decision making, and provides analytical capabilities across all project aspects.",
+  "core_responsibilities": {
+    "summary": [
+      "Data Processing & Preparation",
+      "Statistical & Quantitative Analysis",
+      "Business Intelligence & Reporting"
+    ],
+    "details_tokens": 319,
+    "md_reference": "agile-ai-agents/ai-agents/analysis_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/analysis_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/analysis_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

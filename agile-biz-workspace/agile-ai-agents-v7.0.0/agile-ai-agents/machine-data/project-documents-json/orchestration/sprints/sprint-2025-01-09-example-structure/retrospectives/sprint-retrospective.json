@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "document": "sprint-retrospective",
+    "title": "Sprint Retrospective - 2025-01-19",
+    "timestamp": "2025-07-22T01:41:03.748Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md",
+    "document_type": "general_documentation",
+    "file_hash": "bb4b69335118f91ce08ab83990485cc0",
+    "estimated_tokens": 559,
+    "full_md_tokens": 710
+  },
+  "summary": "## Sprint: Authentication Foundation",
+  "sections": [
+    {
+      "title": "Sprint: Authentication Foundation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#sprint-authentication-foundation",
+      "content_preview": "**Duration**: 10 days (2025-01-09 to 2025-01-19)\n**Participants**: All Sprint Team Agents"
+    },
+    {
+      "title": "Sprint Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#sprint-summary",
+      "content_preview": "* **Planned Points**: 26\n* **Completed Points**: 24\n* **Velocity**: 24 points\n* **Sprint Goal Achievement**: 92%"
+    },
+    {
+      "title": "What Went Well 🟢",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#what-went-well",
+      "content_preview": ""
+    },
+    {
+      "title": "What Could Be Improved 🟡",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#what-could-be-improved",
+      "content_preview": ""
+    },
+    {
+      "title": "What Didn't Work 🔴",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#what-didnt-work",
+      "content_preview": ""
+    },
+    {
+      "title": "Action Items for Next Sprint",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#action-items-for-next-sprint",
+      "content_preview": "| Action | Owner | Due Date | Priority |\n|:-------|:------|:--------:|:--------:|\n| Create integration test template | Testing Agent | Sprint 2, Day 1..."
+    },
+    {
+      "title": "Backlog Items Identified",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#backlog-items-identified",
+      "content_preview": "- TECH-001: Implement comprehensive error handling framework (5 points)\n- TECH-002: Create automated API documentation generation (3 points)\n- OPS-001..."
+    },
+    {
+      "title": "Team Health Check",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#team-health-check",
+      "content_preview": "* **Morale**: ⭐⭐⭐⭐☆ (4/5)\n* **Process**: ⭐⭐⭐⭐☆ (4/5)\n* **Tools**: ⭐⭐⭐☆☆ (3/5)\n* **Communication**: ⭐⭐⭐⭐⭐ (5/5)"
+    },
+    {
+      "title": "Key Learnings",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#key-learnings",
+      "content_preview": "1. Early API contract definition saves significant time\n2. Security involvement from day 1 is crucial\n3. Parallel work requires better branch manageme..."
+    },
+    {
+      "title": "Recommendations for Next Sprint",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#recommendations-for-next-sprint",
+      "content_preview": "1. Allocate time for technical debt items\n2. Include deployment preparation in Definition of Done\n3. Schedule mid-sprint integration testing\n4. Consid..."
+    },
+    {
+      "title": "Sprint Metrics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#sprint-metrics",
+      "content_preview": "* **Cycle Time**: Average 2.3 days per story\n* **Code Review Time**: Average 4 hours per PR\n* **Bug Count**: 3 minor, 0 critical\n* **Test Coverage**: ..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Sprint: Authentication Foundation": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#sprint-authentication-foundation",
+      "tokens": 20,
+      "content_preview": "**Duration**: 10 days (2025-01-09 to 2025-01-19)\n**Participants**: All Sprint Team Agents"
+    },
+    "Sprint Summary": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#sprint-summary",
+      "tokens": 23,
+      "content_preview": "* **Planned Points**: 26\n* **Completed Points**: 24\n* **Velocity**: 24 points\n* **Sprint Goal Achievement**: 92%"
+    },
+    "What Went Well 🟢": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#what-went-well",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Team Collaboration": {
+          "content_preview": "* Excellent coordination between Coder and Security Agents\n* API contracts defined early prevented rework\n* Daily standups kept everyone aligned",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#team-collaboration-1"
+        },
+        "Technical Achievements": {
+          "content_preview": "* Clean architecture implementation\n* Comprehensive test coverage (87%)\n* Security review passed first time\n* Performance exceeded requirements",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#technical-achievements-1"
+        },
+        "Process Improvements": {
+          "content_preview": "* Story point estimation was accurate\n* No major blockers encountered\n* Documentation created alongside code",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#process-improvements-1"
+        }
+      }
+    },
+    "What Could Be Improved 🟡": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#what-could-be-improved",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Areas for Enhancement": {
+          "content_preview": "* Integration tests took longer than estimated\n* Some API documentation gaps discovered late\n* DevOps deployment scripts needed updates\n* Code review ...",
+          "tokens": 45,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#areas-for-enhancement-1"
+        },
+        "Technical Debt Identified": {
+          "content_preview": "* Need to refactor error handling for consistency\n* Session cleanup process needs optimization\n* API rate limiting should be implemented",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#technical-debt-identified-1"
+        }
+      }
+    },
+    "What Didn't Work 🔴": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#what-didnt-work",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Challenges Faced": {
+          "content_preview": "* Initial database schema had to be revised\n* Testing environment setup was complex\n* Some merge conflicts due to parallel work",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#challenges-faced-1"
+        }
+      }
+    },
+    "Action Items for Next Sprint": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#action-items-for-next-sprint",
+      "tokens": 109,
+      "content_preview": "| Action | Owner | Due Date | Priority |\n|:-------|:------|:--------:|:--------:|\n| Create integration test template | Testing Agent | Sprint 2, Day 1..."
+    },
+    "Backlog Items Identified": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#backlog-items-identified",
+      "tokens": 61,
+      "content_preview": "- TECH-001: Implement comprehensive error handling framework (5 points)\n- TECH-002: Create automated API documentation generation (3 points)\n- OPS-001..."
+    },
+    "Team Health Check": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#team-health-check",
+      "tokens": 21,
+      "content_preview": "* **Morale**: ⭐⭐⭐⭐☆ (4/5)\n* **Process**: ⭐⭐⭐⭐☆ (4/5)\n* **Tools**: ⭐⭐⭐☆☆ (3/5)\n* **Communication**: ⭐⭐⭐⭐⭐ (5/5)"
+    },
+    "Key Learnings": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#key-learnings",
+      "tokens": 53,
+      "content_preview": "1. Early API contract definition saves significant time\n2. Security involvement from day 1 is crucial\n3. Parallel work requires better branch manageme..."
+    },
+    "Recommendations for Next Sprint": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#recommendations-for-next-sprint",
+      "tokens": 48,
+      "content_preview": "1. Allocate time for technical debt items\n2. Include deployment preparation in Definition of Done\n3. Schedule mid-sprint integration testing\n4. Consid..."
+    },
+    "Sprint Metrics": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/sprint-retrospective.md#sprint-metrics",
+      "tokens": 59,
+      "content_preview": "* **Cycle Time**: Average 2.3 days per story\n* **Code Review Time**: Average 4 hours per PR\n* **Bug Count**: 3 minor, 0 critical\n* **Test Coverage**: ..."
+    }
+  }
+}

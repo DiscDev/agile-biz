@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "document": "setup-guide",
+    "timestamp": "2025-06-27T01:49:59.442Z",
+    "version": "1.0.0",
+    "source_file": "aaa-documents/setup-guide.md",
+    "document_type": "installation_guide",
+    "last_synced": "2025-06-28T21:12:53.801Z",
+    "sync_status": "synced",
+    "md_checksum": "c1c2bf2d8ae4a2eb6d0bea384842f001",
+    "file_size": 13135,
+    "estimated_tokens": 3175
+  },
+  "summary": "Transform Claude Code into a specialized team of 27 AI agents by following these setup steps:",
+  "sections": [
+    {
+      "title": "Quick Installation",
+      "content_preview": "Transform Claude Code into a specialized team of 27 AI agents by following these setup steps: ### Step 1: Copy Files to Your Project ✅ **For a New Pro"
+    },
+    {
+      "title": "📊 Dashboard Features Ready Immediately",
+      "content_preview": "### Multi-Tab Interface - **📁 Documents Tab**: Live document updates and interactive file tree - **🤖 Agents Tab**: Agent capabilities, descriptions,"
+    },
+    {
+      "title": "🔧 System Requirements",
+      "content_preview": "### Minimum Requirements - **Node.js 16+** (for dashboard) - **Modern browser** (Chrome, Firefox, Safari, Edge)"
+    },
+    {
+      "title": "🔌 MCP Server Configuration (Optional but Recommended)",
+      "content_preview": "Choose and configure MCP servers for enhanced agent capabilities: ### Essential MCP Servers ```bash"
+    },
+    {
+      "title": "🔧 Port Configuration for Multiple Projects",
+      "content_preview": "When developing multiple projects simultaneously, each project needs unique ports: ### Setting Up Ports 1. **Copy `.env_example` to `.env`** in the ag"
+    },
+    {
+      "title": "🎯 Expected Experience",
+      "content_preview": "### First Launch (30 seconds) 1. **Copy files** to new project ✅ 2. **Run dashboard command** ✅"
+    },
+    {
+      "title": "🔒 Security Configuration",
+      "content_preview": "### Dashboard Authentication ```bash # Enable authentication in .env file:"
+    },
+    {
+      "title": "🚨 Troubleshooting",
+      "content_preview": "### Dashboard Won't Start ```bash # Install Node.js 16+ from https://nodejs.org"
+    },
+    {
+      "title": "🎉 Success Indicators",
+      "content_preview": "You'll know everything is working when: - ✅ Dashboard opens at `http://localhost:[SELECTED_PORT]` (displayed in terminal) - ✅ Activity feed shows \"Das"
+    },
+    {
+      "title": "📖 Next Steps",
+      "content_preview": "1. **Complete setup** following this guide 2. **Read the [usage-guide.md](./usage-guide.md)** to learn how to use the system 3. **Start your first pro"
+    }
+  ],
+  "key_points": [
+    "✅ Auto-update all dependencies to latest versions",
+    "✅ Fix compatibility issues automatically",
+    "✅ Apply security and performance updates",
+    "✅ Find an available port (typically 3001-3010) and display the URL",
+    "✅ Display MCP documentation, agent capabilities, and system docs",
+    "✅ **Dependencies modernized** to latest versions",
+    "✅ **Compatibility issues fixed** automatically",
+    "✅ **Security updates applied** (helmet, compression, etc.)",
+    "✅ **Dashboard starts** on first available port (3001-3010)",
+    "✅ **Project structure created** (project-documents/ folders)"
+  ],
+  "usage_context": [
+    "system_administration",
+    "initial_setup"
+  ],
+  "installation_steps": [
+    {
+      "step": 1,
+      "instruction": "Create your new project folder",
+      "type": "installation"
+    },
+    {
+      "step": 2,
+      "instruction": "Copy the `agile-ai-agents` folder and `CLAUDE.md` to your project",
+      "type": "installation"
+    },
+    {
+      "step": 3,
+      "instruction": "Your project structure should look like:",
+      "type": "installation"
+    },
+    {
+      "step": 4,
+      "instruction": "Copy the `agile-ai-agents` folder and `CLAUDE.md` to your existing project's root directory",
+      "type": "installation"
+    },
+    {
+      "step": 5,
+      "instruction": "Ensure all subfolders are included (ai-agents, project-dashboard, etc.)",
+      "type": "installation"
+    },
+    {
+      "step": 6,
+      "instruction": "The CLAUDE.md file should be at your project root to configure AgileAiAgents integration",
+      "type": "installation"
+    },
+    {
+      "step": 7,
+      "instruction": "**Copy `.env_example` to `.env`** in the agile-ai-agents folder",
+      "type": "installation"
+    },
+    {
+      "step": 8,
+      "instruction": "**Configure unique ports** for your project:",
+      "type": "installation"
+    },
+    {
+      "step": 9,
+      "instruction": "**Copy files** to new project ✅",
+      "type": "installation"
+    },
+    {
+      "step": 10,
+      "instruction": "**Run dashboard command** ✅",
+      "type": "installation"
+    },
+    {
+      "step": 11,
+      "instruction": "**Open browser** to localhost:3001 ✅",
+      "type": "installation"
+    },
+    {
+      "step": 12,
+      "instruction": "**Dashboard ready** for AI agent monitoring ✅",
+      "type": "installation"
+    },
+    {
+      "step": 13,
+      "instruction": "**Start AI agents** through Claude Code",
+      "type": "installation"
+    },
+    {
+      "step": 14,
+      "instruction": "**Watch documents appear** in real-time on dashboard",
+      "type": "installation"
+    },
+    {
+      "step": 15,
+      "instruction": "**Monitor agent progress** through activity feed",
+      "type": "installation"
+    }
+  ],
+  "prerequisites": [
+    "**Node.js 16+** (for dashboard)",
+    "**Modern browser** (Chrome, Firefox, Safari, Edge)",
+    "**Claude Code** (for AI agent coordination)"
+  ],
+  "configuration_options": {},
+  "troubleshooting_quick_fixes": []
+}

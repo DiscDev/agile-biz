@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "document": "planning-agenda-template",
+    "title": "Sprint Planning Agenda - sprint-YYYY-MM-DD-feature-name",
+    "timestamp": "2025-07-22T01:41:03.737Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/_templates/planning-agenda-template.md",
+    "document_type": "template",
+    "file_hash": "3a2778a4ebe00597631ee2c67d24b56e",
+    "estimated_tokens": 155,
+    "full_md_tokens": 289
+  },
+  "summary": "## Meeting Information",
+  "sections": [
+    {
+      "title": "Meeting Information",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/planning-agenda-template.md#meeting-information",
+      "content_preview": "- **Date**: YYYY-MM-DD\n- **Time**: HH:MM - HH:MM TZ\n- **Participants**: All assigned agents"
+    },
+    {
+      "title": "Agenda",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/planning-agenda-template.md#agenda",
+      "content_preview": ""
+    },
+    {
+      "title": "Output Documents",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/planning-agenda-template.md#output-documents",
+      "content_preview": "- backlog-items.md\n- sprint-goal.md\n- agent-assignments.md\n- capacity-plan.md\n- risk-assessment.md\n- dependencies.md\n- definition-of-done.md\n- histori..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Meeting Information": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/planning-agenda-template.md#meeting-information",
+      "tokens": 20,
+      "content_preview": "- **Date**: YYYY-MM-DD\n- **Time**: HH:MM - HH:MM TZ\n- **Participants**: All assigned agents"
+    },
+    "Agenda": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/planning-agenda-template.md#agenda",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Review Product Backlog (15 min)": {
+          "content_preview": "- Review prioritized backlog items\n- Clarify any questions about requirements",
+          "tokens": 20,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/planning-agenda-template.md#review-product-backlog-15-min-1"
+        },
+        "Sprint Goal Definition (10 min)": {
+          "content_preview": "- Define clear sprint goal\n- Ensure alignment with project objectives",
+          "tokens": 18,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/planning-agenda-template.md#sprint-goal-definition-10-min-1"
+        },
+        "Story Estimation (30 min)": {
+          "content_preview": "- Planning poker for story points\n- Discuss complexity and risks",
+          "tokens": 16,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/planning-agenda-template.md#story-estimation-30-min-1"
+        },
+        "Capacity Planning (15 min)": {
+          "content_preview": "- Review team capacity\n- Account for holidays/time off\n- Calculate velocity buffer",
+          "tokens": 21,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/planning-agenda-template.md#capacity-planning-15-min-1"
+        },
+        "Sprint Commitment (20 min)": {
+          "content_preview": "- Select stories for sprint\n- Ensure realistic commitment\n- Identify dependencies",
+          "tokens": 21,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/planning-agenda-template.md#sprint-commitment-20-min-1"
+        },
+        "Task Breakdown (30 min)": {
+          "content_preview": "- Break stories into tasks\n- Assign tasks to agents\n- Identify blockers",
+          "tokens": 18,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/planning-agenda-template.md#task-breakdown-30-min-1"
+        },
+        "Definition of Done Review (10 min)": {
+          "content_preview": "- Review and update DoD\n- Ensure all agents understand criteria",
+          "tokens": 16,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/planning-agenda-template.md#definition-of-done-review-10-min-1"
+        },
+        "Risk Assessment (10 min)": {
+          "content_preview": "- Identify sprint risks\n- Plan mitigation strategies",
+          "tokens": 13,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/planning-agenda-template.md#risk-assessment-10-min-1"
+        }
+      }
+    },
+    "Output Documents": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/planning-agenda-template.md#output-documents",
+      "tokens": 44,
+      "content_preview": "- backlog-items.md\n- sprint-goal.md\n- agent-assignments.md\n- capacity-plan.md\n- risk-assessment.md\n- dependencies.md\n- definition-of-done.md\n- histori..."
+    }
+  }
+}

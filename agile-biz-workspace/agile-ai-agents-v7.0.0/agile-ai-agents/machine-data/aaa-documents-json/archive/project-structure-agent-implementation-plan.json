@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "document": "project-structure-agent-implementation-plan",
+    "title": "Project Structure Agent Implementation Plan",
+    "timestamp": "2025-07-22T01:40:48.567Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md",
+    "document_type": "general_documentation",
+    "file_hash": "f9b4bf53bfcea53af0119e128cf54d6e",
+    "estimated_tokens": 428,
+    "full_md_tokens": 3181
+  },
+  "summary": "The Project Structure Agent (#38) is a self-learning agent that manages repository structures for projects, learning from patterns and outcomes to provide increasingly better recommendations over time. It works closely with the Learning Analysis Agent (#37) to continuously improve based on community contributions.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#overview",
+      "content_preview": "The Project Structure Agent (#38) is a self-learning agent that manages repository structures for projects, learning from patterns and outcomes to pro..."
+    },
+    {
+      "title": "Core Concept",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#core-concept",
+      "content_preview": "- Start simple with minimal structure\n- Learn from every project's evolution\n- Recognize patterns across similar projects\n- Provide data-driven recomm..."
+    },
+    {
+      "title": "Implementation Phases",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#implementation-phases",
+      "content_preview": "**Note**: This agent will leverage the fully implemented Community Learning System, including:\n- Learning Analysis Agent (#37) for pattern detection\n-..."
+    },
+    {
+      "title": "Success Metrics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#success-metrics",
+      "content_preview": "- Projects using recommended structures have 50%+ better metrics\n- 80% of structure recommendations accepted by users\n- Learning system shows improvem..."
+    },
+    {
+      "title": "Risk Mitigation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#risk-mitigation",
+      "content_preview": "- **Over-engineering**: Start with single repo, evolve only when needed\n- **Wrong patterns**: Allow user override of recommendations\n- **Complex coord..."
+    },
+    {
+      "title": "Community Learning System Benefits",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#community-learning-system-benefits",
+      "content_preview": "The Project Structure Agent will greatly benefit from the implemented Community Learning System:"
+    },
+    {
+      "title": "Future Enhancements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#future-enhancements",
+      "content_preview": "- Auto-create repositories based on evolution triggers\n- Repository structure visualization\n- Automated code migration between repos\n- Structure compl..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#overview",
+      "tokens": 78,
+      "content_preview": "The Project Structure Agent (#38) is a self-learning agent that manages repository structures for projects, learning from patterns and outcomes to pro..."
+    },
+    "Core Concept": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#core-concept",
+      "tokens": 50,
+      "content_preview": "- Start simple with minimal structure\n- Learn from every project's evolution\n- Recognize patterns across similar projects\n- Provide data-driven recomm..."
+    },
+    "Implementation Phases": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#implementation-phases",
+      "tokens": 97,
+      "content_preview": "**Note**: This agent will leverage the fully implemented Community Learning System, including:\n- Learning Analysis Agent (#37) for pattern detection\n-...",
+      "subsections": {
+        "Phase 1: Agent Foundation ✅": {
+          "content_preview": "**Objective**: Create the basic Project Structure Agent\n\n- [x] Create `/ai-agents/project_structure_agent.md`\n- [x] Define core responsibilities:\n  - ...",
+          "tokens": 127,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#phase-1-agent-foundation-1"
+        },
+        "Phase 2: Learning System ✅": {
+          "content_preview": "**Objective**: Implement the self-learning capability\n\n- [x] Create learning data structure:\n  ```json\n  {\n    \"project_patterns\": {\n      \"id\": \"uuid...",
+          "tokens": 324,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#phase-2-learning-system-1"
+        },
+        "Phase 3: Initial Templates ✅": {
+          "content_preview": "**Objective**: Create structure-only starter templates\n\n- [x] Create `/machine-data/repository-templates/`\n- [x] Implement basic templates:\n  - [x] Si...",
+          "tokens": 219,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#phase-3-initial-templates-1"
+        },
+        "Phase 4: Multi-Repository Coordination ✅": {
+          "content_preview": "**Objective**: Enable coordination across multiple repositories\n\n- [x] Repository mapping system:\n  - [x] Track which code belongs where\n  - [x] Monit...",
+          "tokens": 118,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#phase-4-multi-repository-coordination-1"
+        },
+        "Phase 5: Smart Context Integration ✅": {
+          "content_preview": "**Objective**: Make context loader repository-aware\n\n- [x] Enhance `smart-context-loader.js`:\n  ```javascript\n  loadRepositoryContext(agent, level, {\n...",
+          "tokens": 93,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#phase-5-smart-context-integration-1"
+        },
+        "Phase 6: Agent Integration ✅": {
+          "content_preview": "**Objective**: Integrate with existing agents\n\n- [x] **Project Manager Agent**:\n  - [x] Receives structure recommendations\n  - [x] Tracks repository a...",
+          "tokens": 195,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#phase-6-agent-integration-1"
+        },
+        "Phase 7: Evolution Tracking ✅": {
+          "content_preview": "**Objective**: Monitor and learn from structure changes\n\n- [x] Structure health monitoring:\n  - [x] \"Code smells\" for repository structure\n  - [x] Sig...",
+          "tokens": 174,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#phase-7-evolution-tracking-1"
+        },
+        "Phase 8: Community Learning Integration ✅": {
+          "content_preview": "**Objective**: Learn from community contributions using the implemented Community Learning System\n\n- [x] Integrate with Community Learning System (IMP...",
+          "tokens": 588,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#phase-8-community-learning-integration-1"
+        },
+        "Phase 9: Testing & Validation ✅": {
+          "content_preview": "**Objective**: Ensure reliability and accuracy\n\n- [x] Test pattern recognition accuracy\n- [x] Validate recommendation engine\n- [x] Test multi-repo coo...",
+          "tokens": 126,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#phase-9-testing-validation-1"
+        },
+        "Phase 10: Documentation & Rollout ✅": {
+          "content_preview": "**Objective**: Complete documentation and release\n\n- [x] Update main documentation:\n  - [x] Add to claude.md (38 agents total - includes Learning Anal...",
+          "tokens": 171,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#phase-10-documentation-rollout-1"
+        }
+      }
+    },
+    "Success Metrics": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#success-metrics",
+      "tokens": 111,
+      "content_preview": "- Projects using recommended structures have 50%+ better metrics\n- 80% of structure recommendations accepted by users\n- Learning system shows improvem..."
+    },
+    "Risk Mitigation": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#risk-mitigation",
+      "tokens": 64,
+      "content_preview": "- **Over-engineering**: Start with single repo, evolve only when needed\n- **Wrong patterns**: Allow user override of recommendations\n- **Complex coord..."
+    },
+    "Community Learning System Benefits": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#community-learning-system-benefits",
+      "tokens": 24,
+      "content_preview": "The Project Structure Agent will greatly benefit from the implemented Community Learning System:",
+      "subsections": {
+        "Automated Pattern Detection": {
+          "content_preview": "- Repository evolution data is auto-extracted from every contribution\n- The `Repository Evolution` section in learnings.md provides structured timelin...",
+          "tokens": 57,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#automated-pattern-detection-1"
+        },
+        "Privacy-First Learning": {
+          "content_preview": "- All repository patterns are anonymized by default\n- Company names become \"[Industry] Company\"\n- No sensitive URLs or infrastructure details exposed\n...",
+          "tokens": 48,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#privacy-first-learning-1"
+        },
+        "Continuous Improvement": {
+          "content_preview": "- Dual versioning tracks improvements (e.g., 1.0.0+20250128.1)\n- Every successful pattern becomes a learnable improvement\n- Failed patterns are also c...",
+          "tokens": 58,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#continuous-improvement-1"
+        },
+        "Cross-Project Intelligence": {
+          "content_preview": "- Learning broadcasts share repository patterns across all projects\n- Minimum 3 similar patterns required for recommendations\n- Confidence scoring bas...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#cross-project-intelligence-1"
+        },
+        "Example Learning Flow": {
+          "content_preview": "1. SaaS project splits marketing site from app due to SEO conflicts\n2. Contribution captures this in Repository Evolution timeline\n3. Learning Analysi...",
+          "tokens": 94,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#example-learning-flow-1"
+        }
+      }
+    },
+    "Future Enhancements": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-agent-implementation-plan.md#future-enhancements",
+      "tokens": 139,
+      "content_preview": "- Auto-create repositories based on evolution triggers\n- Repository structure visualization\n- Automated code migration between repos\n- Structure compl..."
+    }
+  }
+}

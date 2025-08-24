@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "document": "folder-structure-mapping",
+    "timestamp": "2025-07-17T01:29:19.627Z",
+    "version": "1.0.0",
+    "source_file": "aaa-documents/folder-structure-mapping.md",
+    "document_type": "general_documentation"
+  },
+  "summary": "Documentation file for AgileAiAgents system",
+  "sections": [
+    {
+      "title": "Proposed Category-Based Organization",
+      "content_preview": "### Structure: `project-documents` → `category` → `folders` → `documents` ---"
+    },
+    {
+      "title": "**ORCHESTRATION** (Core Coordination - Always Present)",
+      "content_preview": "*Primary Agent: Scrum Master Agent* ### `orchestration/` **Agent**: Scrum Master Agent"
+    },
+    {
+      "title": "**BUSINESS-STRATEGY** (Business Analysis & Planning)",
+      "content_preview": "### `existing-project/` **Agent**: Project Analyzer Agent - `project-brief.md` ← Comprehensive project summary for all agents to reference"
+    },
+    {
+      "title": "**DEVELOPMENT** (Technical Implementation)",
+      "content_preview": "### `requirements/` **Agent**: PRD Agent - `prd-document.md` ← Comprehensive 16-section PRD"
+    },
+    {
+      "title": "**OPERATIONS** (Launch, Growth, Optimization)",
+      "content_preview": "### `deployment/` **Agent**: DevOps Agent - `deployment-guide.md`"
+    },
+    {
+      "title": "**SUMMARY**",
+      "content_preview": "### **Category Distribution:** - **Orchestration**: 1 folder (always present) - **Business-Strategy**: 9 folders (flexible creation)"
+    }
+  ],
+  "key_points": [
+    "`project-log.md` ← Real-time agent activity log",
+    "`agent-coordination.md` ← Agent handoffs and decisions",
+    "`stakeholder-decisions.md` ← Project-level stakeholder decisions",
+    "`stakeholder-escalations.md` ← Project-level stakeholder escalations",
+    "`sprints/` ← All sprint documents organized by sprint",
+    "`sprint-YYYY-MM-DD-feature-name/`",
+    "`sprint-planning.md` ← Sprint planning and preparation",
+    "`sprint-tracking.md` ← Ongoing execution and pulse updates",
+    "`sprint-review.md` ← Sprint review and stakeholder feedback",
+    "`sprint-retrospective.md` ← AI agent retrospectives"
+  ],
+  "usage_context": [
+    "general_reference"
+  ]
+}

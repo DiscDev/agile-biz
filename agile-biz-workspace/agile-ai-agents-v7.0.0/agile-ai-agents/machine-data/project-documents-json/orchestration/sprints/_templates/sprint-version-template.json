@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "document": "sprint-version-template",
+    "title": "Sprint Version Tracking - sprint-YYYY-MM-DD-feature-name",
+    "timestamp": "2025-07-22T01:41:03.740Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-version-template.md",
+    "document_type": "template",
+    "file_hash": "eebd9588259f81202357b1c5af614d11",
+    "estimated_tokens": 205,
+    "full_md_tokens": 139
+  },
+  "summary": "## Version Information",
+  "sections": [
+    {
+      "title": "Version Information",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-version-template.md#version-information",
+      "content_preview": "**Sprint**: sprint-YYYY-MM-DD-feature-name  \n**Start Version**: vX.X.X  \n**Current Version**: vX.X.X  \n**Target End Version**: vX.X.X"
+    },
+    {
+      "title": "Changes in This Sprint",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-version-template.md#changes-in-this-sprint",
+      "content_preview": ""
+    },
+    {
+      "title": "Commit Statistics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-version-template.md#commit-statistics",
+      "content_preview": "- Total Commits: 0\n- Lines Added: 0\n- Lines Removed: 0\n- Files Changed: 0"
+    },
+    {
+      "title": "Release Notes Draft",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-version-template.md#release-notes-draft",
+      "content_preview": "To be completed at sprint end for inclusion in release notes."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "sprint_management"
+  ],
+  "section_details": {
+    "Version Information": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-version-template.md#version-information",
+      "tokens": 30,
+      "content_preview": "**Sprint**: sprint-YYYY-MM-DD-feature-name  \n**Start Version**: vX.X.X  \n**Current Version**: vX.X.X  \n**Target End Version**: vX.X.X"
+    },
+    "Changes in This Sprint": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-version-template.md#changes-in-this-sprint",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Features Added": {
+          "content_preview": "- Feature 1\n- Feature 2",
+          "tokens": 6,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-version-template.md#features-added-1"
+        },
+        "Bugs Fixed": {
+          "content_preview": "- Bug 1 (#issue-number)\n- Bug 2 (#issue-number)",
+          "tokens": 11,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-version-template.md#bugs-fixed-1"
+        },
+        "Technical Improvements": {
+          "content_preview": "- Improvement 1\n- Improvement 2",
+          "tokens": 8,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-version-template.md#technical-improvements-1"
+        }
+      }
+    },
+    "Commit Statistics": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-version-template.md#commit-statistics",
+      "tokens": 19,
+      "content_preview": "- Total Commits: 0\n- Lines Added: 0\n- Lines Removed: 0\n- Files Changed: 0"
+    },
+    "Release Notes Draft": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-version-template.md#release-notes-draft",
+      "tokens": 16,
+      "content_preview": "To be completed at sprint end for inclusion in release notes."
+    }
+  }
+}

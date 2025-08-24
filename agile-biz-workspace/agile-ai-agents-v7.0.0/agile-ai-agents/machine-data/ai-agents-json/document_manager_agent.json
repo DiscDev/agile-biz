@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "agent": "document_manager_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 179,
+    "full_md_tokens": 6531,
+    "md_file": "agile-ai-agents/ai-agents/document_manager_agent.md",
+    "file_hash": "158c346e9a48adc4885aea22371ceada"
+  },
+  "summary": "## Overview\nThe Document Manager Agent is responsible for creating and maintaining machine-readable JSON versions of all human-readable markdown documentation. This agent enables 80-90% context reduction for other agents by providing structured, queryable data with section-level references for progressive loading.",
+  "core_responsibilities": {
+    "summary": [
+      "1. JSON Generation & Synchronization",
+      "2. Asynchronous Processing",
+      "3. Context Optimization",
+      "4. Query Support",
+      "5. Performance Monitoring"
+    ],
+    "details_tokens": 386,
+    "md_reference": "agile-ai-agents/ai-agents/document_manager_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "JSON Generation Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/document_manager_agent.md#json-generation-workflow"
+      },
+      {
+        "name": "Priority System",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/document_manager_agent.md#priority-system"
+      },
+      {
+        "name": "Schema Validation",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/document_manager_agent.md#schema-validation"
+      },
+      {
+        "name": "Enhanced JSON Structure with References",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/document_manager_agent.md#enhanced-json-structure-with-references"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/document_manager_agent.md#workflows"
+  },
+  "reference_documentation": {
+    "json_context_guide": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/json-context-guide.json",
+      "tokens": 1000
+    },
+    "smart_context_loading": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/smart-context-loading-guide.json",
+      "tokens": 1000
+    },
+    "document_creation_rules": {
+      "path": "agile-ai-agents/machine-data/document-creation-rules.json",
+      "tokens": 1000
+    },
+    "json_reference_resolution": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/json-reference-resolution-guide.json",
+      "tokens": 1000
+    },
+    "document_structure_standard": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/document-md-structure-standard.json",
+      "tokens": 1000
+    },
+    "folder_structure_guide": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/folder-structure-guide.json",
+      "tokens": 1000
+    },
+    "implementation": {
+      "path": "agile-ai-agents/machine-data/agent-context-loader.js",
+      "tokens": 1000
+    }
+  },
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/document_manager_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  },
+  "success_metrics": {
+    "tokens": 61,
+    "md_reference": "agile-ai-agents/ai-agents/document_manager_agent.md#success-metrics"
+  }
+}

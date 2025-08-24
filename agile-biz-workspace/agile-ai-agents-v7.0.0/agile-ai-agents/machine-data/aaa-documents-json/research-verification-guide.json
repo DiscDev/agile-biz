@@ -1,0 +1,307 @@
+{
+  "meta": {
+    "document": "research-verification-guide",
+    "title": "Research Verification Guide",
+    "timestamp": "2025-08-11T22:02:16.916Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/research-verification-guide.md",
+    "document_type": "guide",
+    "file_hash": "a64309f0b5cabb4d2df8c9e7722a26fc",
+    "estimated_tokens": 856,
+    "full_md_tokens": 1550
+  },
+  "summary": "This guide explains the research verification system in AgileAiAgents, designed to minimize LLM hallucinations by requiring source verification and utilizing MCP (Model Context Protocol) servers for real-time data validation.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#overview",
+      "content_preview": "This guide explains the research verification system in AgileAiAgents, designed to minimize LLM hallucinations by requiring source verification and ut..."
+    },
+    {
+      "title": "Purpose",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#purpose",
+      "content_preview": "LLMs can generate plausible-sounding but incorrect information (hallucinations). This system:\n- Requires sources for factual claims\n- Uses MCP servers..."
+    },
+    {
+      "title": "Verification Levels",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#verification-levels",
+      "content_preview": ""
+    },
+    {
+      "title": "Override Precedence",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#override-precedence",
+      "content_preview": "The system uses strict precedence (highest to lowest priority):\n\n1. **Document Type Override** - Most specific, always wins\n2. **Agent Override** - Ag..."
+    },
+    {
+      "title": "MCP Integration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#mcp-integration",
+      "content_preview": ""
+    },
+    {
+      "title": "Research Document Structure",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#research-document-structure",
+      "content_preview": ""
+    },
+    {
+      "title": "Research Metadata",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#research-metadata",
+      "content_preview": "- **Verification Level**: [fast/balanced/thorough/paranoid]\n- **MCP Services Used**: [List of services]\n- **Cache Status**: [Fresh/Cached/Mixed]\n- **O..."
+    },
+    {
+      "title": "Verified Information",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#verified-information",
+      "content_preview": "<!-- Information retrieved from MCP services -->"
+    },
+    {
+      "title": "Analyzed Insights",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#analyzed-insights",
+      "content_preview": "<!-- LLM analysis based on verified data -->"
+    },
+    {
+      "title": "Unverified Claims",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#unverified-claims",
+      "content_preview": "<!-- Information that couldn't be verified -->"
+    },
+    {
+      "title": "Verification Requirements by Content Type",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#verification-requirements-by-content-type",
+      "content_preview": ""
+    },
+    {
+      "title": "Graceful Degradation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#graceful-degradation",
+      "content_preview": "When MCP services are unavailable:\n\n1. **Notify User**: Clear indication of degraded service\n2. **Use Cache**: Leverage recently verified data\n3. **Fl..."
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Configuration in CLAUDE.md",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#configuration-in-claudemd",
+      "content_preview": "See the `research_verification` section in CLAUDE.md for:\n- Setting global defaults\n- Configuring agent overrides\n- Defining document type rules\n- Man..."
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#summary",
+      "content_preview": "The research verification system helps ensure document accuracy by:\n- ✅ Enforcing source requirements\n- ✅ Leveraging real-time data via MCP\n- ✅ Provid..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#overview",
+      "tokens": 56,
+      "content_preview": "This guide explains the research verification system in AgileAiAgents, designed to minimize LLM hallucinations by requiring source verification and ut..."
+    },
+    "Purpose": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#purpose",
+      "tokens": 68,
+      "content_preview": "LLMs can generate plausible-sounding but incorrect information (hallucinations). This system:\n- Requires sources for factual claims\n- Uses MCP servers..."
+    },
+    "Verification Levels": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#verification-levels",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Fast (Minimal Verification)": {
+          "content_preview": "- **Speed**: 30-60 seconds per document\n- **Token Usage**: ~2,000 tokens\n- **MCP Calls**: 0-1 per document\n- **Use Cases**: Internal docs, brainstormi...",
+          "tokens": 67,
+          "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#1-fast-minimal-verification-1"
+        },
+        "2. Balanced (Recommended Default)": {
+          "content_preview": "- **Speed**: 2-3 minutes per document\n- **Token Usage**: ~5,000 tokens\n- **MCP Calls**: 3-5 per document\n- **Use Cases**: Standard research, project p...",
+          "tokens": 78,
+          "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#2-balanced-recommended-default-1"
+        },
+        "3. Thorough (High Verification)": {
+          "content_preview": "- **Speed**: 5-10 minutes per document\n- **Token Usage**: ~10,000 tokens\n- **MCP Calls**: 10-15 per document\n- **Use Cases**: Market research, technic...",
+          "tokens": 76,
+          "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#3-thorough-high-verification-1"
+        },
+        "4. Paranoid (Maximum Verification)": {
+          "content_preview": "- **Speed**: 15+ minutes per document\n- **Token Usage**: ~15,000+ tokens\n- **MCP Calls**: 20+ per document\n- **Use Cases**: Financial projections, sec...",
+          "tokens": 75,
+          "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#4-paranoid-maximum-verification-1"
+        }
+      }
+    },
+    "Override Precedence": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#override-precedence",
+      "tokens": 51,
+      "content_preview": "The system uses strict precedence (highest to lowest priority):\n\n1. **Document Type Override** - Most specific, always wins\n2. **Agent Override** - Ag...",
+      "subsections": {
+        "Example:": {
+          "content_preview": "- Global default: `balanced`\n- Finance Agent override: `thorough`\n- Financial projections document override: `paranoid`\n- **Result**: Finance Agent cr...",
+          "tokens": 46,
+          "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#example-1"
+        }
+      }
+    },
+    "MCP Integration": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#mcp-integration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Supported MCP Servers": {
+          "content_preview": "- **Perplexity**: Web searches with citations\n- **Firecrawl**: Direct website data extraction\n- **GitHub**: Code and repository verification\n- **WebSe...",
+          "tokens": 44,
+          "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#supported-mcp-servers-1"
+        },
+        "Benefits of MCP Usage": {
+          "content_preview": "- Real citations instead of hallucinated sources\n- Current data instead of training cutoff data\n- Verifiable URLs and timestamps\n- Cross-reference cap...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#benefits-of-mcp-usage-1"
+        }
+      }
+    },
+    "Research Document Structure": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#research-document-structure",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Verified Research Template": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#verified-research-template-1"
+        }
+      }
+    },
+    "Research Metadata": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#research-metadata",
+      "tokens": 41,
+      "content_preview": "- **Verification Level**: [fast/balanced/thorough/paranoid]\n- **MCP Services Used**: [List of services]\n- **Cache Status**: [Fresh/Cached/Mixed]\n- **O..."
+    },
+    "Verified Information": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#verified-information",
+      "tokens": 12,
+      "content_preview": "<!-- Information retrieved from MCP services -->",
+      "subsections": {
+        "Market Size": {
+          "content_preview": "- **Claim**: The global SaaS market is valued at $197 billion\n- **Source**: [Statista Report 2024](https://www.statista.com/...)\n- **Retrieved**: 2025...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#market-size-1"
+        }
+      }
+    },
+    "Analyzed Insights": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#analyzed-insights",
+      "tokens": 11,
+      "content_preview": "<!-- LLM analysis based on verified data -->",
+      "subsections": {
+        "Growth Trends": {
+          "content_preview": "- **Analysis**: Based on verified data, the market shows 15% YoY growth\n- **Confidence**: Medium\n- **Based on**: Sources cited above",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#growth-trends-1"
+        }
+      }
+    },
+    "Unverified Claims": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#unverified-claims",
+      "tokens": 12,
+      "content_preview": "<!-- Information that couldn't be verified -->",
+      "subsections": {
+        "Future Projections": {
+          "content_preview": "- **Claim**: Market expected to reach $500B by 2030\n- **Status**: Unverified\n- **Reason**: No authoritative source found\n- **Confidence**: Low\n```",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#future-projections-1"
+        }
+      }
+    },
+    "Verification Requirements by Content Type": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#verification-requirements-by-content-type",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Always Require Sources": {
+          "content_preview": "- Statistics and numerical data\n- Financial figures\n- Market sizes and shares\n- Technical specifications\n- Legal/compliance statements\n- Direct quotes...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#always-require-sources-1"
+        },
+        "Analysis Allowed Without Sources": {
+          "content_preview": "- Trend interpretation\n- Strategic recommendations\n- Creative suggestions\n- Opinion-based content\n- Hypothetical scenarios\n- General observations",
+          "tokens": 37,
+          "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#analysis-allowed-without-sources-1"
+        }
+      }
+    },
+    "Graceful Degradation": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#graceful-degradation",
+      "tokens": 73,
+      "content_preview": "When MCP services are unavailable:\n\n1. **Notify User**: Clear indication of degraded service\n2. **Use Cache**: Leverage recently verified data\n3. **Fl...",
+      "subsections": {
+        "Degradation Notification Example": {
+          "content_preview": "```\n⚠️  MCP Service Status\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nResearch verification operating in degraded mode:\n- Perplexity: ❌ Unavailable\n-...",
+          "tokens": 75,
+          "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#degradation-notification-example-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "For Agents": {
+          "content_preview": "1. Always declare verification level at document start\n2. Separate verified facts from analysis\n3. Include metadata for all sources\n4. Flag uncertaint...",
+          "tokens": 48,
+          "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#for-agents-1"
+        },
+        "For Users": {
+          "content_preview": "1. Configure appropriate MCP servers for better accuracy\n2. Use higher verification for critical documents\n3. Review unverified claims carefully\n4. Co...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#for-users-1"
+        }
+      }
+    },
+    "Configuration in CLAUDE.md": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#configuration-in-claudemd",
+      "tokens": 50,
+      "content_preview": "See the `research_verification` section in CLAUDE.md for:\n- Setting global defaults\n- Configuring agent overrides\n- Defining document type rules\n- Man..."
+    },
+    "Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Common Issues": {
+          "content_preview": "1. **All claims marked unverified**\n   - Check MCP configuration\n   - Verify API keys in .env\n   - Test MCP connectivity\n\n2. **Verification taking too...",
+          "tokens": 93,
+          "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#common-issues-1"
+        }
+      }
+    },
+    "Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/research-verification-guide.md#summary",
+      "tokens": 88,
+      "content_preview": "The research verification system helps ensure document accuracy by:\n- ✅ Enforcing source requirements\n- ✅ Leveraging real-time data via MCP\n- ✅ Provid..."
+    }
+  }
+}

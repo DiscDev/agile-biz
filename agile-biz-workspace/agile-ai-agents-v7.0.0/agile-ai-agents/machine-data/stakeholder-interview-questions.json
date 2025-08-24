@@ -1,0 +1,190 @@
+{
+  "setup_verification": {
+    "checks": [
+      "env_file_exists",
+      "project_folder_created",
+      "claude_md_updated",
+      "setup_scripts_run",
+      "settings_json_configured"
+    ],
+    "missing_setup_response": "I notice you haven't completed [missing_items]. These are required for the workflow to function properly. Would you like me to guide you through the setup?",
+    "setup_instructions": {
+      "env_file_exists": "Let's create your .env file. Run: cp .env.example .env",
+      "project_folder_created": "What's your project folder name? I'll help you set it up.",
+      "claude_md_updated": "I'll update CLAUDE.md with your project folder name.",
+      "setup_scripts_run": "Please run the setup script: bash scripts/setup.sh",
+      "settings_json_configured": "Let's configure your Claude settings."
+    }
+  },
+  "existing_project_analysis": {
+    "identity_verification": [
+      "Based on my analysis, this appears to be [initial_assessment]. Is this correct?",
+      "What specific industry or domain does this serve?",
+      "Who are your current users?",
+      "What is this product NOT?",
+      "Who are your main competitors?"
+    ],
+    "enhancement_goals": [
+      "What brings you here? (bug fixes/new features/optimization/refactoring)",
+      "What are your top 3 pain points with the current system?",
+      "Any critical issues needing immediate attention?",
+      "What's your timeline for improvements?"
+    ],
+    "structure_decision": [
+      "I've identified some structure issues. Would you like to see them?",
+      "Would you prefer to keep current structure or migrate to recommended?",
+      "If migrating, when would you prefer to do this?"
+    ]
+  },
+  "project_identity": {
+    "initial": [
+      "In one sentence, what is this product?",
+      "What specific industry/domain is this for?",
+      "Who are the primary users? (be specific)",
+      "List 3-5 things this is explicitly NOT",
+      "Name 3-5 competitor products"
+    ],
+    "follow_ups": {
+      "vague_industry": "You mentioned [industry]. Can you be more specific? For example, 'B2B SaaS for dental practices' rather than just 'healthcare'?",
+      "unclear_users": "When you say [user_type], do you mean [clarification]?",
+      "missing_boundaries": "It's crucial to define what this is NOT. This prevents scope creep. Can you think of features or capabilities people might assume you'd have but you explicitly won't?",
+      "competitor_clarity": "You mentioned [competitor]. What makes your product different from them?",
+      "domain_specificity": "Is this for a specific geographic region, company size, or user demographic?"
+    }
+  },
+  "operations_vision": {
+    "initial": [
+      "How do you envision running this product after launch?",
+      "What level of automation do you want in operations?",
+      "What's your vision for scaling operations?",
+      "Do you prefer human oversight or full automation?"
+    ],
+    "ai_customer_experience": [
+      "Should we set up AI agents for customer support chat?",
+      "Do you want AI agents handling support ticket triage?",
+      "Should AI agents manage FAQ and knowledge base updates?",
+      "Would you like AI-powered customer onboarding assistants?",
+      "Should we implement AI agents for customer feedback analysis?",
+      "Do you want AI agents for personalized customer recommendations?"
+    ],
+    "ai_sales_marketing": [
+      "Should AI agents qualify and score leads automatically?",
+      "Do you want AI agents for email marketing automation?",
+      "Should we set up AI agents for social media management?",
+      "Would you like AI agents creating marketing content?",
+      "Should AI agents handle A/B testing and optimization?",
+      "Do you want AI agents for competitive intelligence monitoring?",
+      "Should we implement AI agents for pricing optimization?"
+    ],
+    "ai_operations_business": [
+      "Do you want AI agents monitoring system health 24/7?",
+      "Should AI agents handle incident response and escalation?",
+      "Would you like AI agents for automated financial reporting?",
+      "Should we set up AI agents for inventory management?",
+      "Do you want AI agents for demand forecasting?",
+      "Should AI agents manage vendor relationships?",
+      "Would you like AI agents for compliance monitoring?"
+    ],
+    "ai_data_analytics": [
+      "Should AI agents generate daily/weekly business reports?",
+      "Do you want AI agents identifying trends and anomalies?",
+      "Should we set up AI agents for predictive analytics?",
+      "Would you like AI agents for customer behavior analysis?",
+      "Should AI agents monitor and optimize KPIs?",
+      "Do you want AI agents for cohort analysis?"
+    ],
+    "ai_content_community": [
+      "Should AI agents moderate user-generated content?",
+      "Do you want AI agents for community engagement?",
+      "Should we set up AI agents for content curation?",
+      "Would you like AI agents translating content for international markets?",
+      "Should AI agents handle review responses?",
+      "Do you want AI agents for influencer identification?"
+    ],
+    "ai_security_compliance": [
+      "Should AI agents monitor for security threats?",
+      "Do you want AI agents for fraud detection?",
+      "Should we set up AI agents for GDPR compliance?",
+      "Would you like AI agents for audit trail management?",
+      "Should AI agents handle data privacy requests?"
+    ],
+    "priority_questions": [
+      "Which AI agents are must-haves for launch?",
+      "Which can be added post-launch?",
+      "What's your budget for AI operations?",
+      "Any concerns about AI handling certain functions?"
+    ]
+  },
+  "core_features": {
+    "mvp_questions": [
+      "What are the 3-5 essential features for launch?",
+      "Which features can wait until after MVP?",
+      "What's your unique value proposition?",
+      "How will you measure success?",
+      "What's the minimum viable product for your first users?"
+    ],
+    "feature_follow_ups": {
+      "too_many_features": "That's quite a few features for MVP. Which 3 are absolutely critical?",
+      "vague_feature": "Can you describe how [feature] would work from a user's perspective?",
+      "missing_metrics": "Success metrics are crucial. Would you measure by users, revenue, engagement, or something else?"
+    }
+  },
+  "technical_preferences": {
+    "stack_questions": [
+      "Do you have technology stack preferences?",
+      "Where will this be deployed? (AWS/Azure/GCP/On-premise)",
+      "Expected user scale? (hundreds/thousands/millions)",
+      "Any specific security requirements?",
+      "What systems need integration?"
+    ],
+    "technical_follow_ups": {
+      "no_preference": "Since you have no preference, would you like me to recommend based on your requirements?",
+      "scaling_clarity": "When you say [scale], is that concurrent users or total users?",
+      "security_specifics": "Are there compliance requirements like HIPAA, PCI, or SOC2?",
+      "integration_details": "What type of integration? API, database, file exchange?"
+    }
+  },
+  "business_model": {
+    "revenue_questions": [
+      "What's your revenue model? (subscription/one-time/freemium/ads)",
+      "Who pays? (end users/businesses/advertisers)",
+      "Price point expectations?",
+      "Growth expectations for year 1?",
+      "Exit strategy considerations?"
+    ],
+    "business_follow_ups": {
+      "pricing_research": "Have you researched what competitors charge?",
+      "user_acquisition": "How will you acquire your first 100 users?",
+      "revenue_timeline": "When do you expect to be revenue positive?"
+    }
+  },
+  "approval_gates": {
+    "templates": {
+      "research_review": "We've completed the research phase with [X] documents totaling [Y] pages. Key findings include [summary]. Do you approve moving to Analysis & Synthesis?",
+      "requirements_review": "The Product Requirements Document is complete with [X] user stories and [Y] technical specifications. Do you approve moving to Project Planning?",
+      "pre_implementation": "Project scaffolding is ready with [technology stack] and [architecture]. Do you approve starting the First Sprint?",
+      "identity_confirmed": "I've verified the project is [description]. The analysis shows [key findings]. Do you approve this understanding?",
+      "scope_approved": "The enhancement scope includes [X] features and [Y] improvements. Timeline is [Z] weeks. Do you approve this scope?"
+    },
+    "response_handling": {
+      "yes": "Great! Moving to the next phase.",
+      "no": "What concerns do you have? Let's address them.",
+      "review": "Take your time. Let me know when you're ready to proceed."
+    }
+  },
+  "error_scenarios": {
+    "ambiguous_response": {
+      "max_clarifications": 5,
+      "escalation": "I'm having trouble understanding. Could you provide a specific example?"
+    },
+    "conflicting_information": {
+      "resolution": "I notice [conflict]. Which should we go with: [option A] or [option B]?"
+    },
+    "scope_creep": {
+      "detection": "This seems to expand beyond our original scope. Should we include [addition]?"
+    },
+    "technical_misunderstanding": {
+      "education": "Let me explain [concept] briefly: [explanation]. Now, [rephrase question]?"
+    }
+  }
+}

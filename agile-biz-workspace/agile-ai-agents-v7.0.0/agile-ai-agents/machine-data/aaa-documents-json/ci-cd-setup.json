@@ -1,0 +1,299 @@
+{
+  "meta": {
+    "document": "ci-cd-setup",
+    "title": "CI/CD Setup Guide for AgileAiAgents",
+    "timestamp": "2025-08-11T22:02:16.863Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/ci-cd-setup.md",
+    "document_type": "general_documentation",
+    "file_hash": "59d200b05edb787952f463114ea54d63",
+    "estimated_tokens": 753,
+    "full_md_tokens": 1411
+  },
+  "summary": "## 🚀 Overview",
+  "sections": [
+    {
+      "title": "🚀 Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#overview",
+      "content_preview": "This guide explains how to set up and use the Continuous Integration and Continuous Deployment (CI/CD) pipelines for AgileAiAgents."
+    },
+    {
+      "title": "📋 GitHub Actions Workflows",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#github-actions-workflows",
+      "content_preview": ""
+    },
+    {
+      "title": "🔧 Setup Requirements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#setup-requirements",
+      "content_preview": ""
+    },
+    {
+      "title": "📦 Version Management",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#version-management",
+      "content_preview": ""
+    },
+    {
+      "title": "🐳 Docker Registry",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#docker-registry",
+      "content_preview": ""
+    },
+    {
+      "title": "📊 Monitoring CI/CD",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#monitoring-cicd",
+      "content_preview": ""
+    },
+    {
+      "title": "🔄 Local CI/CD Testing",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#local-cicd-testing",
+      "content_preview": ""
+    },
+    {
+      "title": "📝 Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Description",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#description",
+      "content_preview": "Brief description of changes"
+    },
+    {
+      "title": "Type of Change",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#type-of-change",
+      "content_preview": "- [ ] Bug fix\n- [ ] New feature\n- [ ] Breaking change\n- [ ] Documentation update"
+    },
+    {
+      "title": "Testing",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#testing",
+      "content_preview": "- [ ] Tests pass locally\n- [ ] Added new tests\n- [ ] Updated documentation"
+    },
+    {
+      "title": "Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#checklist",
+      "content_preview": "- [ ] Code follows style guidelines\n- [ ] Self-reviewed code\n- [ ] No console.log statements\n- [ ] Updated version if needed\n```"
+    },
+    {
+      "title": "🚨 Security Scanning",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#security-scanning",
+      "content_preview": ""
+    },
+    {
+      "title": "📈 Performance Monitoring",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#performance-monitoring",
+      "content_preview": ""
+    },
+    {
+      "title": "🎯 Next Steps",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#next-steps",
+      "content_preview": "1. **Enable all workflows** in your repository\n2. **Add required secrets** for Docker Hub\n3. **Create first release** to test the pipeline\n4. **Monito..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "🚀 Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#overview",
+      "tokens": 33,
+      "content_preview": "This guide explains how to set up and use the Continuous Integration and Continuous Deployment (CI/CD) pipelines for AgileAiAgents."
+    },
+    "📋 GitHub Actions Workflows": {
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#github-actions-workflows",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Test Workflow (`test.yml`)": {
+          "content_preview": "**Triggers:**\n- On push to `main` or `develop` branches\n- On pull requests to `main`\n- Manual trigger via workflow_dispatch\n\n**What it does:**\n- Tests...",
+          "tokens": 95,
+          "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#test-workflow-testyml-1"
+        }
+      }
+    },
+    "🔧 Setup Requirements": {
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#setup-requirements",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "GitHub Repository Settings": {
+          "content_preview": "Enable GitHub Actions:\n1. Go to Settings → Actions → General\n2. Set \"Actions permissions\" to \"Allow all actions\"\n3. Enable \"Read and write permissions...",
+          "tokens": 42,
+          "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#github-repository-settings-1"
+        },
+        "Required Secrets": {
+          "content_preview": "Add these secrets in Settings → Secrets and variables → Actions:\n\n```yaml\nDOCKER_USERNAME    # Docker Hub username\nDOCKER_PASSWORD    # Docker Hub pas...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#required-secrets-1"
+        },
+        "Branch Protection (Recommended)": {
+          "content_preview": "For `main` branch:\n1. Go to Settings → Branches\n2. Add rule for `main`\n3. Enable:\n   - Require pull request reviews\n   - Require status checks to pass...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#branch-protection-recommended-1"
+        }
+      }
+    },
+    "📦 Version Management": {
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#version-management",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Semantic Versioning": {
+          "content_preview": "We follow semantic versioning (MAJOR.MINOR.PATCH):\n- **MAJOR**: Breaking changes\n- **MINOR**: New features (backward compatible)\n- **PATCH**: Bug fixe...",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#semantic-versioning-1"
+        },
+        "Creating a Release": {
+          "content_preview": "1. **Update version in code** (if needed):\n   ```bash\n   # Update version.json manually or via script\n   ```\n\n2. **Create and push tag**:\n   ```bash\n ...",
+          "tokens": 87,
+          "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#creating-a-release-1"
+        }
+      }
+    },
+    "🐳 Docker Registry": {
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#docker-registry",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Docker Hub Setup": {
+          "content_preview": "1. Create account at [hub.docker.com](https://hub.docker.com)\n2. Create repository: `agileaiagents/dashboard`\n3. Generate access token:\n   - Account S...",
+          "tokens": 71,
+          "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#docker-hub-setup-1"
+        },
+        "Published Images": {
+          "content_preview": "After release:\n- `agileaiagents/dashboard:latest` - Latest stable\n- `agileaiagents/dashboard:1.2.0` - Specific version",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#published-images-1"
+        }
+      }
+    },
+    "📊 Monitoring CI/CD": {
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#monitoring-cicd",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Check Workflow Status": {
+          "content_preview": "1. Go to Actions tab in GitHub\n2. View workflow runs\n3. Click on a run for details",
+          "tokens": 21,
+          "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#check-workflow-status-1"
+        },
+        "Troubleshooting": {
+          "content_preview": "**Tests failing:**\n```bash",
+          "tokens": 5,
+          "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#troubleshooting-1"
+        }
+      }
+    },
+    "🔄 Local CI/CD Testing": {
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#local-cicd-testing",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Run CI Tests Locally": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#run-ci-tests-locally-1"
+        }
+      }
+    },
+    "📝 Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Pre-commit Checks": {
+          "content_preview": "Add to `.git/hooks/pre-commit`:\n```bash\n#!/bin/bash\ncd project-dashboard\nnpm run lint\nnpm test\nnpm run diagnose\n```",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#pre-commit-checks-1"
+        },
+        "Commit Messages": {
+          "content_preview": "Use conventional commits:\n- `feat:` New feature\n- `fix:` Bug fix\n- `docs:` Documentation\n- `chore:` Maintenance\n- `test:` Tests\n- `security:` Security...",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#commit-messages-1"
+        },
+        "Pull Request Template": {
+          "content_preview": "Create `.github/pull_request_template.md`:\n```markdown",
+          "tokens": 13,
+          "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#pull-request-template-1"
+        }
+      }
+    },
+    "Description": {
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#description",
+      "tokens": 7,
+      "content_preview": "Brief description of changes"
+    },
+    "Type of Change": {
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#type-of-change",
+      "tokens": 18,
+      "content_preview": "- [ ] Bug fix\n- [ ] New feature\n- [ ] Breaking change\n- [ ] Documentation update"
+    },
+    "Testing": {
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#testing",
+      "tokens": 17,
+      "content_preview": "- [ ] Tests pass locally\n- [ ] Added new tests\n- [ ] Updated documentation"
+    },
+    "Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#checklist",
+      "tokens": 30,
+      "content_preview": "- [ ] Code follows style guidelines\n- [ ] Self-reviewed code\n- [ ] No console.log statements\n- [ ] Updated version if needed\n```"
+    },
+    "🚨 Security Scanning": {
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#security-scanning",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Automated Security Checks": {
+          "content_preview": "1. **npm audit** - Runs on every test\n2. **Trivy scanning** - Container vulnerability scanning\n3. **CodeQL** - Code security analysis (if enabled)",
+          "tokens": 33,
+          "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#automated-security-checks-1"
+        },
+        "Manual Security Check": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#manual-security-check-1"
+        }
+      }
+    },
+    "📈 Performance Monitoring": {
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#performance-monitoring",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Build Time Optimization": {
+          "content_preview": "Monitor and optimize:\n- Docker build cache\n- Dependency installation\n- Test execution time",
+          "tokens": 23,
+          "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#build-time-optimization-1"
+        },
+        "GitHub Actions Insights": {
+          "content_preview": "1. Go to Actions → Insights\n2. View:\n   - Workflow run duration\n   - Success/failure rates\n   - Resource usage",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#github-actions-insights-1"
+        }
+      }
+    },
+    "🎯 Next Steps": {
+      "md_reference": "agile-ai-agents/aaa-documents/ci-cd-setup.md#next-steps",
+      "tokens": 68,
+      "content_preview": "1. **Enable all workflows** in your repository\n2. **Add required secrets** for Docker Hub\n3. **Create first release** to test the pipeline\n4. **Monito..."
+    }
+  }
+}

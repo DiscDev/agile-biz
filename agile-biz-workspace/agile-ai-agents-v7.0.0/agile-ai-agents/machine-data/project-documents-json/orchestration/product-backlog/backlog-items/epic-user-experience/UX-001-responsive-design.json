@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "document": "UX-001-responsive-design",
+    "title": "Responsive Design Implementation",
+    "timestamp": "2025-07-22T01:41:03.733Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-user-experience/UX-001-responsive-design.md",
+    "document_type": "general_documentation",
+    "file_hash": "0c86adaae5bd56bd92b5d672dd218e87",
+    "estimated_tokens": 303,
+    "full_md_tokens": 493
+  },
+  "summary": "**ID**: UX-001",
+  "sections": [
+    {
+      "title": "User Story",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-user-experience/UX-001-responsive-design.md#user-story",
+      "content_preview": "As a user accessing the platform from any device,\nI want the interface to adapt seamlessly to my screen size,\nSo that I have an optimal experience whe..."
+    },
+    {
+      "title": "Acceptance Criteria",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-user-experience/UX-001-responsive-design.md#acceptance-criteria",
+      "content_preview": "- [ ] All pages render correctly on viewport widths 320px to 2560px\n- [ ] Navigation transforms to mobile menu on screens <768px\n- [ ] Images scale ap..."
+    },
+    {
+      "title": "Technical Requirements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-user-experience/UX-001-responsive-design.md#technical-requirements",
+      "content_preview": "- Implement CSS Grid and Flexbox layouts\n- Create responsive breakpoints (320, 768, 1024, 1440, 1920)\n- Use srcset for responsive images\n- Implement c..."
+    },
+    {
+      "title": "Dependencies",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-user-experience/UX-001-responsive-design.md#dependencies",
+      "content_preview": "- Design system must be finalized\n- Component library needs responsive utilities\n- Image optimization pipeline required"
+    },
+    {
+      "title": "Definition of Done",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-user-experience/UX-001-responsive-design.md#definition-of-done",
+      "content_preview": "- [ ] All pages tested across breakpoints\n- [ ] Real device testing completed (iOS, Android)\n- [ ] Performance budgets met on mobile\n- [ ] Accessibili..."
+    },
+    {
+      "title": "Notes",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-user-experience/UX-001-responsive-design.md#notes",
+      "content_preview": "- Consider using CSS Container Queries for component-level responsiveness\n- Plan for foldable devices in future\n- Monitor Core Web Vitals on mobile\n\n-..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "sprint_management"
+  ],
+  "section_details": {
+    "User Story": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-user-experience/UX-001-responsive-design.md#user-story",
+      "tokens": 47,
+      "content_preview": "As a user accessing the platform from any device,\nI want the interface to adapt seamlessly to my screen size,\nSo that I have an optimal experience whe..."
+    },
+    "Acceptance Criteria": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-user-experience/UX-001-responsive-design.md#acceptance-criteria",
+      "tokens": 133,
+      "content_preview": "- [ ] All pages render correctly on viewport widths 320px to 2560px\n- [ ] Navigation transforms to mobile menu on screens <768px\n- [ ] Images scale ap..."
+    },
+    "Technical Requirements": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-user-experience/UX-001-responsive-design.md#technical-requirements",
+      "tokens": 90,
+      "content_preview": "- Implement CSS Grid and Flexbox layouts\n- Create responsive breakpoints (320, 768, 1024, 1440, 1920)\n- Use srcset for responsive images\n- Implement c..."
+    },
+    "Dependencies": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-user-experience/UX-001-responsive-design.md#dependencies",
+      "tokens": 30,
+      "content_preview": "- Design system must be finalized\n- Component library needs responsive utilities\n- Image optimization pipeline required"
+    },
+    "Definition of Done": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-user-experience/UX-001-responsive-design.md#definition-of-done",
+      "tokens": 78,
+      "content_preview": "- [ ] All pages tested across breakpoints\n- [ ] Real device testing completed (iOS, Android)\n- [ ] Performance budgets met on mobile\n- [ ] Accessibili..."
+    },
+    "Notes": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-user-experience/UX-001-responsive-design.md#notes",
+      "tokens": 56,
+      "content_preview": "- Consider using CSS Container Queries for component-level responsiveness\n- Plan for foldable devices in future\n- Monitor Core Web Vitals on mobile\n\n-..."
+    }
+  }
+}

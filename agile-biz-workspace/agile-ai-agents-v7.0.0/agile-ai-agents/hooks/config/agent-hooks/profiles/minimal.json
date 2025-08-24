@@ -1,0 +1,27 @@
+{
+  "name": "minimal",
+  "description": "Only critical security and safety hooks enabled",
+  "performanceBudget": 300,
+  "hooks": {
+    "critical": {
+      "enabled": true,
+      "hooks": {
+        "vulnerability-scanner": true,
+        "secret-rotation-reminder": true,
+        "coverage-gatekeeper": true,
+        "defensive-patterns": true,
+        "deployment-window-enforcer": true,
+        "requirement-completeness": true
+      }
+    },
+    "valuable": {
+      "enabled": false
+    },
+    "enhancement": {
+      "enabled": false
+    },
+    "specialized": {
+      "enabled": false
+    }
+  }
+}

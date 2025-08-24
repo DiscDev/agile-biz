@@ -1,0 +1,86 @@
+template:
+  id: "single-repository"
+  name: "Single Repository (Default)"
+  description: "Start with everything in one repository - recommended for all new projects"
+  
+  structure:
+    "/":
+      - "README.md"
+      - "package.json"
+      - ".gitignore"
+      - ".env.example"
+    
+    "src/":
+      purpose: "Source code"
+      subdirs:
+        - "components/"
+        - "services/"
+        - "utils/"
+        - "config/"
+    
+    "tests/":
+      purpose: "Test files"
+      subdirs:
+        - "unit/"
+        - "integration/"
+        - "e2e/"
+    
+    "docs/":
+      purpose: "Documentation"
+      subdirs:
+        - "api/"
+        - "guides/"
+        - "architecture/"
+    
+    "scripts/":
+      purpose: "Build and utility scripts"
+      files:
+        - "build.sh"
+        - "deploy.sh"
+        - "setup.sh"
+    
+    "public/":
+      purpose: "Static assets"
+      note: "For web projects"
+    
+    ".github/":
+      purpose: "GitHub configuration"
+      subdirs:
+        - "workflows/"
+        - "ISSUE_TEMPLATE/"
+  
+  when_to_use:
+    - "Starting any new project"
+    - "MVP or proof of concept"
+    - "Solo developer or small team"
+    - "Uncertain requirements"
+    - "Rapid prototyping phase"
+  
+  evolution_signals:
+    - "Build time exceeds 10 minutes"
+    - "Multiple team conflicts per week"
+    - "Clear feature boundaries emerge"
+    - "Different deployment needs"
+    - "SEO requirements conflict with app"
+  
+  typical_evolution:
+    week_4_8:
+      trigger: "SEO or deployment needs"
+      next: "marketing-app-split"
+    
+    week_8_12:
+      trigger: "Scaling or team growth"
+      next: "full-separation"
+  
+  advantages:
+    - "Simplest to manage"
+    - "No cross-repo coordination"
+    - "Easy refactoring"
+    - "Single deployment pipeline"
+    - "Shared code is trivial"
+  
+  disadvantages:
+    - "Can become unwieldy"
+    - "Mixed concerns"
+    - "Single point of failure"
+    - "Deployment affects everything"

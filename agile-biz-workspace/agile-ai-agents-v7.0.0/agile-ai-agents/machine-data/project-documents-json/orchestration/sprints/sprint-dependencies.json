@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "document": "sprint-dependencies",
+    "title": "Sprint Dependencies",
+    "timestamp": "2025-07-22T01:41:03.752Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/sprint-dependencies.md",
+    "document_type": "general_documentation",
+    "file_hash": "7885ed955156a7671390343871c76737",
+    "estimated_tokens": 325,
+    "full_md_tokens": 216
+  },
+  "summary": "This document tracks dependencies between sprints to ensure proper sequencing and risk management.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-dependencies.md#overview",
+      "content_preview": "This document tracks dependencies between sprints to ensure proper sequencing and risk management."
+    },
+    {
+      "title": "Dependency Format",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-dependencies.md#dependency-format",
+      "content_preview": "Each sprint should list what it depends on and what depends on it."
+    },
+    {
+      "title": "Active Dependencies",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-dependencies.md#active-dependencies",
+      "content_preview": ""
+    },
+    {
+      "title": "Dependency Graph",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-dependencies.md#dependency-graph",
+      "content_preview": "To be maintained as sprints are added."
+    },
+    {
+      "title": "Risk Matrix",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-dependencies.md#risk-matrix",
+      "content_preview": "| Sprint | Dependency Count | Risk Level | Mitigation |\n|--------|------------------|------------|------------|\n| - | - | - | - |"
+    },
+    {
+      "title": "Notes",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-dependencies.md#notes",
+      "content_preview": "- Dependencies should be reviewed during sprint planning\n- Update this document when new dependencies are identified\n- Consider dependency risks in sp..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-dependencies.md#overview",
+      "tokens": 25,
+      "content_preview": "This document tracks dependencies between sprints to ensure proper sequencing and risk management."
+    },
+    "Dependency Format": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-dependencies.md#dependency-format",
+      "tokens": 17,
+      "content_preview": "Each sprint should list what it depends on and what depends on it."
+    },
+    "Active Dependencies": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-dependencies.md#active-dependencies",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Example Format:": {
+          "content_preview": "```",
+          "tokens": 0,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-dependencies.md#example-format-1"
+        },
+        "sprint-YYYY-MM-DD-feature-name": {
+          "content_preview": "**Depends On**:\n- sprint-YYYY-MM-DD-prerequisite: Reason for dependency\n- External system X: Must be available\n\n**Required By**:\n- sprint-YYYY-MM-DD-d...",
+          "tokens": 48,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-dependencies.md#sprint-yyyy-mm-dd-feature-name-1"
+        }
+      }
+    },
+    "Dependency Graph": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-dependencies.md#dependency-graph",
+      "tokens": 10,
+      "content_preview": "To be maintained as sprints are added."
+    },
+    "Risk Matrix": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-dependencies.md#risk-matrix",
+      "tokens": 33,
+      "content_preview": "| Sprint | Dependency Count | Risk Level | Mitigation |\n|--------|------------------|------------|------------|\n| - | - | - | - |"
+    },
+    "Notes": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-dependencies.md#notes",
+      "tokens": 43,
+      "content_preview": "- Dependencies should be reviewed during sprint planning\n- Update this document when new dependencies are identified\n- Consider dependency risks in sp..."
+    }
+  }
+}

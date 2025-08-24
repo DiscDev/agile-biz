@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "document": "TEMPLATE-backlog-item",
+    "title": "[Title]",
+    "timestamp": "2025-07-22T01:41:03.731Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/TEMPLATE-backlog-item.md",
+    "document_type": "general_documentation",
+    "file_hash": "ac17279281238f217018c21b88f40bc7",
+    "estimated_tokens": 303,
+    "full_md_tokens": 303
+  },
+  "summary": "**ID**: [EPIC-###]",
+  "sections": [
+    {
+      "title": "User Story",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/TEMPLATE-backlog-item.md#user-story",
+      "content_preview": "As a [type of user],\nI want [goal/desire],\nSo that [benefit/value]."
+    },
+    {
+      "title": "Acceptance Criteria",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/TEMPLATE-backlog-item.md#acceptance-criteria",
+      "content_preview": "- [ ] [Specific measurable outcome]\n- [ ] [Another measurable outcome]\n- [ ] [Include edge cases]\n- [ ] [Performance requirements]\n- [ ] [Accessibilit..."
+    },
+    {
+      "title": "Technical Requirements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/TEMPLATE-backlog-item.md#technical-requirements",
+      "content_preview": "- [Implementation detail]\n- [Technology/framework requirement]\n- [Integration requirement]\n- [Security consideration]\n- [Performance constraint]"
+    },
+    {
+      "title": "Dependencies",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/TEMPLATE-backlog-item.md#dependencies",
+      "content_preview": "- [Item ID] - [Description of dependency]\n- [External dependency]\n- [Resource requirement]"
+    },
+    {
+      "title": "Definition of Done",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/TEMPLATE-backlog-item.md#definition-of-done",
+      "content_preview": "- [ ] Code implemented and reviewed\n- [ ] Unit tests written (>[X]% coverage)\n- [ ] Integration tests passing\n- [ ] Documentation updated\n- [ ] Securi..."
+    },
+    {
+      "title": "Notes",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/TEMPLATE-backlog-item.md#notes",
+      "content_preview": "- [Additional context]\n- [Future considerations]\n- [Known limitations]\n\n---\n\n**Created**: [YYYY-MM-DD]\n**Last Updated**: [YYYY-MM-DD]\n**Updated By**: ..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "User Story": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/TEMPLATE-backlog-item.md#user-story",
+      "tokens": 16,
+      "content_preview": "As a [type of user],\nI want [goal/desire],\nSo that [benefit/value]."
+    },
+    "Acceptance Criteria": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/TEMPLATE-backlog-item.md#acceptance-criteria",
+      "tokens": 46,
+      "content_preview": "- [ ] [Specific measurable outcome]\n- [ ] [Another measurable outcome]\n- [ ] [Include edge cases]\n- [ ] [Performance requirements]\n- [ ] [Accessibilit..."
+    },
+    "Technical Requirements": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/TEMPLATE-backlog-item.md#technical-requirements",
+      "tokens": 34,
+      "content_preview": "- [Implementation detail]\n- [Technology/framework requirement]\n- [Integration requirement]\n- [Security consideration]\n- [Performance constraint]"
+    },
+    "Dependencies": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/TEMPLATE-backlog-item.md#dependencies",
+      "tokens": 21,
+      "content_preview": "- [Item ID] - [Description of dependency]\n- [External dependency]\n- [Resource requirement]"
+    },
+    "Definition of Done": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/TEMPLATE-backlog-item.md#definition-of-done",
+      "tokens": 73,
+      "content_preview": "- [ ] Code implemented and reviewed\n- [ ] Unit tests written (>[X]% coverage)\n- [ ] Integration tests passing\n- [ ] Documentation updated\n- [ ] Securi..."
+    },
+    "Notes": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/TEMPLATE-backlog-item.md#notes",
+      "tokens": 35,
+      "content_preview": "- [Additional context]\n- [Future considerations]\n- [Known limitations]\n\n---\n\n**Created**: [YYYY-MM-DD]\n**Last Updated**: [YYYY-MM-DD]\n**Updated By**: ..."
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "meta": {
+    "document": "development-agent-example",
+    "title": "API Authentication Implementation Guide",
+    "timestamp": "2025-08-11T22:02:16.899Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md",
+    "document_type": "guide",
+    "file_hash": "a565b848fc11a01dad3f8a4ff41c7d69",
+    "estimated_tokens": 381,
+    "full_md_tokens": 1809
+  },
+  "summary": "This guide demonstrates how Development Agents should format technical documentation using GitHub markdown best practices.",
+  "sections": [
+    {
+      "title": "Table of Contents",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#table-of-contents",
+      "content_preview": "* [Overview](#overview)\n* [Quick Start](#quick-start)\n* [Configuration](#configuration)\n* [Implementation](#implementation)\n* [Testing](#testing)\n* [T..."
+    },
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#overview",
+      "content_preview": "This guide demonstrates how Development Agents should format technical documentation using GitHub markdown best practices."
+    },
+    {
+      "title": "Quick Start",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#quick-start",
+      "content_preview": ""
+    },
+    {
+      "title": "Configuration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#configuration",
+      "content_preview": ""
+    },
+    {
+      "title": "Implementation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#implementation",
+      "content_preview": ""
+    },
+    {
+      "title": "Testing",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#testing",
+      "content_preview": ""
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#troubleshooting",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Table of Contents": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#table-of-contents",
+      "tokens": 37,
+      "content_preview": "* [Overview](#overview)\n* [Quick Start](#quick-start)\n* [Configuration](#configuration)\n* [Implementation](#implementation)\n* [Testing](#testing)\n* [T..."
+    },
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#overview",
+      "tokens": 31,
+      "content_preview": "This guide demonstrates how Development Agents should format technical documentation using GitHub markdown best practices."
+    },
+    "Quick Start": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#quick-start",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Installation": {
+          "content_preview": "```bash\nnpm install @agileai/auth-service\n```",
+          "tokens": 10,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#installation-1"
+        },
+        "Basic Setup": {
+          "content_preview": "```javascript\nconst AuthService = require('@agileai/auth-service');\n\nconst auth = new AuthService({\n  secret: process.env.JWT_SECRET,\n  expiration: '2...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#basic-setup-1"
+        }
+      }
+    },
+    "Configuration": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#configuration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Environment Variables": {
+          "content_preview": "| Variable | Required | Default | Description |\n|:---------|:--------:|:--------|:------------|\n| JWT_SECRET | Yes | - | Secret key for token signing ...",
+          "tokens": 66,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#environment-variables-1"
+        },
+        "Advanced Configuration": {
+          "content_preview": "<details>\n<summary>Complete Configuration Options</summary>\n\n```javascript\nconst config = {\n  // Core settings\n  secret: process.env.JWT_SECRET,\n  exp...",
+          "tokens": 139,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#advanced-configuration-1"
+        }
+      }
+    },
+    "Implementation": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#implementation",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Step-by-Step Implementation": {
+          "content_preview": "* [ ] Install dependencies\n* [ ] Configure environment variables\n* [ ] Initialize auth service\n* [ ] Implement login endpoint\n* [ ] Implement logout e...",
+          "tokens": 57,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#step-by-step-implementation-1"
+        },
+        "Login Endpoint": {
+          "content_preview": "```javascript\napp.post('/api/auth/login', async (req, res) => {\n  try {\n    const { email, password } = req.body;\n    \n    // Validate input\n    if (!...",
+          "tokens": 222,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#login-endpoint-1"
+        },
+        "Middleware Protection": {
+          "content_preview": "```javascript\nconst authMiddleware = (req, res, next) => {\n  const token = req.headers.authorization?.replace('Bearer ', '');\n  \n  if (!token) {\n    r...",
+          "tokens": 132,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#middleware-protection-1"
+        }
+      }
+    },
+    "Testing": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#testing",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Test Configuration": {
+          "content_preview": "```javascript\n// test/auth.test.js\nconst request = require('supertest');\nconst app = require('../app');\nconst AuthService = require('../src/auth-servi...",
+          "tokens": 273,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#test-configuration-1"
+        },
+        "Test Results Matrix": {
+          "content_preview": "| Test Case | Status | Coverage | Performance |\n|:----------|:------:|:--------:|:-----------:|\n| Valid login | ✅ Pass | 100% | <50ms |\n| Invalid cred...",
+          "tokens": 78,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#test-results-matrix-1"
+        },
+        "Performance Benchmarks": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#performance-benchmarks-1"
+        }
+      }
+    },
+    "Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Common Issues": {
+          "content_preview": "**Symptoms:**\n* Previously working tokens suddenly fail\n* Users logged out unexpectedly\n\n**Solutions:**\n\n<details>\n<summary>Token Refresh Implementati...",
+          "tokens": 146,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#common-issues-3"
+        },
+        "Debug Mode": {
+          "content_preview": "Enable debug logging for troubleshooting:\n\n```javascript\nconst auth = new AuthService({\n  secret: process.env.JWT_SECRET,\n  debug: true // Enable debu...",
+          "tokens": 53,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#debug-mode-1"
+        },
+        "Health Check": {
+          "content_preview": "```javascript\napp.get('/api/auth/health', (req, res) => {\n  const health = {\n    status: 'ok',\n    timestamp: new Date().toISOString(),\n    services: ...",
+          "tokens": 145,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/development-agent-example.md#health-check-1"
+        }
+      }
+    }
+  }
+}

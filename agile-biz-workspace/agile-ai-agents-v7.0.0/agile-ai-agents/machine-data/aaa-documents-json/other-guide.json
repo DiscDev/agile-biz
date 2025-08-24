@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "document": "other-guide",
+    "title": "Other Guide",
+    "timestamp": "2025-08-11T22:02:16.908Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/other-guide.md",
+    "document_type": "guide",
+    "file_hash": "15f82ac2ca7284a3ab369d5848248388",
+    "estimated_tokens": 60,
+    "full_md_tokens": 35
+  },
+  "summary": "Update relevant documentation for other",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/other-guide.md#overview",
+      "content_preview": "Update relevant documentation for other"
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "general_reference"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/other-guide.md#overview",
+      "tokens": 10,
+      "content_preview": "Update relevant documentation for other"
+    }
+  }
+}

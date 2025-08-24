@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "document": "action-items",
+    "title": "Sprint Retrospective Action Items",
+    "timestamp": "2025-07-22T01:41:03.747Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/action-items.md",
+    "document_type": "general_documentation",
+    "file_hash": "c3ceccc8fd66d15cb56e12dda3a993fe",
+    "estimated_tokens": 62,
+    "full_md_tokens": 548
+  },
+  "summary": "## Sprint: 2025-01-09 - Authentication Foundation",
+  "sections": [
+    {
+      "title": "Sprint: 2025-01-09 - Authentication Foundation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/action-items.md#sprint-2025-01-09-authentication-foundation",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Sprint: 2025-01-09 - Authentication Foundation": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/action-items.md#sprint-2025-01-09-authentication-foundation",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Immediate Actions (Sprint 2, Day 1-2)": {
+          "content_preview": "**Owner**: Coder Agent  \n**Due**: Sprint 2, Day 1  \n**Priority**: Medium  \n**Description**:\n- Create standardized review checklist\n- Include security ...",
+          "tokens": 52,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/action-items.md#immediate-actions-sprint-2-day-1-2-4"
+        },
+        "Ongoing Improvements": {
+          "content_preview": "**Owner**: Coder Agent  \n**Due**: Sprint 3  \n**Priority**: Low  \n**Description**:\n- Analyze current cleanup process\n- Implement background job\n- Add p...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/action-items.md#ongoing-improvements-3"
+        },
+        "Process Improvements": {
+          "content_preview": "**Owner**: Scrum Master Agent  \n**Due**: Before Sprint 2  \n**Priority**: High  \n**Description**:\n- Define branch naming conventions\n- Create merge str...",
+          "tokens": 52,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/action-items.md#process-improvements-2"
+        },
+        "New Backlog Items Created": {
+          "content_preview": "From this retrospective, the following items have been added to the product backlog:\n\n1. **TECH-001**: Comprehensive Error Handling Framework (5 point...",
+          "tokens": 79,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/action-items.md#new-backlog-items-created-1"
+        },
+        "Follow-up Schedule": {
+          "content_preview": "- **Day 3 Check-in**: Review progress on high-priority items\n- **Day 5 Check-in**: Assess completion status\n- **Sprint 2 Planning**: Include uncomplet...",
+          "tokens": 57,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/retrospectives/action-items.md#follow-up-schedule-1"
+        }
+      }
+    }
+  }
+}

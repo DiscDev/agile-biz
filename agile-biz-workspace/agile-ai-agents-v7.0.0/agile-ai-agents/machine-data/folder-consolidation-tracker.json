@@ -1,0 +1,52 @@
+{
+  "version": "1.0.0",
+  "description": "Tracks dynamically created folders and consolidation suggestions",
+  "last_updated": "2025-08-13",
+  
+  "created_folders": [],
+  
+  "suggestions": [],
+  
+  "consolidation_history": [],
+  
+  "creation_log": [],
+  
+  "metrics": {
+    "total_folders_created": 0,
+    "consolidations_suggested": 0,
+    "consolidations_applied": 0,
+    "folders_saved": 0,
+    "similarity_matches": 0,
+    "dynamic_creations": 0,
+    "learned_patterns": 0
+  },
+  
+  "configuration": {
+    "consolidation_threshold": 5,
+    "similarity_threshold": 0.8,
+    "review_frequency_days": 7,
+    "max_folder_depth": 4,
+    "auto_consolidate": false,
+    "notify_on_suggestion": true
+  },
+  
+  "folder_patterns": {
+    "client_specific": [],
+    "domain_specific": [],
+    "feature_specific": [],
+    "temporary": []
+  },
+  
+  "learning_data": {
+    "successful_consolidations": [],
+    "rejected_consolidations": [],
+    "folder_usage_stats": {},
+    "pattern_effectiveness": {}
+  },
+  
+  "scheduled_reviews": {
+    "next_review": null,
+    "pending_reviews": [],
+    "completed_reviews": []
+  }
+}

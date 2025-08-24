@@ -1,0 +1,279 @@
+{
+  "meta": {
+    "document": "analysis-integration-sub-agents-guide",
+    "title": "Analysis & Integration Sub-Agents Guide",
+    "timestamp": "2025-08-11T22:02:16.858Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md",
+    "document_type": "guide",
+    "file_hash": "785483352ed60bec53554b96b4b9c89c",
+    "estimated_tokens": 701,
+    "full_md_tokens": 1652
+  },
+  "summary": "The Analysis & Integration sub-agent systems enable parallel execution of project analysis and API integration tasks, achieving 70-78% time reduction while maintaining comprehensive coverage and quality.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#overview",
+      "content_preview": "The Analysis & Integration sub-agent systems enable parallel execution of project analysis and API integration tasks, achieving 70-78% time reduction ..."
+    },
+    {
+      "title": "Project Analysis Sub-Agents",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#project-analysis-sub-agents",
+      "content_preview": ""
+    },
+    {
+      "title": "Executive Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#executive-summary",
+      "content_preview": "- High-priority findings with severity scores\n- Quick wins and critical fixes\n- Strategic recommendations"
+    },
+    {
+      "title": "Detailed Analysis by Category",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#detailed-analysis-by-category",
+      "content_preview": ""
+    },
+    {
+      "title": "Recommended Next Steps",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#recommended-next-steps",
+      "content_preview": "1. Immediate actions (security fixes)\n2. Short-term improvements (quick wins)\n3. Medium-term planning (refactoring)\n4. Long-term strategy (architectur..."
+    },
+    {
+      "title": "Integration Sub-Agents",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#integration-sub-agents",
+      "content_preview": ""
+    },
+    {
+      "title": "Combined Workflow",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#combined-workflow",
+      "content_preview": ""
+    },
+    {
+      "title": "Configuration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#configuration",
+      "content_preview": ""
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "Performance Metrics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#performance-metrics",
+      "content_preview": ""
+    },
+    {
+      "title": "Future Enhancements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#future-enhancements",
+      "content_preview": "1. **Smart Categorization**: AI-driven analysis focus\n2. **Predictive Integration**: Suggest APIs based on analysis\n3. **Cross-Analysis Insights**: Co..."
+    },
+    {
+      "title": "Related Documentation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#related-documentation",
+      "content_preview": "- [Sub-Agent System Guide](sub-agent-system-guide.md)\n- [Project Analysis Orchestrator](../machine-data/project-analysis-orchestrator.js)\n- [Integrati..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#overview",
+      "tokens": 51,
+      "content_preview": "The Analysis & Integration sub-agent systems enable parallel execution of project analysis and API integration tasks, achieving 70-78% time reduction ..."
+    },
+    "Project Analysis Sub-Agents": {
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#project-analysis-sub-agents",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "How It Works": {
+          "content_preview": "The Project Analysis Orchestrator deploys multiple sub-agents to analyze different aspects of a project simultaneously:\n\n```yaml\nanalysis_categories:\n...",
+          "tokens": 122,
+          "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#how-it-works-1"
+        },
+        "Analysis Levels": {
+          "content_preview": "- 12+ parallel sub-agents\n- Line-by-line review\n- Includes scalability, maintainability, documentation\n- 75% time reduction",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#analysis-levels-4"
+        },
+        "Analysis Process": {
+          "content_preview": "1. **Categorization**: Project aspects divided into analysis domains\n2. **Token Allocation**: Budget assigned based on complexity\n3. **Parallel Execut...",
+          "tokens": 71,
+          "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#analysis-process-1"
+        },
+        "Sample Analysis Report Structure": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#sample-analysis-report-structure-1"
+        }
+      }
+    },
+    "Executive Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#executive-summary",
+      "tokens": 27,
+      "content_preview": "- High-priority findings with severity scores\n- Quick wins and critical fixes\n- Strategic recommendations"
+    },
+    "Detailed Analysis by Category": {
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#detailed-analysis-by-category",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Architecture": {
+          "content_preview": "- System design assessment\n- Pattern identification\n- Scalability evaluation",
+          "tokens": 19,
+          "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#architecture-1"
+        },
+        "Security": {
+          "content_preview": "- Vulnerability scan results\n- OWASP compliance check\n- Authentication analysis",
+          "tokens": 20,
+          "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#security-1"
+        },
+        "Performance": {
+          "content_preview": "- Bottleneck identification\n- Query optimization opportunities\n- Caching recommendations\n\n[Additional categories...]",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#performance-1"
+        }
+      }
+    },
+    "Recommended Next Steps": {
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#recommended-next-steps",
+      "tokens": 37,
+      "content_preview": "1. Immediate actions (security fixes)\n2. Short-term improvements (quick wins)\n3. Medium-term planning (refactoring)\n4. Long-term strategy (architectur..."
+    },
+    "Integration Sub-Agents": {
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#integration-sub-agents",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "How It Works": {
+          "content_preview": "The Integration Orchestrator manages parallel setup of multiple API integrations:\n\n```yaml\nintegration_categories:\n  - authentication  # OAuth, JWT, S...",
+          "tokens": 103,
+          "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#how-it-works-3"
+        },
+        "Integration Process": {
+          "content_preview": "1. **API Categorization**: Group by functionality\n2. **Bundle Related APIs**: Efficient sub-agent allocation\n3. **Parallel Configuration**: All catego...",
+          "tokens": 63,
+          "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#integration-process-1"
+        },
+        "Integration Outputs": {
+          "content_preview": "Each integration includes:\n- Configuration code with error handling\n- Environment variable templates\n- Test suites (unit + integration)\n- API document...",
+          "tokens": 51,
+          "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#integration-outputs-1"
+        },
+        "Example Integration Timeline": {
+          "content_preview": "**8 APIs to integrate (Auth0, Stripe, SendGrid, Twilio, S3, OpenAI, Sentry, Google Analytics)**\n\n**Sequential Approach**: 4 hours (30 min each)\n**Para...",
+          "tokens": 49,
+          "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#example-integration-timeline-1"
+        }
+      }
+    },
+    "Combined Workflow": {
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#combined-workflow",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Analysis → Integration Pipeline": {
+          "content_preview": "1. **Phase 1: Parallel Analysis** (45 minutes)\n   - Architecture analysis reveals microservices need\n   - Security analysis identifies auth improvemen...",
+          "tokens": 103,
+          "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#analysis-integration-pipeline-1"
+        }
+      }
+    },
+    "Configuration": {
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#configuration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Enable in CLAUDE.md": {
+          "content_preview": "```yaml\nsub_agents:\n  project_analysis:\n    enabled: true\n    analysis_levels:\n      standard: [\"architecture\", \"code-quality\", \"security\", \"performan...",
+          "tokens": 85,
+          "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#enable-in-claudemd-1"
+        },
+        "Token Budget Allocation": {
+          "content_preview": "```javascript\n// Analysis tasks\nconst analysisComplexity = {\n  'architecture': 1.2,      // 20% more tokens\n  'code-quality': 1.5,      // 50% more fo...",
+          "tokens": 111,
+          "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#token-budget-allocation-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "For Analysis": {
+          "content_preview": "1. **Start with Standard Level**: Balance of speed and thoroughness\n2. **Review Priorities First**: Address critical findings immediately\n3. **Use Dee...",
+          "tokens": 64,
+          "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#for-analysis-1"
+        },
+        "For Integration": {
+          "content_preview": "1. **Group Related APIs**: Auth + user management together\n2. **Prioritize Core Services**: Authentication before analytics\n3. **Test in Isolation**: ...",
+          "tokens": 58,
+          "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#for-integration-1"
+        }
+      }
+    },
+    "Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Common Issues": {
+          "content_preview": "**Issue**: Analysis taking longer than expected\n**Solution**: Check project size, adjust timeout settings\n\n**Issue**: Integration conflicts between AP...",
+          "tokens": 96,
+          "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#common-issues-1"
+        }
+      }
+    },
+    "Performance Metrics": {
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#performance-metrics",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Analysis Performance": {
+          "content_preview": "- Quick: 10-20 minutes (67% faster)\n- Standard: 30-60 minutes (75% faster)\n- Deep: 1-2 hours (75% faster)",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#analysis-performance-1"
+        },
+        "Integration Performance": {
+          "content_preview": "- Average setup time: 45 minutes\n- APIs per hour: 10-12 (vs 2-3 sequential)\n- Documentation generation: Automated\n- Test coverage: 100% for all integr...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#integration-performance-1"
+        }
+      }
+    },
+    "Future Enhancements": {
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#future-enhancements",
+      "tokens": 56,
+      "content_preview": "1. **Smart Categorization**: AI-driven analysis focus\n2. **Predictive Integration**: Suggest APIs based on analysis\n3. **Cross-Analysis Insights**: Co..."
+    },
+    "Related Documentation": {
+      "md_reference": "agile-ai-agents/aaa-documents/analysis-integration-sub-agents-guide.md#related-documentation",
+      "tokens": 66,
+      "content_preview": "- [Sub-Agent System Guide](sub-agent-system-guide.md)\n- [Project Analysis Orchestrator](../machine-data/project-analysis-orchestrator.js)\n- [Integrati..."
+    }
+  }
+}

@@ -1,0 +1,137 @@
+name: "Node.js Microservices"
+category: "microservices"
+description: "Microservices architecture with Node.js, ideal for scalable distributed systems"
+tech_stack:
+  architecture: "Microservices"
+  services: "Node.js + Express"
+  api_gateway: "Express Gateway / Kong"
+  messaging: "RabbitMQ / Redis"
+  database: "MongoDB per service"
+  deployment: "Docker + Kubernetes"
+
+structure:
+  - path: "services/"
+    type: "directory"
+    description: "Individual microservices"
+    subdirs:
+      - "auth-service/"
+      - "user-service/"
+      - "product-service/"
+      - "order-service/"
+      - "payment-service/"
+      - "notification-service/"
+    
+  - path: "api-gateway/"
+    type: "directory"
+    description: "API Gateway for routing and authentication"
+    init_command: "npm init -y && npm install express http-proxy-middleware"
+    
+  - path: "shared/"
+    type: "directory"
+    description: "Shared libraries and utilities"
+    subdirs:
+      - "models/"
+      - "utils/"
+      - "middleware/"
+      - "constants/"
+    
+  - path: "infrastructure/"
+    type: "directory"
+    description: "Infrastructure as Code"
+    subdirs:
+      - "docker/"
+      - "kubernetes/"
+      - "terraform/"
+    
+  - path: "scripts/"
+    type: "directory"
+    description: "Deployment and utility scripts"
+    files:
+      - "start-all.sh"
+      - "stop-all.sh"
+      - "deploy.sh"
+    
+  - path: "docker-compose.yml"
+    type: "file"
+    template: "docker-compose.yml"
+    description: "Local development orchestration"
+    
+  - path: "docker-compose.prod.yml"
+    type: "file"
+    template: "docker-compose.prod.yml"
+    description: "Production orchestration"
+    
+  - path: ".env.example"
+    type: "file"
+    template: "env-example"
+    description: "Environment variables template"
+    
+  - path: "README.md"
+    type: "file"
+    template: "readme.md"
+    description: "Project documentation"
+
+service_template:
+  structure:
+    - "src/"
+    - "src/controllers/"
+    - "src/models/"
+    - "src/routes/"
+    - "src/services/"
+    - "src/middleware/"
+    - "src/utils/"
+    - "tests/"
+    - "Dockerfile"
+    - "package.json"
+    - ".env.example"
+
+init_commands:
+  - description: "Initialize each service"
+    command: |
+      for service in auth user product order payment notification; do
+        mkdir -p services/${service}-service/src/{controllers,models,routes,services,middleware,utils}
+        cd services/${service}-service && npm init -y && cd ../..
+      done
+
+post_init_commands:
+  - description: "Install base dependencies for each service"
+    command: |
+      for service in auth user product order payment notification; do
+        cd services/${service}-service
+        npm install express mongoose dotenv cors helmet compression
+        npm install -D nodemon jest supertest
+        cd ../..
+      done
+  - description: "Install API Gateway dependencies"
+    command: "cd api-gateway && npm install express-gateway cors helmet"
+  - description: "Install message broker client"
+    command: |
+      for service in auth user product order payment notification; do
+        cd services/${service}-service && npm install amqplib && cd ../..
+      done
+
+development_ports:
+  api_gateway: 3000
+  auth_service: 3001
+  user_service: 3002
+  product_service: 3003
+  order_service: 3004
+  payment_service: 3005
+  notification_service: 3006
+  rabbitmq_management: 15672
+  mongodb: 27017
+
+messaging_patterns:
+  - event_driven: "Service communication via RabbitMQ"
+  - request_reply: "Synchronous communication via HTTP"
+  - saga_pattern: "Distributed transactions"
+  - event_sourcing: "Event store for audit trail"
+
+benefits:
+  - "Independent deployment and scaling of services"
+  - "Technology diversity - use best tool for each service"
+  - "Fault isolation - one service failure doesn't crash system"
+  - "Team autonomy - teams own their services"
+  - "Easy to understand and modify individual services"
+  - "Better resource utilization"
+  - "Supports continuous deployment"

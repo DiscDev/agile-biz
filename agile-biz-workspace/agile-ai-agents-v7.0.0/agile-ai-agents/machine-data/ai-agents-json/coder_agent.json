@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "agent": "coder_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 231,
+    "full_md_tokens": 10947,
+    "md_file": "agile-ai-agents/ai-agents/coder_agent.md",
+    "file_hash": "9b6e100792865bcda77ec52503a68dcd"
+  },
+  "summary": "## Overview\nThe Coder Agent specializes in software implementation, code quality, and technical architecture. This agent focuses on the HOW of building software solutions, translating requirements into working code while maintaining high quality standards.",
+  "core_responsibilities": {
+    "summary": [
+      "Code Development & Implementation"
+    ],
+    "details_tokens": 43,
+    "md_reference": "agile-ai-agents/ai-agents/coder_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "Application Setup with Dynamic Port Management (NEW CRITICAL REQUIREMENT) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/coder_agent.md#application-setup-with-dynamic-port-management-new-critical-requirement-workflow"
+      },
+      {
+        "name": "Latest Dependencies Research & Implementation Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/coder_agent.md#latest-dependencies-research-implementation-workflow"
+      },
+      {
+        "name": "Feature Development Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/coder_agent.md#feature-development-workflow"
+      },
+      {
+        "name": "Bug Fix Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/coder_agent.md#bug-fix-workflow"
+      },
+      {
+        "name": "Code Refactoring Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/coder_agent.md#code-refactoring-workflow"
+      },
+      {
+        "name": "Port Configuration Implementation Workflow (CRITICAL FOR MULTI-PROJECT) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/coder_agent.md#port-configuration-implementation-workflow-critical-for-multi-project-workflow"
+      },
+      {
+        "name": "GitHub MCP Development Workflow (WHEN CONFIGURED) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/coder_agent.md#github-mcp-development-workflow-when-configured-workflow"
+      },
+      {
+        "name": "Context7 MCP Documentation-Driven Development Workflow (WHEN CONFIGURED) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/coder_agent.md#context7-mcp-documentation-driven-development-workflow-when-configured-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/coder_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/coder_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

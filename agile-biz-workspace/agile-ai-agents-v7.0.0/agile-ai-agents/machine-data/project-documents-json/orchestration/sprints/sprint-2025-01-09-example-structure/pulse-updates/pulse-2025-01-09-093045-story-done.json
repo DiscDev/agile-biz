@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "document": "pulse-2025-01-09-093045-story-done",
+    "title": "Sprint Pulse Update #002",
+    "timestamp": "2025-07-22T01:41:03.745Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-093045-story-done.md",
+    "document_type": "general_documentation",
+    "file_hash": "31d1f399e3f9a24597b168b86911f85b",
+    "estimated_tokens": 256,
+    "full_md_tokens": 233
+  },
+  "summary": "**Trigger**: story_completed",
+  "sections": [
+    {
+      "title": "Current State",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-093045-story-done.md#current-state",
+      "content_preview": "- **Active WIP**: \n  - Creating sprint planning templates (2 points) - 50% complete\n  - Setting up folder structure (5 points) - 20% complete\n- **Comp..."
+    },
+    {
+      "title": "Key Events",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-093045-story-done.md#key-events",
+      "content_preview": "- First story completed: \"Initialize sprint structure\"\n- Folder hierarchy established successfully\n- All required subfolders created and validated"
+    },
+    {
+      "title": "Story Details",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-093045-story-done.md#story-details",
+      "content_preview": "**Completed Story**: Initialize sprint structure\n- **Points**: 3\n- **Duration**: 30 minutes AI time\n- **Agent**: Documentation Agent\n- **Outcome**: Ba..."
+    },
+    {
+      "title": "Blockers/Risks",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-093045-story-done.md#blockersrisks",
+      "content_preview": "- None currently"
+    },
+    {
+      "title": "Next Actions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-093045-story-done.md#next-actions",
+      "content_preview": "- Continue work on planning templates\n- Begin creating example retrospective documents\n- Prepare for 20% milestone pulse (4 points)"
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Current State": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-093045-story-done.md#current-state",
+      "tokens": 62,
+      "content_preview": "- **Active WIP**: \n  - Creating sprint planning templates (2 points) - 50% complete\n  - Setting up folder structure (5 points) - 20% complete\n- **Comp..."
+    },
+    "Key Events": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-093045-story-done.md#key-events",
+      "tokens": 37,
+      "content_preview": "- First story completed: \"Initialize sprint structure\"\n- Folder hierarchy established successfully\n- All required subfolders created and validated"
+    },
+    "Story Details": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-093045-story-done.md#story-details",
+      "tokens": 41,
+      "content_preview": "**Completed Story**: Initialize sprint structure\n- **Points**: 3\n- **Duration**: 30 minutes AI time\n- **Agent**: Documentation Agent\n- **Outcome**: Ba..."
+    },
+    "Blockers/Risks": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-093045-story-done.md#blockersrisks",
+      "tokens": 4,
+      "content_preview": "- None currently"
+    },
+    "Next Actions": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-093045-story-done.md#next-actions",
+      "tokens": 33,
+      "content_preview": "- Continue work on planning templates\n- Begin creating example retrospective documents\n- Prepare for 20% milestone pulse (4 points)"
+    }
+  }
+}

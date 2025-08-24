@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "agent": "llm_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 219,
+    "full_md_tokens": 8893,
+    "md_file": "agile-ai-agents/ai-agents/llm_agent.md",
+    "file_hash": "24b772ad3f5ac9fa716ada5dcd55e91f"
+  },
+  "summary": "## Overview\nThe LLM Agent specializes in researching, evaluating, and recommending the optimal Large Language Model (LLM) for applications that integrate AI capabilities. This agent analyzes application requirements, conducts cost-benefit analysis, and provides comprehensive recommendations for LLM selection and implementation.",
+  "core_responsibilities": {
+    "summary": [
+      "Dual-Purpose LLM Research (PRIMARY FOCUS)",
+      "LLM Research & Analysis",
+      "Application-Specific LLM Matching",
+      "Financial & Operational Analysis"
+    ],
+    "details_tokens": 559,
+    "md_reference": "agile-ai-agents/ai-agents/llm_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "Dual-Purpose LLM Research Workflow (PRIMARY WORKFLOW) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/llm_agent.md#dual-purpose-llm-research-workflow-primary-workflow-workflow"
+      },
+      {
+        "name": "LLM Performance Testing Workflow (Feature Validation) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/llm_agent.md#llm-performance-testing-workflow-feature-validation-workflow"
+      },
+      {
+        "name": "Comprehensive LLM Selection Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/llm_agent.md#comprehensive-llm-selection-workflow"
+      },
+      {
+        "name": "Cost Optimization Analysis Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/llm_agent.md#cost-optimization-analysis-workflow"
+      },
+      {
+        "name": "Multi-LLM Strategy Development Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/llm_agent.md#multi-llm-strategy-development-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/llm_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/llm_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

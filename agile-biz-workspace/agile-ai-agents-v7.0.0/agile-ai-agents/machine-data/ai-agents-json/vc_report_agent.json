@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "agent": "vc_report_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-08-11",
+    "estimated_tokens": 202,
+    "full_md_tokens": 6270,
+    "md_file": "agile-ai-agents/ai-agents/vc_report_agent.md",
+    "file_hash": "94fd090e8c13f6a490a353a184d8e228"
+  },
+  "summary": "## Overview\nThe VC Report Agent specializes in creating comprehensive investment documentation for venture capital fundraising. This agent transforms project data, market research, and business metrics into professional-grade investment materials that resonate with VCs, angel investors, and institutional investors. Expert in startup valuation, investment terminology, and venture capital communication standards.",
+  "core_responsibilities": {
+    "summary": [
+      "Investment Documentation Creation",
+      "Investment Materials Portfolio",
+      "Venture Capital Communication"
+    ],
+    "details_tokens": 526,
+    "md_reference": "agile-ai-agents/ai-agents/vc_report_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "Complete Investment Package Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/vc_report_agent.md#complete-investment-package-workflow"
+      },
+      {
+        "name": "Pitch Deck Creation Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/vc_report_agent.md#pitch-deck-creation-workflow"
+      },
+      {
+        "name": "Due Diligence Preparation Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/vc_report_agent.md#due-diligence-preparation-workflow"
+      },
+      {
+        "name": "Valuation Analysis Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/vc_report_agent.md#valuation-analysis-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/vc_report_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/vc_report_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  },
+  "boundaries": {
+    "tokens": 267,
+    "md_reference": "agile-ai-agents/ai-agents/vc_report_agent.md#clear-boundaries"
+  }
+}

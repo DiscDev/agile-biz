@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "document": "capacity-planning",
+    "title": "Sprint Capacity Planning",
+    "timestamp": "2025-07-22T01:41:03.743Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/capacity-planning.md",
+    "document_type": "general_documentation",
+    "file_hash": "61aaafcc0074fe01959c70d0c4fb04ff",
+    "estimated_tokens": 62,
+    "full_md_tokens": 335
+  },
+  "summary": "## Sprint: 2025-01-09 - Authentication Foundation",
+  "sections": [
+    {
+      "title": "Sprint: 2025-01-09 - Authentication Foundation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/capacity-planning.md#sprint-2025-01-09-authentication-foundation",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Sprint: 2025-01-09 - Authentication Foundation": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/capacity-planning.md#sprint-2025-01-09-authentication-foundation",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Team Capacity Calculation": {
+          "content_preview": "* **Meetings & Ceremonies**: -10 hours (9%)\n* **Code Reviews**: -8 hours (7%)\n* **Unplanned Work Buffer**: -12 hours (10%)\n* **Context Switching**: -5...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/capacity-planning.md#team-capacity-calculation-3"
+        },
+        "Story Point Capacity": {
+          "content_preview": "* **Historical Velocity**: 22-26 points per sprint\n* **Hours per Point**: ~3.5 hours (based on historical data)\n* **Calculated Capacity**: 23 points\n*...",
+          "tokens": 49,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/capacity-planning.md#story-point-capacity-1"
+        },
+        "Capacity Allocation": {
+          "content_preview": "| Agent | Allocated Points | Primary Responsibilities |\n|:------|----------------:|:------------------------|\n| Coder Agent | 15 | Implementation, uni...",
+          "tokens": 84,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/capacity-planning.md#capacity-allocation-1"
+        },
+        "Risk Factors": {
+          "content_preview": "- First sprint with new authentication system\n- Potential security review iterations\n- Integration complexity with existing system",
+          "tokens": 33,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/capacity-planning.md#risk-factors-1"
+        },
+        "Mitigation Strategies": {
+          "content_preview": "- Daily checkpoint meetings\n- Early security involvement\n- Pair programming for complex sections\n- Maintain 13% capacity buffer",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/planning/capacity-planning.md#mitigation-strategies-1"
+        }
+      }
+    }
+  }
+}

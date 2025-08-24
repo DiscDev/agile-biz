@@ -1,0 +1,289 @@
+{
+  "phases": [
+    {
+      "id": "context-verification",
+      "name": "Rebuild Context Verification",
+      "duration": "1-2 hours",
+      "agent": "stakeholder_interview_agent",
+      "description": "Establish rebuild parameters and constraints",
+      "approval_gate": false
+    },
+    {
+      "id": "stakeholder-interview",
+      "name": "Comprehensive Stakeholder Interview",
+      "duration": "2-3 hours",
+      "agent": "stakeholder_interview_agent",
+      "description": "Complete discovery informed by rebuild context",
+      "approval_gate": false
+    },
+    {
+      "id": "legacy-analysis",
+      "name": "Legacy System Deep Analysis",
+      "duration": "4-6 hours",
+      "agents": ["project_analyzer_agent", "security_agent", "dba_agent", "api_agent"],
+      "description": "Complete understanding of what we're replacing",
+      "approval_gate": true,
+      "gate_name": "Rebuild Scope Confirmation"
+    },
+    {
+      "id": "research-selection",
+      "name": "Research Level Selection",
+      "duration": "5 minutes",
+      "agent": "research_agent",
+      "description": "Determine research depth with rebuild context",
+      "approval_gate": false
+    },
+    {
+      "id": "market-validation",
+      "name": "Market Validation Research",
+      "duration": "2-12 hours",
+      "agents": ["research_agent", "market_validation_agent", "analysis_agent"],
+      "description": "Validate rebuild decision against market reality",
+      "approval_gate": false
+    },
+    {
+      "id": "strategy-synthesis",
+      "name": "Rebuild Strategy Synthesis",
+      "duration": "2-3 hours",
+      "agents": ["analysis_agent", "project_manager_agent"],
+      "description": "Synthesize all inputs into rebuild strategy",
+      "approval_gate": true,
+      "gate_name": "Strategy Approval"
+    },
+    {
+      "id": "requirements",
+      "name": "Product Requirements Document",
+      "duration": "3-4 hours",
+      "agent": "prd_agent",
+      "description": "Comprehensive PRD for rebuilt system",
+      "approval_gate": false
+    },
+    {
+      "id": "architecture",
+      "name": "Architecture Design",
+      "duration": "4-6 hours",
+      "agents": ["architecture_agent", "devops_agent"],
+      "description": "Design new architecture with migration in mind",
+      "approval_gate": false
+    },
+    {
+      "id": "backlog-creation",
+      "name": "Product Backlog Creation",
+      "duration": "2-3 hours",
+      "agents": ["project_manager_agent", "scrum_master_agent"],
+      "description": "Create backlog with rebuild-specific considerations",
+      "approval_gate": true,
+      "gate_name": "Pre-Implementation Review"
+    },
+    {
+      "id": "foundation-sprint",
+      "name": "Foundation & Infrastructure Sprint",
+      "duration": "2-3 days",
+      "agents": ["devops_agent", "coder_agent", "security_agent"],
+      "description": "Set up new infrastructure and development environment",
+      "sprint": true
+    },
+    {
+      "id": "core-rebuild-sprint",
+      "name": "Core Rebuild Sprint",
+      "duration": "3-5 days",
+      "agents": ["coder_agent", "testing_agent", "architecture_agent"],
+      "description": "Implement core framework and basic systems",
+      "sprint": true
+    },
+    {
+      "id": "feature-parity-sprints",
+      "name": "Feature Parity Sprints",
+      "duration": "2-3 days each",
+      "agents": ["coder_agent", "testing_agent", "ui_ux_agent"],
+      "description": "Implement features from old system with improvements",
+      "sprint": true,
+      "repeating": true,
+      "approval_gate": true,
+      "gate_name": "Feature Parity Checkpoint"
+    },
+    {
+      "id": "migration-sprint",
+      "name": "Migration Sprint",
+      "duration": "2-3 days",
+      "agents": ["devops_agent", "dba_agent", "testing_agent"],
+      "description": "Execute data and user migration",
+      "sprint": true
+    },
+    {
+      "id": "parallel-operations",
+      "name": "Parallel Operation Sprint",
+      "duration": "5-10 days",
+      "agents": ["devops_agent", "logger_agent", "analytics_agent"],
+      "description": "Run both systems simultaneously",
+      "sprint": true,
+      "approval_gate": true,
+      "gate_name": "Cutover Decision"
+    },
+    {
+      "id": "cutover",
+      "name": "Cutover Sprint",
+      "duration": "1-2 days",
+      "agents": ["devops_agent", "project_manager_agent", "security_agent"],
+      "description": "Final traffic switch and legacy standby",
+      "sprint": true,
+      "critical": true
+    },
+    {
+      "id": "stabilization",
+      "name": "Stabilization Phase",
+      "duration": "1 week",
+      "agents": ["devops_agent", "logger_agent", "optimization_agent"],
+      "description": "Ensure stability post-cutover",
+      "operations": true
+    },
+    {
+      "id": "optimization",
+      "name": "Optimization Sprints",
+      "duration": "6-8 weeks",
+      "agents": ["optimization_agent", "analytics_agent"],
+      "description": "Performance and cost optimization",
+      "operations": true,
+      "repeating": true
+    },
+    {
+      "id": "enhancement",
+      "name": "Feature Enhancement Sprints",
+      "duration": "Ongoing",
+      "agents": ["coder_agent", "ui_ux_agent", "testing_agent"],
+      "description": "New features enabled by rebuild",
+      "operations": true,
+      "repeating": true
+    },
+    {
+      "id": "growth",
+      "name": "Growth Operations",
+      "duration": "Months 2-6",
+      "agents": ["marketing_agent", "analytics_agent", "revenue_optimization_agent"],
+      "description": "Marketing and revenue optimization",
+      "operations": true
+    },
+    {
+      "id": "maintenance",
+      "name": "Maintenance & Evolution",
+      "duration": "Ongoing",
+      "agents": ["all"],
+      "description": "Regular maintenance cycles",
+      "operations": true
+    },
+    {
+      "id": "legacy-shutdown-planning",
+      "name": "Legacy Shutdown Planning",
+      "duration": "1-2 weeks",
+      "agents": ["project_manager_agent", "devops_agent"],
+      "description": "Plan legacy system retirement",
+      "operations": true
+    },
+    {
+      "id": "legacy-decommissioning",
+      "name": "Legacy Decommissioning",
+      "duration": "1 week",
+      "agents": ["devops_agent", "security_agent"],
+      "description": "Final shutdown and resource cleanup",
+      "operations": true,
+      "approval_gate": true,
+      "gate_name": "Project Completion"
+    }
+  ],
+  "rebuild_types": {
+    "technical": {
+      "name": "Technical Rebuild",
+      "description": "Same features, modern tech stack",
+      "focus_phases": ["architecture", "foundation-sprint", "core-rebuild-sprint"],
+      "estimated_duration": "3-6 months"
+    },
+    "partial": {
+      "name": "Partial Rebuild (Strangler Fig)",
+      "description": "Gradual component replacement",
+      "focus_phases": ["architecture", "migration-sprint", "parallel-operations"],
+      "estimated_duration": "4-8 months"
+    },
+    "business-model": {
+      "name": "Business Model Rebuild",
+      "description": "New economics, similar tech",
+      "focus_phases": ["market-validation", "requirements", "enhancement"],
+      "estimated_duration": "2-4 months"
+    },
+    "complete": {
+      "name": "Complete Rebuild",
+      "description": "Everything new",
+      "focus_phases": ["all"],
+      "estimated_duration": "6-12 months"
+    }
+  },
+  "approval_gates": [
+    {
+      "id": 1,
+      "name": "Rebuild Scope Confirmation",
+      "after_phase": "legacy-analysis",
+      "checks": [
+        "Complete analysis reviewed",
+        "Rebuild type confirmed",
+        "Migration strategy approved",
+        "Resource commitment verified"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Strategy Approval",
+      "after_phase": "strategy-synthesis",
+      "checks": [
+        "Rebuild strategy approved",
+        "Migration approach confirmed",
+        "Budget final approval",
+        "Team allocation confirmed"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Pre-Implementation Review",
+      "after_phase": "backlog-creation",
+      "checks": [
+        "Architecture approved",
+        "Backlog prioritized",
+        "Sprint plan approved",
+        "Risk acceptance documented"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Feature Parity Checkpoint",
+      "after_phase": "feature-parity-sprints",
+      "checks": [
+        "Core features rebuilt",
+        "Performance benchmarks met",
+        "Security review passed",
+        "Initial user testing complete"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Cutover Decision",
+      "after_phase": "parallel-operations",
+      "checks": [
+        "Performance validated",
+        "User acceptance confirmed",
+        "All data migrated successfully",
+        "Team readiness confirmed",
+        "Rollback plan verified"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Project Completion",
+      "after_phase": "legacy-decommissioning",
+      "checks": [
+        "All objectives achieved",
+        "Legacy system retired",
+        "Knowledge transfer complete",
+        "Lessons learned documented",
+        "Success metrics validated"
+      ]
+    }
+  ]
+}

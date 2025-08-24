@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "agent": "ppc_media_buyer_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 184,
+    "full_md_tokens": 7473,
+    "md_file": "agile-ai-agents/ai-agents/ppc_media_buyer_agent.md",
+    "file_hash": "e0b7f01f961ae8572d61c3ff62629419"
+  },
+  "summary": "## Overview\nThe PPC Media Buyer Agent specializes in paid advertising campaign strategy, execution, and optimization across all major advertising platforms. This agent focuses on maximizing advertising ROI, driving qualified traffic, and achieving optimal cost-per-acquisition through data-driven media buying and campaign management.",
+  "core_responsibilities": {
+    "summary": [
+      "Comprehensive PPC Strategy & Campaign Reports",
+      "Campaign Execution & Management",
+      "Advanced PPC Techniques & Strategies"
+    ],
+    "details_tokens": 1791,
+    "md_reference": "agile-ai-agents/ai-agents/ppc_media_buyer_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "New Product Launch PPC Campaign Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/ppc_media_buyer_agent.md#new-product-launch-ppc-campaign-workflow"
+      },
+      {
+        "name": "Lead Generation Campaign Optimization Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/ppc_media_buyer_agent.md#lead-generation-campaign-optimization-workflow"
+      },
+      {
+        "name": "E-commerce Revenue Maximization Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/ppc_media_buyer_agent.md#e-commerce-revenue-maximization-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/ppc_media_buyer_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/ppc_media_buyer_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

@@ -1,0 +1,137 @@
+name: "Laravel Monolithic"
+category: "monolithic"
+description: "Laravel application with Blade templates, ideal for server-rendered applications"
+tech_stack:
+  framework: "Laravel 10.x"
+  frontend: "Blade Templates + Alpine.js / Vue.js"
+  database: "MySQL / PostgreSQL"
+  deployment: "Traditional hosting or Docker"
+
+structure:
+  - path: "app/"
+    type: "directory"
+    description: "Application logic"
+    subdirs:
+      - "Http/Controllers/"
+      - "Models/"
+      - "Services/"
+      - "Repositories/"
+      - "Console/Commands/"
+      - "Exceptions/"
+      - "Providers/"
+    
+  - path: "bootstrap/"
+    type: "directory"
+    description: "Framework bootstrap files"
+    
+  - path: "config/"
+    type: "directory"
+    description: "Configuration files"
+    
+  - path: "database/"
+    type: "directory"
+    description: "Database migrations, factories, and seeders"
+    subdirs:
+      - "migrations/"
+      - "factories/"
+      - "seeders/"
+    
+  - path: "public/"
+    type: "directory"
+    description: "Public assets and entry point"
+    subdirs:
+      - "css/"
+      - "js/"
+      - "images/"
+    
+  - path: "resources/"
+    type: "directory"
+    description: "Views, raw assets, and language files"
+    subdirs:
+      - "views/"
+      - "css/"
+      - "js/"
+      - "lang/"
+    
+  - path: "routes/"
+    type: "directory"
+    description: "Application routes"
+    files:
+      - "web.php"
+      - "api.php"
+      - "console.php"
+    
+  - path: "storage/"
+    type: "directory"
+    description: "Logs, cache, and uploaded files"
+    subdirs:
+      - "app/public/"
+      - "framework/"
+      - "logs/"
+    
+  - path: "tests/"
+    type: "directory"
+    description: "Automated tests"
+    subdirs:
+      - "Feature/"
+      - "Unit/"
+    
+  - path: "vendor/"
+    type: "directory"
+    description: "Composer dependencies"
+    git_ignore: true
+    
+  - path: "composer.json"
+    type: "file"
+    description: "PHP dependencies"
+    
+  - path: "package.json"
+    type: "file"
+    description: "NPM dependencies for frontend assets"
+    
+  - path: "vite.config.js"
+    type: "file"
+    description: "Vite configuration for asset bundling"
+    
+  - path: "artisan"
+    type: "file"
+    description: "Laravel CLI"
+    
+  - path: ".env.example"
+    type: "file"
+    template: "env-example"
+    description: "Environment configuration template"
+    
+  - path: "docker-compose.yml"
+    type: "file"
+    template: "docker-compose.yml"
+    description: "Docker development environment"
+
+init_commands:
+  - description: "Create Laravel project"
+    command: "composer create-project laravel/laravel . --prefer-dist"
+  - description: "Install frontend dependencies"
+    command: "npm install"
+  - description: "Generate application key"
+    command: "php artisan key:generate"
+
+post_init_commands:
+  - description: "Set up database"
+    command: "php artisan migrate"
+  - description: "Install development tools"
+    command: "composer require --dev laravel/telescope laravel/dusk"
+  - description: "Install UI scaffolding (optional)"
+    command: "composer require laravel/breeze --dev && php artisan breeze:install"
+
+development_ports:
+  web: 8000
+  vite: 5173
+  database: 3306
+
+benefits:
+  - "Rapid development with Laravel's conventions"
+  - "Built-in authentication and authorization"
+  - "Eloquent ORM for database operations"
+  - "Blade templating with component support"
+  - "Integrated testing framework"
+  - "Artisan CLI for common tasks"

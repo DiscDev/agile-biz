@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "document": "auto-project-orchestrator",
+    "version": "3.0.0",
+    "timestamp": "2025-07-18T05:17:49.212Z",
+    "source_file": "ai-agent-coordination/auto-project-orchestrator.md",
+    "document_type": "orchestration_guide",
+    "category": "ai-agent-coordination"
+  },
+  "summary": "Automated end-to-end project creation system that coordinates all 38 AgileAiAgents to take a project idea from concept to completion using agile methodology without requiring manual agent activation.",
+  "workflow_optimization": {
+    "phases": 16,
+    "time_savings": "40-45%",
+    "parallel_execution": true,
+    "quality_gates": 6
+  },
+  "commands": [
+    "/start-new-project-workflow",
+    "/start-existing-project-workflow",
+    "/quickstart",
+    "/aaa-help",
+    "/status",
+    "/continue",
+    "/checkpoint",
+    "/save-decision",
+    "/debug",
+    "/reset"
+  ],
+  "sections": [
+    {
+      "title": "Overview",
+      "content_preview": "This file enables automatic project orchestration. When Claude Code detects this file in the agile-ai-agents folder, it will automatically coordinate all 38 AgileAiAgents to take a project idea from c..."
+    },
+    {
+      "title": "Command-Based Workflow Entry Points",
+      "content_preview": "### Primary Commands\nWhen users type commands starting with \"/\", route to appropriate workflow:\n- `/start-new-project-workflow` - Structured new project discovery and implementation\n- `/start-existing..."
+    },
+    {
+      "title": "Implementation Guide",
+      "content_preview": "### For Command-Based Workflows\n1. **Detect command** - Check if input starts with \"/\"\n2. **Route to handler** - Use appropriate workflow template:\n   - New projects: `workflow-templates/new-project-w..."
+    },
+    {
+      "title": "🚀 Optimized 16-Phase Document Creation Workflow",
+      "content_preview": "The orchestrator uses an optimized workflow that achieves 40-45% time savings through parallel agent execution:\n\n### Workflow Optimization Features\n- **16 Sequential Phases**: Clear dependencies and l..."
+    },
+    {
+      "title": "🆕 Context Persistence with Project State Manager Agent",
+      "content_preview": "The Project State Manager Agent ensures seamless continuity across Claude Code sessions:\n\n### Automatic State Preservation\n- **Continuous Saving**: Project state saved after every significant action\n-..."
+    },
+    {
+      "title": "Important: Single-Folder Structure",
+      "content_preview": "All AgileAiAgents components are now contained within the `agile-ai-agents/` folder. This keeps your project root clean and makes upgrades easier. The system will automatically create and manage all p..."
+    },
+    {
+      "title": "Project Documents Structure (Category-Based v3.0.0)",
+      "content_preview": "All agent deliverables are automatically saved to the `agile-ai-agents/project-documents/` folder using the new category-based organization:\n\n```\nagile-ai-agents/project-documents/\n├── orchestration/\n..."
+    },
+    {
+      "title": "Key Features",
+      "content_preview": "### 🔄 Task-Based Sprints\n- Sprint naming: `sprint-YYYY-MM-DD-feature-name`\n- Maximum ~20 tasks per sprint\n- Sprints organized by feature, not time\n- Clear task ownership and tracking\n\n### 🤖 Agent Co..."
+    },
+    {
+      "title": "Getting Started",
+      "content_preview": "### With Commands (Recommended)\n```bash\n# For new projects\n/start-new-project-workflow\n\n# For existing projects\n/start-existing-project-workflow\n\n# For help\n/aaa-help\n```\n\n### With Direct Description\n..."
+    },
+    {
+      "title": "Sprint Workflow",
+      "content_preview": "### 1. Sprint Planning (Day 1)\n- Define sprint goals and user stories\n- Assign tasks to appropriate agents\n- Set acceptance criteria\n- Review with stakeholder\n\n### 2. Sprint Execution (Days 2-6)\n- Age..."
+    },
+    {
+      "title": "Agent Handoff Patterns",
+      "content_preview": "### Sequential Handoff\n```\nResearch Agent → Analysis Agent → PRD Agent → Coder Agent\n```\n\n### Parallel Execution\n```\n┌─ Marketing Agent\n├─ Finance Agent     → Analysis Agent → Decision\n└─ Security Age..."
+    },
+    {
+      "title": "Error Handling & Recovery",
+      "content_preview": "### Automatic Recovery\n- State persistence across sessions\n- Checkpoint restoration\n- Graceful error handling\n- Alternative path execution\n\n### Manual Intervention\n- Clear error reporting\n- Recovery o..."
+    },
+    {
+      "title": "Best Practices",
+      "content_preview": "### For Users\n1. **Be Specific**: Clear requirements lead to better results\n2. **Review Regularly**: Check sprint reviews and provide feedback\n3. **Trust the Process**: Let agents handle technical dec..."
+    },
+    {
+      "title": "Customization Options",
+      "content_preview": "### Workflow Customization\n- Adjust sprint length\n- Modify approval gates\n- Change agent assignments\n- Add custom workflows\n\n### Output Customization\n- Document templates\n- Code style preferences\n- Fr..."
+    },
+    {
+      "title": "Performance Metrics",
+      "content_preview": "### Success Indicators\n- 40-45% faster than sequential execution\n- 95%+ task completion rate\n- 90%+ user satisfaction\n- 80%+ code coverage\n\n### Continuous Improvement\n- Agent learning from outcomes\n- ..."
+    },
+    {
+      "title": "Troubleshooting",
+      "content_preview": "### Common Issues\n1. **Stuck at Gate**: Review and approve pending decisions\n2. **Agent Conflict**: Orchestrator resolves automatically\n3. **Resource Limits**: Adjusts parallelization dynamically\n4. *..."
+    },
+    {
+      "title": "Version History",
+      "content_preview": "- **v3.0.0**: Category-based folder structure\n- **v2.0.0**: Command-based workflows\n- **v1.0.0**: Initial orchestration system\n\n---\n\n**Note**: This orchestrator coordinates all 38 AgileAiAgents to del..."
+    }
+  ],
+  "key_features": [
+    "16 Sequential Phases with parallel execution opportunities",
+    "40-45% time savings through optimized workflow",
+    "Context persistence with Project State Manager",
+    "Command-based workflow entry points",
+    "Automatic quality gates at key decision points",
+    "Category-based folder structure (v3.0.0)",
+    "Sprint-based agile development",
+    "Real-time tracking and monitoring"
+  ],
+  "folder_structure": {
+    "base": "agile-ai-agents/project-documents/",
+    "categories": [
+      "orchestration",
+      "business-strategy",
+      "implementation",
+      "operations"
+    ]
+  },
+  "agent_coordination": {
+    "total_agents": 38,
+    "orchestration": 2,
+    "business_strategy": 9,
+    "implementation": 9,
+    "operations": 8,
+    "support": 10
+  },
+  "key_points": [
+    "`/start-new-project-workflow` - Structured new project discovery and implementation",
+    "`/start-existing-project-workflow` - Analyze existing code and plan enhancements",
+    "`/quickstart` - Interactive menu for all options",
+    "`/aaa-help` - Show available commands",
+    "New projects: `workflow-templates/new-project-workflow-template.md`",
+    "Existing projects: `workflow-templates/existing-project-workflow-template.md`",
+    "**16 Sequential Phases**: Clear dependencies and logical progression",
+    "**Parallel Execution**: Multiple agents work simultaneously when possible",
+    "**Smart Dependencies**: Only essential blocking dependencies maintained",
+    "**Quality Gates**: Phase transitions ensure completeness before proceeding",
+    "**Timeline Reduction**: 65-95 hours → 36-52 hours with parallel execution",
+    "**Resource Efficiency**: 5-7 agents working simultaneously during peak phases",
+    "**Quality Maintenance**: Clear handoff protocols between agents",
+    "**Scalable Approach**: Easily adapts to project complexity",
+    "**Continuous Saving**: Project state saved after every significant action"
+  ]
+}

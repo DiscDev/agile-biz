@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "document": "linting-rules-defensive-programming",
+    "title": "Defensive Programming Linting Rules",
+    "timestamp": "2025-08-11T22:02:16.897Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md",
+    "document_type": "general_documentation",
+    "file_hash": "fd4df96630fb46641bb1396b7112f344",
+    "estimated_tokens": 497,
+    "full_md_tokens": 3140
+  },
+  "summary": "Automated linting configurations to enforce defensive programming patterns and prevent runtime errors. These rules catch unsafe patterns during development before they reach production.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#overview",
+      "content_preview": "Automated linting configurations to enforce defensive programming patterns and prevent runtime errors. These rules catch unsafe patterns during develo..."
+    },
+    {
+      "title": "ESLint Configuration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#eslint-configuration",
+      "content_preview": ""
+    },
+    {
+      "title": "TypeScript Compiler Options",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#typescript-compiler-options",
+      "content_preview": ""
+    },
+    {
+      "title": "Prettier Configuration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#prettier-configuration",
+      "content_preview": ""
+    },
+    {
+      "title": "Pre-commit Hooks",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#pre-commit-hooks",
+      "content_preview": ""
+    },
+    {
+      "title": "Custom Validation Scripts",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#custom-validation-scripts",
+      "content_preview": ""
+    },
+    {
+      "title": "IDE Integration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#ide-integration",
+      "content_preview": ""
+    },
+    {
+      "title": "Package.json Scripts",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#packagejson-scripts",
+      "content_preview": ""
+    },
+    {
+      "title": "CI/CD Integration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#cicd-integration",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "workflow_guidance",
+    "technical_integration",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#overview",
+      "tokens": 47,
+      "content_preview": "Automated linting configurations to enforce defensive programming patterns and prevent runtime errors. These rules catch unsafe patterns during develo..."
+    },
+    "ESLint Configuration": {
+      "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#eslint-configuration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Base Configuration (.eslintrc.js)": {
+          "content_preview": "```javascript\nmodule.exports = {\n  extends: [\n    'eslint:recommended',\n    'plugin:@typescript-eslint/recommended'\n  ],\n  plugins: [\n    '@typescript...",
+          "tokens": 253,
+          "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#base-configuration-eslintrcjs-1"
+        },
+        "React-Specific Rules (.eslintrc.react.js)": {
+          "content_preview": "```javascript\nmodule.exports = {\n  extends: [\n    'plugin:react/recommended',\n    'plugin:react-hooks/recommended'\n  ],\n  rules: {\n    // Require defa...",
+          "tokens": 215,
+          "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#react-specific-rules-eslintrcreactjs-1"
+        },
+        "Custom ESLint Plugin for Defensive Patterns": {
+          "content_preview": "```javascript\nmodule.exports = {\n  rules: {\n    'no-unsafe-property-access': {\n      meta: {\n        type: 'problem',\n        docs: {\n          descri...",
+          "tokens": 761,
+          "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#custom-eslint-plugin-for-defensive-patterns-2"
+        }
+      }
+    },
+    "TypeScript Compiler Options": {
+      "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#typescript-compiler-options",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Strict TypeScript Configuration (tsconfig.json)": {
+          "content_preview": "```json\n{\n  \"compilerOptions\": {\n    // Strict type checking\n    \"strict\": true,\n    \"noImplicitAny\": true,\n    \"strictNullChecks\": true,\n    \"strictF...",
+          "tokens": 198,
+          "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#strict-typescript-configuration-tsconfigjson-1"
+        },
+        "Type Definition Helpers": {
+          "content_preview": "```typescript\n// types/defensive.d.ts\n\n// Safe object access helper types\ntype SafeGet<T, K extends keyof T> = T[K] | undefined;\n\n// Nullable type hel...",
+          "tokens": 141,
+          "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#type-definition-helpers-1"
+        }
+      }
+    },
+    "Prettier Configuration": {
+      "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#prettier-configuration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Defensive Formatting Rules (.prettierrc)": {
+          "content_preview": "```json\n{\n  \"semi\": true,\n  \"singleQuote\": true,\n  \"trailingComma\": \"es5\",\n  \"bracketSpacing\": true,\n  \"arrowParens\": \"always\",\n  \"endOfLine\": \"lf\",\n ...",
+          "tokens": 81,
+          "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#defensive-formatting-rules-prettierrc-1"
+        }
+      }
+    },
+    "Pre-commit Hooks": {
+      "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#pre-commit-hooks",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Husky Configuration (.huskyrc.js)": {
+          "content_preview": "```javascript\nmodule.exports = {\n  hooks: {\n    'pre-commit': 'lint-staged',\n    'pre-push': 'npm run type-check && npm run test:defensive'\n  }\n};\n```",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#husky-configuration-huskyrcjs-1"
+        },
+        "Lint-Staged Configuration (.lintstagedrc.js)": {
+          "content_preview": "```javascript\nmodule.exports = {\n  '*.{js,jsx,ts,tsx}': [\n    'eslint --fix',\n    'prettier --write',\n    'npm run test:defensive -- --findRelatedTest...",
+          "tokens": 50,
+          "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#lint-staged-configuration-lintstagedrcjs-1"
+        }
+      }
+    },
+    "Custom Validation Scripts": {
+      "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#custom-validation-scripts",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Defensive Pattern Validator (scripts/validate-defensive.js)": {
+          "content_preview": "```javascript\n#!/usr/bin/env node\n\nconst fs = require('fs');\nconst path = require('path');\nconst { ESLint } = require('eslint');\n\nconst DEFENSIVE_RULE...",
+          "tokens": 489,
+          "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#defensive-pattern-validator-scriptsvalidate-defensivejs-1"
+        }
+      }
+    },
+    "IDE Integration": {
+      "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#ide-integration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "VS Code Settings (.vscode/settings.json)": {
+          "content_preview": "```json\n{\n  \"editor.codeActionsOnSave\": {\n    \"source.fixAll.eslint\": true\n  },\n  \"eslint.validate\": [\n    \"javascript\",\n    \"javascriptreact\",\n    \"t...",
+          "tokens": 149,
+          "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#vs-code-settings-vscodesettingsjson-1"
+        },
+        "VS Code Extensions (extensions.json)": {
+          "content_preview": "```json\n{\n  \"recommendations\": [\n    \"dbaeumer.vscode-eslint\",\n    \"esbenp.prettier-vscode\",\n    \"ms-vscode.vscode-typescript-tslint-plugin\",\n    \"str...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#vs-code-extensions-extensionsjson-1"
+        }
+      }
+    },
+    "Package.json Scripts": {
+      "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#packagejson-scripts",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Linting and Validation Scripts": {
+          "content_preview": "```json\n{\n  \"scripts\": {\n    \"lint\": \"eslint . --ext .js,.jsx,.ts,.tsx\",\n    \"lint:fix\": \"eslint . --ext .js,.jsx,.ts,.tsx --fix\",\n    \"lint:defensive...",
+          "tokens": 193,
+          "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#linting-and-validation-scripts-1"
+        }
+      }
+    },
+    "CI/CD Integration": {
+      "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#cicd-integration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "GitHub Actions Workflow (.github/workflows/defensive-checks.yml)": {
+          "content_preview": "```yaml\nname: Defensive Programming Checks\n\non:\n  pull_request:\n    types: [opened, synchronize]\n  push:\n    branches: [main, develop]\n\njobs:\n  defens...",
+          "tokens": 266,
+          "md_reference": "agile-ai-agents/aaa-documents/linting-rules-defensive-programming.md#github-actions-workflow-githubworkflowsdefensive-checksyml-1"
+        }
+      }
+    }
+  }
+}

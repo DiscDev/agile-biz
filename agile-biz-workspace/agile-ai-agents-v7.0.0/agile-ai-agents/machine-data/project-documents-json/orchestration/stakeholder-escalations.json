@@ -1,0 +1,160 @@
+{
+  "meta": {
+    "document": "stakeholder-escalations",
+    "title": "Stakeholder Escalations Log",
+    "timestamp": "2025-07-22T01:41:03.753Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md",
+    "document_type": "general_documentation",
+    "file_hash": "b150974e4dabd3d53d4dc72aca9f91ab",
+    "estimated_tokens": 417,
+    "full_md_tokens": 875
+  },
+  "summary": "This document tracks all project-wide stakeholder escalations and provides a rollup of sprint-level escalations. The Project Manager Agent, in coordination with the Scrum Master Agent, maintains this log to ensure critical issues are properly escalated and resolved.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#overview",
+      "content_preview": "This document tracks all project-wide stakeholder escalations and provides a rollup of sprint-level escalations. The Project Manager Agent, in coordin..."
+    },
+    {
+      "title": "Structure",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#structure",
+      "content_preview": "- **Project-Wide Escalations**: Major escalations affecting the entire project\n- **Sprint Escalation Rollup**: Links to sprint-specific escalations fo..."
+    },
+    {
+      "title": "Escalation Log Format",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#escalation-log-format",
+      "content_preview": "Each escalation entry follows this structure:\n- **Date/Time**: [ISO 8601 timestamp]\n- **Escalation Type**: [Blocker/Risk/Decision Required/Resource]\n-..."
+    },
+    {
+      "title": "Project-Wide Escalations",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#project-wide-escalations",
+      "content_preview": ""
+    },
+    {
+      "title": "Sprint Escalation Rollup",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#sprint-escalation-rollup",
+      "content_preview": ""
+    },
+    {
+      "title": "Escalation Patterns & Metrics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#escalation-patterns-metrics",
+      "content_preview": ""
+    },
+    {
+      "title": "Process Notes",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#process-notes",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#overview",
+      "tokens": 67,
+      "content_preview": "This document tracks all project-wide stakeholder escalations and provides a rollup of sprint-level escalations. The Project Manager Agent, in coordin..."
+    },
+    "Structure": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#structure",
+      "tokens": 44,
+      "content_preview": "- **Project-Wide Escalations**: Major escalations affecting the entire project\n- **Sprint Escalation Rollup**: Links to sprint-specific escalations fo..."
+    },
+    "Escalation Log Format": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#escalation-log-format",
+      "tokens": 144,
+      "content_preview": "Each escalation entry follows this structure:\n- **Date/Time**: [ISO 8601 timestamp]\n- **Escalation Type**: [Blocker/Risk/Decision Required/Resource]\n-..."
+    },
+    "Project-Wide Escalations": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#project-wide-escalations",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Example Format": {
+          "content_preview": "<!-- \n**Date/Time**: 2025-01-09T10:30:00-08:00\n**Escalation Type**: Resource\n**Severity**: High\n**Originating Agent**: project_manager_agent\n**Sprint ...",
+          "tokens": 143,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#example-format-1"
+        }
+      }
+    },
+    "Sprint Escalation Rollup": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#sprint-escalation-rollup",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Overview": {
+          "content_preview": "Sprint-specific escalations are maintained within each sprint folder. This section provides quick links to all sprint escalations in chronological ord...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#overview-2"
+        },
+        "Active Sprints": {
+          "content_preview": "*No active sprints with escalations yet*",
+          "tokens": 10,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#active-sprints-1"
+        },
+        "Completed Sprints": {
+          "content_preview": "- [YYYY-MM-DD HH:MM - Escalation Title (Severity)](./sprints/sprint-YYYY-MM-DD-feature-name/stakeholder-escalations/escalation-YYYY-MM-DD-HH-MM.md)\n- ...",
+          "tokens": 73,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#completed-sprints-3"
+        }
+      }
+    },
+    "Escalation Patterns & Metrics": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#escalation-patterns-metrics",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "By Type": {
+          "content_preview": "- **Blockers**: 0\n- **Risks**: 0\n- **Decisions Required**: 0\n- **Resource Issues**: 0",
+          "tokens": 18,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#by-type-1"
+        },
+        "By Severity": {
+          "content_preview": "- **Critical**: 0\n- **High**: 0\n- **Medium**: 0",
+          "tokens": 9,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#by-severity-1"
+        },
+        "Resolution Time": {
+          "content_preview": "- **Average**: N/A\n- **Fastest**: N/A\n- **Slowest**: N/A",
+          "tokens": 11,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#resolution-time-1"
+        },
+        "Escalation → Project Impact": {
+          "content_preview": "Track when sprint escalations become project escalations:\n- **Total Sprint Escalations**: 0\n- **Promoted to Project Level**: 0\n- **Promotion Rate**: 0...",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#escalation-project-impact-1"
+        }
+      }
+    },
+    "Process Notes": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#process-notes",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Sprint to Project Escalation Flow": {
+          "content_preview": "1. Issue identified at sprint level\n2. Sprint-level resolution attempted\n3. If unresolved or impacts beyond sprint → Escalate to project level\n4. Orig...",
+          "tokens": 69,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#sprint-to-project-escalation-flow-1"
+        },
+        "Review Schedule": {
+          "content_preview": "- Weekly review by Project Manager Agent\n- Sprint retrospectives include escalation analysis\n- Monthly pattern analysis for process improvement\n\n---\n\n...",
+          "tokens": 65,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md#review-schedule-1"
+        }
+      }
+    }
+  }
+}

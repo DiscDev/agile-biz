@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "agent": "project_analyzer_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-08-11",
+    "estimated_tokens": 298,
+    "full_md_tokens": 18559,
+    "md_file": "agile-ai-agents/ai-agents/project_analyzer_agent.md",
+    "file_hash": "d7e4ea0169531bd6b01b06b099210381"
+  },
+  "summary": "## Overview\nThe Project Analyzer Agent specializes in comprehensive analysis of existing codebases when the AI agent coordination system is added to an established project. This agent orchestrates a collaborative analysis process, coordinating with specialized agents (Security, Testing, DevOps, UI/UX, DBA, API, and Optimization agents) to conduct deep technical analysis. Together, they understand the current state, architecture, technologies, and capabilities of existing projects, creating detai",
+  "core_responsibilities": {
+    "summary": [
+      "Stakeholder Prompt File Detection",
+      "Initial Stakeholder Choice",
+      "Timezone Detection and Configuration",
+      "Stakeholder Interview & Vision Alignment",
+      "Comprehensive Existing Project Analysis & Documentation Reports",
+      "Codebase Analysis & Understanding",
+      "Documentation Generation",
+      "Analysis Automation"
+    ],
+    "details_tokens": 2580,
+    "md_reference": "agile-ai-agents/ai-agents/project_analyzer_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "Complete Existing Project Analysis Workflow (Parallel Execution) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/project_analyzer_agent.md#complete-existing-project-analysis-workflow-parallel-execution-workflow"
+      },
+      {
+        "name": "Legacy System Modernization Analysis Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/project_analyzer_agent.md#legacy-system-modernization-analysis-workflow"
+      },
+      {
+        "name": "Enterprise Integration Analysis Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/project_analyzer_agent.md#enterprise-integration-analysis-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/project_analyzer_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/project_analyzer_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

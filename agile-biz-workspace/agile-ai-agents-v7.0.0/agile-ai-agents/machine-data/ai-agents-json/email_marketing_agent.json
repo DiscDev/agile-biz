@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "agent": "email_marketing_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 268,
+    "full_md_tokens": 11598,
+    "md_file": "agile-ai-agents/ai-agents/email_marketing_agent.md",
+    "file_hash": "0f48b1f4307e928eab25e8c6fc0050b0"
+  },
+  "summary": "## Overview\nThe Email Marketing Agent specializes in comprehensive email marketing strategy, automation, and optimization that drives revenue growth, customer retention, and lifecycle engagement. This agent focuses on creating automated email sequences that support customer acquisition, onboarding, retention, expansion, and advocacy through personalized, data-driven communication strategies.",
+  "core_responsibilities": {
+    "summary": [
+      "Revenue-Driven Email Campaign Strategy & Automation",
+      "Customer Onboarding & Activation Email Sequences",
+      "Retention & Churn Prevention Email Automation",
+      "Revenue Expansion & Upselling Email Campaigns",
+      "Email Performance Analytics & Optimization"
+    ],
+    "details_tokens": 918,
+    "md_reference": "agile-ai-agents/ai-agents/email_marketing_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "Revenue-Driven Email Campaign Strategy & Automation Workflow (PRIMARY EMAIL WORKFLOW) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/email_marketing_agent.md#revenue-driven-email-campaign-strategy-automation-workflow-primary-email-workflow-workflow"
+      },
+      {
+        "name": "Customer Onboarding & Activation Email Sequence Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/email_marketing_agent.md#customer-onboarding-activation-email-sequence-workflow"
+      },
+      {
+        "name": "Churn Prevention & Customer Retention Email Automation Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/email_marketing_agent.md#churn-prevention-customer-retention-email-automation-workflow"
+      },
+      {
+        "name": "Revenue Expansion & Upselling Email Campaign Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/email_marketing_agent.md#revenue-expansion-upselling-email-campaign-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/email_marketing_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/email_marketing_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

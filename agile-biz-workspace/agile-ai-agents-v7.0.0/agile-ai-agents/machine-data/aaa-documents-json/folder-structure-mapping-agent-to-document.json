@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "document": "folder-structure-mapping-agent-to-document",
+    "timestamp": "2025-07-17T01:29:19.626Z",
+    "version": "1.0.0",
+    "source_file": "aaa-documents/folder-structure-mapping-agent-to-document.md",
+    "document_type": "general_documentation"
+  },
+  "summary": "1. **orchestration/project-log.md** ← Scrum Master Agent\n2. **orchestration/agent-coordination.md** ← Scrum Master Agent  \n3. **existing-project/project-brief.md** ← Project Analyzer Agent\n4. **existing-project/technology-stack-analysis.md** ← Project Analyzer Agent\n5. **existing-project/system-arch",
+  "sections": [
+    {
+      "title": "Proposed Category-Based Organization",
+      "content_preview": "### Structure: `project-documents` → `category` → `folders` → `documents` ← `responsible agent` ---"
+    },
+    {
+      "title": "**DOCUMENT CREATION WORKFLOW ORDER**",
+      "content_preview": "### **Phase 1: Foundation Analysis** (Sequential - Required Base) **Dependencies**: None **Estimated Time**: 2-4 hours"
+    },
+    {
+      "title": "**WORKFLOW SUMMARY**",
+      "content_preview": "### **Total Estimated Timeline** - **Sequential Execution**: 65-95 hours - **Parallel Execution**: 36-52 hours"
+    }
+  ],
+  "key_points": [
+    "**existing-project/code-quality-assessment.md** ← Project Analyzer Agent",
+    "**existing-project/feature-functionality-inventory.md** ← Project Analyzer Agent",
+    "**existing-project/performance-optimization-analysis.md** ← Project Analyzer Agent",
+    "**existing-project/external-integrations-analysis.md** ← Project Analyzer Agent",
+    "**existing-project/enhancement-opportunities.md** ← Project Analyzer Agent",
+    "**existing-project/development-environment-analysis.md** ← Project Analyzer Agent",
+    "**existing-project/security-implementation-analysis.md** ← Project Analyzer Agent",
+    "**research/competitive-analysis.md** ← Research Agent",
+    "**research/market-analysis.md** ← Research Agent",
+    "**research/industry-trends.md** ← Research Agent"
+  ],
+  "usage_context": [
+    "general_reference"
+  ]
+}

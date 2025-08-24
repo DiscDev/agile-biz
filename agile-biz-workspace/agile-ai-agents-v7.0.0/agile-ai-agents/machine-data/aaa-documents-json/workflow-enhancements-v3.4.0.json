@@ -1,0 +1,210 @@
+{
+  "meta": {
+    "document": "workflow-enhancements-v3.4.0",
+    "title": "Workflow Enhancements v3.4.0",
+    "timestamp": "2025-08-11T22:02:16.935Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md",
+    "document_type": "workflow",
+    "file_hash": "599e744af6f221db2f8e6ba82eb7429b",
+    "estimated_tokens": 458,
+    "full_md_tokens": 1908
+  },
+  "summary": "Version 3.4.0 introduces significant enhancements to the `/start-new-project-workflow` and `/start-existing-project-workflow` commands, providing phase-level control, approval gates, state management, and comprehensive error recovery.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#overview",
+      "content_preview": "Version 3.4.0 introduces significant enhancements to the `/start-new-project-workflow` and `/start-existing-project-workflow` commands, providing phas..."
+    },
+    {
+      "title": "New Features",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#new-features",
+      "content_preview": ""
+    },
+    {
+      "title": "Workflow Execution Examples",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#workflow-execution-examples",
+      "content_preview": ""
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Migration from Previous Versions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#migration-from-previous-versions",
+      "content_preview": ""
+    },
+    {
+      "title": "Technical Details",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#technical-details",
+      "content_preview": ""
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "Future Enhancements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#future-enhancements",
+      "content_preview": "Planned for future releases:\n- Phase-specific timeouts\n- Custom approval workflows\n- Workflow templates\n- Multi-project coordination\n- Advanced analyt..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#overview",
+      "tokens": 58,
+      "content_preview": "Version 3.4.0 introduces significant enhancements to the `/start-new-project-workflow` and `/start-existing-project-workflow` commands, providing phas..."
+    },
+    "New Features": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#new-features",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Sequential Phase Execution": {
+          "content_preview": "Both workflows now execute in distinct, manageable phases:\n\n**New Project Workflow (8 phases)**:\n1. Discovery - Stakeholder interview\n2. Research - Ma...",
+          "tokens": 155,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#1-sequential-phase-execution-1"
+        },
+        "2. Command Parameters": {
+          "content_preview": "```bash\n/start-new-project-workflow --parallel\n/start-existing-project-workflow --parallel\n```\nEnable parallel agent execution within phases where app...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#2-command-parameters-6"
+        },
+        "3. Approval Gates": {
+          "content_preview": "Strategic checkpoints requiring stakeholder approval:\n\n**New Project Workflow Gates**:\n- **Post-Research**: After market research, before analysis\n- *...",
+          "tokens": 100,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#3-approval-gates-1"
+        },
+        "4. Real-Time Progress Display": {
+          "content_preview": "Real-time workflow monitoring at `http://localhost:3001`:\n- Visual progress bars\n- Phase timeline with completion status\n- Active agent tracking\n- Doc...",
+          "tokens": 49,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#4-real-time-progress-display-3"
+        },
+        "5. Error Recovery System": {
+          "content_preview": "```bash\n/workflow-recovery [option]\n```\n\n**Diagnostic Options**:\n- `--diagnostic` - Run comprehensive diagnostics\n- `--validate-state` - Check state i...",
+          "tokens": 108,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#5-error-recovery-system-2"
+        },
+        "6. State Management": {
+          "content_preview": "```bash\n/checkpoint \"End of day progress\"\n/update-state \"Completed research phase, found 3 key competitors\"\n/save-decision \"Chose React over Vue\" \"Bet...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#6-state-management-3"
+        }
+      }
+    },
+    "Workflow Execution Examples": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#workflow-execution-examples",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Starting a New Project": {
+          "content_preview": "```bash\n/start-new-project-workflow",
+          "tokens": 8,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#starting-a-new-project-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Regular Checkpoints": {
+          "content_preview": "- Use `--save-state` before breaks\n- Add descriptive notes for context\n- Checkpoint before risky operations",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#1-regular-checkpoints-1"
+        },
+        "2. Approval Gate Reviews": {
+          "content_preview": "- Review all generated documents\n- Provide feedback before approval\n- Use gate pauses for stakeholder alignment",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#2-approval-gate-reviews-1"
+        },
+        "3. Error Handling": {
+          "content_preview": "- Run diagnostics if issues occur\n- Use safe mode for critical workflows\n- Keep backups of important states",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#3-error-handling-1"
+        },
+        "4. Parallel Execution": {
+          "content_preview": "- Enable for faster execution\n- Monitor agent coordination\n- Disable if consistency issues arise",
+          "tokens": 24,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#4-parallel-execution-1"
+        }
+      }
+    },
+    "Migration from Previous Versions": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#migration-from-previous-versions",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "For Users of v3.3.x": {
+          "content_preview": "- Commands remain backward compatible\n- Old `/start-new-project-workflow` still works\n- New parameters are optional enhancements",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#for-users-of-v33x-1"
+        },
+        "State File Locations": {
+          "content_preview": "- Workflow states: `project-state/workflow-states/`\n- Checkpoints: `project-state/workflow-states/checkpoints/`\n- Error logs: `project-state/error-log...",
+          "tokens": 37,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#state-file-locations-1"
+        }
+      }
+    },
+    "Technical Details": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#technical-details",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "State Structure": {
+          "content_preview": "```json\n{\n  \"workflow_id\": \"workflow-2025-01-20-123456\",\n  \"workflow_type\": \"new-project\",\n  \"current_phase\": \"research\",\n  \"phase_index\": 1,\n  \"phase...",
+          "tokens": 99,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#state-structure-1"
+        },
+        "Integration Points": {
+          "content_preview": "- Command detection: `/aaa-documents/command-detection.md`\n- State handler: `/machine-data/scripts/workflow-state-handler.js`\n- Progress formatter: `/...",
+          "tokens": 66,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#integration-points-1"
+        }
+      }
+    },
+    "Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Common Issues": {
+          "content_preview": "**Workflow won't resume**:\n- Check for pending approval gates\n- Verify state file exists\n- Run `/workflow-recovery --diagnostic`\n\n**Progress not updat...",
+          "tokens": 94,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#common-issues-1"
+        },
+        "Support Commands": {
+          "content_preview": "```bash\n/workflow-recovery --help\n/aaa-help workflow\n/status\n```",
+          "tokens": 15,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#support-commands-1"
+        }
+      }
+    },
+    "Future Enhancements": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-enhancements-v3.4.0.md#future-enhancements",
+      "tokens": 72,
+      "content_preview": "Planned for future releases:\n- Phase-specific timeouts\n- Custom approval workflows\n- Workflow templates\n- Multi-project coordination\n- Advanced analyt..."
+    }
+  }
+}

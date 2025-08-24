@@ -1,0 +1,10 @@
+{
+  "projectName": "My AgileAI Project",
+  "projectDescription": "",
+  "createdAt": "2025-07-22T20:00:00.000Z",
+  "lastUpdated": "2025-07-22T20:00:00.000Z",
+  "configuration": {
+    "dashboardTheme": "default",
+    "autoRefreshInterval": 5000
+  }
+}

@@ -1,0 +1,387 @@
+{
+  "meta": {
+    "document": "stakeholder-interview-templates",
+    "title": "Stakeholder Interview Templates",
+    "timestamp": "2025-08-11T22:02:16.923Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md",
+    "document_type": "template",
+    "file_hash": "62c96056c07605f9d24e25c50bae0f1e",
+    "estimated_tokens": 758,
+    "full_md_tokens": 5838
+  },
+  "summary": "This document provides standardized interview templates for the Project Analyzer Agent to conduct comprehensive stakeholder interviews. These templates ensure consistent information gathering across both new and existing projects.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#overview",
+      "content_preview": "This document provides standardized interview templates for the Project Analyzer Agent to conduct comprehensive stakeholder interviews. These template..."
+    },
+    {
+      "title": "Section-by-Section Interview Process",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#section-by-section-interview-process",
+      "content_preview": ""
+    },
+    {
+      "title": "New Project Workflow Interview Process",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#new-project-workflow-interview-process",
+      "content_preview": ""
+    },
+    {
+      "title": "Smart Interview Process Flow",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#smart-interview-process-flow",
+      "content_preview": ""
+    },
+    {
+      "title": "Integration with Prompt Templates",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#integration-with-prompt-templates",
+      "content_preview": ""
+    },
+    {
+      "title": "Information from Your Prompt",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#information-from-your-prompt",
+      "content_preview": "✅ **Project Identity**: [Confirmed from prompt]\n✅ **Target Users**: [Confirmed from prompt]\n✅ **Business Model**: [Confirmed from prompt]\n⚠️ **Budget ..."
+    },
+    {
+      "title": "Existing Project Workflow Interview Sections",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#existing-project-workflow-interview-sections",
+      "content_preview": ""
+    },
+    {
+      "title": "Initial Stakeholder Interview (All Projects)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#initial-stakeholder-interview-all-projects",
+      "content_preview": ""
+    },
+    {
+      "title": "Post-Research Follow-up Interview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#post-research-follow-up-interview",
+      "content_preview": ""
+    },
+    {
+      "title": "Interview Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#interview-best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Questions & Responses",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#questions-responses",
+      "content_preview": ""
+    },
+    {
+      "title": "Key Takeaways",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#key-takeaways",
+      "content_preview": "- [Important point 1]\n- [Important point 2]\n- [Important point 3]"
+    },
+    {
+      "title": "Areas Requiring Clarification",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#areas-requiring-clarification",
+      "content_preview": "- [Unclear point 1]\n- [Assumption made due to lack of info]\n```"
+    },
+    {
+      "title": "Integration with Agent Workflows",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#integration-with-agent-workflows",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#overview",
+      "tokens": 58,
+      "content_preview": "This document provides standardized interview templates for the Project Analyzer Agent to conduct comprehensive stakeholder interviews. These template..."
+    },
+    "Section-by-Section Interview Process": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#section-by-section-interview-process",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "How the Iterative Process Works": {
+          "content_preview": "1. **Ask Initial Questions** - Present questions for one section at a time\n2. **Record Responses** - Document answers in appropriate MD file\n3. **Ask ...",
+          "tokens": 119,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#how-the-iterative-process-works-1"
+        },
+        "Section Approval Recording": {
+          "content_preview": "After each section approval, record:\n```yaml\nsection: \"project-vision\"\napproved: true\ntimestamp: \"2025-01-20T10:15:00Z\"\niterations_needed: 2\nkey_clari...",
+          "tokens": 64,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#section-approval-recording-1"
+        }
+      }
+    },
+    "New Project Workflow Interview Process": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#new-project-workflow-interview-process",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Pre-Interview: Check for Pre-filled Prompt": {
+          "content_preview": "**Action**: First check if `templates/stakeholder-prompts/universal-project-prompt.md` has been filled out.\n\n**If prompt exists:**\n1. Load and parse t...",
+          "tokens": 91,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#pre-interview-check-for-pre-filled-prompt-1"
+        },
+        "Phase 1: Core Identity (5 Essential Questions)": {
+          "content_preview": "**File**: `project-documents/new-project-planning/stakeholder-interview/project-identity.md`\n\n**Questions (Skip if answered in prompt):**\n1. \"In one s...",
+          "tokens": 212,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#phase-1-core-identity-5-essential-questions-1"
+        },
+        "Phase 2: Problem & Value (4 Questions)": {
+          "content_preview": "**File**: `project-documents/new-project-planning/stakeholder-interview/problem-value.md`\n\n**Questions (Skip if answered in prompt):**\n6. \"What specif...",
+          "tokens": 138,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#phase-2-problem-value-4-questions-1"
+        },
+        "Phase 3: Business Strategy (5 Questions)": {
+          "content_preview": "**File**: `project-documents/new-project-planning/stakeholder-interview/business-strategy.md`\n\n**Questions (Skip if answered in prompt):**\n10. \"Is thi...",
+          "tokens": 156,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#phase-3-business-strategy-5-questions-1"
+        },
+        "Phase 4: Technical & Constraints (4 Questions)": {
+          "content_preview": "**File**: `project-documents/new-project-planning/stakeholder-interview/technical-constraints.md`\n\n**Questions (Skip if answered in prompt):**\n15. \"Do...",
+          "tokens": 127,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#phase-4-technical-constraints-4-questions-1"
+        }
+      }
+    },
+    "Smart Interview Process Flow": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#smart-interview-process-flow",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Step 1: Check for Pre-filled Prompt": {
+          "content_preview": "```javascript\n// Pseudo-code for the process\nif (fileExists('templates/stakeholder-prompts/universal-project-prompt.md')) {\n  const prompt = loadPromp...",
+          "tokens": 102,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#step-1-check-for-pre-filled-prompt-1"
+        },
+        "Step 2: Dynamic Question Selection": {
+          "content_preview": "**Field Mapping Table:**\n| Interview Question | Prompt Section | Field Name |\n|-------------------|----------------|------------|\n| Q1: What are you b...",
+          "tokens": 305,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#step-2-dynamic-question-selection-1"
+        },
+        "Step 3: Intelligent Follow-ups": {
+          "content_preview": "**Only ask follow-ups when:**\n- Answer is vague (e.g., \"finance\" instead of specific industry)\n- Critical information missing (e.g., no \"NOT\" boundari...",
+          "tokens": 55,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#step-3-intelligent-follow-ups-1"
+        },
+        "Step 4: Final Confirmation": {
+          "content_preview": "**Comprehensive Approval Statement:**\n\"Based on your [prompt/responses], here's my complete understanding:\n\n**WHAT**: You're building [one sentence de...",
+          "tokens": 94,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#step-4-final-confirmation-1"
+        }
+      }
+    },
+    "Integration with Prompt Templates": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#integration-with-prompt-templates",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "When Prompt is Pre-filled:": {
+          "content_preview": "**Display Format:**\n```markdown",
+          "tokens": 6,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#when-prompt-is-pre-filled-1"
+        }
+      }
+    },
+    "Information from Your Prompt": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#information-from-your-prompt",
+      "tokens": 90,
+      "content_preview": "✅ **Project Identity**: [Confirmed from prompt]\n✅ **Target Users**: [Confirmed from prompt]\n✅ **Business Model**: [Confirmed from prompt]\n⚠️ **Budget ...",
+      "subsections": {
+        "When Prompt is Partially Filled:": {
+          "content_preview": "**Adaptive Questioning:**\n- Skip all answered questions\n- Group remaining questions by phase\n- Ask in logical sequence\n- Reference prompt answers in f...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#when-prompt-is-partially-filled-1"
+        },
+        "When No Prompt Exists:": {
+          "content_preview": "**Streamlined 18-Question Interview:**\n- No redundant questions\n- Clear progression through phases\n- Each question has unique purpose\n- Approval after...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#when-no-prompt-exists-1"
+        }
+      }
+    },
+    "Existing Project Workflow Interview Sections": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#existing-project-workflow-interview-sections",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Pre-Interview: Code Analysis Presentation": {
+          "content_preview": "**File**: `project-documents/existing-project-analysis/initial-analysis-summary.md`\n\nPresent findings before starting interview:\n\"I've completed an in...",
+          "tokens": 83,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#pre-interview-code-analysis-presentation-1"
+        },
+        "Section 0: Verify What We're Working On (CRITICAL)": {
+          "content_preview": "**File**: `project-documents/existing-project-analysis/stakeholder-interview/project-identity-verification.md`\n\n**Initial Questions:**\n1. \"Based on my...",
+          "tokens": 274,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#section-0-verify-what-were-working-on-critical-1"
+        },
+        "Section 1: Current State Validation": {
+          "content_preview": "**File**: `project-documents/existing-project-analysis/stakeholder-interview/current-state.md`\n\n**Initial Questions (Informed by Analysis):**\n1. \"I've...",
+          "tokens": 165,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#section-1-current-state-validation-1"
+        },
+        "Section 2: Technical Landscape Verification": {
+          "content_preview": "**File**: `project-documents/existing-project-analysis/stakeholder-interview/technical-landscape.md`\n\n**Initial Questions:**\n1. \"I detected [technolog...",
+          "tokens": 90,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#section-2-technical-landscape-verification-1"
+        },
+        "Section 2.5: Project Structure Evaluation (NEW)": {
+          "content_preview": "**File**: `project-documents/existing-project-analysis/stakeholder-interview/structure-evaluation.md`\n\n**Analysis Presentation:**\n\"I've analyzed your ...",
+          "tokens": 370,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#section-25-project-structure-evaluation-new-1"
+        },
+        "Section 3: Improvement Goals": {
+          "content_preview": "**File**: `project-documents/existing-project-analysis/stakeholder-interview/improvement-goals.md`\n\n**Initial Questions:**\n1. \"What brings you here? (...",
+          "tokens": 141,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#section-3-improvement-goals-1"
+        },
+        "Section 4: Enhancement Boundaries": {
+          "content_preview": "**File**: `project-documents/existing-project-analysis/stakeholder-interview/analysis-boundaries.md`\n\n**Initial Questions:**\n1. \"Should I analyze the ...",
+          "tokens": 87,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#section-4-enhancement-boundaries-1"
+        }
+      }
+    },
+    "Initial Stakeholder Interview (All Projects)": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#initial-stakeholder-interview-all-projects",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Project Context & Goals": {
+          "content_preview": "**Interviewer Introduction:**\n\"I'd like to understand your vision and objectives for this project. Your answers will help all our specialized agents a...",
+          "tokens": 225,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#project-context-goals-1"
+        },
+        "Technical Scope & Architecture": {
+          "content_preview": "**Interviewer Introduction:**\n\"Now let's discuss the technical aspects and any preferences or constraints you have.\"\n\n**Questions:**\n- What technologi...",
+          "tokens": 230,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#technical-scope-architecture-1"
+        },
+        "Analysis Objectives": {
+          "content_preview": "**Interviewer Introduction:**\n\"I want to ensure our analysis focuses on what matters most to you.\"\n\n**Questions:**\n- What specific outcomes are you ho...",
+          "tokens": 213,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#analysis-objectives-1"
+        },
+        "Project Health & History": {
+          "content_preview": "**Interviewer Introduction:**\n\"Understanding the project's history and current state helps us provide better recommendations.\"\n\n**Questions:**\n- How l...",
+          "tokens": 189,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#project-health-history-1"
+        },
+        "Constraints & Priorities": {
+          "content_preview": "**Interviewer Introduction:**\n\"Every project has constraints. Understanding yours helps us provide realistic recommendations.\"\n\n**Questions:**\n- Are t...",
+          "tokens": 195,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#constraints-priorities-1"
+        },
+        "Documentation & Resources": {
+          "content_preview": "**Interviewer Introduction:**\n\"Finally, let's discuss what resources and documentation are available to help our analysis.\"\n\n**Questions:**\n- What exi...",
+          "tokens": 187,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#documentation-resources-1"
+        }
+      }
+    },
+    "Post-Research Follow-up Interview": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#post-research-follow-up-interview",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Overview": {
+          "content_preview": "\"We've completed our comprehensive analysis and I'd like to review our key findings with you to ensure we're aligned on the best path forward.\"",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#overview-2"
+        },
+        "Vision Alignment Questions": {
+          "content_preview": "**Market & Business Findings:**\n- Our research shows [market opportunity of $X with Y growth rate]. How does this align with your expectations?\n- We'v...",
+          "tokens": 438,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#vision-alignment-questions-1"
+        },
+        "Direction Confirmation": {
+          "content_preview": "**Final Alignment:**\n- Given all our findings, do you want to proceed with the recommended approach?\n- Are there any aspects of our analysis that conc...",
+          "tokens": 145,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#direction-confirmation-1"
+        }
+      }
+    },
+    "Interview Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#interview-best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "For the Interviewer (Project Analyzer Agent)": {
+          "content_preview": "1. **Be Conversational**: Make it feel like a discussion, not an interrogation\n2. **Listen Actively**: Pay attention to what's not being said\n3. **Cla...",
+          "tokens": 114,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#for-the-interviewer-project-analyzer-agent-1"
+        },
+        "Handling Non-Responses": {
+          "content_preview": "If stakeholder skips questions or provides minimal answers:\n- Document \"No response provided\" for skipped questions\n- Note which areas the stakeholder...",
+          "tokens": 81,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#handling-non-responses-1"
+        },
+        "Documentation Format": {
+          "content_preview": "For each question category, create a structured document:\n```markdown",
+          "tokens": 17,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#documentation-format-1"
+        }
+      }
+    },
+    "Questions & Responses": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#questions-responses",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Question: [Question text]": {
+          "content_preview": "**Response**: [Stakeholder's answer]\n**Follow-up**: [Any follow-up Q&A]\n**Notes**: [Interviewer observations]",
+          "tokens": 23,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#question-question-text-1"
+        },
+        "Question: [Next question]": {
+          "content_preview": "**Response**: [No response provided] \n**Notes**: Stakeholder indicated this was not a concern",
+          "tokens": 21,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#question-next-question-1"
+        }
+      }
+    },
+    "Key Takeaways": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#key-takeaways",
+      "tokens": 15,
+      "content_preview": "- [Important point 1]\n- [Important point 2]\n- [Important point 3]"
+    },
+    "Areas Requiring Clarification": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#areas-requiring-clarification",
+      "tokens": 14,
+      "content_preview": "- [Unclear point 1]\n- [Assumption made due to lack of info]\n```"
+    },
+    "Integration with Agent Workflows": {
+      "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#integration-with-agent-workflows",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "How Agents Should Use This Information": {
+          "content_preview": "1. **Research Agent**: Align market research with stated business objectives\n2. **Marketing Agent**: Focus strategies on identified target users and p...",
+          "tokens": 145,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#how-agents-should-use-this-information-1"
+        },
+        "Context Optimization": {
+          "content_preview": "Store responses in structured JSON for efficient agent consumption:\n```json\n{\n  \"stakeholder_interview\": {\n    \"project_context\": {\n      \"business_ob...",
+          "tokens": 183,
+          "md_reference": "agile-ai-agents/aaa-documents/stakeholder-interview-templates.md#context-optimization-1"
+        }
+      }
+    }
+  }
+}

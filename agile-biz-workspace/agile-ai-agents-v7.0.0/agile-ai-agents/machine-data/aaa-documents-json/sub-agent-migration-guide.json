@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "document": "sub-agent-migration-guide",
+    "title": "Sub-Agent System Migration Guide (v4.0.0)",
+    "timestamp": "2025-08-11T22:02:16.928Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md",
+    "document_type": "guide",
+    "file_hash": "13c6afd82ce6697193013ddac9aef0e5",
+    "estimated_tokens": 605,
+    "full_md_tokens": 1658
+  },
+  "summary": "AgileAiAgents v4.0.0 introduces the revolutionary Sub-Agent System powered by Claude Code's sub-agent capabilities. This guide helps you migrate from v3.x to v4.0.0 and take advantage of 60-78% performance improvements.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#overview",
+      "content_preview": "AgileAiAgents v4.0.0 introduces the revolutionary Sub-Agent System powered by Claude Code's sub-agent capabilities. This guide helps you migrate from ..."
+    },
+    {
+      "title": "What's New",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#whats-new",
+      "content_preview": ""
+    },
+    {
+      "title": "Migration Steps",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#migration-steps",
+      "content_preview": ""
+    },
+    {
+      "title": "Configuration Options",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#configuration-options",
+      "content_preview": ""
+    },
+    {
+      "title": "Monitoring Sub-Agent Performance",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#monitoring-sub-agent-performance",
+      "content_preview": ""
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "Rollback Instructions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#rollback-instructions",
+      "content_preview": "If you need to disable sub-agents:\n\n```yaml\nsub_agents:\n  enabled: false  # Disables all sub-agent functionality\n```\n\nOr disable specific workflows:\n`..."
+    },
+    {
+      "title": "Performance Comparison",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#performance-comparison",
+      "content_preview": ""
+    },
+    {
+      "title": "Getting Help",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#getting-help",
+      "content_preview": "- **Documentation**: See `aaa-documents/sub-agent-system-guide.md`\n- **Examples**: Check `tests/test-all-sub-agents.js`\n- **Issues**: Report at https:..."
+    },
+    {
+      "title": "Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#summary",
+      "content_preview": "The v4.0.0 Sub-Agent System dramatically improves AgileAiAgents performance while maintaining quality. With proper configuration, you'll see:\n\n- 60-78..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#overview",
+      "tokens": 55,
+      "content_preview": "AgileAiAgents v4.0.0 introduces the revolutionary Sub-Agent System powered by Claude Code's sub-agent capabilities. This guide helps you migrate from ..."
+    },
+    "What's New": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#whats-new",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Performance Improvements": {
+          "content_preview": "- **Research**: 75% faster (4-6 hours → 1-2 hours)\n- **Sprint Execution**: 60% faster (5 days → 2 days)\n- **Project Analysis**: 75% faster (2-4 hours ...",
+          "tokens": 51,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#performance-improvements-1"
+        },
+        "New Components": {
+          "content_preview": "- Sub-Agent Orchestrator\n- Token Budget Manager\n- Document Registry Manager\n- Specialized orchestrators for each workflow",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#new-components-1"
+        }
+      }
+    },
+    "Migration Steps": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#migration-steps",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Update AgileAiAgents": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#1-update-agileaiagents-1"
+        }
+      }
+    },
+    "Configuration Options": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#configuration-options",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Token Budget Management": {
+          "content_preview": "Configure token allocation for different task types:\n\n```yaml\nsub_agents:\n  token_management:\n    base_budget: 10000           # Base allocation per s...",
+          "tokens": 90,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#token-budget-management-1"
+        },
+        "Document Registry": {
+          "content_preview": "Choose registry management approach:\n\n```yaml\nsub_agents:\n  document_registry:\n    type: \"hybrid\"               # Recommended: central + session-based...",
+          "tokens": 66,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#document-registry-1"
+        },
+        "Error Handling": {
+          "content_preview": "Configure error handling behavior:\n\n```yaml\nsub_agents:\n  error_handling:\n    retry_on_timeout: true       # Retry failed sub-agents\n    save_partial_...",
+          "tokens": 62,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#error-handling-1"
+        }
+      }
+    },
+    "Monitoring Sub-Agent Performance": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#monitoring-sub-agent-performance",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Dashboard Integration": {
+          "content_preview": "The project dashboard now shows sub-agent activity:\n- Active sub-agents count\n- Progress by workflow\n- Token usage per sub-agent\n- Time savings metric...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#dashboard-integration-1"
+        },
+        "Log Files": {
+          "content_preview": "Sub-agent logs are stored in:\n```\nagile-ai-agents/logs/sub-agents/\n├── sessions/\n│   └── session-2025-01-29-T10-15-30/\n│       ├── orchestrator.log\n│ ...",
+          "tokens": 73,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#log-files-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Start with Default Settings": {
+          "content_preview": "The default configuration is optimized for most use cases. Only customize if needed.",
+          "tokens": 21,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#1-start-with-default-settings-1"
+        },
+        "2. Monitor Token Usage": {
+          "content_preview": "Sub-agents use tokens more efficiently, but monitor usage during initial runs:\n```javascript\n// Check token usage\nconst usage = tokenManager.getSessio...",
+          "tokens": 64,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#2-monitor-token-usage-1"
+        },
+        "3. Handle Partial Results": {
+          "content_preview": "Even if some sub-agents fail, you get partial results:\n```javascript\n// Example: 2 of 3 research groups complete\nconst results = await orchestrator.ex...",
+          "tokens": 69,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#3-handle-partial-results-1"
+        },
+        "4. Optimize for Your Workflow": {
+          "content_preview": "- **Small projects**: Use fewer concurrent sub-agents\n- **Large projects**: Increase max_concurrent to 7-10\n- **Limited tokens**: Reduce base_budget a...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#4-optimize-for-your-workflow-1"
+        }
+      }
+    },
+    "Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Issue: Sub-agents not launching": {
+          "content_preview": "**Solution**: Ensure Claude Code has sub-agent support enabled",
+          "tokens": 15,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#issue-sub-agents-not-launching-1"
+        },
+        "Issue: Token budget exceeded": {
+          "content_preview": "**Solution**: Reduce base_budget or use fewer concurrent sub-agents",
+          "tokens": 16,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#issue-token-budget-exceeded-1"
+        },
+        "Issue: Slower than expected": {
+          "content_preview": "**Solution**: Check for file conflicts in sprint execution, reduce parallel stories",
+          "tokens": 20,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#issue-slower-than-expected-1"
+        },
+        "Issue: Registry growing too large": {
+          "content_preview": "**Solution**: Reduce archive_after_hours to 12 or enable aggressive cleanup",
+          "tokens": 18,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#issue-registry-growing-too-large-1"
+        }
+      }
+    },
+    "Rollback Instructions": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#rollback-instructions",
+      "tokens": 58,
+      "content_preview": "If you need to disable sub-agents:\n\n```yaml\nsub_agents:\n  enabled: false  # Disables all sub-agent functionality\n```\n\nOr disable specific workflows:\n`..."
+    },
+    "Performance Comparison": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#performance-comparison",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Research Phase (Medium Level)": {
+          "content_preview": "| Metric | v3.x | v4.0.0 | Improvement |\n|--------|------|--------|-------------|\n| Time | 4-6 hours | 1-2 hours | 75% faster |\n| Documents | Sequenti...",
+          "tokens": 59,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#research-phase-medium-level-1"
+        },
+        "Sprint Execution": {
+          "content_preview": "| Metric | v3.x | v4.0.0 | Improvement |\n|--------|------|--------|-------------|\n| 20 points | 5 days | 2 days | 60% faster |\n| Conflicts | Manual | ...",
+          "tokens": 58,
+          "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#sprint-execution-2"
+        }
+      }
+    },
+    "Getting Help": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#getting-help",
+      "tokens": 45,
+      "content_preview": "- **Documentation**: See `aaa-documents/sub-agent-system-guide.md`\n- **Examples**: Check `tests/test-all-sub-agents.js`\n- **Issues**: Report at https:..."
+    },
+    "Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/sub-agent-migration-guide.md#summary",
+      "tokens": 88,
+      "content_preview": "The v4.0.0 Sub-Agent System dramatically improves AgileAiAgents performance while maintaining quality. With proper configuration, you'll see:\n\n- 60-78..."
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "agent": "logger_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 120,
+    "full_md_tokens": 4300,
+    "md_file": "agile-ai-agents/ai-agents/logger_agent.md",
+    "file_hash": "ae530a2531a0168f9266335e8218824a"
+  },
+  "summary": "## Overview\nThe Logger Agent specializes in comprehensive logging, monitoring, and observability operations. This agent provides real-time insights into system health, performance metrics, and operational intelligence for proactive issue detection and resolution.",
+  "core_responsibilities": {
+    "summary": [
+      "Intelligent Log Generation & Management",
+      "Monitoring & Alerting",
+      "Performance & Observability"
+    ],
+    "details_tokens": 289,
+    "md_reference": "agile-ai-agents/ai-agents/logger_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/logger_agent.md#workflows"
+  },
+  "reference_documentation": {
+    "error_codes_reference": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/error-codes.json",
+      "tokens": 1000
+    },
+    "verbosity_implementation_guide": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/verbosity-implementation-guide.json",
+      "tokens": 1000
+    },
+    "verbosity_display_templates": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/verbosity-display-templates.json",
+      "tokens": 1000
+    },
+    "troubleshooting_guide": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/troubleshooting.json",
+      "tokens": 1000
+    }
+  },
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/logger_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

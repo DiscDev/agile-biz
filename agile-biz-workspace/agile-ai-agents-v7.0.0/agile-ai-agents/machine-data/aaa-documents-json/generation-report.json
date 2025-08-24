@@ -1,0 +1,171 @@
+{
+  "generated": "2025-07-10T19:27:38.406Z",
+  "summary": {
+    "total_files": 32,
+    "successful": 32,
+    "errors": 0,
+    "average_token_reduction": "70.8"
+  },
+  "files": [
+    {
+      "file": "agent-md-structure-standard",
+      "tokens": 852,
+      "reduction": 28.5
+    },
+    {
+      "file": "ai-speed-sprint-implementation-plan",
+      "tokens": 496,
+      "reduction": 72.7
+    },
+    {
+      "file": "ai-story-point-guide",
+      "tokens": 507,
+      "reduction": 73.5
+    },
+    {
+      "file": "auto-project-orchestrator",
+      "tokens": 972,
+      "reduction": 98
+    },
+    {
+      "file": "ci-cd-setup",
+      "tokens": 754,
+      "reduction": 50.2
+    },
+    {
+      "file": "code-review-checklists",
+      "tokens": 294,
+      "reduction": 86.9
+    },
+    {
+      "file": "defensive-programming-templates",
+      "tokens": 291,
+      "reduction": 91.4
+    },
+    {
+      "file": "defensive-programming-training",
+      "tokens": 489,
+      "reduction": 87.8
+    },
+    {
+      "file": "deployment",
+      "tokens": 704,
+      "reduction": 82.3
+    },
+    {
+      "file": "document-creation-rules",
+      "tokens": 411,
+      "reduction": 60.4
+    },
+    {
+      "file": "document-md-structure-standard",
+      "tokens": 1997,
+      "reduction": -28.4
+    },
+    {
+      "file": "error-codes",
+      "tokens": 356,
+      "reduction": 80.7
+    },
+    {
+      "file": "evolution-tracking-examples",
+      "tokens": 259,
+      "reduction": 94.2
+    },
+    {
+      "file": "evolution-tracking-guide",
+      "tokens": 609,
+      "reduction": 77.8
+    },
+    {
+      "file": "json-context-guide",
+      "tokens": 438,
+      "reduction": 76.1
+    },
+    {
+      "file": "json-reference-resolution-guide",
+      "tokens": 499,
+      "reduction": 80.4
+    },
+    {
+      "file": "learning-analysis-agent-guide",
+      "tokens": 814,
+      "reduction": 51.5
+    },
+    {
+      "file": "linting-rules-defensive-programming",
+      "tokens": 497,
+      "reduction": 84.7
+    },
+    {
+      "file": "project-document-creation-timing-guide",
+      "tokens": 595,
+      "reduction": 75.5
+    },
+    {
+      "file": "project-structure-agent-examples",
+      "tokens": 311,
+      "reduction": 86.7
+    },
+    {
+      "file": "project-structure-agent-implementation-plan",
+      "tokens": 429,
+      "reduction": 87.1
+    },
+    {
+      "file": "project-structure-migration-guide",
+      "tokens": 494,
+      "reduction": 62.9
+    },
+    {
+      "file": "smart-context-loading-guide",
+      "tokens": 611,
+      "reduction": 61.4
+    },
+    {
+      "file": "sprint-document-organization-guide",
+      "tokens": 912,
+      "reduction": 64.9
+    },
+    {
+      "file": "sprint-planning-templates-enhanced",
+      "tokens": 647,
+      "reduction": 73.9
+    },
+    {
+      "file": "stakeholder-context-integration-pattern",
+      "tokens": 391,
+      "reduction": 70.7
+    },
+    {
+      "file": "stakeholder-interview-templates",
+      "tokens": 458,
+      "reduction": 83.8
+    },
+    {
+      "file": "troubleshooting",
+      "tokens": 306,
+      "reduction": 76.9
+    },
+    {
+      "file": "verbosity-display-templates",
+      "tokens": 403,
+      "reduction": 75.6
+    },
+    {
+      "file": "verbosity-implementation-guide",
+      "tokens": 304,
+      "reduction": 80.4
+    },
+    {
+      "file": "verbosity-rollout-guide",
+      "tokens": 454,
+      "reduction": 61.4
+    },
+    {
+      "file": "version-management-guide",
+      "tokens": 650,
+      "reduction": 56.8
+    }
+  ]
+}

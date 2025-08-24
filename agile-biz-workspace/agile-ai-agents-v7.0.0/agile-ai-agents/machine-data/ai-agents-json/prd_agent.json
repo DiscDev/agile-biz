@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "agent": "prd_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 99,
+    "full_md_tokens": 8748,
+    "md_file": "agile-ai-agents/ai-agents/prd_agent.md",
+    "file_hash": "e52d78746cd516ca26d9a33928b31781"
+  },
+  "summary": "## Overview\nComplete checkout flow from cart to order confirmation",
+  "core_responsibilities": {
+    "summary": [
+      "Comprehensive PRD Document Generation",
+      "Requirements Quality Assurance"
+    ],
+    "details_tokens": 2028,
+    "md_reference": "agile-ai-agents/ai-agents/prd_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "New Feature Requirements Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/prd_agent.md#new-feature-requirements-workflow"
+      },
+      {
+        "name": "Requirements Change Management Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/prd_agent.md#requirements-change-management-workflow"
+      },
+      {
+        "name": "Requirements Validation Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/prd_agent.md#requirements-validation-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/prd_agent.md#workflows"
+  },
+  "reference_documentation": {
+    "project_document_creation_timing": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/project-document-creation-timing-guide.json",
+      "tokens": 1000
+    },
+    "stakeholder_interview_templates": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/stakeholder-interview-templates.json",
+      "tokens": 1000
+    },
+    "stakeholder_context_integration": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/stakeholder-context-integration-pattern.json",
+      "tokens": 1000
+    }
+  },
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/prd_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

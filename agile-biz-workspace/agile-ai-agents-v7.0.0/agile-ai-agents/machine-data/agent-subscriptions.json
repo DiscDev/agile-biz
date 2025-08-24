@@ -1,0 +1,134 @@
+{
+  "coder_agent": {
+    "subscribes_to": ["testing_agent", "security_agent", "devops_agent", "api_agent"],
+    "learning_interests": ["patterns", "optimization", "technology"]
+  },
+  "testing_agent": {
+    "subscribes_to": ["coder_agent", "security_agent", "ui_ux_agent"],
+    "learning_interests": ["bug_fix", "patterns", "recovery"]
+  },
+  "security_agent": {
+    "subscribes_to": ["coder_agent", "devops_agent", "testing_agent"],
+    "learning_interests": ["anti_pattern", "recovery", "technology"]
+  },
+  "devops_agent": {
+    "subscribes_to": ["coder_agent", "security_agent", "testing_agent"],
+    "learning_interests": ["optimization", "recovery", "technology"]
+  },
+  "ui_ux_agent": {
+    "subscribes_to": ["coder_agent", "testing_agent"],
+    "learning_interests": ["patterns", "optimization"]
+  },
+  "project_manager_agent": {
+    "subscribes_to": ["all"],
+    "learning_interests": ["all"]
+  },
+  "api_agent": {
+    "subscribes_to": ["coder_agent", "security_agent"],
+    "learning_interests": ["patterns", "optimization", "technology"]
+  },
+  "ml_agent": {
+    "subscribes_to": ["coder_agent", "data_engineer_agent"],
+    "learning_interests": ["patterns", "optimization", "technology"]
+  },
+  "data_engineer_agent": {
+    "subscribes_to": ["coder_agent", "ml_agent", "dba_agent"],
+    "learning_interests": ["optimization", "patterns", "technology"]
+  },
+  "dba_agent": {
+    "subscribes_to": ["coder_agent", "devops_agent", "data_engineer_agent"],
+    "learning_interests": ["optimization", "patterns", "recovery"]
+  },
+  "research_agent": {
+    "subscribes_to": ["all"],
+    "learning_interests": ["patterns", "technology"]
+  },
+  "finance_agent": {
+    "subscribes_to": ["project_manager_agent"],
+    "learning_interests": ["optimization", "patterns"]
+  },
+  "marketing_agent": {
+    "subscribes_to": ["ui_ux_agent", "seo_agent", "social_media_agent"],
+    "learning_interests": ["patterns", "optimization"]
+  },
+  "seo_agent": {
+    "subscribes_to": ["coder_agent", "ui_ux_agent", "marketing_agent"],
+    "learning_interests": ["patterns", "technology", "optimization"]
+  },
+  "social_media_agent": {
+    "subscribes_to": ["marketing_agent", "analytics_agent"],
+    "learning_interests": ["patterns", "optimization"]
+  },
+  "email_marketing_agent": {
+    "subscribes_to": ["marketing_agent", "customer_lifecycle_agent"],
+    "learning_interests": ["patterns", "optimization"]
+  },
+  "ppc_media_buyer_agent": {
+    "subscribes_to": ["marketing_agent", "analytics_agent", "revenue_optimization_agent"],
+    "learning_interests": ["optimization", "patterns"]
+  },
+  "customer_lifecycle_agent": {
+    "subscribes_to": ["email_marketing_agent", "analytics_agent"],
+    "learning_interests": ["patterns", "optimization"]
+  },
+  "revenue_optimization_agent": {
+    "subscribes_to": ["analytics_agent", "ppc_media_buyer_agent", "customer_lifecycle_agent"],
+    "learning_interests": ["optimization", "patterns"]
+  },
+  "analytics_agent": {
+    "subscribes_to": ["all"],
+    "learning_interests": ["all"]
+  },
+  "documentation_agent": {
+    "subscribes_to": ["coder_agent", "api_agent"],
+    "learning_interests": ["patterns"]
+  },
+  "document_manager_agent": {
+    "subscribes_to": ["all"],
+    "learning_interests": ["optimization"]
+  },
+  "logger_agent": {
+    "subscribes_to": ["all"],
+    "learning_interests": ["patterns", "recovery"]
+  },
+  "optimization_agent": {
+    "subscribes_to": ["all"],
+    "learning_interests": ["optimization", "patterns"]
+  },
+  "project_dashboard_agent": {
+    "subscribes_to": ["project_manager_agent", "scrum_master_agent"],
+    "learning_interests": ["patterns"]
+  },
+  "project_analyzer_agent": {
+    "subscribes_to": ["all"],
+    "learning_interests": ["patterns", "anti_pattern"]
+  },
+  "business_documents_agent": {
+    "subscribes_to": ["project_manager_agent", "finance_agent"],
+    "learning_interests": ["patterns"]
+  },
+  "llm_agent": {
+    "subscribes_to": ["coder_agent", "ml_agent"],
+    "learning_interests": ["technology", "optimization"]
+  },
+  "mcp_agent": {
+    "subscribes_to": ["coder_agent", "devops_agent"],
+    "learning_interests": ["technology", "patterns"]
+  },
+  "analysis_agent": {
+    "subscribes_to": ["research_agent", "project_manager_agent"],
+    "learning_interests": ["patterns", "optimization"]
+  },
+  "scrum_master_agent": {
+    "subscribes_to": ["all"],
+    "learning_interests": ["coordination", "patterns"]
+  },
+  "project_state_manager_agent": {
+    "subscribes_to": ["all"],
+    "learning_interests": ["all"]
+  },
+  "learning_analysis_agent": {
+    "subscribes_to": ["all"],
+    "learning_interests": ["all"]
+  }
+}

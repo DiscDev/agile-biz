@@ -1,0 +1,177 @@
+{
+  "meta": {
+    "document": "test-results",
+    "title": "Sprint Test Results",
+    "timestamp": "2025-07-22T01:41:03.751Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md",
+    "document_type": "general_documentation",
+    "file_hash": "90a2f8d7d806d1a90c5991011f510db3",
+    "estimated_tokens": 412,
+    "full_md_tokens": 991
+  },
+  "summary": "## Sprint: 2025-01-09 - Authentication Foundation",
+  "sections": [
+    {
+      "title": "Sprint: 2025-01-09 - Authentication Foundation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#sprint-2025-01-09-authentication-foundation",
+      "content_preview": "**Test Execution Period**: Day 1 - Day 10  \n**Report Date**: 2025-01-19"
+    },
+    {
+      "title": "Executive Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#executive-summary",
+      "content_preview": ""
+    },
+    {
+      "title": "Test Execution Details",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#test-execution-details",
+      "content_preview": ""
+    },
+    {
+      "title": "Bug Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#bug-summary",
+      "content_preview": ""
+    },
+    {
+      "title": "Test Coverage Analysis",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#test-coverage-analysis",
+      "content_preview": "```\nsrc/\n├── controllers/\n│   ├── authController.js -------- 94%\n│   └── sessionController.js ----- 88%\n├── models/\n│   └── userModel.js ------------ ..."
+    },
+    {
+      "title": "Recommendations",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#recommendations",
+      "content_preview": ""
+    },
+    {
+      "title": "Sign-offs",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#sign-offs",
+      "content_preview": "| Role | Name | Sign-off | Date |\n|:-----|:-----|:---------|:-----|\n| Testing Lead | Testing Agent | ✅ Approved | 2025-01-19 |\n| Security Lead | Secur..."
+    },
+    {
+      "title": "Conclusion",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#conclusion",
+      "content_preview": "The authentication foundation sprint has met all quality gates and is approved for production deployment. Minor improvements have been documented and ..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Sprint: 2025-01-09 - Authentication Foundation": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#sprint-2025-01-09-authentication-foundation",
+      "tokens": 16,
+      "content_preview": "**Test Execution Period**: Day 1 - Day 10  \n**Report Date**: 2025-01-19"
+    },
+    "Executive Summary": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#executive-summary",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Overall Results": {
+          "content_preview": "- **Total Test Cases**: 156\n- **Passed**: 151 (96.8%)\n- **Failed**: 3 (1.9%)\n- **Blocked**: 2 (1.3%)\n- **Code Coverage**: 87%\n- **Sprint Quality**: ✅ ...",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#overall-results-1"
+        }
+      }
+    },
+    "Test Execution Details": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#test-execution-details",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Unit Testing Results": {
+          "content_preview": "**Coverage**: 92% | **Status**: ✅ Complete\n\n| Module | Tests | Passed | Failed | Coverage |\n|:-------|------:|-------:|-------:|---------:|\n| User Mod...",
+          "tokens": 78,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#unit-testing-results-1"
+        },
+        "Integration Testing Results": {
+          "content_preview": "**Coverage**: 78% | **Status**: ⚠️ Minor Issues\n\n| Feature | Tests | Passed | Failed | Notes |\n|:--------|------:|-------:|-------:|:------|\n| Registr...",
+          "tokens": 94,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#integration-testing-results-1"
+        },
+        "Security Testing Results": {
+          "content_preview": "**Status**: ✅ Passed with Recommendations\n\n| Test Category | Tests | Passed | Failed | Severity |\n|:--------------|------:|-------:|-------:|:--------...",
+          "tokens": 118,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#security-testing-results-1"
+        },
+        "Performance Testing Results": {
+          "content_preview": "**Status**: ✅ Exceeds Requirements\n\n| Endpoint | Target | Actual | 95th % | Status |\n|:---------|-------:|-------:|-------:|:------:|\n| POST /register...",
+          "tokens": 76,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#performance-testing-results-1"
+        },
+        "Browser Compatibility": {
+          "content_preview": "**Tested Browsers**: Chrome, Firefox, Safari, Edge\n\n| Browser | Version | Status | Issues |\n|:--------|:--------|:------:|:-------|\n| Chrome | 120+ | ...",
+          "tokens": 61,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#browser-compatibility-1"
+        }
+      }
+    },
+    "Bug Summary": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#bug-summary",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Critical Bugs: 0": {
+          "content_preview": "None found",
+          "tokens": 3,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#critical-bugs-0-1"
+        },
+        "Major Bugs: 0": {
+          "content_preview": "None found",
+          "tokens": 3,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#major-bugs-0-1"
+        },
+        "Minor Bugs: 3": {
+          "content_preview": "1. **BUG-001**: Validation message positioning on mobile\n   - Status: Fixed\n   - Impact: Low\n   \n2. **BUG-002**: Session timeout not implemented\n   - ...",
+          "tokens": 73,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#minor-bugs-3-1"
+        }
+      }
+    },
+    "Test Coverage Analysis": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#test-coverage-analysis",
+      "tokens": 102,
+      "content_preview": "```\nsrc/\n├── controllers/\n│   ├── authController.js -------- 94%\n│   └── sessionController.js ----- 88%\n├── models/\n│   └── userModel.js ------------ ..."
+    },
+    "Recommendations": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#recommendations",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "For Next Sprint": {
+          "content_preview": "1. Implement session timeout functionality\n2. Add comprehensive audit logging\n3. Enhance mobile UI responsiveness\n4. Complete rate limiting implementa...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#for-next-sprint-1"
+        },
+        "Process Improvements": {
+          "content_preview": "1. Start integration testing earlier\n2. Automate security scans in CI/CD\n3. Include performance tests in definition of done\n4. Create reusable test da...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#process-improvements-1"
+        }
+      }
+    },
+    "Sign-offs": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#sign-offs",
+      "tokens": 77,
+      "content_preview": "| Role | Name | Sign-off | Date |\n|:-----|:-----|:---------|:-----|\n| Testing Lead | Testing Agent | ✅ Approved | 2025-01-19 |\n| Security Lead | Secur..."
+    },
+    "Conclusion": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/testing/test-results.md#conclusion",
+      "tokens": 67,
+      "content_preview": "The authentication foundation sprint has met all quality gates and is approved for production deployment. Minor improvements have been documented and ..."
+    }
+  }
+}

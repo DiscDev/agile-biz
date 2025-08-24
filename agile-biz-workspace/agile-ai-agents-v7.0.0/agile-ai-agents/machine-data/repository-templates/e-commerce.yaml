@@ -1,0 +1,129 @@
+template:
+  id: "e-commerce"
+  name: "E-commerce Platform"
+  description: "Multi-repository structure for e-commerce platforms"
+  best_for:
+    - "Online marketplaces"
+    - "Retail platforms"
+    - "B2C applications"
+  
+  repositories:
+    - id: "storefront"
+      name: "Customer Storefront"
+      purpose: "Public-facing shopping experience"
+      typical_tech:
+        - "Next.js for SSR/SSG"
+        - "React for dynamic UI"
+        - "Tailwind for styling"
+      initial_structure:
+        - "src/pages/"
+        - "src/components/"
+        - "src/hooks/"
+        - "src/styles/"
+        - "public/"
+      evolution_notes: "Usually the first repository created"
+    
+    - id: "admin"
+      name: "Admin Dashboard"
+      purpose: "Merchant and admin management interface"
+      typical_tech:
+        - "React Admin"
+        - "Material-UI"
+        - "Chart.js for analytics"
+      initial_structure:
+        - "src/modules/"
+        - "src/components/"
+        - "src/services/"
+        - "src/utils/"
+      evolution_notes: "Splits when admin complexity grows beyond 20+ screens"
+    
+    - id: "api"
+      name: "API Services"
+      purpose: "Backend services and business logic"
+      typical_tech:
+        - "Node.js/Express"
+        - "GraphQL or REST"
+        - "PostgreSQL"
+      initial_structure:
+        - "src/controllers/"
+        - "src/models/"
+        - "src/services/"
+        - "src/middleware/"
+        - "src/routes/"
+      evolution_notes: "Splits when API versioning becomes critical"
+    
+    - id: "inventory"
+      name: "Inventory Service"
+      purpose: "Stock management and fulfillment"
+      typical_tech:
+        - "Microservice architecture"
+        - "Message queues"
+        - "Real-time sync"
+      initial_structure:
+        - "src/handlers/"
+        - "src/models/"
+        - "src/queues/"
+        - "src/sync/"
+      evolution_notes: "Emerges when inventory complexity requires isolation"
+    
+    - id: "analytics"
+      name: "Analytics Engine"
+      purpose: "Business intelligence and reporting"
+      typical_tech:
+        - "Data pipeline tools"
+        - "BigQuery/Redshift"
+        - "Python for ML"
+      initial_structure:
+        - "pipelines/"
+        - "models/"
+        - "reports/"
+        - "dashboards/"
+      evolution_notes: "Splits when data processing affects main app performance"
+
+  evolution_triggers:
+    - trigger: "storefront_performance"
+      threshold: "Page load > 3 seconds"
+      action: "Consider CDN and static generation"
+    
+    - trigger: "admin_complexity"
+      threshold: "Admin features > 20"
+      action: "Split admin dashboard to separate repo"
+    
+    - trigger: "order_volume"
+      threshold: "> 1000 orders/day"
+      action: "Extract inventory to microservice"
+    
+    - trigger: "analytics_load"
+      threshold: "Reports affecting API response time"
+      action: "Move analytics to separate service"
+
+  dependencies:
+    - from: "storefront"
+      to: "api"
+      type: "REST/GraphQL API"
+      notes: "Customer data and orders"
+    
+    - from: "admin"
+      to: "api"
+      type: "REST/GraphQL API"
+      notes: "Management operations"
+    
+    - from: "api"
+      to: "inventory"
+      type: "Message Queue"
+      notes: "Stock updates and fulfillment"
+    
+    - from: "analytics"
+      to: "api"
+      type: "Read replica DB"
+      notes: "Data extraction for analysis"
+
+  success_metrics:
+    - metric: "deployment_independence"
+      target: "Each repo deploys independently"
+    - metric: "team_velocity"
+      target: "Features ship 40% faster"
+    - metric: "system_reliability"
+      target: "99.9% uptime per service"
+    - metric: "development_speed"
+      target: "Reduced merge conflicts by 80%"

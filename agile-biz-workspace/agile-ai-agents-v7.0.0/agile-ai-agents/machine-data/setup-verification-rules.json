@@ -1,0 +1,272 @@
+{
+  "version": "1.0.0",
+  "description": "Setup verification rules for workflow pre-flight checks",
+  "last_updated": "2025-08-10",
+  
+  "verification_categories": {
+    "environment": {
+      "priority": "critical",
+      "description": "Environment and configuration checks",
+      "checks": [
+        {
+          "id": "env_file",
+          "name": "Environment file exists",
+          "path": ".env",
+          "type": "file_exists",
+          "required": true,
+          "recovery": "Create .env file from .env.example template"
+        },
+        {
+          "id": "project_folder",
+          "name": "Project folder created",
+          "type": "folder_exists",
+          "required": true,
+          "recovery": "Create project folder (e.g., mkdir my-project)"
+        },
+        {
+          "id": "claude_md",
+          "name": "CLAUDE.md updated",
+          "path": "CLAUDE.md",
+          "type": "file_contains",
+          "pattern": "project_folder:",
+          "required": true,
+          "recovery": "Update CLAUDE.md with project folder name"
+        }
+      ]
+    },
+    
+    "system": {
+      "priority": "high",
+      "description": "System resource and permission checks",
+      "checks": [
+        {
+          "id": "disk_space",
+          "name": "Sufficient disk space",
+          "type": "disk_space",
+          "minimum_gb": 5,
+          "required": true,
+          "recovery": "Free up at least 5GB of disk space"
+        },
+        {
+          "id": "write_permissions",
+          "name": "Write permissions",
+          "type": "permissions",
+          "path": "project-documents",
+          "permission": "write",
+          "required": true,
+          "recovery": "Fix folder permissions: chmod 755 project-documents"
+        },
+        {
+          "id": "node_installed",
+          "name": "Node.js installed",
+          "type": "command_exists",
+          "command": "node",
+          "required": true,
+          "recovery": "Install Node.js from nodejs.org"
+        }
+      ]
+    },
+    
+    "hooks": {
+      "priority": "medium",
+      "description": "Claude Code hooks system",
+      "checks": [
+        {
+          "id": "hooks_enabled",
+          "name": "Hooks system enabled",
+          "path": ".claude/settings.json",
+          "type": "json_value",
+          "key": "hooks.enabled",
+          "expected": true,
+          "required": false,
+          "recovery": "Enable hooks in .claude/settings.json"
+        },
+        {
+          "id": "hook_scripts",
+          "name": "Hook scripts executable",
+          "path": ".claude/hooks",
+          "type": "folder_permissions",
+          "permission": "execute",
+          "required": false,
+          "recovery": "Make hooks executable: chmod +x .claude/hooks/*.sh"
+        }
+      ]
+    },
+    
+    "agents": {
+      "priority": "critical",
+      "description": "Agent availability checks",
+      "checks": [
+        {
+          "id": "stakeholder_agent",
+          "name": "Stakeholder Interview Agent available",
+          "path": "ai-agents/stakeholder_interview_agent.md",
+          "type": "file_exists",
+          "required": true,
+          "recovery": "Stakeholder Interview Agent missing - reinstall AgileAiAgents"
+        },
+        {
+          "id": "research_agent",
+          "name": "Research Agent available",
+          "path": "ai-agents/research_agent.md",
+          "type": "file_exists",
+          "required": true,
+          "recovery": "Research Agent missing - reinstall AgileAiAgents"
+        },
+        {
+          "id": "project_analyzer",
+          "name": "Project Analyzer Agent available",
+          "path": "ai-agents/project_analyzer_agent.md",
+          "type": "file_exists",
+          "required": false,
+          "recovery": "Project Analyzer Agent missing - needed for existing projects"
+        }
+      ]
+    },
+    
+    "state": {
+      "priority": "high",
+      "description": "State management integrity",
+      "checks": [
+        {
+          "id": "state_folder",
+          "name": "State folder exists",
+          "path": "project-state",
+          "type": "folder_exists",
+          "required": true,
+          "recovery": "Create project-state folder"
+        },
+        {
+          "id": "workflow_state",
+          "name": "Workflow state valid",
+          "path": "project-state/workflow-state.json",
+          "type": "json_valid",
+          "required": false,
+          "recovery": "Reset workflow state or use --resume flag"
+        },
+        {
+          "id": "current_state",
+          "name": "Current state valid",
+          "path": "project-state/current-state.json",
+          "type": "json_valid",
+          "required": false,
+          "recovery": "Restore from checkpoint or start fresh"
+        }
+      ]
+    },
+    
+    "research": {
+      "priority": "medium",
+      "description": "Research configuration",
+      "checks": [
+        {
+          "id": "research_config",
+          "name": "Research level configuration",
+          "path": "machine-data/research-level-documents.json",
+          "type": "file_exists",
+          "required": true,
+          "recovery": "Research configuration missing - reinstall AgileAiAgents"
+        },
+        {
+          "id": "document_rules",
+          "name": "Document creation rules",
+          "path": "machine-data/document-creation-rules.json",
+          "type": "file_exists",
+          "required": true,
+          "recovery": "Document rules missing - reinstall AgileAiAgents"
+        }
+      ]
+    }
+  },
+  
+  "check_types": {
+    "file_exists": {
+      "description": "Check if file exists",
+      "implementation": "fs.existsSync(path)"
+    },
+    "folder_exists": {
+      "description": "Check if folder exists",
+      "implementation": "fs.existsSync(path) && fs.statSync(path).isDirectory()"
+    },
+    "file_contains": {
+      "description": "Check if file contains pattern",
+      "implementation": "fs.readFileSync(path).includes(pattern)"
+    },
+    "json_value": {
+      "description": "Check JSON key value",
+      "implementation": "JSON.parse(fs.readFileSync(path))[key] === expected"
+    },
+    "json_valid": {
+      "description": "Check if JSON is valid",
+      "implementation": "try { JSON.parse(fs.readFileSync(path)); return true } catch { return false }"
+    },
+    "command_exists": {
+      "description": "Check if command is available",
+      "implementation": "which(command) !== null"
+    },
+    "disk_space": {
+      "description": "Check available disk space",
+      "implementation": "checkDiskSpace() >= minimum_gb"
+    },
+    "permissions": {
+      "description": "Check file/folder permissions",
+      "implementation": "fs.accessSync(path, fs.constants.W_OK)"
+    },
+    "folder_permissions": {
+      "description": "Check folder permissions",
+      "implementation": "checkFolderPermissions(path, permission)"
+    }
+  },
+  
+  "recovery_guidance": {
+    "missing_files": {
+      "message": "Some required files are missing. This usually means:",
+      "reasons": [
+        "AgileAiAgents was not fully installed",
+        "Files were accidentally deleted",
+        "Wrong working directory"
+      ],
+      "solution": "Run 'git pull' to restore missing files or reinstall AgileAiAgents"
+    },
+    "permission_errors": {
+      "message": "Permission errors detected. To fix:",
+      "steps": [
+        "Check folder ownership: ls -la",
+        "Fix permissions: chmod 755 folder-name",
+        "For Windows: Run as Administrator"
+      ]
+    },
+    "state_corruption": {
+      "message": "State files are corrupted. Options:",
+      "options": [
+        "Use --resume to attempt recovery",
+        "Delete state files to start fresh",
+        "Restore from checkpoint folder"
+      ]
+    }
+  },
+  
+  "execution_order": [
+    "environment",
+    "system",
+    "agents",
+    "state",
+    "hooks",
+    "research"
+  ],
+  
+  "display_format": {
+    "success": "✓",
+    "failure": "✗",
+    "warning": "⚠",
+    "pending": "○",
+    "skip": "-",
+    "colors": {
+      "success": "green",
+      "failure": "red",
+      "warning": "yellow",
+      "pending": "gray",
+      "skip": "gray"
+    }
+  }
+}

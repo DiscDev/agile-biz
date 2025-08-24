@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "agent": "api_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 201,
+    "full_md_tokens": 10633,
+    "md_file": "agile-ai-agents/ai-agents/api_agent.md",
+    "file_hash": "b5912698abd5ed74746d1b1fe53c8eb3"
+  },
+  "summary": "## Overview\nThe API Agent specializes in researching, evaluating, and recommending external APIs that can enhance project development and provide valuable functionality to the application. This agent focuses on identifying cost-effective, trusted APIs that reduce development time and improve application capabilities.",
+  "core_responsibilities": {
+    "summary": [
+      "Dual-Purpose API Research (PRIMARY FOCUS)",
+      "API Discovery & Research",
+      "Development Enhancement APIs",
+      "Application Feature APIs"
+    ],
+    "details_tokens": 533,
+    "md_reference": "agile-ai-agents/ai-agents/api_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "Dual-Purpose API Research Workflow (PRIMARY WORKFLOW) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/api_agent.md#dual-purpose-api-research-workflow-primary-workflow-workflow"
+      },
+      {
+        "name": "Feature-Specific API Matching Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/api_agent.md#feature-specific-api-matching-workflow"
+      },
+      {
+        "name": "Cost Optimization API Analysis Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/api_agent.md#cost-optimization-api-analysis-workflow"
+      },
+      {
+        "name": "AWS MCP API Development Workflow (WHEN CONFIGURED) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/api_agent.md#aws-mcp-api-development-workflow-when-configured-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/api_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/api_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

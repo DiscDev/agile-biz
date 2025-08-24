@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "document": "changelog",
+    "timestamp": "2025-06-27T01:49:59.435Z",
+    "version": "1.0.0",
+    "source_file": "aaa-documents/changelog.md",
+    "document_type": "version_history",
+    "last_synced": "2025-06-28T21:12:53.803Z",
+    "sync_status": "synced",
+    "md_checksum": "5182c0e003a72a4eb58918b2d8d9f3ea",
+    "file_size": 13229,
+    "estimated_tokens": 3272
+  },
+  "summary": "All notable changes to AgileAiAgents will be documented in this file.",
+  "sections": [
+    {
+      "title": "[1.0.0] - 2024-12-24 - Foundation Release",
+      "content_preview": "### 🎉 Initial Release First stable release of AgileAiAgents - AI Agent Coordination System using agile methodology. ### 🔄 Migration from v0.9.0 or E"
+    },
+    {
+      "title": "Version Schema",
+      "content_preview": "### Semantic Versioning AgileAiAgents follows [Semantic Versioning](https://semver.org/): - **MAJOR.MINOR.PATCH** (e.g., 1.0.0)"
+    },
+    {
+      "title": "Links",
+      "content_preview": "- **Repository**: https://github.com/DiscDev/agile-ai-agents - **Documentation**: https://github.com/DiscDev/agile-ai-agents/blob/main/agile-ai-agents"
+    }
+  ],
+  "key_points": [
+    "Download or copy the entire `agile-ai-agents` folder to your project",
+    "Your new structure should be:",
+    "Old: `\"Acting as the PRD Agent from ai-agents/prd_agent.md\"`",
+    "New: `\"Acting as the PRD Agent from agile-ai-agents/ai-agents/prd_agent.md\"`",
+    "✅ **Cleaner project root** - Only one folder to manage",
+    "✅ **Easier upgrades** - Replace one folder instead of multiple files",
+    "✅ **Better separation** - Clear boundary between your project and AgileAiAgents",
+    "✅ **Gitignore-friendly** - Add `/agile-ai-agents` to .gitignore if desired",
+    "✅ **No conflicts** - Reduced chance of filename conflicts with your project",
+    "**27 Specialized AI Agents** with distinct responsibilities and expertise"
+  ],
+  "usage_context": [
+    "general_reference"
+  ]
+}

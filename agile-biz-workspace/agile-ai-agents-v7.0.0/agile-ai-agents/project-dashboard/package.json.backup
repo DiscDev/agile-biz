@@ -1,0 +1,58 @@
+{
+  "name": "agileaiagents-dashboard",
+  "version": "4.0.0",
+  "description": "Real-time AgileAiAgents Coordination Dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:secure": "node server-secure.js",
+    "start:prod": "NODE_ENV=production node server-secure.js",
+    "dev": "NODE_ENV=development nodemon server.js",
+    "dev:secure": "NODE_ENV=development nodemon server-secure.js",
+    "prod": "NODE_ENV=production node server.js",
+    "install-deps": "npm install",
+    "launch": "npm install && npm start",
+    "check-deps": "npm outdated",
+    "update-deps": "npm update",
+    "test": "echo \"Dashboard ready for testing\" && exit 0",
+    "lint": "echo \"Linting not configured yet\" && exit 0",
+    "diagnose": "node diagnostics.js",
+    "health": "curl -s http://localhost:${DASHBOARD_PORT:-3001}/api/health | json_pp"
+  },
+  "dependencies": {
+    "chokidar": "^4.0.3",
+    "compression": "^1.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "express-basic-auth": "^1.2.1",
+    "express-rate-limit": "^7.5.1",
+    "express-validator": "^7.2.1",
+    "fs-extra": "^11.3.0",
+    "helmet": "^8.1.0",
+    "highlight.js": "^11.11.1",
+    "marked": "^16.0.0",
+    "marked-gfm-heading-id": "^4.1.2",
+    "socket.io": "^4.8.1",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "keywords": [
+    "agile",
+    "ai-agents",
+    "project-management",
+    "dashboard",
+    "real-time",
+    "claude-code",
+    "agileaiagents"
+  ],
+  "author": "AgileAiAgents",
+  "license": "MIT"
+}

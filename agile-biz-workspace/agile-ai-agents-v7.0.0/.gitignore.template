@@ -1,0 +1,59 @@
+# AgileAiAgents - User Workspace .gitignore
+# Copy this to .gitignore in your workspace root
+
+# OS Files
+.DS_Store
+**/.DS_Store
+Thumbs.db
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Project documents (private)
+agile-ai-agents/project-documents/**/*.md
+!agile-ai-agents/project-documents/**/README.md
+!agile-ai-agents/project-documents/orchestration/stakeholder-*.md
+
+# Project state (keep structure, ignore content)
+agile-ai-agents/project-state/current-state.json
+agile-ai-agents/project-state/checkpoints/*.json
+agile-ai-agents/project-state/session-history/*.json
+agile-ai-agents/project-state/decisions/decisions-log.json
+agile-ai-agents/project-state/learnings/*.json
+agile-ai-agents/project-state/verification-cache/*
+agile-ai-agents/project-state/learning-workflow/*.json
+!agile-ai-agents/project-state/**/.gitkeep
+!agile-ai-agents/project-state/**/README.md
+
+# Logs
+*.log
+npm-debug.log*
+diagnostic-report.json
+
+# Dependencies
+node_modules/
+.npm
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build outputs
+dist/
+build/
+*.pid
+*.seed
+*.pid.lock
+
+# Testing
+coverage/
+.nyc_output
+
+# Your project code
+# Add your project-specific ignores below this line

@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "document": "verbosity-implementation-guide",
+    "title": "Verbosity Implementation Guide for AgileAiAgents",
+    "timestamp": "2025-07-22T01:40:48.570Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-implementation-guide.md",
+    "document_type": "guide",
+    "file_hash": "fa8928d4a3a2092b28029188ea48b582",
+    "estimated_tokens": 303,
+    "full_md_tokens": 1496
+  },
+  "summary": "## Quick Start",
+  "sections": [
+    {
+      "title": "Quick Start",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-implementation-guide.md#quick-start",
+      "content_preview": "To add verbosity support to any agent:\n\n1. Reference the display templates: `/aaa-documents/verbosity-display-templates.md`\n2. Check verbosity setting..."
+    },
+    {
+      "title": "Implementation Steps",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-implementation-guide.md#implementation-steps",
+      "content_preview": ""
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-implementation-guide.md#best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Example: Testing Agent Implementation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-implementation-guide.md#example-testing-agent-implementation",
+      "content_preview": "Here's how the Testing Agent could implement verbose browser testing:\n\n```markdown"
+    },
+    {
+      "title": "Integration with CLAUDE.md",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-implementation-guide.md#integration-with-claudemd",
+      "content_preview": "The verbosity system reads settings from CLAUDE.md:\n\n```yaml\nverbosity:\n  level: \"verbose\"\n  display:\n    timezone: \"America/Los_Angeles\"\n    time_for..."
+    },
+    {
+      "title": "Benefits",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-implementation-guide.md#benefits",
+      "content_preview": "1. **Consistency**: All agents use the same display format\n2. **Clarity**: Users always know what's happening\n3. **Control**: Users can adjust verbosi..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Quick Start": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-implementation-guide.md#quick-start",
+      "tokens": 63,
+      "content_preview": "To add verbosity support to any agent:\n\n1. Reference the display templates: `/aaa-documents/verbosity-display-templates.md`\n2. Check verbosity setting..."
+    },
+    "Implementation Steps": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-implementation-guide.md#implementation-steps",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Step 1: Add Verbosity Check Section": {
+          "content_preview": "Add this section near the beginning of your agent document:\n\n```markdown",
+          "tokens": 18,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-implementation-guide.md#step-1-add-verbosity-check-section-1"
+        },
+        "Verbosity Configuration": {
+          "content_preview": "This agent respects the verbosity settings in CLAUDE.md:\n- Shows detailed progress in verbose mode\n- Displays phase-by-phase updates with timing\n- Alw...",
+          "tokens": 52,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-implementation-guide.md#verbosity-configuration-1"
+        },
+        "Step 2: Identify Key Workflows": {
+          "content_preview": "Look for workflows in your agent that:\n- Have multiple phases or steps\n- Take more than a few minutes\n- Can fail at various points\n- Users would want ...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-implementation-guide.md#step-2-identify-key-workflows-1"
+        },
+        "Step 3: Add Progress Displays": {
+          "content_preview": "```markdown\nDuring parallel test execution:\n\\```\nPARALLEL TEST EXECUTION [10:45:30 AM PST] | Total Elapsed: 00:05:45\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━...",
+          "tokens": 116,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-implementation-guide.md#step-3-add-progress-displays-3"
+        },
+        "Step 4: Add Error Displays": {
+          "content_preview": "For operations that can fail:\n\n```markdown\nIf errors occur:\n\\```\n⚠️  BUILD ERROR DETECTED [10:50:22 AM PST]\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━...",
+          "tokens": 129,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-implementation-guide.md#step-4-add-error-displays-1"
+        },
+        "Step 5: Add Completion Summary": {
+          "content_preview": "For workflow completion:\n\n```markdown\nOn successful completion:\n\\```\nTESTING COMPLETE [11:15:45 AM PST] | Total Duration: 00:25:30\n━━━━━━━━━━━━━━━━━━━...",
+          "tokens": 159,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-implementation-guide.md#step-5-add-completion-summary-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-implementation-guide.md#best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Verbosity Levels": {
+          "content_preview": "```markdown",
+          "tokens": 2,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-implementation-guide.md#verbosity-levels-1"
+        }
+      }
+    },
+    "Example: Testing Agent Implementation": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-implementation-guide.md#example-testing-agent-implementation",
+      "tokens": 20,
+      "content_preview": "Here's how the Testing Agent could implement verbose browser testing:\n\n```markdown",
+      "subsections": {
+        "Browser Testing Workflow (Verbose Display)": {
+          "content_preview": "When executing browser tests in verbose mode:\n\n\\```\nBROWSER COMPATIBILITY TESTING - PHASE 3 OF 5 [2:30:45 PM PST] | Elapsed: 00:12:30\n━━━━━━━━━━━━━━━━...",
+          "tokens": 301,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-implementation-guide.md#browser-testing-workflow-verbose-display-1"
+        }
+      }
+    },
+    "Integration with CLAUDE.md": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-implementation-guide.md#integration-with-claudemd",
+      "tokens": 66,
+      "content_preview": "The verbosity system reads settings from CLAUDE.md:\n\n```yaml\nverbosity:\n  level: \"verbose\"\n  display:\n    timezone: \"America/Los_Angeles\"\n    time_for..."
+    },
+    "Benefits": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/verbosity/verbosity-implementation-guide.md#benefits",
+      "tokens": 102,
+      "content_preview": "1. **Consistency**: All agents use the same display format\n2. **Clarity**: Users always know what's happening\n3. **Control**: Users can adjust verbosi..."
+    }
+  }
+}

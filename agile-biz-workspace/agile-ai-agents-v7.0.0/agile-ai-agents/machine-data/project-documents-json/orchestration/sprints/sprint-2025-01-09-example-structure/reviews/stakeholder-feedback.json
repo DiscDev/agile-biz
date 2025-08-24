@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "document": "stakeholder-feedback",
+    "title": "Stakeholder Feedback Log",
+    "timestamp": "2025-07-22T01:41:03.749Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/stakeholder-feedback.md",
+    "document_type": "general_documentation",
+    "file_hash": "67c262dad871f7736a3c10c89f500c4d",
+    "estimated_tokens": 262,
+    "full_md_tokens": 859
+  },
+  "summary": "## Sprint: 2025-01-09 - Authentication Foundation",
+  "sections": [
+    {
+      "title": "Sprint: 2025-01-09 - Authentication Foundation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/stakeholder-feedback.md#sprint-2025-01-09-authentication-foundation",
+      "content_preview": ""
+    },
+    {
+      "title": "Detailed Feedback",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/stakeholder-feedback.md#detailed-feedback",
+      "content_preview": ""
+    },
+    {
+      "title": "Consolidated Action Items",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/stakeholder-feedback.md#consolidated-action-items",
+      "content_preview": ""
+    },
+    {
+      "title": "Voting Results",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/stakeholder-feedback.md#voting-results",
+      "content_preview": "Stakeholders voted on next sprint priorities:\n- Session Management Completion: 5 votes\n- Audit Logging: 4 votes\n- OAuth Integration: 3 votes\n- UX Impr..."
+    },
+    {
+      "title": "Follow-up Actions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/stakeholder-feedback.md#follow-up-actions",
+      "content_preview": "- [ ] Schedule security pen test for pre-production\n- [ ] Create UX improvement tickets in backlog\n- [ ] Document integration points for other service..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Sprint: 2025-01-09 - Authentication Foundation": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/stakeholder-feedback.md#sprint-2025-01-09-authentication-foundation",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Feedback Collection Summary": {
+          "content_preview": "**Date**: 2025-01-19  \n**Method**: Sprint Review Demo + Q&A Session  \n**Participants**: 5 stakeholders",
+          "tokens": 23,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/stakeholder-feedback.md#feedback-collection-summary-1"
+        }
+      }
+    },
+    "Detailed Feedback": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/stakeholder-feedback.md#detailed-feedback",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Product Owner - Sarah Chen": {
+          "content_preview": "**Role**: Product Strategy  \n**Overall Satisfaction**: ⭐⭐⭐⭐⭐\n\n**Positive Comments**:\n- \"Exceeded expectations for first authentication sprint\"\n- \"Secu...",
+          "tokens": 120,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/stakeholder-feedback.md#product-owner-sarah-chen-1"
+        },
+        "CTO - Michael Rodriguez": {
+          "content_preview": "**Role**: Technical Leadership  \n**Overall Satisfaction**: ⭐⭐⭐⭐☆\n\n**Positive Comments**:\n- \"Architecture is scalable and well-designed\"\n- \"Good separa...",
+          "tokens": 120,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/stakeholder-feedback.md#cto-michael-rodriguez-1"
+        },
+        "UX Lead - Emily Thompson": {
+          "content_preview": "**Role**: User Experience  \n**Overall Satisfaction**: ⭐⭐⭐⭐☆\n\n**UI/UX Feedback**:\n- Form validation messages are clear and helpful\n- Loading states nee...",
+          "tokens": 91,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/stakeholder-feedback.md#ux-lead-emily-thompson-1"
+        },
+        "Security Officer - David Park": {
+          "content_preview": "**Role**: Security & Compliance  \n**Overall Satisfaction**: ⭐⭐⭐⭐⭐\n\n**Security Assessment**:\n- \"Impressed with security-first approach\"\n- \"OWASP guidel...",
+          "tokens": 99,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/stakeholder-feedback.md#security-officer-david-park-1"
+        },
+        "Customer Success - Lisa Wang": {
+          "content_preview": "**Role**: User Advocacy  \n**Overall Satisfaction**: ⭐⭐⭐⭐☆\n\n**User Perspective**:\n- Registration process is straightforward\n- Password requirements mig...",
+          "tokens": 93,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/stakeholder-feedback.md#customer-success-lisa-wang-1"
+        }
+      }
+    },
+    "Consolidated Action Items": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/stakeholder-feedback.md#consolidated-action-items",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "High Priority (Next Sprint)": {
+          "content_preview": "1. Implement session timeout (AUTH-003b)\n2. Add basic audit logging\n3. Improve loading states and mobile UX\n4. Add password visibility toggle",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/stakeholder-feedback.md#high-priority-next-sprint-1"
+        },
+        "Medium Priority (Next 2-3 Sprints)": {
+          "content_preview": "1. Rate limiting implementation\n2. Social login integration\n3. Email verification flow\n4. Account lockout mechanism",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/stakeholder-feedback.md#medium-priority-next-2-3-sprints-1"
+        },
+        "Low Priority (Backlog)": {
+          "content_preview": "1. Multi-language support\n2. SMS password reset\n3. Advanced analytics dashboard\n4. CAPTCHA integration",
+          "tokens": 26,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/stakeholder-feedback.md#low-priority-backlog-1"
+        }
+      }
+    },
+    "Voting Results": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/stakeholder-feedback.md#voting-results",
+      "tokens": 48,
+      "content_preview": "Stakeholders voted on next sprint priorities:\n- Session Management Completion: 5 votes\n- Audit Logging: 4 votes\n- OAuth Integration: 3 votes\n- UX Impr..."
+    },
+    "Follow-up Actions": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/reviews/stakeholder-feedback.md#follow-up-actions",
+      "tokens": 69,
+      "content_preview": "- [ ] Schedule security pen test for pre-production\n- [ ] Create UX improvement tickets in backlog\n- [ ] Document integration points for other service..."
+    }
+  }
+}

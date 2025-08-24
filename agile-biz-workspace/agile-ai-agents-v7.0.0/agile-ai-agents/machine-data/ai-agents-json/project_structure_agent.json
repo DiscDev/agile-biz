@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "agent": "project_structure_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 92,
+    "full_md_tokens": 4842,
+    "md_file": "agile-ai-agents/ai-agents/project_structure_agent.md",
+    "file_hash": "8cea7f40d5502f787a55a32401575b0c"
+  },
+  "summary": "## Overview",
+  "core_responsibilities": {
+    "summary": [
+      "1. Repository Structure Recommendations",
+      "2. Multi-Repository Coordination",
+      "3. Structure Evolution Management",
+      "4. Pattern Learning and Recognition",
+      "5. Cross-Repository Dependency Tracking",
+      "6. Tech Stack-Specific Project Scaffolding"
+    ],
+    "details_tokens": 337,
+    "md_reference": "agile-ai-agents/ai-agents/project_structure_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/project_structure_agent.md#workflows"
+  },
+  "reference_documentation": {
+    "examples_and_patterns": {
+      "path": "/agile-ai-agents/machine-data/aaa-documents-json/project-structure-agent-examples.json",
+      "tokens": 1000
+    },
+    "implementation_guide": {
+      "path": "/agile-ai-agents/machine-data/aaa-documents-json/project-structure-agent-implementation-plan.json",
+      "tokens": 1000
+    },
+    "migration_guide": {
+      "path": "/agile-ai-agents/machine-data/aaa-documents-json/project-structure-migration-guide.json",
+      "tokens": 1000
+    }
+  },
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/project_structure_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  },
+  "success_metrics": {
+    "tokens": 87,
+    "md_reference": "agile-ai-agents/ai-agents/project_structure_agent.md#success-metrics"
+  },
+  "boundaries": {
+    "tokens": 77,
+    "md_reference": "agile-ai-agents/ai-agents/project_structure_agent.md#clear-boundaries"
+  }
+}

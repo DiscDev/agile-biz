@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "document": "folder-structure-guide",
+    "title": "Folder Structure Guide",
+    "timestamp": "2025-08-11T22:02:16.891Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/folder-structure-guide.md",
+    "document_type": "guide",
+    "file_hash": "a2ed7bb5e663d75678b6fa624f3277c0",
+    "estimated_tokens": 452,
+    "full_md_tokens": 2578
+  },
+  "summary": "This guide defines the category-based folder structure used by the AgileAiAgents system. It provides the complete structure, agent mappings, and enforcement rules to ensure consistency across all projects.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#overview",
+      "content_preview": "This guide defines the category-based folder structure used by the AgileAiAgents system. It provides the complete structure, agent mappings, and enfor..."
+    },
+    {
+      "title": "Category-Based Organization",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#category-based-organization",
+      "content_preview": "The AgileAiAgents system organizes project documents into four main categories:"
+    },
+    {
+      "title": "Complete Folder Structure",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#complete-folder-structure",
+      "content_preview": ""
+    },
+    {
+      "title": "Folder Enforcement Rules",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#folder-enforcement-rules",
+      "content_preview": ""
+    },
+    {
+      "title": "Key Benefits",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#key-benefits",
+      "content_preview": "1. **Logical Grouping** - Related documents organized by business function\n2. **Agent Clarity** - Clear ownership and responsibility boundaries\n3. **U..."
+    },
+    {
+      "title": "Usage Guidelines",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#usage-guidelines",
+      "content_preview": ""
+    },
+    {
+      "title": "Integration with Other Systems",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#integration-with-other-systems",
+      "content_preview": ""
+    },
+    {
+      "title": "Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#summary",
+      "content_preview": "The category-based folder structure provides:\n- ✅ Clear organization by business function\n- ✅ No confusing folder numbers\n- ✅ Automatic correction of ..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#overview",
+      "tokens": 52,
+      "content_preview": "This guide defines the category-based folder structure used by the AgileAiAgents system. It provides the complete structure, agent mappings, and enfor..."
+    },
+    "Category-Based Organization": {
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#category-based-organization",
+      "tokens": 20,
+      "content_preview": "The AgileAiAgents system organizes project documents into four main categories:",
+      "subsections": {
+        "Structure: `project-documents` → `category` → `folders` → `documents`": {
+          "content_preview": "",
+          "tokens": 0,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#structure-project-documents-category-folders-documents-1"
+        }
+      }
+    },
+    "Complete Folder Structure": {
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#complete-folder-structure",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "ORCHESTRATION (Core Coordination - Always Present)": {
+          "content_preview": "*Primary Agent: Scrum Master Agent*\n\n```\norchestration/\n├── project-log.md                    # Real-time agent activity log\n├── agent-coordination.md...",
+          "tokens": 236,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#orchestration-core-coordination-always-present-1"
+        },
+        "BUSINESS-STRATEGY (Business Analysis & Planning)": {
+          "content_preview": "**Agent**: VC Report Agent\n- Investor materials and pitch decks\n- Financial projections and valuations\n- Due diligence preparation\n- Exit strategy sce...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#business-strategy-business-analysis-planning-10"
+        },
+        "DEVELOPMENT (Technical Implementation)": {
+          "content_preview": "**Agent**: Documentation Agent\n- `technical-documentation.md`\n- `api-documentation.md`\n- `developer-guides.md`",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#development-technical-implementation-12"
+        },
+        "OPERATIONS (Launch, Growth, Optimization)": {
+          "content_preview": "**Agent**: Social Media Agent\n- `social-media-strategy.md`\n- `content-calendar-planning.md`\n- `community-management.md`",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#operations-launch-growth-optimization-10"
+        }
+      }
+    },
+    "Folder Enforcement Rules": {
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#folder-enforcement-rules",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Automatic Path Correction": {
+          "content_preview": "The system automatically corrects common folder naming mistakes:\n\n- `01-research` → `research`\n- `02-marketing` → `marketing`\n- `finance-docs` → `fina...",
+          "tokens": 55,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#automatic-path-correction-1"
+        },
+        "Validation Process": {
+          "content_preview": "1. Agent requests document creation\n2. System validates folder name\n3. Auto-corrects to standard name if needed\n4. Creates document in correct locatio...",
+          "tokens": 45,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#validation-process-1"
+        },
+        "Agent Folder Ownership": {
+          "content_preview": "Each folder has a designated primary agent responsible for its contents. Agents should only create documents in their assigned folders unless explicit...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#agent-folder-ownership-1"
+        }
+      }
+    },
+    "Key Benefits": {
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#key-benefits",
+      "tokens": 79,
+      "content_preview": "1. **Logical Grouping** - Related documents organized by business function\n2. **Agent Clarity** - Clear ownership and responsibility boundaries\n3. **U..."
+    },
+    "Usage Guidelines": {
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#usage-guidelines",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "For AI Agents": {
+          "content_preview": "- Always use the standard folder names (no numbers)\n- Create documents only in your assigned folders\n- Coordinate with other agents for cross-function...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#for-ai-agents-1"
+        },
+        "For Users": {
+          "content_preview": "- Navigate by category first, then specific folder\n- All project output goes in `project-documents/`\n- System files remain in `agile-ai-agents/`\n- Use...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#for-users-1"
+        }
+      }
+    },
+    "Integration with Other Systems": {
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#integration-with-other-systems",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Document Manager Agent": {
+          "content_preview": "- Monitors all folders for new/modified files\n- Generates JSON equivalents automatically\n- Maintains folder structure in JSON organization",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#document-manager-agent-1"
+        },
+        "Scrum Master Agent": {
+          "content_preview": "- Manages the orchestration folder\n- Coordinates sprint document organization\n- Ensures proper sprint folder naming",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#scrum-master-agent-1"
+        },
+        "Project State Manager": {
+          "content_preview": "- Tracks document creation across all folders\n- Maintains state persistence by category\n- Provides folder-based reporting",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#project-state-manager-1"
+        }
+      }
+    },
+    "Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/folder-structure-guide.md#summary",
+      "tokens": 85,
+      "content_preview": "The category-based folder structure provides:\n- ✅ Clear organization by business function\n- ✅ No confusing folder numbers\n- ✅ Automatic correction of ..."
+    }
+  }
+}

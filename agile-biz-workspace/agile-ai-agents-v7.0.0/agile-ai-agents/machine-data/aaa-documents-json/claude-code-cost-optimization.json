@@ -1,0 +1,276 @@
+{
+  "meta": {
+    "document": "claude-code-cost-optimization",
+    "title": "Claude Code Cost Optimization Guide for AgileAiAgents",
+    "timestamp": "2025-08-11T22:02:16.866Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md",
+    "document_type": "general_documentation",
+    "file_hash": "286e28caefcf0426bd82fd8901a00178",
+    "estimated_tokens": 705,
+    "full_md_tokens": 2970
+  },
+  "summary": "This guide provides specific strategies for optimizing token usage and costs when running AgileAiAgents projects on Claude Code. Understanding cost patterns helps you deliver projects efficiently while managing expenses.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#overview",
+      "content_preview": "This guide provides specific strategies for optimizing token usage and costs when running AgileAiAgents projects on Claude Code. Understanding cost pa..."
+    },
+    {
+      "title": "Cost Fundamentals",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#cost-fundamentals",
+      "content_preview": ""
+    },
+    {
+      "title": "Cost Monitoring Commands",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#cost-monitoring-commands",
+      "content_preview": ""
+    },
+    {
+      "title": "Phase-Specific Optimization",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#phase-specific-optimization",
+      "content_preview": ""
+    },
+    {
+      "title": "Context Management Strategies",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#context-management-strategies",
+      "content_preview": ""
+    },
+    {
+      "title": "Model Selection Optimization",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#model-selection-optimization",
+      "content_preview": ""
+    },
+    {
+      "title": "AgileAiAgents-Specific Optimizations",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#agileaiagents-specific-optimizations",
+      "content_preview": ""
+    },
+    {
+      "title": "Cost Reduction Workflows",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#cost-reduction-workflows",
+      "content_preview": ""
+    },
+    {
+      "title": "Advanced Cost Management",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#advanced-cost-management",
+      "content_preview": ""
+    },
+    {
+      "title": "Common Cost Pitfalls",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#common-cost-pitfalls",
+      "content_preview": ""
+    },
+    {
+      "title": "Cost Optimization Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#cost-optimization-checklist",
+      "content_preview": ""
+    },
+    {
+      "title": "ROI Considerations",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#roi-considerations",
+      "content_preview": ""
+    },
+    {
+      "title": "Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#summary",
+      "content_preview": "Effective cost optimization in AgileAiAgents involves:\n\n1. **Understanding cost drivers** - Research phase is most expensive\n2. **Proactive monitoring..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#overview",
+      "tokens": 55,
+      "content_preview": "This guide provides specific strategies for optimizing token usage and costs when running AgileAiAgents projects on Claude Code. Understanding cost pa..."
+    },
+    "Cost Fundamentals": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#cost-fundamentals",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Claude Code Pricing Model": {
+          "content_preview": "- **Usage-based**: Pay per token (input + output)\n- **Model tiers**: Different costs for Haiku, Sonnet, Opus\n- **Average daily cost**: $6 per develope...",
+          "tokens": 60,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#claude-code-pricing-model-1"
+        },
+        "Token Consumption Breakdown": {
+          "content_preview": "```\n┌─────────────────────────────────────────────────────┐\n│              AgileAiAgents Token Usage              │\n├─────────────────────┬───────────...",
+          "tokens": 127,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#token-consumption-breakdown-1"
+        }
+      }
+    },
+    "Cost Monitoring Commands": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#cost-monitoring-commands",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Real-Time Tracking": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#real-time-tracking-1"
+        }
+      }
+    },
+    "Phase-Specific Optimization": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#phase-specific-optimization",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Discovery Phase (15-20% tokens)": {
+          "content_preview": "**Cost Drivers**:\n- Multiple clarifying questions\n- Iterative refinements\n- Approval cycles\n\n**Optimization Strategies**:\n```bash",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#1-discovery-phase-15-20-tokens-1"
+        }
+      }
+    },
+    "Context Management Strategies": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#context-management-strategies",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Proactive Context Clearing": {
+          "content_preview": "**Between Phases**:\n```bash",
+          "tokens": 5,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#proactive-context-clearing-1"
+        }
+      }
+    },
+    "Model Selection Optimization": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#model-selection-optimization",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Choose the Right Model": {
+          "content_preview": "**For Discovery & Planning**:\n```bash",
+          "tokens": 8,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#choose-the-right-model-1"
+        }
+      }
+    },
+    "AgileAiAgents-Specific Optimizations": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#agileaiagents-specific-optimizations",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. JSON Loading (80-90% Savings)": {
+          "content_preview": "```javascript\n// Agents automatically load JSON\n// Ensure this is working:\nls machine-data/project-documents-json/\n\n// If empty, manually trigger:\nnod...",
+          "tokens": 48,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#1-json-loading-80-90-savings-1"
+        },
+        "2. Parallel vs Sequential Agent Execution": {
+          "content_preview": "```yaml",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#2-parallel-vs-sequential-agent-execution-1"
+        }
+      }
+    },
+    "Cost Reduction Workflows": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#cost-reduction-workflows",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Workflow 1: Rapid Prototyping": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#workflow-1-rapid-prototyping-1"
+        }
+      }
+    },
+    "Advanced Cost Management": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#advanced-cost-management",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Daily Budget Limits": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#daily-budget-limits-1"
+        }
+      }
+    },
+    "Common Cost Pitfalls": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#common-cost-pitfalls",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Conversation Loops": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#1-conversation-loops-1"
+        }
+      }
+    },
+    "Cost Optimization Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#cost-optimization-checklist",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Daily Practices": {
+          "content_preview": "- [ ] Check `/cost` at start of session\n- [ ] Set daily budget limit\n- [ ] Use `/compact` between major tasks\n- [ ] Monitor token usage every 2-3 hour...",
+          "tokens": 44,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#daily-practices-1"
+        },
+        "Project Practices": {
+          "content_preview": "- [ ] Choose appropriate research depth\n- [ ] Skip unnecessary analysis\n- [ ] Batch related operations\n- [ ] Use cached research when available\n- [ ] ...",
+          "tokens": 44,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#project-practices-1"
+        },
+        "Team Practices": {
+          "content_preview": "- [ ] Share research cache\n- [ ] Coordinate to avoid duplicate work\n- [ ] Document decisions to avoid re-research\n- [ ] Use consistent patterns (reduc...",
+          "tokens": 44,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#team-practices-1"
+        }
+      }
+    },
+    "ROI Considerations": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#roi-considerations",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Cost vs Value": {
+          "content_preview": "```\nTraditional Development:\n- Developer: $500-800/day\n- Time to MVP: 4-6 weeks\n- Total: $10,000-24,000\n\nWith AgileAiAgents:\n- AI costs: $50-100/week\n...",
+          "tokens": 67,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#cost-vs-value-1"
+        },
+        "When to Invest in Higher Costs": {
+          "content_preview": "- **Enterprise projects**: Thorough research worth extra $50-100\n- **Complex architecture**: Opus model worth extra $20-30/day\n- **Production systems*...",
+          "tokens": 60,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#when-to-invest-in-higher-costs-1"
+        },
+        "When to Minimize Costs": {
+          "content_preview": "- **Prototypes**: Use minimal research, Haiku model\n- **Internal tools**: Skip market research, competitive analysis\n- **Learning projects**: Use sequ...",
+          "tokens": 58,
+          "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#when-to-minimize-costs-1"
+        }
+      }
+    },
+    "Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/claude-code-cost-optimization.md#summary",
+      "tokens": 147,
+      "content_preview": "Effective cost optimization in AgileAiAgents involves:\n\n1. **Understanding cost drivers** - Research phase is most expensive\n2. **Proactive monitoring..."
+    }
+  }
+}

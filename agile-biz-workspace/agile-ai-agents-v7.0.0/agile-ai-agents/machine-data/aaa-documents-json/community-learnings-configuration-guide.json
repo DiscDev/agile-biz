@@ -1,0 +1,276 @@
+{
+  "meta": {
+    "document": "community-learnings-configuration-guide",
+    "title": "Community Learnings Configuration Guide",
+    "timestamp": "2025-08-11T22:02:16.873Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md",
+    "document_type": "guide",
+    "file_hash": "ab8b4f59fd56e34d11ab6ecb3b9492c5",
+    "estimated_tokens": 701,
+    "full_md_tokens": 2427
+  },
+  "summary": "This guide explains how to configure the community learnings system in AgileAiAgents to control when and how project insights are captured, anonymized, and contributed to improve the system for everyone.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#overview",
+      "content_preview": "This guide explains how to configure the community learnings system in AgileAiAgents to control when and how project insights are captured, anonymized..."
+    },
+    {
+      "title": "Configuration Location",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#configuration-location",
+      "content_preview": "Community learnings settings are configured in the **CLAUDE.md** file at the root of your agile-ai-agents directory."
+    },
+    {
+      "title": "Configuration Options Explained",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#configuration-options-explained",
+      "content_preview": ""
+    },
+    {
+      "title": "What Gets Captured",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#what-gets-captured",
+      "content_preview": ""
+    },
+    {
+      "title": "Privacy Protection Process",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#privacy-protection-process",
+      "content_preview": "1. **Automatic Scanning**\n   - Regex patterns for secrets\n   - Entropy analysis for keys\n   - Known pattern matching\n\n2. **Data Sanitization**\n   - Re..."
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Command Line Interface",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#command-line-interface",
+      "content_preview": ""
+    },
+    {
+      "title": "Integration with Project State",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#integration-with-project-state",
+      "content_preview": "Community learnings are automatically integrated with project state:\n\n1. **Milestone Triggers**: Project state tracks milestones that trigger prompts\n..."
+    },
+    {
+      "title": "Contribution Workflow",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#contribution-workflow",
+      "content_preview": "1. **Trigger Event** (sprint complete, milestone, etc.)\n2. **Delay Period** (10 minutes default)\n3. **Prompt Display** (\"Would you like to contribute ..."
+    },
+    {
+      "title": "Impact Tracking",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#impact-tracking",
+      "content_preview": "Your contributions are tracked and measured:\n\n- **Contribution ID**: Unique identifier for your submission\n- **Pattern Matches**: How many similar pat..."
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "External Projects",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#external-projects",
+      "content_preview": "When using AgileAiAgents in external projects:\n\n1. Copy community_learnings configuration to project's CLAUDE.md\n2. Adjust privacy settings for projec..."
+    },
+    {
+      "title": "Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#summary",
+      "content_preview": "The community learnings configuration provides:\n- ✅ Flexible contribution triggers\n- ✅ Comprehensive privacy protection\n- ✅ Automatic pattern analysis..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#overview",
+      "tokens": 51,
+      "content_preview": "This guide explains how to configure the community learnings system in AgileAiAgents to control when and how project insights are captured, anonymized..."
+    },
+    "Configuration Location": {
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#configuration-location",
+      "tokens": 28,
+      "content_preview": "Community learnings settings are configured in the **CLAUDE.md** file at the root of your agile-ai-agents directory.",
+      "subsections": {
+        "Location": {
+          "content_preview": "`agile-ai-agents/CLAUDE.md`",
+          "tokens": 7,
+          "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#location-1"
+        },
+        "Configuration Section": {
+          "content_preview": "```yaml\ncommunity_learnings:\n  contribution:\n    enabled: true               # Enable community learning contributions\n    auto_prompt:               ...",
+          "tokens": 354,
+          "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#configuration-section-1"
+        }
+      }
+    },
+    "Configuration Options Explained": {
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#configuration-options-explained",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "contribution Section": {
+          "content_preview": "- **Type**: number (minutes)\n- **Default**: 10\n- **Description**: Wait time before showing contribution prompt\n- **Range**: 0-60 minutes\n- **Purpose**...",
+          "tokens": 46,
+          "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#contribution-section-4"
+        },
+        "capture Section": {
+          "content_preview": "- **Type**: number (days)\n- **Default**: 2\n- **Description**: Minimum sprint duration before capturing learnings\n- **Purpose**: Ensures sufficient dat...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#capture-section-6"
+        },
+        "analysis Section": {
+          "content_preview": "- **Type**: number (0.0-1.0)\n- **Default**: 0.9\n- **Description**: Confidence threshold for automatic implementation\n- **Note**: High-confidence impro...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#analysis-section-5"
+        },
+        "privacy Section": {
+          "content_preview": "- **Type**: boolean\n- **Default**: true\n- **Description**: Show anonymized data for review before submission\n- **Recommendation**: Keep enabled for ma...",
+          "tokens": 37,
+          "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#privacy-section-5"
+        }
+      }
+    },
+    "What Gets Captured": {
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#what-gets-captured",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Performance Metrics": {
+          "content_preview": "- Token usage by agent and phase\n- Execution times for workflows\n- Error rates and recovery patterns\n- Resource utilization",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#1-performance-metrics-1"
+        },
+        "2. Agent Collaboration Patterns": {
+          "content_preview": "- Successful handoff sequences\n- Parallel vs sequential workflows\n- Communication patterns\n- Decision points",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#2-agent-collaboration-patterns-1"
+        },
+        "3. Tool Usage Insights": {
+          "content_preview": "- MCP server effectiveness\n- Tool combination patterns\n- Integration challenges\n- Performance optimizations",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#3-tool-usage-insights-1"
+        },
+        "4. Process Improvements": {
+          "content_preview": "- Workflow optimizations discovered\n- Time-saving techniques\n- Quality improvements\n- Automation opportunities",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#4-process-improvements-1"
+        },
+        "5. Challenge Resolutions": {
+          "content_preview": "- Problems encountered\n- Solutions implemented\n- Workarounds discovered\n- Lessons learned",
+          "tokens": 23,
+          "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#5-challenge-resolutions-1"
+        }
+      }
+    },
+    "Privacy Protection Process": {
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#privacy-protection-process",
+      "tokens": 116,
+      "content_preview": "1. **Automatic Scanning**\n   - Regex patterns for secrets\n   - Entropy analysis for keys\n   - Known pattern matching\n\n2. **Data Sanitization**\n   - Re..."
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Active Development": {
+          "content_preview": "```yaml\ncommunity_learnings:\n  contribution:\n    enabled: true\n    auto_prompt: [sprint_complete, milestone_reached]\n    prompt_delay_minutes: 10\n  ca...",
+          "tokens": 52,
+          "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#1-active-development-1"
+        },
+        "2. Privacy-Conscious Teams": {
+          "content_preview": "```yaml\ncommunity_learnings:\n  contribution:\n    enabled: true\n  privacy:\n    scan_for_secrets: true\n    remove_identifiers: true\n    replace_paths: t...",
+          "tokens": 50,
+          "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#2-privacy-conscious-teams-1"
+        },
+        "3. High-Security Projects": {
+          "content_preview": "```yaml\ncommunity_learnings:\n  contribution:\n    enabled: false  # Disable completely\n```",
+          "tokens": 21,
+          "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#3-high-security-projects-1"
+        },
+        "4. Research Projects": {
+          "content_preview": "```yaml\ncommunity_learnings:\n  contribution:\n    auto_prompt: [weekly, project_complete]\n  capture:\n    include_metrics: true\n    include_patterns: tr...",
+          "tokens": 61,
+          "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#4-research-projects-1"
+        }
+      }
+    },
+    "Command Line Interface": {
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#command-line-interface",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Manual Commands": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#manual-commands-1"
+        }
+      }
+    },
+    "Integration with Project State": {
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#integration-with-project-state",
+      "tokens": 80,
+      "content_preview": "Community learnings are automatically integrated with project state:\n\n1. **Milestone Triggers**: Project state tracks milestones that trigger prompts\n..."
+    },
+    "Contribution Workflow": {
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#contribution-workflow",
+      "tokens": 84,
+      "content_preview": "1. **Trigger Event** (sprint complete, milestone, etc.)\n2. **Delay Period** (10 minutes default)\n3. **Prompt Display** (\"Would you like to contribute ..."
+    },
+    "Impact Tracking": {
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#impact-tracking",
+      "tokens": 80,
+      "content_preview": "Your contributions are tracked and measured:\n\n- **Contribution ID**: Unique identifier for your submission\n- **Pattern Matches**: How many similar pat..."
+    },
+    "Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Prompts Not Appearing": {
+          "content_preview": "1. Check `enabled: true` in configuration\n2. Verify trigger events are configured\n3. Check minimum sprint duration met\n4. Look for prompt delay still ...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#prompts-not-appearing-1"
+        },
+        "Anonymization Issues": {
+          "content_preview": "1. Enable all privacy settings\n2. Review sanitization results carefully\n3. Check for custom patterns needed\n4. Report missed sensitive data",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#anonymization-issues-1"
+        },
+        "Contribution Failures": {
+          "content_preview": "1. Check network connectivity\n2. Verify configuration syntax\n3. Review error messages\n4. Try manual contribution",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#contribution-failures-1"
+        }
+      }
+    },
+    "External Projects": {
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#external-projects",
+      "tokens": 59,
+      "content_preview": "When using AgileAiAgents in external projects:\n\n1. Copy community_learnings configuration to project's CLAUDE.md\n2. Adjust privacy settings for projec..."
+    },
+    "Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/community-learnings-configuration-guide.md#summary",
+      "tokens": 88,
+      "content_preview": "The community learnings configuration provides:\n- ✅ Flexible contribution triggers\n- ✅ Comprehensive privacy protection\n- ✅ Automatic pattern analysis..."
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "document": "AUTH-002-login-flow",
+    "title": "Login Flow",
+    "timestamp": "2025-07-22T01:41:03.732Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-002-login-flow.md",
+    "document_type": "general_documentation",
+    "file_hash": "e7b25c0abd6c0c6865e9e2f8af058259",
+    "estimated_tokens": 303,
+    "full_md_tokens": 407
+  },
+  "summary": "**ID**: AUTH-002",
+  "sections": [
+    {
+      "title": "User Story",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-002-login-flow.md#user-story",
+      "content_preview": "As a registered user,\nI want to log into my account securely,\nSo that I can access my personalized content and features."
+    },
+    {
+      "title": "Acceptance Criteria",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-002-login-flow.md#acceptance-criteria",
+      "content_preview": "- [ ] User can access login form from any page\n- [ ] Form accepts email and password\n- [ ] Invalid credentials show generic error message\n- [ ] Succes..."
+    },
+    {
+      "title": "Technical Requirements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-002-login-flow.md#technical-requirements",
+      "content_preview": "- Implement JWT token generation\n- Create login API endpoint\n- Set up refresh token mechanism\n- Implement session management\n- Add rate limiting (max ..."
+    },
+    {
+      "title": "Dependencies",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-002-login-flow.md#dependencies",
+      "content_preview": "- AUTH-001 (User Registration) must be completed\n- Session management strategy defined\n- Security policies implemented (SEC-002)"
+    },
+    {
+      "title": "Definition of Done",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-002-login-flow.md#definition-of-done",
+      "content_preview": "- [ ] Code implemented and reviewed\n- [ ] Unit tests written (>85% coverage)\n- [ ] Integration tests passing\n- [ ] Security audit completed\n- [ ] API ..."
+    },
+    {
+      "title": "Notes",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-002-login-flow.md#notes",
+      "content_preview": "- Consider biometric authentication for mobile\n- May add 2FA in future sprint\n- Monitor for brute force attacks\n\n---\n\n**Created**: 2025-01-18\n**Last U..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "User Story": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-002-login-flow.md#user-story",
+      "tokens": 30,
+      "content_preview": "As a registered user,\nI want to log into my account securely,\nSo that I can access my personalized content and features."
+    },
+    "Acceptance Criteria": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-002-login-flow.md#acceptance-criteria",
+      "tokens": 111,
+      "content_preview": "- [ ] User can access login form from any page\n- [ ] Form accepts email and password\n- [ ] Invalid credentials show generic error message\n- [ ] Succes..."
+    },
+    "Technical Requirements": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-002-login-flow.md#technical-requirements",
+      "tokens": 65,
+      "content_preview": "- Implement JWT token generation\n- Create login API endpoint\n- Set up refresh token mechanism\n- Implement session management\n- Add rate limiting (max ..."
+    },
+    "Dependencies": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-002-login-flow.md#dependencies",
+      "tokens": 31,
+      "content_preview": "- AUTH-001 (User Registration) must be completed\n- Session management strategy defined\n- Security policies implemented (SEC-002)"
+    },
+    "Definition of Done": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-002-login-flow.md#definition-of-done",
+      "tokens": 66,
+      "content_preview": "- [ ] Code implemented and reviewed\n- [ ] Unit tests written (>85% coverage)\n- [ ] Integration tests passing\n- [ ] Security audit completed\n- [ ] API ..."
+    },
+    "Notes": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/epic-core-features/AUTH-002-login-flow.md#notes",
+      "tokens": 49,
+      "content_preview": "- Consider biometric authentication for mobile\n- May add 2FA in future sprint\n- Monitor for brute force attacks\n\n---\n\n**Created**: 2025-01-18\n**Last U..."
+    }
+  }
+}

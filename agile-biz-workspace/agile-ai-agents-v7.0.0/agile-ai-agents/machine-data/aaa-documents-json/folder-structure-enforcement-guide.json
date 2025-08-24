@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "document": "folder-structure-enforcement-guide",
+    "timestamp": "2025-07-17T01:29:19.625Z",
+    "version": "1.0.0",
+    "source_file": "aaa-documents/folder-structure-enforcement-guide.md",
+    "document_type": "general_documentation"
+  },
+  "summary": "This guide explains how the AgileAiAgents system enforces the standard 30-folder structure in `project-documents/` to prevent agents from creating duplicate or non-standard folders.",
+  "sections": [
+    {
+      "title": "Overview",
+      "content_preview": "This guide explains how the AgileAiAgents system enforces the standard 30-folder structure in `project-documents/` to prevent agents from creating dup"
+    },
+    {
+      "title": "The Problem",
+      "content_preview": "When agents create documents, they may try to create folders like: - `01-research` (duplicate of `02-research`) - `03-finance` (should be `04-finance`"
+    },
+    {
+      "title": "The Solution",
+      "content_preview": "### 1. Project Folder Structure Definition **File**: `agile-ai-agents/machine-data/project-folder-structure.json` This file defines:"
+    },
+    {
+      "title": "How It Works",
+      "content_preview": "### For Agents When an agent tries to create a document: ```javascript"
+    },
+    {
+      "title": "Standard 30-Folder Structure",
+      "content_preview": "``` 00-orchestration          - Sprints and coordination (scrum_master_agent) 01-existing-project-analysis - Analysis of existing projects (analysis_a"
+    },
+    {
+      "title": "Using the Validator",
+      "content_preview": "### Command Line Usage ```bash # Scan for non-standard folders"
+    },
+    {
+      "title": "Common Aliases",
+      "content_preview": "The system recognizes these common mistakes: - `01-research` → `02-research` - `02-marketing` → `03-marketing`"
+    },
+    {
+      "title": "Integration Points",
+      "content_preview": "### 1. Document Creation Tracker Already integrated - automatically validates and corrects paths. ### 2. Agent Document Creation"
+    },
+    {
+      "title": "Troubleshooting",
+      "content_preview": "### Issue: Agent creates document in wrong folder **Solution**: The system automatically corrects it. Check logs for corrections. ### Issue: Need to a"
+    },
+    {
+      "title": "Best Practices",
+      "content_preview": "1. **Never hardcode folder names** - Use the validator to get standard names 2. **Check validator logs** - See what corrections were made 3. **Run sca"
+    },
+    {
+      "title": "Summary",
+      "content_preview": "The folder structure enforcement system ensures: - ✅ No duplicate folders with different names - ✅ Consistent folder structure across all projects"
+    }
+  ],
+  "key_points": [
+    "`01-research` (duplicate of `02-research`)",
+    "`03-finance` (should be `04-finance`)",
+    "`06-llm-analysis` (should be `12-llm-analysis`)",
+    "Other variations and duplicates",
+    "All 30 standard folders with exact names",
+    "Which agent manages each folder",
+    "Aliases for common mistakes",
+    "Validation rules",
+    "Checks all document paths against the standard structure",
+    "Automatically corrects common mistakes using aliases"
+  ],
+  "usage_context": [
+    "general_reference"
+  ]
+}

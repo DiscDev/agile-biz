@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "document": "pulse-2025-01-09-094512-blocker-new",
+    "title": "Sprint Pulse Update #003",
+    "timestamp": "2025-07-22T01:41:03.745Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-094512-blocker-new.md",
+    "document_type": "general_documentation",
+    "file_hash": "3eba28787d9e0f643eb2f1f95e62eae8",
+    "estimated_tokens": 257,
+    "full_md_tokens": 288
+  },
+  "summary": "**Trigger**: blocker_detected",
+  "sections": [
+    {
+      "title": "Current State",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-094512-blocker-new.md#current-state",
+      "content_preview": "- **Active WIP**: \n  - Creating sprint planning templates (2 points) - BLOCKED\n  - Setting up folder structure (5 points) - 40% complete\n- **Completed..."
+    },
+    {
+      "title": "Key Events",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-094512-blocker-new.md#key-events",
+      "content_preview": "- 🚫 BLOCKER DETECTED: Template format requirements unclear\n- Work on planning templates halted pending clarification\n- Documentation Agent blocked, r..."
+    },
+    {
+      "title": "Blocker Details",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-094512-blocker-new.md#blocker-details",
+      "content_preview": "**Blocker ID**: BLK-001\n**Affected Story**: Creating sprint planning templates\n**Impact**: 2 story points blocked\n**Description**: Need clarification ..."
+    },
+    {
+      "title": "Blockers/Risks",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-094512-blocker-new.md#blockersrisks",
+      "content_preview": "- **Active Blockers**: 1 (BLK-001)\n- **At Risk**: Sprint velocity if blocker not resolved within 1 hour"
+    },
+    {
+      "title": "Next Actions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-094512-blocker-new.md#next-actions",
+      "content_preview": "- Project Manager Agent to decide on template format\n- Documentation Agent continues with folder structure\n- Prepare alternative work if blocker persi..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Current State": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-094512-blocker-new.md#current-state",
+      "tokens": 54,
+      "content_preview": "- **Active WIP**: \n  - Creating sprint planning templates (2 points) - BLOCKED\n  - Setting up folder structure (5 points) - 40% complete\n- **Completed..."
+    },
+    "Key Events": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-094512-blocker-new.md#key-events",
+      "tokens": 44,
+      "content_preview": "- 🚫 BLOCKER DETECTED: Template format requirements unclear\n- Work on planning templates halted pending clarification\n- Documentation Agent blocked, r..."
+    },
+    "Blocker Details": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-094512-blocker-new.md#blocker-details",
+      "tokens": 64,
+      "content_preview": "**Blocker ID**: BLK-001\n**Affected Story**: Creating sprint planning templates\n**Impact**: 2 story points blocked\n**Description**: Need clarification ..."
+    },
+    "Blockers/Risks": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-094512-blocker-new.md#blockersrisks",
+      "tokens": 24,
+      "content_preview": "- **Active Blockers**: 1 (BLK-001)\n- **At Risk**: Sprint velocity if blocker not resolved within 1 hour"
+    },
+    "Next Actions": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-094512-blocker-new.md#next-actions",
+      "tokens": 46,
+      "content_preview": "- Project Manager Agent to decide on template format\n- Documentation Agent continues with folder structure\n- Prepare alternative work if blocker persi..."
+    }
+  }
+}

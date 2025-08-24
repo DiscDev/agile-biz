@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "document": "growth-revenue-agent-example",
+    "title": "Digital Marketing Campaign Performance Report",
+    "timestamp": "2025-08-11T22:02:16.899Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md",
+    "document_type": "general_documentation",
+    "file_hash": "95f2767d8c751c883c5c7566d48dbe99",
+    "estimated_tokens": 397,
+    "full_md_tokens": 2273
+  },
+  "summary": "Example document demonstrating proper GitHub markdown formatting for Growth & Revenue Agents (SEO, PPC, Social Media, Email Marketing, Revenue Optimization, Analytics, Customer Lifecycle).",
+  "sections": [
+    {
+      "title": "Table of Contents",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#table-of-contents",
+      "content_preview": "* [Executive Summary](#executive-summary)\n* [Campaign Performance](#campaign-performance)\n* [Channel Analysis](#channel-analysis)\n* [Conversion Funnel..."
+    },
+    {
+      "title": "Executive Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#executive-summary",
+      "content_preview": "> **Key Achievement**: Q4 2024 campaign generated $487K revenue with 312% ROI, exceeding targets by 24%."
+    },
+    {
+      "title": "Campaign Performance",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#campaign-performance",
+      "content_preview": ""
+    },
+    {
+      "title": "Channel Analysis",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#channel-analysis",
+      "content_preview": ""
+    },
+    {
+      "title": "Conversion Funnel",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#conversion-funnel",
+      "content_preview": ""
+    },
+    {
+      "title": "Revenue Attribution",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#revenue-attribution",
+      "content_preview": ""
+    },
+    {
+      "title": "Optimization Recommendations",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#optimization-recommendations",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination"
+  ],
+  "section_details": {
+    "Table of Contents": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#table-of-contents",
+      "tokens": 62,
+      "content_preview": "* [Executive Summary](#executive-summary)\n* [Campaign Performance](#campaign-performance)\n* [Channel Analysis](#channel-analysis)\n* [Conversion Funnel..."
+    },
+    "Executive Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#executive-summary",
+      "tokens": 25,
+      "content_preview": "> **Key Achievement**: Q4 2024 campaign generated $487K revenue with 312% ROI, exceeding targets by 24%.",
+      "subsections": {
+        "Performance Highlights": {
+          "content_preview": "* **Total Revenue**: $487,320 (124% of target)\n* **Total Investment**: $156,200\n* **Return on Investment**: 312%\n* **New Customers**: 1,847 (118% of t...",
+          "tokens": 46,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#performance-highlights-1"
+        },
+        "Campaign ROI Calculation": {
+          "content_preview": "$$ROI = \\frac{Revenue - Investment}{Investment} \\times 100 = \\frac{487,320 - 156,200}{156,200} \\times 100 = 312\\%$$",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#campaign-roi-calculation-1"
+        }
+      }
+    },
+    "Campaign Performance": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#campaign-performance",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Channel Performance Summary": {
+          "content_preview": "| Channel | Investment | Revenue | ROI | Conversions | CPA | ROAS |\n|:--------|-----------:|--------:|----:|------------:|----:|-----:|\n| Google Ads |...",
+          "tokens": 111,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#channel-performance-summary-1"
+        },
+        "Monthly Performance Trends": {
+          "content_preview": "```mermaid\ngraph LR\n    A[Oct: $98K] --> B[Nov: $145K]\n    B --> C[Dec: $244K]\n    \n    D[Oct: 142%] --> E[Nov: 178%]\n    E --> F[Dec: 312%]\n    \n    ...",
+          "tokens": 87,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#monthly-performance-trends-1"
+        }
+      }
+    },
+    "Channel Analysis": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#channel-analysis",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Google Ads Performance": {
+          "content_preview": "**Campaign Breakdown:**\n\n| Campaign Type | Impressions | Clicks | CTR | Conversions | CVR |\n|:--------------|------------:|-------:|----:|------------...",
+          "tokens": 157,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#google-ads-performance-1"
+        },
+        "Facebook Advertising": {
+          "content_preview": "**Audience Performance:**\n\n| Audience | Reach | Engagement | Cost per Click | Conversions | ROAS |\n|:---------|------:|:-----------:|:--------------:|...",
+          "tokens": 102,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#facebook-advertising-1"
+        },
+        "Video Ads (45% of spend)": {
+          "content_preview": "* **Best Performer**: \"AI Task Management Demo\" - 6.2% CTR\n* **Creative Elements**: Product demonstration, clear CTA\n* **Audience**: Business professi...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#video-ads-45-of-spend-1"
+        },
+        "Static Image Ads (35% of spend)": {
+          "content_preview": "* **Best Performer**: \"Productivity Comparison Chart\" - 4.8% CTR\n* **Creative Elements**: Data visualization, benefit-focused\n* **Audience**: Producti...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#static-image-ads-35-of-spend-1"
+        },
+        "Carousel Ads (20% of spend)": {
+          "content_preview": "* **Best Performer**: \"Feature Showcase\" - 3.9% CTR\n* **Creative Elements**: Multiple product screenshots\n* **Audience**: Software buyers, enterprise ...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#carousel-ads-20-of-spend-1"
+        }
+      }
+    },
+    "Conversion Funnel": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#conversion-funnel",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Customer Journey Analysis": {
+          "content_preview": "```mermaid\ngraph TD\n    A[1,000,000 Impressions] --> B[25,000 Clicks]\n    B --> C[8,750 Landing Page Views]\n    C --> D[2,625 Sign-ups]\n    D --> E[1,...",
+          "tokens": 75,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#customer-journey-analysis-1"
+        },
+        "Conversion Rate Optimization": {
+          "content_preview": "**Landing Page Performance:**\n\n| Page Variant | Traffic | Conversion Rate | Revenue | Confidence |\n|:-------------|--------:|:---------------:|-------...",
+          "tokens": 148,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#conversion-rate-optimization-1"
+        },
+        "Funnel Drop-off Analysis": {
+          "content_preview": "**Optimization Opportunities:**\n\n1. **Impression to Click** (2.5% CTR)\n   * Current benchmark: 3.2%\n   * Opportunity: +28% improvement potential\n   * ...",
+          "tokens": 125,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#funnel-drop-off-analysis-1"
+        }
+      }
+    },
+    "Revenue Attribution": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#revenue-attribution",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Multi-Touch Attribution Model": {
+          "content_preview": "Using time-decay attribution model with 7-day lookback window:\n\n```javascript\n// Attribution tracking implementation\nfunction trackAttribution(touchpo...",
+          "tokens": 108,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#multi-touch-attribution-model-1"
+        },
+        "Channel Attribution Results": {
+          "content_preview": "| Channel | First-Touch | Last-Touch | Linear | Time-Decay | Revenue Share |\n|:--------|:-----------:|:----------:|:------:|:----------:|:------------...",
+          "tokens": 97,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#channel-attribution-results-1"
+        },
+        "Customer Lifetime Value by Channel": {
+          "content_preview": "$$CLV = \\frac{ARPU \\times Gross\\_Margin}{Churn\\_Rate}$$\n\n| Acquisition Channel | 3-Month CLV | 12-Month CLV | 36-Month CLV |\n|:-------------------|:--...",
+          "tokens": 95,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#customer-lifetime-value-by-channel-1"
+        }
+      }
+    },
+    "Optimization Recommendations": {
+      "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#optimization-recommendations",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Immediate Actions (Next 30 Days)": {
+          "content_preview": "* [ ] **Increase LinkedIn Budget** (+40%)\n  * Highest CLV customers\n  * Lowest competition\n  * **Expected Impact**: +$25K monthly revenue\n\n* [ ] **Imp...",
+          "tokens": 86,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#immediate-actions-next-30-days-1"
+        },
+        "Medium-Term Optimizations (60-90 Days)": {
+          "content_preview": "<details>\n<summary>Detailed Optimization Strategy</summary>",
+          "tokens": 15,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#medium-term-optimizations-60-90-days-1"
+        },
+        "Email Marketing Automation": {
+          "content_preview": "```javascript\n// Drip campaign sequence\nconst emailSequence = [\n  {\n    day: 0,\n    subject: \"Welcome to [Product] - Get Started in 5 Minutes\",\n    te...",
+          "tokens": 115,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#email-marketing-automation-1"
+        },
+        "Advanced Audience Segmentation": {
+          "content_preview": "| Segment | Size | Characteristics | Recommended Strategy |\n|:--------|-----:|:----------------|:---------------------|\n| High-Intent | 12,500 | Viewe...",
+          "tokens": 95,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#advanced-audience-segmentation-1"
+        },
+        "Predictive Analytics Implementation": {
+          "content_preview": "Customer scoring algorithm:\n$$Score = 0.3 \\times Engagement + 0.4 \\times Demographics + 0.3 \\times Behavior$$\n\n</details>",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#predictive-analytics-implementation-1"
+        },
+        "Long-Term Strategy (6+ Months)": {
+          "content_preview": "1. **International Expansion**\n   * Target markets: UK, Germany, Australia\n   * Localized campaigns and landing pages\n   * **Projected Impact**: +$150...",
+          "tokens": 120,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#long-term-strategy-6-months-1"
+        },
+        "Budget Reallocation Recommendations": {
+          "content_preview": "**Current Allocation:**\n```\nGoogle Ads: 44% ($68.5K)\nFacebook: 27% ($42.3K)\nLinkedIn: 18% ($28.9K)\nEmail: 5% ($8.2K)\nOrganic: 5% ($8.3K)\n```\n\n**Recomm...",
+          "tokens": 159,
+          "md_reference": "agile-ai-agents/aaa-documents/markdown-examples/growth-revenue-agent-example.md#budget-reallocation-recommendations-1"
+        }
+      }
+    }
+  }
+}

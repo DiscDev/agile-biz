@@ -1,0 +1,164 @@
+template:
+  id: "saas-platform"
+  name: "SaaS Platform Structure"
+  description: "Multi-repository structure optimized for SaaS applications"
+  
+  repositories:
+    marketing:
+      purpose: "Public-facing marketing website"
+      initial_week: 3
+      
+      structure:
+        "/":
+          - "README.md"
+          - "package.json"
+          - "next.config.js"  # Or gatsby-config.js
+        
+        "pages/":
+          purpose: "Page components"
+          note: "SSG/SSR optimized"
+        
+        "content/":
+          purpose: "CMS content"
+          subdirs:
+            - "blog/"
+            - "docs/"
+            - "landing/"
+        
+        "public/":
+          purpose: "Static assets"
+          optimization: "CDN-ready"
+      
+      technology_suggestions:
+        - "Next.js for SEO + React"
+        - "Gatsby for pure static"
+        - "Astro for content sites"
+      
+      deployment: "Vercel/Netlify/CDN"
+    
+    application:
+      purpose: "Core SaaS application"
+      initial_week: 1
+      
+      structure:
+        "src/":
+          subdirs:
+            - "features/"     # Feature-based organization
+            - "components/"   # Shared components
+            - "hooks/"        # Custom React hooks
+            - "services/"     # API clients
+            - "store/"        # State management
+        
+        "config/":
+          purpose: "App configuration"
+          security: "No secrets here"
+      
+      technology_suggestions:
+        - "React with Vite"
+        - "Vue 3 with Vite"
+        - "Angular for enterprise"
+      
+      deployment: "Container/K8s"
+    
+    api:
+      purpose: "Backend API services"
+      initial_week: 8
+      
+      structure:
+        "src/":
+          subdirs:
+            - "routes/"       # API endpoints
+            - "controllers/"  # Business logic
+            - "models/"       # Data models
+            - "middleware/"   # Auth, logging
+            - "services/"     # External services
+        
+        "database/":
+          subdirs:
+            - "migrations/"
+            - "seeds/"
+      
+      technology_suggestions:
+        - "Node.js + Express"
+        - "Python + FastAPI"
+        - "Go for performance"
+      
+      deployment: "Container/Serverless"
+    
+    admin:
+      purpose: "Internal admin dashboard"
+      initial_week: 12
+      
+      structure:
+        "src/":
+          subdirs:
+            - "views/"        # Admin views
+            - "components/"   # Admin components
+            - "utils/"        # Admin utilities
+      
+      security: "Separate auth system"
+      deployment: "Internal only"
+    
+    shared:
+      purpose: "Shared types and utilities"
+      initial_week: 8
+      
+      structure:
+        "types/":
+          purpose: "TypeScript definitions"
+          files:
+            - "api.ts"
+            - "models.ts"
+            - "common.ts"
+        
+        "utils/":
+          purpose: "Shared utilities"
+          warning: "Keep minimal"
+      
+      distribution: "NPM package or git submodule"
+  
+  coordination:
+    branching:
+      pattern: "feature/{ticket-id}-{description}"
+      example: "feature/PROJ-123-add-user-auth"
+      sync: "Same branch name across repos"
+    
+    versioning:
+      pattern: "v{major}.{minor}.{patch}"
+      sync: "Tag all repos together"
+    
+    ci_cd:
+      strategy: "Coordinated deployments"
+      tools:
+        - "GitHub Actions with matrix"
+        - "GitLab CI with triggers"
+        - "Jenkins with pipelines"
+  
+  evolution_timeline:
+    week_1:
+      repos: ["application"]
+      reason: "Start with core functionality"
+    
+    week_3:
+      repos: ["application", "marketing"]
+      reason: "SEO and public presence needs"
+    
+    week_8:
+      repos: ["application", "marketing", "api", "shared"]
+      reason: "API scaling and type sharing"
+    
+    week_12:
+      repos: ["application", "marketing", "api", "shared", "admin"]
+      reason: "Internal tools separation"
+  
+  success_metrics:
+    deployment_time: "-65%"
+    build_time: "-50%"
+    team_velocity: "+30%"
+    merge_conflicts: "-70%"
+  
+  common_pitfalls:
+    - "Sharing database between services"
+    - "Circular dependencies via shared"
+    - "Inconsistent API versions"
+    - "Forgetting to update shared types"

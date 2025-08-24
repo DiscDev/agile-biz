@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "document": "claude-code-hook-errors",
+    "title": "Troubleshooting Claude Code Hook Errors",
+    "timestamp": "2025-08-11T22:02:16.931Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/troubleshooting/claude-code-hook-errors.md",
+    "document_type": "general_documentation",
+    "file_hash": "d9eb66e36bb1755d199b393c1c3d26a4",
+    "estimated_tokens": 414,
+    "full_md_tokens": 581
+  },
+  "summary": "## Quick Solution for \"No such file or directory\" Errors",
+  "sections": [
+    {
+      "title": "Quick Solution for \"No such file or directory\" Errors",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting/claude-code-hook-errors.md#quick-solution-for-no-such-file-or-directory-errors",
+      "content_preview": "If you're seeing error messages like:\n```\nSessionStart:compact [.claude/hooks/session-start.sh] failed with non-blocking status code 127\n```"
+    },
+    {
+      "title": "What These Errors Mean",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting/claude-code-hook-errors.md#what-these-errors-mean",
+      "content_preview": "**Important**: These errors do NOT affect AgileAiAgents functionality. The system works correctly despite these messages. However, they can be annoyin..."
+    },
+    {
+      "title": "The Fix Explained",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting/claude-code-hook-errors.md#the-fix-explained",
+      "content_preview": "The `fix-claude-hooks.sh` script:\n1. Creates a configuration file that tells Claude Code where to find hooks\n2. Sets an environment variable for consi..."
+    },
+    {
+      "title": "Manual Fix (If Script Doesn't Work)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting/claude-code-hook-errors.md#manual-fix-if-script-doesnt-work",
+      "content_preview": "1. **Create `.claude/config.json`** in your project root with proper hook paths\n2. **Add to your shell profile** (`.zshrc` or `.bashrc`):\n   ```bash\n ..."
+    },
+    {
+      "title": "Verification",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting/claude-code-hook-errors.md#verification",
+      "content_preview": "After fixing:\n1. Restart Claude Code\n2. Start a new session\n3. You should NOT see any \"exit code 127\" errors\n4. Check that AgileAiAgents features work..."
+    },
+    {
+      "title": "Still Having Issues?",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting/claude-code-hook-errors.md#still-having-issues",
+      "content_preview": "1. **Run in debug mode**: `bash -x fix-claude-hooks.sh`\n2. **Check logs**: `tail -f agile-ai-agents/logs/hooks.log`\n3. **Verify environment**: `echo $..."
+    },
+    {
+      "title": "Prevention for New Users",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting/claude-code-hook-errors.md#prevention-for-new-users",
+      "content_preview": "If you're setting up AgileAiAgents for the first time:\n1. Run `fix-claude-hooks.sh` immediately after installation\n2. This prevents the errors from ap..."
+    },
+    {
+      "title": "Note for Public Release",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting/claude-code-hook-errors.md#note-for-public-release",
+      "content_preview": "This issue has been identified and fixed before public release. New users who run the fix script during setup will never see these errors. The fix is ..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Quick Solution for \"No such file or directory\" Errors": {
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting/claude-code-hook-errors.md#quick-solution-for-no-such-file-or-directory-errors",
+      "tokens": 33,
+      "content_preview": "If you're seeing error messages like:\n```\nSessionStart:compact [.claude/hooks/session-start.sh] failed with non-blocking status code 127\n```",
+      "subsections": {
+        "Immediate Fix": {
+          "content_preview": "Run this command from your AgileAiAgents directory:\n```bash\n./fix-claude-hooks.sh\n```\n\nThen restart Claude Code. The errors should disappear.",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/aaa-documents/troubleshooting/claude-code-hook-errors.md#immediate-fix-1"
+        }
+      }
+    },
+    "What These Errors Mean": {
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting/claude-code-hook-errors.md#what-these-errors-mean",
+      "tokens": 91,
+      "content_preview": "**Important**: These errors do NOT affect AgileAiAgents functionality. The system works correctly despite these messages. However, they can be annoyin..."
+    },
+    "The Fix Explained": {
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting/claude-code-hook-errors.md#the-fix-explained",
+      "tokens": 64,
+      "content_preview": "The `fix-claude-hooks.sh` script:\n1. Creates a configuration file that tells Claude Code where to find hooks\n2. Sets an environment variable for consi..."
+    },
+    "Manual Fix (If Script Doesn't Work)": {
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting/claude-code-hook-errors.md#manual-fix-if-script-doesnt-work",
+      "tokens": 71,
+      "content_preview": "1. **Create `.claude/config.json`** in your project root with proper hook paths\n2. **Add to your shell profile** (`.zshrc` or `.bashrc`):\n   ```bash\n ..."
+    },
+    "Verification": {
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting/claude-code-hook-errors.md#verification",
+      "tokens": 40,
+      "content_preview": "After fixing:\n1. Restart Claude Code\n2. Start a new session\n3. You should NOT see any \"exit code 127\" errors\n4. Check that AgileAiAgents features work..."
+    },
+    "Still Having Issues?": {
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting/claude-code-hook-errors.md#still-having-issues",
+      "tokens": 54,
+      "content_preview": "1. **Run in debug mode**: `bash -x fix-claude-hooks.sh`\n2. **Check logs**: `tail -f agile-ai-agents/logs/hooks.log`\n3. **Verify environment**: `echo $..."
+    },
+    "Prevention for New Users": {
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting/claude-code-hook-errors.md#prevention-for-new-users",
+      "tokens": 53,
+      "content_preview": "If you're setting up AgileAiAgents for the first time:\n1. Run `fix-claude-hooks.sh` immediately after installation\n2. This prevents the errors from ap..."
+    },
+    "Note for Public Release": {
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting/claude-code-hook-errors.md#note-for-public-release",
+      "tokens": 68,
+      "content_preview": "This issue has been identified and fixed before public release. New users who run the fix script during setup will never see these errors. The fix is ..."
+    }
+  }
+}

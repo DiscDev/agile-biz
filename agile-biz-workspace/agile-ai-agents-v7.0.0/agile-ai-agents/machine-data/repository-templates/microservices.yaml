@@ -1,0 +1,195 @@
+template:
+  id: "microservices"
+  name: "Microservices Architecture"
+  description: "Full microservices structure for large-scale applications"
+  
+  warning: "Only use when you have 10+ developers and proven need for this complexity"
+  
+  repositories:
+    api-gateway:
+      purpose: "Single entry point for all services"
+      critical: true
+      
+      structure:
+        "src/":
+          subdirs:
+            - "routes/"       # Service routing
+            - "middleware/"   # Auth, rate limiting
+            - "aggregation/"  # Response aggregation
+      
+      responsibilities:
+        - "Request routing"
+        - "Authentication"
+        - "Rate limiting"
+        - "Response aggregation"
+        - "Circuit breaking"
+      
+      technology: "Kong, Zuul, or custom Node.js"
+    
+    auth-service:
+      purpose: "Authentication and authorization"
+      critical: true
+      
+      structure:
+        "src/":
+          subdirs:
+            - "providers/"    # OAuth, SAML, etc.
+            - "tokens/"       # JWT management
+            - "permissions/"  # RBAC logic
+      
+      features:
+        - "Multi-factor authentication"
+        - "SSO integration"
+        - "Token management"
+        - "Permission system"
+    
+    user-service:
+      purpose: "User profile management"
+      
+      structure:
+        "src/":
+          subdirs:
+            - "profile/"      # User profiles
+            - "preferences/"  # User settings
+            - "search/"       # User search
+      
+      database: "Separate user database"
+    
+    notification-service:
+      purpose: "All notifications (email, SMS, push)"
+      
+      structure:
+        "src/":
+          subdirs:
+            - "channels/"     # Email, SMS, push
+            - "templates/"    # Message templates
+            - "queue/"        # Message queue
+      
+      integrations:
+        - "SendGrid/SES for email"
+        - "Twilio for SMS"
+        - "FCM/APNS for push"
+    
+    payment-service:
+      purpose: "Payment processing"
+      compliance: "PCI DSS Level 1"
+      
+      structure:
+        "src/":
+          subdirs:
+            - "providers/"    # Stripe, PayPal
+            - "transactions/" # Transaction log
+            - "webhooks/"     # Provider webhooks
+      
+      security: "Isolated network segment"
+    
+    analytics-service:
+      purpose: "Data collection and analytics"
+      
+      structure:
+        "src/":
+          subdirs:
+            - "collectors/"   # Event collectors
+            - "processors/"   # Data processing
+            - "storage/"      # Time-series DB
+    
+    shared-libraries:
+      purpose: "Common utilities and contracts"
+      
+      structure:
+        "contracts/":
+          purpose: "Service contracts"
+          files:
+            - "proto/"        # Protocol buffers
+            - "openapi/"      # REST contracts
+        
+        "libraries/":
+          subdirs:
+            - "logging/"      # Centralized logging
+            - "tracing/"      # Distributed tracing
+            - "metrics/"      # Metrics collection
+      
+      distribution: "Private NPM or Maven"
+  
+  infrastructure:
+    service_mesh:
+      options:
+        - "Istio for Kubernetes"
+        - "Consul Connect"
+        - "Linkerd"
+      
+      features:
+        - "Service discovery"
+        - "Load balancing"
+        - "Circuit breaking"
+        - "Distributed tracing"
+    
+    message_queue:
+      options:
+        - "RabbitMQ for reliability"
+        - "Kafka for high throughput"
+        - "Redis Pub/Sub for simplicity"
+      
+      patterns:
+        - "Event sourcing"
+        - "CQRS"
+        - "Saga pattern"
+    
+    monitoring:
+      stack:
+        - "Prometheus for metrics"
+        - "Grafana for visualization"
+        - "ELK for logging"
+        - "Jaeger for tracing"
+  
+  coordination:
+    api_versioning:
+      strategy: "URL versioning (/v1/, /v2/)"
+      deprecation: "6 month notice"
+    
+    database_per_service:
+      rule: "Each service owns its data"
+      sharing: "Through APIs only"
+    
+    deployment:
+      strategy: "Independent deployments"
+      orchestration: "Kubernetes recommended"
+      canary: "10% -> 50% -> 100%"
+  
+  when_to_use:
+    requirements:
+      - "10+ developers"
+      - "Clear domain boundaries"
+      - "Different scaling needs"
+      - "Multiple teams"
+      - "24/7 availability needs"
+    
+    not_recommended_for:
+      - "Startups"
+      - "MVPs"
+      - "Small teams"
+      - "Simple applications"
+  
+  migration_path:
+    from_monolith:
+      week_1: "Extract authentication"
+      week_4: "Extract notifications"
+      week_8: "Extract payments"
+      week_12: "Extract by domain"
+    
+    strangler_pattern:
+      description: "Gradually replace monolith"
+      approach: "New features as services"
+  
+  pitfalls:
+    - "Distributed transactions"
+    - "Debugging complexity"
+    - "Network latency"
+    - "Data consistency"
+    - "Operational overhead"
+  
+  success_metrics:
+    service_independence: "> 95%"
+    deployment_frequency: "> 10x/day"
+    service_availability: "> 99.9%"
+    mean_time_to_recovery: "< 5 minutes"

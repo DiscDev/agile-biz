@@ -1,0 +1,280 @@
+{
+  "meta": {
+    "document": "context-verification-migration-guide",
+    "title": "Context Verification Migration Guide",
+    "timestamp": "2025-08-11T22:02:16.876Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md",
+    "document_type": "guide",
+    "file_hash": "448ccc60b180e4f66ea9e5284b43ff35",
+    "estimated_tokens": 731,
+    "full_md_tokens": 2620
+  },
+  "summary": "This guide helps you integrate the Context Verification System into existing projects that are already using AgileAiAgents.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#overview",
+      "content_preview": "This guide helps you integrate the Context Verification System into existing projects that are already using AgileAiAgents."
+    },
+    {
+      "title": "Migration Paths",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#migration-paths",
+      "content_preview": ""
+    },
+    {
+      "title": "Pre-Migration Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#pre-migration-checklist",
+      "content_preview": "- [ ] Current project phase documented\n- [ ] Active sprint identified\n- [ ] Backlog accessible\n- [ ] Stakeholder availability confirmed\n- [ ] 2-4 hour..."
+    },
+    {
+      "title": "Step-by-Step Migration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#step-by-step-migration",
+      "content_preview": ""
+    },
+    {
+      "title": "Context Verification System",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#context-verification-system",
+      "content_preview": "- Quick Reference: `aaa-documents/context-verification-quick-reference.md`\n- Examples: `aaa-documents/context-verification-examples.md`"
+    },
+    {
+      "title": "Migration Scenarios",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#migration-scenarios",
+      "content_preview": ""
+    },
+    {
+      "title": "Common Migration Issues",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#common-migration-issues",
+      "content_preview": ""
+    },
+    {
+      "title": "Progressive Enhancement",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#progressive-enhancement",
+      "content_preview": ""
+    },
+    {
+      "title": "Rollback Plan",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#rollback-plan",
+      "content_preview": "If migration causes issues:\n\n```bash"
+    },
+    {
+      "title": "Success Metrics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#success-metrics",
+      "content_preview": ""
+    },
+    {
+      "title": "Quick Migration Commands",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#quick-migration-commands",
+      "content_preview": "```bash"
+    },
+    {
+      "title": "Post-Migration Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#post-migration-checklist",
+      "content_preview": "- [ ] Project truth documented and approved\n- [ ] Initial audit completed\n- [ ] Violations addressed or documented  \n- [ ] Monitoring active\n- [ ] Tea..."
+    },
+    {
+      "title": "Getting Help",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#getting-help",
+      "content_preview": ""
+    },
+    {
+      "title": "Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#summary",
+      "content_preview": "Migrating to Context Verification is straightforward and can be done without disrupting active development. Start with basic protection and progressiv..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#overview",
+      "tokens": 31,
+      "content_preview": "This guide helps you integrate the Context Verification System into existing projects that are already using AgileAiAgents."
+    },
+    "Migration Paths": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#migration-paths",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Path 1: Full Migration (Recommended)": {
+          "content_preview": "Complete integration with historical analysis and learning\n\n**Timeline**: 2-4 hours\n**Disruption**: Minimal\n**Benefits**: Maximum protection and insig...",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#path-1-full-migration-recommended-1"
+        },
+        "Path 2: Gradual Migration": {
+          "content_preview": "Phase-based approach for active projects\n\n**Timeline**: 1-2 weeks\n**Disruption**: None\n**Benefits**: Smooth transition, team adaptation",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#path-2-gradual-migration-1"
+        },
+        "Path 3: Minimal Migration": {
+          "content_preview": "Basic context verification only\n\n**Timeline**: 30 minutes\n**Disruption**: None\n**Benefits**: Immediate drift protection",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#path-3-minimal-migration-1"
+        }
+      }
+    },
+    "Pre-Migration Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#pre-migration-checklist",
+      "tokens": 50,
+      "content_preview": "- [ ] Current project phase documented\n- [ ] Active sprint identified\n- [ ] Backlog accessible\n- [ ] Stakeholder availability confirmed\n- [ ] 2-4 hour..."
+    },
+    "Step-by-Step Migration": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#step-by-step-migration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Step 1: Analyze Current State": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#step-1-analyze-current-state-1"
+        }
+      }
+    },
+    "Context Verification System": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#context-verification-system",
+      "tokens": 33,
+      "content_preview": "- Quick Reference: `aaa-documents/context-verification-quick-reference.md`\n- Examples: `aaa-documents/context-verification-examples.md`",
+      "subsections": {
+        "Step 7: Historical Learning (Optional)": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#step-7-historical-learning-optional-1"
+        }
+      }
+    },
+    "Migration Scenarios": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#migration-scenarios",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Scenario 1: Mid-Sprint Migration": {
+          "content_preview": "**Situation**: Sprint 5 is active with 3 days remaining\n\n**Approach**:\n1. Create project truth (30 min)\n2. Verify remaining sprint tasks only\n3. Full ...",
+          "tokens": 52,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#scenario-1-mid-sprint-migration-1"
+        }
+      }
+    },
+    "Common Migration Issues": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#common-migration-issues",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Issue 1: \"Too Many False Positives\"": {
+          "content_preview": "**Symptoms**: 50%+ items flagged, team frustration\n\n**Solutions**:\n```bash",
+          "tokens": 16,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#issue-1-too-many-false-positives-1"
+        }
+      }
+    },
+    "Progressive Enhancement": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#progressive-enhancement",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Week 1: Basic Protection": {
+          "content_preview": "- Project truth created\n- Monitoring active\n- Team aware",
+          "tokens": 14,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#week-1-basic-protection-1"
+        },
+        "Week 2: Active Verification": {
+          "content_preview": "- Sprint verification required\n- Backlog items checked\n- First patterns detected",
+          "tokens": 20,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#week-2-active-verification-1"
+        },
+        "Week 3: Learning Active": {
+          "content_preview": "- System learns from decisions\n- Fewer false positives\n- Team trusts system",
+          "tokens": 19,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#week-3-learning-active-1"
+        },
+        "Week 4: Full Integration": {
+          "content_preview": "- Pre-commit hooks added\n- CI/CD integration\n- Metrics dashboard active",
+          "tokens": 18,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#week-4-full-integration-1"
+        }
+      }
+    },
+    "Rollback Plan": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#rollback-plan",
+      "tokens": 9,
+      "content_preview": "If migration causes issues:\n\n```bash"
+    },
+    "Success Metrics": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#success-metrics",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Week 1 Targets": {
+          "content_preview": "- ✅ Project truth created\n- ✅ <30% initial violations\n- ✅ Monitoring active\n- ✅ No sprint disruption",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#week-1-targets-1"
+        },
+        "Month 1 Targets": {
+          "content_preview": "- ✅ Drift maintained <20%\n- ✅ 90% team compliance\n- ✅ 5+ patterns learned\n- ✅ 1+ prevented drift incident",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#month-1-targets-1"
+        },
+        "Month 3 Targets": {
+          "content_preview": "- ✅ Drift consistently <15%\n- ✅ Automated workflows\n- ✅ Measurable time savings\n- ✅ Team advocates for system",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#month-3-targets-1"
+        }
+      }
+    },
+    "Quick Migration Commands": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#quick-migration-commands",
+      "tokens": 1,
+      "content_preview": "```bash"
+    },
+    "Post-Migration Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#post-migration-checklist",
+      "tokens": 70,
+      "content_preview": "- [ ] Project truth documented and approved\n- [ ] Initial audit completed\n- [ ] Violations addressed or documented  \n- [ ] Monitoring active\n- [ ] Tea..."
+    },
+    "Getting Help": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#getting-help",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Resources": {
+          "content_preview": "- Full Guide: `aaa-documents/context-verification-system-guide.md`\n- Quick Reference: `aaa-documents/context-verification-quick-reference.md`\n- Exampl...",
+          "tokens": 49,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#resources-1"
+        },
+        "Support Channels": {
+          "content_preview": "- Dashboard: Check widget for current status\n- Logs: `project-documents/orchestration/context-verification-logs/`\n- Community: Share patterns in `comm...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#support-channels-1"
+        },
+        "Emergency Contacts": {
+          "content_preview": "If critical issues during migration:\n1. Disable blocking: `/configure-context-verification --emergency-disable`\n2. Document issue: `/report-context-is...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#emergency-contacts-1"
+        }
+      }
+    },
+    "Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/context-verification-migration-guide.md#summary",
+      "tokens": 75,
+      "content_preview": "Migrating to Context Verification is straightforward and can be done without disrupting active development. Start with basic protection and progressiv..."
+    }
+  }
+}

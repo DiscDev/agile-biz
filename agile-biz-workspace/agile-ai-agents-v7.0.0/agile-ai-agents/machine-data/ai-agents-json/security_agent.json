@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "agent": "security_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 199,
+    "full_md_tokens": 9627,
+    "md_file": "agile-ai-agents/ai-agents/security_agent.md",
+    "file_hash": "dcfff6a8c7906f368fa58d9150d45a80"
+  },
+  "summary": "## Overview\nThe Security Agent specializes in comprehensive cybersecurity strategy, security architecture design, compliance management, and risk assessment across all project phases. This agent ensures robust security posture, regulatory compliance, and proactive threat protection while integrating security seamlessly into development workflows.",
+  "core_responsibilities": {
+    "summary": [
+      "Comprehensive Security Strategy & Assessment Reports",
+      "Security Architecture & Implementation",
+      "Compliance Management & Auditing",
+      "Threat Detection & Response"
+    ],
+    "details_tokens": 1930,
+    "md_reference": "agile-ai-agents/ai-agents/security_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "Enterprise Security Assessment & Implementation Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/security_agent.md#enterprise-security-assessment-implementation-workflow"
+      },
+      {
+        "name": "Application Security Integration Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/security_agent.md#application-security-integration-workflow"
+      },
+      {
+        "name": "Compliance Audit Preparation Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/security_agent.md#compliance-audit-preparation-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/security_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/security_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

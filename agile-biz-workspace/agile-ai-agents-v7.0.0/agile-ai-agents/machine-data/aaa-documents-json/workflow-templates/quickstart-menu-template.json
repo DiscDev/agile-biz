@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "document": "quickstart-menu-template",
+    "title": "Quickstart Menu Template",
+    "timestamp": "2025-08-11T22:02:16.944Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md",
+    "document_type": "template",
+    "file_hash": "e2ad10ebda0ee5bb760dfcac1120e6e4",
+    "estimated_tokens": 378,
+    "full_md_tokens": 1107
+  },
+  "summary": "This template provides an interactive menu when users type `/quickstart`, helping them choose the right workflow.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#overview",
+      "content_preview": "This template provides an interactive menu when users type `/quickstart`, helping them choose the right workflow."
+    },
+    {
+      "title": "Menu Display",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#menu-display",
+      "content_preview": "```\n🚀 AgileAiAgents Quick Start Menu\n================================\n\nChoose your path:\n\n1️⃣  START NEW PROJECT\n    Build something new from scratch..."
+    },
+    {
+      "title": "Interactive Response Handler",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#interactive-response-handler",
+      "content_preview": ""
+    },
+    {
+      "title": "Submenus",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#submenus",
+      "content_preview": ""
+    },
+    {
+      "title": "Navigation Features",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#navigation-features",
+      "content_preview": "- **Back Navigation**: Type \"back\" from any submenu\n- **Exit**: Type \"exit\" or \"quit\" to leave menu\n- **Direct Commands**: Can type commands directly ..."
+    },
+    {
+      "title": "Example Interactions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#example-interactions",
+      "content_preview": ""
+    },
+    {
+      "title": "State Tracking",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#state-tracking",
+      "content_preview": "Track menu navigation in state:\n```json\n{\n  \"menu_state\": {\n    \"current_menu\": \"main|sprint|docs|state\",\n    \"navigation_history\": [\"main\", \"sprint\",..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#overview",
+      "tokens": 28,
+      "content_preview": "This template provides an interactive menu when users type `/quickstart`, helping them choose the right workflow."
+    },
+    "Menu Display": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#menu-display",
+      "tokens": 318,
+      "content_preview": "```\n🚀 AgileAiAgents Quick Start Menu\n================================\n\nChoose your path:\n\n1️⃣  START NEW PROJECT\n    Build something new from scratch..."
+    },
+    "Interactive Response Handler": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#interactive-response-handler",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "If user types a number:": {
+          "content_preview": "- 1 → Execute `/start-new-project-workflow`\n- 2 → Execute `/start-existing-project-workflow`\n- 3 → Execute `/research-only`\n- 4 → Show sprint submenu\n...",
+          "tokens": 57,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#if-user-types-a-number-1"
+        },
+        "If user types a command:": {
+          "content_preview": "- Validate and execute the command",
+          "tokens": 9,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#if-user-types-a-command-1"
+        },
+        "If user types invalid input:": {
+          "content_preview": "```\nI didn't understand that. Please either:\n- Type a number (1-7) from the menu\n- Type a command like /start-new-project-workflow\n- Type /aaa-help fo...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#if-user-types-invalid-input-1"
+        }
+      }
+    },
+    "Submenus": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#submenus",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Sprint Management Submenu (Option 4):": {
+          "content_preview": "```\n📋 Sprint Management Options\n==========================\n\na) Start New Sprint\n   Begin a new development sprint\n   → /start-sprint\n\nb) Current Spri...",
+          "tokens": 103,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#sprint-management-submenu-option-4-1"
+        },
+        "Documentation Submenu (Option 5):": {
+          "content_preview": "```\n📄 Documentation Options\n======================\n\na) Product Requirements (PRD)\n   Generate PRD from research\n   → /generate-prd\n\nb) Investor Pitch...",
+          "tokens": 108,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#documentation-submenu-option-5-1"
+        },
+        "State Management Submenu (Option 6):": {
+          "content_preview": "```\n💾 State Management Options\n=========================\n\na) Project Status\n   See current project state\n   → /status\n\nb) Continue Previous Work\n   R...",
+          "tokens": 93,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#state-management-submenu-option-6-1"
+        }
+      }
+    },
+    "Navigation Features": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#navigation-features",
+      "tokens": 56,
+      "content_preview": "- **Back Navigation**: Type \"back\" from any submenu\n- **Exit**: Type \"exit\" or \"quit\" to leave menu\n- **Direct Commands**: Can type commands directly ..."
+    },
+    "Example Interactions": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#example-interactions",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Scenario 1: New User": {
+          "content_preview": "```\nUser: /quickstart\nAI: [Shows main menu]\nUser: 1\nAI: Great! Starting new project workflow...\n     [Begins /start-new-project-workflow]\n```",
+          "tokens": 33,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#scenario-1-new-user-1"
+        },
+        "Scenario 2: Returning User": {
+          "content_preview": "```\nUser: /quickstart  \nAI: [Shows main menu]\nUser: I want to continue my authentication feature\nAI: It sounds like you want to continue previous work...",
+          "tokens": 59,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#scenario-2-returning-user-1"
+        },
+        "Scenario 3: Exploring Options": {
+          "content_preview": "```\nUser: /quickstart\nAI: [Shows main menu]\nUser: 4\nAI: [Shows sprint management submenu]\nUser: back\nAI: [Returns to main menu]\nUser: /help\nAI: [Shows...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#scenario-3-exploring-options-1"
+        }
+      }
+    },
+    "State Tracking": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/quickstart-menu-template.md#state-tracking",
+      "tokens": 47,
+      "content_preview": "Track menu navigation in state:\n```json\n{\n  \"menu_state\": {\n    \"current_menu\": \"main|sprint|docs|state\",\n    \"navigation_history\": [\"main\", \"sprint\",..."
+    }
+  }
+}

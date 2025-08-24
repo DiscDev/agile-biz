@@ -1,0 +1,251 @@
+template:
+  id: "fintech-platform"
+  name: "Fintech Platform Structure"
+  description: "PCI DSS and financial regulation compliant repository structure"
+  
+  compliance_note: "Designed for PCI DSS, SOX, KYC/AML compliance"
+  
+  repositories:
+    customer-app:
+      purpose: "Customer-facing financial application"
+      compliance: "PCI DSS Level 1"
+      initial_week: 1
+      
+      structure:
+        "src/":
+          subdirs:
+            - "features/"
+              - "accounts/"
+              - "transactions/"
+              - "payments/"
+              - "cards/"
+            - "security/"
+              - "biometric/"
+              - "pin-management/"
+              - "session-handling/"
+      
+      security_requirements:
+        - "No card data storage"
+        - "Tokenization only"
+        - "Certificate pinning"
+        - "Jailbreak detection"
+        - "Screen recording prevention"
+      
+      deployment: "PCI-compliant infrastructure"
+    
+    merchant-portal:
+      purpose: "Merchant management interface"
+      compliance: "PCI DSS"
+      initial_week: 3
+      
+      structure:
+        "src/":
+          subdirs:
+            - "modules/"
+              - "settlements/"
+              - "disputes/"
+              - "reporting/"
+              - "risk-management/"
+            - "integrations/"
+              - "accounting/"
+              - "inventory/"
+      
+      features:
+        - "Transaction reporting"
+        - "Settlement tracking"
+        - "Chargeback management"
+        - "Risk analytics"
+    
+    payment-gateway:
+      purpose: "Core payment processing"
+      compliance: "PCI DSS Level 1 + PA-DSS"
+      initial_week: 1
+      critical: true
+      isolation: "Network segmentation required"
+      
+      structure:
+        "src/":
+          subdirs:
+            - "processing/"
+              - "authorization/"
+              - "capture/"
+              - "settlement/"
+              - "refunds/"
+            - "tokenization/"
+              vault: "Hardware Security Module"
+            - "fraud/"
+              - "rules-engine/"
+              - "ml-models/"
+              - "velocity-checks/"
+      
+      security:
+        - "HSM for key storage"
+        - "No direct internet access"
+        - "Encrypted card data"
+        - "PAN masking"
+        - "Secure deletion"
+    
+    kyc-service:
+      purpose: "Know Your Customer compliance"
+      compliance: "KYC/AML regulations"
+      initial_week: 1
+      
+      structure:
+        "src/":
+          subdirs:
+            - "verification/"
+              - "identity/"
+              - "documents/"
+              - "sanctions/"
+            - "monitoring/"
+              - "transactions/"
+              - "behavior/"
+              - "alerts/"
+      
+      integrations:
+        - "Identity verification providers"
+        - "Sanctions screening"
+        - "Credit bureaus"
+        - "Government databases"
+    
+    ledger-service:
+      purpose: "Financial ledger and accounting"
+      compliance: "SOX compliance"
+      initial_week: 2
+      immutable: true
+      
+      structure:
+        "src/":
+          subdirs:
+            - "accounts/"
+            - "transactions/"
+            - "reconciliation/"
+            - "reporting/"
+      
+      requirements:
+        - "Double-entry bookkeeping"
+        - "Immutable transaction log"
+        - "Audit trail"
+        - "Daily reconciliation"
+    
+    risk-engine:
+      purpose: "Risk assessment and management"
+      compliance: "Financial regulations"
+      initial_week: 4
+      
+      structure:
+        "src/":
+          subdirs:
+            - "scoring/"
+            - "limits/"
+            - "ml-models/"
+            - "rules/"
+            - "monitoring/"
+      
+      features:
+        - "Real-time risk scoring"
+        - "Transaction limits"
+        - "Fraud detection"
+        - "AML monitoring"
+  
+  security_architecture:
+    network_zones:
+      dmz:
+        - "Load balancers"
+        - "WAF"
+        - "API gateways"
+      
+      secure_zone:
+        - "Application servers"
+        - "Internal services"
+      
+      restricted_zone:
+        - "Payment processing"
+        - "HSM"
+        - "Databases"
+    
+    data_security:
+      encryption:
+        - "TLS 1.3 minimum"
+        - "AES-256 at rest"
+        - "Key rotation quarterly"
+      
+      tokenization:
+        - "Replace all sensitive data"
+        - "Vault in restricted zone"
+        - "Token format preserving"
+      
+      access_control:
+        - "Zero trust architecture"
+        - "Privileged access management"
+        - "Just-in-time access"
+    
+    monitoring:
+      - "Real-time fraud monitoring"
+      - "Security incident detection"
+      - "Compliance monitoring"
+      - "Performance monitoring"
+  
+  compliance_requirements:
+    pci_dss:
+      - "Quarterly network scans"
+      - "Annual penetration testing"
+      - "Security awareness training"
+      - "Incident response plan"
+      - "Change control process"
+    
+    financial_regulations:
+      - "Transaction reporting"
+      - "Suspicious activity reports"
+      - "Currency transaction reports"
+      - "OFAC screening"
+    
+    data_protection:
+      - "GDPR compliance"
+      - "CCPA compliance"
+      - "Data residency requirements"
+      - "Right to deletion"
+  
+  deployment_architecture:
+    high_availability:
+      - "Multi-region deployment"
+      - "Active-active setup"
+      - "99.99% uptime SLA"
+      - "Zero-downtime deployments"
+    
+    disaster_recovery:
+      - "RPO: 15 minutes"
+      - "RTO: 1 hour"
+      - "Automated failover"
+      - "Regular DR testing"
+    
+    performance:
+      - "Sub-100ms authorization"
+      - "10,000 TPS capacity"
+      - "Auto-scaling"
+      - "Global CDN"
+  
+  evolution_timeline:
+    week_1:
+      repos: ["customer-app", "payment-gateway", "kyc-service"]
+      reason: "Core payment functionality with compliance"
+    
+    week_2:
+      repos: ["previous", "ledger-service"]
+      reason: "Financial tracking and reporting"
+    
+    week_3:
+      repos: ["previous", "merchant-portal"]
+      reason: "Merchant onboarding and management"
+    
+    week_4:
+      repos: ["previous", "risk-engine"]
+      reason: "Advanced risk management"
+  
+  critical_security_notes:
+    - "Never log sensitive data"
+    - "All systems require security review"
+    - "Automated security scanning required"
+    - "Compliance audit before processing"
+    - "24/7 security monitoring mandatory"
+    - "Incident response team required"

@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "document": "project-structure-migration-guide",
+    "timestamp": "2025-07-17T01:59:32.507Z",
+    "version": "1.0.0",
+    "source_file": "aaa-documents/project-structure-migration-guide.md",
+    "document_type": "general_documentation"
+  },
+  "summary": "This guide helps existing projects adopt the Project Structure Agent to improve repository organization and enable evolution to multi-repository architectures when beneficial.",
+  "sections": [
+    {
+      "title": "Overview",
+      "content_preview": "This guide helps existing projects adopt the Project Structure Agent to improve repository organization and enable evolution to multi-repository archi"
+    },
+    {
+      "title": "For Existing Single-Repository Projects",
+      "content_preview": "### Step 1: Initial Analysis Have the Project Structure Agent analyze your current structure: ```"
+    },
+    {
+      "title": "Common Migration Patterns",
+      "content_preview": "### Pattern 1: Marketing Site Split (Most Common) **When**: SEO requirements conflict with app framework **Timeline**: Usually within first 2-3 months"
+    },
+    {
+      "title": "Multi-Repository Migration Checklist",
+      "content_preview": "### Pre-Migration - [ ] Current structure analyzed by Project Structure Agent - [ ] Evolution triggers identified and documented"
+    },
+    {
+      "title": "Industry-Specific Considerations",
+      "content_preview": "### Healthcare/Fintech (High Compliance) - Isolate PHI/PII processing into separate repo - Audit logging in dedicated service"
+    },
+    {
+      "title": "Anti-Patterns to Avoid",
+      "content_preview": "### Premature Splitting **Signs**: - Team size < 3 developers"
+    },
+    {
+      "title": "Success Metrics",
+      "content_preview": "Track these metrics before and after migration: ### Development Velocity - [ ] Feature delivery time"
+    },
+    {
+      "title": "Getting Help",
+      "content_preview": "The Project Structure Agent provides ongoing support: 1. **Regular Health Checks**: Monitor for new evolution triggers 2. **Pattern Learning**: Benefi"
+    },
+    {
+      "title": "Quick Start Commands",
+      "content_preview": "### Analyze Current Structure ``` Acting as the Project Structure Agent, analyze my repository structure and provide health metrics."
+    }
+  ],
+  "key_points": [
+    "**Build time**: Is it increasing beyond acceptable limits?",
+    "**Team friction**: Are there frequent merge conflicts?",
+    "**Deployment complexity**: Can features deploy independently?",
+    "**Code organization**: Are different concerns properly separated?",
+    "[ ] Current structure analyzed by Project Structure Agent",
+    "[ ] Evolution triggers identified and documented",
+    "[ ] Team aligned on migration benefits",
+    "[ ] CI/CD pipeline update plan ready",
+    "[ ] Dependency mapping completed",
+    "[ ] Create new repositories with proper structure"
+  ],
+  "usage_context": [
+    "general_reference"
+  ]
+}

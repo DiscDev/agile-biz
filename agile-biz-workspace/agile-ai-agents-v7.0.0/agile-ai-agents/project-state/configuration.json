@@ -1,0 +1,178 @@
+{
+  "version": "7.0.0",
+  "preferences": {
+    "research_level": "thorough",
+    "verbosity": "normal",
+    "auto_save": true,
+    "timezone": "America/Los_Angeles",
+    "time_format": "12h",
+    "show_timezone": true,
+    "parallel_agents": 5,
+    "confirm_destructive": true
+  },
+  "project_state": {
+    "auto_save": {
+      "enabled": true,
+      "frequency_preset": "balanced",
+      "debounce_ms": 5000,
+      "save_mode": "update",
+      "show_confirmations": true,
+      "confirmation_style": "minimal",
+      "save_frequency": {
+        "document_creation": true,
+        "section_completion": true,
+        "phase_transitions": true,
+        "time_interval": 30,
+        "decision_threshold": 5
+      }
+    },
+    "checkpoint": {
+      "auto_checkpoint_interval": 30,
+      "max_checkpoints": 20,
+      "checkpoint_on_phase_change": true
+    },
+    "session": {
+      "track_file_access": true,
+      "max_recent_files": 10,
+      "preserve_working_directory": true
+    },
+    "context": {
+      "max_decisions_in_context": 10,
+      "compress_old_sessions": true,
+      "priority_loading": true
+    }
+  },
+  "community_learnings": {
+    "contribution": {
+      "enabled": true,
+      "auto_prompt_after_command": true,
+      "prompt_delay_minutes": 10,
+      "integrated_commands": {
+        "sprint_retrospective": true,
+        "milestone": true,
+        "deployment_success": true,
+        "project_complete": true
+      },
+      "skip_options": {
+        "allow_skip": true,
+        "skip_duration": "session",
+        "remember_skips": true
+      }
+    },
+    "capture": {
+      "include_metrics": true,
+      "include_patterns": true,
+      "include_agent_feedback": true,
+      "anonymize_data": true,
+      "min_sprint_duration": 2
+    },
+    "analysis": {
+      "enabled": true,
+      "confidence_threshold": 0.7,
+      "min_pattern_samples": 3,
+      "auto_implementation": 0.9
+    },
+    "privacy": {
+      "scan_for_secrets": true,
+      "remove_identifiers": true,
+      "replace_paths": true,
+      "review_before_submit": true
+    }
+  },
+  "hooks": {
+    "enabled": true,
+    "profile": "standard",
+    "specific_hooks": {
+      "sprint_document_tracker": true,
+      "pulse_generator": true,
+      "state_backup": true,
+      "state_integrity_check": true,
+      "session_tracker": true,
+      "agent_context_updater": true,
+      "command_validator": true
+    }
+  },
+  "research_verification": {
+    "level": "normal",
+    "mcp_integration": {
+      "enabled": true,
+      "preferred_sources": ["perplexity", "firecrawl", "github", "websearch"],
+      "fallback_to_llm": true
+    },
+    "cache": {
+      "enabled": true,
+      "retention_hours": {
+        "market_data": 24,
+        "company_info": 168,
+        "technical_docs": 720,
+        "cached_searches": 72
+      }
+    },
+    "mcp_failure_strategy": "degrade",
+    "degradation_rules": {
+      "confidence_penalty": 20,
+      "flag_unverified": true,
+      "notify_user": true,
+      "allow_continue": true
+    }
+  },
+  "sub_agents": {
+    "enabled": true,
+    "default_mode": "parallel",
+    "orchestration": {
+      "max_concurrent": 5,
+      "timeout_seconds": 300,
+      "retry_attempts": 1
+    },
+    "token_management": {
+      "base_budget": 10000,
+      "session_limit": 100000,
+      "warning_threshold": 0.8,
+      "enforcement": "strict"
+    },
+    "document_registry": {
+      "type": "hybrid",
+      "consolidation_interval": 300,
+      "archive_after_hours": 24
+    },
+    "code_coordination": {
+      "ownership_model": "file-level",
+      "conflict_prevention": true,
+      "status_tracking": "pulse-system"
+    },
+    "error_handling": {
+      "retry_on_timeout": true,
+      "save_partial_progress": true,
+      "fallback_to_main": true
+    }
+  },
+  "workflow": {
+    "default_research_level": "thorough",
+    "phase_transitions": {
+      "require_approval": false,
+      "auto_checkpoint": true
+    },
+    "model_routing": {
+      "prefer_fast_models": false,
+      "fallback_enabled": true,
+      "default_model": "claude-3-opus"
+    },
+    "research_levels": {
+      "minimal": {
+        "duration": "1-2 hours",
+        "documents": 5,
+        "agent_count": "2-3"
+      },
+      "medium": {
+        "duration": "2-4 hours",
+        "documents": 48,
+        "agent_count": "5-10"
+      },
+      "thorough": {
+        "duration": "4-6 hours",
+        "documents": 194,
+        "agent_count": "10-30"
+      }
+    }
+  }
+}

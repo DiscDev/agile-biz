@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "document": "backlog-refinement-log",
+    "title": "Backlog Refinement Log",
+    "timestamp": "2025-07-22T01:41:03.734Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md",
+    "document_type": "general_documentation",
+    "file_hash": "2b027db677513c33768a6491fe4e0f50",
+    "estimated_tokens": 375,
+    "full_md_tokens": 699
+  },
+  "summary": "This document tracks all backlog refinement sessions, decisions made, and changes to backlog items.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#overview",
+      "content_preview": "This document tracks all backlog refinement sessions, decisions made, and changes to backlog items."
+    },
+    {
+      "title": "Refinement Session Template",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#refinement-session-template",
+      "content_preview": "```markdown"
+    },
+    {
+      "title": "[Date] - Sprint [X] Refinement",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#date-sprint-x-refinement",
+      "content_preview": ""
+    },
+    {
+      "title": "Refinement History",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#refinement-history",
+      "content_preview": ""
+    },
+    {
+      "title": "Refinement Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#refinement-best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Common Refinement Patterns",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#common-refinement-patterns",
+      "content_preview": ""
+    },
+    {
+      "title": "Metrics Tracking",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#metrics-tracking",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#overview",
+      "tokens": 25,
+      "content_preview": "This document tracks all backlog refinement sessions, decisions made, and changes to backlog items."
+    },
+    "Refinement Session Template": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#refinement-session-template",
+      "tokens": 2,
+      "content_preview": "```markdown"
+    },
+    "[Date] - Sprint [X] Refinement": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#date-sprint-x-refinement",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Attendees": {
+          "content_preview": "- Project Manager Agent\n- Scrum Master Agent\n- Technical Lead Agent\n- [Other relevant agents]",
+          "tokens": 23,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#attendees-1"
+        },
+        "Items Reviewed": {
+          "content_preview": "- **Previous Estimate**: X points\n- **New Estimate**: Y points\n- **Changes Made**:\n  - [List of changes]\n- **Questions Resolved**:\n  - [Q&A items]\n- *...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#items-reviewed-2"
+        },
+        "Decisions Made": {
+          "content_preview": "- [Key decisions from the session]",
+          "tokens": 8,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#decisions-made-1"
+        },
+        "Action Items": {
+          "content_preview": "- [ ] [Action item 1]\n- [ ] [Action item 2]",
+          "tokens": 9,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#action-items-1"
+        },
+        "Next Session": {
+          "content_preview": "- **Date**: [Date]\n- **Focus**: [Areas to focus on]\n```",
+          "tokens": 10,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#next-session-1"
+        }
+      }
+    },
+    "Refinement History": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#refinement-history",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "2025-01-18 - Initial Backlog Setup": {
+          "content_preview": "- [x] Create initial folder structure\n- [x] Develop estimation guidelines\n- [x] Create dependency map template\n- [ ] Add initial backlog items\n- [ ] S...",
+          "tokens": 45,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#2025-01-18-initial-backlog-setup-5"
+        }
+      }
+    },
+    "Refinement Best Practices": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#refinement-best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Before the Session": {
+          "content_preview": "1. Review items marked as \"Draft\"\n2. Gather any additional requirements\n3. Check for new dependencies\n4. Review velocity trends",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#before-the-session-1"
+        },
+        "During the Session": {
+          "content_preview": "1. Time-box discussions (5-10 minutes per item)\n2. Focus on understanding, not solutioning\n3. Update estimates based on new information\n4. Identify an...",
+          "tokens": 53,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#during-the-session-1"
+        },
+        "After the Session": {
+          "content_preview": "1. Update backlog-state.json\n2. Move refined items to \"Ready\" status\n3. Update dependency map if needed\n4. Schedule follow-up for unclear items",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#after-the-session-1"
+        }
+      }
+    },
+    "Common Refinement Patterns": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#common-refinement-patterns",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Estimation Changes": {
+          "content_preview": "- **Complexity Discovered**: Usually increases estimate\n- **Reusable Component Found**: Usually decreases estimate\n- **Dependency Added**: May increas...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#estimation-changes-1"
+        },
+        "Red Flags": {
+          "content_preview": "- Item estimated at 20+ points (needs splitting)\n- No acceptance criteria after refinement\n- Circular dependencies discovered\n- Technical approach unc...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#red-flags-1"
+        }
+      }
+    },
+    "Metrics Tracking": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#metrics-tracking",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Refinement Effectiveness": {
+          "content_preview": "Track these metrics to improve the process:\n\n1. **Items Refined per Session**: Target 8-12\n2. **Re-estimation Rate**: < 20% is good\n3. **Items Returne...",
+          "tokens": 52,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#refinement-effectiveness-1"
+        },
+        "Historical Performance": {
+          "content_preview": "| Date | Items Refined | Re-estimated | Returned to Draft | Avg Time |\n|:-----|:--------------|:-------------|:------------------|:---------|\n| 2025-0...",
+          "tokens": 76,
+          "md_reference": "agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md#historical-performance-1"
+        }
+      }
+    }
+  }
+}

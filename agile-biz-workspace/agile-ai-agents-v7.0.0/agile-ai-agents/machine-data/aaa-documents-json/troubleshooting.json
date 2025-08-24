@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "document": "troubleshooting",
+    "title": "AgileAiAgents Troubleshooting Guide",
+    "timestamp": "2025-08-11T22:02:16.932Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/troubleshooting.md",
+    "document_type": "technical",
+    "file_hash": "d2c0dc705e4552f856f63905ad809c77",
+    "estimated_tokens": 306,
+    "full_md_tokens": 1232
+  },
+  "summary": "## 🔍 Quick Diagnostics",
+  "sections": [
+    {
+      "title": "🔍 Quick Diagnostics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting.md#quick-diagnostics",
+      "content_preview": "Run diagnostics first to identify issues:\n```bash\nscripts/bash/diagnose.sh     # Unix/macOS\nscripts/windows/diagnose.bat      # Windows\n```"
+    },
+    {
+      "title": "🚨 Common Issues & Solutions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting.md#common-issues-solutions",
+      "content_preview": ""
+    },
+    {
+      "title": "📊 Diagnostic Decision Tree",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting.md#diagnostic-decision-tree",
+      "content_preview": "```\nDashboard Issue?\n├─ Won't Start?\n│  ├─ Check Node.js version (16+)\n│  ├─ Run npm install\n│  └─ Check port availability\n├─ Can't Access?\n│  ├─ Chec..."
+    },
+    {
+      "title": "🛠️ Advanced Debugging",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting.md#advanced-debugging",
+      "content_preview": ""
+    },
+    {
+      "title": "🆘 Getting Help",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting.md#getting-help",
+      "content_preview": "If issues persist after troubleshooting:\n\n1. **Run full diagnostics** and save output:\n   ```bash\n   npm run diagnose > diagnostic-output.txt\n   ```\n\n..."
+    },
+    {
+      "title": "🔄 Quick Fixes",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting.md#quick-fixes",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "🔍 Quick Diagnostics": {
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting.md#quick-diagnostics",
+      "tokens": 33,
+      "content_preview": "Run diagnostics first to identify issues:\n```bash\nscripts/bash/diagnose.sh     # Unix/macOS\nscripts/windows/diagnose.bat      # Windows\n```"
+    },
+    "🚨 Common Issues & Solutions": {
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting.md#common-issues-solutions",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Dashboard Won't Start": {
+          "content_preview": "**Solution:**\n- Install Node.js 16 or higher from https://nodejs.org/\n- Verify: `node -v`",
+          "tokens": 21,
+          "md_reference": "agile-ai-agents/aaa-documents/troubleshooting.md#dashboard-wont-start-4"
+        },
+        "Authentication Issues": {
+          "content_preview": "**Solution:**\n1. Check if authentication is enabled in `.env`:\n   ```\n   DASHBOARD_AUTH_ENABLED=true\n   DASHBOARD_USERNAME=admin\n   DASHBOARD_PASSWORD...",
+          "tokens": 66,
+          "md_reference": "agile-ai-agents/aaa-documents/troubleshooting.md#authentication-issues-2"
+        },
+        "Health Check Failures": {
+          "content_preview": "**Solution:**\n1. View detailed health status:\n   ```bash\n   curl http://localhost:3001/api/health | json_pp\n   ```\n2. Check specific failures and addr...",
+          "tokens": 80,
+          "md_reference": "agile-ai-agents/aaa-documents/troubleshooting.md#health-check-failures-2"
+        },
+        "Real-time Updates Not Working": {
+          "content_preview": "**Solution:**\n1. Check WebSocket connection in browser console\n2. Ensure file watcher has permissions:\n   ```bash\n   chmod -R 755 project-documents  #...",
+          "tokens": 52,
+          "md_reference": "agile-ai-agents/aaa-documents/troubleshooting.md#real-time-updates-not-working-2"
+        },
+        "API Errors": {
+          "content_preview": "**Solution:**\n- Ensure you're accessing dashboard from allowed origin\n- Add origin to CORS whitelist in server configuration",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/troubleshooting.md#api-errors-3"
+        },
+        "Configuration Issues": {
+          "content_preview": "**Solution:**\n```bash\ncp .env_example .env",
+          "tokens": 9,
+          "md_reference": "agile-ai-agents/aaa-documents/troubleshooting.md#configuration-issues-2"
+        }
+      }
+    },
+    "📊 Diagnostic Decision Tree": {
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting.md#diagnostic-decision-tree",
+      "tokens": 104,
+      "content_preview": "```\nDashboard Issue?\n├─ Won't Start?\n│  ├─ Check Node.js version (16+)\n│  ├─ Run npm install\n│  └─ Check port availability\n├─ Can't Access?\n│  ├─ Chec..."
+    },
+    "🛠️ Advanced Debugging": {
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting.md#advanced-debugging",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Enable Debug Mode": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/troubleshooting.md#enable-debug-mode-1"
+        }
+      }
+    },
+    "🆘 Getting Help": {
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting.md#getting-help",
+      "tokens": 134,
+      "content_preview": "If issues persist after troubleshooting:\n\n1. **Run full diagnostics** and save output:\n   ```bash\n   npm run diagnose > diagnostic-output.txt\n   ```\n\n..."
+    },
+    "🔄 Quick Fixes": {
+      "md_reference": "agile-ai-agents/aaa-documents/troubleshooting.md#quick-fixes",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Reset Everything": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/troubleshooting.md#reset-everything-1"
+        }
+      }
+    }
+  }
+}

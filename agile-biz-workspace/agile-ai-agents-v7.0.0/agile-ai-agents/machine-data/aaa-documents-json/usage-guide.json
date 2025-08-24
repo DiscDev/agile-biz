@@ -1,0 +1,224 @@
+{
+  "meta": {
+    "document": "usage-guide",
+    "timestamp": "2025-06-27T01:49:59.444Z",
+    "version": "1.0.0",
+    "source_file": "aaa-documents/usage-guide.md",
+    "document_type": "user_manual",
+    "last_synced": "2025-06-28T21:12:53.799Z",
+    "sync_status": "synced",
+    "md_checksum": "712d1f977f7f419e5f65fde0e5d15397",
+    "file_size": 26920,
+    "estimated_tokens": 6701
+  },
+  "summary": "This is a comprehensive AI agent coordination system for Claude Code that transforms Claude into a specialized team of 27 AI agents, each with expert knowledge in specific domains like requirements gathering, coding, testing, DevOps, UI/UX design, marketing, revenue optimization, and more. Instead o",
+  "sections": [
+    {
+      "title": "What Is This System?",
+      "content_preview": "This is a comprehensive AI agent coordination system for Claude Code that transforms Claude into a specialized team of 27 AI agents, each with expert "
+    },
+    {
+      "title": "🚨 IMPORTANT: Two Operating Modes",
+      "content_preview": "This system can work in two ways: ### 🤖 AUTOMATIC MODE (Recommended for Most Users) **When `auto-project-orchestrator.md` is present in your project:"
+    },
+    {
+      "title": "🚀 Getting Started",
+      "content_preview": "### Option A: Automatic Mode - Just Describe Your Idea! If you have `auto-project-orchestrator.md` in your project, simply use this prompt: ```"
+    },
+    {
+      "title": "📋 Quick Reference for New Projects",
+      "content_preview": "**Just want to start building? Copy and paste these prompts:** ### For Requirements Gathering: ```"
+    },
+    {
+      "title": "🤖 Working with Individual Agents",
+      "content_preview": "### Basic Agent Interaction Pattern **Always use this format:** ```"
+    },
+    {
+      "title": "🔄 Multi-Agent Coordination",
+      "content_preview": "### When You Need Multiple Agents Working Together **Use the Orchestrator:** ```"
+    },
+    {
+      "title": "🎯 Available Agents and When to Use Them",
+      "content_preview": "### 🔧 Core Development Agents (Use for Most Projects) - **PRD Agent** - Requirements gathering and documentation - **Project Manager Agent** - Agile "
+    },
+    {
+      "title": "🛠️ Workflow Definitions and Examples",
+      "content_preview": "### 📋 **PRD Agent Workflows** #### **New Feature Requirements Workflow** **When to use:** Starting a new feature or major functionality"
+    },
+    {
+      "title": "🔄 **Complete Project Workflows**",
+      "content_preview": "### 1. **New Feature Development (End-to-End)** ```bash # Step 1: Requirements (PRD Agent)"
+    },
+    {
+      "title": "🚨 Troubleshooting Common Issues",
+      "content_preview": "### \"I don't know which agent to use\" 1. Check the \"Clear Boundaries\" section in each agent file 2. Look at the \"Coordination Patterns\" to see how age"
+    },
+    {
+      "title": "🎨 Customizing for Your Project",
+      "content_preview": "### 1. Modify Agent Responsibilities Each agent file has a \"Project-Specific Customization Template\" section. Update these based on your: - Technology"
+    },
+    {
+      "title": "💡 Success Tips",
+      "content_preview": "1. **Be Specific**: Always reference the exact agent file and workflow 2. **Provide Context**: Include your tech stack, project type, and specific req"
+    },
+    {
+      "title": "🆘 Getting Help",
+      "content_preview": "If something isn't working: 1. Check the agent's \"Clear Boundaries\" section to ensure you're using the right agent 2. Review the \"Coordination Pattern"
+    },
+    {
+      "title": "📈 Next Steps",
+      "content_preview": "1. Choose your operating mode (Automatic vs Manual) 2. Copy the appropriate prompt from this guide 3. Begin with one agent and follow its workflow"
+    }
+  ],
+  "key_points": [
+    "**You control which experts you need** - Not every project needs all 27 agents",
+    "**You control the sequence** - Sometimes you want to skip steps or go in different order",
+    "**You get specialized expertise** - Each agent provides deep domain knowledge",
+    "**You avoid overwhelming responses** - Focused expertise instead of trying to do everything at once",
+    "**Documentation Agent** if you need better docs",
+    "**Testing Agent** if you need better test coverage",
+    "**DevOps Agent** if you need better deployment processes",
+    "**Optimization Agent** if you have performance issues",
+    "**PRD Agent** - Requirements gathering and documentation",
+    "**Project Manager Agent** - Agile sprint planning, coordination, and retrospectives"
+  ],
+  "usage_context": [
+    "all_agents",
+    "user_interaction"
+  ],
+  "workflows": [
+    {
+      "name": "Option B: Manual Mode - New Project Workflow",
+      "steps": [
+        "**Start with Requirements Gathering**",
+        "**Move to Project Planning**",
+        "**Continue with Implementation**"
+      ]
+    },
+    {
+      "name": "Option C: Complete Project Automation",
+      "steps": [
+        "PRD Agent for requirements gathering",
+        "Project Manager Agent for project planning",
+        "UI/UX Agent for interface design (if needed)",
+        "Coder Agent for implementation",
+        "Testing Agent for quality assurance"
+      ]
+    },
+    {
+      "name": "Option D: Existing Project Workflow",
+      "steps": [
+        "**Analyze Your Current Project**",
+        "What frameworks and technologies are being used",
+        "Current project structure and patterns",
+        "Which AI agents would provide the most immediate value",
+        "Recommended integration approach",
+        "**Start with High-Value Agents**",
+        "**Documentation Agent** if you need better docs",
+        "**Testing Agent** if you need better test coverage"
+      ]
+    },
+    {
+      "name": "For Complete Project Coordination:",
+      "steps": [
+        "PRD Agent → 2. Project Manager → 3. UI/UX Agent → 4. Coder Agent → 5. Testing Agent"
+      ]
+    },
+    {
+      "name": "When You Need Multiple Agents Working Together",
+      "steps": [
+        "PRD Agent for requirements",
+        "UI/UX Agent for interface design",
+        "Coder Agent for implementation",
+        "Testing Agent for quality assurance"
+      ]
+    },
+    {
+      "name": "1. **New Feature Development (End-to-End)**",
+      "steps": [
+        "**New Feature Development (End-to-End)**"
+      ]
+    },
+    {
+      "name": "2. **Bug Investigation and Fix**",
+      "steps": [
+        "**Bug Investigation and Fix**"
+      ]
+    },
+    {
+      "name": "3. **Performance Improvement**",
+      "steps": [
+        "**Performance Improvement**"
+      ]
+    },
+    {
+      "name": "4. **Market Research and Strategy**",
+      "steps": [
+        "**Market Research and Strategy**"
+      ]
+    },
+    {
+      "name": "\"The agent isn't following the workflow\"",
+      "steps": [
+        "Make sure you reference the specific workflow name from the agent file",
+        "Be more specific about which guidelines to follow",
+        "Include more context about your project and requirements"
+      ]
+    },
+    {
+      "name": "\"I need multiple agents but don't know how to coordinate them\"",
+      "steps": [
+        "Use the AI Agent Orchestrator from `ai-agent-coordination/orchestrator-workflows.md`",
+        "Reference the specific coordination pattern you want to use",
+        "Clearly list which agents you need and in what order"
+      ]
+    },
+    {
+      "name": "\"The responses are too generic\"",
+      "steps": [
+        "Reference the specific agent file: \"from agile-ai-agents/ai-agents/[agent_name].md\"",
+        "Mention the specific workflow or template section",
+        "Provide more context about your project, technology stack, and requirements"
+      ]
+    },
+    {
+      "name": "2. Add Your Own Workflows",
+      "steps": [
+        "Add Your Own Workflows"
+      ]
+    },
+    {
+      "name": "💡 Success Tips",
+      "steps": [
+        "**Be Specific**: Always reference the exact agent file and workflow",
+        "**Provide Context**: Include your tech stack, project type, and specific requirements",
+        "**Follow the Chain**: Use the coordination patterns to move work between agents",
+        "**Start Small**: Begin with 1-2 agents, then expand as you get comfortable",
+        "**Customize**: Adapt the templates and workflows to your specific needs"
+      ]
+    },
+    {
+      "name": "🆘 Getting Help",
+      "steps": [
+        "Check the agent's \"Clear Boundaries\" section to ensure you're using the right agent",
+        "Review the \"Coordination Patterns\" to see how agents should work together",
+        "Try the AI Agent Orchestrator for complex multi-agent tasks",
+        "Be more specific about which workflow or template section you want to follow"
+      ]
+    },
+    {
+      "name": "📈 Next Steps",
+      "steps": [
+        "Choose your operating mode (Automatic vs Manual)",
+        "Copy the appropriate prompt from this guide",
+        "Begin with one agent and follow its workflow",
+        "Gradually add more agents as needed",
+        "Customize the system for your specific project requirements",
+        ""
+      ]
+    }
+  ],
+  "examples": [],
+  "best_practices": [],
+  "common_patterns": []
+}

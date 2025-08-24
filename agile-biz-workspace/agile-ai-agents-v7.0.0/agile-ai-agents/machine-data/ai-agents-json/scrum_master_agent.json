@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "agent": "scrum_master_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-08-11",
+    "estimated_tokens": 202,
+    "full_md_tokens": 8569,
+    "md_file": "agile-ai-agents/ai-agents/scrum_master_agent.md",
+    "file_hash": "a5c5be4b3b2081de0f9eb8900a5d7974"
+  },
+  "summary": "## Overview",
+  "core_responsibilities": {
+    "summary": [
+      "Sprint Facilitation",
+      "Process Guardian",
+      "Impediment Removal",
+      "Team Enablement",
+      "Product Backlog Refinement (NEW - CRITICAL)",
+      "Metrics & Reporting",
+      "State Management & Context Persistence",
+      "Sprint Document Organization (CRITICAL)"
+    ],
+    "details_tokens": 840,
+    "md_reference": "agile-ai-agents/ai-agents/scrum_master_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "Sprint Planning Facilitation Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/scrum_master_agent.md#sprint-planning-facilitation-workflow"
+      },
+      {
+        "name": "Parallel Sprint Execution Workflow (v4.0.0+)",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/scrum_master_agent.md#parallel-sprint-execution-workflow-v400"
+      },
+      {
+        "name": "Sprint Pulse Management (AI-Native Event-Driven) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/scrum_master_agent.md#sprint-pulse-management-ai-native-event-driven-workflow"
+      },
+      {
+        "name": "Sprint Review Orchestration Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/scrum_master_agent.md#sprint-review-orchestration-workflow"
+      },
+      {
+        "name": "Sprint Retrospective Leadership Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/scrum_master_agent.md#sprint-retrospective-leadership-workflow"
+      },
+      {
+        "name": "Blocker Resolution Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/scrum_master_agent.md#blocker-resolution-workflow"
+      },
+      {
+        "name": "Sprint State Tracking Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/scrum_master_agent.md#sprint-state-tracking-workflow"
+      },
+      {
+        "name": "Document Creation Coordination (NEW) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/scrum_master_agent.md#document-creation-coordination-new-workflow"
+      },
+      {
+        "name": "Project Progress Tracking Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/scrum_master_agent.md#project-progress-tracking-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/scrum_master_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/scrum_master_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  },
+  "success_metrics": {
+    "tokens": 104,
+    "md_reference": "agile-ai-agents/ai-agents/scrum_master_agent.md#success-metrics"
+  }
+}

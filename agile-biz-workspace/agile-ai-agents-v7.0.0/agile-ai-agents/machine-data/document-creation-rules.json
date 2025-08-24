@@ -1,0 +1,485 @@
+{
+  "version": "2.0.0",
+  "last_updated": "2025-07-18",
+  "description": "Document creation rules and timing for AgileAiAgents project lifecycle with GitHub markdown standards and enhanced JSON structure",
+  "phases": {
+    "phase_0_initialization": {
+      "name": "Project Initialization",
+      "trigger": "project_start",
+      "documents": [
+        {
+          "path": "orchestration/project-log.md",
+          "agent": "orchestrator",
+          "required": "always",
+          "priority": "critical",
+          "description": "Real-time agent activity log"
+        },
+        {
+          "path": "orchestration/agent-coordination.md",
+          "agent": "orchestrator",
+          "required": "always",
+          "priority": "critical",
+          "description": "Agent handoffs and decisions"
+        },
+        {
+          "path": "orchestration/stakeholder-decisions.md",
+          "agent": "project_manager",
+          "required": "always",
+          "priority": "critical",
+          "description": "User approvals and feedback tracking"
+        },
+        {
+          "path": "orchestration/sprints/_templates/*",
+          "agent": "scrum_master",
+          "required": "always",
+          "priority": "critical",
+          "description": "Sprint document templates for consistency"
+        },
+        {
+          "path": "orchestration/stakeholder-escalations.md",
+          "agent": "project_manager",
+          "required": "always",
+          "priority": "critical",
+          "description": "Project-wide escalations and sprint escalation rollup"
+        },
+        {
+          "path": "orchestration/project-progress.json",
+          "agent": "scrum_master",
+          "required": "always",
+          "priority": "critical",
+          "description": "Project completion metrics for dashboard (percentage, phase, sprint, tasks)"
+        }
+      ]
+    },
+    "phase_1_discovery": {
+      "name": "Discovery & Analysis",
+      "trigger": "initialization_complete",
+      "branches": {
+        "existing_project": {
+          "condition": "existing_codebase_detected",
+          "documents": [
+            {
+              "path": "business-strategy/existing-project/project-brief.md",
+              "agent": "project_analyzer",
+              "required": "always",
+              "priority": "critical"
+            },
+            {
+              "path": "business-strategy/existing-project/technology-stack-analysis.md",
+              "agent": "project_analyzer",
+              "required": "always",
+              "priority": "critical"
+            },
+            {
+              "path": "business-strategy/existing-project/system-architecture-analysis.md",
+              "agent": "project_analyzer",
+              "required": "always",
+              "priority": "important"
+            },
+            {
+              "path": "business-strategy/existing-project/enhancement-opportunities.md",
+              "agent": "project_analyzer",
+              "required": "always",
+              "priority": "important"
+            }
+          ]
+        },
+        "new_project": {
+          "condition": "new_project_confirmed",
+          "documents": [
+            {
+              "path": "business-strategy/research/market-analysis.md",
+              "agent": "research",
+              "required": "always",
+              "priority": "critical"
+            },
+            {
+              "path": "business-strategy/research/competitive-analysis.md",
+              "agent": "research",
+              "required": "always",
+              "priority": "critical"
+            },
+            {
+              "path": "business-strategy/research/viability-analysis.md",
+              "agent": "research",
+              "required": "always",
+              "priority": "critical"
+            },
+            {
+              "path": "business-strategy/research/customer-research.md",
+              "agent": "research",
+              "required": "always",
+              "priority": "important"
+            }
+          ]
+        }
+      }
+    },
+    "phase_2_planning": {
+      "name": "Strategic Planning",
+      "trigger": "stakeholder_approval",
+      "documents": [
+        {
+          "path": "business-strategy/finance/ai-development-cost-analysis.md",
+          "agent": "finance",
+          "required": "always",
+          "priority": "critical"
+        },
+        {
+          "path": "business-strategy/analysis/go-no-go-recommendation.md",
+          "agent": "analysis",
+          "required": "always",
+          "priority": "critical"
+        },
+        {
+          "path": "business-strategy/marketing/marketing-strategy.md",
+          "agent": "marketing",
+          "required": "always",
+          "priority": "important"
+        }
+      ],
+      "conditional_documents": [
+        {
+          "path": "business-strategy/research/regulatory-compliance.md",
+          "agent": "research",
+          "condition": {
+            "OR": [
+              {"industry": ["healthcare", "finance", "education"]},
+              {"handles_pii": true}
+            ]
+          },
+          "priority": "critical"
+        },
+        {
+          "path": "10-security/security-architecture-strategy.md",
+          "agent": "security",
+          "condition": {
+            "OR": [
+              {"security_requirements": "high"},
+              {"handles_sensitive_data": true}
+            ]
+          },
+          "priority": "critical"
+        }
+      ]
+    },
+    "phase_3_requirements": {
+      "name": "Requirements & Design",
+      "trigger": "planning_approved",
+      "documents": [
+        {
+          "path": "11-requirements/prd-document.md",
+          "agent": "prd",
+          "required": "always",
+          "priority": "critical"
+        },
+        {
+          "path": "11-requirements/user-stories.md",
+          "agent": "prd",
+          "required": "always",
+          "priority": "important"
+        }
+      ],
+      "conditional_documents": [
+        {
+          "path": "11-design/ui-designs.md",
+          "agent": "ui_ux",
+          "condition": {"has_ui": true},
+          "priority": "critical"
+        },
+        {
+          "path": "12-llm-analysis/llm-selection-analysis.md",
+          "agent": "llm",
+          "condition": {"uses_ai": true},
+          "priority": "important"
+        },
+        {
+          "path": "13-api-analysis/api-provider-analysis.md",
+          "agent": "api",
+          "condition": {"uses_external_apis": true},
+          "priority": "important"
+        }
+      ]
+    },
+    "phase_3_5_sprint_setup": {
+      "name": "Sprint Setup & Organization",
+      "trigger": "sprint_start",
+      "documents": [
+        {
+          "path": "orchestration/sprints/state.md",
+          "agent": "scrum_master",
+          "required": "always",
+          "priority": "critical",
+          "description": "Sprint state tracking (planning/active/testing/review/retrospective/completed/archived)"
+        },
+        {
+          "path": "orchestration/sprints/sprint-summary.md",
+          "agent": "scrum_master",
+          "required": "always",
+          "priority": "critical",
+          "description": "Sprint overview and goals"
+        },
+        {
+          "path": "orchestration/sprints/sprint-version.md",
+          "agent": "scrum_master",
+          "required": "always",
+          "priority": "important",
+          "description": "Version tracking for sprint"
+        },
+        {
+          "path": "orchestration/sprints/document-registry.md",
+          "agent": "scrum_master",
+          "required": "always",
+          "priority": "critical",
+          "description": "Registry of all documents created by agents"
+        },
+        {
+          "path": "orchestration/sprints/sprint-dependencies.md",
+          "agent": "scrum_master",
+          "required": "once",
+          "priority": "important",
+          "description": "Cross-sprint dependency tracking"
+        },
+        {
+          "path": "orchestration/sprints/[sprint-name]/stakeholder-decisions/README.md",
+          "agent": "scrum_master",
+          "required": "always",
+          "priority": "important",
+          "description": "Sprint-specific stakeholder decisions folder setup"
+        },
+        {
+          "path": "orchestration/sprints/[sprint-name]/stakeholder-escalations/README.md",
+          "agent": "scrum_master",
+          "required": "always",
+          "priority": "important",
+          "description": "Sprint-specific stakeholder escalations folder setup"
+        }
+      ],
+      "notes": "All sprint documents must be created through Scrum Master coordination"
+    },
+    "phase_4_development": {
+      "name": "Development & Testing",
+      "trigger": "sprint_active",
+      "documents": [
+        {
+          "path": "10-implementation/development-log.md",
+          "agent": "coder",
+          "required": "always",
+          "priority": "important",
+          "note": "Created through Scrum Master coordination in sprint folder"
+        },
+        {
+          "path": "14-testing/test-plans.md",
+          "agent": "testing",
+          "required": "always",
+          "priority": "critical",
+          "note": "Created through Scrum Master coordination in sprint folder"
+        }
+      ]
+    },
+    "phase_5_deployment": {
+      "name": "Deployment & Launch",
+      "trigger": "development_complete",
+      "documents": [
+        {
+          "path": "23-deployment/deployment-guide.md",
+          "agent": "devops",
+          "required": "always",
+          "priority": "critical"
+        }
+      ]
+    },
+    "phase_6_growth": {
+      "name": "Launch & Growth",
+      "trigger": "deployment_complete",
+      "conditional_documents": [
+        {
+          "path": "15-monetization/subscription-model.md",
+          "agent": "revenue_optimization",
+          "condition": {"monetization_model": "subscription"},
+          "priority": "important"
+        },
+        {
+          "path": "17-analytics/analytics-strategy.md",
+          "agent": "analytics_growth_intelligence",
+          "condition": {"track_analytics": true},
+          "priority": "important"
+        },
+        {
+          "path": "16-customer-success/onboarding-optimization.md",
+          "agent": "customer_lifecycle",
+          "condition": {"has_user_onboarding": true},
+          "priority": "helpful"
+        }
+      ]
+    }
+  },
+  "document_categories": {
+    "always_required": [
+      "project-log.md",
+      "agent-coordination.md",
+      "stakeholder-decisions.md",
+      "stakeholder-escalations.md",
+      "prd-document.md",
+      "development-log.md",
+      "deployment-guide.md"
+    ],
+    "industry_specific": {
+      "healthcare": [
+        "compliance-framework-strategy.md",
+        "data-security-encryption.md",
+        "hipaa-compliance.md"
+      ],
+      "finance": [
+        "compliance-framework-strategy.md",
+        "security-operations-monitoring.md",
+        "pci-dss-compliance.md"
+      ],
+      "education": [
+        "compliance-framework-strategy.md",
+        "accessibility-requirements.md",
+        "ferpa-compliance.md"
+      ]
+    },
+    "project_type_specific": {
+      "saas": [
+        "subscription-model.md",
+        "customer-lifecycle-analytics.md",
+        "churn-prediction-system.md"
+      ],
+      "marketplace": [
+        "vendor-onboarding-strategy.md",
+        "payment-processing-strategy.md",
+        "trust-safety-framework.md"
+      ],
+      "mobile_app": [
+        "app-store-optimization.md",
+        "mobile-analytics-strategy.md",
+        "push-notification-strategy.md"
+      ],
+      "enterprise": [
+        "enterprise-integration-strategy.md",
+        "sso-implementation.md",
+        "audit-logging-strategy.md"
+      ]
+    },
+    "scale_based": {
+      "small": {
+        "max_users": 1000,
+        "documents": []
+      },
+      "medium": {
+        "max_users": 10000,
+        "documents": [
+          "performance-optimization-plan.md",
+          "caching-strategy.md"
+        ]
+      },
+      "large": {
+        "max_users": 100000,
+        "documents": [
+          "infrastructure-scaling-strategy.md",
+          "cdn-strategy.md",
+          "database-sharding-strategy.md"
+        ]
+      },
+      "enterprise": {
+        "max_users": null,
+        "documents": [
+          "multi-region-strategy.md",
+          "disaster-recovery-plan.md",
+          "sla-compliance-strategy.md"
+        ]
+      }
+    }
+  },
+  "triggers": {
+    "project_start": {
+      "description": "Project initialization begins",
+      "source": "user_input"
+    },
+    "existing_codebase_detected": {
+      "description": "Existing project files found",
+      "source": "project_analyzer"
+    },
+    "stakeholder_approval": {
+      "description": "Stakeholder approves proceeding",
+      "source": "stakeholder_decision"
+    },
+    "sprint_start": {
+      "description": "Development sprint begins",
+      "source": "scrum_master"
+    },
+    "feature_detected": {
+      "description": "Specific feature requirement identified",
+      "source": "prd_agent"
+    },
+    "compliance_required": {
+      "description": "Compliance requirement identified",
+      "source": "research_agent"
+    }
+  },
+  "priority_levels": {
+    "critical": {
+      "description": "Project cannot proceed without this document",
+      "sla_hours": 4
+    },
+    "important": {
+      "description": "Significantly improves project success",
+      "sla_hours": 24
+    },
+    "helpful": {
+      "description": "Provides additional value",
+      "sla_hours": 72
+    },
+    "optional": {
+      "description": "Nice to have for completeness",
+      "sla_hours": null
+    }
+  },
+  "implementation_notes": {
+    "document_creation_service": "Use DocumentCreationService class to manage creation",
+    "duplicate_prevention": "Check existing documents before creation",
+    "dependency_management": "Ensure prerequisite documents exist",
+    "tracking": "Update project state with created documents",
+    "optimization": "Track document usage for rule refinement",
+    "sprint_coordination": {
+      "all_agents": "Must request document creation through Scrum Master for sprint documents",
+      "scrum_master": "Validates requests and creates documents in correct sprint folder",
+      "document_registry": "Updated whenever a document is created in sprint",
+      "state_tracking": "Sprint state must be tracked in state.md file",
+      "folder_structure": "Sprint folders follow pattern: sprint-YYYY-MM-DD-feature-name"
+    },
+    "github_markdown_standards": {
+      "enforcement": "All documents must follow GitHub markdown best practices",
+      "validation": "Required formatting validation before document creation",
+      "reference_guide": "See aaa-documents/github-markdown-style-guide.md for complete standards",
+      "agent_categories": {
+        "development": "Basic + Intermediate formatting (code blocks, technical tables, task lists)",
+        "business": "Basic + Intermediate + Advanced formatting (LaTeX, financial tables, blockquotes)",
+        "growth": "Basic + Intermediate formatting (metrics tables, Mermaid diagrams, conversion formulas)",
+        "technical": "Basic + Advanced formatting (multi-language code, API tables, system diagrams)",
+        "support": "All formatting levels as needed for maximum clarity"
+      },
+      "quality_checklist": [
+        "Headers start with ## (not #)",
+        "Lists use * (not -)",
+        "Code blocks specify language",
+        "Links use descriptive text",
+        "Tables use proper alignment",
+        "Mathematical expressions use LaTeX (when applicable)",
+        "Diagrams use Mermaid (when applicable)",
+        "Document structure is logical and scannable"
+      ]
+    },
+    "enhanced_json_structure": {
+      "auto_generation": "System automatically generates JSON from markdown documents",
+      "token_optimization": "JSON format reduces token usage by 80-90%",
+      "bidirectional_references": "JSON files referenced in markdown Quick Reference sections",
+      "progressive_loading": "Supports minimal/standard/detailed context loading",
+      "md_reference_links": "JSON contains md_reference fields for detailed sections",
+      "structure_validation": "All JSON must follow enhanced-agent-json-schema.json",
+      "regeneration_trigger": "JSON regenerated when markdown files are updated"
+    }
+  }
+}

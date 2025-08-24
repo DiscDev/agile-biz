@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "document_type": "coverage_thresholds",
+    "version": "1.0.0",
+    "timestamp": "2025-06-27T04:00:14.413Z"
+  },
+  "coverage_thresholds": {
+    "authentication": 95,
+    "payment_processing": 95,
+    "data_validation": 90,
+    "business_logic": 85,
+    "ui_components": 70,
+    "utilities": 60,
+    "experimental": 50
+  },
+  "risk_levels": {
+    "high_risk": {
+      "threshold": 95,
+      "characteristics": [
+        "Handles user data",
+        "Financial transactions",
+        "Authentication/authorization",
+        "External API integrations",
+        "Security-critical operations",
+        "Payment processing",
+        "Personal data handling",
+        "Compliance-related code"
+      ],
+      "keywords": [
+        "auth",
+        "login",
+        "password",
+        "token",
+        "jwt",
+        "oauth",
+        "payment",
+        "stripe",
+        "checkout",
+        "billing",
+        "subscription",
+        "encrypt",
+        "decrypt",
+        "hash",
+        "security",
+        "permission",
+        "user_data",
+        "personal",
+        "private",
+        "sensitive",
+        "pii"
+      ]
+    },
+    "medium_risk": {
+      "threshold": 80,
+      "characteristics": [
+        "Business logic",
+        "Data processing",
+        "Internal APIs",
+        "Core functionality",
+        "Data transformations",
+        "Workflow management",
+        "Reporting systems"
+      ],
+      "keywords": [
+        "process",
+        "calculate",
+        "transform",
+        "workflow",
+        "business",
+        "report",
+        "analytics",
+        "aggregate",
+        "filter",
+        "validate",
+        "crud",
+        "database",
+        "query",
+        "model",
+        "service"
+      ]
+    },
+    "low_risk": {
+      "threshold": 60,
+      "characteristics": [
+        "UI components",
+        "Logging",
+        "Configuration",
+        "Utilities",
+        "Helper functions",
+        "Display logic",
+        "Static content"
+      ],
+      "keywords": [
+        "ui",
+        "component",
+        "display",
+        "render",
+        "style",
+        "log",
+        "debug",
+        "trace",
+        "info",
+        "warn",
+        "config",
+        "setting",
+        "preference",
+        "option",
+        "util",
+        "helper",
+        "format",
+        "convert"
+      ]
+    }
+  },
+  "improvement_targets": {
+    "sprint_goal": "Increase coverage by 5% each sprint",
+    "debt_tracking": "Flag files below threshold",
+    "automated_remediation": "Generate tests for uncovered code"
+  }
+}

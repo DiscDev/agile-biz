@@ -1,0 +1,245 @@
+{
+  "meta": {
+    "document": "defensive-programming-training",
+    "title": "Defensive Programming Training Guide",
+    "timestamp": "2025-07-22T01:40:48.557Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md",
+    "document_type": "technical",
+    "file_hash": "437443ba8c9bcfec210d63ecdd8cc598",
+    "estimated_tokens": 489,
+    "full_md_tokens": 3805
+  },
+  "summary": "This guide teaches defensive programming patterns that prevent runtime errors and production failures. Based on real incidents from community contributions.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#overview",
+      "content_preview": "This guide teaches defensive programming patterns that prevent runtime errors and production failures. Based on real incidents from community contribu..."
+    },
+    {
+      "title": "Module 1: Understanding the Problem",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#module-1-understanding-the-problem",
+      "content_preview": ""
+    },
+    {
+      "title": "Module 2: Core Defensive Patterns",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#module-2-core-defensive-patterns",
+      "content_preview": ""
+    },
+    {
+      "title": "Module 3: React-Specific Patterns",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#module-3-react-specific-patterns",
+      "content_preview": ""
+    },
+    {
+      "title": "Module 4: Testing Defensive Code",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#module-4-testing-defensive-code",
+      "content_preview": ""
+    },
+    {
+      "title": "Module 5: Common Pitfalls",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#module-5-common-pitfalls",
+      "content_preview": ""
+    },
+    {
+      "title": "Module 6: Quick Reference",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#module-6-quick-reference",
+      "content_preview": ""
+    },
+    {
+      "title": "Module 7: Exercises",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#module-7-exercises",
+      "content_preview": ""
+    },
+    {
+      "title": "Module 8: Implementation Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#module-8-implementation-checklist",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#overview",
+      "tokens": 39,
+      "content_preview": "This guide teaches defensive programming patterns that prevent runtime errors and production failures. Based on real incidents from community contribu..."
+    },
+    "Module 1: Understanding the Problem": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#module-1-understanding-the-problem",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Why Defensive Programming?": {
+          "content_preview": "```javascript\n// Scenario 1: User logs out, object becomes null\nconst userName = user.name; // 💥 Cannot read property 'name' of null\n\n// Scenario 2: ...",
+          "tokens": 94,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#why-defensive-programming-3"
+        },
+        "Real-World Example": {
+          "content_preview": "From the ComplianceCore project:\n```javascript\n// What happened:\n// 1. User logged in successfully\n// 2. Code assumed user object always exists\n// 3. ...",
+          "tokens": 123,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#real-world-example-1"
+        }
+      }
+    },
+    "Module 2: Core Defensive Patterns": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#module-2-core-defensive-patterns",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Pattern 1: Optional Chaining": {
+          "content_preview": "Fix these dangerous property accesses:\n```javascript\n// Exercise 1\nconst theme = config.ui.theme.primary;\n// Your answer: const theme = config?.ui?.th...",
+          "tokens": 112,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#pattern-1-optional-chaining-4"
+        },
+        "Pattern 2: Array Safety": {
+          "content_preview": "Make these array operations safe:\n```javascript\n// Exercise 1\nconst totalPrice = cart.items.reduce((sum, item) => sum + item.price, 0);\n// Your answer...",
+          "tokens": 82,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#pattern-2-array-safety-5"
+        },
+        "Pattern 3: API Response Validation": {
+          "content_preview": "```javascript\n// Create a response validator\nfunction validateApiResponse(response, requiredFields) {\n  if (!response || typeof response !== 'object')...",
+          "tokens": 165,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#pattern-3-api-response-validation-4"
+        }
+      }
+    },
+    "Module 3: React-Specific Patterns": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#module-3-react-specific-patterns",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Safe Component Props": {
+          "content_preview": "```javascript\n// Dangerous:\nfunction NotificationList({ notifications }) {\n  return (\n    <ul>\n      {notifications.map(note => (\n        <li key={not...",
+          "tokens": 144,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#safe-component-props-3"
+        },
+        "Error Boundaries": {
+          "content_preview": "```javascript\nclass ErrorBoundary extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = { hasError: false, error: null }...",
+          "tokens": 260,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#error-boundaries-2"
+        },
+        "Safe State Updates": {
+          "content_preview": "```javascript\nfunction UserList() {\n  const [users, setUsers] = useState([]);\n  const [loading, setLoading] = useState(true);\n  const [error, setError...",
+          "tokens": 198,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#safe-state-updates-2"
+        }
+      }
+    },
+    "Module 4: Testing Defensive Code": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#module-4-testing-defensive-code",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Unit Testing Defensive Patterns": {
+          "content_preview": "```javascript\ndescribe('Array Safety', () => {\n  it('handles null array', () => {\n    const items = null;\n    const count = items?.length || 0;\n    ex...",
+          "tokens": 138,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#unit-testing-defensive-patterns-3"
+        },
+        "Integration Testing": {
+          "content_preview": "```javascript\ndescribe('API Integration', () => {\n  it('handles missing response data', async () => {\n    // Mock API returns unexpected format\n    ap...",
+          "tokens": 147,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#integration-testing-2"
+        }
+      }
+    },
+    "Module 5: Common Pitfalls": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#module-5-common-pitfalls",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Pitfall 1: Incomplete Protection": {
+          "content_preview": "```javascript\n// ❌ BAD - Only protecting first level\nconst name = user?.name;\nconst city = user.address.city; // Still dangerous!\n\n// ✅ GOOD - Protect...",
+          "tokens": 56,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#pitfall-1-incomplete-protection-1"
+        },
+        "Pitfall 2: Forgetting Array Checks in Chains": {
+          "content_preview": "```javascript\n// ❌ BAD - Not checking if roles is an array\nconst isAdmin = user?.roles.includes('admin');\n\n// ✅ GOOD - Complete protection\nconst isAdm...",
+          "tokens": 73,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#pitfall-2-forgetting-array-checks-in-chains-1"
+        },
+        "Pitfall 3: Trusting Function Parameters": {
+          "content_preview": "```javascript\n// ❌ BAD - Assuming config is valid\nfunction initialize(config) {\n  const apiUrl = config.api.endpoint;\n  const timeout = config.api.tim...",
+          "tokens": 85,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#pitfall-3-trusting-function-parameters-1"
+        }
+      }
+    },
+    "Module 6: Quick Reference": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#module-6-quick-reference",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Defensive Patterns Cheat Sheet": {
+          "content_preview": "```javascript\n// Object Access\nobj?.prop                          // Optional chaining\nobj?.prop || defaultValue          // With default\nobj?.method?...",
+          "tokens": 205,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#defensive-patterns-cheat-sheet-1"
+        },
+        "Decision Tree": {
+          "content_preview": "```\nIs it an object property?\n  → Use optional chaining (?.)\n  → Provide a default value\n\nIs it an array?\n  → Check Array.isArray() first\n  → Use opti...",
+          "tokens": 132,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#decision-tree-1"
+        }
+      }
+    },
+    "Module 7: Exercises": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#module-7-exercises",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Exercise Set 1: Basic Defensive Patterns": {
+          "content_preview": "Fix the following code snippets:\n\n```javascript\n// 1. Fix this user display\nfunction showUserInfo(user) {\n  console.log(`Name: ${user.firstName} ${use...",
+          "tokens": 177,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#exercise-set-1-basic-defensive-patterns-1"
+        },
+        "Exercise Set 2: API Response Handling": {
+          "content_preview": "Implement safe API response handling:\n\n```javascript\n// Create a safe wrapper for this API call\nasync function fetchProducts(categoryId) {\n  const res...",
+          "tokens": 103,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#exercise-set-2-api-response-handling-1"
+        },
+        "Exercise Set 3: React Component Safety": {
+          "content_preview": "Make these components defensive:\n\n```javascript\n// 1. Product card component\nfunction ProductCard({ product, onAddToCart }) {\n  return (\n    <div clas...",
+          "tokens": 157,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#exercise-set-3-react-component-safety-1"
+        }
+      }
+    },
+    "Module 8: Implementation Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#module-8-implementation-checklist",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Before Code Review": {
+          "content_preview": "- [ ] All object access uses `?.`\n- [ ] All arrays checked with `Array.isArray()`\n- [ ] All API responses validated\n- [ ] All functions checked before...",
+          "tokens": 63,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#before-code-review-1"
+        },
+        "During Development": {
+          "content_preview": "- [ ] Start with defensive patterns\n- [ ] Add defaults immediately\n- [ ] Test with null/undefined data\n- [ ] Test with empty arrays\n- [ ] Test with mi...",
+          "tokens": 46,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#during-development-1"
+        },
+        "Testing Strategy": {
+          "content_preview": "- [ ] Unit tests include null cases\n- [ ] Integration tests include bad responses\n- [ ] E2E tests include error paths\n- [ ] Manual testing includes ed...",
+          "tokens": 61,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/defensive-programming-training.md#testing-strategy-1"
+        }
+      }
+    }
+  }
+}

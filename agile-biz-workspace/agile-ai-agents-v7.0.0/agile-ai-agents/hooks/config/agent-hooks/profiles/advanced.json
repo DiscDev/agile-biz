@@ -1,0 +1,55 @@
+{
+  "name": "advanced",
+  "description": "All recommended hooks enabled for maximum quality",
+  "performanceBudget": 1000,
+  "hooks": {
+    "critical": {
+      "enabled": true,
+      "hooks": {
+        "vulnerability-scanner": true,
+        "secret-rotation-reminder": true,
+        "coverage-gatekeeper": true,
+        "defensive-patterns": true,
+        "deployment-window-enforcer": true,
+        "requirement-completeness": true,
+        "encryption-enforcer": true,
+        "rollback-readiness": true
+      }
+    },
+    "valuable": {
+      "enabled": true,
+      "hooks": {
+        "dependency-checker": true,
+        "import-validator": true,
+        "test-categorizer": true,
+        "fixture-validator": true,
+        "blocker-escalator": true,
+        "velocity-anomaly-detector": true,
+        "doc-code-sync-validator": true,
+        "permission-scope-validator": true,
+        "api-contract-validator": true,
+        "sprint-scope-guardian": true,
+        "accessibility-checker": true,
+        "environment-parity-checker": true
+      }
+    },
+    "enhancement": {
+      "enabled": true,
+      "hooks": {
+        "naming-conventions": true,
+        "code-complexity": true,
+        "design-token-validator": true,
+        "interaction-pattern-library": true,
+        "citation-formatter": true,
+        "fact-vs-opinion-tagger": true,
+        "reading-level-analyzer": true,
+        "changelog-generator": true,
+        "test-naming-validator": true,
+        "flaky-test-detector": true
+      }
+    },
+    "specialized": {
+      "enabled": true
+    }
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "document": "contribution-commands-template",
+    "title": "Community Contribution Commands Template",
+    "timestamp": "2025-08-11T22:02:16.938Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md",
+    "document_type": "template",
+    "file_hash": "2591949e9e4a3b33ccfce1576cfdc702",
+    "estimated_tokens": 378,
+    "full_md_tokens": 1967
+  },
+  "summary": "This template defines how community contribution commands work and integrate with the AgileAiAgents workflow.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#overview",
+      "content_preview": "This template defines how community contribution commands work and integrate with the AgileAiAgents workflow."
+    },
+    {
+      "title": "Command Behaviors",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#command-behaviors",
+      "content_preview": ""
+    },
+    {
+      "title": "Configuration Integration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#configuration-integration",
+      "content_preview": ""
+    },
+    {
+      "title": "Contribution Content by Trigger",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#contribution-content-by-trigger",
+      "content_preview": ""
+    },
+    {
+      "title": "Error Handling",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#error-handling",
+      "content_preview": ""
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#best-practices",
+      "content_preview": "1. **Timing**: Let the delay work - reflection improves contribution quality\n2. **Context**: Include specific examples and numbers when possible\n3. **..."
+    },
+    {
+      "title": "Integration with Project State",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#integration-with-project-state",
+      "content_preview": "All contribution triggers update project state:\n```json\n{\n  \"contribution_state\": {\n    \"last_prompt\": \"2025-01-20T10:00:00Z\",\n    \"pending_prompt\": {..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#overview",
+      "tokens": 28,
+      "content_preview": "This template defines how community contribution commands work and integrate with the AgileAiAgents workflow."
+    },
+    "Command Behaviors": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#command-behaviors",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "`/sprint-retrospective`": {
+          "content_preview": "**Agent**: Scrum Master Agent\n**Purpose**: Conduct sprint retrospective and trigger contribution prompt\n**Workflow**:\n1. Execute standard retrospectiv...",
+          "tokens": 270,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#sprint-retrospective-1"
+        },
+        "`/milestone [description]`": {
+          "content_preview": "**Agent**: Project Manager Agent\n**Purpose**: Record milestone achievement and trigger contribution\n**Parameters**: \n- `description` (required) - Desc...",
+          "tokens": 159,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#milestone-description-1"
+        },
+        "`/deployment-success`": {
+          "content_preview": "**Agent**: DevOps Agent\n**Purpose**: Mark successful deployment and trigger contribution\n**Workflow**:\n1. Record deployment success in project state\n2...",
+          "tokens": 126,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#deployment-success-1"
+        },
+        "`/project-complete`": {
+          "content_preview": "**Agent**: Project Manager Agent\n**Purpose**: Mark project completion and trigger final comprehensive contribution\n**Workflow**:\n1. Update project sta...",
+          "tokens": 128,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#project-complete-1"
+        },
+        "`/skip-contribution [reason]`": {
+          "content_preview": "**Agent**: Learning Analysis Agent\n**Purpose**: Skip current contribution prompt\n**Parameters**:\n- `reason` (optional) - Why skipping this contributio...",
+          "tokens": 155,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#skip-contribution-reason-1"
+        },
+        "`/contribution-status`": {
+          "content_preview": "**Agent**: Learning Analysis Agent  \n**Purpose**: View contribution readiness and history\n**Display**:\n- Pending contribution prompts\n- Contribution h...",
+          "tokens": 191,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#contribution-status-1"
+        },
+        "`/contribute-now`": {
+          "content_preview": "**Agent**: Learning Analysis Agent\n**Purpose**: Start contribution process immediately without delay\n**Workflow**:\n1. Cancel any pending delayed promp...",
+          "tokens": 173,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#contribute-now-1"
+        }
+      }
+    },
+    "Configuration Integration": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#configuration-integration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Auto-Prompt Behavior": {
+          "content_preview": "Based on `auto_prompt_after_command` setting:\n\n**true (default)**:\n```\n[After trigger command and delay]\nAI: 🎯 Learning Contribution Opportunity\n    ...",
+          "tokens": 131,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#auto-prompt-behavior-1"
+        }
+      }
+    },
+    "Contribution Content by Trigger": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#contribution-content-by-trigger",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Sprint Retrospective Contributions": {
+          "content_preview": "- Sprint velocity and estimation accuracy\n- Technical challenges and solutions\n- Team collaboration patterns\n- Tool effectiveness\n- Process improvemen...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#sprint-retrospective-contributions-1"
+        },
+        "Milestone Contributions": {
+          "content_preview": "- Key decisions that led to success\n- Unexpected challenges\n- Resource requirements vs estimates\n- Stakeholder management insights\n- Technical pivots",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#milestone-contributions-1"
+        },
+        "Deployment Contributions": {
+          "content_preview": "- Deployment process improvements\n- Performance optimizations\n- Security considerations\n- Rollback procedures\n- Monitoring setup",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#deployment-contributions-1"
+        },
+        "Project Complete Contributions": {
+          "content_preview": "- Full project lifecycle learnings\n- Architecture decisions impact\n- Team growth and skills\n- Budget vs actual analysis\n- Future recommendations",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#project-complete-contributions-1"
+        }
+      }
+    },
+    "Error Handling": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#error-handling",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Sprint Too Short": {
+          "content_preview": "```\nYou: /sprint-retrospective\nAI: Sprint retrospective complete.\n    ⚠️ Sprint duration (1 day) below minimum (2 days) for contribution.\n    Learning...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#sprint-too-short-1"
+        },
+        "Contributions Disabled": {
+          "content_preview": "```\nYou: /milestone \"Launched v2.0\"\nAI: ✅ Milestone recorded: Launched v2.0\n    ℹ️ Community contributions are currently disabled.\n    Enable in CLAUD...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#contributions-disabled-1"
+        },
+        "No Learnings Available": {
+          "content_preview": "```\nYou: /contribute-now\nAI: ℹ️ No significant learnings captured yet.\n    Contributions are most valuable after:\n    - Completing sprints\n    - Reach...",
+          "tokens": 48,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#no-learnings-available-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#best-practices",
+      "tokens": 71,
+      "content_preview": "1. **Timing**: Let the delay work - reflection improves contribution quality\n2. **Context**: Include specific examples and numbers when possible\n3. **..."
+    },
+    "Integration with Project State": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/contribution-commands-template.md#integration-with-project-state",
+      "tokens": 110,
+      "content_preview": "All contribution triggers update project state:\n```json\n{\n  \"contribution_state\": {\n    \"last_prompt\": \"2025-01-20T10:00:00Z\",\n    \"pending_prompt\": {..."
+    }
+  }
+}

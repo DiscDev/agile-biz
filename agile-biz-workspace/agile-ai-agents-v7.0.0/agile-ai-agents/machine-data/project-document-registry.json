@@ -1,0 +1,310 @@
+{
+  "version": 3,
+  "last_updated": "2025-08-13T19:04:48.418Z",
+  "document_count": 2,
+  "documents": {
+    "orchestration": {},
+    "business-strategy": {},
+    "implementation": {},
+    "operations": {},
+    "stakeholder-input": {},
+    "analysis-reports": {},
+    "planning": {},
+    "research": {},
+    "technical": {},
+    "testing": {
+      "registry-test-document.md-registry_test_document": {
+        "md": "project-documents/testing/registry-test-document.md",
+        "json": null,
+        "tokens": {
+          "md": 263,
+          "json": 0
+        },
+        "summary": "Registry Test Document",
+        "deps": [],
+        "agent": "Testing",
+        "created": "2025-08-11T23:05:20.239Z",
+        "modified": "2025-08-11T23:05:20.239Z"
+      }
+    },
+    "test": {
+      "test-doc.md-test_doc": {
+        "md": "project-documents/test/test-doc.md",
+        "json": null,
+        "tokens": {
+          "md": 0,
+          "json": 0
+        },
+        "summary": "Test Doc for test",
+        "deps": [],
+        "agent": "Unknown",
+        "created": "2025-08-13T19:04:48.416Z",
+        "modified": "2025-08-13T19:04:48.416Z"
+      }
+    }
+  },
+  "README.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/stakeholder-input/README.md",
+    "status": "updated",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "contribution-analysis-2025-08-11.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/analysis-reports/contribution-analysis-2025-08-11.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "research-self-improving-ai-agents.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/business-strategy/research-self-improving-ai-agents.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "unified-ai-business-system-implementation-plan.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/business-strategy/unified-ai-business-system-implementation-plan.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "unified-ai-business-system-vision.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/business-strategy/unified-ai-business-system-vision.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "unified-system-branding-architecture-research.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/business-strategy/unified-system-branding-architecture-research.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "document-router-implementation-plan.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/implementation/architecture/document-router-implementation-plan.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "dashboard-status.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/dashboard-status.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "multi-llm-implementation-plan-v2.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/multi-llm-implementation-plan-v2.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "multi-llm-implementation-plan-v3.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/multi-llm-implementation-plan-v3.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "multi-llm-implementation-plan-v4.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/multi-llm-implementation-plan-v4.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "multi-llm-implementation-status.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/multi-llm-implementation-status.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "phase1-implementation-summary.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/phase1-implementation-summary.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "TEMPLATE-backlog-item.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/product-backlog/backlog-items/TEMPLATE-backlog-item.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "backlog-refinement-log.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/product-backlog/backlog-refinement-log.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "dependency-map.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/product-backlog/dependency-map.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "estimation-guidelines.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/product-backlog/estimation-guidelines.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "document-registry-template.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/sprints/_templates/document-registry-template.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "planning-agenda-template.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/sprints/_templates/planning-agenda-template.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "pulse-update-template.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/sprints/_templates/pulse-update-template.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "retrospective-template.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/sprints/_templates/retrospective-template.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "sprint-summary-template.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-summary-template.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "TEMPLATE-README.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-template/TEMPLATE-README.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "state.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-template/state.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "sprint-version-template.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-version-template.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "stakeholder-decision-template.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-decision-template.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "stakeholder-escalation-template.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/sprints/_templates/stakeholder-escalation-template.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "state-template.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/sprints/_templates/state-template.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "sprint-dependencies.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/sprints/sprint-dependencies.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "stakeholder-decisions.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/stakeholder-decisions.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "stakeholder-escalations.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/stakeholder-escalations.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "v5-implementation-summary.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/v5-implementation-summary.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "workflow-enhancement-approval.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/workflow-enhancement-approval.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "workflow-enhancement-implementation-checklist.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/orchestration/workflow-enhancement-implementation-checklist.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "archived-claude-integration-fix-plan.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/planning/archived-claude-integration-fix-plan.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "archived-improvement-selection-plan.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/planning/archived-improvement-selection-plan.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "implementation-plans-2025-07-22.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/planning/implementation-plans-2025-07-22.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "v6-release-strategy.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/planning/v6-release-strategy.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "hook-system-error-analysis.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/research/hook-system-error-analysis.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "multi-llm-api-reference.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/system/multi-llm-api-reference.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "multi-llm-implementation-summary.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/system/multi-llm-implementation-summary.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "multi-llm-setup-guide.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/system/multi-llm-setup-guide.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "timeout-test.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/test/timeout-test.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  },
+  "registry-test-document.md": {
+    "path": "/Users/phillipbrown/No-iCloud-Folder/AgileAiAgents/agile-ai-agents/project-documents/testing/registry-test-document.md",
+    "status": "imported",
+    "isFresh": true,
+    "lastUpdated": "2025-08-13T17:20:42.298Z"
+  }
+}

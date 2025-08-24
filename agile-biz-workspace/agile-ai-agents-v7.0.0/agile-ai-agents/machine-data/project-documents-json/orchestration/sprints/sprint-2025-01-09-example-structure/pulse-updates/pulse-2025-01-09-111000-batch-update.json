@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "document": "pulse-2025-01-09-111000-batch-update",
+    "title": "Sprint Pulse Update #006",
+    "timestamp": "2025-07-22T01:41:03.747Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-111000-batch-update.md",
+    "document_type": "general_documentation",
+    "file_hash": "aee0b0f404f20b294397e768c49e28a0",
+    "estimated_tokens": 256,
+    "full_md_tokens": 267
+  },
+  "summary": "**Trigger**: batch_events",
+  "sections": [
+    {
+      "title": "Current State",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-111000-batch-update.md#current-state",
+      "content_preview": "- **Active WIP**: \n  - Creating example documents (8 points) - 40% complete\n  - Setting up testing framework (3 points) - 30% complete\n- **Completed S..."
+    },
+    {
+      "title": "Batched Events (Last 60 seconds)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-111000-batch-update.md#batched-events-last-60-seconds",
+      "content_preview": "1. **10:09:15** - Subtask: Created retrospective template\n2. **10:09:32** - Status update: Testing framework initialized  \n3. **10:09:45** - Handoff: ..."
+    },
+    {
+      "title": "Progress Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-111000-batch-update.md#progress-summary",
+      "content_preview": "- Multiple small subtasks completed\n- Smooth handoffs between agents\n- No blockers encountered\n- Velocity trending upward"
+    },
+    {
+      "title": "Blockers/Risks",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-111000-batch-update.md#blockersrisks",
+      "content_preview": "- **Active Blockers**: 0\n- **Risks**: None"
+    },
+    {
+      "title": "Next Actions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-111000-batch-update.md#next-actions",
+      "content_preview": "- Continue example document creation\n- Complete testing framework setup\n- Prepare for 40% milestone pulse\n- Maintain improved velocity"
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Current State": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-111000-batch-update.md#current-state",
+      "tokens": 60,
+      "content_preview": "- **Active WIP**: \n  - Creating example documents (8 points) - 40% complete\n  - Setting up testing framework (3 points) - 30% complete\n- **Completed S..."
+    },
+    "Batched Events (Last 60 seconds)": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-111000-batch-update.md#batched-events-last-60-seconds",
+      "tokens": 73,
+      "content_preview": "1. **10:09:15** - Subtask: Created retrospective template\n2. **10:09:32** - Status update: Testing framework initialized  \n3. **10:09:45** - Handoff: ..."
+    },
+    "Progress Summary": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-111000-batch-update.md#progress-summary",
+      "tokens": 31,
+      "content_preview": "- Multiple small subtasks completed\n- Smooth handoffs between agents\n- No blockers encountered\n- Velocity trending upward"
+    },
+    "Blockers/Risks": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-111000-batch-update.md#blockersrisks",
+      "tokens": 9,
+      "content_preview": "- **Active Blockers**: 0\n- **Risks**: None"
+    },
+    "Next Actions": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/sprint-2025-01-09-example-structure/pulse-updates/pulse-2025-01-09-111000-batch-update.md#next-actions",
+      "tokens": 34,
+      "content_preview": "- Continue example document creation\n- Complete testing framework setup\n- Prepare for 40% milestone pulse\n- Maintain improved velocity"
+    }
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "meta": {
+    "document": "sprint-code-coordination-guide",
+    "title": "Sprint Code Coordination Guide",
+    "timestamp": "2025-08-11T22:02:16.918Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md",
+    "document_type": "guide",
+    "file_hash": "60b0f830a47152f3709e886f54cd3ca2",
+    "estimated_tokens": 663,
+    "full_md_tokens": 1534
+  },
+  "summary": "The Sprint Code Coordination system enables multiple coder sub-agents to work on different user stories simultaneously during sprint execution, achieving 60% time reduction while preventing merge conflicts through intelligent file ownership assignment.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#overview",
+      "content_preview": "The Sprint Code Coordination system enables multiple coder sub-agents to work on different user stories simultaneously during sprint execution, achiev..."
+    },
+    {
+      "title": "How It Works",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#how-it-works",
+      "content_preview": ""
+    },
+    {
+      "title": "Code Coordination Document",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#code-coordination-document",
+      "content_preview": "Each sprint maintains a `code-coordination.md` file tracking:\n\n```markdown"
+    },
+    {
+      "title": "File Ownership Map",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#file-ownership-map",
+      "content_preview": "| File/Module | Owner | Stories | Status | Updated |\n|-------------|-------|---------|--------|---------|\n| /api/auth/* | coder_sub_1 | AUTH-001, AUTH..."
+    },
+    {
+      "title": "Implementation Example",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#implementation-example",
+      "content_preview": ""
+    },
+    {
+      "title": "Benefits",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#benefits",
+      "content_preview": ""
+    },
+    {
+      "title": "Best Practices",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#best-practices",
+      "content_preview": ""
+    },
+    {
+      "title": "Configuration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#configuration",
+      "content_preview": "Enable sprint code coordination in CLAUDE.md:\n\n```yaml\nsub_agents:\n  sprint_execution:\n    enabled: true\n    parallel_stories: true\n    max_parallel_c..."
+    },
+    {
+      "title": "Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "Architecture Details",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#architecture-details",
+      "content_preview": ""
+    },
+    {
+      "title": "Future Enhancements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#future-enhancements",
+      "content_preview": "1. **Automatic Conflict Resolution**: AI-powered merge conflict handling\n2. **Dynamic Reallocation**: Reassign work based on progress\n3. **Predictive ..."
+    },
+    {
+      "title": "Related Documentation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#related-documentation",
+      "content_preview": "- [Sub-Agent System Guide](sub-agent-system-guide.md)\n- [Sprint Document Organization](sprint-document-organization-guide.md)\n- [Token Budget Manageme..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#overview",
+      "tokens": 63,
+      "content_preview": "The Sprint Code Coordination system enables multiple coder sub-agents to work on different user stories simultaneously during sprint execution, achiev..."
+    },
+    "How It Works": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#how-it-works",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. Dependency Analysis": {
+          "content_preview": "When a sprint begins, the system analyzes all stories to identify:\n- Which files each story will modify\n- Shared dependencies between stories\n- Potent...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#1-dependency-analysis-1"
+        },
+        "2. Ownership Assignment": {
+          "content_preview": "The system assigns file ownership to prevent conflicts:\n- Each coder sub-agent receives exclusive ownership of specific files/modules\n- Shared utility...",
+          "tokens": 79,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#2-ownership-assignment-1"
+        },
+        "3. Parallel Execution": {
+          "content_preview": "Up to 3 coder sub-agents work simultaneously:\n- Each sub-agent implements their assigned stories\n- File-level ownership prevents merge conflicts\n- Rea...",
+          "tokens": 61,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#3-parallel-execution-1"
+        },
+        "4. Integration Phase": {
+          "content_preview": "After parallel work completes:\n- All implementations collected\n- Shared files updated sequentially\n- Integration tests run\n- Final validation performe...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#4-integration-phase-1"
+        }
+      }
+    },
+    "Code Coordination Document": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#code-coordination-document",
+      "tokens": 18,
+      "content_preview": "Each sprint maintains a `code-coordination.md` file tracking:\n\n```markdown"
+    },
+    "File Ownership Map": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#file-ownership-map",
+      "tokens": 79,
+      "content_preview": "| File/Module | Owner | Stories | Status | Updated |\n|-------------|-------|---------|--------|---------|\n| /api/auth/* | coder_sub_1 | AUTH-001, AUTH...",
+      "subsections": {
+        "Status Legend": {
+          "content_preview": "- 🔵 Assigned - Work not yet started\n- 🟡 In Progress - Active development\n- 🟢 Complete - Development finished\n- 🔴 Blocked - Requires attention\n- ⏸️...",
+          "tokens": 46,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#status-legend-1"
+        }
+      }
+    },
+    "Implementation Example": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#implementation-example",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Sprint Backlog": {
+          "content_preview": "```javascript\nconst sprintBacklog = [\n  {\n    id: 'AUTH-001',\n    title: 'Implement user registration API',\n    storyPoints: 5,\n    files: ['/api/auth...",
+          "tokens": 114,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#sprint-backlog-1"
+        },
+        "Ownership Assignment Result": {
+          "content_preview": "```javascript\nconst ownership = {\n  assignments: [\n    {\n      id: 1,\n      stories: ['AUTH-001', 'AUTH-003'],\n      ownedFiles: ['/api/auth/*', '/mod...",
+          "tokens": 123,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#ownership-assignment-result-1"
+        }
+      }
+    },
+    "Benefits": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#benefits",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Time Savings": {
+          "content_preview": "- **Sequential**: 20 story points = 5 days\n- **Parallel**: 20 story points = 2 days\n- **Reduction**: 60% faster completion",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#time-savings-1"
+        },
+        "Quality Maintained": {
+          "content_preview": "- No merge conflicts through ownership\n- Integration testing after parallel phase\n- All tests must pass before completion\n- Code review incorporated",
+          "tokens": 37,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#quality-maintained-1"
+        },
+        "Realistic Simulation": {
+          "content_preview": "- Multiple \"developers\" working simultaneously\n- File conflicts prevented proactively\n- Integration challenges handled systematically\n- Team velocity ...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#realistic-simulation-1"
+        }
+      }
+    },
+    "Best Practices": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#best-practices",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Story Planning": {
+          "content_preview": "1. **Minimize Dependencies**: Plan stories to work on different modules\n2. **Clear Boundaries**: Define file ownership clearly\n3. **Shared Resources**...",
+          "tokens": 57,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#story-planning-1"
+        },
+        "During Execution": {
+          "content_preview": "1. **Monitor Progress**: Check code-coordination.md regularly\n2. **Handle Blockers**: Address impediments quickly\n3. **Communication**: Sub-agents upd...",
+          "tokens": 56,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#during-execution-1"
+        },
+        "Integration Phase": {
+          "content_preview": "1. **Collect All Work**: Gather implementations from all sub-agents\n2. **Handle Shared Files**: Update sequentially with care\n3. **Run Tests**: Compre...",
+          "tokens": 56,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#integration-phase-1"
+        }
+      }
+    },
+    "Configuration": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#configuration",
+      "tokens": 72,
+      "content_preview": "Enable sprint code coordination in CLAUDE.md:\n\n```yaml\nsub_agents:\n  sprint_execution:\n    enabled: true\n    parallel_stories: true\n    max_parallel_c..."
+    },
+    "Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Common Issues": {
+          "content_preview": "**Issue**: Stories have too many overlapping files\n**Solution**: Refactor stories to work on separate modules or handle sequentially\n\n**Issue**: Criti...",
+          "tokens": 118,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#common-issues-1"
+        }
+      }
+    },
+    "Architecture Details": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#architecture-details",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "SprintCodeCoordinator Class": {
+          "content_preview": "- Manages parallel sprint execution\n- Analyzes dependencies and assigns ownership\n- Orchestrates sub-agent deployment\n- Handles integration phase",
+          "tokens": 37,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#sprintcodecoordinator-class-1"
+        },
+        "Key Methods": {
+          "content_preview": "- `analyzeStoryDependencies()` - Identifies conflicts\n- `assignFileOwnership()` - Prevents conflicts\n- `coordinateSprintExecution()` - Manages paralle...",
+          "tokens": 47,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#key-methods-1"
+        },
+        "Token Management": {
+          "content_preview": "- Dynamic allocation based on story complexity\n- Budget tracking per sub-agent\n- Efficient context isolation\n- Overall 40% token savings",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#token-management-1"
+        }
+      }
+    },
+    "Future Enhancements": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#future-enhancements",
+      "tokens": 58,
+      "content_preview": "1. **Automatic Conflict Resolution**: AI-powered merge conflict handling\n2. **Dynamic Reallocation**: Reassign work based on progress\n3. **Predictive ..."
+    },
+    "Related Documentation": {
+      "md_reference": "agile-ai-agents/aaa-documents/sprint-code-coordination-guide.md#related-documentation",
+      "tokens": 60,
+      "content_preview": "- [Sub-Agent System Guide](sub-agent-system-guide.md)\n- [Sprint Document Organization](sprint-document-organization-guide.md)\n- [Token Budget Manageme..."
+    }
+  }
+}

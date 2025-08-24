@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "agent": "finance_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 201,
+    "full_md_tokens": 6896,
+    "md_file": "agile-ai-agents/ai-agents/finance_agent.md",
+    "file_hash": "6e23e1d324b386d9bc68c4ac47e96ab2"
+  },
+  "summary": "## Overview\nThe Finance Agent specializes in financial planning, budgeting, cost analysis, and financial reporting. This agent ensures fiscal responsibility, provides financial insights for decision-making, and manages the economic aspects of project execution.",
+  "core_responsibilities": {
+    "summary": [
+      "AI-Powered Development Financial Planning & Budgeting ⭐ AI-FIRST MODEL",
+      "AI Development Financial Monitoring & Reporting",
+      "Revenue Strategy & Monetization",
+      "AI-Advantaged Investment & Funding Strategy"
+    ],
+    "details_tokens": 667,
+    "md_reference": "agile-ai-agents/ai-agents/finance_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "AI-Powered Development Financial Plan (PRIMARY WORKFLOW) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/finance_agent.md#ai-powered-development-financial-plan-primary-workflow-workflow"
+      },
+      {
+        "name": "Venture Capital Investment Package Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/finance_agent.md#venture-capital-investment-package-workflow"
+      },
+      {
+        "name": "Financial Performance Analysis Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/finance_agent.md#financial-performance-analysis-workflow"
+      },
+      {
+        "name": "Investment Evaluation Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/finance_agent.md#investment-evaluation-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/finance_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/finance_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

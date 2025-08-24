@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "document": "system-rules",
+    "version": "1.0.0",
+    "created_at": "2025-06-27T06:00:00.000Z",
+    "updated_at": "2025-06-27T06:00:00.000Z",
+    "priority": "critical",
+    "description": "Core system rules that must be preserved across all Claude Code sessions"
+  },
+  "rules": {
+    "document_creation": {
+      "priority": "critical",
+      "rules": [
+        {
+          "id": "doc-001",
+          "rule": "ALL project documents MUST follow two-step process",
+          "details": "1) Create as .md in /project-documents/, 2) Convert to .json in /machine-data/project-documents-json/",
+          "violations": ["Creating .md files directly in machine-data", "Creating only JSON without markdown source"],
+          "reference": "/aaa-documents/document-creation-rules.md"
+        },
+        {
+          "id": "doc-002",
+          "rule": "Use correct category folders",
+          "details": "Documents must be placed in appropriate numbered category (00-orchestration through 16-launch)",
+          "reference": "/aaa-documents/document-creation-rules.md"
+        }
+      ]
+    },
+    "agent_coordination": {
+      "priority": "critical",
+      "rules": [
+        {
+          "id": "agent-001",
+          "rule": "Dual reporting structure",
+          "details": "Agents report to Scrum Master for execution, Project Manager for strategy",
+          "rationale": "Maintains true Agile separation of concerns"
+        },
+        {
+          "id": "agent-002",
+          "rule": "Total agent count is 34",
+          "details": "System includes 34 specialized agents, not 33 as mentioned in older docs",
+          "agents_added": ["Document Manager Agent (#33)", "Scrum Master Agent (#34)"]
+        },
+        {
+          "id": "agent-003",
+          "rule": "Agent handoffs use standardized format",
+          "details": "All inter-agent communication must follow defined JSON schema",
+          "reference": "/ai-agent-coordination/orchestrator-workflows.md"
+        }
+      ]
+    },
+    "context_persistence": {
+      "priority": "critical",
+      "rules": [
+        {
+          "id": "context-001",
+          "rule": "Update project state after significant actions",
+          "details": "Task completion, decisions, errors must trigger state save",
+          "implementation": "Project State Manager Agent (pending)"
+        },
+        {
+          "id": "context-002",
+          "rule": "CLAUDE.md is the living document",
+          "details": "Must contain current project status section",
+          "sections_required": ["Current Project Status", "Active Sprint", "Recent Decisions"]
+        }
+      ]
+    },
+    "development_standards": {
+      "priority": "high",
+      "rules": [
+        {
+          "id": "dev-001",
+          "rule": "Use absolute paths in all tools",
+          "details": "Never use relative paths - always full absolute paths",
+          "example": "/Users/phillipbrown/... not ./... or ../..."
+        },
+        {
+          "id": "dev-002",
+          "rule": "Error handling is mandatory",
+          "details": "All agents must implement try-catch and graceful degradation",
+          "required": ["Error recovery", "Fallback behavior", "User notification"]
+        },
+        {
+          "id": "dev-003",
+          "rule": "Test before marking complete",
+          "details": "Features must have test coverage before being marked done",
+          "minimum_coverage": "80%"
+        }
+      ]
+    },
+    "agile_methodology": {
+      "priority": "high",
+      "rules": [
+        {
+          "id": "agile-001",
+          "rule": "2-hour sprints for AI agents",
+          "details": "Adapted from 2-week human sprints",
+          "ceremonies": ["Planning", "Standups", "Review", "Retrospective"]
+        },
+        {
+          "id": "agile-002",
+          "rule": "Story points use Fibonacci",
+          "details": "Sequence: 1, 2, 3, 5, 8, 13, 21",
+          "reference": "/machine-data/story-point-calibration.js"
+        }
+      ]
+    },
+    "file_structure": {
+      "priority": "high",
+      "rules": [
+        {
+          "id": "file-001",
+          "rule": "Machine-data is for code and JSON only",
+          "details": "No markdown documentation in machine-data directories",
+          "allowed": [".js", ".json"],
+          "forbidden": [".md"]
+        },
+        {
+          "id": "file-002",
+          "rule": "Human docs in appropriate folders",
+          "details": "Markdown goes in /project-documents/, /aaa-documents/, or /ai-agents/",
+          "rationale": "Separation of human and machine readable content"
+        }
+      ]
+    }
+  },
+  "enforcement": {
+    "validation": {
+      "when": "On every file creation or modification",
+      "by": "Document Manager Agent and validation scripts",
+      "actions": ["Warn on violation", "Suggest correction", "Auto-fix if possible"]
+    },
+    "context_loading": {
+      "priority": "Rules loaded first in every session",
+      "location": "Part of core context that cannot be pruned",
+      "update_frequency": "Check for rule updates on session start"
+    }
+  },
+  "version_history": [
+    {
+      "version": "1.0.0",
+      "date": "2025-06-27",
+      "changes": [
+        "Initial system rules compilation",
+        "Document creation two-step process",
+        "Agent coordination rules",
+        "Development standards"
+      ]
+    }
+  ]
+}

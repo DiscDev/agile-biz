@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "last_updated": "2025-01-23",
+    "description": "Community-learned velocity profiles for different project types",
+    "data_sources": "Aggregated from AgileAiAgents community contributions"
+  },
+  "profiles": {
+    "standard_web_app": {
+      "id": "standard_web_app",
+      "name": "Standard Web Application",
+      "description": "Typical web application with frontend and backend components",
+      "initial_velocity": 45,
+      "confidence": 0.75,
+      "based_on_samples": 127,
+      "velocity_range": {
+        "min": 35,
+        "max": 55
+      },
+      "typical_features": [
+        "User authentication",
+        "Database CRUD operations",
+        "Responsive UI",
+        "API endpoints",
+        "Basic admin panel"
+      ],
+      "recommended_for": [
+        "E-commerce sites",
+        "Content management systems",
+        "Business applications",
+        "Customer portals"
+      ]
+    },
+    "api_only": {
+      "id": "api_only",
+      "name": "API-Only Service",
+      "description": "Backend API service without user interface",
+      "initial_velocity": 65,
+      "confidence": 0.80,
+      "based_on_samples": 89,
+      "velocity_range": {
+        "min": 50,
+        "max": 80
+      },
+      "typical_features": [
+        "RESTful endpoints",
+        "Authentication/Authorization",
+        "Data validation",
+        "Database operations",
+        "Third-party integrations"
+      ],
+      "recommended_for": [
+        "Microservices",
+        "Mobile app backends",
+        "Third-party integrations",
+        "Data services"
+      ]
+    },
+    "saas_mvp": {
+      "id": "saas_mvp",
+      "name": "SaaS MVP",
+      "description": "Minimum viable product for Software-as-a-Service",
+      "initial_velocity": 40,
+      "confidence": 0.70,
+      "based_on_samples": 203,
+      "velocity_range": {
+        "min": 30,
+        "max": 50
+      },
+      "typical_features": [
+        "User registration/login",
+        "Subscription management",
+        "Basic feature set",
+        "Payment integration",
+        "Email notifications"
+      ],
+      "recommended_for": [
+        "Startup MVPs",
+        "Product validation",
+        "Early-stage SaaS",
+        "Proof of concepts"
+      ]
+    },
+    "mobile_app": {
+      "id": "mobile_app",
+      "name": "Mobile Application",
+      "description": "Native or cross-platform mobile application",
+      "initial_velocity": 35,
+      "confidence": 0.65,
+      "based_on_samples": 76,
+      "velocity_range": {
+        "min": 25,
+        "max": 45
+      },
+      "typical_features": [
+        "User interface screens",
+        "Navigation flow",
+        "Device features integration",
+        "Offline capabilities",
+        "Push notifications"
+      ],
+      "recommended_for": [
+        "iOS/Android apps",
+        "React Native projects",
+        "Flutter applications",
+        "Progressive Web Apps"
+      ]
+    },
+    "data_pipeline": {
+      "id": "data_pipeline",
+      "name": "Data Pipeline/ETL",
+      "description": "Data processing, ETL, or analytics projects",
+      "initial_velocity": 55,
+      "confidence": 0.85,
+      "based_on_samples": 64,
+      "velocity_range": {
+        "min": 45,
+        "max": 65
+      },
+      "typical_features": [
+        "Data ingestion",
+        "Transformation logic",
+        "Data validation",
+        "Scheduled jobs",
+        "Monitoring/alerting"
+      ],
+      "recommended_for": [
+        "ETL pipelines",
+        "Data warehousing",
+        "Analytics platforms",
+        "Reporting systems"
+      ]
+    },
+    "enterprise_system": {
+      "id": "enterprise_system",
+      "name": "Enterprise System",
+      "description": "Large-scale enterprise application with complex requirements",
+      "initial_velocity": 30,
+      "confidence": 0.60,
+      "based_on_samples": 45,
+      "velocity_range": {
+        "min": 20,
+        "max": 40
+      },
+      "typical_features": [
+        "Complex business logic",
+        "Multiple user roles",
+        "Integration with legacy systems",
+        "Compliance requirements",
+        "Extensive documentation"
+      ],
+      "recommended_for": [
+        "ERP systems",
+        "Financial applications",
+        "Healthcare systems",
+        "Government projects"
+      ]
+    },
+    "custom": {
+      "id": "custom",
+      "name": "Custom Project",
+      "description": "Start with zero velocity and build your own baseline",
+      "initial_velocity": 0,
+      "confidence": 0,
+      "based_on_samples": 0,
+      "velocity_range": {
+        "min": 0,
+        "max": 0
+      },
+      "typical_features": [],
+      "recommended_for": [
+        "Unique projects",
+        "Experimental work",
+        "Research projects",
+        "When unsure of project type"
+      ]
+    }
+  },
+  "selection_guidance": {
+    "factors_to_consider": [
+      "Primary technology stack",
+      "Number of integrations required",
+      "UI complexity",
+      "Data processing requirements",
+      "Compliance and security needs"
+    ],
+    "adjustment_factors": {
+      "new_technology": 0.8,
+      "legacy_integration": 0.7,
+      "high_security": 0.85,
+      "simple_crud": 1.2,
+      "well_defined_requirements": 1.1
+    }
+  },
+  "usage_notes": {
+    "confidence_interpretation": {
+      "0.80-1.00": "High confidence - based on many similar projects",
+      "0.60-0.79": "Medium confidence - good starting point",
+      "0.40-0.59": "Low confidence - expect variance",
+      "0.00-0.39": "Very low confidence - limited data"
+    },
+    "velocity_adjustment": "Initial velocities are starting points. Teams typically stabilize after 2-3 sprints.",
+    "ai_agent_context": "These velocities assume full AgileAiAgents team with all relevant agents active."
+  }
+}

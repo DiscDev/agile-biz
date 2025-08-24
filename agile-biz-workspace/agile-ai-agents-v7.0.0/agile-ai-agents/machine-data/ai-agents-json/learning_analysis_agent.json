@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "agent": "learning_analysis_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 108,
+    "full_md_tokens": 4374,
+    "md_file": "agile-ai-agents/ai-agents/learning_analysis_agent.md",
+    "file_hash": "6e800bd6bc564217b9b629ecf066358e"
+  },
+  "summary": "## Overview\nThe Learning Analysis Agent (#37) analyzes community contributions to identify patterns, generate improvement recommendations, and coordinate the implementation of learnings across all AgileAiAgents. This agent transforms community insights into actionable improvements that enhance the entire system.",
+  "core_responsibilities": {
+    "summary": [],
+    "details_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/learning_analysis_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/learning_analysis_agent.md#workflows"
+  },
+  "reference_documentation": {
+    "learning_analysis_guide": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/learning-analysis-agent-guide.json",
+      "tokens": 1000
+    },
+    "evolution_tracking_guide": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/evolution-tracking-guide.json",
+      "tokens": 1000
+    },
+    "evolution_examples": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/evolution-tracking-examples.json",
+      "tokens": 1000
+    },
+    "learning_implementation_workflow": {
+      "path": "agile-ai-agents/ai-agent-coordination/learning-implementation-workflow-2025-07-01.md",
+      "tokens": 1000
+    },
+    "learn_from_contributions_workflow": {
+      "path": "agile-ai-agents/machine-data/aaa-documents-json/workflow-templates/learn-from-contributions-workflow.json",
+      "tokens": 1000
+    }
+  },
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/learning_analysis_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  },
+  "success_metrics": {
+    "tokens": 133,
+    "md_reference": "agile-ai-agents/ai-agents/learning_analysis_agent.md#success-metrics"
+  }
+}

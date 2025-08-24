@@ -1,0 +1,24 @@
+{
+  "code_boundaries": {
+    "main": {
+      "includes": [
+        {
+          "pattern": "src/*",
+          "type": "source",
+          "added_at": "2025-01-28T12:00:00.000Z"
+        },
+        {
+          "pattern": "tests/*",
+          "type": "test",
+          "added_at": "2025-01-28T12:00:00.000Z"
+        }
+      ],
+      "excludes": [],
+      "primary_language": "javascript"
+    }
+  },
+  "shared_interfaces": {},
+  "dependency_graph": {},
+  "feature_ownership": {},
+  "last_updated": "2025-01-28T12:00:00.000Z"
+}

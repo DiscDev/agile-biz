@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "agent": "seo_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 206,
+    "full_md_tokens": 8652,
+    "md_file": "agile-ai-agents/ai-agents/seo_agent.md",
+    "file_hash": "011a5d11d5f1fa55987789e9d5b92835"
+  },
+  "summary": "## Overview\nThe SEO Agent specializes in comprehensive search optimization strategies for both traditional search engines (Google, Bing, etc.) and LLM-powered search systems (ChatGPT, Claude, Perplexity, etc.). This agent ensures projects achieve maximum discoverability across all search platforms and AI-powered discovery systems.",
+  "core_responsibilities": {
+    "summary": [
+      "Traditional Search Engine Optimization",
+      "LLM Search Optimization & AI Indexing Strategy (PRIMARY FOCUS)",
+      "Performance & Analytics"
+    ],
+    "details_tokens": 389,
+    "md_reference": "agile-ai-agents/ai-agents/seo_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "Comprehensive SEO Strategy Development Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/seo_agent.md#comprehensive-seo-strategy-development-workflow"
+      },
+      {
+        "name": "LLM Search Optimization Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/seo_agent.md#llm-search-optimization-workflow"
+      },
+      {
+        "name": "LLM Indexing & AI Citation Strategy Workflow (NEW PRIMARY WORKFLOW) Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/seo_agent.md#llm-indexing-ai-citation-strategy-workflow-new-primary-workflow-workflow"
+      },
+      {
+        "name": "Technical SEO Implementation Planning Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/seo_agent.md#technical-seo-implementation-planning-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/seo_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/seo_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

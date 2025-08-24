@@ -1,0 +1,243 @@
+{
+  "meta": {
+    "document": "project-structure-migration-guide",
+    "title": "Project Structure Agent Migration Guide",
+    "timestamp": "2025-07-22T01:40:48.568Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md",
+    "document_type": "guide",
+    "file_hash": "6c19c1eb7ca4a22579cbb1db87335b50",
+    "estimated_tokens": 494,
+    "full_md_tokens": 1258
+  },
+  "summary": "This guide helps existing projects adopt the Project Structure Agent to improve repository organization and enable evolution to multi-repository architectures when beneficial.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#overview",
+      "content_preview": "This guide helps existing projects adopt the Project Structure Agent to improve repository organization and enable evolution to multi-repository archi..."
+    },
+    {
+      "title": "For Existing Single-Repository Projects",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#for-existing-single-repository-projects",
+      "content_preview": ""
+    },
+    {
+      "title": "Common Migration Patterns",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#common-migration-patterns",
+      "content_preview": ""
+    },
+    {
+      "title": "Multi-Repository Migration Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#multi-repository-migration-checklist",
+      "content_preview": ""
+    },
+    {
+      "title": "Industry-Specific Considerations",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#industry-specific-considerations",
+      "content_preview": ""
+    },
+    {
+      "title": "Anti-Patterns to Avoid",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#anti-patterns-to-avoid",
+      "content_preview": ""
+    },
+    {
+      "title": "Success Metrics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#success-metrics",
+      "content_preview": "Track these metrics before and after migration:"
+    },
+    {
+      "title": "Getting Help",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#getting-help",
+      "content_preview": "The Project Structure Agent provides ongoing support:\n\n1. **Regular Health Checks**: Monitor for new evolution triggers\n2. **Pattern Learning**: Benef..."
+    },
+    {
+      "title": "Quick Start Commands",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#quick-start-commands",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#overview",
+      "tokens": 44,
+      "content_preview": "This guide helps existing projects adopt the Project Structure Agent to improve repository organization and enable evolution to multi-repository archi..."
+    },
+    "For Existing Single-Repository Projects": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#for-existing-single-repository-projects",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Step 1: Initial Analysis": {
+          "content_preview": "Have the Project Structure Agent analyze your current structure:\n\n```\nActing as the Project Structure Agent, analyze my existing project structure and...",
+          "tokens": 70,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#step-1-initial-analysis-1"
+        },
+        "Step 2: Health Assessment": {
+          "content_preview": "The agent will evaluate:\n- **Build time**: Is it increasing beyond acceptable limits?\n- **Team friction**: Are there frequent merge conflicts?\n- **Dep...",
+          "tokens": 65,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#step-2-health-assessment-1"
+        },
+        "Step 3: Evolution Planning": {
+          "content_preview": "If evolution is recommended, the agent provides:\n1. **Phased migration plan** - Start with highest-impact splits\n2. **Risk mitigation** - Minimize dis...",
+          "tokens": 56,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#step-3-evolution-planning-1"
+        }
+      }
+    },
+    "Common Migration Patterns": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#common-migration-patterns",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Pattern 1: Marketing Site Split (Most Common)": {
+          "content_preview": "**When**: SEO requirements conflict with app framework\n**Timeline**: Usually within first 2-3 months\n\n```\nBefore:\n  my-app/\n    ├── pages/\n    │   ├──...",
+          "tokens": 99,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#pattern-1-marketing-site-split-most-common-1"
+        },
+        "Pattern 2: API Service Extraction": {
+          "content_preview": "**When**: Backend complexity requires versioning\n**Timeline**: 4-6 months into project\n\n```\nBefore:\n  my-app/\n    ├── client/\n    └── server/\n    \nAft...",
+          "tokens": 55,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#pattern-2-api-service-extraction-1"
+        },
+        "Pattern 3: Admin Dashboard Split": {
+          "content_preview": "**When**: Admin features exceed 20+ screens\n**Timeline**: 6-12 months\n\n```\nBefore:\n  my-app/\n    ├── src/\n    │   ├── customer/\n    │   └── admin/\n   ...",
+          "tokens": 55,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#pattern-3-admin-dashboard-split-1"
+        }
+      }
+    },
+    "Multi-Repository Migration Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#multi-repository-migration-checklist",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Pre-Migration": {
+          "content_preview": "- [ ] Current structure analyzed by Project Structure Agent\n- [ ] Evolution triggers identified and documented\n- [ ] Team aligned on migration benefit...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#pre-migration-1"
+        },
+        "During Migration": {
+          "content_preview": "- [ ] Create new repositories with proper structure\n- [ ] Move code in logical chunks (feature by feature)\n- [ ] Update import paths and dependencies\n...",
+          "tokens": 57,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#during-migration-1"
+        },
+        "Post-Migration": {
+          "content_preview": "- [ ] Verify all features working correctly\n- [ ] Monitor new metrics (build time, deploy speed)\n- [ ] Document new development workflow\n- [ ] Train t...",
+          "tokens": 52,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#post-migration-1"
+        }
+      }
+    },
+    "Industry-Specific Considerations": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#industry-specific-considerations",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Healthcare/Fintech (High Compliance)": {
+          "content_preview": "- Isolate PHI/PII processing into separate repo\n- Audit logging in dedicated service\n- Compliance reports in isolated repo",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#healthcarefintech-high-compliance-1"
+        },
+        "E-commerce": {
+          "content_preview": "- Separate storefront for performance\n- Inventory service for real-time updates\n- Analytics engine for big data processing",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#e-commerce-1"
+        },
+        "SaaS B2B": {
+          "content_preview": "- Marketing site for SEO optimization\n- Application for feature velocity\n- API for versioning and stability",
+          "tokens": 27,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#saas-b2b-1"
+        }
+      }
+    },
+    "Anti-Patterns to Avoid": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#anti-patterns-to-avoid",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Premature Splitting": {
+          "content_preview": "**Signs**: \n- Team size < 3 developers\n- Codebase < 10,000 lines\n- No actual friction points\n\n**Better approach**: Wait for concrete triggers",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#premature-splitting-1"
+        },
+        "Over-Fragmentation": {
+          "content_preview": "**Signs**:\n- More repos than team members\n- Every feature in separate repo\n- High coordination overhead\n\n**Better approach**: Logical domain boundarie...",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#over-fragmentation-1"
+        },
+        "Arbitrary Splits": {
+          "content_preview": "**Signs**:\n- Splitting by technology only\n- No clear ownership model\n- Tight coupling remains\n\n**Better approach**: Split by business domain",
+          "tokens": 33,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#arbitrary-splits-1"
+        }
+      }
+    },
+    "Success Metrics": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#success-metrics",
+      "tokens": 12,
+      "content_preview": "Track these metrics before and after migration:",
+      "subsections": {
+        "Development Velocity": {
+          "content_preview": "- [ ] Feature delivery time\n- [ ] PR merge frequency\n- [ ] Build completion time",
+          "tokens": 19,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#development-velocity-1"
+        },
+        "System Quality": {
+          "content_preview": "- [ ] Deployment success rate\n- [ ] Production incidents\n- [ ] Test coverage maintenance",
+          "tokens": 21,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#system-quality-1"
+        },
+        "Team Satisfaction": {
+          "content_preview": "- [ ] Merge conflict frequency\n- [ ] Deployment independence\n- [ ] Code ownership clarity",
+          "tokens": 21,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#team-satisfaction-1"
+        }
+      }
+    },
+    "Getting Help": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#getting-help",
+      "tokens": 69,
+      "content_preview": "The Project Structure Agent provides ongoing support:\n\n1. **Regular Health Checks**: Monitor for new evolution triggers\n2. **Pattern Learning**: Benef..."
+    },
+    "Quick Start Commands": {
+      "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#quick-start-commands",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Analyze Current Structure": {
+          "content_preview": "```\nActing as the Project Structure Agent, analyze my repository structure and provide health metrics.\n```",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#analyze-current-structure-1"
+        },
+        "Get Migration Plan": {
+          "content_preview": "```\nActing as the Project Structure Agent, create a migration plan for splitting my monorepo based on these issues: [list issues].\n```",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#get-migration-plan-1"
+        },
+        "Track Evolution Success": {
+          "content_preview": "```\nActing as the Project Structure Agent, compare our metrics before and after the repository split.\n```\n\n---\n\nRemember: **Always start simple**. The...",
+          "tokens": 64,
+          "md_reference": "agile-ai-agents/aaa-documents/archive/project-structure-migration-guide.md#track-evolution-success-1"
+        }
+      }
+    }
+  }
+}

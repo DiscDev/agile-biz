@@ -1,0 +1,682 @@
+{
+  "meta": {
+    "generated": "2025-08-11T20:08:33.745Z",
+    "total_documents": 95,
+    "avg_token_reduction": -68,
+    "total_size_reduction": -10
+  },
+  "documents": {
+    "agent-md-structure-standard": {
+      "json_path": "machine-data/aaa-documents-json/agent-md-structure-standard.json",
+      "md_reference": "aaa-documents/agent-md-structure-standard.md",
+      "token_reduction": -127,
+      "estimated_tokens": 2703,
+      "categories": []
+    },
+    "ai-native-pulse-system-guide": {
+      "json_path": "machine-data/aaa-documents-json/ai-native-pulse-system-guide.json",
+      "md_reference": "aaa-documents/ai-native-pulse-system-guide.md",
+      "token_reduction": -82,
+      "estimated_tokens": 3155,
+      "categories": []
+    },
+    "ai-story-point-guide": {
+      "json_path": "machine-data/aaa-documents-json/ai-story-point-guide.json",
+      "md_reference": "aaa-documents/ai-story-point-guide.md",
+      "token_reduction": -33,
+      "estimated_tokens": 2563,
+      "categories": []
+    },
+    "analysis-integration-sub-agents-guide": {
+      "json_path": "machine-data/aaa-documents-json/analysis-integration-sub-agents-guide.json",
+      "md_reference": "aaa-documents/analysis-integration-sub-agents-guide.md",
+      "token_reduction": -74,
+      "estimated_tokens": 3028,
+      "categories": []
+    },
+    "archived_statusline-implementation_statusline-implementation-plan": {
+      "json_path": "machine-data/aaa-documents-json/archived/statusline-implementation/statusline-implementation-plan.json",
+      "md_reference": "aaa-documents/archived/statusline-implementation/statusline-implementation-plan.md",
+      "token_reduction": 23,
+      "estimated_tokens": 2245,
+      "categories": []
+    },
+    "archived_statusline-implementation_statusline-implementation-summary": {
+      "json_path": "machine-data/aaa-documents-json/archived/statusline-implementation/statusline-implementation-summary.json",
+      "md_reference": "aaa-documents/archived/statusline-implementation/statusline-implementation-summary.md",
+      "token_reduction": -52,
+      "estimated_tokens": 2305,
+      "categories": []
+    },
+    "auto-save-handler": {
+      "json_path": "machine-data/aaa-documents-json/auto-save-handler.json",
+      "md_reference": "aaa-documents/auto-save-handler.md",
+      "token_reduction": -58,
+      "estimated_tokens": 2332,
+      "categories": []
+    },
+    "ci-cd-first-sprint-implementation": {
+      "json_path": "machine-data/aaa-documents-json/ci-cd-first-sprint-implementation.json",
+      "md_reference": "aaa-documents/ci-cd-first-sprint-implementation.md",
+      "token_reduction": -22,
+      "estimated_tokens": 1753,
+      "categories": []
+    },
+    "ci-cd-setup": {
+      "json_path": "machine-data/aaa-documents-json/ci-cd-setup.json",
+      "md_reference": "aaa-documents/ci-cd-setup.md",
+      "token_reduction": -71,
+      "estimated_tokens": 2580,
+      "categories": []
+    },
+    "claude-code-commands-reference": {
+      "json_path": "machine-data/aaa-documents-json/claude-code-commands-reference.json",
+      "md_reference": "aaa-documents/claude-code-commands-reference.md",
+      "token_reduction": -78,
+      "estimated_tokens": 3291,
+      "categories": []
+    },
+    "claude-code-cost-optimization": {
+      "json_path": "machine-data/aaa-documents-json/claude-code-cost-optimization.json",
+      "md_reference": "aaa-documents/claude-code-cost-optimization.md",
+      "token_reduction": -8,
+      "estimated_tokens": 3394,
+      "categories": []
+    },
+    "claude-code-hooks-guide": {
+      "json_path": "machine-data/aaa-documents-json/claude-code-hooks-guide.json",
+      "md_reference": "aaa-documents/claude-code-hooks-guide.md",
+      "token_reduction": 19,
+      "estimated_tokens": 2815,
+      "categories": []
+    },
+    "claude-code-integration-guide": {
+      "json_path": "machine-data/aaa-documents-json/claude-code-integration-guide.json",
+      "md_reference": "aaa-documents/claude-code-integration-guide.md",
+      "token_reduction": -106,
+      "estimated_tokens": 3300,
+      "categories": []
+    },
+    "claude-code-memory-optimization": {
+      "json_path": "machine-data/aaa-documents-json/claude-code-memory-optimization.json",
+      "md_reference": "aaa-documents/claude-code-memory-optimization.md",
+      "token_reduction": -21,
+      "estimated_tokens": 3226,
+      "categories": []
+    },
+    "claude-sub-agents-guide": {
+      "json_path": "machine-data/aaa-documents-json/claude-sub-agents-guide.json",
+      "md_reference": "aaa-documents/claude-sub-agents-guide.md",
+      "token_reduction": -87,
+      "estimated_tokens": 2561,
+      "categories": []
+    },
+    "code-review-checklists": {
+      "json_path": "machine-data/aaa-documents-json/code-review-checklists.json",
+      "md_reference": "aaa-documents/code-review-checklists.md",
+      "token_reduction": 10,
+      "estimated_tokens": 2014,
+      "categories": []
+    },
+    "command-detection": {
+      "json_path": "machine-data/aaa-documents-json/command-detection.json",
+      "md_reference": "aaa-documents/command-detection.md",
+      "token_reduction": -28,
+      "estimated_tokens": 3815,
+      "categories": []
+    },
+    "command-handlers": {
+      "json_path": "machine-data/aaa-documents-json/command-handlers.json",
+      "md_reference": "aaa-documents/command-handlers.md",
+      "token_reduction": 25,
+      "estimated_tokens": 1932,
+      "categories": []
+    },
+    "community-learnings-configuration-guide": {
+      "json_path": "machine-data/aaa-documents-json/community-learnings-configuration-guide.json",
+      "md_reference": "aaa-documents/community-learnings-configuration-guide.md",
+      "token_reduction": -6,
+      "estimated_tokens": 2742,
+      "categories": []
+    },
+    "context-verification-examples": {
+      "json_path": "machine-data/aaa-documents-json/context-verification-examples.json",
+      "md_reference": "aaa-documents/context-verification-examples.md",
+      "token_reduction": 4,
+      "estimated_tokens": 3131,
+      "categories": []
+    },
+    "context-verification-migration-guide": {
+      "json_path": "machine-data/aaa-documents-json/context-verification-migration-guide.json",
+      "md_reference": "aaa-documents/context-verification-migration-guide.md",
+      "token_reduction": -20,
+      "estimated_tokens": 3309,
+      "categories": []
+    },
+    "context-verification-quick-reference": {
+      "json_path": "machine-data/aaa-documents-json/context-verification-quick-reference.json",
+      "md_reference": "aaa-documents/context-verification-quick-reference.md",
+      "token_reduction": -130,
+      "estimated_tokens": 2404,
+      "categories": []
+    },
+    "context-verification-system-guide": {
+      "json_path": "machine-data/aaa-documents-json/context-verification-system-guide.json",
+      "md_reference": "aaa-documents/context-verification-system-guide.md",
+      "token_reduction": 5,
+      "estimated_tokens": 3543,
+      "categories": []
+    },
+    "contribution-handler": {
+      "json_path": "machine-data/aaa-documents-json/contribution-handler.json",
+      "md_reference": "aaa-documents/contribution-handler.md",
+      "token_reduction": -23,
+      "estimated_tokens": 2408,
+      "categories": []
+    },
+    "coordination-guide": {
+      "json_path": "machine-data/aaa-documents-json/coordination-guide.json",
+      "md_reference": "aaa-documents/coordination-guide.md",
+      "token_reduction": -805,
+      "estimated_tokens": 353,
+      "categories": []
+    },
+    "debugging_hooks-exit-code-127-error": {
+      "json_path": "machine-data/aaa-documents-json/debugging/hooks-exit-code-127-error.json",
+      "md_reference": "aaa-documents/debugging/hooks-exit-code-127-error.md",
+      "token_reduction": -79,
+      "estimated_tokens": 2656,
+      "categories": []
+    },
+    "defensive-programming-guide": {
+      "json_path": "machine-data/aaa-documents-json/defensive-programming-guide.json",
+      "md_reference": "aaa-documents/defensive-programming-guide.md",
+      "token_reduction": 40,
+      "estimated_tokens": 3793,
+      "categories": []
+    },
+    "deployment-guide": {
+      "json_path": "machine-data/aaa-documents-json/deployment-guide.json",
+      "md_reference": "aaa-documents/deployment-guide.md",
+      "token_reduction": -945,
+      "estimated_tokens": 397,
+      "categories": []
+    },
+    "deployment": {
+      "json_path": "machine-data/aaa-documents-json/deployment.json",
+      "md_reference": "aaa-documents/deployment.md",
+      "token_reduction": 18,
+      "estimated_tokens": 3275,
+      "categories": []
+    },
+    "document-creation-rules": {
+      "json_path": "machine-data/aaa-documents-json/document-creation-rules.json",
+      "md_reference": "aaa-documents/document-creation-rules.md",
+      "token_reduction": -49,
+      "estimated_tokens": 2545,
+      "categories": []
+    },
+    "document-md-structure-standard": {
+      "json_path": "machine-data/aaa-documents-json/document-md-structure-standard.json",
+      "md_reference": "aaa-documents/document-md-structure-standard.md",
+      "token_reduction": -177,
+      "estimated_tokens": 4310,
+      "categories": []
+    },
+    "documentation-bug-prevention": {
+      "json_path": "machine-data/aaa-documents-json/documentation-bug-prevention.json",
+      "md_reference": "aaa-documents/documentation-bug-prevention.md",
+      "token_reduction": -33,
+      "estimated_tokens": 2645,
+      "categories": []
+    },
+    "error-codes": {
+      "json_path": "machine-data/aaa-documents-json/error-codes.json",
+      "md_reference": "aaa-documents/error-codes.md",
+      "token_reduction": -73,
+      "estimated_tokens": 3202,
+      "categories": []
+    },
+    "evolution-tracking-examples": {
+      "json_path": "machine-data/aaa-documents-json/evolution-tracking-examples.json",
+      "md_reference": "aaa-documents/evolution-tracking-examples.md",
+      "token_reduction": 27,
+      "estimated_tokens": 3281,
+      "categories": []
+    },
+    "evolution-tracking-guide": {
+      "json_path": "machine-data/aaa-documents-json/evolution-tracking-guide.json",
+      "md_reference": "aaa-documents/evolution-tracking-guide.md",
+      "token_reduction": -11,
+      "estimated_tokens": 3043,
+      "categories": []
+    },
+    "folder-structure-guide": {
+      "json_path": "machine-data/aaa-documents-json/folder-structure-guide.json",
+      "md_reference": "aaa-documents/folder-structure-guide.md",
+      "token_reduction": 19,
+      "estimated_tokens": 2198,
+      "categories": []
+    },
+    "folder-structure-workflow": {
+      "json_path": "machine-data/aaa-documents-json/folder-structure-workflow.json",
+      "md_reference": "aaa-documents/folder-structure-workflow.md",
+      "token_reduction": 28,
+      "estimated_tokens": 3102,
+      "categories": []
+    },
+    "github-markdown-migration-checklist": {
+      "json_path": "machine-data/aaa-documents-json/github-markdown-migration-checklist.json",
+      "md_reference": "aaa-documents/github-markdown-migration-checklist.md",
+      "token_reduction": 42,
+      "estimated_tokens": 2421,
+      "categories": []
+    },
+    "github-markdown-style-guide": {
+      "json_path": "machine-data/aaa-documents-json/github-markdown-style-guide.json",
+      "md_reference": "aaa-documents/github-markdown-style-guide.md",
+      "token_reduction": -18,
+      "estimated_tokens": 3710,
+      "categories": []
+    },
+    "json-context-guide": {
+      "json_path": "machine-data/aaa-documents-json/json-context-guide.json",
+      "md_reference": "aaa-documents/json-context-guide.md",
+      "token_reduction": -32,
+      "estimated_tokens": 2422,
+      "categories": []
+    },
+    "json-reference-resolution-guide": {
+      "json_path": "machine-data/aaa-documents-json/json-reference-resolution-guide.json",
+      "md_reference": "aaa-documents/json-reference-resolution-guide.md",
+      "token_reduction": 5,
+      "estimated_tokens": 2410,
+      "categories": []
+    },
+    "learning-analysis-agent-guide": {
+      "json_path": "machine-data/aaa-documents-json/learning-analysis-agent-guide.json",
+      "md_reference": "aaa-documents/learning-analysis-agent-guide.md",
+      "token_reduction": -92,
+      "estimated_tokens": 3223,
+      "categories": []
+    },
+    "linting-rules-defensive-programming": {
+      "json_path": "machine-data/aaa-documents-json/linting-rules-defensive-programming.json",
+      "md_reference": "aaa-documents/linting-rules-defensive-programming.md",
+      "token_reduction": 25,
+      "estimated_tokens": 2425,
+      "categories": []
+    },
+    "markdown-examples_business-strategy-agent-example": {
+      "json_path": "machine-data/aaa-documents-json/markdown-examples/business-strategy-agent-example.json",
+      "md_reference": "aaa-documents/markdown-examples/business-strategy-agent-example.md",
+      "token_reduction": -3,
+      "estimated_tokens": 2432,
+      "categories": []
+    },
+    "markdown-examples_development-agent-example": {
+      "json_path": "machine-data/aaa-documents-json/markdown-examples/development-agent-example.json",
+      "md_reference": "aaa-documents/markdown-examples/development-agent-example.md",
+      "token_reduction": -42,
+      "estimated_tokens": 2724,
+      "categories": []
+    },
+    "markdown-examples_growth-revenue-agent-example": {
+      "json_path": "machine-data/aaa-documents-json/markdown-examples/growth-revenue-agent-example.json",
+      "md_reference": "aaa-documents/markdown-examples/growth-revenue-agent-example.md",
+      "token_reduction": -1,
+      "estimated_tokens": 2427,
+      "categories": []
+    },
+    "markdown-examples_support-agent-example": {
+      "json_path": "machine-data/aaa-documents-json/markdown-examples/support-agent-example.json",
+      "md_reference": "aaa-documents/markdown-examples/support-agent-example.md",
+      "token_reduction": 25,
+      "estimated_tokens": 2666,
+      "categories": []
+    },
+    "markdown-examples_technical-integration-agent-example": {
+      "json_path": "machine-data/aaa-documents-json/markdown-examples/technical-integration-agent-example.json",
+      "md_reference": "aaa-documents/markdown-examples/technical-integration-agent-example.md",
+      "token_reduction": 18,
+      "estimated_tokens": 2859,
+      "categories": []
+    },
+    "mcp-servers-guide": {
+      "json_path": "machine-data/aaa-documents-json/mcp-servers-guide.json",
+      "md_reference": "aaa-documents/mcp-servers-guide.md",
+      "token_reduction": 2,
+      "estimated_tokens": 3149,
+      "categories": []
+    },
+    "migration-guide-v5": {
+      "json_path": "machine-data/aaa-documents-json/migration-guide-v5.json",
+      "md_reference": "aaa-documents/migration-guide-v5.md",
+      "token_reduction": -46,
+      "estimated_tokens": 2704,
+      "categories": []
+    },
+    "new-project-workflow-enhancement-plan": {
+      "json_path": "machine-data/aaa-documents-json/new-project-workflow-enhancement-plan.json",
+      "md_reference": "aaa-documents/new-project-workflow-enhancement-plan.md",
+      "token_reduction": 43,
+      "estimated_tokens": 12430,
+      "categories": []
+    },
+    "orchestrator-security-redesign-implementation": {
+      "json_path": "machine-data/aaa-documents-json/orchestrator-security-redesign-implementation.json",
+      "md_reference": "aaa-documents/orchestrator-security-redesign-implementation.md",
+      "token_reduction": -38,
+      "estimated_tokens": 3290,
+      "categories": []
+    },
+    "other-guide": {
+      "json_path": "machine-data/aaa-documents-json/other-guide.json",
+      "md_reference": "aaa-documents/other-guide.md",
+      "token_reduction": -856,
+      "estimated_tokens": 344,
+      "categories": []
+    },
+    "performance-checklist": {
+      "json_path": "machine-data/aaa-documents-json/performance-checklist.json",
+      "md_reference": "aaa-documents/performance-checklist.md",
+      "token_reduction": -792,
+      "estimated_tokens": 348,
+      "categories": []
+    },
+    "project-document-creation-timing-guide": {
+      "json_path": "machine-data/aaa-documents-json/project-document-creation-timing-guide.json",
+      "md_reference": "aaa-documents/project-document-creation-timing-guide.md",
+      "token_reduction": -27,
+      "estimated_tokens": 3183,
+      "categories": []
+    },
+    "project-state-configuration-guide": {
+      "json_path": "machine-data/aaa-documents-json/project-state-configuration-guide.json",
+      "md_reference": "aaa-documents/project-state-configuration-guide.md",
+      "token_reduction": -19,
+      "estimated_tokens": 2692,
+      "categories": []
+    },
+    "project-structure-best-practices": {
+      "json_path": "machine-data/aaa-documents-json/project-structure-best-practices.json",
+      "md_reference": "aaa-documents/project-structure-best-practices.md",
+      "token_reduction": -71,
+      "estimated_tokens": 3762,
+      "categories": []
+    },
+    "project-structure-system-guide": {
+      "json_path": "machine-data/aaa-documents-json/project-structure-system-guide.json",
+      "md_reference": "aaa-documents/project-structure-system-guide.md",
+      "token_reduction": -43,
+      "estimated_tokens": 3410,
+      "categories": []
+    },
+    "release-notes_claude-code-hook-fix": {
+      "json_path": "machine-data/aaa-documents-json/release-notes/claude-code-hook-fix.json",
+      "md_reference": "aaa-documents/release-notes/claude-code-hook-fix.md",
+      "token_reduction": -122,
+      "estimated_tokens": 1518,
+      "categories": []
+    },
+    "release-notes_hooks-enabled-by-default": {
+      "json_path": "machine-data/aaa-documents-json/release-notes/hooks-enabled-by-default.json",
+      "md_reference": "aaa-documents/release-notes/hooks-enabled-by-default.md",
+      "token_reduction": -67,
+      "estimated_tokens": 1441,
+      "categories": []
+    },
+    "research-document-template": {
+      "json_path": "machine-data/aaa-documents-json/research-document-template.json",
+      "md_reference": "aaa-documents/research-document-template.md",
+      "token_reduction": -75,
+      "estimated_tokens": 1649,
+      "categories": []
+    },
+    "research-level-configuration": {
+      "json_path": "machine-data/aaa-documents-json/research-level-configuration.json",
+      "md_reference": "aaa-documents/research-level-configuration.md",
+      "token_reduction": -86,
+      "estimated_tokens": 2124,
+      "categories": []
+    },
+    "research-verification-guide": {
+      "json_path": "machine-data/aaa-documents-json/research-verification-guide.json",
+      "md_reference": "aaa-documents/research-verification-guide.md",
+      "token_reduction": -72,
+      "estimated_tokens": 2813,
+      "categories": []
+    },
+    "smart-context-loading-guide": {
+      "json_path": "machine-data/aaa-documents-json/smart-context-loading-guide.json",
+      "md_reference": "aaa-documents/smart-context-loading-guide.md",
+      "token_reduction": -49,
+      "estimated_tokens": 2352,
+      "categories": []
+    },
+    "sprint-code-coordination-guide": {
+      "json_path": "machine-data/aaa-documents-json/sprint-code-coordination-guide.json",
+      "md_reference": "aaa-documents/sprint-code-coordination-guide.md",
+      "token_reduction": -97,
+      "estimated_tokens": 3151,
+      "categories": []
+    },
+    "sprint-document-organization-guide": {
+      "json_path": "machine-data/aaa-documents-json/sprint-document-organization-guide.json",
+      "md_reference": "aaa-documents/sprint-document-organization-guide.md",
+      "token_reduction": -71,
+      "estimated_tokens": 4444,
+      "categories": []
+    },
+    "sprint-planning-templates-enhanced": {
+      "json_path": "machine-data/aaa-documents-json/sprint-planning-templates-enhanced.json",
+      "md_reference": "aaa-documents/sprint-planning-templates-enhanced.md",
+      "token_reduction": -20,
+      "estimated_tokens": 2980,
+      "categories": []
+    },
+    "stakeholder-ci-cd-setup-guide": {
+      "json_path": "machine-data/aaa-documents-json/stakeholder-ci-cd-setup-guide.json",
+      "md_reference": "aaa-documents/stakeholder-ci-cd-setup-guide.md",
+      "token_reduction": -23,
+      "estimated_tokens": 2761,
+      "categories": []
+    },
+    "stakeholder-context-integration-pattern": {
+      "json_path": "machine-data/aaa-documents-json/stakeholder-context-integration-pattern.json",
+      "md_reference": "aaa-documents/stakeholder-context-integration-pattern.md",
+      "token_reduction": -39,
+      "estimated_tokens": 1852,
+      "categories": []
+    },
+    "stakeholder-interview-templates": {
+      "json_path": "machine-data/aaa-documents-json/stakeholder-interview-templates.json",
+      "md_reference": "aaa-documents/stakeholder-interview-templates.md",
+      "token_reduction": 33,
+      "estimated_tokens": 4058,
+      "categories": []
+    },
+    "stakeholder-prompt-template-implementation-plan": {
+      "json_path": "machine-data/aaa-documents-json/stakeholder-prompt-template-implementation-plan.json",
+      "md_reference": "aaa-documents/stakeholder-prompt-template-implementation-plan.md",
+      "token_reduction": -12,
+      "estimated_tokens": 2621,
+      "categories": []
+    },
+    "state-commands-migration": {
+      "json_path": "machine-data/aaa-documents-json/state-commands-migration.json",
+      "md_reference": "aaa-documents/state-commands-migration.md",
+      "token_reduction": -78,
+      "estimated_tokens": 1987,
+      "categories": []
+    },
+    "statusline-configuration-guide": {
+      "json_path": "machine-data/aaa-documents-json/statusline-configuration-guide.json",
+      "md_reference": "aaa-documents/statusline-configuration-guide.md",
+      "token_reduction": -58,
+      "estimated_tokens": 3006,
+      "categories": []
+    },
+    "statusline-testing-guide": {
+      "json_path": "machine-data/aaa-documents-json/statusline-testing-guide.json",
+      "md_reference": "aaa-documents/statusline-testing-guide.md",
+      "token_reduction": -34,
+      "estimated_tokens": 2610,
+      "categories": []
+    },
+    "sub-agent-migration-guide": {
+      "json_path": "machine-data/aaa-documents-json/sub-agent-migration-guide.json",
+      "md_reference": "aaa-documents/sub-agent-migration-guide.md",
+      "token_reduction": -57,
+      "estimated_tokens": 2732,
+      "categories": []
+    },
+    "sub-agent-performance-benchmarks": {
+      "json_path": "machine-data/aaa-documents-json/sub-agent-performance-benchmarks.json",
+      "md_reference": "aaa-documents/sub-agent-performance-benchmarks.md",
+      "token_reduction": -47,
+      "estimated_tokens": 2796,
+      "categories": []
+    },
+    "sub-agent-system-guide": {
+      "json_path": "machine-data/aaa-documents-json/sub-agent-system-guide.json",
+      "md_reference": "aaa-documents/sub-agent-system-guide.md",
+      "token_reduction": -51,
+      "estimated_tokens": 2857,
+      "categories": []
+    },
+    "templates_project-claude-md-template": {
+      "json_path": "machine-data/aaa-documents-json/templates/project-claude-md-template.json",
+      "md_reference": "aaa-documents/templates/project-claude-md-template.md",
+      "token_reduction": -96,
+      "estimated_tokens": 1316,
+      "categories": []
+    },
+    "troubleshooting-dashboard-dependencies": {
+      "json_path": "machine-data/aaa-documents-json/troubleshooting-dashboard-dependencies.json",
+      "md_reference": "aaa-documents/troubleshooting-dashboard-dependencies.md",
+      "token_reduction": -89,
+      "estimated_tokens": 1185,
+      "categories": []
+    },
+    "troubleshooting": {
+      "json_path": "machine-data/aaa-documents-json/troubleshooting.json",
+      "md_reference": "aaa-documents/troubleshooting.md",
+      "token_reduction": -39,
+      "estimated_tokens": 1837,
+      "categories": []
+    },
+    "troubleshooting_claude-code-hook-errors": {
+      "json_path": "machine-data/aaa-documents-json/troubleshooting/claude-code-hook-errors.json",
+      "md_reference": "aaa-documents/troubleshooting/claude-code-hook-errors.md",
+      "token_reduction": -113,
+      "estimated_tokens": 1298,
+      "categories": []
+    },
+    "verbosity-agent-implementation": {
+      "json_path": "machine-data/aaa-documents-json/verbosity-agent-implementation.json",
+      "md_reference": "aaa-documents/verbosity-agent-implementation.md",
+      "token_reduction": -46,
+      "estimated_tokens": 3205,
+      "categories": []
+    },
+    "verbosity-guide": {
+      "json_path": "machine-data/aaa-documents-json/verbosity-guide.json",
+      "md_reference": "aaa-documents/verbosity-guide.md",
+      "token_reduction": -32,
+      "estimated_tokens": 2427,
+      "categories": []
+    },
+    "version-management-guide": {
+      "json_path": "machine-data/aaa-documents-json/version-management-guide.json",
+      "md_reference": "aaa-documents/version-management-guide.md",
+      "token_reduction": -74,
+      "estimated_tokens": 2615,
+      "categories": []
+    },
+    "workflow-enhancements-v3.4.0": {
+      "json_path": "machine-data/aaa-documents-json/workflow-enhancements-v3.4.0.json",
+      "md_reference": "aaa-documents/workflow-enhancements-v3.4.0.md",
+      "token_reduction": -16,
+      "estimated_tokens": 2312,
+      "categories": []
+    },
+    "workflow-improvement-plan": {
+      "json_path": "machine-data/aaa-documents-json/workflow-improvement-plan.json",
+      "md_reference": "aaa-documents/workflow-improvement-plan.md",
+      "token_reduction": 46,
+      "estimated_tokens": 4187,
+      "categories": []
+    },
+    "workflow-templates_contribution-commands-template": {
+      "json_path": "machine-data/aaa-documents-json/workflow-templates/contribution-commands-template.json",
+      "md_reference": "aaa-documents/workflow-templates/contribution-commands-template.md",
+      "token_reduction": -2,
+      "estimated_tokens": 2117,
+      "categories": []
+    },
+    "workflow-templates_contribution-status-template": {
+      "json_path": "machine-data/aaa-documents-json/workflow-templates/contribution-status-template.json",
+      "md_reference": "aaa-documents/workflow-templates/contribution-status-template.md",
+      "token_reduction": -51,
+      "estimated_tokens": 2051,
+      "categories": []
+    },
+    "workflow-templates_existing-project-workflow-template": {
+      "json_path": "machine-data/aaa-documents-json/workflow-templates/existing-project-workflow-template.json",
+      "md_reference": "aaa-documents/workflow-templates/existing-project-workflow-template.md",
+      "token_reduction": 48,
+      "estimated_tokens": 2705,
+      "categories": []
+    },
+    "workflow-templates_help-command-template": {
+      "json_path": "machine-data/aaa-documents-json/workflow-templates/help-command-template.json",
+      "md_reference": "aaa-documents/workflow-templates/help-command-template.md",
+      "token_reduction": 29,
+      "estimated_tokens": 2584,
+      "categories": []
+    },
+    "workflow-templates_learn-from-contributions-workflow": {
+      "json_path": "machine-data/aaa-documents-json/workflow-templates/learn-from-contributions-workflow.json",
+      "md_reference": "aaa-documents/workflow-templates/learn-from-contributions-workflow.md",
+      "token_reduction": -32,
+      "estimated_tokens": 2315,
+      "categories": []
+    },
+    "workflow-templates_new-project-workflow-template": {
+      "json_path": "machine-data/aaa-documents-json/workflow-templates/new-project-workflow-template.json",
+      "md_reference": "aaa-documents/workflow-templates/new-project-workflow-template.md",
+      "token_reduction": 52,
+      "estimated_tokens": 2454,
+      "categories": []
+    },
+    "workflow-templates_quickstart-menu-template": {
+      "json_path": "machine-data/aaa-documents-json/workflow-templates/quickstart-menu-template.json",
+      "md_reference": "aaa-documents/workflow-templates/quickstart-menu-template.md",
+      "token_reduction": -56,
+      "estimated_tokens": 1792,
+      "categories": []
+    },
+    "workflow-templates_state-commands-template": {
+      "json_path": "machine-data/aaa-documents-json/workflow-templates/state-commands-template.json",
+      "md_reference": "aaa-documents/workflow-templates/state-commands-template.md",
+      "token_reduction": -39,
+      "estimated_tokens": 2054,
+      "categories": []
+    },
+    "workflow-templates_velocity-profile-selection-workflow": {
+      "json_path": "machine-data/aaa-documents-json/workflow-templates/velocity-profile-selection-workflow.json",
+      "md_reference": "aaa-documents/workflow-templates/velocity-profile-selection-workflow.md",
+      "token_reduction": -66,
+      "estimated_tokens": 2534,
+      "categories": []
+    }
+  },
+  "categories": {},
+  "quick_access": {
+    "guides": [],
+    "templates": [],
+    "references": [],
+    "configurations": []
+  }
+}

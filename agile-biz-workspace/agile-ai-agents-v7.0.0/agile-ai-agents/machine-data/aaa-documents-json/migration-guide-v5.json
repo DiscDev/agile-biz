@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "document": "migration-guide-v5",
+    "title": "Migration Guide - AgileAiAgents v5.0.0",
+    "timestamp": "2025-08-11T22:02:16.903Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/migration-guide-v5.md",
+    "document_type": "guide",
+    "file_hash": "036ac1cd9564f7161cd3edde1d0f110a",
+    "estimated_tokens": 503,
+    "full_md_tokens": 1737
+  },
+  "summary": "## 🚀 Overview",
+  "sections": [
+    {
+      "title": "🚀 Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#overview",
+      "content_preview": "Version 5.0.0 introduces the **Stakeholder Interview Agent** and a completely redesigned workflow system with two-stage execution, parallel processing..."
+    },
+    {
+      "title": "🎯 Key Changes",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#key-changes",
+      "content_preview": ""
+    },
+    {
+      "title": "📋 Migration Steps",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#migration-steps",
+      "content_preview": ""
+    },
+    {
+      "title": "🔧 Configuration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#configuration",
+      "content_preview": ""
+    },
+    {
+      "title": "🚨 Breaking Changes",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#breaking-changes",
+      "content_preview": ""
+    },
+    {
+      "title": "🎯 Quick Start Examples",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#quick-start-examples",
+      "content_preview": ""
+    },
+    {
+      "title": "📊 Performance Improvements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#performance-improvements",
+      "content_preview": "- **60% Faster**: Parallel execution for independent phases\n- **Auto-Recovery**: Automatic retry for transient failures\n- **Smart Caching**: Reduced r..."
+    },
+    {
+      "title": "🆘 Troubleshooting",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#troubleshooting",
+      "content_preview": ""
+    },
+    {
+      "title": "📚 Additional Resources",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#additional-resources",
+      "content_preview": "- **Full Documentation**: See `aaa-documents/new-project-workflow-enhancement-plan.md`\n- **Implementation Details**: See `project-documents/orchestrat..."
+    },
+    {
+      "title": "🎉 What's Next",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#whats-next",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "🚀 Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#overview",
+      "tokens": 44,
+      "content_preview": "Version 5.0.0 introduces the **Stakeholder Interview Agent** and a completely redesigned workflow system with two-stage execution, parallel processing..."
+    },
+    "🎯 Key Changes": {
+      "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#key-changes",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "1. New Stakeholder Interview Agent": {
+          "content_preview": "- **Interactive Discovery**: Progressive questioning with iterative refinement\n- **AI Operations Vision**: 37+ questions across 6 categories for AI au...",
+          "tokens": 80,
+          "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#1-new-stakeholder-interview-agent-1"
+        },
+        "2. Two-Stage Workflow System": {
+          "content_preview": "**Stage 1: Analysis (Sequential - Phases 1-8)**\n1. Setup Verification ✅\n2. Code Analysis 🔍\n3. Identity Verification 🆔\n4. Enhancement Goals 🎯\n5. Ana...",
+          "tokens": 74,
+          "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#2-two-stage-workflow-system-3"
+        },
+        "3. Command Changes": {
+          "content_preview": "```bash\n--dry-run     # Preview without executing\n--resume      # Continue from last state\n--status      # Get command information\n--save-state  # For...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#3-command-changes-4"
+        },
+        "4. Enhanced Features": {
+          "content_preview": "- **Smart Retry Logic**: Network, timeout, resource errors handled automatically\n- **Safe Mode**: Reduced functionality mode for critical failures\n- *...",
+          "tokens": 63,
+          "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#4-enhanced-features-4"
+        }
+      }
+    },
+    "📋 Migration Steps": {
+      "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#migration-steps",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "For New Projects": {
+          "content_preview": "1. **No Changes Required**: Start normally with `/new-project-workflow`\n2. **Enjoy New Features**: \n   - Stakeholder interview guides you through setu...",
+          "tokens": 57,
+          "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#for-new-projects-1"
+        },
+        "For Existing Projects": {
+          "content_preview": "1. **Update Commands** (Optional):\n   ```bash\n   # Old way (still works)\n   /start-existing-project-workflow\n   \n   # New way (recommended)\n   /existi...",
+          "tokens": 81,
+          "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#for-existing-projects-1"
+        },
+        "For Ongoing Projects": {
+          "content_preview": "1. **Resume Support**: Use `--resume` flag to continue from last state\n   ```bash\n   /continue\n   # or\n   /new-project-workflow --resume\n   ```\n\n2. **...",
+          "tokens": 76,
+          "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#for-ongoing-projects-1"
+        }
+      }
+    },
+    "🔧 Configuration": {
+      "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#configuration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Research Levels": {
+          "content_preview": "- **MINIMAL**: 15 essential documents (1-2 hours)\n- **MEDIUM**: 48 comprehensive documents (3-5 hours)\n- **THOROUGH** (Default): 194 enterprise docume...",
+          "tokens": 37,
+          "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#research-levels-1"
+        },
+        "Verification Levels (from CLAUDE-config.md)": {
+          "content_preview": "- **PARANOID**: Maximum validation, all checks enabled\n- **THOROUGH**: Comprehensive validation (recommended)\n- **BALANCED**: Standard validation\n- **...",
+          "tokens": 42,
+          "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#verification-levels-from-claude-configmd-1"
+        },
+        "Auto-Save Configuration": {
+          "content_preview": "Location: `machine-data/auto-save-config.json`\n```json\n{\n  \"triggers\": {\n    \"document_creation\": true,\n    \"phase_transition\": true,\n    \"time_interv...",
+          "tokens": 61,
+          "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#auto-save-configuration-1"
+        }
+      }
+    },
+    "🚨 Breaking Changes": {
+      "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#breaking-changes",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "None!": {
+          "content_preview": "All existing commands and workflows continue to work. New features are additive.",
+          "tokens": 20,
+          "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#none-1"
+        }
+      }
+    },
+    "🎯 Quick Start Examples": {
+      "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#quick-start-examples",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Start New Project with AI Operations": {
+          "content_preview": "```bash\n/new-project-workflow",
+          "tokens": 7,
+          "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#start-new-project-with-ai-operations-1"
+        }
+      }
+    },
+    "📊 Performance Improvements": {
+      "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#performance-improvements",
+      "tokens": 51,
+      "content_preview": "- **60% Faster**: Parallel execution for independent phases\n- **Auto-Recovery**: Automatic retry for transient failures\n- **Smart Caching**: Reduced r..."
+    },
+    "🆘 Troubleshooting": {
+      "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#troubleshooting",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "State Issues": {
+          "content_preview": "```bash",
+          "tokens": 1,
+          "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#state-issues-1"
+        }
+      }
+    },
+    "📚 Additional Resources": {
+      "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#additional-resources",
+      "tokens": 64,
+      "content_preview": "- **Full Documentation**: See `aaa-documents/new-project-workflow-enhancement-plan.md`\n- **Implementation Details**: See `project-documents/orchestrat..."
+    },
+    "🎉 What's Next": {
+      "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#whats-next",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Coming in v5.1": {
+          "content_preview": "- Visual workflow designer\n- Real-time collaboration features\n- Extended AI agent capabilities\n- Cloud state synchronization",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#coming-in-v51-1"
+        },
+        "Coming in v6.0": {
+          "content_preview": "- Full project automation\n- AI-driven sprint planning\n- Predictive issue detection\n- Advanced analytics dashboard\n\n---\n\n**Need Help?**\n- Check `/aaa-h...",
+          "tokens": 95,
+          "md_reference": "agile-ai-agents/aaa-documents/migration-guide-v5.md#coming-in-v60-1"
+        }
+      }
+    }
+  }
+}

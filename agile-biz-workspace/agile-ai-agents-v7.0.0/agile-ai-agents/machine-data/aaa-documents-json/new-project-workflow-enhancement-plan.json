@@ -1,0 +1,1342 @@
+{
+  "meta": {
+    "document": "new-project-workflow-enhancement-plan",
+    "title": "Workflow Enhancement Implementation Plan",
+    "timestamp": "2025-08-11T22:02:16.906Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md",
+    "document_type": "workflow",
+    "file_hash": "2d72201356924e04fe8600ddf1e7d5ab",
+    "estimated_tokens": 3855,
+    "full_md_tokens": 21179
+  },
+  "summary": "## Executive Summary",
+  "sections": [
+    {
+      "title": "Executive Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#executive-summary",
+      "content_preview": "This plan outlines significant enhancements to both `/new-project-workflow` and `/existing-project-workflow` commands with a unified two-stage approac..."
+    },
+    {
+      "title": "Core Workflow Design (Both Workflows)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#core-workflow-design-both-workflows",
+      "content_preview": ""
+    },
+    {
+      "title": "Enhancement Goals",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#enhancement-goals",
+      "content_preview": "1. Add setup verification phase to prevent configuration issues\n2. Implement phase selection menu AFTER core development phases\n3. Expand operations i..."
+    },
+    {
+      "title": "Implementation Phases",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#implementation-phases",
+      "content_preview": ""
+    },
+    {
+      "title": "Quick Reference",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#quick-reference",
+      "content_preview": "- **Agent ID**: stakeholder_interview_agent\n- **Type**: Business Strategy Agent\n- **Category**: orchestration\n- **Expertise**: Stakeholder communicati..."
+    },
+    {
+      "title": "Core Purpose",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#core-purpose",
+      "content_preview": "Conduct comprehensive stakeholder interviews using iterative discovery methodology for both new and existing projects, gathering requirements, validat..."
+    },
+    {
+      "title": "Primary Responsibilities",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#primary-responsibilities",
+      "content_preview": "1. Verify system setup and prerequisites (both workflows)\n2. Check for pre-filled stakeholder prompts\n3. Conduct section-by-section interviews with it..."
+    },
+    {
+      "title": "Specialized Capabilities",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#specialized-capabilities",
+      "content_preview": "- Adaptive questioning based on responses\n- Domain-specific follow-up generation\n- Ambiguity detection and clarification\n- Multi-format input processi..."
+    },
+    {
+      "title": "Interview Methodology",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#interview-methodology",
+      "content_preview": "For each section:\n1. Ask initial questions\n2. Record responses\n3. Identify ambiguities or gaps\n4. Ask targeted follow-up questions\n5. Present your und..."
+    },
+    {
+      "title": "Integration with Workflow Phases",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#integration-with-workflow-phases",
+      "content_preview": ""
+    },
+    {
+      "title": "Context Requirements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#context-requirements",
+      "content_preview": "- stakeholder-interview-templates.md\n- stakeholder prompt templates\n- Research findings (when available)\n- Project state information"
+    },
+    {
+      "title": "Output Specifications",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#output-specifications",
+      "content_preview": "- Structured interview responses\n- Approval documentation\n- Decision records with rationale\n- Project truth documents\n- Scope boundaries definition"
+    },
+    {
+      "title": "Quality Standards",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#quality-standards",
+      "content_preview": "**New File:** `.claude/agents/stakeholder-interview-agent.md`\n\nThis creates a native Claude Code sub-agent that can be invoked directly:\n\n```markdown"
+    },
+    {
+      "title": "Your Core Responsibilities",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#your-core-responsibilities",
+      "content_preview": "1. Verify system setup and prerequisites before starting workflows\n2. Check for and process pre-filled stakeholder prompts\n3. Conduct section-by-secti..."
+    },
+    {
+      "title": "Communication Style",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#communication-style",
+      "content_preview": "- Speak in first person when conducting interviews\n- Be conversational but professional\n- Ask clarifying questions when responses are vague\n- Provide ..."
+    },
+    {
+      "title": "Interview Methodology",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#interview-methodology-1",
+      "content_preview": "For each section:\n1. Ask initial questions\n2. Record responses\n3. Identify ambiguities or gaps\n4. Ask targeted follow-up questions\n5. Present your und..."
+    },
+    {
+      "title": "Setup Verification Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#setup-verification-checklist",
+      "content_preview": "When starting Phase 1, verify:\n- [ ] .env file exists in agile-ai-agents folder\n- [ ] User's project folder has been created\n- [ ] CLAUDE.md updated w..."
+    },
+    {
+      "title": "Handling Pre-filled Prompts",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#handling-pre-filled-prompts",
+      "content_preview": "1. First check: `project-documents/stakeholder-input/project-prompt.md`\n2. If exists, load and review with stakeholder\n3. Only ask questions for missi..."
+    },
+    {
+      "title": "Decision Documentation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#decision-documentation",
+      "content_preview": "```json\n{\n  \"version\": \"1.0.0\",\n  \"project\": {\n    \"name\": \"AgileAiAgents Project\",\n    \"type\": \"new-project\",\n    \"user_path\": \"/path/to/be/configure..."
+    },
+    {
+      "title": "Example Interactions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#example-interactions",
+      "content_preview": ""
+    },
+    {
+      "title": "Operations Vision Questions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#operations-vision-questions",
+      "content_preview": "**Update:** Research selection to show full document list\n```javascript\n// Transform research-level-documents.json display\nfunction displayResearchDoc..."
+    },
+    {
+      "title": "Structured AI Agent Discovery Process",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#structured-ai-agent-discovery-process",
+      "content_preview": "The Stakeholder Interview Agent should present AI agent questions in a progressive, non-overwhelming manner:"
+    },
+    {
+      "title": "How the Agent Works with Claude Code",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#how-the-agent-works-with-claude-code",
+      "content_preview": ""
+    },
+    {
+      "title": "Decision Record - Project Vision",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#decision-record-project-vision",
+      "content_preview": "**How Claude Code and the Agent Interact:**\n\n1. **Agent speaks in first person** when active\n2. **Clear agent identification** in brackets\n3. **Visual..."
+    },
+    {
+      "title": "Workflow Phases",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#workflow-phases",
+      "content_preview": ""
+    },
+    {
+      "title": "Your Actions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#your-actions",
+      "content_preview": "1. Verify prerequisite phases are complete\n2. Present available phases based on workflow type\n3. Show phase categories:\n   - Development & Features\n  ..."
+    },
+    {
+      "title": "Command Options",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#command-options",
+      "content_preview": "```markdown\n---\ndescription: Select operational or enhancement phases after core workflow completion\n---"
+    },
+    {
+      "title": "Workflow Phases",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#workflow-phases-1",
+      "content_preview": ""
+    },
+    {
+      "title": "Your Actions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#your-actions-1",
+      "content_preview": "1. Verify prerequisite phases are complete\n2. Present available phases based on workflow type\n3. Show phase categories:\n   - Development & Features\n  ..."
+    },
+    {
+      "title": "Command Options",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#command-options-1",
+      "content_preview": "```markdown\n---\ndescription: Select operational or enhancement phases after core workflow completion\n---"
+    },
+    {
+      "title": "Your Actions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#your-actions-2",
+      "content_preview": "1. Verify prerequisite phases are complete\n2. Present available phases based on workflow type\n3. Show phase categories:\n   - Development & Features\n  ..."
+    },
+    {
+      "title": "Quick Packages",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#quick-packages",
+      "content_preview": "- Startup Package: Operations, Marketing, Business, Analytics\n- Enterprise Package: Operations, Security, Business, Analytics, Scale\n- Growth Package:..."
+    },
+    {
+      "title": "Stage 1: Core Development (Sequential - Phases 1-11)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#stage-1-core-development-sequential-phases-1-11",
+      "content_preview": "These phases MUST run in order to establish project foundation:\n\n1. Setup Verification (Required)\n2. Stakeholder Discovery \n3. Research Depth Selectio..."
+    },
+    {
+      "title": "Stage 2: Post-Deployment Phase Selection Menu",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#stage-2-post-deployment-phase-selection-menu",
+      "content_preview": "After MVP deployment, users get full phase selection control:"
+    },
+    {
+      "title": "Operations Vision Questions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#operations-vision-questions-1",
+      "content_preview": "**Update:** Research selection to show full document list\n```javascript\n// Transform research-level-documents.json display\nfunction displayResearchDoc..."
+    },
+    {
+      "title": "🎉 Congratulations! Your MVP is Live!",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#congratulations-your-mvp-is-live",
+      "content_preview": "You've completed the core development phases. Now you have full control over your project's future direction."
+    },
+    {
+      "title": "Available Phases (Choose Your Path)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#available-phases-choose-your-path",
+      "content_preview": ""
+    },
+    {
+      "title": "How would you like to execute these phases?",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#how-would-you-like-to-execute-these-phases",
+      "content_preview": "1. **Sequential** - One phase at a time in order\n2. **Parallel** - Multiple phases simultaneously (where possible)\n3. **Priority** - High-priority pha..."
+    },
+    {
+      "title": "First Sprint Standard Tasks",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#first-sprint-standard-tasks",
+      "content_preview": "**New:** Detailed sprint execution flow\n```markdown"
+    },
+    {
+      "title": "Sprint Execution Pipeline",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#sprint-execution-pipeline",
+      "content_preview": "1. Sprint Planning (Scrum Master)\n2. Task Assignment (Project Manager)\n3. Development (Coder Agents)\n4. Code Review (Senior Agents)\n5. Testing (QA Age..."
+    },
+    {
+      "title": "Existing Project Workflow Enhancements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#existing-project-workflow-enhancements",
+      "content_preview": ""
+    },
+    {
+      "title": "New Project Workflow Flow Diagram",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#new-project-workflow-flow-diagram",
+      "content_preview": ""
+    },
+    {
+      "title": "Key Design Decisions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#key-design-decisions",
+      "content_preview": ""
+    },
+    {
+      "title": "Clean Slate Template Integration",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#clean-slate-template-integration",
+      "content_preview": ""
+    },
+    {
+      "title": "Command Context",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#command-context",
+      "content_preview": "- Native Claude Code custom slash command\n- Activates multiple specialized agents\n- Analysis results stored in project-documents/analysis-reports/\n- S..."
+    },
+    {
+      "title": "Workflow Execution",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#workflow-execution",
+      "content_preview": "When invoked:\n1. Check workflow state\n2. Activate Stakeholder Interview Agent for setup\n3. Run comprehensive code analysis (Project Analyzer Agent)\n4...."
+    },
+    {
+      "title": "Stage 1: Sequential Development (Required)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#stage-1-sequential-development-required-2",
+      "content_preview": "Phases 1-11 must complete in order."
+    },
+    {
+      "title": "Stage 2: Operations (User Selection)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#stage-2-operations-user-selection",
+      "content_preview": "```markdown\n---\ndescription: Analyze and enhance an existing codebase with structured workflow\n---"
+    },
+    {
+      "title": "Command Context",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#command-context-1",
+      "content_preview": "- Native Claude Code custom slash command\n- Activates multiple specialized agents\n- Analysis results stored in project-documents/analysis-reports/\n- S..."
+    },
+    {
+      "title": "Workflow Execution",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#workflow-execution-1",
+      "content_preview": "When invoked:\n1. Check workflow state\n2. Activate Stakeholder Interview Agent for setup\n3. Run comprehensive code analysis (Project Analyzer Agent)\n4...."
+    },
+    {
+      "title": "Stage 1: Sequential Analysis (Phases 1-8)",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#stage-1-sequential-analysis-phases-1-8-4",
+      "content_preview": "Required for proper understanding and planning."
+    },
+    {
+      "title": "Stage 2: Enhancement Implementation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#stage-2-enhancement-implementation",
+      "content_preview": "```markdown\n---\ndescription: Select operational or enhancement phases after core workflow completion\n---"
+    },
+    {
+      "title": "Prerequisites",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#prerequisites",
+      "content_preview": "- New Project: Must complete Phase 11 (MVP Deployment)\n- Existing Project: Must complete Phase 8 (Enhancement Backlog)"
+    },
+    {
+      "title": "Available Phases",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#available-phases",
+      "content_preview": "Display categorized phases:\n- Development & Features\n- Operations & Infrastructure  \n- Marketing & Growth\n- Business & Revenue\n- Analytics & Intellige..."
+    },
+    {
+      "title": "Quick Packages",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#quick-packages-1",
+      "content_preview": "- Startup Package: Operations, Marketing, Business, Analytics\n- Enterprise Package: Operations, Security, Business, Analytics, Scale\n- Growth Package:..."
+    },
+    {
+      "title": "Execution Modes",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#execution-modes",
+      "content_preview": "```markdown"
+    },
+    {
+      "title": "Core Responsibilities",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#core-responsibilities",
+      "content_preview": "1. Verify system setup before workflows\n2. Process pre-filled stakeholder prompts\n3. Conduct iterative section-by-section interviews\n4. Present unders..."
+    },
+    {
+      "title": "Communication Protocol",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#communication-protocol",
+      "content_preview": "- Speak in first person during interviews\n- Use visual indicators (✓ ✗) for checklists\n- Number options for clear choices\n- Request explicit approvals..."
+    },
+    {
+      "title": "Setup Verification",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#setup-verification-2",
+      "content_preview": "Always check these items first:\n- [ ] .env file exists in agile-ai-agents folder\n- [ ] User's project folder created\n- [ ] CLAUDE.md updated with proj..."
+    },
+    {
+      "title": "Iterative Discovery Process",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#iterative-discovery-process",
+      "content_preview": "1. Ask initial question\n2. Record response\n3. Identify ambiguities\n4. Ask clarifying follow-ups\n5. Present understanding\n6. Get explicit approval\n7. D..."
+    },
+    {
+      "title": "Decision Documentation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#decision-documentation-3",
+      "content_preview": "```json\n{\n  \"version\": \"1.0.0\",\n  \"project\": {\n    \"name\": \"AgileAiAgents Project\",\n    \"type\": \"new-project\",\n    \"user_path\": \"/path/to/be/configure..."
+    },
+    {
+      "title": "Key System Learnings Applied to This Plan",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#key-system-learnings-applied-to-this-plan",
+      "content_preview": "Based on comprehensive research of the AgileAiAgents system, the following enhancements should be incorporated:"
+    },
+    {
+      "title": "Research Document Creation Requirements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#research-document-creation-requirements",
+      "content_preview": ""
+    },
+    {
+      "title": "Implementation Timeline",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#implementation-timeline",
+      "content_preview": ""
+    },
+    {
+      "title": "Testing Strategy",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#testing-strategy",
+      "content_preview": ""
+    },
+    {
+      "title": "Migration Path",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#migration-path",
+      "content_preview": ""
+    },
+    {
+      "title": "Rollback Plan",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#rollback-plan",
+      "content_preview": ""
+    },
+    {
+      "title": "Success Metrics",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#success-metrics",
+      "content_preview": ""
+    },
+    {
+      "title": "Documentation Updates Required",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#documentation-updates-required",
+      "content_preview": ""
+    },
+    {
+      "title": "Risk Mitigation",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#risk-mitigation",
+      "content_preview": ""
+    },
+    {
+      "title": "Critical Dependencies",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#critical-dependencies",
+      "content_preview": ""
+    },
+    {
+      "title": "Approval Checklist",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#approval-checklist",
+      "content_preview": "Before implementation:\n- [ ] **Approve Research Document Requirements**\n  - [ ] Research level selection with THOROUGH as default\n  - [ ] Document cre..."
+    },
+    {
+      "title": "Summary of All Enhancements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#summary-of-all-enhancements",
+      "content_preview": ""
+    },
+    {
+      "title": "Research Document Requirements",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#research-document-requirements",
+      "content_preview": ""
+    },
+    {
+      "title": "Benefits Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#benefits-summary",
+      "content_preview": ""
+    },
+    {
+      "title": "Risk Mitigation Summary",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#risk-mitigation-summary",
+      "content_preview": "1. **Technical Risks**: Mitigated through pre-flight checks, state validation, error handling\n2. **User Experience Risks**: Mitigated through progress..."
+    },
+    {
+      "title": "Next Steps",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#next-steps",
+      "content_preview": "1. **Stakeholder Review**: Review this comprehensive plan and provide feedback\n2. **Prioritization**: Identify must-have vs nice-to-have features\n3. *..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Executive Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#executive-summary",
+      "tokens": 62,
+      "content_preview": "This plan outlines significant enhancements to both `/new-project-workflow` and `/existing-project-workflow` commands with a unified two-stage approac...",
+      "subsections": {
+        "Command Renaming": {
+          "content_preview": "- `/start-new-project-workflow` → `/new-project-workflow`\n- `/start-existing-project-workflow` → `/existing-project-workflow`\n\nRationale: \"start\" is r...",
+          "tokens": 53,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#command-renaming-1"
+        }
+      }
+    },
+    "Core Workflow Design (Both Workflows)": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#core-workflow-design-both-workflows",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "New Project Workflow": {
+          "content_preview": "- **Phases 1-11**: Sequential execution (required for project foundation)\n- **Phases 12+**: Phase selection menu (flexible based on priorities)",
+          "tokens": 33,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#new-project-workflow-1"
+        },
+        "Existing Project Workflow": {
+          "content_preview": "- **Phases 1-8**: Sequential execution (analysis and enhancement planning)\n- **Phases 9+**: Phase selection menu (flexible enhancement implementation)",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#existing-project-workflow-1"
+        }
+      }
+    },
+    "Enhancement Goals": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#enhancement-goals",
+      "tokens": 89,
+      "content_preview": "1. Add setup verification phase to prevent configuration issues\n2. Implement phase selection menu AFTER core development phases\n3. Expand operations i..."
+    },
+    "Implementation Phases": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#implementation-phases",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Phase 0: Create Stakeholder Interview Agent (Week 1 - Priority 1)": {
+          "content_preview": "**New File:** `ai-agents/stakeholder_interview_agent.md`\n\n**Agent Structure:**\n```markdown",
+          "tokens": 20,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#phase-0-create-stakeholder-interview-agent-week-1-priority-1-2"
+        }
+      }
+    },
+    "Quick Reference": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#quick-reference",
+      "tokens": 73,
+      "content_preview": "- **Agent ID**: stakeholder_interview_agent\n- **Type**: Business Strategy Agent\n- **Category**: orchestration\n- **Expertise**: Stakeholder communicati..."
+    },
+    "Core Purpose": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#core-purpose",
+      "tokens": 62,
+      "content_preview": "Conduct comprehensive stakeholder interviews using iterative discovery methodology for both new and existing projects, gathering requirements, validat..."
+    },
+    "Primary Responsibilities": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#primary-responsibilities",
+      "tokens": 105,
+      "content_preview": "1. Verify system setup and prerequisites (both workflows)\n2. Check for pre-filled stakeholder prompts\n3. Conduct section-by-section interviews with it..."
+    },
+    "Specialized Capabilities": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#specialized-capabilities",
+      "tokens": 65,
+      "content_preview": "- Adaptive questioning based on responses\n- Domain-specific follow-up generation\n- Ambiguity detection and clarification\n- Multi-format input processi..."
+    },
+    "Interview Methodology": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#interview-methodology-1",
+      "tokens": 64,
+      "content_preview": "For each section:\n1. Ask initial questions\n2. Record responses\n3. Identify ambiguities or gaps\n4. Ask targeted follow-up questions\n5. Present your und..."
+    },
+    "Integration with Workflow Phases": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#integration-with-workflow-phases",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Both Workflows - Phase 1: Setup Verification": {
+          "content_preview": "- Verify .env file exists\n- Check project folder creation\n- Validate CLAUDE.md updates\n- Confirm setup scripts executed\n- Ensure settings.json configu...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#both-workflows-phase-1-setup-verification-1"
+        },
+        "New Project - Phase 2: Stakeholder Discovery": {
+          "content_preview": "- Load interview templates\n- Conduct comprehensive interview\n- Handle pre-filled prompts\n- Process additional materials",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#new-project-phase-2-stakeholder-discovery-3"
+        },
+        "Existing Project - Phase 3: Identity Verification": {
+          "content_preview": "- Present code analysis findings\n- Verify project understanding\n- Establish what project is NOT\n- Confirm domain and users\n- Document project boundari...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#existing-project-phase-3-identity-verification-1"
+        },
+        "Existing Project - Phase 4: Enhancement Goals": {
+          "content_preview": "- Discover improvement objectives\n- Identify pain points\n- Prioritize enhancements\n- Set timeline expectations",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#existing-project-phase-4-enhancement-goals-1"
+        },
+        "Both Workflows - Post-Research/Analysis Alignment": {
+          "content_preview": "- Present findings (research or code analysis)\n- Discuss implications\n- Adjust project direction\n- Document final decisions",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#both-workflows-post-researchanalysis-alignment-1"
+        }
+      }
+    },
+    "Context Requirements": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#context-requirements",
+      "tokens": 33,
+      "content_preview": "- stakeholder-interview-templates.md\n- stakeholder prompt templates\n- Research findings (when available)\n- Project state information"
+    },
+    "Output Specifications": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#output-specifications",
+      "tokens": 37,
+      "content_preview": "- Structured interview responses\n- Approval documentation\n- Decision records with rationale\n- Project truth documents\n- Scope boundaries definition"
+    },
+    "Quality Standards": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#quality-standards",
+      "tokens": 35,
+      "content_preview": "**New File:** `.claude/agents/stakeholder-interview-agent.md`\n\nThis creates a native Claude Code sub-agent that can be invoked directly:\n\n```markdown"
+    },
+    "Your Core Responsibilities": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#your-core-responsibilities",
+      "tokens": 99,
+      "content_preview": "1. Verify system setup and prerequisites before starting workflows\n2. Check for and process pre-filled stakeholder prompts\n3. Conduct section-by-secti..."
+    },
+    "Communication Style": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#communication-style",
+      "tokens": 66,
+      "content_preview": "- Speak in first person when conducting interviews\n- Be conversational but professional\n- Ask clarifying questions when responses are vague\n- Provide ..."
+    },
+    "Setup Verification Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#setup-verification-checklist",
+      "tokens": 86,
+      "content_preview": "When starting Phase 1, verify:\n- [ ] .env file exists in agile-ai-agents folder\n- [ ] User's project folder has been created\n- [ ] CLAUDE.md updated w..."
+    },
+    "Handling Pre-filled Prompts": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#handling-pre-filled-prompts",
+      "tokens": 55,
+      "content_preview": "1. First check: `project-documents/stakeholder-input/project-prompt.md`\n2. If exists, load and review with stakeholder\n3. Only ask questions for missi..."
+    },
+    "Decision Documentation": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#decision-documentation-3",
+      "tokens": 159,
+      "content_preview": "```json\n{\n  \"version\": \"1.0.0\",\n  \"project\": {\n    \"name\": \"AgileAiAgents Project\",\n    \"type\": \"new-project\",\n    \"user_path\": \"/path/to/be/configure...",
+      "subsections": {
+        "Clean Slate Deployment Process": {
+          "content_preview": "When creating a new project with AgileAiAgents:\n\n```bash",
+          "tokens": 14,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#clean-slate-deployment-process-2"
+        }
+      }
+    },
+    "Example Interactions": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#example-interactions",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Setup Verification": {
+          "content_preview": "```\nLet me verify your setup is complete.\n\n✓ .env file exists\n✗ Project folder not found\n✗ CLAUDE.md not updated\n\nI need to help you complete the setu...",
+          "tokens": 82,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#setup-verification-1"
+        },
+        "Iterative Discovery": {
+          "content_preview": "```\nIn one sentence, what is this product?\n> \"A project management tool\"\n\nThat's a bit broad. Let me help you be more specific:\n- Is this for individu...",
+          "tokens": 111,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#iterative-discovery-1"
+        },
+        "Existing Project Analysis": {
+          "content_preview": "```\nI've completed an initial analysis of your codebase. Here's what I found:\n- Technology Stack: React, Node.js, PostgreSQL\n- Architecture Pattern: M...",
+          "tokens": 167,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#existing-project-analysis-1"
+        }
+      }
+    },
+    "Operations Vision Questions": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#operations-vision-questions-1",
+      "tokens": 80,
+      "content_preview": "**Update:** Research selection to show full document list\n```javascript\n// Transform research-level-documents.json display\nfunction displayResearchDoc...",
+      "subsections": {
+        "Phase 3: Post-MVP Phase Selection System (Week 2)": {
+          "content_preview": "**After MVP Deployment:**\n```markdown",
+          "tokens": 8,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#phase-3-post-mvp-phase-selection-system-week-2-3"
+        }
+      }
+    },
+    "Structured AI Agent Discovery Process": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#structured-ai-agent-discovery-process",
+      "tokens": 27,
+      "content_preview": "The Stakeholder Interview Agent should present AI agent questions in a progressive, non-overwhelming manner:",
+      "subsections": {
+        "Phase 1: High-Level Vision": {
+          "content_preview": "First, establish the overall operations philosophy:\n\"Let's talk about how you want to run your business after launch. Do you see this as a highly auto...",
+          "tokens": 55,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#phase-1-high-level-vision-1"
+        },
+        "Phase 2: Category-Based Discovery": {
+          "content_preview": "Present one category at a time, starting with most critical:\n\n**Customer Experience**\n\"Let's start with customer experience. I'll ask about different ...",
+          "tokens": 120,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#phase-2-category-based-discovery-1"
+        },
+        "Phase 3: Priority Mapping": {
+          "content_preview": "After going through all categories:\n\"Of all the AI agents you said 'yes' to, which are:\n1. Must-have for launch?\n2. Nice-to-have for launch?\n3. Can wa...",
+          "tokens": 53,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#phase-3-priority-mapping-1"
+        },
+        "Phase 4: Concern Addressing": {
+          "content_preview": "\"Are there any specific concerns about AI handling certain functions? For example:\n- Privacy concerns with AI handling customer data?\n- Quality concer...",
+          "tokens": 58,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#phase-4-concern-addressing-1"
+        },
+        "Phase 5: Budget Alignment": {
+          "content_preview": "\"What's your monthly budget for AI operations?\n- Under $500/month\n- $500-2000/month\n- $2000-5000/month\n- $5000+/month\n- Budget not determined yet\"",
+          "tokens": 37,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#phase-5-budget-alignment-1"
+        },
+        "Documentation Format": {
+          "content_preview": "**Implementation Approach:**\n```markdown",
+          "tokens": 9,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#documentation-format-2"
+        }
+      }
+    },
+    "How the Agent Works with Claude Code": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#how-the-agent-works-with-claude-code",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Direct Communication Mode": {
+          "content_preview": "When activated, the Stakeholder Interview Agent communicates directly with the user through Claude Code:\n\n1. **Agent Activation**\n   ```javascript\n   ...",
+          "tokens": 334,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#direct-communication-mode-1"
+        },
+        "State Persistence": {
+          "content_preview": "The agent maintains conversation state across interactions:\n```json\n{\n  \"agent_state\": {\n    \"current_section\": \"project_vision\",\n    \"questions_asked...",
+          "tokens": 79,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#state-persistence-1"
+        },
+        "Decision Documentation": {
+          "content_preview": "Every approval creates a permanent record:\n```markdown",
+          "tokens": 13,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#decision-documentation-2"
+        }
+      }
+    },
+    "Decision Record - Project Vision": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#decision-record-project-vision",
+      "tokens": 168,
+      "content_preview": "**How Claude Code and the Agent Interact:**\n\n1. **Agent speaks in first person** when active\n2. **Clear agent identification** in brackets\n3. **Visual...",
+      "subsections": {
+        "Phase 1: Foundation Updates (Week 1)": {
+          "content_preview": "```markdown\n---\ndescription: Start or continue a new project from idea to implementation\n---",
+          "tokens": 23,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#phase-1-foundation-updates-week-1-3"
+        }
+      }
+    },
+    "Workflow Phases": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#workflow-phases-1",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Stage 1: Sequential Analysis (Phases 1-8)": {
+          "content_preview": "1. Setup Verification\n2. Codebase Analysis\n3. Project Identity Verification\n4. Enhancement Goals Discovery\n5. Technical Assessment\n6. Enhancement Plan...",
+          "tokens": 50,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#stage-1-sequential-analysis-phases-1-8-1"
+        },
+        "Stage 2: Enhancement Implementation (Phase Selection Menu)": {
+          "content_preview": "After analysis, user selects enhancement priorities.",
+          "tokens": 13,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#stage-2-enhancement-implementation-phase-selection-menu-1"
+        }
+      }
+    },
+    "Your Actions": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#your-actions-2",
+      "tokens": 116,
+      "content_preview": "1. Verify prerequisite phases are complete\n2. Present available phases based on workflow type\n3. Show phase categories:\n   - Development & Features\n  ..."
+    },
+    "Command Options": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#command-options-1",
+      "tokens": 26,
+      "content_preview": "```markdown\n---\ndescription: Select operational or enhancement phases after core workflow completion\n---"
+    },
+    "Quick Packages": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#quick-packages-1",
+      "tokens": 50,
+      "content_preview": "- Startup Package: Operations, Marketing, Business, Analytics\n- Enterprise Package: Operations, Security, Business, Analytics, Scale\n- Growth Package:..."
+    },
+    "Stage 1: Core Development (Sequential - Phases 1-11)": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#stage-1-core-development-sequential-phases-1-11",
+      "tokens": 84,
+      "content_preview": "These phases MUST run in order to establish project foundation:\n\n1. Setup Verification (Required)\n2. Stakeholder Discovery \n3. Research Depth Selectio..."
+    },
+    "Stage 2: Post-Deployment Phase Selection Menu": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#stage-2-post-deployment-phase-selection-menu",
+      "tokens": 16,
+      "content_preview": "After MVP deployment, users get full phase selection control:",
+      "subsections": {
+        "Available Post-Deployment Phases": {
+          "content_preview": "12. Continue Sprint Development\n13. Operations Foundation\n14. Marketing & Growth Operations\n15. Business Operations\n16. Customer Success Operations\n17...",
+          "tokens": 83,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#available-post-deployment-phases-1"
+        },
+        "Phase Selection Interface (Activated After Phase 11)": {
+          "content_preview": "**Update:** `project-state-configuration-guide.md`\n```json\n{\n  \"workflow_state\": {\n    \"stage\": \"development|operations\",\n    \"development_phases\": {\n...",
+          "tokens": 121,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#phase-selection-interface-activated-after-phase-11-2"
+        },
+        "Phase 2: Stakeholder Interaction Enhancements (Week 1-2)": {
+          "content_preview": "**New Section in Interview:**\n```markdown",
+          "tokens": 9,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#phase-2-stakeholder-interaction-enhancements-week-1-2-3"
+        }
+      }
+    },
+    "🎉 Congratulations! Your MVP is Live!": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#congratulations-your-mvp-is-live",
+      "tokens": 28,
+      "content_preview": "You've completed the core development phases. Now you have full control over your project's future direction."
+    },
+    "Available Phases (Choose Your Path)": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#available-phases-choose-your-path",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "📱 Development & Features": {
+          "content_preview": "□ 12. Continue Sprint Development - Add more features\n□ 13. Mobile App Development - iOS/Android apps\n□ 14. API Development - Public API & integration...",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#development-features-1"
+        },
+        "🏗️ Operations & Infrastructure": {
+          "content_preview": "□ 15. Operations Foundation - Monitoring, logging, alerts\n□ 16. DevOps Automation - CI/CD, infrastructure as code\n□ 17. Security & Compliance - Securi...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#operations-infrastructure-1"
+        },
+        "🚀 Growth & Marketing": {
+          "content_preview": "□ 18. Marketing & Growth - Campaigns, SEO, content\n□ 19. Customer Acquisition - Paid ads, referrals\n□ 20. Community Building - Forums, social, events",
+          "tokens": 38,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#growth-marketing-1"
+        },
+        "💰 Business & Revenue": {
+          "content_preview": "□ 21. Business Operations - Finance, reporting, KPIs\n□ 22. Customer Success - Support, onboarding, retention\n□ 23. Revenue Optimization - Pricing, ups...",
+          "tokens": 42,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#business-revenue-1"
+        },
+        "📊 Analytics & Intelligence": {
+          "content_preview": "□ 24. Analytics Platform - Data warehouse, BI tools\n□ 25. Machine Learning - Predictions, recommendations\n□ 26. Performance Optimization - Speed, cost...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#analytics-intelligence-1"
+        },
+        "🌍 Scale & Expansion": {
+          "content_preview": "□ 27. Scaling Infrastructure - Handle growth\n□ 28. International Expansion - Multi-region, localization\n□ 29. Partnership Development - Strategic alli...",
+          "tokens": 39,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#scale-expansion-1"
+        },
+        "🎯 Selection Options": {
+          "content_preview": "**User Options for Selected Phases:**\n```markdown",
+          "tokens": 11,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#selection-options-2"
+        }
+      }
+    },
+    "How would you like to execute these phases?": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#how-would-you-like-to-execute-these-phases",
+      "tokens": 63,
+      "content_preview": "1. **Sequential** - One phase at a time in order\n2. **Parallel** - Multiple phases simultaneously (where possible)\n3. **Priority** - High-priority pha...",
+      "subsections": {
+        "Phase 4: Sprint Enhancement (Week 2-3)": {
+          "content_preview": "**Update:** Sprint framework to include:\n```markdown",
+          "tokens": 12,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#phase-4-sprint-enhancement-week-2-3-2"
+        }
+      }
+    },
+    "First Sprint Standard Tasks": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#first-sprint-standard-tasks",
+      "tokens": 11,
+      "content_preview": "**New:** Detailed sprint execution flow\n```markdown"
+    },
+    "Sprint Execution Pipeline": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#sprint-execution-pipeline",
+      "tokens": 91,
+      "content_preview": "1. Sprint Planning (Scrum Master)\n2. Task Assignment (Project Manager)\n3. Development (Coder Agents)\n4. Code Review (Senior Agents)\n5. Testing (QA Age...",
+      "subsections": {
+        "Phase 5: Hook Integration (Week 3)": {
+          "content_preview": "**Update:** Register new workflow hooks\n```javascript\nhooks.register('workflow-phase-transition');\nhooks.register('approval-gate-reached');\nhooks.regi...",
+          "tokens": 54,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#phase-5-hook-integration-week-3-3"
+        },
+        "Phase 6: Command Enhancements (Week 3-4)": {
+          "content_preview": "**Core Workflow Commands:**\n```bash",
+          "tokens": 7,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#phase-6-command-enhancements-week-3-4-2"
+        }
+      }
+    },
+    "Existing Project Workflow Enhancements": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#existing-project-workflow-enhancements",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Stage 1: Sequential Analysis (Phases 1-8)": {
+          "content_preview": "```\n┌─────────────────────────────────────────┐\n│  Phase 1: Setup Verification             │\n│  ↓                                       │\n│  Phase 2: ...",
+          "tokens": 255,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#stage-1-sequential-analysis-phases-1-8-3"
+        },
+        "Stage 2: Flexible Enhancement Implementation": {
+          "content_preview": "```\n┌─────────────────────────────────────────────┐\n│      ENHANCEMENT PHASE SELECTION MENU       │\n├─────────────────────────────────────────────┤\n│ ...",
+          "tokens": 357,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#stage-2-flexible-enhancement-implementation-1"
+        },
+        "Key Enhancements for Existing Projects": {
+          "content_preview": "1. **Setup Verification** (Phase 1)\n   - Same as new project workflow\n   - Ensures environment is ready\n\n2. **Comprehensive Code Analysis** (Phase 2)\n...",
+          "tokens": 183,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#key-enhancements-for-existing-projects-1"
+        }
+      }
+    },
+    "New Project Workflow Flow Diagram": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#new-project-workflow-flow-diagram",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Stage 1: Sequential Development (Required)": {
+          "content_preview": "```\n┌─────────────────────────────────────────┐\n│  Phase 1: Setup Verification             │\n│  ↓                                       │\n│  Phase 2: ...",
+          "tokens": 344,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#stage-1-sequential-development-required-1"
+        },
+        "Stage 2: Flexible Operations (User Choice)": {
+          "content_preview": "```\n┌─────────────────────────────────────────────┐\n│        PHASE SELECTION MENU ACTIVATED       │\n├─────────────────────────────────────────────┤\n│ ...",
+          "tokens": 217,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#stage-2-flexible-operations-user-choice-1"
+        }
+      }
+    },
+    "Key Design Decisions": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#key-design-decisions",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Why Sequential for Phases 1-11?": {
+          "content_preview": "1. **Dependencies**: Each phase builds on previous work\n2. **Foundation**: Must establish project basics before flexibility\n3. **Quality**: Ensures pr...",
+          "tokens": 60,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#why-sequential-for-phases-1-11-1"
+        },
+        "Why Flexible for Phases 12+?": {
+          "content_preview": "1. **Business Variability**: Different businesses need different priorities\n2. **Resource Optimization**: Focus on what matters most\n3. **Parallel Exe...",
+          "tokens": 71,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#why-flexible-for-phases-12-1"
+        },
+        "Phase Transition Logic": {
+          "content_preview": "```javascript\n// Automatic transition after Phase 11\nif (currentPhase === 11 && phaseComplete) {\n  // Deploy MVP\n  await deployMVP();\n  \n  // Update s...",
+          "tokens": 71,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#phase-transition-logic-1"
+        }
+      }
+    },
+    "Clean Slate Template Integration": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#clean-slate-template-integration",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Template Location": {
+          "content_preview": "The AgileAiAgents release clean slate template is located at:\n`agile-ai-agents/templates/clean-slate/`\n\nThis template serves as the foundation for new...",
+          "tokens": 96,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#template-location-1"
+        },
+        "Claude Code Native Integration for Clean Slate": {
+          "content_preview": "```markdown\n---\ndescription: Start or continue a new project from idea to implementation\n---",
+          "tokens": 23,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#claude-code-native-integration-for-clean-slate-5"
+        }
+      }
+    },
+    "Command Context": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#command-context-1",
+      "tokens": 45,
+      "content_preview": "- Native Claude Code custom slash command\n- Activates multiple specialized agents\n- Analysis results stored in project-documents/analysis-reports/\n- S..."
+    },
+    "Workflow Execution": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#workflow-execution-1",
+      "tokens": 72,
+      "content_preview": "When invoked:\n1. Check workflow state\n2. Activate Stakeholder Interview Agent for setup\n3. Run comprehensive code analysis (Project Analyzer Agent)\n4...."
+    },
+    "Stage 1: Sequential Development (Required)": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#stage-1-sequential-development-required-2",
+      "tokens": 9,
+      "content_preview": "Phases 1-11 must complete in order."
+    },
+    "Stage 2: Operations (User Selection)": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#stage-2-operations-user-selection",
+      "tokens": 24,
+      "content_preview": "```markdown\n---\ndescription: Analyze and enhance an existing codebase with structured workflow\n---"
+    },
+    "Stage 1: Sequential Analysis (Phases 1-8)": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#stage-1-sequential-analysis-phases-1-8-4",
+      "tokens": 12,
+      "content_preview": "Required for proper understanding and planning."
+    },
+    "Stage 2: Enhancement Implementation": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#stage-2-enhancement-implementation",
+      "tokens": 26,
+      "content_preview": "```markdown\n---\ndescription: Select operational or enhancement phases after core workflow completion\n---"
+    },
+    "Prerequisites": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#prerequisites",
+      "tokens": 29,
+      "content_preview": "- New Project: Must complete Phase 11 (MVP Deployment)\n- Existing Project: Must complete Phase 8 (Enhancement Backlog)"
+    },
+    "Available Phases": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#available-phases",
+      "tokens": 44,
+      "content_preview": "Display categorized phases:\n- Development & Features\n- Operations & Infrastructure  \n- Marketing & Growth\n- Business & Revenue\n- Analytics & Intellige..."
+    },
+    "Execution Modes": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#execution-modes",
+      "tokens": 2,
+      "content_preview": "```markdown"
+    },
+    "Core Responsibilities": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#core-responsibilities",
+      "tokens": 63,
+      "content_preview": "1. Verify system setup before workflows\n2. Process pre-filled stakeholder prompts\n3. Conduct iterative section-by-section interviews\n4. Present unders..."
+    },
+    "Communication Protocol": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#communication-protocol",
+      "tokens": 52,
+      "content_preview": "- Speak in first person during interviews\n- Use visual indicators (✓ ✗) for checklists\n- Number options for clear choices\n- Request explicit approvals..."
+    },
+    "Setup Verification": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#setup-verification-2",
+      "tokens": 54,
+      "content_preview": "Always check these items first:\n- [ ] .env file exists in agile-ai-agents folder\n- [ ] User's project folder created\n- [ ] CLAUDE.md updated with proj..."
+    },
+    "Iterative Discovery Process": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#iterative-discovery-process",
+      "tokens": 48,
+      "content_preview": "1. Ask initial question\n2. Record response\n3. Identify ambiguities\n4. Ask clarifying follow-ups\n5. Present understanding\n6. Get explicit approval\n7. D..."
+    },
+    "Key System Learnings Applied to This Plan": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#key-system-learnings-applied-to-this-plan",
+      "tokens": 28,
+      "content_preview": "Based on comprehensive research of the AgileAiAgents system, the following enhancements should be incorporated:",
+      "subsections": {
+        "1. Pre-flight Checks Integration": {
+          "content_preview": "From `workflow-preflight-checker.js`, implement pre-flight validation before workflow starts:\n\n```javascript\n// Add to Stakeholder Interview Agent's s...",
+          "tokens": 134,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#1-pre-flight-checks-integration-1"
+        },
+        "2. Enhanced Error Handling Pattern": {
+          "content_preview": "From `new-project-workflow-enhanced.js`, implement robust error handling:\n\n```javascript\n// Wrap all phase executions in error handlers\nconst safePhas...",
+          "tokens": 111,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#2-enhanced-error-handling-pattern-1"
+        },
+        "3. Parallel Execution Coordinator": {
+          "content_preview": "From `parallel-execution-coordinator.js`, implement conflict-free parallel execution:\n\n```javascript\n// For operations phases (12+)\nconst coordinator ...",
+          "tokens": 101,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#3-parallel-execution-coordinator-1"
+        },
+        "4. Auto-Save Triggers": {
+          "content_preview": "From `auto-save-handler.md`, implement automatic state saving at:\n\n```javascript\nconst autoSaveTriggers = {\n  document_creation: true,      // When an...",
+          "tokens": 139,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#4-auto-save-triggers-1"
+        },
+        "5. Command Handler Pattern": {
+          "content_preview": "From `command-handlers.md`, ensure proper command processing:\n\n```javascript\n// Command detection and routing\nconst commandFlow = {\n  detect: checkFor...",
+          "tokens": 93,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#5-command-handler-pattern-1"
+        },
+        "6. Resource Allocation Strategy": {
+          "content_preview": "From the parallel execution coordinator, implement resource management:\n\n```javascript\nconst resourcePools = {\n  memory: 100,        // Percentage all...",
+          "tokens": 123,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#6-resource-allocation-strategy-1"
+        },
+        "7. Approval Timeout Handling": {
+          "content_preview": "From the enhanced workflow handler, implement approval timeouts:\n\n```javascript\n// Check for stale approvals\nconst timeoutCheck = checkApprovalTimeout...",
+          "tokens": 79,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#7-approval-timeout-handling-1"
+        },
+        "8. State Validation Pattern": {
+          "content_preview": "From the pre-flight checker, validate state integrity:\n\n```javascript\nconst stateValidation = {\n  checkRequired: ['workflow_id', 'workflow_type', 'cur...",
+          "tokens": 91,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#8-state-validation-pattern-1"
+        },
+        "9. Progress Formatting": {
+          "content_preview": "From `workflow-progress-formatter.js`, implement clear progress display:\n\n```javascript\nconst progressDisplay = {\n  showPhaseProgress: formatWorkflowP...",
+          "tokens": 93,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#9-progress-formatting-1"
+        },
+        "10. Conflict Resolution Strategies": {
+          "content_preview": "From parallel execution coordinator:\n\n```javascript\nconst conflictStrategies = {\n  document_lock: preventSimultaneousEdits(),\n  resource_queue: queueR...",
+          "tokens": 90,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#10-conflict-resolution-strategies-1"
+        }
+      }
+    },
+    "Research Document Creation Requirements": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#research-document-creation-requirements",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Research Level Configuration": {
+          "content_preview": "From `CLAUDE-config.md`:\n```yaml\nauto_save:\n  save_frequency:\n    document_creation: true  # Save after each document\n```\n\nThe system must auto-save s...",
+          "tokens": 50,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#research-level-configuration-8"
+        }
+      }
+    },
+    "Implementation Timeline": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#implementation-timeline",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Week 1 - Agent & Foundation": {
+          "content_preview": "- [ ] **Day 1-2**: Create Stakeholder Interview Agent\n  - Write agent markdown file\n  - Create question banks JSON\n  - Update agent registry\n  - Write...",
+          "tokens": 89,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#week-1-agent-foundation-1"
+        },
+        "Week 2 - Workflow Enhancements": {
+          "content_preview": "- [ ] **Day 1-2**: Phase selection interface\n  - Post-MVP menu system\n  - Package definitions\n  - Custom path builder\n- [ ] **Day 3-4**: Stakeholder i...",
+          "tokens": 94,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#week-2-workflow-enhancements-1"
+        },
+        "Week 3 - Technical Implementation": {
+          "content_preview": "- [ ] **Day 1-2**: Sprint workflow enhancements\n  - First sprint structure\n  - CI/CD pipeline integration\n- [ ] **Day 3-4**: Hook integration\n  - Work...",
+          "tokens": 75,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#week-3-technical-implementation-1"
+        },
+        "Week 4 - Finalization & Testing": {
+          "content_preview": "- [ ] **Day 1-2**: Command enhancements\n  - Phase selection commands\n  - Navigation commands\n- [ ] **Day 3**: Documentation updates\n  - Update all wor...",
+          "tokens": 77,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#week-4-finalization-testing-1"
+        }
+      }
+    },
+    "Testing Strategy": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#testing-strategy",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Unit Tests": {
+          "content_preview": "- Phase transition logic\n- State management updates\n- Hook execution\n- Command parsing",
+          "tokens": 22,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#unit-tests-1"
+        },
+        "Integration Tests": {
+          "content_preview": "- Full workflow execution\n- Phase jumping/skipping\n- State recovery\n- Parallel execution",
+          "tokens": 22,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#integration-tests-1"
+        },
+        "User Acceptance Tests": {
+          "content_preview": "- Setup verification flow\n- Phase selection interface\n- Operations priority selection\n- Sprint deployment pipeline",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#user-acceptance-tests-1"
+        }
+      }
+    },
+    "Migration Path": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#migration-path",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "For Existing Projects": {
+          "content_preview": "1. Detect current workflow state\n2. Map to new phase structure\n3. Preserve completed work\n4. Offer upgrade options",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#for-existing-projects-1"
+        },
+        "For New Projects": {
+          "content_preview": "1. Default to enhanced workflow\n2. Offer simplified mode option\n3. Guide through setup verification\n4. Enable all new features",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#for-new-projects-1"
+        }
+      }
+    },
+    "Rollback Plan": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#rollback-plan",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "If Issues Arise": {
+          "content_preview": "1. Preserve existing workflow as `--legacy` option\n2. State migration tools\n3. Automatic detection of workflow version\n4. Gradual feature rollout",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#if-issues-arise-1"
+        }
+      }
+    },
+    "Success Metrics": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#success-metrics",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Stage 1: Development Metrics (Phases 1-11)": {
+          "content_preview": "- Setup verification success rate > 95%\n- Sequential phase completion rate > 90%\n- Time to MVP deployment < 2 weeks\n- Stakeholder approval at all gate...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#stage-1-development-metrics-phases-1-11-1"
+        },
+        "Stage 2: Operations Metrics (Phases 12+)": {
+          "content_preview": "- Phase selection adoption rate > 80%\n- Parallel phase execution success > 85%\n- Custom path creation usage > 60%\n- Post-MVP growth metrics improvemen...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#stage-2-operations-metrics-phases-12-1"
+        },
+        "Overall Success Indicators": {
+          "content_preview": "- Improved stakeholder control and satisfaction\n- Clear transition from development to operations\n- Flexibility in post-MVP strategy\n- Reduced time to...",
+          "tokens": 42,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#overall-success-indicators-1"
+        }
+      }
+    },
+    "Documentation Updates Required": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#documentation-updates-required",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Files to Update": {
+          "content_preview": "1. `CLAUDE.md` - Update all command references\n2. `README.md` - Update workflow commands\n3. `workflow-templates/` - Rename command references in all t...",
+          "tokens": 96,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#files-to-update-1"
+        },
+        "New Documentation": {
+          "content_preview": "1. Phase selection guide\n2. Operations priority guide\n3. Sprint deployment guide\n4. Workflow customization guide",
+          "tokens": 28,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#new-documentation-1"
+        }
+      }
+    },
+    "Risk Mitigation": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#risk-mitigation",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Technical Risks": {
+          "content_preview": "- **State corruption**: Enhanced validation and backups\n- **Phase conflicts**: Dependency checking\n- **Performance impact**: Lazy loading and caching",
+          "tokens": 35,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#technical-risks-1"
+        },
+        "User Experience Risks": {
+          "content_preview": "- **Complexity overload**: Progressive disclosure\n- **Migration confusion**: Clear upgrade paths\n- **Feature discovery**: Interactive tutorials",
+          "tokens": 33,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#user-experience-risks-1"
+        }
+      }
+    },
+    "Critical Dependencies": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#critical-dependencies",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "New Agent Required": {
+          "content_preview": "**Stakeholder Interview Agent** must be created FIRST as it's essential for both workflows:\n\n**New Project Workflow:**\n- Phase 1: Setup Verification\n-...",
+          "tokens": 133,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#new-agent-required-1"
+        },
+        "Claude Code Native Integration": {
+          "content_preview": "**Workflow Commands**:\n- **Location**: `.claude/commands/`\n  - `new-project-workflow.md`\n  - `existing-project-workflow.md`\n  - `select-phases.md`\n- *...",
+          "tokens": 92,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#claude-code-native-integration-3"
+        }
+      }
+    },
+    "Approval Checklist": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#approval-checklist",
+      "tokens": 418,
+      "content_preview": "Before implementation:\n- [ ] **Approve Research Document Requirements**\n  - [ ] Research level selection with THOROUGH as default\n  - [ ] Document cre..."
+    },
+    "Summary of All Enhancements": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#summary-of-all-enhancements",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Complete Enhancement List": {
+          "content_preview": "1. **Stakeholder Interview Agent** (NEW - Priority 1)\n   - Native Claude Code agent in `.claude/agents/`\n   - Handles both new and existing project wo...",
+          "tokens": 707,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#complete-enhancement-list-1"
+        }
+      }
+    },
+    "Research Document Requirements": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#research-document-requirements",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Research Level Selection": {
+          "content_preview": "```javascript\n// Research level selection in Stakeholder Interview Agent\nasync function selectResearchLevel() {\n  const prompt = `\n    How deep should...",
+          "tokens": 145,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#research-level-selection-4"
+        },
+        "Document Creation Mapping": {
+          "content_preview": "Documents MUST be created at the appropriate workflow phase:\n\n**Phase 3: Research Execution**\n- All research category documents (based on selected lev...",
+          "tokens": 172,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#document-creation-mapping-3"
+        },
+        "Verification Levels": {
+          "content_preview": "Per `CLAUDE-config.md`, documents must respect verification levels:\n\n```yaml\nresearch_verification:\n  agent_overrides:\n    research_agent: \"thorough\" ...",
+          "tokens": 166,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#verification-levels-1"
+        },
+        "Document Save Locations": {
+          "content_preview": "All documents MUST be saved to correct locations:\n\n```\nproject-documents/\n├── business-strategy/\n│   ├── research/           # Research Agent outputs\n...",
+          "tokens": 171,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#document-save-locations-1"
+        },
+        "Auto-Save Triggers": {
+          "content_preview": "Documents MUST trigger auto-save per configuration:\n\n```yaml\nauto_save:\n  save_frequency:\n    document_creation: true   # Save after EVERY document\n  ...",
+          "tokens": 65,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#auto-save-triggers-1"
+        },
+        "Parallel Execution Strategy": {
+          "content_preview": "For THOROUGH level (194 documents), use parallel execution:\n\n**Phase 3: Research Execution**\n- Group 1 (5 agents): Research, Marketing, Finance agents...",
+          "tokens": 86,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#parallel-execution-strategy-1"
+        },
+        "Document Quality Requirements": {
+          "content_preview": "Each document MUST:\n1. Include verification sources when required\n2. Separate facts from analysis\n3. Include confidence indicators\n4. Follow GitHub ma...",
+          "tokens": 53,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#document-quality-requirements-1"
+        },
+        "Error Handling": {
+          "content_preview": "If document creation fails:\n1. Save partial progress\n2. Log failure reason\n3. Continue with other documents\n4. Report failures in summary\n5. Allow ret...",
+          "tokens": 43,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#error-handling-1"
+        },
+        "Progress Tracking": {
+          "content_preview": "Show real-time progress:\n```\nResearch Phase Progress: [████████░░░░░░░░] 48/97 documents (49%)\nActive Agents: research_agent (12/24), marketing_agent ...",
+          "tokens": 50,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#progress-tracking-1"
+        }
+      }
+    },
+    "Benefits Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#benefits-summary",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "For Users": {
+          "content_preview": "- **Zero Setup**: Commands work immediately with clean slate template\n- **Flexibility**: Choose operational priorities post-MVP\n- **Control**: Approva...",
+          "tokens": 70,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#for-users-1"
+        },
+        "For System": {
+          "content_preview": "- **Scalability**: Parallel execution for operations\n- **Reliability**: Pre-flight checks and validation\n- **Maintainability**: Native Claude Code int...",
+          "tokens": 61,
+          "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#for-system-1"
+        }
+      }
+    },
+    "Risk Mitigation Summary": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#risk-mitigation-summary",
+      "tokens": 103,
+      "content_preview": "1. **Technical Risks**: Mitigated through pre-flight checks, state validation, error handling\n2. **User Experience Risks**: Mitigated through progress..."
+    },
+    "Next Steps": {
+      "md_reference": "agile-ai-agents/aaa-documents/new-project-workflow-enhancement-plan.md#next-steps",
+      "tokens": 132,
+      "content_preview": "1. **Stakeholder Review**: Review this comprehensive plan and provide feedback\n2. **Prioritization**: Identify must-have vs nice-to-have features\n3. *..."
+    }
+  }
+}

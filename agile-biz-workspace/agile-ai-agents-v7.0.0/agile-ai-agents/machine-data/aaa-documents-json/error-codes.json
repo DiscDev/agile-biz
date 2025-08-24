@@ -1,0 +1,195 @@
+{
+  "meta": {
+    "document": "error-codes",
+    "title": "AgileAiAgents Error Code Reference",
+    "timestamp": "2025-08-11T22:02:16.888Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/error-codes.md",
+    "document_type": "technical",
+    "file_hash": "ca7578b65534d684eb3d633033b41eef",
+    "estimated_tokens": 356,
+    "full_md_tokens": 1793
+  },
+  "summary": "## 🚨 Error Code Format",
+  "sections": [
+    {
+      "title": "🚨 Error Code Format",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#error-code-format",
+      "content_preview": "All errors follow the format: `CATEGORY-XXX`\n\n- **CATEGORY**: Error category (e.g., SYS, AUTH, CFG)\n- **XXX**: Three-digit error number"
+    },
+    {
+      "title": "📊 Error Severity Levels",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#error-severity-levels",
+      "content_preview": "- **🔴 Critical**: System cannot function, immediate action required\n- **🟠 Error**: Operation failed, user action needed\n- **🟡 Warning**: Operation ..."
+    },
+    {
+      "title": "📋 Error Categories",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#error-categories",
+      "content_preview": ""
+    },
+    {
+      "title": "🛠️ Using Error Codes",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#using-error-codes",
+      "content_preview": ""
+    },
+    {
+      "title": "🔍 Quick Diagnosis",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#quick-diagnosis",
+      "content_preview": "When you see an error code:\n\n1. **Look up the code** in this reference\n2. **Read the solution** provided\n3. **Check severity** to understand impact\n4...."
+    },
+    {
+      "title": "📞 Common Error Patterns",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#common-error-patterns",
+      "content_preview": ""
+    },
+    {
+      "title": "🚀 Error Recovery",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#error-recovery",
+      "content_preview": ""
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management"
+  ],
+  "section_details": {
+    "🚨 Error Code Format": {
+      "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#error-code-format",
+      "tokens": 31,
+      "content_preview": "All errors follow the format: `CATEGORY-XXX`\n\n- **CATEGORY**: Error category (e.g., SYS, AUTH, CFG)\n- **XXX**: Three-digit error number"
+    },
+    "📊 Error Severity Levels": {
+      "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#error-severity-levels",
+      "tokens": 48,
+      "content_preview": "- **🔴 Critical**: System cannot function, immediate action required\n- **🟠 Error**: Operation failed, user action needed\n- **🟡 Warning**: Operation ..."
+    },
+    "📋 Error Categories": {
+      "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#error-categories",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "System Errors (SYS-XXXX)": {
+          "content_preview": "| Code | Message | Description | Solution | Severity |\n|------|---------|-------------|----------|----------|\n| SYS-001 | System initialization failed...",
+          "tokens": 135,
+          "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#system-errors-sys-xxxx-1"
+        },
+        "Authentication Errors (AUTH-XXXX)": {
+          "content_preview": "| Code | Message | Description | Solution | Severity |\n|------|---------|-------------|----------|----------|\n| AUTH-001 | Authentication required | N...",
+          "tokens": 110,
+          "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#authentication-errors-auth-xxxx-1"
+        },
+        "Configuration Errors (CFG-XXXX)": {
+          "content_preview": "| Code | Message | Description | Solution | Severity |\n|------|---------|-------------|----------|----------|\n| CFG-001 | Missing .env file | Configur...",
+          "tokens": 132,
+          "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#configuration-errors-cfg-xxxx-1"
+        },
+        "File System Errors (FS-XXXX)": {
+          "content_preview": "| Code | Message | Description | Solution | Severity |\n|------|---------|-------------|----------|----------|\n| FS-001 | Directory not found | Require...",
+          "tokens": 123,
+          "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#file-system-errors-fs-xxxx-1"
+        },
+        "Network Errors (NET-XXXX)": {
+          "content_preview": "| Code | Message | Description | Solution | Severity |\n|------|---------|-------------|----------|----------|\n| NET-001 | Port already in use | Port o...",
+          "tokens": 124,
+          "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#network-errors-net-xxxx-1"
+        },
+        "Dashboard Errors (DASH-XXXX)": {
+          "content_preview": "| Code | Message | Description | Solution | Severity |\n|------|---------|-------------|----------|----------|\n| DASH-001 | Dashboard initialization fa...",
+          "tokens": 137,
+          "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#dashboard-errors-dash-xxxx-1"
+        },
+        "Agent Errors (AGT-XXXX)": {
+          "content_preview": "| Code | Message | Description | Solution | Severity |\n|------|---------|-------------|----------|----------|\n| AGT-001 | Agent file not found | Agent...",
+          "tokens": 107,
+          "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#agent-errors-agt-xxxx-1"
+        },
+        "API Errors (API-XXXX)": {
+          "content_preview": "| Code | Message | Description | Solution | Severity |\n|------|---------|-------------|----------|----------|\n| API-001 | Invalid API request | Reques...",
+          "tokens": 122,
+          "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#api-errors-api-xxxx-1"
+        },
+        "MCP Errors (MCP-XXXX)": {
+          "content_preview": "| Code | Message | Description | Solution | Severity |\n|------|---------|-------------|----------|----------|\n| MCP-001 | MCP server not configured | ...",
+          "tokens": 106,
+          "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#mcp-errors-mcp-xxxx-1"
+        },
+        "Validation Errors (VAL-XXXX)": {
+          "content_preview": "| Code | Message | Description | Solution | Severity |\n|------|---------|-------------|----------|----------|\n| VAL-001 | Invalid input | Input valida...",
+          "tokens": 99,
+          "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#validation-errors-val-xxxx-1"
+        }
+      }
+    },
+    "🛠️ Using Error Codes": {
+      "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#using-error-codes",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "In Code": {
+          "content_preview": "```javascript\nconst { AgileError } = require('./error-codes');\n\n// Throw a specific error\nthrow new AgileError('NET_001', { port: 3001 });\n\n// Handle ...",
+          "tokens": 73,
+          "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#in-code-1"
+        },
+        "In API Responses": {
+          "content_preview": "```json\n{\n  \"error\": true,\n  \"code\": \"AUTH-002\",\n  \"message\": \"Invalid credentials\",\n  \"description\": \"Username or password is incorrect\",\n  \"solution...",
+          "tokens": 68,
+          "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#in-api-responses-1"
+        }
+      }
+    },
+    "🔍 Quick Diagnosis": {
+      "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#quick-diagnosis",
+      "tokens": 48,
+      "content_preview": "When you see an error code:\n\n1. **Look up the code** in this reference\n2. **Read the solution** provided\n3. **Check severity** to understand impact\n4...."
+    },
+    "📞 Common Error Patterns": {
+      "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#common-error-patterns",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Startup Failures": {
+          "content_preview": "- `CFG-001` → Copy .env_example to .env\n- `DASH-003` → Run npm install\n- `NET-001` → Change port or stop conflicting process",
+          "tokens": 30,
+          "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#startup-failures-1"
+        },
+        "Runtime Issues": {
+          "content_preview": "- `AUTH-002` → Check credentials\n- `FS-002` → Fix file permissions\n- `NET-004` → Wait for rate limit reset",
+          "tokens": 25,
+          "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#runtime-issues-1"
+        },
+        "API Problems": {
+          "content_preview": "- `API-002` → Configure API keys\n- `API-003` → Check API quotas\n- `MCP-001` → Configure MCP servers",
+          "tokens": 24,
+          "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#api-problems-1"
+        }
+      }
+    },
+    "🚀 Error Recovery": {
+      "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#error-recovery",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Automatic Recovery": {
+          "content_preview": "Some errors trigger automatic recovery:\n- File watcher restarts on `FS-004`\n- Reconnection attempts on `NET-002`\n- Retry logic on `NET_003`",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#automatic-recovery-1"
+        },
+        "Manual Recovery Steps": {
+          "content_preview": "1. **Read error code and solution**\n2. **Run diagnostics**: `npm run diagnose`\n3. **Check health**: `/api/health`\n4. **Review logs**: `logs/errors-YYY...",
+          "tokens": 69,
+          "md_reference": "agile-ai-agents/aaa-documents/error-codes.md#manual-recovery-steps-1"
+        }
+      }
+    }
+  }
+}

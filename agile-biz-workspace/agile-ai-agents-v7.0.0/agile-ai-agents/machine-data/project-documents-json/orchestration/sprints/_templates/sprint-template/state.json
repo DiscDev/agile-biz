@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "document": "state",
+    "title": "Sprint State",
+    "timestamp": "2025-07-22T01:41:03.739Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-template/state.md",
+    "document_type": "general_documentation",
+    "file_hash": "9d939ee6f1f935ab139af210c368dec5",
+    "estimated_tokens": 255,
+    "full_md_tokens": 226
+  },
+  "summary": "## Sprint: [SPRINT-NAME]",
+  "sections": [
+    {
+      "title": "Sprint: [SPRINT-NAME]",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-template/state.md#sprint-sprint-name",
+      "content_preview": "**Current State**: planning\n**Last Updated**: [DATE]"
+    },
+    {
+      "title": "State Transitions",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-template/state.md#state-transitions",
+      "content_preview": "| State | Date | Updated By | Notes |\n|:------|:-----|:-----------|:------|\n| planning | [DATE] | Scrum Master Agent | Sprint created |"
+    },
+    {
+      "title": "Valid States",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-template/state.md#valid-states",
+      "content_preview": "- `planning` - Sprint backlog being defined\n- `active` - Sprint in progress\n- `testing` - Development complete, testing phase\n- `review` - Sprint revi..."
+    },
+    {
+      "title": "State Rules",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-template/state.md#state-rules",
+      "content_preview": "1. States must progress in order (no skipping)\n2. Only Scrum Master Agent can update state\n3. Each transition must include date and notes\n4. State cha..."
+    },
+    {
+      "title": "Sprint Information",
+      "level": 2,
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-template/state.md#sprint-information",
+      "content_preview": "- **Sprint Goal**: [To be defined in planning]\n- **Start Date**: [DATE]\n- **End Date**: [DATE]\n- **Total Points**: [X]\n- **Team Capacity**: [X] points..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "sprint_management"
+  ],
+  "section_details": {
+    "Sprint: [SPRINT-NAME]": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-template/state.md#sprint-sprint-name",
+      "tokens": 11,
+      "content_preview": "**Current State**: planning\n**Last Updated**: [DATE]"
+    },
+    "State Transitions": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-template/state.md#state-transitions",
+      "tokens": 34,
+      "content_preview": "| State | Date | Updated By | Notes |\n|:------|:-----|:-----------|:------|\n| planning | [DATE] | Scrum Master Agent | Sprint created |"
+    },
+    "Valid States": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-template/state.md#valid-states",
+      "tokens": 65,
+      "content_preview": "- `planning` - Sprint backlog being defined\n- `active` - Sprint in progress\n- `testing` - Development complete, testing phase\n- `review` - Sprint revi..."
+    },
+    "State Rules": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-template/state.md#state-rules",
+      "tokens": 46,
+      "content_preview": "1. States must progress in order (no skipping)\n2. Only Scrum Master Agent can update state\n3. Each transition must include date and notes\n4. State cha..."
+    },
+    "Sprint Information": {
+      "md_reference": "agile-ai-agents/project-documents/orchestration/sprints/_templates/sprint-template/state.md#sprint-information",
+      "tokens": 44,
+      "content_preview": "- **Sprint Goal**: [To be defined in planning]\n- **Start Date**: [DATE]\n- **End Date**: [DATE]\n- **Total Points**: [X]\n- **Team Capacity**: [X] points..."
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "document": "existing-project-workflow-template",
+    "title": "Existing Project Workflow Template",
+    "timestamp": "2025-08-11T22:02:16.940Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/workflow-templates/existing-project-workflow-template.md",
+    "document_type": "template",
+    "file_hash": "c2675f20efa0d22746f92a11ebe66edc",
+    "estimated_tokens": 292,
+    "full_md_tokens": 5005
+  },
+  "summary": "This template guides the `/start-existing-project-workflow` command through analyzing existing code and planning enhancements with sequential phases and approval gates.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/existing-project-workflow-template.md#overview",
+      "content_preview": "This template guides the `/start-existing-project-workflow` command through analyzing existing code and planning enhancements with sequential phases a..."
+    },
+    {
+      "title": "Command Options",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/existing-project-workflow-template.md#command-options",
+      "content_preview": "- `/start-existing-project-workflow` - Run complete workflow (all phases sequentially)\n- `/start-existing-project-workflow --status` - Show current ph..."
+    },
+    {
+      "title": "Workflow Phases",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/existing-project-workflow-template.md#workflow-phases",
+      "content_preview": ""
+    },
+    {
+      "title": "State Management",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/existing-project-workflow-template.md#state-management",
+      "content_preview": "```json\n{\n  \"workflow_state\": {\n    \"active_workflow\": \"existing-project\",\n    \"workflow_phase\": \"analysis|discovery|planning|enhancement\",\n    \"initi..."
+    },
+    {
+      "title": "Key Differences from New Project Workflow",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/existing-project-workflow-template.md#key-differences-from-new-project-workflow",
+      "content_preview": "1. **Analysis First**: Analyze code before asking questions\n2. **Informed Questions**: Questions based on actual findings\n3. **Preservation Focus**: E..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/existing-project-workflow-template.md#overview",
+      "tokens": 42,
+      "content_preview": "This template guides the `/start-existing-project-workflow` command through analyzing existing code and planning enhancements with sequential phases a..."
+    },
+    "Command Options": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/existing-project-workflow-template.md#command-options",
+      "tokens": 126,
+      "content_preview": "- `/start-existing-project-workflow` - Run complete workflow (all phases sequentially)\n- `/start-existing-project-workflow --status` - Show current ph..."
+    },
+    "Workflow Phases": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/existing-project-workflow-template.md#workflow-phases",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Phase 1: Automatic Codebase Analysis (30min-2hrs)": {
+          "content_preview": "**Agent**: Code Analyzer Agent, Architecture Discovery Agent, Security Agent, Project Structure Agent\n**Process**: Analyze code FIRST before asking qu...",
+          "tokens": 261,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/existing-project-workflow-template.md#phase-1-automatic-codebase-analysis-30min-2hrs-1"
+        },
+        "Phase 2: Contextual Stakeholder Interview (30-60 minutes)": {
+          "content_preview": "- Present complete findings and understanding\n- Get approval on analysis and goals\n- Document in `project-documents/existing-project-analysis/stakehol...",
+          "tokens": 98,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/existing-project-workflow-template.md#phase-2-contextual-stakeholder-interview-30-60-minutes-7"
+        },
+        "Phase 3: Analysis Depth Selection (5 minutes)": {
+          "content_preview": "**Agent**: Analysis Coordinator Agent\n\n**Present Options**:\n```\nHow deep should we analyze your codebase? \n\n🔍 QUICK (30-60 min) - High-level review\n ...",
+          "tokens": 212,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/existing-project-workflow-template.md#phase-3-analysis-depth-selection-5-minutes-1"
+        },
+        "Phase 4: Deep Codebase Analysis": {
+          "content_preview": "**Agents**: Multiple analysis agents based on level\n- Execute deeper analysis based on selected level\n- Save findings to `project-documents/existing-p...",
+          "tokens": 41,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/existing-project-workflow-template.md#phase-4-deep-codebase-analysis-1"
+        },
+        "🚦 Approval Gate 1: Post-Analysis Review": {
+          "content_preview": "- Review code analysis findings\n- Confirm enhancement priorities\n- Address security/performance concerns\n- Decide on enhancement scope",
+          "tokens": 34,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/existing-project-workflow-template.md#approval-gate-1-post-analysis-review-1"
+        },
+        "Phase 5: Research for Enhancements (Optional)": {
+          "content_preview": "**Agent**: Research Coordinator Agent\n\n**Ask**: \"Would you like market research for new features or competitive analysis? (yes/no)\"\n\nIf yes, offer sam...",
+          "tokens": 62,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/existing-project-workflow-template.md#phase-5-research-for-enhancements-optional-1"
+        },
+        "Phase 6: Enhancement Planning": {
+          "content_preview": "**Agent**: PRD Agent, Project Manager Agent\n- Create enhancement PRD based on analysis and goals\n- Develop implementation roadmap\n- Plan sprints for i...",
+          "tokens": 40,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/existing-project-workflow-template.md#phase-6-enhancement-planning-1"
+        },
+        "🚦 Approval Gate 2: Pre-Implementation Review": {
+          "content_preview": "- Approve enhancement roadmap\n- Migration strategy approval (if needed)\n- Backward compatibility check\n- Resource allocation",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/existing-project-workflow-template.md#approval-gate-2-pre-implementation-review-1"
+        },
+        "Phase 7: Enhancement Backlog Creation (NEW)": {
+          "content_preview": "**Agents**: Project Manager, Scrum Master\n- Transform enhancement PRD into backlog items\n- Create epics for major improvements\n- Balance new features ...",
+          "tokens": 141,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/existing-project-workflow-template.md#phase-7-enhancement-backlog-creation-new-1"
+        },
+        "Phase 8: First Sprint - CI/CD & Infrastructure Modernization": {
+          "content_preview": "**DevOps Agent provides real-time assistance**:\n```\n🤝 Migration Support Available\n==============================\nI'm here throughout the migration:\n\n...",
+          "tokens": 706,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/existing-project-workflow-template.md#phase-8-first-sprint-cicd-infrastructure-modernization-4"
+        },
+        "Phase 9-N: Enhancement Sprint Implementation": {
+          "content_preview": "- Implement improvements leveraging new CI/CD pipeline\n- All changes deployed through automated pipeline\n- Maintain backward compatibility\n- Regular t...",
+          "tokens": 143,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/existing-project-workflow-template.md#phase-9-n-enhancement-sprint-implementation-1"
+        }
+      }
+    },
+    "State Management": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/existing-project-workflow-template.md#state-management",
+      "tokens": 89,
+      "content_preview": "```json\n{\n  \"workflow_state\": {\n    \"active_workflow\": \"existing-project\",\n    \"workflow_phase\": \"analysis|discovery|planning|enhancement\",\n    \"initi..."
+    },
+    "Key Differences from New Project Workflow": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/existing-project-workflow-template.md#key-differences-from-new-project-workflow",
+      "tokens": 76,
+      "content_preview": "1. **Analysis First**: Analyze code before asking questions\n2. **Informed Questions**: Questions based on actual findings\n3. **Preservation Focus**: E..."
+    }
+  }
+}

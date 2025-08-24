@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "agent": "optimization_agent",
+    "version": "2.0.0",
+    "last_updated": "2025-07-29",
+    "estimated_tokens": 158,
+    "full_md_tokens": 5088,
+    "md_file": "agile-ai-agents/ai-agents/optimization_agent.md",
+    "file_hash": "2b412fb8fb73feec7853873ff150d729"
+  },
+  "summary": "## Overview\nThe Optimization Agent specializes in continuous improvement of project performance, resource efficiency, and operational excellence. This agent identifies bottlenecks, recommends optimizations, and implements improvements across all project dimensions.",
+  "core_responsibilities": {
+    "summary": [
+      "Performance Analysis & Optimization",
+      "Process Improvement & Workflow Optimization",
+      "Cost & Resource Optimization",
+      "Continuous Improvement Implementation"
+    ],
+    "details_tokens": 386,
+    "md_reference": "agile-ai-agents/ai-agents/optimization_agent.md#core-responsibilities"
+  },
+  "workflows": {
+    "available": [
+      {
+        "name": "System Performance Optimization Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/optimization_agent.md#system-performance-optimization-workflow"
+      },
+      {
+        "name": "Process Optimization Workflow",
+        "tokens": 0,
+        "md_reference": "agile-ai-agents/ai-agents/optimization_agent.md#process-optimization-workflow"
+      }
+    ],
+    "total_tokens": 0,
+    "md_reference": "agile-ai-agents/ai-agents/optimization_agent.md#workflows"
+  },
+  "reference_documentation": {},
+  "coordination": {
+    "inputs": {},
+    "outputs": {},
+    "md_reference": "agile-ai-agents/ai-agents/optimization_agent.md#agent-coordination"
+  },
+  "context_recommendations": {
+    "minimal": [
+      "meta",
+      "summary",
+      "core_responsibilities.summary"
+    ],
+    "standard": [
+      "minimal",
+      "workflows.available",
+      "coordination"
+    ],
+    "detailed": [
+      "standard",
+      "reference_documentation",
+      "specific_workflow_via_reference"
+    ]
+  }
+}

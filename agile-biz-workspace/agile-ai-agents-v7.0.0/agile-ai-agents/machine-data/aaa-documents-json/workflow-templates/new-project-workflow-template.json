@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "document": "new-project-workflow-template",
+    "title": "New Project Workflow Template",
+    "timestamp": "2025-08-11T22:02:16.943Z",
+    "version": "1.0.0",
+    "source_file": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md",
+    "document_type": "template",
+    "file_hash": "ff22f45c50b2e0ad29194d79763a232d",
+    "estimated_tokens": 293,
+    "full_md_tokens": 4926
+  },
+  "summary": "This template guides the `/start-new-project-workflow` command through a structured discovery, research, and implementation process with sequential phases and approval gates.",
+  "sections": [
+    {
+      "title": "Overview",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#overview",
+      "content_preview": "This template guides the `/start-new-project-workflow` command through a structured discovery, research, and implementation process with sequential ph..."
+    },
+    {
+      "title": "Command Options",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#command-options",
+      "content_preview": "- `/start-new-project-workflow` - Run complete workflow (all phases sequentially)\n- `/start-new-project-workflow --status` - Show current phase and pr..."
+    },
+    {
+      "title": "Workflow Phases",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#workflow-phases",
+      "content_preview": ""
+    },
+    {
+      "title": "State Management",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#state-management",
+      "content_preview": "Throughout the workflow, maintain state in:\n```json\n{\n  \"workflow_state\": {\n    \"active_workflow\": \"new-project\",\n    \"workflow_phase\": \"discovery|res..."
+    },
+    {
+      "title": "Error Handling",
+      "level": 2,
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#error-handling",
+      "content_preview": "- If user abandons workflow, save state for resumption\n- Allow skipping optional sections with confirmation\n- Provide clear navigation: \"Type 'skip' t..."
+    }
+  ],
+  "key_points": [],
+  "usage_context": [
+    "agent_coordination",
+    "workflow_guidance",
+    "technical_integration",
+    "sprint_management",
+    "deployment"
+  ],
+  "section_details": {
+    "Overview": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#overview",
+      "tokens": 43,
+      "content_preview": "This template guides the `/start-new-project-workflow` command through a structured discovery, research, and implementation process with sequential ph..."
+    },
+    "Command Options": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#command-options",
+      "tokens": 118,
+      "content_preview": "- `/start-new-project-workflow` - Run complete workflow (all phases sequentially)\n- `/start-new-project-workflow --status` - Show current phase and pr..."
+    },
+    "Workflow Phases": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#workflow-phases",
+      "tokens": 0,
+      "content_preview": "",
+      "subsections": {
+        "Phase 1: Iterative Stakeholder Discovery (45-90 minutes)": {
+          "content_preview": "- Present complete summary from all sections\n- Get final approval and document in `project-documents/new-project-planning/stakeholder-interview/stakeh...",
+          "tokens": 103,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#phase-1-iterative-stakeholder-discovery-45-90-minutes-9"
+        },
+        "Phase 2: Research Depth Selection (5 minutes)": {
+          "content_preview": "**Agent**: Research Coordinator Agent\n\n**Present Options**:\n```\nHow deep should we research your project? Here's what you'll get:\n\n📋 MINIMAL (Essenti...",
+          "tokens": 359,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#phase-2-research-depth-selection-5-minutes-1"
+        },
+        "Phase 3: Research Execution": {
+          "content_preview": "**Agents**: Multiple based on selected level\n- Execute research in parallel\n- Update progress every 30 minutes\n- Save to `project-documents/research/`",
+          "tokens": 36,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#phase-3-research-execution-1"
+        },
+        "🚦 Approval Gate 1: Post-Research Review": {
+          "content_preview": "- Review all research findings\n- Market validation assessment\n- Adjust project scope based on findings\n- Go/No-go decision",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#approval-gate-1-post-research-review-1"
+        },
+        "Phase 4: Research Analysis & Synthesis": {
+          "content_preview": "**Agent**: Analysis Agent\n- Synthesize all research findings\n- Create `research-synthesis.md`\n- Identify key opportunities and risks",
+          "tokens": 32,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#phase-4-research-analysis-synthesis-1"
+        },
+        "Phase 5: Product Requirements Document": {
+          "content_preview": "**Agent**: PRD Agent\n- Generate comprehensive PRD from research and interviews\n- Save to `project-documents/requirements/prd-document.md`",
+          "tokens": 33,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#phase-5-product-requirements-document-1"
+        },
+        "🚦 Approval Gate 2: Post-Requirements Review": {
+          "content_preview": "- Approve PRD and technical specifications\n- Confirm feature prioritization\n- Resource allocation check\n- Budget approval",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#approval-gate-2-post-requirements-review-1"
+        },
+        "Phase 6: Strategic Planning": {
+          "content_preview": "**Agents**: Project Manager, Architecture, DevOps\n- Create project roadmap\n- Design system architecture\n- Plan infrastructure",
+          "tokens": 31,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#phase-6-strategic-planning-1"
+        },
+        "Phase 7: Product Backlog Creation (NEW)": {
+          "content_preview": "**Agents**: Project Manager, Scrum Master\n- Transform PRD into backlog items\n- Create epics based on feature areas\n- Write user stories with acceptanc...",
+          "tokens": 142,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#phase-7-product-backlog-creation-new-1"
+        },
+        "Phase 8: Project Scaffolding": {
+          "content_preview": "**Agents**: Project Structure Agent, Coder Agent\n\n**Implementation Steps**:\n1. Load approved structure template from Phase 1 Section 2.5\n2. Change to ...",
+          "tokens": 316,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#phase-8-project-scaffolding-1"
+        },
+        "🚦 Approval Gate 3: Pre-Implementation Review": {
+          "content_preview": "- Final architecture review\n- Deployment strategy approval\n- Team readiness check\n- Resource allocation confirmation",
+          "tokens": 29,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#approval-gate-3-pre-implementation-review-1"
+        },
+        "Phase 9: First Sprint - Foundation & CI/CD Setup": {
+          "content_preview": "**DevOps Agent provides real-time assistance**:\n```\n🤝 I'm here to help! Common issues and solutions:\n\nERROR: \"Permission denied (publickey)\"\n→ \"Let's...",
+          "tokens": 623,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#phase-9-first-sprint-foundation-cicd-setup-4"
+        },
+        "Phase 10-N: Subsequent Sprint Implementation": {
+          "content_preview": "- Continue with feature development sprints\n- Leverage CI/CD pipeline for all deployments\n- Regular reviews and updates\n- Sprint completion triggers:\n...",
+          "tokens": 133,
+          "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#phase-10-n-subsequent-sprint-implementation-1"
+        }
+      }
+    },
+    "State Management": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#state-management",
+      "tokens": 59,
+      "content_preview": "Throughout the workflow, maintain state in:\n```json\n{\n  \"workflow_state\": {\n    \"active_workflow\": \"new-project\",\n    \"workflow_phase\": \"discovery|res..."
+    },
+    "Error Handling": {
+      "md_reference": "agile-ai-agents/aaa-documents/workflow-templates/new-project-workflow-template.md#error-handling",
+      "tokens": 48,
+      "content_preview": "- If user abandons workflow, save state for resumption\n- Allow skipping optional sections with confirmation\n- Provide clear navigation: \"Type 'skip' t..."
+    }
+  }
+}
