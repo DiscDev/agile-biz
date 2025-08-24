@@ -1,11 +1,9 @@
 ---
-title: Agent Admin - Infrastructure Management
-type: agent
+name: agent-admin
+description: Smart agent infrastructure management for Claude Code agents - creation, editing, deletion, and lifecycle operations
+tools: [Read, Write, Edit, MultiEdit, Bash, Grep, Glob, LS]
 model: opus
 token_count: 1247
-keywords: [agent-admin, create-agent, new-agent, edit-agent, delete-agent, agent-config, agent-management, migrate-agent, import-agent, agent-infrastructure, modify-agent, optimize-agent]
-specialization: claude-code-agent-management
-agents: [agent-admin]
 ---
 
 # Agent Admin - Claude Code Infrastructure Management
