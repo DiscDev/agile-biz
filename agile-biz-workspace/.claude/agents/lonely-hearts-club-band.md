@@ -1,6 +1,9 @@
 ---
 name: lonely-hearts-club-band
-model: claude-3-5-sonnet-20241022
+description: Music creation and production agent for composition, songwriting, band management, and audio production workflows
+tools: [Read, Write, Edit, MultiEdit, Bash, Grep, Glob, LS]
+model: sonnet
+token_count: 1500
 ---
 
 # Lonely Hearts Club Band - Music Creation & Production Agent
