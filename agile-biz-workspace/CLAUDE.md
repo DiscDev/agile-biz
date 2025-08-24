@@ -79,6 +79,20 @@ The workspace has specialized Claude Code agents for specific tasks:
   - Automatically update CLAUDE.md documentation
 - **Model**: Claude 3.5 Opus (complex reasoning for infrastructure management)
 
+#### **Lonely Hearts Club Band** (`lonely-hearts-club-band`)
+- **Purpose**: Music composition, songwriting, band management, and audio production assistance
+- **Triggers**: "lonely hearts", "music agent", "compose", "songwriting", "band", "music theory", "audio production", "arrangement"
+- **Capabilities**:
+  - Music composition and songwriting assistance
+  - Lyric writing and melodic development
+  - Music theory education and harmonic analysis
+  - Arrangement and orchestration guidance
+  - Audio production workflows and DAW guidance
+  - Band management and collaboration tools
+  - Creative inspiration and genre exploration
+  - Project management for music productions
+- **Model**: Claude 3.5 Sonnet (balanced creativity and technical accuracy for music tasks)
+
 
 ### Agent Usage Examples
 
@@ -88,11 +102,13 @@ When you want to delegate specific tasks to agents, use these patterns:
 - **"DevOps agent deploy this to AWS"** → Spawns devops agent
 - **"Developer agent implement authentication"** → Spawns developer agent
 - **"Get devops agent to set up monitoring"** → Spawns devops agent
-- **"Use agent-admin to create a new agent"** → Spawns agent-admin agent
+- **"Agent-admin create a new testing agent"** → Spawns agent-admin
+- **"Lonely hearts help me write a song"** → Spawns lonely-hearts-club-band agent
+- **"Music agent explain chord progressions"** → Spawns lonely-hearts-club-band agent
 
 ### Agent Context Architecture
 
-Both agents use a shared tools architecture for efficiency:
+All agents use a shared tools architecture for efficiency:
 - **Shared Tools**: Docker, GitHub, AWS, Git, Context7 MCP, Supabase MCP
 - **Agent-Specific Contexts**: Loaded based on keywords and task requirements
 - **Token Optimization**: 75-80% reduction in context duplication
