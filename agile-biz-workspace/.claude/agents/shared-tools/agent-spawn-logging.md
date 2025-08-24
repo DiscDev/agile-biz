@@ -3,7 +3,7 @@ title: Agent Spawn Logging
 type: shared-tool
 token_count: 1247
 keywords: [logging, debug, spawn, tracking, monitor, agent]
-agents: [developer, devops]
+agents: [developer, devops, agent-admin]
 ---
 
 # Agent Spawn Logging - Shared Tool
