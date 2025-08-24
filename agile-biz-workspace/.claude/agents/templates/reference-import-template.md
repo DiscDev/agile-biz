@@ -1,11 +1,9 @@
 ---
-title: [Imported Agent Name] - [Modernized Description]
-type: agent
-model: [opus|sonnet|haiku - based on complexity analysis]
-token_count: [TBD - calculate after modernization]
-keywords: [original, keywords, plus, modern, additions, enhanced, patterns]
-specialization: [updated-domain-expertise]
-agents: [imported-agent-name]
+name: [imported-agent-name]
+description: [Modernized description of imported agent purpose and enhanced capabilities]
+tools: [Read, Write, Edit, MultiEdit, Bash, Grep, Glob, LS]
+model: [opus|sonnet|haiku]
+token_count: [TBD]
 ---
 
 # [Imported Agent Name] - [Enhanced Title with Modern Context]

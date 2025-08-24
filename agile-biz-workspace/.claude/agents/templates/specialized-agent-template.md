@@ -1,11 +1,9 @@
 ---
-title: [Agent Name] - [Comprehensive Description]
-type: agent
+name: [agent-name]
+description: [Comprehensive description of complex agent purpose and multi-domain capabilities]
+tools: [Read, Write, Edit, MultiEdit, Bash, Grep, Glob, LS]
 model: opus
-token_count: [TBD - Typically 1500-3000+ tokens]
-keywords: [extensive, keyword, list, covering, multiple, domains, and, specialized, terms]
-specialization: [complex-domain-expertise]
-agents: [agent-name]
+token_count: [TBD]
 ---
 
 # [Agent Name] - [Full Comprehensive Title]

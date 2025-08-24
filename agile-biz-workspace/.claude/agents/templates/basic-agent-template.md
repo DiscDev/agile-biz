@@ -1,11 +1,9 @@
 ---
-title: [Agent Name] - [Brief Description]
-type: agent
+name: [agent-name]
+description: [Brief description of agent purpose and capabilities]
+tools: [Read, Write, Edit, MultiEdit, Bash, Grep, Glob, LS]
 model: [opus|sonnet|haiku]
 token_count: [TBD]
-keywords: [primary, secondary, domain, specific, trigger, words]
-specialization: [domain-expertise-area]
-agents: [agent-name]
 ---
 
 # [Agent Name] - [Full Descriptive Title]
@@ -114,12 +112,11 @@ agents: [agent-name]
 6. **Test Integration**: Verify logging and documentation systems work correctly
 
 ### Placeholders to Replace:
+- `[agent-name]` → Agent name in kebab-case for files/references (e.g., "my-agent")
+- `[Brief description of agent purpose and capabilities]` → Concise description for Claude Code registration
+- `[opus|sonnet|haiku]` → Choose appropriate model (opus for complex tasks, sonnet for balanced, haiku for simple)
+- `[TBD]` → Calculate token count after completing agent content
 - `[Agent Name]` → Actual agent name (Title Case)
-- `[agent-name]` → Agent name in kebab-case for files/references
-- `[agent-type]` → Agent type for logging (lowercase)
-- `[Brief Description]` → Short description for title
 - `[Full Descriptive Title]` → Complete descriptive title
-- `[domain-expertise-area]` → Agent's specialization domain
-- `[opus|sonnet|haiku]` → Choose appropriate model
 - `[keyword patterns]` → Actual keyword patterns for context loading
 - All other bracketed content → Replace with agent-specific information

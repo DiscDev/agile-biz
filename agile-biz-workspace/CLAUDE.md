@@ -88,6 +88,7 @@ When you want to delegate specific tasks to agents, use these patterns:
 - **"DevOps agent deploy this to AWS"** → Spawns devops agent
 - **"Developer agent implement authentication"** → Spawns developer agent
 - **"Get devops agent to set up monitoring"** → Spawns devops agent
+- **"Use agent-admin to create a new agent"** → Spawns agent-admin agent
 
 ### Agent Context Architecture
 
