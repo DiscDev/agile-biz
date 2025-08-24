@@ -79,16 +79,6 @@ The workspace has specialized Claude Code agents for specific tasks:
   - Automatically update CLAUDE.md documentation
 - **Model**: Claude 3.5 Opus (complex reasoning for infrastructure management)
 
-#### **Testing Agent** (`testing`)
-- **Purpose**: QA workflows, automated testing, and test coverage analysis
-- **Triggers**: "testing agent", "run tests", "qa", "test coverage", "automated testing", "unit tests"
-- **Capabilities**:
-  - Generate unit tests, integration tests, and end-to-end test suites
-  - Set up and configure automated testing frameworks and CI/CD integration
-  - Implement QA processes, code coverage analysis, and quality gates
-  - Create and execute load tests, stress tests, and performance benchmarks
-  - Update existing tests, debug test failures, and optimize test performance
-- **Model**: Claude 3.5 Sonnet (balanced reasoning for testing workflows)
 
 ### Agent Usage Examples
 
