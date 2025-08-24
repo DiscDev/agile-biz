@@ -86,13 +86,11 @@ agents: [agent-name]
 ```yaml
 # Convert reference frontmatter to current standard
 ---
-title: [Agent Name] - [Brief Description from reference]
-type: agent
-model: [opus|sonnet|haiku - based on complexity]
+name: [imported-agent-name]
+description: [Brief description from reference updated for current capabilities]
+tools: [Read, Write, Edit, MultiEdit, Bash, Grep, Glob, LS]
+model: [opus|sonnet|haiku]
 token_count: [to be calculated]
-keywords: [extracted from reference + new patterns]
-specialization: [domain from reference]
-agents: [agent-name]
 ---
 ```
 

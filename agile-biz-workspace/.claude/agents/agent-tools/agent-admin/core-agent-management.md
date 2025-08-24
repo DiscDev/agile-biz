@@ -20,13 +20,11 @@ agents: [agent-admin]
 ### Agent File Structure Pattern
 ```yaml
 ---
-title: Agent Name - Brief Description
-type: agent
+name: agent-name
+description: Brief description of agent purpose and capabilities
+tools: [Read, Write, Edit, MultiEdit, Bash, Grep, Glob, LS]
 model: opus|sonnet|haiku
 token_count: [calculated]
-keywords: [primary, secondary, trigger, words]
-specialization: agent-domain-expertise
-agents: [self-reference]
 ---
 
 # Agent Name - Full Title

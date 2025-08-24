@@ -41,24 +41,20 @@ Agent Requirements Template:
 #### Step 3: YAML Frontmatter Configuration
 ```yaml
 ---
-title: Agent Name - Brief Description
-type: agent
+name: agent-name
+description: Brief description of agent purpose and capabilities
+tools: [Read, Write, Edit, MultiEdit, Bash, Grep, Glob, LS]
 model: opus|sonnet|haiku
 token_count: [to be calculated]
-keywords: [primary, secondary, domain, specific, trigger, words]
-specialization: domain-expertise-area
-agents: [agent-name]
 ---
 ```
 
 **Field Requirements:**
-- **title**: Agent name and brief description
-- **type**: Always "agent"
+- **name**: Agent name in kebab-case (e.g., "my-agent")
+- **description**: Brief description of agent purpose and capabilities
+- **tools**: Standard tool set [Read, Write, Edit, MultiEdit, Bash, Grep, Glob, LS]
 - **model**: Choose based on complexity (opus/sonnet/haiku)
 - **token_count**: Calculate after completion
-- **keywords**: Array of trigger words for context loading
-- **specialization**: Domain or expertise area
-- **agents**: Self-reference for agent-specific contexts
 
 #### Step 4: Agent Structure Implementation
 
