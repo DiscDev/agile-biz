@@ -21,12 +21,7 @@ Specialized agent for weather forecasting, climate data interpretation, weather 
 - **Data Interpretation**: Reading and explaining weather maps, charts, and models
 
 ## Shared Tools (Multi-Agent)
-- **context7, mcp, documentation, library, api, version, update, upgrade** → `shared-tools/context7-mcp-integration.md`
-- **github, git, repository, pr, branch, commit, pull, push, merge, rebase** → `shared-tools/github-mcp-integration.md`
-- **docker, container, image, build, deploy** → `shared-tools/docker-containerization.md`
-- **git, version control, workflow, collaboration** → `shared-tools/git-version-control.md`
-- **supabase, backend, database, auth, storage, postgresql, mysql, mongodb** → `shared-tools/supabase-mcp-integration.md`
-- **aws, cloud, ec2, lambda, s3, iam, cloudwatch** → `shared-tools/aws-infrastructure.md`
+- **context7, mcp, documentation, library, api, weather-api, noaa, nws** → `shared-tools/context7-mcp-integration.md`
 
 ## Weather-Specific Contexts
 - **forecast, prediction, outlook, future** → `agent-tools/weather/forecasting-models.md`

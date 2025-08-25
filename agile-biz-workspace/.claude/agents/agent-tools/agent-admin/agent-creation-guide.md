@@ -78,8 +78,30 @@ Detailed description of agent's primary function and role
 - Specific capability 2 with implementation details
 - Integration and workflow requirements
 
-## Shared Tools (Multi-Agent)
-- **keyword patterns** → `shared-tools/tool-name.md`
+## Shared Tools (Multi-Agent) - ONLY INCLUDE RELEVANT TOOLS
+
+**CRITICAL**: Only include shared tools the agent would actually use. Review each tool:
+
+**Available Shared Tools:**
+- **context7-mcp-integration.md**: API access, documentation, libraries (most agents need)
+- **github-mcp-integration.md**: Git repositories, PRs, code management (developer-focused)
+- **docker-containerization.md**: Container builds, deployments (devops-focused)
+- **git-version-control.md**: Basic git workflows (developer/devops-focused)
+- **supabase-mcp-integration.md**: Database, backend, auth (data/backend-focused)
+- **aws-infrastructure.md**: Cloud services, infrastructure (devops/infrastructure-focused)
+
+**Selection Guidelines by Agent Type:**
+- **Developer agents**: context7, github, git, docker (for coding tasks)
+- **DevOps agents**: context7, github, git, docker, aws (for infrastructure)
+- **Data agents**: context7, supabase (for data and APIs)
+- **Domain specialists**: context7 only (for documentation/API access)
+- **Creative agents**: context7 only (for research and documentation)
+
+**Example for Weather Agent:**
+- **context7, mcp, documentation, library, api, weather-api, noaa, nws** → `shared-tools/context7-mcp-integration.md`
+
+**Example for Music Agent:**
+- **context7, mcp, documentation, library, api, music-theory, daw, production** → `shared-tools/context7-mcp-integration.md`
 
 ## Agent-Specific Contexts (if needed)
 - **keyword patterns** → `agent-tools/agent-name/context-name.md`

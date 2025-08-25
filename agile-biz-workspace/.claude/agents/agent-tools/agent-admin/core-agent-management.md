@@ -81,7 +81,7 @@ Clear description of agent's primary function
 2. **Template Selection**: Choose appropriate base template
 3. **Structure Configuration**: Set up YAML frontmatter and metadata
 4. **Context Design**: Define keyword patterns and context loading logic
-5. **Infrastructure Integration**: Add to agent-spawn-logging.md, configure shared tools, documentation
+5. **Infrastructure Integration**: Add to agent-spawn-logging.md, select RELEVANT shared tools only, documentation
 6. **Validation**: Test agent structure and functionality
 7. **Documentation**: Update CLAUDE.md with agent information
 

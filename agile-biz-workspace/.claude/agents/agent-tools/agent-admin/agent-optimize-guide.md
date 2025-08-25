@@ -40,7 +40,21 @@ wc -w .claude/agents/shared-tools/*.md
 
 ### Optimization Strategies
 
-#### 1. Shared Tools Migration
+#### 1. Shared Tools Optimization
+**Convert Duplicate Content to Shared Tools AND Remove Irrelevant Tools:**
+
+**CRITICAL: Remove Irrelevant Shared Tools First**
+Many agents include shared tools they never use, wasting tokens:
+```markdown
+# BAD: Weather agent with irrelevant tools
+- **docker, container** → `shared-tools/docker-containerization.md`
+- **aws, lambda** → `shared-tools/aws-infrastructure.md`  
+- **database, auth** → `shared-tools/supabase-mcp-integration.md`
+
+# GOOD: Weather agent with relevant tools only
+- **context7, weather-api, noaa** → `shared-tools/context7-mcp-integration.md`
+```
+
 **Convert Duplicate Content to Shared Tools:**
 
 **Before (Inefficient):**

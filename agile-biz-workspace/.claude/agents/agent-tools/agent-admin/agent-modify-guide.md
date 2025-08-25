@@ -64,16 +64,18 @@ keywords: [old, keywords, patterns, new, capability, words]
 **Adding New Capabilities:**
 1. Update "Core Responsibilities" section
 2. Add new keyword patterns for context loading
-3. Create new context files if needed
-4. Update task analysis examples
-5. Test new functionality
+3. Review and update shared tools (add only relevant ones)
+4. Create new context files if needed
+5. Update task analysis examples
+6. Test new functionality
 
 **Removing Capabilities:**
 1. Remove from "Core Responsibilities"
 2. Remove keyword patterns
-3. Delete unused context files
-4. Clean up task examples
-5. Update documentation
+3. Remove irrelevant shared tools
+4. Delete unused context files
+5. Clean up task examples
+6. Update documentation
 
 **Reorganizing Structure:**
 1. Maintain standard agent structure pattern
@@ -103,6 +105,35 @@ keywords: [old, keywords, patterns, new, capability, words]
 - Validate context file paths are correct
 - Test keyword patterns trigger correctly
 - Check for circular dependencies
+
+### Shared Tools Relevance Review (CRITICAL)
+
+**When modifying any agent, review shared tools for relevance:**
+
+**Shared Tools Audit Checklist:**
+- ✅ **context7-mcp-integration.md**: Does agent need API/documentation access?
+- ✅ **github-mcp-integration.md**: Does agent work with code repositories?
+- ✅ **docker-containerization.md**: Does agent handle container deployments?
+- ✅ **git-version-control.md**: Does agent need basic git workflows?
+- ✅ **supabase-mcp-integration.md**: Does agent work with databases/backends?
+- ✅ **aws-infrastructure.md**: Does agent manage cloud infrastructure?
+
+**Remove Irrelevant Tools:**
+- Weather agents don't need Docker or AWS
+- Music agents don't need Supabase or GitHub  
+- Domain specialists usually only need Context7
+- Developer agents need most tools
+- DevOps agents need infrastructure tools
+
+**Example Cleanup:**
+```markdown
+# Before (incorrect - weather agent)
+- **docker, container** → `shared-tools/docker-containerization.md`
+- **aws, cloud** → `shared-tools/aws-infrastructure.md`
+
+# After (correct - weather agent)  
+- **context7, mcp, weather-api** → `shared-tools/context7-mcp-integration.md`
+```
 
 ### Agent-Specific Context Modifications
 
