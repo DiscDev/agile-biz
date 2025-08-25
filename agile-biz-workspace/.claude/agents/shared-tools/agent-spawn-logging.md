@@ -3,7 +3,7 @@ title: Agent Spawn Logging
 type: shared-tool
 token_count: 1247
 keywords: [logging, debug, spawn, tracking, monitor, agent]
-agents: [developer, devops, agent-admin, lonely-hearts-club-band]
+agents: [developer, devops, agent-admin, lonely-hearts-club-band, weather]
 ---
 
 # Agent Spawn Logging - Shared Tool
