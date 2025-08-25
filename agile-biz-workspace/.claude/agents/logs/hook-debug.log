@@ -91,3 +91,13 @@
 2025-08-25T09:27:15-07:00 [HOOK] Analyzing input: {"session_id":"5428b2fc-4c11-4f21-9628-d46bcbe97a87","transcript_path":"/Users/phillipbrown/.claude/...
 2025-08-25T09:27:15-07:00 [HOOK] Detected developer agent spawn request
 2025-08-25T09:27:15-07:00 [HOOK] Triggered logging for developer agent
+2025-08-25T09:38:31-07:00 [HOOK] UserPromptSubmit triggered
+2025-08-25T09:38:31-07:00 [HOOK] Analyzing input: {"session_id":"267f2843-767a-49cd-92a6-f0c56d03e313","transcript_path":"/Users/phillipbrown/.claude/...
+2025-08-25T09:38:31-07:00 [HOOK] No agent spawn detected
+2025-08-25T09:42:50-07:00 [HOOK] PostToolUse Task hook triggered
+2025-08-25T09:42:50-07:00 [HOOK] Task completed - analyzing params: ...
+2025-08-25T09:42:50-07:00 [HOOK] No agent type detected in Task completion
+2025-08-25T09:49:43-07:00 [HOOK] UserPromptSubmit triggered
+2025-08-25T09:49:43-07:00 [HOOK] Analyzing input: {"session_id":"267f2843-767a-49cd-92a6-f0c56d03e313","transcript_path":"/Users/phillipbrown/.claude/...
+2025-08-25T09:49:43-07:00 [HOOK] Detected developer agent spawn request
+2025-08-25T09:49:43-07:00 [HOOK] Triggered logging for developer agent

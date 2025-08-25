@@ -93,20 +93,6 @@ The workspace has specialized Claude Code agents for specific tasks:
   - Project management for music productions
 - **Model**: Claude 3.5 Sonnet (balanced creativity and technical accuracy for music tasks)
 
-#### **Weather Agent** (`weather`)
-- **Purpose**: Weather forecasting, climate analysis, and weather-based planning assistance
-- **Triggers**: "weather", "forecast", "climate", "temperature", "storm", "season", "precipitation", "meteorology"
-- **Capabilities**:
-  - Weather forecasting and current conditions analysis
-  - Climate data interpretation and trend analysis
-  - Weather pattern explanation and education
-  - Seasonal planning and preparation advice
-  - Weather emergency preparedness guidance
-  - Agricultural and outdoor activity planning
-  - Weather map and data interpretation
-  - Risk assessment for weather-related events
-- **Model**: Claude 3.5 Sonnet (balanced analysis and practical advice for weather tasks)
-
 
 ### Agent Usage Examples
 
@@ -119,9 +105,6 @@ When you want to delegate specific tasks to agents, use these patterns:
 - **"Agent-admin create a new testing agent"** → Spawns agent-admin
 - **"Lonely hearts help me write a song"** → Spawns lonely-hearts-club-band agent
 - **"Music agent explain chord progressions"** → Spawns lonely-hearts-club-band agent
-- **"Weather agent forecast for tomorrow"** → Spawns weather agent
-- **"What's the weather outlook for next week?"** → Spawns weather agent
-- **"Weather help me plan for hurricane season"** → Spawns weather agent
 
 ### Agent Context Architecture
 

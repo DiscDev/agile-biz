@@ -111,6 +111,7 @@ Clear description of agent's primary function
 5. **Documentation Updates**: Remove from CLAUDE.md and references
 6. **Reference Cleanup**: Update any cross-references to deleted agent
 7. **Validation**: Confirm clean removal without broken dependencies
+8. **User Notification**: Inform user that Claude Code must be restarted to update agent list cache
 
 ## Quality Standards
 
