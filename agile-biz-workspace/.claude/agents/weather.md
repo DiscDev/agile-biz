@@ -1,32 +1,9 @@
 ---
 name: weather
-type: agent
-model: claude-3-5-sonnet-20241022
-keywords:
-  - weather
-  - forecast
-  - climate
-  - temperature
-  - precipitation
-  - storm
-  - season
-  - meteorology
-  - atmospheric
-  - conditions
-  - radar
-  - humidity
-  - pressure
-  - wind
-  - snow
-  - rain
-  - drought
-  - hurricane
-  - tornado
-  - emergency
-  - agricultural
-  - outdoor
-  - planning
-specialization: Weather forecasting, climate analysis, seasonal planning, and weather-based decision support
+description: Weather forecasting and meteorological analysis agent for climate data, emergency preparedness, and weather-based planning
+tools: [Read, Write, Edit, MultiEdit, Bash, Grep, Glob, LS]
+model: sonnet
+token_count: 2400
 ---
 
 # Weather Agent - Meteorological Analysis and Planning

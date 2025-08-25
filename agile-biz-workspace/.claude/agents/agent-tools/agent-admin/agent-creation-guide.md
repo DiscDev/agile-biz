@@ -33,10 +33,18 @@ Agent Requirements Template:
 ```
 
 #### Step 2: Template Selection
-- **Basic Agent**: Simple functionality, minimal contexts
-- **Specialized Agent**: Complex workflows, multiple context files
-- **Domain-Specific**: Highly specialized for particular technology/domain
-- **Multi-Function**: Handles diverse but related capabilities
+
+**Available Templates** (located in `agent-tools/agent-admin/`):
+- **agent-template.md**: Standard template for basic agents with simple functionality
+- **specialized-agent-template.md**: Complex multi-domain agents with extensive contexts
+- **reference-import-template.md**: For adapting agents from reference system
+
+**Template Selection Guidelines**:
+- **Basic Agent**: Use `agent-template.md` for simple functionality, minimal contexts
+- **Specialized Agent**: Use `specialized-agent-template.md` for complex workflows, multiple context files
+- **Domain-Specific**: Use `specialized-agent-template.md` for highly specialized technology/domain agents
+- **Multi-Function**: Use `specialized-agent-template.md` for diverse but related capabilities
+- **Import Projects**: Use `reference-import-template.md` when adapting from reference system
 
 #### Step 3: YAML Frontmatter Configuration
 ```yaml
