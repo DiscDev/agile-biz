@@ -11,13 +11,20 @@ agents: [agent-admin]
 ## AgileBiz Agent Architecture Fundamentals
 
 ### Infrastructure Standards
-- **YAML Frontmatter**: Required for all agents with title, type, model, token_count, keywords, specialization
+- **YAML Frontmatter**: STRICT validation required - MUST use standard format ONLY
 - **Logging Integration**: All agents must integrate with automatic logging system
 - **Context Loading**: Conditional loading with shared tools and agent-specific contexts
 - **Token Optimization**: Efficient context patterns to minimize token usage
 - **CLAUDE.md Documentation**: All agents must be documented in workspace instructions
 
-### Agent File Structure Pattern
+### CRITICAL: YAML Frontmatter Validation Requirements
+
+#### ⚠️ ALWAYS USE `yaml-template-mandatory.md`
+**This is the ONLY source of truth for agent YAML formatting**
+- **Reference**: `agent-tools/agent-admin/yaml-template-mandatory.md`
+- **Validation Script**: `.claude/scripts/validate-agent-yaml.js`
+
+#### MANDATORY YAML Structure (NO EXCEPTIONS)
 ```yaml
 ---
 name: agent-name
@@ -26,6 +33,30 @@ tools: [Read, Write, Edit, MultiEdit, Bash, Grep, Glob, LS]
 model: opus|sonnet|haiku
 token_count: [calculated]
 ---
+```
+
+#### FORBIDDEN YAML Formats (NEVER USE)
+```yaml
+# WRONG - Do not use these field names or structures:
+---
+agentName: agent-name  # ❌ WRONG - use 'name' not 'agentName'
+agentRole: ...         # ❌ WRONG - use 'description' not 'agentRole'
+modelName: claude-...  # ❌ WRONG - use 'model' not 'modelName'
+temperature: 0.3       # ❌ WRONG - temperature not needed
+provider: anthropic    # ❌ WRONG - Claude Desktop format
+maxTokens: 1000        # ❌ WRONG - Claude Desktop format
+contextWindow: 16384   # ❌ WRONG - Claude Desktop format
+---
+```
+
+#### YAML Validation Rules
+1. **Field Names**: MUST use exact field names (name, description, tools, model, token_count)
+2. **Model Values**: MUST be one of: opus, sonnet, haiku (not full model IDs)
+3. **Tools Array**: MUST be an array of tool names in square brackets
+4. **Token Count**: MUST be a number representing total context tokens
+5. **No Extra Fields**: DO NOT add temperature, agentName, agentRole, provider, maxTokens, contextWindow, or ANY other fields
+
+### Agent File Structure Pattern
 
 # Agent Name - Full Title
 
@@ -50,9 +81,20 @@ Clear description of agent's primary function
 
 ## Integration Requirements
 - Logging system integration
-- CLAUDE.md documentation
+- CLAUDE.md documentation  
 - Token optimization patterns
-```
+- **CRITICAL: Hook file synchronization for agent detection**
+  - Must update `.claude/hooks/agent-detection-hook.sh` when creating/editing/deleting agents
+  - Must update `.claude/hooks/task-completion-hook.sh` for type extraction
+  - Must validate hook syntax after modifications
+  - Must ensure all agents are properly detected by logging system
+
+### Hook Management Responsibilities
+When managing agents, agent-admin MUST:
+1. **CREATE**: Add detection patterns to both hook files
+2. **DELETE**: Remove detection patterns from both hook files  
+3. **EDIT**: Update patterns if keywords/triggers change
+4. **VALIDATE**: Ensure hook files remain syntactically valid
 
 ### Current Agent Inventory
 - **Developer Agent**: Code generation, refactoring, project scaffolding
@@ -79,11 +121,12 @@ Clear description of agent's primary function
 ### Create New Agent
 1. **Requirements Analysis**: Define purpose, scope, capabilities
 2. **Template Selection**: Choose appropriate base template
-3. **Structure Configuration**: Set up YAML frontmatter and metadata
-4. **Context Design**: Define keyword patterns and context loading logic
-5. **Infrastructure Integration**: Add to agent-spawn-logging.md, select RELEVANT shared tools only, documentation
-6. **Validation**: Test agent structure and functionality
-7. **Documentation**: Update CLAUDE.md with agent information
+3. **YAML Validation** (MANDATORY): Validate YAML structure using validation template
+4. **Structure Configuration**: Set up YAML frontmatter with REQUIRED fields only
+5. **Context Design**: Define keyword patterns and context loading logic
+6. **Infrastructure Integration**: Add to agent-spawn-logging.md, select RELEVANT shared tools only, documentation
+7. **Final Validation**: Test agent structure and YAML compliance
+8. **Documentation**: Update CLAUDE.md with agent information
 
 ### Import from Reference
 1. **Source Analysis**: Read and understand reference agent structure
@@ -138,16 +181,63 @@ Clear description of agent's primary function
 - **Keywords**: Follow consistent keyword strategies
 - **Testing**: Validate all agent changes before deployment
 
+## YAML Validation Template Function
+
+### validateAgentYAML(yamlContent)
+```javascript
+function validateAgentYAML(yamlContent) {
+    const errors = [];
+    
+    // Required fields in exact order
+    const REQUIRED_FIELDS = ['name', 'description', 'tools', 'model', 'token_count'];
+    const VALID_MODELS = ['opus', 'sonnet', 'haiku'];
+    const FORBIDDEN_FIELDS = ['agentName', 'agentRole', 'modelName', 'temperature'];
+    
+    // Check for forbidden fields
+    FORBIDDEN_FIELDS.forEach(field => {
+        if (yamlContent.includes(field + ':')) {
+            errors.push(`❌ FORBIDDEN field '${field}' detected - DO NOT USE`);
+        }
+    });
+    
+    // Check for required fields
+    REQUIRED_FIELDS.forEach(field => {
+        if (!yamlContent.includes(field + ':')) {
+            errors.push(`❌ MISSING required field '${field}'`);
+        }
+    });
+    
+    // Validate model value
+    const modelMatch = yamlContent.match(/model:\s*(\w+)/);
+    if (modelMatch && !VALID_MODELS.includes(modelMatch[1])) {
+        errors.push(`❌ INVALID model '${modelMatch[1]}' - use: opus, sonnet, or haiku`);
+    }
+    
+    return {
+        valid: errors.length === 0,
+        errors: errors
+    };
+}
+```
+
 ## Error Handling and Validation
 
 ### Common Issues
-- **Invalid YAML**: Syntax errors in frontmatter
+- **Invalid YAML Structure**: Using wrong field names (agentName vs name)
+- **Forbidden Fields**: Including temperature, agentRole, modelName
+- **Invalid Model Values**: Using full model IDs instead of opus/sonnet/haiku
+- **Missing Required Fields**: Omitting name, description, tools, model, or token_count
 - **Missing Integration**: No logging or documentation updates
 - **Token Miscalculation**: Inaccurate token counts
 - **Keyword Conflicts**: Overlapping context loading patterns
 - **Incomplete Documentation**: Missing CLAUDE.md updates
 
-### Validation Checklist
+### MANDATORY Validation Checklist
+- ✅ **YAML Structure**: Uses EXACT required fields (name, description, tools, model, token_count)
+- ✅ **No Forbidden Fields**: No agentName, agentRole, modelName, temperature
+- ✅ **Model Value**: One of: opus, sonnet, haiku (NOT full model IDs)
+- ✅ **Tools Array**: Properly formatted array of tool names
+- ✅ **Token Count**: Numeric value representing total context tokens
 - ✅ YAML frontmatter parses correctly
 - ✅ All required fields present and valid
 - ✅ Keywords properly formatted and functional

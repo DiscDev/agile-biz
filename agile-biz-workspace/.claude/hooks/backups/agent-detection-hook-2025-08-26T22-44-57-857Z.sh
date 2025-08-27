@@ -51,11 +51,6 @@ detect_agent_spawn() {
         agent_type="lonely-hearts-club-band"
     fi
     
-    # Detect car-salesman patterns
-    if echo "$lower_input" | grep -E "(car.*salesman|car salesman|automotive.*sales|vehicle.*recommendation|dealership|trade.in|lease.*car|financing.*car)" > /dev/null; then
-        agent_type="car-salesman"
-    fi
-    
     # Generic agent spawning patterns
     if echo "$lower_input" | grep -E "(agent|spawn|task tool)" > /dev/null && [ -z "$agent_type" ]; then
         agent_type="unknown"

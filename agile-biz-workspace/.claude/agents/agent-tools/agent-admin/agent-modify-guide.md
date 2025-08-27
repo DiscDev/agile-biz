@@ -16,18 +16,47 @@ agents: [agent-admin]
 3. **Backup Strategy**: Create backups before making significant changes
 4. **Testing Plan**: Plan validation of changes after implementation
 5. **Documentation Updates**: Identify required documentation changes
+6. **Hook File Updates**: Plan updates if keywords/triggers are changing
 
 ### Agent Modification Workflow
 
-#### Step 1: Agent Assessment
+#### Step 1: YAML Validation Check (MANDATORY)
+Before ANY modifications, validate current YAML structure:
+```bash
+node .claude/scripts/validate-agent-yaml.js .claude/agents/[agent-name].md
+```
+
+**CRITICAL: Ensure YAML uses CORRECT format:**
+```yaml
+---
+name: agent-name
+description: Brief description
+tools: [Read, Write, Edit, MultiEdit, Bash, Grep, Glob, LS]
+model: opus|sonnet|haiku
+token_count: [number]
+---
+```
+
+**NEVER use forbidden fields:** agentName, agentRole, modelName, temperature
+
+#### Step 2: Hook File Synchronization
+**CRITICAL: If modifying keywords/triggers:**
+1. Update patterns in `.claude/hooks/agent-detection-hook.sh`
+2. Update extraction in `.claude/hooks/task-completion-hook.sh`
+3. Validate hook syntax: `bash -n [hook-file]`
+4. Test agent detection with new keywords
+
+#### Step 3: Agent Assessment
 ```markdown
 Modification Assessment Template:
 - **Agent Name**: Which agent is being modified
+- **Current YAML**: Validate current YAML structure compliance
 - **Current Version**: Document existing state and capabilities
 - **Modification Goals**: What needs to be changed and why
 - **Impact Scope**: Which components will be affected
 - **Risk Level**: Low/Medium/High complexity and risk assessment
 - **Testing Requirements**: How to validate changes
+- **Hook Updates**: Are keyword/trigger changes needed?
 ```
 
 #### Step 2: Backup and Safety

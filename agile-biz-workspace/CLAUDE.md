@@ -14,15 +14,24 @@
 - **Implementation Target**: agile-biz/ (rebuild destination for business logic)
 - **Claude Integration**: .claude/ (commands, agents, hooks, settings)
 
-## CRITICAL: Workspace Path Enforcement
+## 🚨 CRITICAL: Workspace Path Enforcement 🚨
 **ABSOLUTE WORKSPACE PATH**: `/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace/`
 
-### Path Rules - NEVER VIOLATE:
+### ⚠️ PATH RULES - NEVER VIOLATE ⚠️:
 - ✅ **CORRECT**: All work in `/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace/`
 - ❌ **FORBIDDEN**: Never create or use `/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-bz-workspace/`
 - ❌ **FORBIDDEN**: Never create or use any variation of "agile-bz-workspace"
+- ❌ **FORBIDDEN**: Never create "agile-bz-workspace" in any location
 - ✅ **REQUIRED**: Always use full absolute paths when creating files
 - ✅ **REQUIRED**: Always double-check paths contain "agile-biz-workspace" (not "agile-bz-workspace")
+- ✅ **VALIDATION**: Before any file operation, verify the path includes "agile-biz-workspace"
+
+### 🔍 Common Path Errors to Avoid:
+- `agile-bz-workspace` (WRONG - missing 'i' in 'biz')
+- `agile-bz-` (WRONG - truncated)
+- Any variation that is NOT exactly `agile-biz-workspace`
+
+**IF YOU ACCIDENTALLY CREATE THE WRONG PATH, IMMEDIATELY STOP AND MOVE FILES TO THE CORRECT LOCATION**
 
 ## Workspace Rules
 1. NEVER modify files in agile-ai-agents-v7.0.0/
@@ -79,6 +88,34 @@ The workspace has specialized Claude Code agents for specific tasks:
   - Automatically update CLAUDE.md documentation
 - **Model**: Claude 3.5 Opus (complex reasoning for infrastructure management)
 
+#### **Car Salesman** (`car-salesman`)
+- **Purpose**: Provides comprehensive automotive sales assistance including vehicle recommendations, pricing negotiations, financing guidance, and customer support
+- **Triggers**: "car", "salesman", "automotive", "vehicle", "dealership", "financing", "trade-in", "lease"
+- **Capabilities**:
+  - Vehicle recommendation and matching based on customer needs
+  - Pricing strategies and negotiation guidance
+  - Financing options explanation (loans, leases, payment plans)
+  - Customer relationship management throughout sales process
+  - Inventory and feature explanations
+  - Trade-in value assessments
+  - Market analysis and competitive pricing
+  - Integration with automotive pricing APIs and inventory systems
+- **Model**: Claude 3.5 Sonnet (balanced capabilities for sales assistance and calculations)
+
+#### **Finance Agent** (`finance`)
+- **Purpose**: Provides comprehensive financial analysis and planning services including budgeting, investment analysis, and financial reporting
+- **Triggers**: "finance", "financial", "budget", "investment", "portfolio", "accounting", "tax", "financial analysis", "financial planning"
+- **Capabilities**:
+  - Financial planning and budgeting
+  - Investment analysis and portfolio management
+  - Financial reporting and data analysis
+  - Risk assessment and mitigation strategies
+  - Tax planning and compliance guidance
+  - Integration with financial APIs and market data feeds
+  - Accounting system integrations
+  - Real-time market data analysis
+- **Model**: Claude 3.5 Sonnet (balanced capabilities for financial analysis and calculations)
+
 #### **Lonely Hearts Club Band** (`lonely-hearts-club-band`)
 - **Purpose**: Music composition, songwriting, band management, and audio production assistance
 - **Triggers**: "lonely hearts", "music agent", "compose", "songwriting", "band", "music theory", "audio production", "arrangement"
@@ -105,6 +142,10 @@ When you want to delegate specific tasks to agents, use these patterns:
 - **"Agent-admin create a new testing agent"** → Spawns agent-admin
 - **"Lonely hearts help me write a song"** → Spawns lonely-hearts-club-band agent
 - **"Music agent explain chord progressions"** → Spawns lonely-hearts-club-band agent
+- **"Finance agent create a budget for Q1"** → Spawns finance agent
+- **"Have finance analyze our investment portfolio"** → Spawns finance agent
+- **"Car salesman help me find a family SUV"** → Spawns car-salesman agent
+- **"Have car salesman explain lease vs buy options"** → Spawns car-salesman agent
 
 ### Agent Context Architecture
 
@@ -125,3 +166,5 @@ When creating git commits, **ALWAYS** use the following attribution format inste
 ```
 
 **Do NOT use** the default Claude Code attribution (`🤖 Generated with Claude Code`).
+
+- Add to memory naming convention for folders and files is lower case with dashes.  Example: my-example.md

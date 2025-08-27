@@ -103,6 +103,17 @@ Specialized agent for creating, editing, deleting, and managing Claude Code agen
 
 ## Integration with AgileBiz Infrastructure
 
+### Hook Management System:
+- **Automatic Hook Updates**: All agent operations update detection hooks
+- **Scripts Available**:
+  - `manage-agent-hooks.js`: Direct hook file management
+  - `agent-lifecycle-manager.js`: Complete agent lifecycle with hooks
+  - `create-agent.sh`: Command wrapper for agent creation
+  - `delete-agent.sh`: Command wrapper for agent deletion
+- **Hook Files Managed**:
+  - `.claude/hooks/agent-detection-hook.sh`: Agent spawn detection
+  - `.claude/hooks/task-completion-hook.sh`: Task type extraction
+
 ### Logging System Integration:
 - **Automatic Logging**: All agent-admin activities are logged when enabled
 - **Context Tracking**: Track which contexts are loaded for each operation

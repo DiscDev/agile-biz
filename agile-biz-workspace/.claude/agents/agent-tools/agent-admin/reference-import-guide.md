@@ -8,6 +8,20 @@ agents: [agent-admin]
 
 # Reference Import Guide - Specialized Context
 
+## CRITICAL YAML FORMAT WARNING
+**AGENT FILES MUST USE THIS EXACT YAML FORMAT:**
+```yaml
+---
+name: agent-name
+description: Brief description
+tools: [Read, Write, Edit, MultiEdit, Bash, Grep, Glob, LS]
+model: opus|sonnet|haiku
+token_count: [number]
+---
+```
+**NEVER use fields like:** `keywords`, `specialization`, `purpose`, `agents`, `type`, `title`
+**These fields are for CONTEXT files only, NOT agent files!**
+
 ## Importing and Adapting Agents from Reference Files
 
 ### Reference System Analysis
@@ -34,6 +48,7 @@ Import Assessment Template:
 - **Current Relevance**: Is the agent still needed/relevant?
 - **Infrastructure Gaps**: What needs to be adapted/updated?
 - **Integration Requirements**: Logging, documentation, shared tools
+- **Hook Integration**: Detection patterns for hook files
 - **Complexity Level**: Simple import vs. major refactoring needed
 - **Context Dependencies**: Additional files and dependencies
 ```
@@ -47,7 +62,45 @@ Import Assessment Template:
 4. **Evaluate Currency**: Determine if information is still accurate
 5. **Plan Adaptations**: List required changes for current infrastructure
 
-#### Step 2: Structure Mapping
+#### Step 2: YAML Structure Conversion (CRITICAL)
+
+**MANDATORY: Convert old YAML formats to CORRECT structure**
+
+**FROM (old reference format):**
+```yaml
+---
+agentName: agent-name
+agentRole: Description...
+modelName: claude-3-5-opus-20241022
+temperature: 0.3
+---
+```
+
+**TO (required current format):**
+```yaml
+---
+name: agent-name
+description: Brief description of agent purpose
+tools: [Read, Write, Edit, MultiEdit, Bash, Grep, Glob, LS]
+model: opus  # Use: opus, sonnet, or haiku (NOT full model ID)
+token_count: [calculated]
+---
+```
+
+**Conversion Rules (MANDATORY - See `yaml-template-mandatory.md`):**
+- `agentName` → `name`
+- `agentRole` → `description`
+- `modelName: claude-3-5-opus-*` → `model: opus`
+- `modelName: claude-3-5-sonnet-*` → `model: sonnet`
+- `modelName: claude-3-haiku-*` → `model: haiku`
+- Remove `temperature` field completely
+- Remove `provider` field if present (Claude Desktop format - FORBIDDEN)
+- Remove `maxTokens` field if present (Claude Desktop format - FORBIDDEN)
+- Remove `contextWindow` field if present (Claude Desktop format - FORBIDDEN)
+- Add `tools` array if missing
+- Calculate and add `token_count`
+
+#### Step 3: Structure Mapping
 
 **Reference vs. Current Architecture:**
 ```markdown
@@ -59,16 +112,16 @@ version: 1.0
 capabilities: [list, of, capabilities]
 ---
 
-# Current System Pattern (Target)
+# Current System Pattern (Target) - MANDATORY CORRECT FORMAT
 ---
-title: Agent Name - Brief Description
-type: agent
+name: agent-name
+description: Brief description of agent purpose and capabilities
+tools: [Read, Write, Edit, MultiEdit, Bash, Grep, Glob, LS]
 model: opus
 token_count: [calculated]
-keywords: [keyword, patterns, for, context, loading]
-specialization: domain-expertise
-agents: [agent-name]
 ---
+# CRITICAL: NEVER use 'keywords', 'specialization', 'title', 'type', or 'agents' fields in agent YAML
+# Those are for CONTEXT files only, NOT agent files!
 ```
 
 #### Step 3: Content Adaptation Strategy
