@@ -4,9 +4,9 @@
 # Captures when Task tool completes and logs agent spawn retroactively
 
 # Configuration
-LOGGING_CONFIG=".claude/agents/logs/logging-config.json"
-LOGGING_SCRIPT=".claude/agents/scripts/logging/logging-functions.js"
-HOOK_LOG=".claude/agents/logs/hook-debug.log"
+LOGGING_CONFIG=".claude/configs/logging-config.json"
+LOGGING_SCRIPT=".claude/scripts/agents/logging/logging-functions.js"
+HOOK_LOG=".claude/logs/hooks/hook-debug.log"
 
 # Function to check if logging is enabled
 check_logging_enabled() {
@@ -43,6 +43,8 @@ extract_agent_type() {
         echo "car-salesman"
     elif echo "$params" | grep -i "lonely-hearts-club-band" > /dev/null; then
         echo "lonely-hearts-club-band"
+    elif echo "$params" | grep -i "content-writer" > /dev/null; then
+        echo "content-writer"
     else
         echo "unknown"
     fi

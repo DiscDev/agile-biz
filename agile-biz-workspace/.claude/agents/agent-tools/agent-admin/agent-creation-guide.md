@@ -279,7 +279,7 @@ Context Architecture:
    ```markdown
    ### Context Loading Logic:
    1. **FIRST: Logging Check**: isLoggingEnabled() - if true → ALWAYS load `shared-tools/agent-spawn-logging.md`
-      - **MANDATORY EXECUTION**: `node .claude/agents/scripts/logging/logging-functions.js full-log [agent-type] "[user request]"`
+      - **MANDATORY EXECUTION**: `node .claude/scripts/agents/logging/logging-functions.js full-log [agent-type] "[user request]"`
    ```
 
 2. **CLAUDE.md Documentation Updates**
@@ -415,7 +415,7 @@ Detailed description of agent's primary function and role
 ```markdown
 ### Context Loading Logic:
 1. **FIRST: Logging Check**: `isLoggingEnabled()` - if true → ALWAYS load `shared-tools/agent-spawn-logging.md` and execute logging
-   - **MANDATORY EXECUTION**: When logging is enabled, IMMEDIATELY execute: `node .claude/agents/scripts/logging/logging-functions.js full-log {agent-type} "[user request]"`
+   - **MANDATORY EXECUTION**: When logging is enabled, IMMEDIATELY execute: `node .claude/scripts/agents/logging/logging-functions.js full-log {agent-type} "[user request]"`
    - **Log Agent Spawn**: Extract keywords, generate agent ID, log spawn event and context loading
    - **Error Handling**: If logging fails, continue with agent execution
 2. **Always Load**: `agent-tools/{agent-type}/core-{type}-principles.md` (base knowledge)
@@ -466,9 +466,52 @@ Detailed description of agent's primary function and role
 
 1. **Create Agent File**: `.claude/agents/{agent-name}.md`
 2. **Create Context Directory**: `.claude/agents/agent-tools/{agent-name}/` (if needed)
-3. **Implement Context Files**: Core principles and specialized contexts
-4. **Calculate Token Counts**: Update frontmatter with accurate counts
-5. **Test Context Loading**: Verify keyword patterns work correctly
+3. **⚠️ CRITICAL: Parse Agent File for Referenced Context Files**
+   - **Scan agent file** for all `agent-tools/{agent-name}/filename.md` references
+   - **Extract ALL context file paths** mentioned in the agent
+   - **Create EVERY referenced context file** - no exceptions
+   - **Validate file references match created files** 
+4. **Implement Context Files**: Core principles and ALL specialized contexts
+5. **Calculate Token Counts**: Update frontmatter with accurate counts
+6. **Test Context Loading**: Verify keyword patterns work correctly
+
+### ⚠️ MANDATORY: Context File Creation Validation
+
+**BEFORE completing agent creation, ALWAYS:**
+
+1. **Parse Agent Content**: Extract all `agent-tools/{agent-name}/` references
+2. **Create Missing Files**: Generate any referenced context files that don't exist
+3. **Validate Completeness**: Ensure EVERY referenced file exists on disk
+4. **No Broken References**: Agent must never reference non-existent context files
+
+**Context File Creation Template**:
+```markdown
+---
+title: [Context Title]
+type: agent-context
+token_count: [calculated]
+keywords: [relevant, keywords, for, loading]
+agents: [{agent-name}]
+---
+
+# [Context Title] - [Agent Name] Specialized Context
+
+## Overview
+[Purpose and scope of this context]
+
+## [Main Section]
+[Comprehensive content covering the context topic]
+
+## Integration with [Agent Name]
+[How this context integrates with agent workflows]
+
+## Success Criteria
+- [Specific outcomes this context enables]
+
+---
+
+**AgileBiz™** - Created by Phillip Darren Brown (https://github.com/DiscDev)
+```
 
 #### Step 9: CLAUDE.md Documentation
 

@@ -34,7 +34,7 @@ The DevOps Agent specializes in infrastructure management, deployment automation
 
 ### Context Loading Logic:
 1. **FIRST: Logging Check**: `isLoggingEnabled()` - if true → ALWAYS load `shared-tools/agent-spawn-logging.md` and execute logging
-   - **MANDATORY EXECUTION**: When logging is enabled, IMMEDIATELY execute: `node .claude/agents/scripts/logging/logging-functions.js full-log devops "[user request]"`
+   - **MANDATORY EXECUTION**: When logging is enabled, IMMEDIATELY execute: `node .claude/scripts/agents/logging/logging-functions.js full-log devops "[user request]"`
    - **Log Agent Spawn**: Extract keywords, generate agent ID, log spawn event and context loading
    - **Error Handling**: If logging fails, continue with agent execution (logging should not block agent operation)
 2. **Always Load**: `agent-tools/devops/core-principles.md` (base knowledge and responsibilities)

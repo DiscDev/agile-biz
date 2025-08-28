@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-08-28T01:26:28.393Z",
+  "passed": 5,
+  "failed": 3,
+  "passRate": "62.5%",
+  "results": [
+    {
+      "test": "Basic logging (disabled)",
+      "status": "FAILED",
+      "reason": ""
+    },
+    {
+      "test": "Full logging (handles disabled state)",
+      "status": "FAILED",
+      "reason": ""
+    },
+    {
+      "test": "Agent wrapper test",
+      "status": "FAILED",
+      "reason": "developer"
+    },
+    {
+      "test": "Log file structure",
+      "status": "PASSED"
+    },
+    {
+      "test": "Cleanup verification",
+      "status": "PASSED"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "prompts": {
+    "agent_name": "What would you like to name your agent? (e.g., blog-helper, data-analyst)",
+    "agent_purpose": "What should this agent help with? Please describe its main purpose:",
+    "shared_tools": "Based on {category} focus, I recommend these shared tools:",
+    "specialized_tools": "I also have specialized tools for {category}:",
+    "custom_tools": "Do you need any custom specialized tools not listed? (optional)",
+    "model_selection": "Which Claude model should your agent use?\n• **Haiku** - Fast, simple tasks\n• **Sonnet** - Balanced (recommended for most uses)\n• **Opus** - Complex reasoning",
+    "boundaries": "Are there any tasks this agent should avoid or boundaries to set? (optional)",
+    "confirmation": "Here's your agent configuration:\n\n**Name**: {name}\n**Purpose**: {purpose}\n**Model**: {model}\n**Tools**: {tools}\n**Boundaries**: {boundaries}\n\nCreate this agent? (yes/no)"
+  },
+  "responses": {
+    "name_available": "✅ '{name}' is available.",
+    "name_conflict": "⚠️ '{name}' already exists. Try: {suggestions}",
+    "tools_added": "✅ Added {tools}.",
+    "creating_agent": "✅ Creating {name} agent...",
+    "creation_success": "✅ Agent created! **Restart Claude Code** to see it in your agent list.",
+    "updating_categories": "✅ Updated tool categories for future agents.",
+    "category_detected": "I detected this is a **{category}** agent based on your description.",
+    "tool_recommendations": "Here are my recommendations:"
+  },
+  "categories": {
+    "content_creation": {
+      "triggers": ["writing", "blog", "content", "marketing", "copy", "documentation", "articles"],
+      "description": "Content creation and writing assistance"
+    },
+    "development": {
+      "triggers": ["code", "build", "deploy", "dev", "programming", "git", "software", "app"],
+      "description": "Software development and coding"
+    },
+    "business_analysis": {
+      "triggers": ["analysis", "business", "finance", "data", "reports", "analytics"],
+      "description": "Business analysis and data insights"
+    },
+    "research": {
+      "triggers": ["research", "academic", "papers", "studies", "literature"],
+      "description": "Research and academic analysis"
+    }
+  }
+}

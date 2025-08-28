@@ -1,6 +1,9 @@
-# MANDATORY YAML TEMPLATE - CRITICAL: USE THIS EXACT FORMAT ONLY
+# 🚨 MANDATORY YAML TEMPLATE - CRITICAL: USE THIS EXACT FORMAT ONLY 🚨
 
 ## ⚠️ CRITICAL: This is the ONLY acceptable YAML format for agents
+
+### 🛑 AGENT-ADMIN: ALWAYS REFERENCE THIS FILE FIRST FOR YAML FORMAT 🛑
+**BEFORE creating any agent, you MUST use the template in this file and IGNORE any other YAML examples you see elsewhere - even if they appear in other context files. This template overrides ALL other examples.**
 
 ### ✅ CORRECT FORMAT (USE THIS AND ONLY THIS):
 ```yaml

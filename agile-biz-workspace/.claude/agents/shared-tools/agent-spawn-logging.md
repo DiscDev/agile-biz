@@ -3,7 +3,7 @@ title: Agent Spawn Logging
 type: shared-tool
 token_count: 1247
 keywords: [logging, debug, spawn, tracking, monitor, agent]
-agents: [developer, devops, agent-admin, lonely-hearts-club-band]
+agents: [developer, devops, agent-admin, lonely-hearts-club-band, content-writer]
 ---
 
 # Agent Spawn Logging - Shared Tool
@@ -42,7 +42,7 @@ node .claude/agents/scripts/logging/logging-functions.js full-log "{agentType}" 
 #### 3. Error Handling
 ```bash
 # All logging errors go to error.log
-echo "$(date -Iseconds) [ERROR] Agent {agentId}: {errorMessage}" >> .claude/agents/logs/error.log
+echo "$(date -Iseconds) [ERROR] Agent {agentId}: {errorMessage}" >> .claude/logs/error.log
 ```
 
 ## CRITICAL: Agent Execution Requirements
@@ -52,7 +52,7 @@ When an agent loads this shared tool (logging enabled), it MUST execute the foll
 
 ```bash
 # REQUIRED: Execute immediately after loading this context
-node .claude/agents/scripts/logging/logging-functions.js full-log "{agentType}" "{userRequest}"
+node .claude/scripts/agents/logging/logging-functions.js full-log "{agentType}" "{userRequest}"
 ```
 
 **Arguments**:
@@ -158,19 +158,19 @@ When spawning sub-agents:
 ### Missing Shared Tool
 ```bash
 # If this file is missing, log error and continue gracefully
-echo "$(date -Iseconds) [ERROR] Agent {agent_id}: agent-spawn-logging.md not found" >> .claude/agents/logs/error.log
+echo "$(date -Iseconds) [ERROR] Agent {agent_id}: agent-spawn-logging.md not found" >> .claude/logs/error.log
 ```
 
 ### Logging Function Failures
 ```bash
 # If logging functions fail, don't block agent execution
-echo "$(date -Iseconds) [ERROR] Agent {agent_id}: Logging function failed - {error}" >> .claude/agents/logs/error.log
+echo "$(date -Iseconds) [ERROR] Agent {agent_id}: Logging function failed - {error}" >> .claude/logs/error.log
 ```
 
 ### Configuration Issues
 ```bash
 # If logging config is invalid or missing
-echo "$(date -Iseconds) [WARN] Agent {agent_id}: Invalid logging config, defaulting to enabled" >> .claude/agents/logs/error.log
+echo "$(date -Iseconds) [WARN] Agent {agent_id}: Invalid logging config, defaulting to enabled" >> .claude/logs/error.log
 ```
 
 ## Usage Examples

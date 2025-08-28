@@ -23,7 +23,7 @@ agents: [agent-admin]
 #### Step 1: YAML Validation Check (MANDATORY)
 Before ANY modifications, validate current YAML structure:
 ```bash
-node .claude/scripts/validate-agent-yaml.js .claude/agents/[agent-name].md
+node .claude/scripts/agents/agent-admin/validate-agent-yaml.js .claude/agents/[agent-name].md
 ```
 
 **CRITICAL: Ensure YAML uses CORRECT format:**

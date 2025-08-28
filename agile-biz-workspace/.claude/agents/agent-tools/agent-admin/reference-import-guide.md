@@ -66,14 +66,17 @@ Import Assessment Template:
 
 **MANDATORY: Convert old YAML formats to CORRECT structure**
 
-**FROM (old reference format):**
+## ❌ NEVER USE THIS FORMAT - WRONG OLD REFERENCE FORMAT ❌
+**FROM (FORBIDDEN old reference format - DO NOT USE):**
 ```yaml
+# ❌❌❌ THIS IS WRONG - DO NOT USE THIS FORMAT ❌❌❌
 ---
-agentName: agent-name
-agentRole: Description...
-modelName: claude-3-5-opus-20241022
-temperature: 0.3
+agentName: agent-name        # ❌ WRONG - use 'name'
+agentRole: Description...    # ❌ WRONG - use 'description'  
+modelName: claude-3-5-opus-20241022  # ❌ WRONG - use 'model: opus'
+temperature: 0.3             # ❌ WRONG - do not include
 ---
+# ❌❌❌ END OF WRONG FORMAT - NEVER USE ❌❌❌
 ```
 
 **TO (required current format):**
@@ -214,7 +217,7 @@ Reference Content Analysis:
 ```markdown
 ### Context Loading Logic:
 1. **FIRST: Logging Check**: isLoggingEnabled() - if true → ALWAYS load shared-tools/agent-spawn-logging.md and execute logging
-   - **MANDATORY EXECUTION**: node .claude/agents/scripts/logging/logging-functions.js full-log [agent-type] "[user request]"
+   - **MANDATORY EXECUTION**: node .claude/scripts/agents/logging/logging-functions.js full-log [agent-type] "[user request]"
    - **Error Handling**: Continue if logging fails (non-blocking)
 2. **Always Load**: agent-tools/[agent-name]/core-[agent]-principles.md
 3. **Shared Tools**: [Mapped shared tools based on reference content]

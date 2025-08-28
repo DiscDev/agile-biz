@@ -1,0 +1,94 @@
+{
+  "prompts": {
+    "agent_name": "What would you like to name your agent?",
+    "agent_purpose": "What should this agent help with?",
+    "capabilities_expansion": "Should it also handle {suggested_capability}? (y/n)",
+    "shared_tools_intro": "Based on \"{category}\" focus, I recommend these shared tools:",
+    "shared_tools_selection": "Include these shared tools? (y/n)",
+    "specialized_tools_intro": "I also have specialized tools for {category}:",
+    "specialized_tools_selection": "Which would you like? (Enter numbers like 1,3,5 or 'none')",
+    "custom_tools_request": "Do you need any custom specialized tools not listed?",
+    "custom_tools_example": "(e.g., \"{example1}\" or \"{example2}\")",
+    "model_selection": "Which Claude model?",
+    "model_options": [
+      "• Haiku (fast/simple tasks)",
+      "• Sonnet (recommended for most tasks)", 
+      "• Opus (complex reasoning)"
+    ],
+    "boundaries_optional": "Should this agent avoid any specific content or tasks? (optional)",
+    "final_confirmation": "Create this agent? (yes/no)"
+  },
+  "responses": {
+    "name_available": "✅ \"{name}\" is available.",
+    "name_conflict": "⚠️ \"{name}\" {conflict_message}",
+    "name_suggestion": "Try: {suggestions}",
+    "capabilities_added": "Perfect! I'll add {capabilities}.",
+    "shared_tools_added": "✅ Added shared tools: {tools}.",
+    "specialized_tools_added": "✅ Added specialized tools: {tools}.",
+    "tools_added": "✅ Added tools: {tools}.",
+    "custom_tool_added": "✅ I'll add {tool_name} to your agent and update the {category} category for future agents.",
+    "model_selected": "✅ Selected Claude {model}.",
+    "boundaries_set": "✅ Boundaries set: {boundaries}",
+    "boundaries_skipped": "✅ No specific boundaries set.",
+    "creating_agent": "✅ Creating {name} agent...",
+    "creation_success": "✅ Agent created successfully! Restart Claude Code to see it in the /agents list.",
+    "creation_error": "❌ Agent creation failed: {error_message}",
+    "updating_categories": "✅ Updated tool categories for future {category} agents."
+  },
+  "validation": {
+    "name_required": "❌ Agent name is required.",
+    "purpose_required": "❌ Agent purpose is required.", 
+    "invalid_selection": "❌ Please select valid options.",
+    "invalid_model": "❌ Please select 1 (Haiku), 2 (Sonnet), or 3 (Opus).",
+    "creation_cancelled": "❌ Agent creation cancelled."
+  },
+  "tool_recommendation_examples": {
+    "content_creation": [
+      "WordPress API integration",
+      "Medium API integration", 
+      "Newsletter API integration",
+      "Social media scheduling API"
+    ],
+    "development": [
+      "GitHub Actions integration",
+      "Docker Registry API",
+      "AWS Lambda deployment",
+      "Database migration tools"
+    ],
+    "business_analysis": [
+      "Custom reporting API",
+      "ERP system integration",
+      "Financial forecasting tools",
+      "Market data feeds"
+    ],
+    "research": [
+      "Custom database API",
+      "Web scraping tools",
+      "Document processing API",
+      "Survey integration"
+    ],
+    "creative": [
+      "Stock photo API",
+      "Color palette generator",
+      "Font management API",
+      "Asset optimization tools"
+    ]
+  },
+  "conversation_flow": {
+    "steps": [
+      "agent_name",
+      "agent_purpose",
+      "capabilities_expansion",
+      "shared_tools_selection",
+      "specialized_tools_selection", 
+      "custom_tools_request",
+      "model_selection",
+      "boundaries_optional",
+      "final_confirmation"
+    ],
+    "conditional_steps": {
+      "capabilities_expansion": "if purpose suggests additional capabilities",
+      "custom_tools_request": "if user wants tools not in specialized list"
+    }
+  }
+}

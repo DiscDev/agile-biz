@@ -22,7 +22,7 @@ agents: [agent-admin]
 #### ⚠️ ALWAYS USE `yaml-template-mandatory.md`
 **This is the ONLY source of truth for agent YAML formatting**
 - **Reference**: `agent-tools/agent-admin/yaml-template-mandatory.md`
-- **Validation Script**: `.claude/scripts/validate-agent-yaml.js`
+- **Validation Script**: `.claude/scripts/agents/agent-admin/validate-agent-yaml.js`
 
 #### MANDATORY YAML Structure (NO EXCEPTIONS)
 ```yaml
@@ -110,6 +110,44 @@ When managing agents, agent-admin MUST:
 - `aws-infrastructure.md` - Cloud infrastructure management
 - `agent-spawn-logging.md` - Agent activity tracking
 
+### Tool Categories Management System
+
+#### Tool Categories Configuration
+**Location**: `.claude/commands/create-agent/tool-categories.json`
+
+**Structure**: Function-based categorization (NOT agent-specific):
+- **content_creation**: Writing, blogging, content management, publishing
+- **development**: Software development, code analysis, deployment automation
+- **business_analysis**: Financial analysis, BI, data-driven decision making
+- **research**: Academic research, documentation analysis, information gathering  
+- **creative**: Design, multimedia, artistic projects
+
+#### Specialized Tool Integration Types
+1. **api_endpoint**: External API services requiring authentication
+2. **webhook**: Custom webhooks for notifications and triggers
+3. **database_connection**: Direct database integrations
+4. **web_scraping**: Custom scraping tools for data collection
+5. **file_processing**: Specialized file format handlers
+6. **custom_scripts**: Domain-specific automation scripts
+
+#### Tool Categories Auto-Update Process
+When creating agents through conversational workflow:
+1. **Pre-Creation Scan**: Check `.claude/agents/shared-tools/` for new shared tools
+2. **Tool Analysis**: Read markdown content to determine purpose and integration requirements
+3. **Category Assignment**: Match tool capabilities to existing function-based categories
+4. **JSON Update**: Add new tools to appropriate `shared_tools` or `specialized_tools` arrays
+5. **Documentation Creation**: Generate integration guides for specialized tools
+6. **Context File Generation**: Create tool-specific context files for agent integration
+
+#### Custom Tool Integration Workflow
+When user requests specialized tools during conversational agent creation:
+1. **Requirement Capture**: Record tool name, description, integration type, configuration needs
+2. **Category Placement**: Add to appropriate function-based category (content_creation, development, etc.)
+3. **Documentation Generation**: Create step-by-step integration guide
+4. **Configuration Template**: Generate required API keys, endpoints, authentication setup
+5. **Context File Creation**: Create agent-specific context explaining tool usage
+6. **Future Availability**: Tool becomes available for all similar agents in that category
+
 ### Agent-Specific Context Patterns
 - **Always Load**: `agent-tools/{agent-type}/core-{type}-principles.md`
 - **Keyword Based**: Load specific contexts based on task requirements
@@ -118,15 +156,26 @@ When managing agents, agent-admin MUST:
 
 ## Agent Management Operations
 
-### Create New Agent
-1. **Requirements Analysis**: Define purpose, scope, capabilities
-2. **Template Selection**: Choose appropriate base template
-3. **YAML Validation** (MANDATORY): Validate YAML structure using validation template
-4. **Structure Configuration**: Set up YAML frontmatter with REQUIRED fields only
-5. **Context Design**: Define keyword patterns and context loading logic
-6. **Infrastructure Integration**: Add to agent-spawn-logging.md, select RELEVANT shared tools only, documentation
-7. **Final Validation**: Test agent structure and YAML compliance
-8. **Documentation**: Update CLAUDE.md with agent information
+### Create New Agent (Conversational Workflow Integration)
+1. **Specification Processing**: Parse agent specification from conversational workflow
+2. **Tool Categories Management**: Update `.claude/commands/create-agent/tool-categories.json` 
+   - Scan `.claude/agents/shared-tools/` for new shared tools
+   - Add user-requested specialized tools to appropriate categories
+   - Update category definitions with new tool configurations
+3. **YAML Generation** (MANDATORY): Create YAML using strict validation template
+4. **Context File Creation**: Generate agent-specific contexts for specialized tools
+   - Create integration guides for API endpoints, webhooks, databases
+   - Generate configuration templates and usage examples
+   - Create tool-specific context files in `agent-tools/{agent-name}/`
+5. **Infrastructure Integration**: 
+   - Add to agent-spawn-logging.md with proper logging integration
+   - Update hook files for agent detection (agent-detection-hook.sh, task-completion-hook.sh)
+   - Select and configure RELEVANT shared tools only
+6. **Documentation Generation**: 
+   - Create integration documentation for specialized tools
+   - Update CLAUDE.md with agent information and capabilities
+   - Generate usage examples and configuration guides
+7. **Final Validation**: Test agent structure, YAML compliance, and tool integration
 
 ### Import from Reference
 1. **Source Analysis**: Read and understand reference agent structure

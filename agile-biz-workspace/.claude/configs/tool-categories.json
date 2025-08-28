@@ -1,0 +1,182 @@
+{
+  "content_creation": {
+    "name": "Content Creation",
+    "description": "Tools for writing, blogging, content management, and digital publishing",
+    "keywords": ["writing", "blog", "content", "marketing", "copy", "documentation", "publishing"],
+    "shared_tools": ["Context7 MCP", "Supabase MCP"],
+    "specialized_tools": [
+      {
+        "name": "Writer AI API",
+        "description": "AI-powered writing assistance and content generation",
+        "integration_type": "api_endpoint",
+        "config_required": ["api_key", "model_preference"],
+        "applicable_agents": ["blog-writer", "content-creator", "copywriter", "journalist"]
+      },
+      {
+        "name": "Grammar Check API",
+        "description": "Grammar and style checking for content quality",
+        "integration_type": "api_endpoint", 
+        "config_required": ["api_key"],
+        "applicable_agents": ["blog-writer", "content-creator", "copywriter", "editor"]
+      },
+      {
+        "name": "SEO Analysis Tools",
+        "description": "Keyword analysis and SEO optimization",
+        "integration_type": "web_scraping",
+        "config_required": ["target_keywords", "analysis_tools"],
+        "applicable_agents": ["blog-writer", "seo-specialist", "content-creator", "marketing-agent"]
+      },
+      {
+        "name": "WordPress API integration",
+        "description": "WordPress content management and publishing",
+        "integration_type": "api_endpoint",
+        "config_required": ["api_endpoint", "auth_token", "site_url"],
+        "applicable_agents": ["blog-writer", "cms-manager", "content-creator"]
+      }
+    ]
+  },
+  "development": {
+    "name": "Development",
+    "description": "Tools for software development, code analysis, and deployment automation",
+    "keywords": ["code", "build", "deploy", "dev", "programming", "software", "engineering"],
+    "shared_tools": ["GitHub MCP", "Docker", "Git"],
+    "specialized_tools": [
+      {
+        "name": "Code Quality APIs",
+        "description": "SonarCloud, CodeClimate, and other code quality analysis",
+        "integration_type": "api_endpoint",
+        "config_required": ["project_key", "api_token", "quality_gates"],
+        "applicable_agents": ["code-reviewer", "qa-specialist", "developer", "architect"]
+      },
+      {
+        "name": "Testing Framework APIs",
+        "description": "Automated testing integrations (Jest, Cypress, Selenium)",
+        "integration_type": "api_endpoint",
+        "config_required": ["test_runner", "config_path", "ci_integration"],
+        "applicable_agents": ["test-automation", "qa-specialist", "developer"]
+      },
+      {
+        "name": "Deployment Webhooks",
+        "description": "Custom deployment triggers and CI/CD integrations",
+        "integration_type": "webhook",
+        "config_required": ["webhook_url", "auth_token", "deployment_config"],
+        "applicable_agents": ["devops-specialist", "deployment-manager", "ci-cd-agent"]
+      },
+      {
+        "name": "Package Registry APIs",
+        "description": "NPM, PyPI, Maven package management",
+        "integration_type": "api_endpoint",
+        "config_required": ["registry_url", "auth_token", "package_scope"],
+        "applicable_agents": ["package-manager", "developer", "dependency-analyst"]
+      }
+    ]
+  },
+  "business_analysis": {
+    "name": "Business Analysis",
+    "description": "Tools for financial analysis, business intelligence, and data-driven decision making",
+    "keywords": ["analysis", "business", "finance", "data", "metrics", "reporting", "intelligence"],
+    "shared_tools": ["Context7 MCP", "Supabase MCP", "AWS"],
+    "specialized_tools": [
+      {
+        "name": "Financial Data APIs",
+        "description": "Stock market data, economic indicators, financial metrics",
+        "integration_type": "api_endpoint",
+        "config_required": ["api_key", "data_sources", "market_segments"],
+        "applicable_agents": ["financial-analyst", "trading-agent", "investment-advisor", "market-researcher"]
+      },
+      {
+        "name": "Business Intelligence Tools",
+        "description": "Tableau, PowerBI, Looker integration for data visualization",
+        "integration_type": "database_connection",
+        "config_required": ["connection_string", "credentials", "dashboard_config"],
+        "applicable_agents": ["bi-analyst", "data-visualization-specialist", "business-analyst"]
+      },
+      {
+        "name": "CRM Integrations", 
+        "description": "Salesforce, HubSpot, and other CRM system APIs",
+        "integration_type": "api_endpoint",
+        "config_required": ["api_endpoint", "auth_token", "organization_id"],
+        "applicable_agents": ["sales-analyst", "customer-success-agent", "marketing-analyst"]
+      },
+      {
+        "name": "Analytics Platforms",
+        "description": "Google Analytics, Adobe Analytics, custom analytics APIs",
+        "integration_type": "api_endpoint", 
+        "config_required": ["tracking_id", "api_credentials", "report_config"],
+        "applicable_agents": ["web-analyst", "marketing-analyst", "performance-tracker"]
+      }
+    ]
+  },
+  "research": {
+    "name": "Research & Analysis",
+    "description": "Tools for academic research, documentation analysis, and information gathering",
+    "keywords": ["research", "analysis", "documentation", "investigation", "academic", "scholarly"],
+    "shared_tools": ["Context7 MCP", "GitHub MCP"],
+    "specialized_tools": [
+      {
+        "name": "Academic Database APIs",
+        "description": "PubMed, arXiv, Google Scholar, JSTOR integration",
+        "integration_type": "api_endpoint",
+        "config_required": ["database_access", "api_key", "search_filters"],
+        "applicable_agents": ["research-assistant", "academic-analyst", "literature-reviewer"]
+      },
+      {
+        "name": "Citation Tools",
+        "description": "Zotero, Mendeley, EndNote integration for reference management",
+        "integration_type": "api_endpoint",
+        "config_required": ["library_id", "api_token", "citation_style"],
+        "applicable_agents": ["research-assistant", "academic-writer", "bibliography-manager"]
+      },
+      {
+        "name": "Survey APIs",
+        "description": "SurveyMonkey, Typeform, Google Forms data collection",
+        "integration_type": "api_endpoint",
+        "config_required": ["survey_id", "api_key", "response_format"],
+        "applicable_agents": ["survey-analyst", "market-researcher", "data-collector"]
+      },
+      {
+        "name": "Document Analysis Tools",
+        "description": "PDF parsing, OCR, document classification APIs",
+        "integration_type": "file_processing",
+        "config_required": ["processing_endpoint", "document_types", "extraction_rules"],
+        "applicable_agents": ["document-analyst", "legal-researcher", "compliance-checker"]
+      }
+    ]
+  },
+  "creative": {
+    "name": "Creative & Design",
+    "description": "Tools for creative work, design, multimedia, and artistic projects",
+    "keywords": ["creative", "design", "art", "multimedia", "music", "visual", "graphics"],
+    "shared_tools": ["Context7 MCP", "Supabase MCP"],
+    "specialized_tools": [
+      {
+        "name": "Design APIs",
+        "description": "Figma, Adobe Creative Cloud, Sketch integration",
+        "integration_type": "api_endpoint",
+        "config_required": ["design_tool", "api_token", "project_id"],
+        "applicable_agents": ["design-assistant", "ui-designer", "brand-specialist"]
+      },
+      {
+        "name": "Music Production Tools",
+        "description": "Spotify API, music theory libraries, audio processing",
+        "integration_type": "api_endpoint",
+        "config_required": ["music_service", "api_credentials", "audio_format"],
+        "applicable_agents": ["music-producer", "audio-engineer", "composer"]
+      },
+      {
+        "name": "Image Generation APIs", 
+        "description": "DALL-E, Midjourney, Stable Diffusion integration",
+        "integration_type": "api_endpoint",
+        "config_required": ["ai_service", "api_key", "generation_params"],
+        "applicable_agents": ["image-creator", "visual-designer", "art-director"]
+      },
+      {
+        "name": "Video Processing Tools",
+        "description": "Video editing APIs, streaming services, media conversion",
+        "integration_type": "api_endpoint",
+        "config_required": ["video_service", "processing_config", "output_formats"],
+        "applicable_agents": ["video-editor", "content-creator", "multimedia-specialist"]
+      }
+    ]
+  }
+}

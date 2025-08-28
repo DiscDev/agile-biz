@@ -35,7 +35,7 @@ Specialized agent for music composition, songwriting, band management, music the
 
 ### Context Loading Logic:
 1. **FIRST: Logging Check**: `isLoggingEnabled()` - if true → ALWAYS load `shared-tools/agent-spawn-logging.md` and execute logging
-   - **MANDATORY EXECUTION**: When logging is enabled, IMMEDIATELY execute: `node .claude/agents/scripts/logging/logging-functions.js full-log lonely-hearts-club-band "[user request]"`
+   - **MANDATORY EXECUTION**: When logging is enabled, IMMEDIATELY execute: `node .claude/scripts/agents/logging/logging-functions.js full-log lonely-hearts-club-band "[user request]"`
 2. **Always Load**: Core music agent responsibilities (embedded in this file)
 3. **Shared Tools**: Check for technical/infrastructure keywords and load from `shared-tools/` folder
 4. **Music Contexts**: Load music-specific contexts based on task keywords

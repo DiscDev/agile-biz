@@ -1,0 +1,100 @@
+{
+  "content_creation": {
+    "name": "Content Creation",
+    "keywords": ["writing", "blog", "content", "marketing", "copy", "documentation"],
+    "shared_tools": ["Context7 MCP", "Supabase MCP"],
+    "specialized_tools": [
+      {
+        "name": "Writer AI API",
+        "description": "AI-powered writing assistance and content generation",
+        "integration_type": "api_endpoint",
+        "config_required": ["api_key", "model_preference"],
+        "applicable_agents": ["blog-writer", "content-creator", "copywriter"]
+      },
+      {
+        "name": "SEO Analysis Tools",
+        "description": "Keyword analysis and SEO optimization",
+        "integration_type": "web_scraping",
+        "config_required": ["target_keywords"],
+        "applicable_agents": ["blog-writer", "seo-specialist", "content-creator"]
+      },
+      {
+        "name": "WordPress API integration",
+        "description": "WordPress content management and publishing",
+        "integration_type": "api_endpoint",
+        "config_required": ["api_endpoint", "auth_token"],
+        "applicable_agents": ["blog-writer", "cms-manager"]
+      }
+    ]
+  },
+  "development": {
+    "name": "Development",
+    "keywords": ["code", "build", "deploy", "dev", "programming", "git"],
+    "shared_tools": ["GitHub MCP", "Docker", "Git"],
+    "specialized_tools": [
+      {
+        "name": "Code Quality APIs",
+        "description": "SonarCloud, CodeClimate integration for code analysis",
+        "integration_type": "api_endpoint",
+        "config_required": ["project_key", "api_token"],
+        "applicable_agents": ["code-reviewer", "qa-specialist", "developer"]
+      },
+      {
+        "name": "Testing Framework APIs",
+        "description": "Automated testing integrations (Jest, Cypress, etc.)",
+        "integration_type": "api_endpoint",
+        "config_required": ["test_config", "coverage_settings"],
+        "applicable_agents": ["test-automation", "qa-specialist", "developer"]
+      },
+      {
+        "name": "Deployment Webhooks",
+        "description": "Custom deployment triggers and notifications",
+        "integration_type": "webhook",
+        "config_required": ["webhook_url", "auth_token"],
+        "applicable_agents": ["devops-specialist", "deployment-manager"]
+      }
+    ]
+  },
+  "business_analysis": {
+    "name": "Business Analysis",
+    "keywords": ["analysis", "business", "finance", "data", "reports"],
+    "shared_tools": ["Context7 MCP", "Supabase MCP", "AWS"],
+    "specialized_tools": [
+      {
+        "name": "Financial Data APIs",
+        "description": "Stock market, economic indicators, financial analysis",
+        "integration_type": "api_endpoint",
+        "config_required": ["api_key", "data_sources"],
+        "applicable_agents": ["finance-analyst", "business-analyst", "market-researcher"]
+      },
+      {
+        "name": "Business Intelligence Tools",
+        "description": "Tableau, PowerBI, analytics platform integration",
+        "integration_type": "database_connection",
+        "config_required": ["connection_string", "credentials"],
+        "applicable_agents": ["data-analyst", "business-intelligence", "reporting-specialist"]
+      }
+    ]
+  },
+  "research": {
+    "name": "Research & Analysis",
+    "keywords": ["research", "academic", "analysis", "papers", "studies"],
+    "shared_tools": ["Context7 MCP"],
+    "specialized_tools": [
+      {
+        "name": "Academic Database APIs",
+        "description": "Access to academic papers, journals, and research databases",
+        "integration_type": "api_endpoint",
+        "config_required": ["institutional_access", "api_credentials"],
+        "applicable_agents": ["research-assistant", "academic-writer", "literature-reviewer"]
+      },
+      {
+        "name": "Citation Management Tools",
+        "description": "Zotero, Mendeley integration for reference management",
+        "integration_type": "api_endpoint",
+        "config_required": ["account_credentials", "library_access"],
+        "applicable_agents": ["research-assistant", "academic-writer"]
+      }
+    ]
+  }
+}

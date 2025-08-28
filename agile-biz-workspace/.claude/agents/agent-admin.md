@@ -35,10 +35,11 @@ Specialized agent for creating, editing, deleting, and managing Claude Code agen
 - **import, reference, migrate, adapt** → `agent-tools/agent-admin/reference-import-guide.md`
 - **claude.md, document, update, documentation** → `agent-tools/agent-admin/claude-md-documentation.md`
 - **template, pattern, structure, framework** → `agent-tools/agent-admin/template-management.md`
+- **conversational, workflow, create-agent, tool-categories, specialized** → `agent-tools/agent-admin/conversational-workflow-management.md`
 
 ### Context Loading Logic:
 1. **FIRST: Logging Check**: `isLoggingEnabled()` - if true → ALWAYS load `shared-tools/agent-spawn-logging.md` and execute logging
-   - **MANDATORY EXECUTION**: When logging is enabled, IMMEDIATELY execute: `node .claude/agents/scripts/logging/logging-functions.js full-log agent-admin "[user request]"`
+   - **MANDATORY EXECUTION**: When logging is enabled, IMMEDIATELY execute: `node .claude/scripts/agents/logging/logging-functions.js full-log agent-admin "[user request]"`
    - **Log Agent Spawn**: Extract keywords, generate agent ID, log spawn event and context loading
    - **Error Handling**: If logging fails, continue with agent execution (logging should not block agent operation)
 2. **Always Load**: `agent-tools/agent-admin/core-agent-management.md` (base knowledge and responsibilities)
@@ -54,6 +55,16 @@ Specialized agent for creating, editing, deleting, and managing Claude Code agen
 - **Keywords**: `agent-admin`, `create`, `new`, `testing`
 - **Context**: `agent-tools/agent-admin/core-agent-management.md` + `agent-tools/agent-admin/agent-creation-guide.md` + templates
 
+**"/create-agent" or "create an agent for blog writing"** *(NEW: Conversational Workflow)*
+- **Keywords**: `create-agent`, `conversational`, `workflow`, `blog`
+- **Context**: `agent-tools/agent-admin/core-agent-management.md` + `agent-tools/agent-admin/conversational-workflow-management.md`
+- **Action**: Initiate natural conversation flow with tool categorization and specialized tool integration
+
+**"I need an agent that helps with financial analysis"** *(NEW: Natural Language Trigger)*
+- **Keywords**: `create`, `agent`, `financial`, `analysis`  
+- **Context**: `agent-tools/agent-admin/conversational-workflow-management.md` + tool categories management
+- **Action**: Detect business_analysis category, recommend appropriate tools
+
 **"Import the 'api' agent from reference files using agent-admin"**
 - **Keywords**: `agent-admin`, `import`, `reference`, `api`
 - **Context**: `agent-tools/agent-admin/core-agent-management.md` + `agent-tools/agent-admin/reference-import-guide.md`
@@ -68,7 +79,31 @@ Specialized agent for creating, editing, deleting, and managing Claude Code agen
 
 ## Agent Management Workflows
 
-### Creating New Agent Process:
+### Conversational Agent Creation Workflow (NEW):
+**Triggers**: `/create-agent`, "create an agent", "I need an agent for...", "make an agent to help with..."
+
+1. **Conversation Initiation**: Detect trigger and begin natural language interaction
+2. **Agent Name Validation**: Use validation-logic.js to check name conflicts and synonyms
+3. **Purpose Analysis**: Determine primary function category (content_creation, development, business_analysis, research, creative)
+4. **Tool Discovery & Categories Update**:
+   - Scan `.claude/agents/shared-tools/` for new shared tools
+   - Load appropriate function-based category from tool-categories.json
+   - Present shared tools and specialized tools for selected category
+5. **User Tool Selection**: 
+   - Capture shared tool preferences
+   - Record specialized tool selections
+   - Handle custom tool requests (add to categories for future agents)
+6. **Model Selection**: Recommend and capture Claude model preference (Haiku/Sonnet/Opus)
+7. **Specification Compilation**: Build complete agent specification with all selected tools
+8. **Agent Creation**: 
+   - Generate YAML using mandatory validation template
+   - Create agent-specific context files for specialized tools
+   - Generate integration documentation and configuration guides
+   - Update hook files for agent detection
+9. **Tool Categories Update**: Add any new tools to tool-categories.json for future agents
+10. **Documentation & Validation**: Update CLAUDE.md, test agent structure, confirm creation success
+
+### Creating New Agent Process (Traditional):
 1. **Analyze Requirements**: Understand agent purpose, scope, and functionality
 2. **Select Template**: Choose appropriate template (basic/specialized/reference-based)
 3. **Configure Structure**: Set up YAML frontmatter, keywords, and specialization
@@ -106,8 +141,9 @@ Specialized agent for creating, editing, deleting, and managing Claude Code agen
 ### Hook Management System:
 - **Automatic Hook Updates**: All agent operations update detection hooks
 - **Scripts Available**:
-  - `manage-agent-hooks.js`: Direct hook file management
-  - `agent-lifecycle-manager.js`: Complete agent lifecycle with hooks
+  - `scripts/agents/agent-admin/manage-agent-hooks.js`: Direct hook file management
+  - `scripts/agents/agent-admin/agent-lifecycle-manager.js`: Complete agent lifecycle with hooks
+  - `scripts/agents/agent-admin/validate-agent-yaml.js`: YAML validation and compliance checking
   - `create-agent.sh`: Command wrapper for agent creation
   - `delete-agent.sh`: Command wrapper for agent deletion
 - **Hook Files Managed**:

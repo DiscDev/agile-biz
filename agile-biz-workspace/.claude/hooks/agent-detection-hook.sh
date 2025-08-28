@@ -4,9 +4,9 @@
 # Analyzes user input to detect agent spawning requests and triggers logging
 
 # Configuration
-LOGGING_CONFIG=".claude/agents/logs/logging-config.json"
-LOGGING_SCRIPT=".claude/agents/scripts/logging/logging-functions.js"
-HOOK_LOG=".claude/agents/logs/hook-debug.log"
+LOGGING_CONFIG=".claude/configs/logging-config.json"
+LOGGING_SCRIPT=".claude/scripts/agents/logging/logging-functions.js"
+HOOK_LOG=".claude/logs/hooks/hook-debug.log"
 
 # Function to check if logging is enabled
 check_logging_enabled() {
@@ -54,6 +54,11 @@ detect_agent_spawn() {
     # Detect car-salesman patterns
     if echo "$lower_input" | grep -E "(car.*salesman|car salesman|automotive.*sales|vehicle.*recommendation|dealership|trade.in|lease.*car|financing.*car)" > /dev/null; then
         agent_type="car-salesman"
+    fi
+    
+    # Detect content-writer patterns
+    if echo "$lower_input" | grep -E "(content.*writer|content writer|blog.*writer|blog writer|content.*creation|blog.*writing|seo.*optimization|content.*editing|social.*media.*content|research.*fact.check)" > /dev/null; then
+        agent_type="content-writer"
     fi
     
     # Generic agent spawning patterns
