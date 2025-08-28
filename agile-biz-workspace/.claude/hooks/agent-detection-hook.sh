@@ -46,10 +46,6 @@ detect_agent_spawn() {
         agent_type="finance"
     fi
     
-    # Detect lonely-hearts-club-band patterns
-    if echo "$lower_input" | grep -E "(lonely.hearts|lonely hearts|music.*agent|compose|songwriting|band|music.*theory|audio.*production)" > /dev/null; then
-        agent_type="lonely-hearts-club-band"
-    fi
     
     # Detect car-salesman patterns
     if echo "$lower_input" | grep -E "(car.*salesman|car salesman|automotive.*sales|vehicle.*recommendation|dealership|trade.in|lease.*car|financing.*car)" > /dev/null; then

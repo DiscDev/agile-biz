@@ -130,19 +130,6 @@ The workspace has specialized Claude Code agents for specific tasks:
   - Real-time market data analysis
 - **Model**: Claude 3.5 Sonnet (balanced capabilities for financial analysis and calculations)
 
-#### **Lonely Hearts Club Band** (`lonely-hearts-club-band`)
-- **Purpose**: Music composition, songwriting, band management, and audio production assistance
-- **Triggers**: "lonely hearts", "music agent", "compose", "songwriting", "band", "music theory", "audio production", "arrangement"
-- **Capabilities**:
-  - Music composition and songwriting assistance
-  - Lyric writing and melodic development
-  - Music theory education and harmonic analysis
-  - Arrangement and orchestration guidance
-  - Audio production workflows and DAW guidance
-  - Band management and collaboration tools
-  - Creative inspiration and genre exploration
-  - Project management for music productions
-- **Model**: Claude 3.5 Sonnet (balanced creativity and technical accuracy for music tasks)
 
 
 ### Agent Usage Examples
@@ -154,8 +141,6 @@ When you want to delegate specific tasks to agents, use these patterns:
 - **"Developer agent implement authentication"** → Spawns developer agent
 - **"Get devops agent to set up monitoring"** → Spawns devops agent
 - **"Agent-admin create a new testing agent"** → Spawns agent-admin
-- **"Lonely hearts help me write a song"** → Spawns lonely-hearts-club-band agent
-- **"Music agent explain chord progressions"** → Spawns lonely-hearts-club-band agent
 - **"Finance agent create a budget for Q1"** → Spawns finance agent
 - **"Have finance analyze our investment portfolio"** → Spawns finance agent
 - **"Car salesman help me find a family SUV"** → Spawns car-salesman agent

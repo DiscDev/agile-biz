@@ -41,8 +41,6 @@ extract_agent_type() {
         echo "finance"
     elif echo "$params" | grep -i "car-salesman" > /dev/null; then
         echo "car-salesman"
-    elif echo "$params" | grep -i "lonely-hearts-club-band" > /dev/null; then
-        echo "lonely-hearts-club-band"
     elif echo "$params" | grep -i "content-writer" > /dev/null; then
         echo "content-writer"
     else

@@ -3,7 +3,7 @@ title: Agent Spawn Logging
 type: shared-tool
 token_count: 1247
 keywords: [logging, debug, spawn, tracking, monitor, agent]
-agents: [developer, devops, agent-admin, lonely-hearts-club-band, content-writer]
+agents: [developer, devops, agent-admin, content-writer]
 ---
 
 # Agent Spawn Logging - Shared Tool
@@ -56,7 +56,7 @@ node .claude/scripts/agents/logging/logging-functions.js full-log "{agentType}" 
 ```
 
 **Arguments**:
-- `{agentType}`: "developer", "devops", "agent-admin", or "lonely-hearts-club-band" 
+- `{agentType}`: "developer", "devops", "agent-admin", "content-writer", "finance", or "car-salesman" 
 - `{userRequest}`: Complete user request (may be JSON string from hook)
 
 **Error Handling**: If logging fails, agent MUST continue normal operation (logging should not block agent tasks)
