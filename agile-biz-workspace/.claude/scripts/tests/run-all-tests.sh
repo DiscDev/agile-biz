@@ -73,6 +73,12 @@ main() {
         "$SCRIPT_DIR/delete-agent-tests.sh" \
         "Tests the agent deletion workflow with safety measures and cleanup"
     
+    # Test 3: Hook Pattern Tests
+    run_test \
+        "Hook Pattern Tests" \
+        "$SCRIPT_DIR/hook-pattern-tests.sh" \
+        "Tests agent detection hook patterns for accurate triggering"
+    
     # Summary
     echo -e "${BLUE}📊 TEST SUITE SUMMARY${NC}"
     echo "===================================="
@@ -128,12 +134,19 @@ run_individual() {
                 "$SCRIPT_DIR/delete-agent-tests.sh" \
                 "Tests the agent deletion workflow with safety measures and cleanup"
             ;;
+        "hook-patterns"|"hooks")
+            run_test \
+                "Hook Pattern Tests" \
+                "$SCRIPT_DIR/hook-pattern-tests.sh" \
+                "Tests agent detection hook patterns for accurate triggering"
+            ;;
         *)
             echo -e "${RED}❌ Unknown test: $test_name${NC}"
             echo
             echo -e "${YELLOW}Available tests:${NC}"
             echo "• create-agent (or 'create')"
             echo "• delete-agent (or 'delete')"
+            echo "• hook-patterns (or 'hooks')"
             echo
             echo -e "${BLUE}Usage:${NC}"
             echo "$0 [test-name]"

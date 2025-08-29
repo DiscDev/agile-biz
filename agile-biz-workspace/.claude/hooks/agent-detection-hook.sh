@@ -26,8 +26,8 @@ detect_agent_spawn() {
     # Convert to lowercase for pattern matching
     local lower_input=$(echo "$input" | tr '[:upper:]' '[:lower:]')
     
-    # Detect developer agent patterns
-    if echo "$lower_input" | grep -E "(developer agent|dev agent|have.*developer|create.*app|implement|build|code|frontend|backend|react|node|javascript|typescript|html|css)" > /dev/null; then
+    # Detect developer agent patterns - focus on action requests
+    if echo "$lower_input" | grep -E "(have.*developer|developer.*agent.*create|developer.*agent.*build|implement.*code|build.*app|create.*frontend|create.*backend|need.*developer)" > /dev/null; then
         agent_type="developer"
     fi
     
@@ -37,8 +37,11 @@ detect_agent_spawn() {
     fi
     
     # Detect agent-admin patterns - only trigger on action requests, not discussions
-    if echo "$lower_input" | grep -E "(have.*agent.admin|spawn.*agent.admin|use.*agent.admin|(create|delete|edit|new|import|manage).*agent(?!.*spawned|.*was))" > /dev/null; then
-        agent_type="agent-admin"
+    if echo "$lower_input" | grep -E "(have.*agent[.-]admin|spawn.*agent[.-]admin|use.*agent[.-]admin|(create|delete|edit|new|import|manage).*agent)" > /dev/null; then
+        # Exclude past tense discussions
+        if ! echo "$lower_input" | grep -E "(was.*spawned|was.*used|spawned.*yesterday|completed.*deletion)" > /dev/null; then
+            agent_type="agent-admin"
+        fi
     fi
     
     # Detect finance agent patterns
