@@ -159,7 +159,7 @@ Ensure the deletion is complete and the agent is no longer available in the work
 
 #### State 1: Agent Name Selection
 **Patterns**: Valid agent names from the scanned list
-**Examples**: `developer`, `content-writer`, `my-custom-agent`
+**Examples**: `developer`, `finance`, `my-custom-agent`
 **Response**: Show deletion preview + confirmation prompt
 
 #### State 2: Deletion Confirmation  
@@ -189,7 +189,7 @@ Ensure the deletion is complete and the agent is no longer available in the work
 ```
 Available agents for deletion:
 • developer - Smart development agent
-• content-writer - Content creation specialist  
+• finance - Financial analysis specialist  
 • my-custom-agent - Custom agent description
 
 Which agent would you like to delete?

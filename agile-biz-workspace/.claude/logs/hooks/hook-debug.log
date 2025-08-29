@@ -67,3 +67,14 @@
 2025-08-29T10:32:34-07:00 [HOOK] PostToolUse Task hook triggered
 2025-08-29T10:32:34-07:00 [HOOK] Task completed - analyzing params: ...
 2025-08-29T10:32:34-07:00 [HOOK] No agent type detected in Task completion
+2025-08-29T11:24:38-07:00 [HOOK] UserPromptSubmit triggered
+2025-08-29T11:24:38-07:00 [HOOK] Analyzing input: {"session_id":"5229e830-81e8-4032-95d1-79ccd1baf528","transcript_path":"/Users/phillipbrown/.claude/...
+2025-08-29T11:24:38-07:00 [HOOK] Detected agent-admin agent spawn request
+2025-08-29T11:24:38-07:00 [HOOK] Triggered logging for agent-admin agent
+2025-08-29T11:26:04-07:00 [HOOK] UserPromptSubmit triggered
+2025-08-29T11:26:04-07:00 [HOOK] Analyzing input: {"session_id":"5229e830-81e8-4032-95d1-79ccd1baf528","transcript_path":"/Users/phillipbrown/.claude/...
+2025-08-29T11:26:04-07:00 [HOOK] Detected content-writer agent spawn request
+2025-08-29T11:26:04-07:00 [HOOK] Triggered logging for content-writer agent
+2025-08-29T11:27:22-07:00 [HOOK] UserPromptSubmit triggered
+2025-08-29T11:27:22-07:00 [HOOK] Analyzing input: {"session_id":"5229e830-81e8-4032-95d1-79ccd1baf528","transcript_path":"/Users/phillipbrown/.claude/...
+2025-08-29T11:27:22-07:00 [HOOK] No agent spawn detected

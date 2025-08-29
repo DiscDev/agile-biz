@@ -63,10 +63,6 @@ detect_agent_spawn() {
         agent_type="finance"
     fi
     
-    # Detect content-writer patterns
-    if echo "$lower_input" | grep -E "(content.*writer|content writer|blog.*writer|blog writer|content.*creation|blog.*writing|seo.*optimization|content.*editing|social.*media.*content|research.*fact.check)" > /dev/null; then
-        agent_type="content-writer"
-    fi
     
     # Generic agent spawning patterns
     if echo "$lower_input" | grep -E "(agent|spawn|task tool)" > /dev/null && [ -z "$agent_type" ]; then
@@ -197,23 +193,6 @@ test_5_finance_cases() {
     echo -e "${GREEN}✅ Finance Cases Complete${NC}"
 }
 
-# Test 6: Content-Writer Agent Cases
-test_6_content_writer_cases() {
-    echo -e "\n${YELLOW}Test 6: Content-Writer Agent Cases${NC}"
-    echo "-----------------------------------"
-    
-    # Positive cases
-    run_test "content writer create blog post" "content-writer" "Content writer request"
-    run_test "blog writing assistance needed" "content-writer" "Blog writing request"
-    run_test "seo optimization for website" "content-writer" "SEO optimization request"
-    run_test "content editing and proofreading" "content-writer" "Content editing request"
-    
-    # Negative cases
-    run_test "blog post was written yesterday" "" "Past tense blog reference"
-    run_test "content writer agent helped before" "" "Past tense content-writer reference"
-    
-    echo -e "${GREEN}✅ Content-Writer Cases Complete${NC}"
-}
 
 # Test 7: DevOps Agent Cases
 test_7_devops_cases() {
@@ -262,7 +241,6 @@ run_all_tests() {
     test_3_developer_positive
     test_4_developer_negative
     test_5_finance_cases
-    test_6_content_writer_cases
     test_7_devops_cases
     test_8_edge_cases
     

@@ -89,19 +89,6 @@ The workspace has specialized Claude Code agents for specific tasks:
 - **Self-Protection**: System-critical agent with comprehensive safeguards preventing self-deletion
 - **Model**: Claude 3.5 Opus (complex reasoning for infrastructure management)
 
-#### **Content Writer** (`content-writer`)
-- **Purpose**: Comprehensive content creation agent specializing in blog writing, SEO optimization, content editing, social media adaptation, and research with fact-checking capabilities
-- **Triggers**: "content writer", "content-writer", "blog writer", "blog writing", "content creation", "seo optimization", "content editing", "social media content", "research fact-check"
-- **Capabilities**:
-  - Blog writing and content creation
-  - SEO optimization and keyword analysis
-  - Content editing and proofreading
-  - Social media content adaptation
-  - Research and fact-checking
-  - Content strategy and planning
-  - Brand voice consistency
-  - Performance optimization
-- **Model**: Claude 3.5 Sonnet (balanced creativity and analytical capabilities for content tasks)
 
 #### **Finance Agent** (`finance`)
 - **Purpose**: Provides comprehensive financial analysis and planning services including budgeting, investment analysis, and financial reporting
@@ -130,9 +117,6 @@ When you want to delegate specific tasks to agents, use these patterns:
 - **"Agent-admin create a new testing agent"** → Spawns agent-admin
 - **"Finance agent create a budget for Q1"** → Spawns finance agent
 - **"Have finance analyze our investment portfolio"** → Spawns finance agent
-- **"Content-writer create a blog post about digital marketing"** → Spawns content-writer agent
-- **"Have content writer optimize this article for SEO"** → Spawns content-writer agent
-- **"Content-writer adapt this blog for social media"** → Spawns content-writer agent
 
 ### Agent Context Architecture
 

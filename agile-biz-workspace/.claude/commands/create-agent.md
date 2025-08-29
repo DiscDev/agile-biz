@@ -35,7 +35,7 @@ Based on your description "$ARGUMENTS", I can see you want to create an agent fo
 **What would you like to name your agent?**
 
 *Examples based on common patterns:*
-- Content agents: `blog-helper`, `content-writer`, `copywriter`
+- Content agents: `blog-helper`, `copywriter`, `seo-specialist`
 - Development agents: `code-reviewer`, `dev-assistant`, `build-helper`  
 - Business agents: `data-analyst`, `finance-helper`, `report-generator`
 - Research agents: `research-assistant`, `paper-analyzer`, `study-helper`

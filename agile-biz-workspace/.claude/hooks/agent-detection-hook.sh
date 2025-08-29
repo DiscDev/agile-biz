@@ -51,11 +51,6 @@ detect_agent_spawn() {
     
     
     
-    # Detect content-writer patterns
-    if echo "$lower_input" | grep -E "(content.*writer|content writer|blog.*writer|blog writer|content.*creation|blog.*writing|seo.*optimization|content.*editing|social.*media.*content|research.*fact.check)" > /dev/null; then
-        agent_type="content-writer"
-    fi
-    
     # Generic agent spawning patterns
     if echo "$lower_input" | grep -E "(agent|spawn|task tool)" > /dev/null && [ -z "$agent_type" ]; then
         agent_type="unknown"
