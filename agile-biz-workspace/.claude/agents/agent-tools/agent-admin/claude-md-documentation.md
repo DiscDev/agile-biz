@@ -14,7 +14,7 @@ agents: [agent-admin]
 The `CLAUDE.md` file serves as the primary configuration and instruction file for Claude Code. All agents must be documented here to ensure Claude Code is aware of their existence and capabilities.
 
 ### CLAUDE.md Location and Structure
-**File Path**: `/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-bz-workspace/CLAUDE.md`
+**File Path**: `/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace/CLAUDE.md`
 
 **Relevant Section**: 
 ```markdown

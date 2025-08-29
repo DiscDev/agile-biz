@@ -1,1 +1,324 @@
-[]
+[
+  {
+    "timestamp": "2025-08-28T19:20:45.813Z",
+    "event_type": "agent_spawn",
+    "agent_id": "agent-admin_20250828192045_663",
+    "agent_type": "agent-admin",
+    "spawned_by": "claude_code",
+    "spawn_reason": "user_request",
+    "session_info": {
+      "session_id": "db665b49-e677-45df-b978-73f5c0b9ac1b",
+      "transcript_path": "/Users/phillipbrown/.claude/projects/-Users-phillipbrown-No-iCloud-Folder-AgileBiz-agile-biz-workspace/db665b49-e677-45df-b978-73f5c0b9ac1b.jsonl",
+      "working_directory": "/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace",
+      "hook_event": "UserPromptSubmit"
+    },
+    "user_request": {
+      "prompt": "I would like to create a /delete-agent command workflow.  Bascially you will ask the user what agent the user wants to delete.  Then spawn the agent-admin to delete the agent. ",
+      "raw_input": "{\"session_id\":\"db665b49-e677-45df-b978-73f5c0b9ac1b\",\"transcript_path\":\"/Users/phillipbrown/.claude/projects/-Users-phillipbrown-No-iCloud-Folder-AgileBiz-agile-biz-workspace/db665b49-e677-45df-b978-73f5c0b9ac1b.jsonl\",\"cwd\":\"/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace\",\"permission_mode\":\"acceptEdits\",\"hook_event_name\":\"UserPromptSubmit\",\"prompt\":\"I would like to create a /delete-agent command workflow.  Bascially you will ask the user what agent the user wants to delete.  Then spawn the agent-admin to delete the agent. \"}"
+    }
+  },
+  {
+    "timestamp": "2025-08-28T19:20:45.814Z",
+    "event_type": "context_loading",
+    "agent_id": "agent-admin_20250828192045_663",
+    "keywords_detected": [
+      "create"
+    ],
+    "contexts_loaded": [
+      {
+        "file": "agent-admin.md",
+        "tokens": 1247,
+        "reason": "agent_definition"
+      }
+    ],
+    "total_tokens": 1247
+  },
+  {
+    "timestamp": "2025-08-28T19:23:42.667Z",
+    "event_type": "agent_spawn",
+    "agent_id": "agent-admin_20250828192342_992",
+    "agent_type": "agent-admin",
+    "spawned_by": "claude_code",
+    "spawn_reason": "user_request",
+    "session_info": {
+      "session_id": "db665b49-e677-45df-b978-73f5c0b9ac1b",
+      "transcript_path": "/Users/phillipbrown/.claude/projects/-Users-phillipbrown-No-iCloud-Folder-AgileBiz-agile-biz-workspace/db665b49-e677-45df-b978-73f5c0b9ac1b.jsonl",
+      "working_directory": "/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace",
+      "hook_event": "UserPromptSubmit"
+    },
+    "user_request": {
+      "prompt": "add a test for this /delete-agent command workflow to @agile-biz-workspace/.claude/scripts/tests",
+      "raw_input": "{\"session_id\":\"db665b49-e677-45df-b978-73f5c0b9ac1b\",\"transcript_path\":\"/Users/phillipbrown/.claude/projects/-Users-phillipbrown-No-iCloud-Folder-AgileBiz-agile-biz-workspace/db665b49-e677-45df-b978-73f5c0b9ac1b.jsonl\",\"cwd\":\"/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace\",\"permission_mode\":\"acceptEdits\",\"hook_event_name\":\"UserPromptSubmit\",\"prompt\":\"add a test for this /delete-agent command workflow to @agile-biz-workspace/.claude/scripts/tests\"}"
+    }
+  },
+  {
+    "timestamp": "2025-08-28T19:23:42.667Z",
+    "event_type": "context_loading",
+    "agent_id": "agent-admin_20250828192342_992",
+    "keywords_detected": [],
+    "contexts_loaded": [
+      {
+        "file": "agent-admin.md",
+        "tokens": 1247,
+        "reason": "agent_definition"
+      }
+    ],
+    "total_tokens": 1247
+  },
+  {
+    "timestamp": "2025-08-28T19:32:59.914Z",
+    "event_type": "agent_spawn",
+    "agent_id": "agent-admin_20250828193259_192",
+    "agent_type": "agent-admin",
+    "spawned_by": "claude_code",
+    "spawn_reason": "user_request",
+    "session_info": {
+      "session_id": "db665b49-e677-45df-b978-73f5c0b9ac1b",
+      "transcript_path": "/Users/phillipbrown/.claude/projects/-Users-phillipbrown-No-iCloud-Folder-AgileBiz-agile-biz-workspace/db665b49-e677-45df-b978-73f5c0b9ac1b.jsonl",
+      "working_directory": "/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace",
+      "hook_event": "UserPromptSubmit"
+    },
+    "user_request": {
+      "prompt": "can we consolidate these two test files @agile-biz-workspace/.claude/scripts/tests/conversational-create-agent-test.sh and @agile-biz-workspace/.claude/scripts/tests/create-agent-workflow-tests.sh?",
+      "raw_input": "{\"session_id\":\"db665b49-e677-45df-b978-73f5c0b9ac1b\",\"transcript_path\":\"/Users/phillipbrown/.claude/projects/-Users-phillipbrown-No-iCloud-Folder-AgileBiz-agile-biz-workspace/db665b49-e677-45df-b978-73f5c0b9ac1b.jsonl\",\"cwd\":\"/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace\",\"permission_mode\":\"acceptEdits\",\"hook_event_name\":\"UserPromptSubmit\",\"prompt\":\"can we consolidate these two test files @agile-biz-workspace/.claude/scripts/tests/conversational-create-agent-test.sh and @agile-biz-workspace/.claude/scripts/tests/create-agent-workflow-tests.sh?\"}"
+    }
+  },
+  {
+    "timestamp": "2025-08-28T19:32:59.915Z",
+    "event_type": "context_loading",
+    "agent_id": "agent-admin_20250828193259_192",
+    "keywords_detected": [
+      "create"
+    ],
+    "contexts_loaded": [
+      {
+        "file": "agent-admin.md",
+        "tokens": 1247,
+        "reason": "agent_definition"
+      }
+    ],
+    "total_tokens": 1247
+  },
+  {
+    "timestamp": "2025-08-28T19:39:41.650Z",
+    "event_type": "agent_spawn",
+    "agent_id": "agent-admin_20250828193941_038",
+    "agent_type": "agent-admin",
+    "spawned_by": "claude_code",
+    "spawn_reason": "user_request",
+    "session_info": {
+      "session_id": "db665b49-e677-45df-b978-73f5c0b9ac1b",
+      "transcript_path": "/Users/phillipbrown/.claude/projects/-Users-phillipbrown-No-iCloud-Folder-AgileBiz-agile-biz-workspace/db665b49-e677-45df-b978-73f5c0b9ac1b.jsonl",
+      "working_directory": "/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace",
+      "hook_event": "UserPromptSubmit"
+    },
+    "user_request": {
+      "prompt": "Rename @agile-biz-workspace/.claude/scripts/tests/delete-agent-workflow-tests.sh to delete-agent-tests.sh to match create-agent-tests.sh and all reverences",
+      "raw_input": "{\"session_id\":\"db665b49-e677-45df-b978-73f5c0b9ac1b\",\"transcript_path\":\"/Users/phillipbrown/.claude/projects/-Users-phillipbrown-No-iCloud-Folder-AgileBiz-agile-biz-workspace/db665b49-e677-45df-b978-73f5c0b9ac1b.jsonl\",\"cwd\":\"/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace\",\"permission_mode\":\"acceptEdits\",\"hook_event_name\":\"UserPromptSubmit\",\"prompt\":\"Rename @agile-biz-workspace/.claude/scripts/tests/delete-agent-workflow-tests.sh to delete-agent-tests.sh to match create-agent-tests.sh and all reverences\"}"
+    }
+  },
+  {
+    "timestamp": "2025-08-28T19:39:41.651Z",
+    "event_type": "context_loading",
+    "agent_id": "agent-admin_20250828193941_038",
+    "keywords_detected": [
+      "create"
+    ],
+    "contexts_loaded": [
+      {
+        "file": "agent-admin.md",
+        "tokens": 1247,
+        "reason": "agent_definition"
+      }
+    ],
+    "total_tokens": 1247
+  },
+  {
+    "timestamp": "2025-08-28T19:45:46.623Z",
+    "event_type": "agent_spawn",
+    "agent_id": "agent-admin_20250828194546_186",
+    "agent_type": "agent-admin",
+    "spawned_by": "claude_code",
+    "spawn_reason": "user_request",
+    "session_info": {
+      "session_id": "7f97b7a4-0cc2-46aa-aae3-305e6cc0faff",
+      "transcript_path": "/Users/phillipbrown/.claude/projects/-Users-phillipbrown-No-iCloud-Folder-AgileBiz-agile-biz-workspace/7f97b7a4-0cc2-46aa-aae3-305e6cc0faff.jsonl",
+      "working_directory": "/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace",
+      "hook_event": "UserPromptSubmit"
+    },
+    "user_request": {
+      "prompt": "/delete-agent ",
+      "raw_input": "{\"session_id\":\"7f97b7a4-0cc2-46aa-aae3-305e6cc0faff\",\"transcript_path\":\"/Users/phillipbrown/.claude/projects/-Users-phillipbrown-No-iCloud-Folder-AgileBiz-agile-biz-workspace/7f97b7a4-0cc2-46aa-aae3-305e6cc0faff.jsonl\",\"cwd\":\"/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace\",\"permission_mode\":\"default\",\"hook_event_name\":\"UserPromptSubmit\",\"prompt\":\"/delete-agent \"}"
+    }
+  },
+  {
+    "timestamp": "2025-08-28T19:45:46.623Z",
+    "event_type": "context_loading",
+    "agent_id": "agent-admin_20250828194546_186",
+    "keywords_detected": [],
+    "contexts_loaded": [
+      {
+        "file": "agent-admin.md",
+        "tokens": 1247,
+        "reason": "agent_definition"
+      }
+    ],
+    "total_tokens": 1247
+  },
+  {
+    "timestamp": "2025-08-28T19:46:16.671Z",
+    "event_type": "agent_spawn",
+    "spawned_by": "claude_code",
+    "spawn_reason": "user_request",
+    "session_info": {
+      "session_id": "7f97b7a4-0cc2-46aa-aae3-305e6cc0faff",
+      "transcript_path": "/Users/phillipbrown/.claude/projects/-Users-phillipbrown-No-iCloud-Folder-AgileBiz-agile-biz-workspace/7f97b7a4-0cc2-46aa-aae3-305e6cc0faff.jsonl",
+      "working_directory": "/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace",
+      "hook_event": "UserPromptSubmit"
+    },
+    "user_request": {}
+  },
+  {
+    "timestamp": "2025-08-28T19:46:16.672Z",
+    "event_type": "context_loading",
+    "keywords_detected": [],
+    "contexts_loaded": [
+      {
+        "tokens": 4200,
+        "reason": "agent_definition"
+      }
+    ],
+    "total_tokens": 4200
+  },
+  {
+    "timestamp": "2025-08-28T20:53:14.626Z",
+    "event_type": "agent_spawn",
+    "agent_id": "agent-admin_20250828205314_897",
+    "agent_type": "agent-admin",
+    "spawned_by": "claude_code",
+    "spawn_reason": "user_request",
+    "session_info": {
+      "session_id": "7f97b7a4-0cc2-46aa-aae3-305e6cc0faff",
+      "transcript_path": "/Users/phillipbrown/.claude/projects/-Users-phillipbrown-No-iCloud-Folder-AgileBiz-agile-biz-workspace/7f97b7a4-0cc2-46aa-aae3-305e6cc0faff.jsonl",
+      "working_directory": "/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace",
+      "hook_event": "UserPromptSubmit"
+    },
+    "user_request": {
+      "prompt": "This folder got created again agile-bz-workspace  even though specifically says not to in our workspace @agile-biz-workspace/CLAUDE.md.  Do we need to move the files within agile-bz-agents to their proper locations? ",
+      "raw_input": "{\"session_id\":\"7f97b7a4-0cc2-46aa-aae3-305e6cc0faff\",\"transcript_path\":\"/Users/phillipbrown/.claude/projects/-Users-phillipbrown-No-iCloud-Folder-AgileBiz-agile-biz-workspace/7f97b7a4-0cc2-46aa-aae3-305e6cc0faff.jsonl\",\"cwd\":\"/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace\",\"permission_mode\":\"acceptEdits\",\"hook_event_name\":\"UserPromptSubmit\",\"prompt\":\"This folder got created again agile-bz-workspace  even though specifically says not to in our workspace @agile-biz-workspace/CLAUDE.md.  Do we need to move the files within agile-bz-agents to their proper locations? \"}"
+    }
+  },
+  {
+    "timestamp": "2025-08-28T20:53:14.627Z",
+    "event_type": "context_loading",
+    "agent_id": "agent-admin_20250828205314_897",
+    "keywords_detected": [
+      "create"
+    ],
+    "contexts_loaded": [
+      {
+        "file": "agent-admin.md",
+        "tokens": 1247,
+        "reason": "agent_definition"
+      }
+    ],
+    "total_tokens": 1247
+  },
+  {
+    "timestamp": "2025-08-28T21:06:34.172Z",
+    "event_type": "agent_spawn",
+    "agent_id": "agent-admin_20250828210634_680",
+    "agent_type": "agent-admin",
+    "spawned_by": "claude_code",
+    "spawn_reason": "user_request",
+    "session_info": {
+      "session_id": "7f97b7a4-0cc2-46aa-aae3-305e6cc0faff",
+      "transcript_path": "/Users/phillipbrown/.claude/projects/-Users-phillipbrown-No-iCloud-Folder-AgileBiz-agile-biz-workspace/7f97b7a4-0cc2-46aa-aae3-305e6cc0faff.jsonl",
+      "working_directory": "/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace",
+      "hook_event": "UserPromptSubmit"
+    },
+    "user_request": {
+      "prompt": "why was the agent-admin spawned to complete that last task?  I can see in @agile-biz-workspace/.claude/logs/agents/agents.json.  This did not seem like a task for the agent-admin.  just asking",
+      "raw_input": "{\"session_id\":\"7f97b7a4-0cc2-46aa-aae3-305e6cc0faff\",\"transcript_path\":\"/Users/phillipbrown/.claude/projects/-Users-phillipbrown-No-iCloud-Folder-AgileBiz-agile-biz-workspace/7f97b7a4-0cc2-46aa-aae3-305e6cc0faff.jsonl\",\"cwd\":\"/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace\",\"permission_mode\":\"acceptEdits\",\"hook_event_name\":\"UserPromptSubmit\",\"prompt\":\"why was the agent-admin spawned to complete that last task?  I can see in @agile-biz-workspace/.claude/logs/agents/agents.json.  This did not seem like a task for the agent-admin.  just asking\"}"
+    }
+  },
+  {
+    "timestamp": "2025-08-28T21:06:34.173Z",
+    "event_type": "context_loading",
+    "agent_id": "agent-admin_20250828210634_680",
+    "keywords_detected": [],
+    "contexts_loaded": [
+      {
+        "file": "agent-admin.md",
+        "tokens": 1247,
+        "reason": "agent_definition"
+      }
+    ],
+    "total_tokens": 1247
+  },
+  {
+    "timestamp": "2025-08-28T21:46:34.362Z",
+    "event_type": "agent_spawn",
+    "agent_id": "developer_20250828214634_891",
+    "agent_type": "developer",
+    "spawned_by": "claude_code",
+    "spawn_reason": "user_request",
+    "session_info": {
+      "session_id": "7f97b7a4-0cc2-46aa-aae3-305e6cc0faff",
+      "transcript_path": "/Users/phillipbrown/.claude/projects/-Users-phillipbrown-No-iCloud-Folder-AgileBiz-agile-biz-workspace/7f97b7a4-0cc2-46aa-aae3-305e6cc0faff.jsonl",
+      "working_directory": "/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace",
+      "hook_event": "UserPromptSubmit"
+    },
+    "user_request": {
+      "prompt": "yeah, but why did the agent-admin get spawned for this in @agile-biz-workspace/.claude/logs/agents/agents.json  {\n    \"timestamp\": \"2025-08-28T20:53:14.626Z\",\n    \"event_type\": \"agent_spawn\",\n    \"agent_id\": \"agent-admin_20250828205314_897\",\n    \"agent_type\": \"agent-admin\",\n    \"spawned_by\": \"claude_code\",\n    \"spawn_reason\": \"user_request\",\n    \"session_info\": {\n      \"session_id\": \"7f97b7a4-0cc2-46aa-aae3-305e6cc0faff\",\n      \"transcript_path\": \"/Users/phillipbrown/.claude/projects/-Users-phillipbrown-No-iCloud-Folder-AgileBiz-agile-biz-workspace/7f97b7a4-0cc2-46aa-aae3-305e6cc0faff.jsonl\",\n      \"working_directory\": \"/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace\",\n      \"hook_event\": \"UserPromptSubmit\"\n    },\n    \"user_request\": {\n      \"prompt\": \"This folder got created again agile-bz-workspace  even though specifically says not to in our workspace @agile-biz-workspace/CLAUDE.md.  Do we need to move the files within agile-bz-agents to their proper locations? \",\n      \"raw_input\": \"{\\\"session_id\\\":\\\"7f97b7a4-0cc2-46aa-aae3-305e6cc0faff\\\",\\\"transcript_path\\\":\\\"/Users/phillipbrown/.claude/projects/-Users-phillipbrown-No-iCloud-Folder-AgileBiz-agile-biz-workspace/7f97b7a4-0cc2-46aa-aae3-305e6cc0faff.jsonl\\\",\\\"cwd\\\":\\\"/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace\\\",\\\"permission_mode\\\":\\\"acceptEdits\\\",\\\"hook_event_name\\\":\\\"UserPromptSubmit\\\",\\\"prompt\\\":\\\"This folder got created again agile-bz-workspace  even though specifically says not to in our workspace @agile-biz-workspace/CLAUDE.md.  Do we need to move the files within agile-bz-agents to their proper locations? \\\"}\"\n    }\n  },\n  {\n    \"timestamp\": \"2025-08-28T20:53:14.627Z\",\n    \"event_type\": \"context_loading\",\n    \"agent_id\": \"agent-admin_20250828205314_897\",\n    \"keywords_detected\": [\n      \"create\"\n    ],\n    \"contexts_loaded\": [\n      {\n        \"file\": \"agent-admin.md\",\n        \"tokens\": 1247,\n        \"reason\": \"agent_definition\"\n      }\n    ],\n    \"total_tokens\": 1247\n  }",
+      "raw_input": "{\"session_id\":\"7f97b7a4-0cc2-46aa-aae3-305e6cc0faff\",\"transcript_path\":\"/Users/phillipbrown/.claude/projects/-Users-phillipbrown-No-iCloud-Folder-AgileBiz-agile-biz-workspace/7f97b7a4-0cc2-46aa-aae3-305e6cc0faff.jsonl\",\"cwd\":\"/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace\",\"permission_mode\":\"acceptEdits\",\"hook_event_name\":\"UserPromptSubmit\",\"prompt\":\"yeah, but why did the agent-admin get spawned for this in @agile-biz-workspace/.claude/logs/agents/agents.json  {\\n    \\\"timestamp\\\": \\\"2025-08-28T20:53:14.626Z\\\",\\n    \\\"event_type\\\": \\\"agent_spawn\\\",\\n    \\\"agent_id\\\": \\\"agent-admin_20250828205314_897\\\",\\n    \\\"agent_type\\\": \\\"agent-admin\\\",\\n    \\\"spawned_by\\\": \\\"claude_code\\\",\\n    \\\"spawn_reason\\\": \\\"user_request\\\",\\n    \\\"session_info\\\": {\\n      \\\"session_id\\\": \\\"7f97b7a4-0cc2-46aa-aae3-305e6cc0faff\\\",\\n      \\\"transcript_path\\\": \\\"/Users/phillipbrown/.claude/projects/-Users-phillipbrown-No-iCloud-Folder-AgileBiz-agile-biz-workspace/7f97b7a4-0cc2-46aa-aae3-305e6cc0faff.jsonl\\\",\\n      \\\"working_directory\\\": \\\"/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace\\\",\\n      \\\"hook_event\\\": \\\"UserPromptSubmit\\\"\\n    },\\n    \\\"user_request\\\": {\\n      \\\"prompt\\\": \\\"This folder got created again agile-bz-workspace  even though specifically says not to in our workspace @agile-biz-workspace/CLAUDE.md.  Do we need to move the files within agile-bz-agents to their proper locations? \\\",\\n      \\\"raw_input\\\": \\\"{\\\\\\\"session_id\\\\\\\":\\\\\\\"7f97b7a4-0cc2-46aa-aae3-305e6cc0faff\\\\\\\",\\\\\\\"transcript_path\\\\\\\":\\\\\\\"/Users/phillipbrown/.claude/projects/-Users-phillipbrown-No-iCloud-Folder-AgileBiz-agile-biz-workspace/7f97b7a4-0cc2-46aa-aae3-305e6cc0faff.jsonl\\\\\\\",\\\\\\\"cwd\\\\\\\":\\\\\\\"/Users/phillipbrown/No-iCloud-Folder/AgileBiz/agile-biz-workspace\\\\\\\",\\\\\\\"permission_mode\\\\\\\":\\\\\\\"acceptEdits\\\\\\\",\\\\\\\"hook_event_name\\\\\\\":\\\\\\\"UserPromptSubmit\\\\\\\",\\\\\\\"prompt\\\\\\\":\\\\\\\"This folder got created again agile-bz-workspace  even though specifically says not to in our workspace @agile-biz-workspace/CLAUDE.md.  Do we need to move the files within agile-bz-agents to their proper locations? \\\\\\\"}\\\"\\n    }\\n  },\\n  {\\n    \\\"timestamp\\\": \\\"2025-08-28T20:53:14.627Z\\\",\\n    \\\"event_type\\\": \\\"context_loading\\\",\\n    \\\"agent_id\\\": \\\"agent-admin_20250828205314_897\\\",\\n    \\\"keywords_detected\\\": [\\n      \\\"create\\\"\\n    ],\\n    \\\"contexts_loaded\\\": [\\n      {\\n        \\\"file\\\": \\\"agent-admin.md\\\",\\n        \\\"tokens\\\": 1247,\\n        \\\"reason\\\": \\\"agent_definition\\\"\\n      }\\n    ],\\n    \\\"total_tokens\\\": 1247\\n  }\"}"
+    }
+  },
+  {
+    "timestamp": "2025-08-28T21:46:34.363Z",
+    "event_type": "context_loading",
+    "agent_id": "developer_20250828214634_891",
+    "keywords_detected": [
+      "cloud",
+      "code",
+      "create"
+    ],
+    "contexts_loaded": [
+      {
+        "file": "developer.md",
+        "tokens": 816,
+        "reason": "agent_definition"
+      },
+      {
+        "file": "core-principles.md",
+        "tokens": 666,
+        "reason": "always_loaded"
+      },
+      {
+        "file": "shared-tools/aws-infrastructure.md",
+        "tokens": 2144,
+        "reason": "keyword_match",
+        "keywords": [
+          "cloud"
+        ]
+      },
+      {
+        "file": "code-quality-standards.md",
+        "tokens": 3671,
+        "reason": "keyword_match",
+        "keywords": [
+          "code"
+        ]
+      },
+      {
+        "file": "development-workflows.md",
+        "tokens": 1842,
+        "reason": "keyword_match",
+        "keywords": [
+          "create"
+        ]
+      }
+    ],
+    "total_tokens": 9139
+  }
+]

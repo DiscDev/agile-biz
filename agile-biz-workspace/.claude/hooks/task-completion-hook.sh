@@ -39,8 +39,6 @@ extract_agent_type() {
         echo "agent-admin"
     elif echo "$params" | grep -i "finance" > /dev/null; then
         echo "finance"
-    elif echo "$params" | grep -i "car-salesman" > /dev/null; then
-        echo "car-salesman"
     elif echo "$params" | grep -i "content-writer" > /dev/null; then
         echo "content-writer"
     else

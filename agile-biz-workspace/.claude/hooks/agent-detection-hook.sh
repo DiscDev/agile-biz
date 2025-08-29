@@ -36,8 +36,8 @@ detect_agent_spawn() {
         agent_type="devops"
     fi
     
-    # Detect agent-admin patterns
-    if echo "$lower_input" | grep -E "(agent.admin|agent admin|create.*agent|delete.*agent|edit.*agent|new.*agent|import.*agent|agent.*management|manage.*agent)" > /dev/null; then
+    # Detect agent-admin patterns - only trigger on action requests, not discussions
+    if echo "$lower_input" | grep -E "(have.*agent.admin|spawn.*agent.admin|use.*agent.admin|(create|delete|edit|new|import|manage).*agent(?!.*spawned|.*was))" > /dev/null; then
         agent_type="agent-admin"
     fi
     
@@ -47,10 +47,6 @@ detect_agent_spawn() {
     fi
     
     
-    # Detect car-salesman patterns
-    if echo "$lower_input" | grep -E "(car.*salesman|car salesman|automotive.*sales|vehicle.*recommendation|dealership|trade.in|lease.*car|financing.*car)" > /dev/null; then
-        agent_type="car-salesman"
-    fi
     
     # Detect content-writer patterns
     if echo "$lower_input" | grep -E "(content.*writer|content writer|blog.*writer|blog writer|content.*creation|blog.*writing|seo.*optimization|content.*editing|social.*media.*content|research.*fact.check)" > /dev/null; then

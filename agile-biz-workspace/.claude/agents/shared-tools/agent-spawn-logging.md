@@ -56,7 +56,6 @@ node .claude/scripts/agents/logging/logging-functions.js full-log "{agentType}" 
 ```
 
 **Arguments**:
-- `{agentType}`: "developer", "devops", "agent-admin", "content-writer", "finance", or "car-salesman" 
 - `{userRequest}`: Complete user request (may be JSON string from hook)
 
 **Error Handling**: If logging fails, agent MUST continue normal operation (logging should not block agent tasks)

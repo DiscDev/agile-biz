@@ -88,20 +88,6 @@ The workspace has specialized Claude Code agents for specific tasks:
   - Automatically update CLAUDE.md documentation
 - **Model**: Claude 3.5 Opus (complex reasoning for infrastructure management)
 
-#### **Car Salesman** (`car-salesman`)
-- **Purpose**: Provides comprehensive automotive sales assistance including vehicle recommendations, pricing negotiations, financing guidance, and customer support
-- **Triggers**: "car", "salesman", "automotive", "vehicle", "dealership", "financing", "trade-in", "lease"
-- **Capabilities**:
-  - Vehicle recommendation and matching based on customer needs
-  - Pricing strategies and negotiation guidance
-  - Financing options explanation (loans, leases, payment plans)
-  - Customer relationship management throughout sales process
-  - Inventory and feature explanations
-  - Trade-in value assessments
-  - Market analysis and competitive pricing
-  - Integration with automotive pricing APIs and inventory systems
-- **Model**: Claude 3.5 Sonnet (balanced capabilities for sales assistance and calculations)
-
 #### **Content Writer** (`content-writer`)
 - **Purpose**: Comprehensive content creation agent specializing in blog writing, SEO optimization, content editing, social media adaptation, and research with fact-checking capabilities
 - **Triggers**: "content writer", "content-writer", "blog writer", "blog writing", "content creation", "seo optimization", "content editing", "social media content", "research fact-check"
@@ -143,8 +129,6 @@ When you want to delegate specific tasks to agents, use these patterns:
 - **"Agent-admin create a new testing agent"** → Spawns agent-admin
 - **"Finance agent create a budget for Q1"** → Spawns finance agent
 - **"Have finance analyze our investment portfolio"** → Spawns finance agent
-- **"Car salesman help me find a family SUV"** → Spawns car-salesman agent
-- **"Have car salesman explain lease vs buy options"** → Spawns car-salesman agent
 - **"Content-writer create a blog post about digital marketing"** → Spawns content-writer agent
 - **"Have content writer optimize this article for SEO"** → Spawns content-writer agent
 - **"Content-writer adapt this blog for social media"** → Spawns content-writer agent
