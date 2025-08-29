@@ -82,10 +82,11 @@ The workspace has specialized Claude Code agents for specific tasks:
   - Create new agents from scratch using templates
   - Import and adapt agents from reference files
   - Edit existing agent configurations and contexts
-  - Delete obsolete agents and clean up infrastructure
+  - Delete obsolete agents and clean up infrastructure (🔒 PROTECTED: Cannot delete itself)
   - Validate agent YAML frontmatter and structure
   - Optimize context loading and token usage
   - Automatically update CLAUDE.md documentation
+- **Self-Protection**: System-critical agent with comprehensive safeguards preventing self-deletion
 - **Model**: Claude 3.5 Opus (complex reasoning for infrastructure management)
 
 #### **Content Writer** (`content-writer`)

@@ -96,8 +96,20 @@ When managing agents, agent-admin MUST:
 3. **EDIT**: Update patterns if keywords/triggers change
 4. **VALIDATE**: Ensure hook files remain syntactically valid
 
+### 🔒 CRITICAL: Agent Self-Protection Protocol
+
+**AGENT-ADMIN CANNOT DELETE ITSELF**
+- Before ANY deletion operation, MUST check: `if (agentName === 'agent-admin')`
+- If true, MUST reject with error: "CRITICAL ERROR: agent-admin is system-critical and cannot be deleted"
+- This protection CANNOT be overridden or bypassed
+- All deletion workflows MUST implement this safeguard
+
+### Protected Agents
+- **agent-admin**: System-critical, NEVER deletable
+
 ### Current Agent Inventory
 - **Developer Agent**: Code generation, refactoring, project scaffolding
+- **Agent-Admin**: System-critical agent management (PROTECTED)
 - **DevOps Agent**: Infrastructure, deployment, operational excellence
 - **Agent Admin**: Agent lifecycle management (this agent)
 

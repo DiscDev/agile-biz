@@ -154,6 +154,13 @@ class HookManager {
      * Remove agent detection patterns from hook files
      */
     async removeAgent(agentName) {
+        // 🔒 CRITICAL: Self-protection check - agent-admin cannot be removed from hooks (case-insensitive)
+        if (agentName.toLowerCase() === 'agent-admin') {
+            const errorMsg = 'CRITICAL ERROR: agent-admin is system-critical and cannot be removed from hooks';
+            console.error(`❌ ${errorMsg}`);
+            throw new Error(errorMsg);
+        }
+        
         try {
             await this.createBackup();
             

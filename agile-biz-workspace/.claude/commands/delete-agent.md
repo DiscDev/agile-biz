@@ -74,6 +74,7 @@ Let me first scan your workspace to see what agents are available for deletion.
 - Files in `shared-tools/` subdirectory
 - System files like `agent-spawn-logging.md`
 - Template files
+- **agent-admin** (PROTECTED: System-critical, cannot be deleted)
 
 ---
 
@@ -104,6 +105,21 @@ Are you sure? (yes/no)
 - Must type "yes" or "y" to confirm
 - "no" or "n" will cancel the operation
 - Any other response will re-prompt
+
+### 🔒 Self-Protection Protocol
+
+**If someone attempts to delete agent-admin:**
+```
+❌ DELETION REJECTED
+
+Agent: agent-admin
+Status: SYSTEM-CRITICAL - CANNOT BE DELETED
+Reason: agent-admin is required for all agent management operations
+
+This protection cannot be overridden or bypassed under any circumstances.
+
+Please select a different agent to delete.
+```
 
 ---
 

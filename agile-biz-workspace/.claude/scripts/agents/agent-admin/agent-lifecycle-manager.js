@@ -68,6 +68,13 @@ class AgentLifecycleManager {
     async deleteAgent(agentName) {
         console.log(`\n🗑️ Deleting agent: ${agentName}`);
         
+        // 🔒 CRITICAL: Self-protection check - agent-admin cannot delete itself (case-insensitive)
+        if (agentName.toLowerCase() === 'agent-admin') {
+            const errorMsg = 'CRITICAL ERROR: agent-admin is system-critical and cannot be deleted';
+            console.error(`❌ ${errorMsg}`);
+            throw new Error(errorMsg);
+        }
+        
         try {
             // Step 1: Backup agent before deletion
             await this.backupAgent(agentName);
